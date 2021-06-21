@@ -20,6 +20,7 @@ stages:
   - develop
   - preprod
   - prod
+  - master
 develop:
   stage: develop
   only:
