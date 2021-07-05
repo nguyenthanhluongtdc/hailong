@@ -1,0 +1,54 @@
+/***
+*************** Responsive
+****/
+
+/** 
+* screen 1200 
+**/
+@media (min-width: 1200px) {
+    //page index
+    @include index-screen-minw1200();
+}
+
+@media (max-width: 1200px) {
+    
+}
+/** end screen 1200 **/
+
+
+/** 
+* screen 992 
+**/
+@media (min-width: 992px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+/** end screen 992 **/
+
+
+/** 
+* screen 768 
+**/
+@media (min-width: 768px) {
+        
+}
+
+@media (max-width: 768px) {
+        
+}
+/** end screen 768 **/
+
+/** 
+* screen 567 
+**/
+@media (min-width: 768px) {
+        
+}
+
+@media (max-width: 567px) {
+    
+}
+/** end screen 567 **/

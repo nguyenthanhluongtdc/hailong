@@ -1,0 +1,22 @@
+@import "~bootstrap/scss/bootstrap";
+
+/**
+*   import folder base
+**/
+@import "./base/style";
+@import "./base/variables";
+
+/**
+*   import folder components
+**/
+@import "./components/breadcrumb";
+
+/**
+*   import folder page
+**/
+@import "./page/index";
+
+/**
+*   import responsive
+**/
+@import "./base/responsive";
