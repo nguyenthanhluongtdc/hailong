@@ -33,7 +33,7 @@
         
         <div class="container">
             <div class="section-intro__picture">
-                <img src="{{Theme::asset()->url('images/index/intro__picture.png')}}"/>
+                <img src="{{Theme::asset()->url('images/home/intro__picture.png')}}"/>
             </div>
         </div>
     </div>
