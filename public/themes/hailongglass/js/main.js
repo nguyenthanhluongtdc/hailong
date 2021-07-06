@@ -25,7 +25,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function index() {//alert('this is the index page');
+function index() {
+  $(document).ready(function () {
+    new Splide('#section-intro__carousel', {
+      heightRatio: 0.5625,
+      cover: true,
+      lazyLoad: 'sequential'
+    }).mount();
+  });
 } //call function and export
 
 

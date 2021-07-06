@@ -1,6 +1,12 @@
 function index() {
 
-    //alert('this is the index page');
+    $(document).ready(function() {
+        new Splide( '#section-intro__carousel', {
+            heightRatio: 0.5625,
+            cover      : true,
+            lazyLoad   : 'sequential',
+        }).mount();
+   })
 
 }
 

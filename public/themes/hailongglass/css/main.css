@@ -10114,6 +10114,7 @@ footer .footer-wrapper .footer__bottom p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 3.75rem;
 }
 #home-page .section-intro-wrapper .section-intro__picture img {
   max-width: 100%;
@@ -10143,8 +10144,16 @@ footer .footer-wrapper .footer__bottom p {
   color: #171717;
   text-decoration: none;
 }
-#home-page .section-intro-wrapper .section-intro__picture {
-  margin-top: 3.75rem;
+#home-page .section-intro-wrapper #section-intro__carousel .splide__pagination {
+  justify-content: end;
+}
+#home-page .section-intro-wrapper #section-intro__carousel .splide__pagination__page {
+  background-color: transparent;
+  border: 2px solid white;
+}
+#home-page .section-intro-wrapper #section-intro__carousel .splide__pagination__page.is-active {
+  transform: scale(1.4);
+  background: white;
 }
 #home-page .section-aboutus-wrapper .section-aboutus__line__des {
   font-weight: bold;

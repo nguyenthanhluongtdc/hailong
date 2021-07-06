@@ -7,6 +7,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: $size3_75;
 
             &__picture {
                 img { max-width: 100%; height: auto; }
@@ -47,9 +48,21 @@
                     }
                 }
             }
+        }
 
-            &__picture {
-                margin-top: $size3_75;
+        #section-intro__carousel {
+            .splide__pagination {
+                justify-content: end;
+
+                &__page {
+                    background-color: transparent;
+                    border: 2px solid $backgroundWhite;
+                }
+
+                &__page.is-active{
+                    transform: scale(1.4);
+                    background: $backgroundWhite;
+                }
             }
         }
     }

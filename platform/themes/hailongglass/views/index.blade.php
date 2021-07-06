@@ -32,8 +32,26 @@
         </div>
         
         <div class="container">
-            <div class="section-intro__picture">
-                <img src="{{Theme::asset()->url('images/home/intro__picture.png')}}"/>
+            <div class="splide" id="section-intro__carousel">
+                <div class="splide__slider"> <!-- relative -->
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="{{Theme::asset()->url('images/home/intro__picture.png')}}"/>
+                            </li>
+                            <li class="splide__slide">
+                                <img src="{{Theme::asset()->url('images/home/intro__picture.png')}}"/>
+                            </li>
+                            <li class="splide__slide">
+                                <img src="{{Theme::asset()->url('images/home/intro__picture.png')}}"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <!-- extra contents -->
+                </div>
             </div>
         </div>
     </div>
@@ -405,3 +423,6 @@
         </div>
     </div>
 </div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
