@@ -22,26 +22,39 @@
         {!! apply_filters(THEME_FRONT_BODY, null) !!}
 
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container align-items-end">
                     <a class="link-hailongglass" href="#" title="HAILONGGLASS">
                         <div class="box-symbol">
                             <span> HAILON GLASS </span>
                             <span> VSGLASS </span>
                         </div>
-                        <h1> KINH AN TOAN HAI LONG - VIET NHAT </h1>
+                        <h1> KÍNH AN TOÀN HẢI LONG - VIỆT NHẬT </h1>
                     </a>
 
                     <div class="collapse navbar-collapse align-items-end" id="navbarTogglerDemo01">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="#">Trang chu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">Gioi thieu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Disabled</a>
+                                <a class="nav-link" href="#">San pham</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tin tuc</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Cong trinh</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Lien he</a>
+                            </li>
+                            <li class="bilingual">
+                                <a class="en active" href="#"> EN </a>
+                                <a class="vn" href="#"> VN </a>
                             </li>
                         </ul>
                     </div>

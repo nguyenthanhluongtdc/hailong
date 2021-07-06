@@ -7,4 +7,33 @@ html, body {
 
 :root {
     font-size: 16px;
+} 
+
+.hailongglass-header-section {
+    &__header {
+        padding-top: $size3_75;
+
+        &__title {
+            color: $textGreen;
+            font-size: $size1_875;
+            margin-bottom: $size1_5;
+        }
+
+        &__des {
+            span {
+
+            }
+
+            a {
+
+            }
+        }
+    }
+} 
+
+.btn-read-more {
+    color: $textNight;
+    border: 1px solid $borderGreen;
+    padding: $size0_625 $size0_9375;
+    display: inline-block;
 }

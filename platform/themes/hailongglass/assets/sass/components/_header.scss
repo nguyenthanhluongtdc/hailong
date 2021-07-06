@@ -1,8 +1,58 @@
 
 header {
-    h1 {
-        font-size: $size1_1875;
+    nav {
+        .link-hailongglass {
+            text-decoration: none;
+    
+            h1 {
+                font-size: $size1_1875;
+                text-transform: uppercase;
+                color: $textGreen;
+            }
+    
+            span{
+                font-size: $size1_25;
+            }
+        }
+    
+        .navbar-collapse {
+            .nav-item {
+                .nav-link {
+                    text-decoration: none;
+                    color: $textNight; 
+                }
+            }
+
+            .nav-item.active {
+                .nav-link {
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-left: 0.5rem;
+                    margin-right: 0.5rem;
+                    border-bottom: 2px solid $textGreen;
+                }
+            }
+
+            .bilingual {
+                margin: auto 0;
+
+                a{
+                    padding: 10px;
+                    border: 1px solid $backgroundGreen;
+                    color: $textNight;
+                }
+
+                a.active { 
+                   
+                    background-color: $backgroundGreen;
+                    color: $textWhite;
+                    text-decoration: none;
+                }
+
+            }
+        }
     }
+    
 }
 
     /***

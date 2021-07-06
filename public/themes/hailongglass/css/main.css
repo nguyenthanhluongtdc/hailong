@@ -10013,11 +10013,58 @@ html, body {
   font-size: 16px;
 }
 
+.hailongglass-header-section__header {
+  padding-top: 3.75rem;
+}
+.hailongglass-header-section__header__title {
+  color: #08964a;
+  font-size: 1.875rem;
+  margin-bottom: 1.5rem;
+}
+.btn-read-more {
+  color: #171717;
+  border: 1px solid #08964a;
+  padding: 0.625rem 0.9375rem;
+  display: inline-block;
+}
+
 /**
 *   import folder components
 **/
-header h1 {
+header nav .link-hailongglass {
+  text-decoration: none;
+}
+header nav .link-hailongglass h1 {
   font-size: 1.1875rem;
+  text-transform: uppercase;
+  color: #08964a;
+}
+header nav .link-hailongglass span {
+  font-size: 1.25rem;
+}
+header nav .navbar-collapse .nav-item .nav-link {
+  text-decoration: none;
+  color: #171717;
+}
+header nav .navbar-collapse .nav-item.active .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-bottom: 2px solid #08964a;
+}
+header nav .navbar-collapse .bilingual {
+  margin: auto 0;
+}
+header nav .navbar-collapse .bilingual a {
+  padding: 10px;
+  border: 1px solid #08964a;
+  color: #171717;
+}
+header nav .navbar-collapse .bilingual a.active {
+  background-color: #08964a;
+  color: white;
+  text-decoration: none;
 }
 
 /***
@@ -10027,7 +10074,231 @@ header h1 {
 *   import folder page
 **/
 h1 {
-  color: violet;
+  color: #08964a;
+}
+
+#home-page .section-intro-wrapper {
+  margin-top: calc(3.75rem + 3.75rem);
+}
+#home-page .section-intro-wrapper .section-intro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#home-page .section-intro-wrapper .section-intro__picture img {
+  max-width: 100%;
+  height: auto;
+}
+#home-page .section-intro-wrapper .section-intro__title {
+  color: #08964a;
+}
+#home-page .section-intro-wrapper .section-intro .info-contact {
+  margin-top: 0.625rem;
+  padding-left: 0;
+}
+#home-page .section-intro-wrapper .section-intro .info-contact__item {
+  display: inline-block;
+  margin-right: 0.625rem;
+  padding: 0.438rem 0.625rem;
+  border: 1px solid #08964a;
+}
+#home-page .section-intro-wrapper .section-intro .info-contact__item:last-child {
+  margin-right: 0;
+}
+#home-page .section-intro-wrapper .section-intro .info-contact__link {
+  height: 100%;
+  width: 100%;
+  color: #171717;
+  text-decoration: none;
+}
+#home-page .section-intro-wrapper .section-intro__picture {
+  margin-top: 3.75rem;
+}
+#home-page .section-ourproduct-wrapper {
+  margin-top: 3.125rem;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__left {
+  width: 100%;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__left img {
+  max-width: 100%;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right {
+  color: white;
+  background-color: #08964a;
+  padding: 2.5rem;
+  padding-right: 3.75rem;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .__title {
+  color: white;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .list-cate-pro {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .list-cate-pro__item {
+  flex: 0 0 calc(50% - 0.625rem);
+  max-width: calc(50% - 0.625rem);
+  padding: 0.625rem 0;
+  border-bottom: 1px solid #f3f3f3;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .list-cate-pro__item:nth-child(odd) {
+  margin-right: 0.625rem;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .list-cate-pro__item:nth-child(even) {
+  margin-left: 0.625rem;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .list-cate-pro__link {
+  color: white;
+  text-decoration: none;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .list-cate-pro__link.active {
+  position: relative;
+  padding-left: 1.25rem;
+}
+#home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .list-cate-pro__link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  width: 0.625rem;
+  height: 0.125rem;
+}
+#home-page .section-produceCapacity-wrapper {
+  background-color: #f3f3f3;
+}
+#home-page .section-produceCapacity-wrapper .section-produceCapacity {
+  padding-bottom: 3.75rem;
+}
+#home-page .section-produceCapacity-wrapper .section-produceCapacity__list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+#home-page .section-produceCapacity-wrapper .section-produceCapacity__list__item {
+  position: relative;
+  padding-top: 0.625rem;
+  margin-top: 0.625rem;
+  flex: 0 0 calc(50% - 0.625rem);
+  max-width: calc(50% - 0.625rem);
+}
+#home-page .section-produceCapacity-wrapper .section-produceCapacity__list__item::before {
+  content: "";
+  position: absolute;
+  width: 0.625rem;
+  height: 0.125rem;
+  background-color: red;
+  top: 0;
+  left: 0;
+}
+#home-page .section-produceCapacity-wrapper .section-produceCapacity__list__item:nth-child(odd) {
+  margin-right: 0.625rem;
+}
+#home-page .section-produceCapacity-wrapper .section-produceCapacity__list__item:nth-child(even) {
+  margin-left: 0.625rem;
+}
+#home-page .section-whychoose-wrapper .section-whychoose__list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+#home-page .section-whychoose-wrapper .section-whychoose__list__item {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: 1.875rem;
+}
+#home-page .section-whychoose-wrapper .section-whychoose__list__item:nth-child(odd) {
+  padding-right: 0.9375rem;
+}
+#home-page .section-whychoose-wrapper .section-whychoose__list__item:nth-child(even) {
+  padding-left: 0.9375rem;
+}
+#home-page .section-whychoose-wrapper .section-whychoose__picture {
+  width: 100%;
+}
+#home-page .section-whychoose-wrapper .section-whychoose__picture img {
+  max-width: 100%;
+  height: auto;
+}
+#home-page .section-showroom-wrapper {
+  background-color: #f3f3f3;
+}
+#home-page .section-showroom-wrapper .section-showroom {
+  padding-bottom: 3.75rem;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__tabs__header {
+  margin-right: 2.5rem;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__tabs__header .nav-link.active {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #08964a;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__tabs__content {
+  background-color: white;
+  padding-right: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 2.5rem;
+  padding-top: 2.5rem;
+  position: relative;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__tabs__content .btn-read-more {
+  padding: 0.188rem 0.313rem;
+  padding-right: 0.9375rem;
+  background-color: #08964a;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  position: absolute;
+  right: 0.9375rem;
+  bottom: 0;
+  transform: translateY(50%);
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__tabs__content .btn-read-more::before {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  right: 0;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__tabs__content .tab-pane > div:first-child {
+  padding-top: 0;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .line__item {
+  padding-top: 1.5625rem;
+  padding-bottom: 1.5625rem;
+  border-bottom: 1px solid #f3f3f3;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__infoOther {
+  margin-top: 2.625rem;
+  padding: 1.25rem;
+  padding-top: 1.5625rem;
+  background-color: #08964a;
+  color: white;
+  height: calc(100% - 2.5rem);
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__infoOther__header__title {
+  font-size: 1.875rem;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__infoOther__header__des {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .box__infoOther__list > div:first-child {
+  padding-top: 0;
+}
+#home-page .section-news-wrapper {
+  background-color: #f3f3f3;
 }
 
 /***
@@ -10042,11 +10313,6 @@ h1 {
 /** 
 * screen 1200 
 **/
-@media (min-width: 1200px) and (min-width: 1200px) {
-  h2 {
-    color: red;
-  }
-}
 /** end screen 1200 **/
 /** 
 * screen 992 
