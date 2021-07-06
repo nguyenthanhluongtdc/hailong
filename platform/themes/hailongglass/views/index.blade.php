@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <div class="section-produceCapacity-wrapper">
+    <div class="section-producecapacity-wrapper">
         <div class="container">
             <div class="section-produceCapacity hailongglass-header-section">
                 <div class="hailongglass-header-section__header">
@@ -313,9 +313,9 @@
         </div>
     </div>
 
-    <div class="section-typicalProject-wrapper"> 
+    <div class="section-typicalproject-wrapper"> 
         <div class="container">
-            <div class="section-typicalProject hailongglass-header-section">
+            <div class="section-typicalproject hailongglass-header-section">
                <div class="hailongglass-header-section__header">
                     <h2 class="hailongglass-header-section__header__title">
                        Dự án tiêu biểu
