@@ -35,22 +35,22 @@
                     <div class="collapse navbar-collapse align-items-end" id="navbarTogglerDemo01">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Trang chu</a>
+                                <a class="nav-link" href="#">Trang chủ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Gioi thieu</a>
+                                <a class="nav-link" href="#">Giới thiệu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">San pham</a>
+                                <a class="nav-link" href="#">Sản phẩm</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Tin tuc</a>
+                                <a class="nav-link" href="#">Tin tức</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Cong trinh</a>
+                                <a class="nav-link" href="#">Công trình</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Lien he</a>
+                                <a class="nav-link" href="#">Liên hệ</a>
                             </li>
                             <li class="bilingual">
                                 <a class="en active" href="#"> EN </a>

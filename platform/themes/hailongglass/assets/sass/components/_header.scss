@@ -19,7 +19,9 @@ header {
             .nav-item {
                 .nav-link {
                     text-decoration: none;
-                    color: $textNight; 
+                    color: $textNight;
+                    padding-left: $size1;
+                    padding-right: $size1; 
                 }
             }
 
@@ -27,8 +29,8 @@ header {
                 .nav-link {
                     padding-left: 0;
                     padding-right: 0;
-                    margin-left: 0.5rem;
-                    margin-right: 0.5rem;
+                    margin-left: $size1;
+                    margin-right: $size1; 
                     border-bottom: 2px solid $textGreen;
                 }
             }

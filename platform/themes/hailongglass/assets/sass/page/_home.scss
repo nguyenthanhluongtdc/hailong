@@ -1,6 +1,3 @@
-h1 {
-    color: $textGreen;
-}
 
 #home-page {
     .section-intro-wrapper {
@@ -17,6 +14,8 @@ h1 {
 
             &__title {
                 color: $textGreen;
+                font-weight: bold;
+                font-size: $size2_5;
             }
 
             .info-contact {
@@ -55,6 +54,15 @@ h1 {
         }
     }
 
+    .section-aboutus-wrapper {
+
+        .section-aboutus {
+            &__line__des {
+                font-weight: bold;
+            }
+        }
+    }
+
     .section-ourproduct-wrapper {
         margin-top: $size3_125;
         .section-ourproduct{
@@ -68,11 +76,17 @@ h1 {
             .section-ourproduct__right {
                 color: $textWhite;
                 background-color: $backgroundGreen;
-                padding: $size2_5;
-                padding-right: $size3_75;
+                padding: $size3_75;
 
-                .__title {
-                    color: $textWhite;
+                .__header {
+                    margin-bottom: $size3;
+                    .__title {
+                        color: $textWhite;
+                    }
+
+                    .__des {
+                        margin-bottom: 0;
+                    }
                 }
 
                 .list-cate-pro {
@@ -80,6 +94,7 @@ h1 {
                     display: flex;
                     flex-wrap: wrap;
                     list-style: none;
+                    margin-bottom: 0;
 
                     &__item {
                         flex: 0 0 calc(50% - #{$size0_625});
@@ -292,6 +307,85 @@ h1 {
 
     .section-news-wrapper {
         background-color: $backgroundf3f3f3;
+    }
+
+    .section-news {
+
+        &__content {
+
+            .col-core {
+
+                &__img {
+                    max-width: 100%;
+                }
+
+                &__content {
+                    
+                    &__title {
+                        font-size: $size1_125;
+                        margin-bottom: 0;
+                    }
+
+                    &__time {
+                        font-size: $size0_9375;
+                        margin-top: $size0_625;
+                        margin-bottom: $size0_625;
+                    }
+
+                    &__des,p {
+                        @include split_str(3);
+                        font-size: $size1;
+                        margin-bottom: 0;
+                    }
+                }
+
+                &__box__img {
+
+                    &__img {
+
+                    }
+                }
+            }
+
+            .col-big {
+                position: relative;
+
+                .col-core__content {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: rgba($backgroundGreen, $alpha0_7);
+                    padding: $size0_9375;
+                    color: $textWhite;
+                }
+            }
+
+            .box-news-main {
+                .col-flex-box {
+                    display: flex;
+                    margin-bottom: $size1_25;
+    
+                    .col-core {
+                        &__box__img {
+                            flex: 0 0 41.6666666667%;
+                            max-width: 41.6666666667%;
+                            padding-right: 15px;
+                        }
+    
+                        &__content {
+                            flex: 0 0 58.3333333333%;
+                            max-width: 58.3333333333%;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+
+                >div:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }
 

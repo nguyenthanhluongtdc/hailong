@@ -17,11 +17,16 @@ html, body {
             color: $textGreen;
             font-size: $size1_875;
             margin-bottom: $size1_5;
+            font-weight: bold;
         }
 
         &__des {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             span {
-
+                display: inline-block;
+                width: 80%;
             }
 
             a {
