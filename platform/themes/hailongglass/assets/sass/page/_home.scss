@@ -7,7 +7,6 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: $size3_75;
 
             &__picture {
                 img { max-width: 100%; height: auto; }
@@ -38,21 +37,30 @@
                     width: 100%;
                     color: $textNight;
                     text-decoration: none;
-
-                    span {
-
-                    }
-
-                    b {
-
-                    }
                 }
             }
         }
 
-        #section-intro__carousel {
-            .splide__pagination {
+        .splide {
+            &__arrows {
+                position: absolute;
+                bottom: $size3;
+                .splide__arrow {
+                    &--prev {
+                        display: none;
+                    }
+                    &--next {
+                        left: $size1;
+                        transform: rotate(90deg);
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            &__pagination {
                 justify-content: end;
+                padding-left: $size2;
+                bottom: $size1_5;
 
                 &__page {
                     background-color: transparent;
@@ -77,7 +85,7 @@
     }
 
     .section-ourproduct-wrapper {
-        margin-top: $size3_125;
+
         .section-ourproduct{
             .section-ourproduct__left {
                 width: 100%;
@@ -92,7 +100,7 @@
                 padding: $size3_75;
 
                 .__header {
-                    margin-bottom: $size3;
+                    margin-bottom: $size2_5;
                     .__title {
                         color: $textWhite;
                     }
@@ -131,6 +139,7 @@
                     &__link.active{
                         position: relative;
                         padding-left: $size1_25;
+
                         &::before {
                             content: "";
                             position: absolute;
@@ -150,7 +159,6 @@
     .section-producecapacity-wrapper {
         background-color: $backgroundf3f3f3;
         .section-producecapacity {
-            padding-bottom: $size3_75;
 
             &__list {
                 padding-left: 0;
@@ -227,7 +235,6 @@
         background-color: $backgroundf3f3f3;
 
         .section-showroom {
-            padding-bottom: $size3_75;
 
             &__content {
 
@@ -236,13 +243,11 @@
                     &__header {
                         margin-right: $size2_5;
 
-                        .nav-link {
-                        
-                        }
                         .nav-link.active {
                             background-color: transparent;
                             border: none;
                             border-bottom: 2px solid $borderGreen;
+                            color: $textGreen;
                         }
                         
                     }
@@ -287,6 +292,29 @@
                     padding-top: $size1_5625;
                     padding-bottom: $size1_5625;
                     border-bottom: 1px solid $borderf3f3f3;
+
+                    .address {
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            content: "\f3c5";
+                            color: $textGreen;
+                            font-family: "Font Awesome 5 Pro";
+                            left: 0;
+                            right: 0;
+                        }
+                    }
+                    .phone {
+                        position: relative;
+                        &::before {
+                            position: absolute;
+                            content: "\f879";
+                            color: $textGreen;
+                            font-family: "Font Awesome 5 Pro";
+                            left: 0;
+                            right: 0;
+                        }
+                    }
                 }
 
                 .box__infoOther {
@@ -313,6 +341,77 @@
                             padding-top: 0;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .section-typicalproject-wrapper {
+        
+        .section-typicalproject {
+            padding-bottom: $size4_5;
+
+            .splide {
+               &__slide {
+                   display: flex;
+                   flex-wrap: wrap;
+                   img {
+                       max-width: 100%;
+                   }
+
+                    &__content {
+                        padding: 15px;
+
+                        &__title {
+                            font-size: 18px;
+                        }
+
+                        &__des {
+
+                        }
+                    }
+               } 
+
+                &__list {
+                        >li:nth-child(3n + 1) {
+                            border-bottom: 2px solid $borderf3f3f3;
+                        }
+
+                        >li:nth-child(3n + 2) {
+                            border-top: 2px solid $borderf3f3f3;
+
+                            > .splide__slide__img {
+                                order: 2;
+                            }
+
+                            > .splide__slide__content {
+                                order: 1;
+                            }
+                        }
+
+                        >li:nth-child(3n + 3) {
+                            > .splide__slide__content {
+                                background-color: $backgroundGreen;
+                                color: $textWhite;
+                            }
+                        }
+                }
+
+                &__pagination {
+                    bottom: -45px;
+
+                        &__page {
+                            background-color: transparent;
+                            border: 2px solid $borderGreen;
+                        }
+
+                        &__page.is-active{
+                            background: $backgroundGreen;
+                        }
+                }
+
+                &__arrows {
+                    display: none;
                 }
             }
         }
@@ -405,37 +504,71 @@
 /***
 *************** Responsive
 ****/
-//screen min-width 1200
-@mixin index-screen-minw1200() {
-    @media (min-width: 1200px) {
-       
+@mixin home-screen-minw1600() {
+    #home-page {
+
+        .section-ourproduct-wrapper {
+            margin-top: $size4;
+        }
+
+        .section-intro-wrapper {
+            margin-top: $size7_5;
+        }
+
+        .section-typicalproject-wrapper {
+        
+            .section-typicalproject {
+    
+                .splide {
+                    &__slide {
+        
+                        &__content {
+    
+                            &__title {
+                                font-size: 20px;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
     }
+    
+}
+
+@mixin home-screen-maxw1600() {
+    #home-page {
+        .section-ourproduct-wrapper {
+            margin-top: $size3;
+        }
+
+        .section-intro-wrapper {
+            margin-top: calc(#{$size3_125} + #{$size3_125});
+        }
+    }
+}
+
+//screen min-width 1200
+@mixin home-screen-minw1200() {
+  
 }
 
 //screen max-width 1200
-@mixin index-screen-maxw1200() {
-    @media (max-width: 1200px) {
-        
-    }
+@mixin home-screen-maxw1200() {
+    
 }
 
 //screen max-width 992
-@mixin index-screen-maxw992() {
-    @media (max-width: 992px) {
-
-    }
+@mixin home-screen-maxw992() {
+    
 }
 
 //screen max-width 768
-@mixin index-screen-maxw768() {
-    @media (max-width: 768px) {
-        
-    }
+@mixin home-screen-maxw768() {
+  
 }
 
 //screen max-width 567
-@mixin index-screen-maxw567() {
-    @media (max-width: 567px) {
-        
-    }
+@mixin home-screen-maxw567() {
+    
 }

@@ -9,35 +9,40 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _page_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page/index */ "./platform/themes/hailongglass/assets/js/page/index.js");
+/* harmony import */ var _page_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page/home */ "./platform/themes/hailongglass/assets/js/page/home.js");
 //import page index
 
 
 /***/ }),
 
-/***/ "./platform/themes/hailongglass/assets/js/page/index.js":
-/*!**************************************************************!*\
-  !*** ./platform/themes/hailongglass/assets/js/page/index.js ***!
-  \**************************************************************/
+/***/ "./platform/themes/hailongglass/assets/js/page/home.js":
+/*!*************************************************************!*\
+  !*** ./platform/themes/hailongglass/assets/js/page/home.js ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function index() {
+function home() {
   $(document).ready(function () {
     new Splide('#section-intro__carousel', {
       heightRatio: 0.5625,
       cover: true,
+      rewind: true,
       lazyLoad: 'sequential'
+    }).mount();
+    new Splide('#section-typicalproject__carousel', {
+      perPage: 3,
+      gap: 40
     }).mount();
   });
 } //call function and export
 
 
-index();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (index);
+home();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (home);
 
 /***/ }),
 

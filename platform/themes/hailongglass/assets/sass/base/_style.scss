@@ -3,42 +3,19 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
-:root {
-    font-size: 16px;
-} 
-
-.hailongglass-header-section {
-    &__header {
-        padding-top: $size3_75;
-
-        &__title {
-            color: $textGreen;
-            font-size: $size1_875;
-            margin-bottom: $size1_5;
-            font-weight: bold;
-        }
-
-        &__des {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            span {
-                display: inline-block;
-                width: 80%;
-            }
-
-            a {
-
-            }
-        }
+@media (min-width: 1600px) {
+    html, body {
+        font-size: 20px;
     }
-} 
+}
 
-.btn-read-more {
-    color: $textNight;
-    border: 1px solid $borderGreen;
-    padding: $size0_625 $size0_9375;
-    display: inline-block;
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1920px;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
 }

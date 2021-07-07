@@ -26,8 +26,8 @@
                 <div class="container align-items-end">
                     <a class="link-hailongglass" href="#" title="HAILONGGLASS">
                         <div class="box-symbol">
-                            <span> HAILON GLASS </span>
-                            <span> VSGLASS </span>
+                            <span class="box-symbol__one"> <span class="__one__box"> </span> HAILON GLASS </span>
+                            <span class="box-symbol__two"> <span class="__two__box"> </span> VSGLASS </span>
                         </div>
                         <h1> KÍNH AN TOÀN HẢI LONG - VIỆT NHẬT </h1>
                     </a>

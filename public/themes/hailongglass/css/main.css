@@ -10007,14 +10007,23 @@ h3 {
 html, body {
   margin: 0;
   padding: 0;
-}
-
-:root {
   font-size: 16px;
 }
 
+@media (min-width: 1600px) {
+  html, body {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1920px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
 .hailongglass-header-section__header {
-  padding-top: 3.75rem;
+  padding-top: 5rem;
 }
 .hailongglass-header-section__header__title {
   color: #08964a;
@@ -10031,6 +10040,7 @@ html, body {
   display: inline-block;
   width: 80%;
 }
+
 .btn-read-more {
   color: #171717;
   border: 1px solid #08964a;
@@ -10038,9 +10048,15 @@ html, body {
   display: inline-block;
 }
 
+/***
+*************** Responsive
+****/
 /**
 *   import folder components
 **/
+header {
+  margin-top: 100px;
+}
 header nav .link-hailongglass {
   text-decoration: none;
 }
@@ -10079,6 +10095,33 @@ header nav .navbar-collapse .bilingual a.active {
   text-decoration: none;
 }
 
+.link-hailongglass .box-symbol__one {
+  position: relative;
+}
+.link-hailongglass .box-symbol__one .__one__box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 45px;
+  color: white;
+  background-color: #08964a;
+  z-index: -1;
+}
+.link-hailongglass .box-symbol__two {
+  position: relative;
+  padding-left: 40px;
+  margin-left: 15px;
+}
+.link-hailongglass .box-symbol__two .__two__box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 35px;
+  border: 7px solid #08964a;
+}
+
 /***
 *************** Responsive
 ****/
@@ -10114,7 +10157,6 @@ footer .footer-wrapper .footer__bottom p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 3.75rem;
 }
 #home-page .section-intro-wrapper .section-intro__picture img {
   max-width: 100%;
@@ -10144,22 +10186,33 @@ footer .footer-wrapper .footer__bottom p {
   color: #171717;
   text-decoration: none;
 }
-#home-page .section-intro-wrapper #section-intro__carousel .splide__pagination {
-  justify-content: end;
+#home-page .section-intro-wrapper .splide__arrows {
+  position: absolute;
+  bottom: 3rem;
 }
-#home-page .section-intro-wrapper #section-intro__carousel .splide__pagination__page {
+#home-page .section-intro-wrapper .splide__arrows .splide__arrow--prev {
+  display: none;
+}
+#home-page .section-intro-wrapper .splide__arrows .splide__arrow--next {
+  left: 1rem;
+  transform: rotate(90deg);
+  background-color: transparent;
+}
+#home-page .section-intro-wrapper .splide__pagination {
+  justify-content: end;
+  padding-left: 2rem;
+  bottom: 1.5rem;
+}
+#home-page .section-intro-wrapper .splide__pagination__page {
   background-color: transparent;
   border: 2px solid white;
 }
-#home-page .section-intro-wrapper #section-intro__carousel .splide__pagination__page.is-active {
+#home-page .section-intro-wrapper .splide__pagination__page.is-active {
   transform: scale(1.4);
   background: white;
 }
 #home-page .section-aboutus-wrapper .section-aboutus__line__des {
   font-weight: bold;
-}
-#home-page .section-ourproduct-wrapper {
-  margin-top: 3.125rem;
 }
 #home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__left {
   width: 100%;
@@ -10173,7 +10226,7 @@ footer .footer-wrapper .footer__bottom p {
   padding: 3.75rem;
 }
 #home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .__header {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 #home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__right .__header .__title {
   color: white;
@@ -10220,9 +10273,6 @@ footer .footer-wrapper .footer__bottom p {
 }
 #home-page .section-producecapacity-wrapper {
   background-color: #f3f3f3;
-}
-#home-page .section-producecapacity-wrapper .section-producecapacity {
-  padding-bottom: 3.75rem;
 }
 #home-page .section-producecapacity-wrapper .section-producecapacity__list {
   padding-left: 0;
@@ -10281,9 +10331,6 @@ footer .footer-wrapper .footer__bottom p {
 #home-page .section-showroom-wrapper {
   background-color: #f3f3f3;
 }
-#home-page .section-showroom-wrapper .section-showroom {
-  padding-bottom: 3.75rem;
-}
 #home-page .section-showroom-wrapper .section-showroom__content .box__tabs__header {
   margin-right: 2.5rem;
 }
@@ -10291,6 +10338,7 @@ footer .footer-wrapper .footer__bottom p {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #08964a;
+  color: #08964a;
 }
 #home-page .section-showroom-wrapper .section-showroom__content .box__tabs__content {
   background-color: white;
@@ -10326,6 +10374,28 @@ footer .footer-wrapper .footer__bottom p {
   padding-bottom: 1.5625rem;
   border-bottom: 1px solid #f3f3f3;
 }
+#home-page .section-showroom-wrapper .section-showroom__content .line__item .address {
+  position: relative;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .line__item .address::before {
+  position: absolute;
+  content: "";
+  color: #08964a;
+  font-family: "Font Awesome 5 Pro";
+  left: 0;
+  right: 0;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .line__item .phone {
+  position: relative;
+}
+#home-page .section-showroom-wrapper .section-showroom__content .line__item .phone::before {
+  position: absolute;
+  content: "";
+  color: #08964a;
+  font-family: "Font Awesome 5 Pro";
+  left: 0;
+  right: 0;
+}
 #home-page .section-showroom-wrapper .section-showroom__content .box__infoOther {
   margin-top: 2.625rem;
   padding: 1.25rem;
@@ -10346,6 +10416,51 @@ footer .footer-wrapper .footer__bottom p {
 }
 #home-page .section-showroom-wrapper .section-showroom__content .box__infoOther__list > div:first-child {
   padding-top: 0;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject {
+  padding-bottom: 4.5rem;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__slide {
+  display: flex;
+  flex-wrap: wrap;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__slide img {
+  max-width: 100%;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__slide__content {
+  padding: 15px;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__slide__content__title {
+  font-size: 18px;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__list > li:nth-child(3n+1) {
+  border-bottom: 2px solid #f3f3f3;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__list > li:nth-child(3n+2) {
+  border-top: 2px solid #f3f3f3;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__list > li:nth-child(3n+2) > .splide__slide__img {
+  order: 2;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__list > li:nth-child(3n+2) > .splide__slide__content {
+  order: 1;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__list > li:nth-child(3n+3) > .splide__slide__content {
+  background-color: #08964a;
+  color: white;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__pagination {
+  bottom: -45px;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__pagination__page {
+  background-color: transparent;
+  border: 2px solid #08964a;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__pagination__page.is-active {
+  background: #08964a;
+}
+#home-page .section-typicalproject-wrapper .section-typicalproject .splide__arrows {
+  display: none;
 }
 #home-page .section-news-wrapper {
   background-color: #f3f3f3;
@@ -10410,6 +10525,40 @@ footer .footer-wrapper .footer__bottom p {
 /***
 *************** Responsive
 ****/
+/** 
+* screen 1600
+**/
+@media (min-width: 1600px) {
+  .distance-below {
+    padding-bottom: 5rem;
+  }
+
+  #home-page .section-ourproduct-wrapper {
+    margin-top: 4rem;
+  }
+  #home-page .section-intro-wrapper {
+    margin-top: 7.5rem;
+  }
+  #home-page .section-typicalproject-wrapper .section-typicalproject .splide__slide__content__title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1600px) {
+  .distance-below {
+    padding-bottom: 3rem;
+  }
+
+  .hailongglass-header-section__header {
+    padding-top: 3rem;
+  }
+
+  #home-page .section-ourproduct-wrapper {
+    margin-top: 3rem;
+  }
+  #home-page .section-intro-wrapper {
+    margin-top: calc(3.125rem + 3.125rem);
+  }
+}
 /** 
 * screen 1200 
 **/

@@ -1,0 +1,50 @@
+
+.hailongglass-header-section {
+    &__header {
+        padding-top: $size5;
+
+        &__title {
+            color: $textGreen;
+            font-size: $size1_875;
+            margin-bottom: $size1_5;
+            font-weight: bold;
+        }
+
+        &__des {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+                display: inline-block;
+                width: 80%;
+            }
+        }
+    }
+} 
+
+.btn-read-more {
+    color: $textNight;
+    border: 1px solid $borderGreen;
+    padding: $size0_625 $size0_9375;
+    display: inline-block;
+}
+
+/***
+*************** Responsive
+****/
+@mixin common-screen-minw1600() {
+    .distance-below {
+        padding-bottom: $size5;
+    }
+}
+@mixin common-screen-maxw1600() {
+    .distance-below {
+        padding-bottom: $size3;
+    }
+
+    .hailongglass-header-section {
+        &__header {
+            padding-top: $size3;
+        }
+    }
+}

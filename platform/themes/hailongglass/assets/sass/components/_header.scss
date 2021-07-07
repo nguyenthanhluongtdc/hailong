@@ -1,5 +1,6 @@
 
 header {
+    margin-top: 100px;
     nav {
         .link-hailongglass {
             text-decoration: none;
@@ -45,7 +46,6 @@ header {
                 }
 
                 a.active { 
-                   
                     background-color: $backgroundGreen;
                     color: $textWhite;
                     text-decoration: none;
@@ -54,7 +54,42 @@ header {
             }
         }
     }
+}
+
+.link-hailongglass {
     
+    .box-symbol {
+
+        &__one {
+            position: relative;
+
+            .__one__box {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 60px;
+                width: 45px;
+                color: $textWhite;
+                background-color: $backgroundGreen;
+                z-index: -1;
+            }
+        }
+
+        &__two {
+            position: relative;
+            padding-left: 40px;
+            margin-left: 15px;
+            
+            .__two__box {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 60px;
+                width: 35px;
+                border: 7px solid $backgroundGreen;
+            }
+        }
+    }
 }
 
     /***

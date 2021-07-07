@@ -1,3 +1,3 @@
 
 //import page index
-import index from './page/index';
+import home from './page/home';

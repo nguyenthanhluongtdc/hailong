@@ -3,11 +3,29 @@
 ****/
 
 /** 
+* screen 1600
+**/
+@media (min-width: 1600px) {
+    //base common
+    @include common-screen-minw1600();
+
+    //page home
+    @include home-screen-minw1600();
+}
+
+@media (max-width: 1600px) {
+    //base common
+    @include common-screen-maxw1600();
+
+    //page home
+    @include home-screen-maxw1600();
+}
+
+/** 
 * screen 1200 
 **/
 @media (min-width: 1200px) {
     //page index
-    @include index-screen-minw1200();
 }
 
 @media (max-width: 1200px) {

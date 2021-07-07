@@ -3,9 +3,11 @@
 /**
 *   import folder base
 **/
+@import "./base/style";
 @import "./base/variables";
 @import "./base/function";
-@import "./base/style";
+@import "./base/common";
+
 
 /**
 *   import folder components
