@@ -1,6 +1,7 @@
 <div id="introduce-overview-page">
 
     <div class="section-banner-wrapper">
+        @includeIf("theme.hailongglass::views.components.breadcrumb")
         <div class="container">
             <div class="section-banner">
                 <div class="hailongglass-header-section__header">

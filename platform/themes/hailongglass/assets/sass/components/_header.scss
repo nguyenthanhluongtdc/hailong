@@ -2,19 +2,6 @@
 header {
     margin-top: 100px;
     nav {
-        .link-hailongglass {
-            text-decoration: none;
-    
-            .core-title {
-                font-size: $size1_1875;
-                text-transform: uppercase;
-                color: $textGreen;
-            }
-    
-            span{
-                font-size: $size1_25;
-            }
-        }
     
         .navbar-collapse {
             .nav-item {
@@ -57,7 +44,6 @@ header {
 }
 
 .link-hailongglass {
-    
     .box-symbol {
 
         &__one {
@@ -89,6 +75,16 @@ header {
                 border: 7px solid $backgroundGreen;
             }
         }
+    }
+
+    
+    .core-title {
+        font-size: $size1_1875;
+        text-transform: uppercase;
+        color: $textGreen;
+    }
+    span{
+        font-size: $size1_25;
     }
 }
 

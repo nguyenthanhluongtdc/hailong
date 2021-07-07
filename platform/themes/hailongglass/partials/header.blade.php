@@ -24,7 +24,7 @@
         <header>
             <nav class="navbar navbar-expand-lg pb-0">
                 <div class="container align-items-end">
-                    <a class="link-hailongglass" href="#" title="HAILONGGLASS">
+                    <a class="link-hailongglass text-decoration-none" href="/" title="HAILONGGLASS">
                         <div class="box-symbol">
                             <span class="box-symbol__one"> <span class="__one__box"> </span> HAILON GLASS </span>
                             <span class="box-symbol__two"> <span class="__two__box"> </span> VSGLASS </span>

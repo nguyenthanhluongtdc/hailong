@@ -30,7 +30,7 @@
 
             .__tabs__item {
                 margin-right: $size1_5625;
-                padding-bottom: $size0_313;
+                padding-bottom: $size0_5;
                 .__tabs__link {
                     text-decoration: none;
                     color: $textNight;
@@ -97,6 +97,7 @@
 
         &__picture {
             width: 100%;
+            margin-top: $size1_25;
 
             img {
                 max-width: 100%;
@@ -181,7 +182,10 @@
 .btn-read-more {
     color: $textNight;
     border: 1px solid $borderGreen;
-    padding: $size0_625 $size0_9375;
+    width: $size6_25;
+    height: $size2_1875;
+    line-height: $size2_1875;
+    text-align: center;
     display: inline-block;
 }
 

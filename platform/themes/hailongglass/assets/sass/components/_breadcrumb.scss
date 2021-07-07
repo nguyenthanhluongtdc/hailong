@@ -1,0 +1,24 @@
+.section-breadcrumb {
+
+    &__list {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        margin-left: -#{$size0_9375};
+        margin-right: -#{$size0_9375};
+
+        .__breadcrumb__item {
+            display: inline-block;
+            padding-left: $size0_9375;
+            padding-right: $size0_9375;
+
+            .__breadcrumb__link {
+                color: $textNight;
+                text-decoration: none;
+            }
+        }
+        .__breadcrumb__item.active {
+            color: $textGreen;
+        }
+    }
+}
