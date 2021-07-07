@@ -66,7 +66,7 @@ class HailongglassController extends PublicController
 
         if (defined('PAGE_MODULE_SCREEN_NAME')) {
             if ($slug->reference_type == Page::class && BaseHelper::isHomepage($slug->reference_id)) {
-                return redirect()->route('public.index');
+                return redirect()->to('/');
             }
         }
 
@@ -77,9 +77,11 @@ class HailongglassController extends PublicController
         }
 
         event(new RenderingSingleEvent($slug));
+        Theme::layout('default');
+
 
         if (!empty($result) && is_array($result)) {
-            return Theme::scope($result['view'], $result['data'], Arr::get($result, 'default_view'))->render();
+            return Theme::scope(isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', ''), $result['data'], Arr::get($result, 'default_view'))->render();
         }
 
         abort(404);

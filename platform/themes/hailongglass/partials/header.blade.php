@@ -22,23 +22,23 @@
         {!! apply_filters(THEME_FRONT_BODY, null) !!}
 
         <header>
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg pb-0">
                 <div class="container align-items-end">
                     <a class="link-hailongglass" href="#" title="HAILONGGLASS">
                         <div class="box-symbol">
                             <span class="box-symbol__one"> <span class="__one__box"> </span> HAILON GLASS </span>
                             <span class="box-symbol__two"> <span class="__two__box"> </span> VSGLASS </span>
                         </div>
-                        <h1> KÍNH AN TOÀN HẢI LONG - VIỆT NHẬT </h1>
+                        <h2 class="core-title"> KÍNH AN TOÀN HẢI LONG - VIỆT NHẬT </h2>
                     </a>
 
                     <div class="collapse navbar-collapse align-items-end" id="navbarTogglerDemo01">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Trang chủ</a>
+                                <a class="nav-link" href="/">Trang chủ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Giới thiệu</a>
+                                <a class="nav-link" href="introduce">Giới thiệu</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Sản phẩm</a>
@@ -47,7 +47,7 @@
                                 <a class="nav-link" href="#">Tin tức</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Công trình</a>
+                                <a class="nav-link" href="#">Dự án</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Liên hệ</a>

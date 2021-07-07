@@ -2,6 +2,9 @@
 
 register_page_template([
     'default' => 'Default',
+    'introduce' => 'Introduce',
+    'products' => 'Products',
+    'news' => 'News',
 ]);
 
 register_sidebar([

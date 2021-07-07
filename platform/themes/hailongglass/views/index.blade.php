@@ -165,9 +165,10 @@
         </div>
     </div>
 
-    <div class="section-whychoose-wrapper">
+    <!----css in file common.scss----->
+    <div class="box-common-many-col-wrapper">
         <div class="container">
-            <div class="section-whychoose distance-below hailongglass-header-section">
+            <div class="box-common-many-col distance-below hailongglass-header-section">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="hailongglass-header-section__header">
@@ -179,33 +180,33 @@
                             </p>
                         </div>
 
-                        <ul class="section-whychoose__list mb-0">
-                            <li class="section-whychoose__list__item">
+                        <ul class="box-common-many-col__list mb-0">
+                            <li class="box-common-many-col__list__item col-md-6 col-12">
                                 <b> Kinh Nghiệm </b>
                                 <p> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
                             </li>
 
-                            <li class="section-whychoose__list__item">
+                            <li class="box-common-many-col__list__item col-md-6 col-12">
                                 <b> Chất Lượng </b>
                                 <p> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
                             </li>
 
-                            <li class="section-whychoose__list__item">
+                            <li class="box-common-many-col__list__item col-md-6 col-12">
                                 <b> Công Nghệ </b>
                                 <p> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
                             </li>
 
-                            <li class="section-whychoose__list__item">
+                            <li class="box-common-many-col__list__item col-md-6 col-12">
                                 <b> Nhân Sự </b>
                                 <p> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
                             </li>
 
-                            <li class="section-whychoose__list__item">
+                            <li class="box-common-many-col__list__item col-md-6 col-12">
                                 <b> Vận Chuyển </b>
                                 <p> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
                             </li>
 
-                            <li class="section-whychoose__list__item">
+                            <li class="box-common-many-col__list__item col-md-6 col-12">
                                 <b> Cam Kết </b>
                                 <p> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
                             </li>
@@ -213,7 +214,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <div class="section-whychoose__picture">
+                        <div class="box-common-many-col__picture">
                             <img width="" height="" src="{{Theme::asset()->url('images/home/19_projects_-_header_image.png')}}" alt="" />
                         </div>
                     </div>
@@ -395,9 +396,9 @@
         </div>
     </div>
 
-    <div class="section-typicalproject-wrapper"> 
+    <div class="box-common-typeicalproject-carousel-wrapper"> 
         <div class="container">
-            <div class="section-typicalproject distance-below hailongglass-header-section">
+            <div class="box-common-typeicalproject-carousel distance-below hailongglass-header-section">
                <div class="hailongglass-header-section__header distance-below">
                     <h2 class="hailongglass-header-section__header__title">
                        Dự án tiêu biểu
@@ -410,7 +411,7 @@
                     </p>
                 </div>
 
-                 <div class="splide" id="section-typicalproject__carousel">
+                 <div class="splide" id="box-common-typeicalproject-carousel__carousel">
                     <div class="splide__slider"> <!-- relative -->
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -537,5 +538,19 @@
     </div>
 </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script>
+    $(document).ready(function() {
+        new Splide( '#section-intro__carousel', {
+            heightRatio: 0.5625,
+            cover      : true,
+            rewind: true,
+            lazyLoad   : 'sequential',
+        }).mount();
+
+
+        new Splide( '#box-common-typeicalproject-carousel__carousel', {
+	        perPage  : 3,
+            gap      : 40,
+        }).mount();
+    })
+</script>
