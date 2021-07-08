@@ -72,7 +72,7 @@
         </nav>
     </header>
 
-    <div id="sidebar-main" class=" d-none">
+    <div id="sidebar-main" class="d-md-block d-none">
         <div class="box box-center">
             <button class="box__item">
                 <span class="box__item__icon"> <i class="fas fa-phone-alt"></i> </span>
