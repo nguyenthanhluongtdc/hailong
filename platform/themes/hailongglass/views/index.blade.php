@@ -3,7 +3,7 @@
         <div class="container-customize">
             <div class="section-intro distance-below">
                 <div class="d-inline-block">
-                    <h2 class="section-intro__title"> Kính an toàn, tiết kiệm năng lượng, <br> hướng tới môi trường xanh. </h2>
+                    <h1 class="section-intro__title"> Kính an toàn, tiết kiệm năng lượng, <br> hướng tới môi trường xanh. </h1>
                     <ul class="info-contact mb-0">
                         <li class="info-contact__item">
                             <a class="info-contact__link" href="#" title="">

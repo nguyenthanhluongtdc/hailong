@@ -10004,6 +10004,12 @@ h3 {
 /**
 *   import folder base
 **/
+@font-face {
+  font-family: "iCiel-SamsungSharpSans-Bold_SMCPS";
+  src: url("../public/fonts/iCiel-SamsungSharpSans-Bold_SMCPS.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -10419,6 +10425,7 @@ footer .footer-wrapper .footer__bottom p {
   color: #08964a;
   font-weight: bold;
   font-size: 2.5rem;
+  font-family: "iCiel-SamsungSharpSans-Bold_SMCPS";
 }
 #home-page .section-intro-wrapper .section-intro .info-contact {
   margin-top: 0.625rem;
