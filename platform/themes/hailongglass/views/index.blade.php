@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="col-md-8 col-12 order-md-2 order-1 pl-md-0">
-                        <div class="section-ourproduct__right">
+                        <div class="section-ourproduct__right h-100">
                             <div class="hailongglass-header-section__header __header mt-0 pt-0">
                                 <h2 class="hailongglass-header-section__header__title __title mb-2"> Sản phẩm </h2>
                                 <p class="hailongglass-header-section__header__des __des">
