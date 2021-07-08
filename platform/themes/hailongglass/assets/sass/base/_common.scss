@@ -11,12 +11,19 @@
         }
 
         &__des {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            margin-bottom: 0;
+            @media (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
             span {
                 display: inline-block;
                 width: 80%;
+
+                @media (max-width: 768px) {
+                    margin-bottom: $size0_625;
+                }
             }
         }
     }
@@ -25,12 +32,14 @@
 
         &__list {
             display: flex;
+            flex-wrap: wrap;
             list-style: none;
             padding-left: 0;
 
             .__tabs__item {
                 margin-right: $size1_5625;
                 padding-bottom: $size0_5;
+                margin-top: $size1;
                 .__tabs__link {
                     text-decoration: none;
                     color: $textNight;
@@ -66,7 +75,12 @@
         .hailongglass-header-section {
             &__header {
                 padding-top: $size3_75;
-                padding-bottom: $size2_5;
+                padding-bottom: $size1_5;
+
+                @media (max-width: 768px) {
+                    padding-top: $size2_75;
+                    padding-bottom: $size0_5;
+                }
 
                 &__title {
                     margin-bottom: 0;
@@ -91,7 +105,9 @@
 
             &__item {
                 margin-top: $size1_875;
-                
+                @media (max-width: 567px){
+                    margin-top: $size0_6875;
+                }
             }
         }
 
@@ -117,15 +133,29 @@
            &__slide {
                display: flex;
                flex-wrap: wrap;
-               img {
-                   max-width: 100%;
-               }
+
+                &__img {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
 
                 &__content {
                     padding: 15px;
+                    width: 100%;
 
                     &__title {
                         font-size: 18px;
+                        
+                        a {
+                            color: $textNight;
+                            text-decoration: none;
+
+                            &:hover {
+                                font-weight: bold;
+                            }
+                        }
                     }
 
                     &__des {
@@ -155,6 +185,9 @@
                         > .splide__slide__content {
                             background-color: $backgroundGreen;
                             color: $textWhite;
+                            a {
+                                color: $textWhite;
+                            }
                         }
                     }
             }
@@ -205,6 +238,18 @@
     .hailongglass-header-section {
         &__header {
             padding-top: $size3;
+        }
+    }
+}
+
+@mixin common-screen-maxw567() {
+    .distance-below {
+        padding-bottom: $size2;
+    }
+    
+    .hailongglass-header-section {
+        &__header {
+            padding-top: $size2;
         }
     }
 }

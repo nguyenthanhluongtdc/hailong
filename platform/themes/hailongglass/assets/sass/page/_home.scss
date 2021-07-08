@@ -24,6 +24,7 @@
                 &__item {
                     display: inline-block;
                     margin-right: $size0_625;
+                    margin-bottom: $size0_313;
                     padding: $size0_438 $size0_625;
                     border: 1px solid $borderGreen;
 
@@ -44,22 +45,42 @@
         .splide {
             &__arrows {
                 position: absolute;
-                bottom: $size3;
+                bottom: $size1_25;
+                left: $size1_5;
                 .splide__arrow {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    transform: translateY(0);
+                    
                     &--prev {
                         display: none;
                     }
                     &--next {
-                        left: $size1;
-                        transform: rotate(90deg);
                         background-color: transparent;
+                        position: relative;
+
+                        svg {
+                            display: none;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            content: "\f149";
+                            font-family: "Font Awesome 5 Pro";
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            color: $textWhite;
+                            font-size: $size1_5625;
+                        }
                     }
                 }
             }
 
             &__pagination {
                 justify-content: end;
-                padding-left: $size2;
+                margin-left: $size2;
                 bottom: $size1_5;
 
                 &__page {
@@ -70,6 +91,10 @@
                 &__page.is-active{
                     transform: scale(1.4);
                     background: $backgroundWhite;
+                }
+
+                li {
+                    margin-right: $size0_5;
                 }
             }
         }
@@ -98,6 +123,9 @@
                 color: $textWhite;
                 background-color: $backgroundGreen;
                 padding: $size3_75;
+                @media (max-width: 567px) {
+                    padding: $size1_25;
+                }
 
                 .__header {
                     margin-bottom: $size2_5;
@@ -225,7 +253,6 @@
                         position: relative;
 
                         .btn-read-more {
-                            padding: $size0_188 $size0_313;
                             padding-right: $size0_9375;
                             background-color: $backgroundGreen;
                             color: $textWhite;
@@ -234,13 +261,15 @@
                             position: absolute;
                             right: $size0_9375;
                             bottom: 0;
+                            height: $size1_5625;
+                            line-height: $size1_5625;
                             transform: translateY(50%);
 
                             &::before {
                                 position: absolute;
-                                content: '\f0dd';
+                                content: '\f0d7';
                                 font-family: "Font Awesome 5 Pro";
-                                right: 0;
+                                right: $size0_438;
                             }
                         }
 
@@ -259,6 +288,7 @@
 
                     .address {
                         position: relative;
+                        padding-left: $size1_5625;
                         &::before {
                             position: absolute;
                             content: "\f3c5";
@@ -270,6 +300,7 @@
                     }
                     .phone {
                         position: relative;
+                        padding-left: $size1_5625;
                         &::before {
                             position: absolute;
                             content: "\f879";
@@ -277,6 +308,12 @@
                             font-family: "Font Awesome 5 Pro";
                             left: 0;
                             right: 0;
+                        }
+                    }
+
+                    .phone.white, .address.white {
+                        &::before {
+                            color: $textWhite;
                         }
                     }
                 }
@@ -329,6 +366,11 @@
                     &__title {
                         font-size: $size1_125;
                         margin-bottom: 0;
+
+                        a {
+                            color: $textNight;
+                            text-decoration: none;
+                        }
                     }
 
                     &__time {
@@ -362,7 +404,11 @@
                     right: 0;
                     background-color: rgba($backgroundGreen, $alpha0_7);
                     padding: $size0_9375;
-                    color: $textWhite;
+                    
+                    a {
+                        color: $textWhite;
+                        text-decoration: none;
+                    }
                 }
             }
 
@@ -452,12 +498,20 @@
 
 //screen max-width 992
 @mixin home-screen-maxw992() {
-    
+    #home-page {
+        .section-intro-wrapper {
+            margin-top: calc(#{$size2_5} + #{$size2_5});
+        }
+    }
 }
 
 //screen max-width 768
 @mixin home-screen-maxw768() {
-  
+    #home-page {
+        .section-intro-wrapper {
+            margin-top: $size3_75;
+        }
+    }
 }
 
 //screen max-width 567

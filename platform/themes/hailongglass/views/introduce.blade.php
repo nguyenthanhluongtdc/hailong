@@ -2,7 +2,7 @@
 
     <div class="section-banner-wrapper">
         @includeIf("theme.hailongglass::views.components.breadcrumb")
-        <div class="container">
+        <div class="container-customize">
             <div class="section-banner">
                 <div class="hailongglass-header-section__header">
                     <h2 class="hailongglass-header-section__header__title">
@@ -35,7 +35,7 @@
     </div>
 
     <div class="section-intro-wrapper mt-5">
-        <div class="container">
+        <div class="container-customize pr-0">
             <div class="section-intro hailongglass-header-section">
                 <div class="row">
                     <div class="col-md-6 col-12">
@@ -68,8 +68,8 @@
                     </div>
 
                     <div class="col-md-6 col-12">
-                        <div class="section-intro__picture">
-                            <img width="" height="" src="{{Theme::asset()->url('images/home/intro__picture.png')}}" alt="" />
+                        <div class="section-intro__picture video">
+                            <img width="" height="" src="{{Theme::asset()->url('images/home/d7e5ae83ee0a1a54431b.jpg')}}" alt="" />
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
 
     <!----css in file common.scss----->
     <div class="box-common-many-col-wrapper">
-        <div class="container">
+        <div class="container-customize">
             <div class="box-common-many-col hailongglass-header-section">
                 <div class="hailongglass-header-section__header">
                     <h2 class="hailongglass-header-section__header__title">
@@ -118,20 +118,19 @@
                         <p> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
                     </li>
                 </ul>
-
-                <div class="box-common-many-col__picture">
-                    <img width="" height="" src="{{Theme::asset()->url('images/introduce/pexels-sevenstorm-juhaszimrus-443383.png')}}" alt="" />
-                </div>
             </div>
+        </div>
+        <div class="box-common-many-col__picture">
+            <img width="" height="" src="{{Theme::asset()->url('images/introduce/pexels-sevenstorm-juhaszimrus-443383.jpg')}}" alt="" />
         </div>
     </div>
 
     <!----css in file common.scss----->
     <div class="box-common-many-col-wrapper">
-        <div class="container">
+        <div class="container-customize">
             <div class="box-common-many-col hailongglass-header-section">
-                <div class="hailongglass-header-section__header d-flex">
-                    <h2 class="hailongglass-header-section__header__title w-25">
+                <div class="hailongglass-header-section__header d-md-flex">
+                    <h2 class="hailongglass-header-section__header__title w-md-25">
                         Tại sao chọn Hailong Glass
                     </h2>
                     <p class="hailongglass-header-section__header__des align-items-end mb-4">
@@ -176,7 +175,7 @@
 
     <!----css in file common.scss----->
     <div class="box-common-typeicalproject-carousel-wrapper">
-        <div class="container">
+        <div class="container-customize">
             <div class="box-common-typeicalproject-carousel distance-below hailongglass-header-section">
                 <div class="hailongglass-header-section__header distance-below">
                     <h2 class="hailongglass-header-section__header__title">
@@ -197,37 +196,57 @@
                             <ul class="splide__list">
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/project1.png')}}" />
+                                        <a href="#" title="">
+                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" />
+                                        </a>
                                     </div>
                                     <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title"> Can ho cao cap The Minato Residence </h3>
+                                        <h3 class="splide__slide__content__title">
+                                            <a href="#" title="">
+                                                Can ho cao cap The Minato Residence
+                                            </a>
+                                        </h3>
                                         <div class="splide__slide__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/project2.png')}}" />
+                                        <a href="#" title="">
+                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" />
+                                        </a>
                                     </div>
                                     <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title"> Can ho cao cap The Minato Residence </h3>
+                                        <h3 class="splide__slide__content__title">
+                                            <a href="#" title="">
+                                                Can ho cao cap The Minato Residence
+                                            </a>
+                                        </h3>
                                         <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/project3.png')}}" />
+                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" />
                                     </div>
                                     <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title"> Can ho cao cap The Minato Residence </h3>
+                                        <h3 class="splide__slide__content__title">
+                                            <a href="#" title="">
+                                                Can ho cao cap The Minato Residence
+                                            </a>
+                                        </h3>
                                         <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/project1.png')}}" />
+                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" />
                                     </div>
                                     <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title"> Can ho cao cap The Minato Residence </h3>
+                                        <h3 class="splide__slide__content__title">
+                                            <a href="#" title="">
+                                                Can ho cao cap The Minato Residence
+                                            </a>
+                                        </h3>
                                         <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
                                     </div>
                                 </li>
@@ -249,6 +268,16 @@
         new Splide('#box-common-typeicalproject-carousel__carousel', {
             perPage: 3
             , gap: 40
+            , breakpoints: {
+                '992': {
+                    perPage: 2
+                    , gap: '1rem'
+                , }
+                , '480': {
+                    perPage: 1
+                    , gap: '1rem'
+                , }
+            , }
         , }).mount();
     })
 

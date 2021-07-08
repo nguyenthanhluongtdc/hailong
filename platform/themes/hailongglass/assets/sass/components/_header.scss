@@ -19,7 +19,7 @@ header {
                     padding-right: 0;
                     margin-left: $size1;
                     margin-right: $size1; 
-                    border-bottom: 2px solid $textGreen;
+                    border-bottom: 2px solid $borderGreen;
                 }
             }
 
@@ -27,9 +27,13 @@ header {
                 margin: auto 0;
 
                 a{
-                    padding: 10px;
+                    padding: $size0_625 $size0_9375;
                     border: 1px solid $backgroundGreen;
                     color: $textNight;
+                    display: inline-block;
+                }
+                >a:first-child{
+                    margin-right: -5px;
                 }
 
                 a.active { 
@@ -38,6 +42,35 @@ header {
                     text-decoration: none;
                 }
 
+            }
+        }
+
+        .navbar-collapse.show {
+            background-color: $backgroundGreen;
+            
+            .nav-item {
+                .nav-link{
+                    color: $textWhite !important;
+                }
+            }
+
+            .nav-item.active {
+                .nav-link {
+                    border-bottom: 2px solid $borderf3f3f3;
+                }
+            }
+
+            .bilingual {
+                margin-top: $size0_5;
+                border: 1px solid $borderf3f3f3;
+                width: max-content;
+                a:not(.active) {
+                    color: $textWhite;
+                }
+                a.active {
+                    background-color: $backgroundWhite;
+                    color: $textGreen !important;
+                }
             }
         }
     }

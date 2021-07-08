@@ -1,6 +1,7 @@
 <script type="text/x-custom-template" id="rules_group_template">
     <div class="line rule-line mb10">
         <select class="form-control float-left rule-a">
+        @php //dd($ruleGroups) @endphp
             @foreach($ruleGroups as $key => $row)
                 <optgroup label="{{ trans('plugins/custom-field::rules.groups.' . $key) }}">
                     @foreach($row['items'] as $item)

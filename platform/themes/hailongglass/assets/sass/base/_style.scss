@@ -12,10 +12,13 @@ html, body {
     }
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1920px;
-        padding-left: 8%;
-        padding-right: 8%;
-    }
+.container-customize:not(.important) {
+    max-width: 1920px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.container-customize.important {
+    max-width: 1920px;
+    padding-left: 8% !important;
+    padding-right: 8% !important;
 }

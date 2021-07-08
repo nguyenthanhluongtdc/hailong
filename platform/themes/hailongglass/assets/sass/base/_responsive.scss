@@ -42,7 +42,7 @@
 }
 
 @media (max-width: 992px) {
-
+    @include home-screen-maxw992();
 }
 /** end screen 992 **/
 
@@ -55,7 +55,7 @@
 }
 
 @media (max-width: 768px) {
-        
+    @include home-screen-maxw768();
 }
 /** end screen 768 **/
 
@@ -67,6 +67,6 @@
 }
 
 @media (max-width: 567px) {
-    
+    @include common-screen-maxw567();
 }
 /** end screen 567 **/

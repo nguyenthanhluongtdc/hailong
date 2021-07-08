@@ -1,10 +1,10 @@
         <footer>
             <div class="footer-wrapper">
-                <div class="container">
+                <div class="container-customize">
                     <div class="footer">
                         <div class="footer__top">
                             <div class="row">
-                                <div class="col-lg-3 footer__col">
+                                <div class="col-lg-3 col-sm-6 col-12 footer__col">
                                     <a class="link-hailongglass text-decoration-none" href="/" title="HAILONGGLASS">
                                         <div class="box-symbol mb-4">
                                             <span class="box-symbol__one"> <span class="__one__box"> </span> HAILON GLASS </span>
@@ -14,7 +14,7 @@
                                     </a>
                                 </div>
 
-                                <div class="col-lg-3 footer__col">
+                                <div class="col-lg-3 col-sm-6 col-12 footer__col">
                                     <div class="f-listaddress">
                                         <p class="footer__col__title">
                                             <strong> CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI HẢI LONG </strong>
@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-2 footer__col">
+                                <div class="col-lg-2 col-sm-4 col-12 footer__col">
                                     <div class="f-listinfo">
                                         <p class="footer__col__title">
                                             <strong> Thông Tin </strong>
@@ -60,7 +60,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-2 footer__col">
+                                <div class="col-lg-2 col-sm-4 col-6 footer__col">
                                     <div class="f-listaboutus">
                                         <p class="footer__col__title">
                                             <strong> Về chúng tôi </strong>
@@ -96,7 +96,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-2 footer__col">
+                                <div class="col-lg-2 col-sm-4 col-6 footer__col">
                                     <div class="f-listinfo-other">
                                         <p class="footer__col__title">
                                             <strong> &nbsp </strong>

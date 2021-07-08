@@ -11,8 +11,21 @@
             }
 
             &__picture {
+                position: relative;
                 img {
                     max-width: 200%;
+                }
+            }
+            &__picture.video {
+                &::before {
+                    content: "\f144";
+                    position: absolute;
+                    font-family: "Font Awesome 5 Pro";
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $textWhite;
+                    font-size: $size1_875;
                 }
             }
         }
