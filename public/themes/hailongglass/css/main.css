@@ -10008,6 +10008,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 @media (min-width: 1600px) {
@@ -10485,6 +10486,9 @@ footer .footer-wrapper .footer__bottom p {
 }
 #home-page .section-intro-wrapper .splide__pagination li {
   margin-right: 0.5rem;
+}
+#home-page .section-intro-wrapper .splide__slider img {
+  max-width: 100%;
 }
 #home-page .section-aboutus-wrapper .section-aboutus__line__des {
   font-weight: bold;
