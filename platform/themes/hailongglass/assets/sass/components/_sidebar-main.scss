@@ -17,7 +17,8 @@
             background: transparent;
             border: none;
             outline: none;
-            display: block;
+            display: flex;
+            align-items: center;
             width: max-content;
             padding-top: $size0_9375;
             padding-bottom: $size0_9375;
@@ -53,6 +54,10 @@
                 color: $textWhite;
                 transform: translateX(calc(-100% + #{$size3_125}));
             }
+        }
+
+        .box__item.back-top {
+            display: block;
         }
     }
 }

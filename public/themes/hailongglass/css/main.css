@@ -10255,7 +10255,8 @@ html, body {
   background: transparent;
   border: none;
   outline: none;
-  display: block;
+  display: flex;
+  align-items: center;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -10288,6 +10289,9 @@ html, body {
 #sidebar-main .box-center .box__item:hover {
   color: white;
   transform: translateX(calc(-100% + 3.125rem));
+}
+#sidebar-main .box-center .box__item.back-top {
+  display: block;
 }
 
 header {
@@ -10632,6 +10636,7 @@ footer .footer-wrapper .footer__bottom p {
   position: absolute;
   content: "";
   font-family: "Font Awesome 5 Pro";
+  font-weight: bold;
   right: 0.438rem;
 }
 #home-page .section-showroom-wrapper .section-showroom__content .box__tabs__content .tab-pane > div:first-child {
@@ -10661,6 +10666,7 @@ footer .footer-wrapper .footer__bottom p {
 #home-page .section-showroom-wrapper .section-showroom__content .line__item .phone::before {
   position: absolute;
   content: "";
+  font-weight: bold;
   color: #08964a;
   font-family: "Font Awesome 5 Pro";
   left: 0;

@@ -276,6 +276,7 @@
                                 position: absolute;
                                 content: '\f0d7';
                                 font-family: "Font Awesome 5 Pro";
+                                font-weight: bold;
                                 right: $size0_438;
                             }
                         }
@@ -311,6 +312,7 @@
                         &::before {
                             position: absolute;
                             content: "\f879";
+                            font-weight: bold;
                             color: $textGreen;
                             font-family: "Font Awesome 5 Pro";
                             left: 0;

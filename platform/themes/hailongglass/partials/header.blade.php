@@ -92,7 +92,7 @@
 
             </button>
 
-            <button class="box__item">
+            <button class="box__item back-top">
                 <span class="box__item__icon"><i class="fal fa-arrow-up"></i> </span>
 
                  <div class="box__item__content d-block">
