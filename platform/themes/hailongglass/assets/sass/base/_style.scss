@@ -1,6 +1,5 @@
-
-
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -8,18 +7,25 @@ html, body {
 }
 
 @media (min-width: 1600px) {
-    html, body {
+    html,
+    body {
         font-size: 20px;
     }
 }
 
 .container-customize:not(.important) {
     max-width: 1920px;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 16%;
+    padding-right: 16%;
 }
+
 .container-customize.important {
     max-width: 1920px;
-    padding-left: 8% !important;
-    padding-right: 8% !important;
+    padding-left: 16% !important;
+    padding-right: 16% !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $night;
 }
