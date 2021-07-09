@@ -10005,36 +10005,12 @@ h3 {
 *   import folder base
 **/
 @font-face {
-  font-family: "Barlow-Black";
-  src: url("../../public/fonts/Barlow-Black.eot");
-  src: url("../../public/fonts/Barlow-Black.eot?#iefix") format("embedded-opentype"), url("../../public/fonts/Barlow-Black.woff") format("woff"), url("../../public/fonts/Barlow-Black.ttf") format("truetype"), url("../../public/fonts/Barlow-Black.svg") format("svg");
+  font-family: "iCiel-SamsungSharpSans-Bold_SMCPS";
+  src: url("../../../public/fonts/iCiel-SamsungSharpSans-Bold_SMCPS.eot");
+  src: url("../../../public/fonts/iCiel-SamsungSharpSans-Bold_SMCPS.eot?#iefix") format("embedded-opentype"), url("../../../public/fonts/iCiel-SamsungSharpSans-Bold_SMCPS.woff") format("woff"), url("../../../public/fonts/iCiel-SamsungSharpSans-Bold_SMCPS.ttf") format("truetype"), url("../../../public/fonts/iCiel-SamsungSharpSans-Bold_SMCPS.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-html, body {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  overflow-x: hidden;
-}
-
-@media (min-width: 1600px) {
-  html, body {
-    font-size: 20px;
-  }
-}
-.container-customize:not(.important) {
-  max-width: 1920px;
-  padding-left: 8%;
-  padding-right: 8%;
-}
-
-.container-customize.important {
-  max-width: 1920px;
-  padding-left: 8% !important;
-  padding-right: 8% !important;
-}
-
 .hailongglass-header-section__header {
   padding-top: 5rem;
 }
@@ -10213,6 +10189,30 @@ html, body {
 /***
 *************** Responsive
 ****/
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1600px) {
+  html, body {
+    font-size: 20px;
+  }
+}
+.container-customize:not(.important) {
+  max-width: 1920px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.container-customize.important {
+  max-width: 1920px;
+  padding-left: 8% !important;
+  padding-right: 8% !important;
+}
+
 /**
 *   import folder components
 **/
@@ -10426,7 +10426,7 @@ footer .footer-wrapper .footer__bottom p {
   color: #08964a;
   font-weight: bold;
   font-size: 2.5rem;
-  font-family: "Barlow-Black";
+  font-family: "iCiel-SamsungSharpSans-Bold_SMCPS";
 }
 #home-page .section-intro-wrapper .section-intro .info-contact {
   margin-top: 0.625rem;

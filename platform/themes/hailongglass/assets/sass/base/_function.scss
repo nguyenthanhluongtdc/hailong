@@ -1,9 +1,9 @@
 @mixin split_str($line_number) {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: $line_number;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line_number;
 }
 
 @mixin font-face($font-family, $url) {
@@ -11,9 +11,9 @@
     font-family: "#{$font-family}";
     src: url("../#{$url}.eot");
     src: url("../#{$url}.eot?#iefix") format("embedded-opentype"),
-      url("../#{$url}.woff") format("woff"),
-      url("../#{$url}.ttf") format("truetype"),
-      url("../#{$url}.svg") format("svg");
+    url("../#{$url}.woff") format("woff"),
+    url("../#{$url}.ttf") format("truetype"),
+    url("../#{$url}.svg") format("svg");
     font-weight: normal;
     font-style: normal;
   }
