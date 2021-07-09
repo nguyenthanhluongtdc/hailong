@@ -134,29 +134,30 @@
         </div>
     </div>
 
-    <div class="section-producecapacity-wrapper">
+    <!--css in file common.scss----->
+    <div class="box-common-producecapacity-wrapper">
         <div class="container-customize">
-            <div class="section-producecapacity distance-below hailongglass-header-section">
+            <div class="box-common-producecapacity distance-below hailongglass-header-section">
                 <div class="hailongglass-header-section__header">
                     <h2 class="hailongglass-header-section__header__title"> Năng lực sản xuất </h2>
                 </div>
-                <ul class="section-producecapacity__list">
-                    <li class="section-producecapacity__list__item">
+                <ul class="box-common-producecapacity__list">
+                    <li class="box-common-producecapacity__list__item">
                         <b> Kính dán an toàn </b>
                         <p> 3.000.000 m2/năm, khả năng cung ứng 8.800 m2/ngày Kính cường lực </p>
                     </li>
 
-                    <li class="section-producecapacity__list__item">
+                    <li class="box-common-producecapacity__list__item">
                         <b> Kính cường lực </b>
                         <p> 3.290.000 m2/năm, khả năng cung ứng 9.400 m2/ngày Kính hộp </p>
                     </li>
 
-                    <li class="section-producecapacity__list__item">
+                    <li class="box-common-producecapacity__list__item">
                         <b> Kính hộp </b>
                         <p> 450.000 m2/năm, khả năng cung ứng 1.285 m2/ngày </p>
                     </li>
 
-                    <li class="section-producecapacity__list__item">
+                    <li class="box-common-producecapacity__list__item">
                         <b> Kính Ô tô </b>
                         <p> 360.000 tấn/năm, khả năng cung ứng 1000 tấn/ngày </p>
                     </li>
@@ -164,6 +165,7 @@
             </div>
         </div>
     </div>
+    <!--end css in file common.scss----->
 
     <!--css in file common.scss----->
     <div class="box-common-many-col-wrapper">

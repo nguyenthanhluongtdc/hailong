@@ -32,6 +32,7 @@
                 font-size: $size1_5625;
                 width: calc(#{$size1_875} + #{$size1_875});
                 display: inline-block;
+               
             }
 
             &__content {
@@ -58,6 +59,10 @@
 
         .box__item.back-top {
             display: block;
+
+            .box__item__icon {
+                font-size: $size1_25;
+            }
         }
     }
 }

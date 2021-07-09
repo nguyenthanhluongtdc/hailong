@@ -191,45 +191,6 @@
         }
     }
 
-    .section-producecapacity-wrapper {
-        background-color: $backgroundf3f3f3;
-        .section-producecapacity {
-
-            &__list {
-                padding-left: 0;
-                list-style: none;
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 0;
-
-                &__item {
-                    position: relative;
-                    padding-top: $size0_625;
-                    margin-top: $size0_625;
-                    flex: 0 0 calc(50% - #{$size0_625});
-                    max-width: calc(50% - #{$size0_625});
-                    
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: $size0_625;
-                        height: $size0_125;
-                        background-color: red;
-                        top: 0;
-                        left: 0;
-                    }
-
-                    &:nth-child(odd) {
-                        margin-right: $size0_625
-                    }
-                    &:nth-child(even) {
-                        margin-left: $size0_625
-                    }
-                }
-            }
-        }
-    }
-
     .section-news-wrapper {
         background-color: $backgroundf3f3f3;
     }

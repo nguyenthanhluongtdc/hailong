@@ -21,7 +21,7 @@
                         </li>
 
                         <li class="__tabs__item">
-                            <a class="__tabs__link" href="#" title="Hồ sơ năng lực"> Hồ sơ năng lực </a>
+                            <a class="__tabs__link" href="/profile" title="Hồ sơ năng lực"> Hồ sơ năng lực </a>
                         </li>
 
                         <li class="__tabs__item">

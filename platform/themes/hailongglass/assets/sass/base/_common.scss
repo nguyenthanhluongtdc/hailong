@@ -287,57 +287,6 @@
 
         &__content {
 
-            .box__tabs {
-
-                &__header {
-                    margin-right: $size2_5;
-
-                    .nav-link.active {
-                        background-color: transparent;
-                        border: none;
-                        border-bottom: 2px solid $borderGreen;
-                        color: $textGreen;
-                    }
-                    
-                }
-
-                &__content {
-                    background-color: $backgroundWhite;
-                    padding-right: $size1_25;
-                    padding-left: $size2_5;
-                    padding-top: $size2_5;
-                    position: relative;
-
-                    .btn-read-more {
-                        padding-right: $size0_9375;
-                        background-color: $backgroundGreen;
-                        color: $textWhite;
-                        text-decoration: none;
-                        font-size: $size0_8125;
-                        position: absolute;
-                        right: $size0_9375;
-                        bottom: 0;
-                        height: $size1_5625;
-                        line-height: $size1_5625;
-                        transform: translateY(50%);
-
-                        &::before {
-                            position: absolute;
-                            content: '\f0d7';
-                            font-family: "Font Awesome 5 Pro";
-                            font-weight: bold;
-                            right: $size0_438;
-                        }
-                    }
-
-                    .tab-pane {
-                        >div:first-child {
-                            padding-top: 0;
-                        }
-                    }
-                }
-            }
-
             .line__item {
                 padding-top: $size1_5625;
                 padding-bottom: $size1_5625;
@@ -408,6 +357,125 @@
     }
 }
 
+.box-common-producecapacity-wrapper {
+    background-color: $backgroundf3f3f3;
+    .box-common-producecapacity {
+
+        &__list {
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+
+            &__item {
+                position: relative;
+                padding-top: $size0_625;
+                margin-top: $size0_625;
+                flex: 0 0 calc(50% - #{$size0_625});
+                max-width: calc(50% - #{$size0_625});
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: $size0_625;
+                    height: $size0_125;
+                    background-color: red;
+                    top: 0;
+                    left: 0;
+                }
+
+                &:nth-child(odd) {
+                    margin-right: $size0_625
+                }
+                &:nth-child(even) {
+                    margin-left: $size0_625
+                }
+            }
+        }
+    }
+}
+
+.box-common-statistics-wrapper {
+    .box-common-statistics {
+        background-color: $backgroundGreen;
+        padding: $size3 $size5;
+        padding-top: $size1_5;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &__col {
+            padding-top: $size1_5;
+
+            .__col__up {
+                font-size: $size2_1875;
+                color: $textWhite;
+                font-weight: bold;
+            }
+
+            .__col__down {
+                color: $text84cba5;
+                max-width: 60%;
+            }
+        }
+    }
+}
+
+.box__tabs {
+
+    &__header {
+        margin-right: $size2_5;
+
+        .nav-link {
+            background-color: transparent;
+            border: none;
+        }
+
+        .nav-link.active {
+            background-color: transparent;
+            border-bottom: 2px solid $borderGreen;
+            color: $textGreen;
+        }
+        
+    }
+
+    &__content {
+        background-color: $backgroundWhite;
+        padding-right: $size1_25;
+        padding-left: $size2_5;
+        padding-top: $size2_5;
+        position: relative;
+
+        .btn-read-more {
+            padding-right: $size0_9375;
+            background-color: $backgroundGreen;
+            color: $textWhite;
+            text-decoration: none;
+            font-size: $size0_8125;
+            position: absolute;
+            right: $size0_9375;
+            bottom: 0;
+            height: $size1_5625;
+            line-height: $size1_5625;
+            transform: translateY(50%);
+
+            &::before {
+                position: absolute;
+                content: '\f0d7';
+                font-family: "Font Awesome 5 Pro";
+                font-weight: bold;
+                right: $size0_438;
+            }
+        }
+
+        .tab-pane {
+            >div:first-child {
+                padding-top: 0;
+            }
+        }
+    }
+}
 
 .btn-read-more {
     color: $textNight;

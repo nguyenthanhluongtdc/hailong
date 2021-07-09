@@ -4,6 +4,7 @@ register_page_template([
     'default' => 'Default',
     'introduce' => 'Introduce',
     'company-info' => 'Company info',
+    'introduce-profile' => 'Introduce Profile',
     'products' => 'Products',
     'news' => 'News',
 ]);

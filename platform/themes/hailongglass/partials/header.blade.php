@@ -88,7 +88,7 @@
             </button>
 
             <button class="box__item">
-                <span class="box__item__icon"> <i class="fad fa-comment-alt-lines"></i> </span>
+                <span class="box__item__icon"> <i class="fas fa-comment-alt-lines"></i> </span>
 
             </button>
 
