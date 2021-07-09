@@ -212,6 +212,203 @@
     }
 }
 
+.box-common-intro-wrapper {
+
+    .box-common-intro {
+        overflow: hidden;
+
+        &__content {
+            border-bottom: 1px solid $borderf3f3f3;
+            height: 100%;
+        }
+
+        &__picture {
+            position: relative;
+            img {
+                max-width: 200%;
+            }
+        }
+        &__picture.video {
+            &::before {
+                content: "\f144";
+                position: absolute;
+                font-family: "Font Awesome 5 Pro";
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $textWhite;
+                font-size: $size1_875;
+            }
+        }
+    }
+
+    .splide {
+        &__arrows {
+            position: absolute;
+            bottom: $size1_25;
+            left: $size1_5;
+            display: none;
+        }
+
+        &__arrow {
+
+        }
+
+        &__pagination {
+            bottom: $size1_5;
+
+            &__page {
+                background-color: transparent;
+                border: 2px solid $backgroundWhite;
+            }
+
+            &__page.is-active{
+                transform: scale(1.4);
+                background: $backgroundWhite;
+            }
+
+            li {
+                margin-right: $size0_5;
+            }
+        }
+
+        &__slider {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.box-common-showroom-wrapper {
+    background-color: $backgroundf3f3f3;
+
+    .box-common-showroom {
+
+        &__content {
+
+            .box__tabs {
+
+                &__header {
+                    margin-right: $size2_5;
+
+                    .nav-link.active {
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 2px solid $borderGreen;
+                        color: $textGreen;
+                    }
+                    
+                }
+
+                &__content {
+                    background-color: $backgroundWhite;
+                    padding-right: $size1_25;
+                    padding-left: $size2_5;
+                    padding-top: $size2_5;
+                    position: relative;
+
+                    .btn-read-more {
+                        padding-right: $size0_9375;
+                        background-color: $backgroundGreen;
+                        color: $textWhite;
+                        text-decoration: none;
+                        font-size: $size0_8125;
+                        position: absolute;
+                        right: $size0_9375;
+                        bottom: 0;
+                        height: $size1_5625;
+                        line-height: $size1_5625;
+                        transform: translateY(50%);
+
+                        &::before {
+                            position: absolute;
+                            content: '\f0d7';
+                            font-family: "Font Awesome 5 Pro";
+                            font-weight: bold;
+                            right: $size0_438;
+                        }
+                    }
+
+                    .tab-pane {
+                        >div:first-child {
+                            padding-top: 0;
+                        }
+                    }
+                }
+            }
+
+            .line__item {
+                padding-top: $size1_5625;
+                padding-bottom: $size1_5625;
+                border-bottom: 1px solid rgb($borderf3f3f3, $alpha0_5);
+
+                .address {
+                    position: relative;
+                    padding-left: $size1_5625;
+                    &::before {
+                        position: absolute;
+                        content: "\f3c5";
+                        color: $textGreen;
+                        font-family: "Font Awesome 5 Pro";
+                        left: 0;
+                        right: 0;
+                    }
+                }
+                .phone {
+                    position: relative;
+                    padding-left: $size1_5625;
+                    &::before {
+                        position: absolute;
+                        content: "\f879";
+                        font-weight: bold;
+                        color: $textGreen;
+                        font-family: "Font Awesome 5 Pro";
+                        left: 0;
+                        right: 0;
+                    }
+                }
+
+                .phone.white, .address.white {
+                    &::before {
+                        color: $textWhite;
+                    }
+                }
+            }
+
+            .box__infoOther {
+                margin-top: $size2_625;
+                padding: $size1_25;
+                padding-bottom: 0;
+                background-color: $backgroundGreen;
+                color: $textWhite;
+                height: calc(100% - #{$size2_625});
+
+                &__header {
+
+                    &__title {
+                        font-size: $size1_875;
+                    }
+
+                    &__des {
+                        @include split_str(2);
+                    }
+                }
+
+                &__list {
+                    >div:first-child {
+                        padding-top: 0;
+                    }
+                    >div:last-child {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 .btn-read-more {
     color: $textNight;
     border: 1px solid $borderGreen;

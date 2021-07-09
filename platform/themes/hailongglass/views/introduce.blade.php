@@ -18,7 +18,7 @@
                         </li>
 
                         <li class="__tabs__item">
-                            <a class="__tabs__link" href="#" title="Thông tin công ty"> Thông tin công ty </a>
+                            <a class="__tabs__link" href="/company-info" title="Thông tin công ty"> Thông tin công ty </a>
                         </li>
 
                         <li class="__tabs__item">
@@ -34,12 +34,12 @@
         </div>
     </div>
 
-    <div class="section-intro-wrapper mt-5">
+    <div class="box-common-intro-wrapper mt-5">
         <div class="container-customize pr-0">
-            <div class="section-intro hailongglass-header-section">
+            <div class="box-common-intro hailongglass-header-section">
                 <div class="row">
                     <div class="col-md-6 col-12">
-                        <div class="section-intro__content">
+                        <div class="box-common-intro__content">
                             <div class="hailongglass-header-section__header pt-0">
                                 <h2 class="hailongglass-header-section__header__title">
                                     Hailong Glass
@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="col-md-6 col-12">
-                        <div class="section-intro__picture video">
+                        <div class="box-common-intro__picture video">
                             <img width="" height="" src="{{Theme::asset()->url('images/home/d7e5ae83ee0a1a54431b.jpg')}}" alt="" />
                         </div>
                     </div>
@@ -264,6 +264,7 @@
 </div>
 
 <script>
+
     $(document).ready(function() {
         new Splide('#box-common-typeicalproject-carousel__carousel', {
             perPage: 3

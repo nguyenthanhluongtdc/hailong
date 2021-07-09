@@ -224,9 +224,10 @@
     </div>
     <!--end css in file common.scss----->
 
-    <div class="section-showroom-wrapper">
+    <!--css in file common.scss----->
+    <div class="box-common-showroom-wrapper">
         <div class="container-customize">
-            <div class="section-showroom distance-below hailongglass-header-section">
+            <div class="box-common-showroom distance-below hailongglass-header-section">
                 <div class="hailongglass-header-section__header">
                     <h2 class="hailongglass-header-section__header__title">
                         Showroom Hailong Glass
@@ -236,13 +237,13 @@
                     </p>
                 </div>
 
-                <div class="section-showroom__content">
+                <div class="box-common-showroom__content">
                     <div class="row">
                         <div class="col-lg-7 col-12">
                             <div class="box__tabs">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item box__tabs__header" role="presentation">
-                                        <button class="nav-link active px-0" id="col-tab1-tab" data-bs-toggle="tab" data-bs-target="#col-tab1" type="button" role="tab" aria-controls="col-tab1" aria-selected="true"> Miền Nam </button>
+                                        <button class="nav-link active px-0" id="col-tab1-tab" data-bs-toggle="tab" data-bs-target="#col-tab1" type="button" role="tab" aria-controls="col-tab1" aria-selected="true"> Miền Bắc </button>
                                     </li>
 
                                     <li class="nav-item box__tabs__header" role="presentation">
@@ -250,7 +251,7 @@
                                     </li>
 
                                     <li class="nav-item box__tabs__header" role="presentation">
-                                        <button class="nav-link px-0" id="col-tab3-tab" data-bs-toggle="tab" data-bs-target="#col-tab3" type="button" role="tab" aria-controls="col-tab3" aria-selected="true"> Miền Bắc </button>
+                                        <button class="nav-link px-0" id="col-tab3-tab" data-bs-toggle="tab" data-bs-target="#col-tab3" type="button" role="tab" aria-controls="col-tab3" aria-selected="true"> Miền Nam </button>
                                     </li>
                                 </ul>
 
@@ -329,7 +330,7 @@
 
                                         <div class="line__item">
                                             <div>
-                                                <b class="address"> 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
+                                                <b class="address"> 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                             </div>
                                             <div>
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
@@ -361,7 +362,7 @@
                                 <div class="box__infoOther__list">
                                     <div class="line__item">
                                         <div>
-                                            <b class="address white"> 9 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
+                                            <b class="address white"> 9 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                         </div>
                                         <div>
                                             <span class="phone white"> 024.35723838 / 024.22431063 </span>
@@ -384,6 +385,7 @@
             </div>
         </div>
     </div>
+    <!--end css in file common.scss----->
 
     <!--css in file common.scss----->
     <div class="box-common-typeicalproject-carousel-wrapper">

@@ -3,6 +3,7 @@
 register_page_template([
     'default' => 'Default',
     'introduce' => 'Introduce',
+    'company-info' => 'Company info',
     'products' => 'Products',
     'news' => 'News',
 ]);
