@@ -3,6 +3,7 @@
 /**
 *   import folder base
 **/
+
 @import "./base/function";
 @import "./base/fonts";
 @import "./base/variables";
@@ -12,18 +13,23 @@
 /**
 *   import folder components
 **/
+
 @import "./components/breadcrumb";
 @import "./components/sidebar-main";
+@import "./components/form-sign-up";
 @import "./components/header";
 @import "./components/footer";
 
 /**
 *   import folder page
 **/
+
 @import "./page/home";
 @import "./page/introduce";
+@import "./page/news";
 
 /**
 *   import responsive
 **/
+
 @import "./base/responsive";

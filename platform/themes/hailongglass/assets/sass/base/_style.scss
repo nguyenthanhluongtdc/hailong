@@ -18,12 +18,10 @@ body {
     max-width: 1920px;
     padding-left: 16%;
     padding-right: 16%;
-
     @media (max-width: 1600px) {
         padding-left: 10%;
         padding-right: 10%;
     }
-
     @media (max-width: 992px) {
         padding-left: 8%;
         padding-right: 8%;
@@ -39,12 +37,10 @@ body {
     max-width: 1920px;
     padding-left: 16% !important;
     padding-right: 16% !important;
-
     @media (max-width: 1600px) {
         padding-left: 10% !important;
         padding-right: 10% !important;
     }
-
     @media (max-width: 992px) {
         padding-left: 8% !important;
         padding-right: 8% !important;
@@ -59,4 +55,9 @@ body {
 a:hover {
     text-decoration: none;
     color: $night;
+}
+
+a {
+    color: $night;
+    text-decoration: none;
 }

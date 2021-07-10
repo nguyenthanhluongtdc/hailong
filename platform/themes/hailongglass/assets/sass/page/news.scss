@@ -1,0 +1,154 @@
+#news-page {
+    .section-banner-wrapper {
+        .section-banner-news {
+            .hailongglass-header-section__header {
+                padding-top: $size3_5;
+                padding-bottom: $size1_5;
+                &__title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .news-wrapper {
+        margin-top: $size2_5;
+        .news-wrapper-section {
+            padding-bottom: $size3_75;
+            border-bottom: 1px solid $f3f3f3;
+            .news-post {
+                max-width: 400px;
+                &__title {
+                    margin-top: $size1_5;
+                    margin-bottom: $size1;
+                    @include split_str(2);
+                    h4 {
+                        font-size: $size1_25;
+                    }
+                    &:hover {
+                        color: $mainColor;
+                    }
+                }
+                &__time {
+                    opacity: 50%;
+                    font-size: $size0_9375;
+                    margin-bottom: $size0_9375;
+                }
+                &__content {
+                    font-size: $size1_125;
+                    @include split_str(4);
+                }
+                a {
+                    color: $night;
+                    display: block;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .section-news-list {
+        h2 {
+            margin: $size3_125 0;
+        }
+        .list-news-wrapper {
+            .item-row {
+                h5 {
+                    font-size: $size1_125;
+                    margin-bottom: $size0_6875;
+                    @include split_str(1);
+                }
+                .time {
+                    opacity: 50%;
+                    font-size: $size0_9375;
+                    margin-bottom: $size0_9375;
+                }
+                .content {
+                    font-size: $size1;
+                    @include split_str(3);
+                }
+            }
+        }
+    }
+    .pagination_style {
+        margin: $size1_625 0 $size3_125 0;
+        .pagination {
+            flex-wrap: wrap;
+            li {
+                margin: $size0_625 $size0_25;
+                &:first-child {
+                    margin-left: -$size0_25;
+                }
+            }
+            .page-item.active .page-link {
+                background-color: $mainColor;
+                color: $white;
+            }
+            .page-item a,
+            .page-item span {
+                width: $size3_125;
+                height: $size3_125;
+                color: $night;
+                text-align: center;
+                line-height: $size3_125;
+                padding: 0;
+                display: inline-block;
+                font-weight: bold;
+                border-radius: $size0_25;
+                box-shadow: 0px 0px 1px 2px rgb(212, 198, 198);
+                cursor: pointer;
+            }
+            // .page-item.disabled {
+            //     a,
+            //     span {
+            //         cursor: not-allowed;
+            //     }
+            // }
+            .page-link {
+                &:focus {
+                    border: none;
+                }
+                border: unset;
+                &:hover {
+                    background-color: $mainColor;
+                    color: $white;
+                    transition: 0.5s ease;
+                }
+            }
+            .page-item {
+                padding: 0 $size0_25;
+            }
+            .page-link-last {
+                box-shadow: 0px 0px 1px 2px rgb(212, 198, 198);
+                width: 110px;
+                height: $size3_125;
+                line-height: $size3_125;
+                color: $white;
+                font-size: $size1;
+                font-weight: bold;
+                text-align: center;
+                border-radius: 4px;
+                &:hover {
+                    background-color: $mainColor;
+                    opacity: 1;
+                    a {
+                        color: $white;
+                        transition: 0.5s ease;
+                    }
+                }
+                a,
+                span {
+                    color: $night;
+                    padding: $size1_0625 0;
+                    width: 100%;
+                    line-height: $size1_25;
+                }
+            }
+            // .page-link-last.disabled {
+            //     background-color: #ccc;
+            //     opacity: 30%;
+            //     cursor: not-allowed;
+            // }
+        }
+    }
+}

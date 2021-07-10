@@ -1,0 +1,34 @@
+.form-sign-up-wrapper {
+    background-color: $mainColor;
+    .newsletter_title {
+        h3 {
+            font-size: $size1_25;
+            padding:calc(#{$size2_5} - #{$size0_875});
+        }
+    }
+    .newsletter_form {
+        .form-control {
+            opacity: 20%;
+        }
+        button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+            padding-left: 4%;
+            align-self: center;
+            max-width: 100%;
+        }
+        .btn-icon-submit::before {
+            position: absolute;
+            content: "\f0e0";
+            font-family: "Font Awesome 5 Pro";
+            top: 0;
+            right: 8%;
+            // width: 100%;
+            color: $textWhite;
+            opacity: 50%;
+            font-size: $size1_5625;
+        }
+    }
+}
