@@ -1,18 +1,18 @@
 <div id="introduce-overview-page">
 
     <div class="section-banner-wrapper">
-        @includeIf("theme.hailongglass::views.components.breadcrumb")
+        @includeIf("theme.theme-customize::views.components.breadcrumb")
         <div class="container-customize">
             <div class="section-banner">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">
                         Tiên phong sản xuất <br>
                         Kính an toàn hàng đầu việt nam
                     </h2>
                 </div>
 
-                <div class="hailongglass-header-section__tabs">
-                    <ul class="hailongglass-header-section__tabs__list mb-0">
+                <div class="theme-customize-header-section__tabs">
+                    <ul class="theme-customize-header-section__tabs__list mb-0">
                         <li class="__tabs__item active">
                             <a class="__tabs__link" href="#" title="Tổng quan Hailong Glass"> Tổng quan Hailong Glass </a>
                         </li>
@@ -36,12 +36,12 @@
 
     <div class="box-common-intro-wrapper mt-5">
         <div class="container-customize pr-0">
-            <div class="box-common-intro hailongglass-header-section">
+            <div class="box-common-intro theme-customize-header-section">
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="box-common-intro__content">
-                            <div class="hailongglass-header-section__header pt-0">
-                                <h2 class="hailongglass-header-section__header__title">
+                            <div class="theme-customize-header-section__header pt-0">
+                                <h2 class="theme-customize-header-section__header__title">
                                     Hailong Glass
                                 </h2>
                             </div>
@@ -80,9 +80,9 @@
     <!----css in file common.scss----->
     <div class="box-common-many-col-wrapper">
         <div class="container-customize">
-            <div class="box-common-many-col hailongglass-header-section">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title">
+            <div class="box-common-many-col theme-customize-header-section">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">
                         Giá trị cốt lõi của Hailong Glass
                     </h2>
                 </div>
@@ -90,32 +90,17 @@
                 <ul class="box-common-many-col__list mb-0">
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Kinh Nghiệm </b>
-                        <p> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
+                        <p class="line__children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Chất Lượng </b>
-                        <p> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
+                        <p class="line__children"> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Công Nghệ </b>
-                        <p> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
-                    </li>
-
-                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
-                        <b> Nhân Sự </b>
-                        <p> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
-                    </li>
-
-                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
-                        <b> Vận Chuyển </b>
-                        <p> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
-                    </li>
-
-                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
-                        <b> Cam Kết </b>
-                        <p> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
+                        <p class="line__children"> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
                     </li>
                 </ul>
             </div>
@@ -128,12 +113,12 @@
     <!----css in file common.scss----->
     <div class="box-common-many-col-wrapper">
         <div class="container-customize">
-            <div class="box-common-many-col hailongglass-header-section">
-                <div class="hailongglass-header-section__header d-md-flex">
-                    <h2 class="hailongglass-header-section__header__title col-lg-3 col-md-4 pl-0">
+            <div class="box-common-many-col theme-customize-header-section">
+                <div class="theme-customize-header-section__header d-md-flex">
+                    <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0">
                         Tại sao chọn Hailong Glass
                     </h2>
-                    <p class="hailongglass-header-section__header__des align-items-end mb-md-4 mb-0">
+                    <p class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0">
                         Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường.
                     </p>
                 </div>
@@ -141,32 +126,32 @@
                 <ul class="box-common-many-col__list mb-0">
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Kinh Nghiệm </b>
-                        <p> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
+                        <p class="line__children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Chất Lượng </b>
-                        <p> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
+                        <p class="line__children"> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Công Nghệ </b>
-                        <p> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
+                        <p class="line__children"> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Nhân Sự </b>
-                        <p> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
+                        <p class="line__children"> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Vận Chuyển </b>
-                        <p> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
+                        <p class="line__children"> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Cam Kết </b>
-                        <p> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
+                        <p class="line__children"> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
                     </li>
                 </ul>
             </div>
@@ -176,12 +161,12 @@
     <!----css in file common.scss----->
     <div class="box-common-typeicalproject-carousel-wrapper">
         <div class="container-customize">
-            <div class="box-common-typeicalproject-carousel distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header distance-below">
-                    <h2 class="hailongglass-header-section__header__title">
+            <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header distance-below">
+                    <h2 class="theme-customize-header-section__header__title">
                         Dự án tiêu biểu
                     </h2>
-                    <p class="hailongglass-header-section__header__des mb-0">
+                    <p class="theme-customize-header-section__header__des mb-0">
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
@@ -203,10 +188,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -218,10 +203,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -231,10 +216,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -244,10 +229,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                             </ul>

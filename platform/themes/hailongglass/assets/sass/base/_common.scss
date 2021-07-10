@@ -1,5 +1,5 @@
 
-.hailongglass-header-section {
+.theme-customize-header-section {
     &__header {
         padding-top: $size5;
 
@@ -7,7 +7,7 @@
             color: $textGreen;
             font-size: $size1_875;
             margin-bottom: $size1_5;
-            font-weight: bold;
+            font-family: $iCiel-SamsungSharpSans-Bold_SMCPS;
         }
 
         &__des {
@@ -42,6 +42,7 @@
                 margin-top: $size1;
                 .__tabs__link {
                     text-decoration: none;
+                    font-weight: bold;
                     color: $textNight;
                 }
             }
@@ -72,7 +73,7 @@
     
     .section-banner {
 
-        .hailongglass-header-section {
+        .theme-customize-header-section {
             &__header {
                 padding-top: $size3_75;
                 padding-bottom: $size1_5;
@@ -335,10 +336,6 @@
 
                 &__header {
 
-                    &__title {
-                        font-size: $size1_875;
-                    }
-
                     &__des {
                         @include split_str(2);
                     }
@@ -430,6 +427,7 @@
         .nav-link {
             background-color: transparent;
             border: none;
+            font-weight: bold;
         }
 
         .nav-link.active {
@@ -487,6 +485,10 @@
     display: inline-block;
 }
 
+.line__children {
+    font-size: $size0_85;
+}
+
 /***
 *************** Responsive
 ****/
@@ -500,9 +502,19 @@
         padding-bottom: $size3;
     }
 
-    .hailongglass-header-section {
+    .theme-customize-header-section {
         &__header {
             padding-top: $size3;
+        }
+    }
+}
+
+@mixin common-screen-maxw992() {
+    .theme-customize-header-section {
+        &__header {
+            &__title {
+                font-size: $size1_5;
+            }
         }
     }
 }
@@ -512,9 +524,13 @@
         padding-bottom: $size2;
     }
     
-    .hailongglass-header-section {
+    .theme-customize-header-section {
         &__header {
             padding-top: $size2;
+
+            &__title {
+                font-size: $size1_125;
+            }
         }
     }
 }

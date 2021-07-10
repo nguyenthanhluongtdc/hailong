@@ -4,17 +4,13 @@
                     <div class="footer">
                         <div class="footer__top">
                             <div class="row">
-                                <div class="col-lg-3 col-sm-6 col-12 footer__col">
-                                    <a class="link-hailongglass text-decoration-none" href="/" title="HAILONGGLASS">
-                                        <div class="box-symbol mb-4">
-                                            <span class="box-symbol__one"> <span class="__one__box"> </span> HAILON GLASS </span>
-                                            <span class="box-symbol__two"> <span class="__two__box"> </span> VSGLASS </span>
-                                        </div>
-                                        <h2 class="core-title"> KÍNH AN TOÀN HẢI LONG - VIỆT NHẬT </h2>
+                                <div class="col-lg-3 col-sm-6 col-12 mb-sm-0 mb-4 footer__col">
+                                    <a class="link-theme-customize text-decoration-none" href="/" title="Logo">
+                                        <img class="mw-100" src="{{Theme::asset()->url('images/hailong/logo.png')}}" alt="Logo" />
                                     </a>
                                 </div>
 
-                                <div class="col-lg-3 col-sm-6 col-12 footer__col">
+                                <div class="col-lg-3 col-sm-6 col-12 mb-sm-0 mb-3 footer__col">
                                     <div class="f-listaddress">
                                         <p class="footer__col__title">
                                             <strong> CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI HẢI LONG </strong>
@@ -32,7 +28,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-2 col-sm-4 col-12 footer__col">
+                                <div class="col-lg-2 col-sm-4 col-12 mb-sm-0 mb-3 footer__col">
                                     <div class="f-listinfo">
                                         <p class="footer__col__title">
                                             <strong> Thông Tin </strong>
@@ -121,6 +117,15 @@
                                                 </a>
                                             </li>
                                         </ul>
+                                        <div class="footer__col__list--icon">
+                                            <a class="__item__icon" href="#" title="Facebook"> 
+                                                <img width="" height="" src="{{Theme::asset()->url('images/hailong/fb_icon.png')}}" /> 
+                                            </a>
+
+                                            <a class="__item__icon" href="#" title="Zalo"> 
+                                                <img src="{{Theme::asset()->url('images/hailong/zalo_icon.png')}}" /> 
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

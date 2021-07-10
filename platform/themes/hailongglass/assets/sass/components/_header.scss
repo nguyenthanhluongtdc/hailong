@@ -1,6 +1,9 @@
 
 header {
-    margin-top: 100px;
+    margin-top: $size4;
+    @media(max-width: 768px) {
+        margin-top: 15px;
+    }
     nav {
     
         .navbar-collapse {
@@ -76,50 +79,6 @@ header {
     }
 }
 
-.link-hailongglass {
-    .box-symbol {
-
-        &__one {
-            position: relative;
-
-            .__one__box {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                height: 60px;
-                width: 45px;
-                color: $textWhite;
-                background-color: $backgroundGreen;
-                z-index: -1;
-            }
-        }
-
-        &__two {
-            position: relative;
-            padding-left: 40px;
-            margin-left: 15px;
-            
-            .__two__box {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                height: 60px;
-                width: 35px;
-                border: 7px solid $backgroundGreen;
-            }
-        }
-    }
-
-    
-    .core-title {
-        font-size: $size1_1875;
-        text-transform: uppercase;
-        color: $textGreen;
-    }
-    span{
-        font-size: $size1_25;
-    }
-}
 
     /***
 *************** Responsive

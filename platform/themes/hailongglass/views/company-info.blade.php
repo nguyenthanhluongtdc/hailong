@@ -1,17 +1,17 @@
 <div id="company-info-page">
     <div class="section-banner-wrapper">
-        @includeIf("theme.hailongglass::views.components.breadcrumb")
+        @includeIf("theme.theme-customize::views.components.breadcrumb")
         <div class="container-customize">
             <div class="section-banner">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">
                         Tiên phong sản xuất <br>
                         Kính an toàn hàng đầu việt nam
                     </h2>
                 </div>
 
-                <div class="hailongglass-header-section__tabs">
-                    <ul class="hailongglass-header-section__tabs__list mb-0">
+                <div class="theme-customize-header-section__tabs">
+                    <ul class="theme-customize-header-section__tabs__list mb-0">
                         <li class="__tabs__item">
                             <a class="__tabs__link" href="/introduce" title="Tổng quan Hailong Glass"> Tổng quan Hailong Glass </a>
                         </li>
@@ -35,13 +35,13 @@
 
     <!--css in file common.scss----->
     <div class="box-common-intro-wrapper mt-5">
-        <div class="container-customize pl-0">
-            <div class="box-common-intro section-intro hailongglass-header-section">
+        <div class="container-customize pl-md-0">
+            <div class="box-common-intro section-intro theme-customize-header-section">
                 <div class="row">
-                    <div class="col-md-5 col-12 order-2">
+                    <div class="col-md-5 col-12 order-2 mt-md-0 mt-4">
                         <div class="section-intro__content">
-                            <div class="hailongglass-header-section__header pt-0">
-                                <h2 class="hailongglass-header-section__header__title">
+                            <div class="theme-customize-header-section__header pt-0">
+                                <h2 class="theme-customize-header-section__header__title">
                                     Thông tin công ty
                                 </h2>
                             </div>
@@ -116,12 +116,12 @@
     <!--css in file common.scss----->
     <div class="box-common-showroom-wrapper">
         <div class="container-customize">
-            <div class="box-common-showroom distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title">
+            <div class="box-common-showroom distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">
                         Showroom Hailong Glass
                     </h2>
-                    <p class="hailongglass-header-section__header__des mb-4">
+                    <p class="theme-customize-header-section__header__des mb-4">
                         Danh sách Showroom Glass
                     </p>
                 </div>
@@ -150,7 +150,7 @@
                                             <div>
                                                 <b class="address"> 162 Hoàng Quốc Việt, Cầu Giấy, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -159,7 +159,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -168,7 +168,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -181,7 +181,7 @@
                                             <div>
                                                 <b class="address"> 162 Hoàng Quốc Việt, Cầu Giấy, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -190,7 +190,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -199,7 +199,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -212,7 +212,7 @@
                                             <div>
                                                 <b class="address"> Duong Linh Trung, Quan Thu Duc, TPHCM </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -221,7 +221,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -230,7 +230,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -245,7 +245,7 @@
                             <div class="box__infoOther">
                                 <div class="box__infoOther__header">
                                     <h3 class="box__infoOther__header__title"> Nhà Máy </h3>
-                                    <p class="box__infoOther__header__des"> Thầy trò HLV Park Hang-seo sẽ mất lợi thế sân nhà nếu các đội khách không được ưu tiên miễn cách ly. </p>
+                                    <p class="box__infoOther__header__des line__children"> Thầy trò HLV Park Hang-seo sẽ mất lợi thế sân nhà nếu các đội khách không được ưu tiên miễn cách ly. </p>
                                 </div>
 
                                 <div class="box__infoOther__list">
@@ -253,7 +253,7 @@
                                         <div>
                                             <b class="address white"> 9 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                         </div>
-                                        <div>
+                                        <div class="line__children">
                                             <span class="phone white"> 024.35723838 / 024.22431063 </span>
                                         </div>
                                     </div>
@@ -262,7 +262,7 @@
                                         <div>
                                             <b class="address white"> 1° 25 Nguyễn Văn Cừ - Hồng Hải - Hạ Long </b>
                                         </div>
-                                        <div>
+                                        <div class="line__children">
                                             <span class="phone white"> 024.35723838 / 024.22431063 </span>
                                         </div>
                                     </div>
@@ -279,12 +279,12 @@
     <!--css in file common.scss----->
     <div class="box-common-typeicalproject-carousel-wrapper">
         <div class="container-customize">
-            <div class="box-common-typeicalproject-carousel distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header distance-below d-md-flex">
-                    <h2 class="hailongglass-header-section__header__title col-lg-3 col-md-4 pl-0">
+            <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header distance-below d-md-flex">
+                    <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0">
                         Đối tác của Hailong Glass
                     </h2>
-                    <p class="hailongglass-header-section__header__des mb-md-4 mb-0">
+                    <p class="theme-customize-header-section__header__des mb-md-4 mb-0">
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>

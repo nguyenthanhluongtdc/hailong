@@ -1,17 +1,17 @@
 <div id="introduce-profile-page">
     <div class="section-banner-wrapper">
-        @includeIf("theme.hailongglass::views.components.breadcrumb")
+        @includeIf("theme.theme-customize::views.components.breadcrumb")
         <div class="container-customize">
             <div class="section-banner">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">
                         Tiên phong sản xuất <br>
                         Kính an toàn hàng đầu việt nam
                     </h2>
                 </div>
 
-                <div class="hailongglass-header-section__tabs">
-                    <ul class="hailongglass-header-section__tabs__list mb-0">
+                <div class="theme-customize-header-section__tabs">
+                    <ul class="theme-customize-header-section__tabs__list mb-0">
                         <li class="__tabs__item">
                             <a class="__tabs__link" href="/introduce" title="Tổng quan Hailong Glass"> Tổng quan Hailong Glass </a>
                         </li>
@@ -50,29 +50,29 @@
     <!--css in file common.scss----->
     <div class="box-common-producecapacity-wrapper bg-white">
         <div class="container-customize">
-            <div class="box-common-producecapacity distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title"> Năng lực sản xuất </h2>
+            <div class="box-common-producecapacity distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title"> Năng lực sản xuất </h2>
                 </div>
                 <ul class="box-common-producecapacity__list">
                     <li class="box-common-producecapacity__list__item">
                         <b> Kính dán an toàn </b>
-                        <p> 3.000.000 m2/năm, khả năng cung ứng 8.800 m2/ngày Kính cường lực </p>
+                        <p class="line__children"> 3.000.000 m2/năm, khả năng cung ứng 8.800 m2/ngày Kính cường lực </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
                         <b> Kính cường lực </b>
-                        <p> 3.290.000 m2/năm, khả năng cung ứng 9.400 m2/ngày Kính hộp </p>
+                        <p class="line__children"> 3.290.000 m2/năm, khả năng cung ứng 9.400 m2/ngày Kính hộp </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
                         <b> Kính hộp </b>
-                        <p> 450.000 m2/năm, khả năng cung ứng 1.285 m2/ngày </p>
+                        <p class="line__children"> 450.000 m2/năm, khả năng cung ứng 1.285 m2/ngày </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
                         <b> Kính Ô tô </b>
-                        <p> 360.000 tấn/năm, khả năng cung ứng 1000 tấn/ngày </p>
+                        <p class="line__children"> 360.000 tấn/năm, khả năng cung ứng 1000 tấn/ngày </p>
                     </li>
                 </ul>
             </div>
@@ -117,11 +117,11 @@
     <div class="section-quality-standards-wrapper">
         <div class="container-customize">
             <div class="section-quality-standards">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">
                         Tiêu chuẩn chất lượng
                     </h2>
-                    <p class="hailongglass-header-section__header__des mb-4">
+                    <p class="theme-customize-header-section__header__des mb-4">
                         Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường.
                     </p>
                 </div>
@@ -292,12 +292,12 @@
     <!--css in file common.scss----->
     <div class="box-common-typeicalproject-carousel-wrapper">
         <div class="container-customize">
-            <div class="box-common-typeicalproject-carousel distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header distance-below">
-                    <h2 class="hailongglass-header-section__header__title">
+            <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header distance-below">
+                    <h2 class="theme-customize-header-section__header__title">
                         Dự án tiêu biểu
                     </h2>
-                    <p class="hailongglass-header-section__header__des mb-0">
+                    <p class="theme-customize-header-section__header__des mb-0">
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
@@ -319,10 +319,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -334,10 +334,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -347,10 +347,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -360,10 +360,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                             </ul>

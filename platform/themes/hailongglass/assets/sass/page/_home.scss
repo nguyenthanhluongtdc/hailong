@@ -14,7 +14,6 @@
 
             &__title {
                 color: $textGreen;
-                font-weight: bold;
                 font-size: $size2_5;
                 font-family: $iCiel-SamsungSharpSans-Bold_SMCPS;
             }
@@ -344,7 +343,13 @@
 @mixin home-screen-maxw992() {
     #home-page {
         .section-intro-wrapper {
-            margin-top: calc(#{$size2_5} + #{$size2_5});
+            margin-top: $size3_125;
+
+            .section-intro {
+                &__title {
+                    font-size: $size1_875;
+                }
+            }
         }
     }
 }
@@ -353,12 +358,21 @@
 @mixin home-screen-maxw768() {
     #home-page {
         .section-intro-wrapper {
-            margin-top: $size3_75;
+            margin-top: $size2;
         }
     }
 }
 
 //screen max-width 567
 @mixin home-screen-maxw567() {
-    
+    #home-page {
+        .section-intro-wrapper {
+            margin-top: $size1_5;
+            .section-intro {
+                &__title {
+                    font-size: $size1_5;
+                }
+            }
+        }
+    }
 }

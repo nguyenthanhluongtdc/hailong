@@ -21,7 +21,7 @@
                         <li class="info-contact__item">
                             <a class="info-contact__link" href="#" title="">
                                 <span> Email: </span>
-                                <b> hailongglass@gmail.com </b>
+                                <b> theme-customize@gmail.com </b>
                                 <b> vietnhat@vsg.com.vn </b>
                             </a>
                         </li>
@@ -58,11 +58,11 @@
 
     <div class="section-aboutus-wrapper">
         <div class="container-customize">
-            <div class="section-aboutus hailongglass-header-section">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title"> Về chúng tôi </h2>
-                    <p class="hailongglass-header-section__header__des">
-                        Công ty TNHH SX và TM Hải Long thành lập ngày 30/05/2001, sau gần 20 năm xây dựng, trưởng thành và phát triển đã trở thành nhà gia công kính hàng đầu tại Việt Nam với thương hiệu hailongglass - Kính an toàn Hải Long
+            <div class="section-aboutus theme-customize-header-section">
+                <div class="theme-customize-header-section__header mb-3">
+                    <h2 class="theme-customize-header-section__header__title"> Về chúng tôi </h2>
+                    <p class="theme-customize-header-section__header__des">
+                        Công ty TNHH SX và TM Hải Long thành lập ngày 30/05/2001, sau gần 20 năm xây dựng, trưởng thành và phát triển đã trở thành nhà gia công kính hàng đầu tại Việt Nam với thương hiệu theme-customize - Kính an toàn Hải Long
                     </p>
                 </div>
                 <p class="section-aboutus__line__des">
@@ -79,7 +79,7 @@
 
     <div class="section-ourproduct-wrapper">
         <div class="container-customize pl-md-0">
-            <div class="section-ourproduct hailongglass-header-section">
+            <div class="section-ourproduct theme-customize-header-section">
                 <div class="row">
                     <div class="col-md-4 col-12 order-md-1 order-2 pr-md-0">
                         <div class="section-ourproduct__left h-100">
@@ -89,9 +89,9 @@
 
                     <div class="col-md-8 col-12 order-md-2 order-1 pl-md-0">
                         <div class="section-ourproduct__right h-100">
-                            <div class="hailongglass-header-section__header __header mt-0 pt-0">
-                                <h2 class="hailongglass-header-section__header__title __title mb-2"> Sản phẩm </h2>
-                                <p class="hailongglass-header-section__header__des __des">
+                            <div class="theme-customize-header-section__header __header mt-0 pt-0">
+                                <h2 class="theme-customize-header-section__header__title __title mb-2"> Sản phẩm </h2>
+                                <p class="theme-customize-header-section__header__des __des">
                                     Các sản phẩm Kính an toàn Hải Long đã và đang được sử dụng trong nhiều công trình trọng điểm của Quốc gia, trong các công trình lớn khang trang, hiện đại và được đông đảo khách hàng tin dùng.
                                 </p>
                             </div>
@@ -137,29 +137,29 @@
     <!--css in file common.scss----->
     <div class="box-common-producecapacity-wrapper">
         <div class="container-customize">
-            <div class="box-common-producecapacity distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title"> Năng lực sản xuất </h2>
+            <div class="box-common-producecapacity distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title"> Năng lực sản xuất </h2>
                 </div>
                 <ul class="box-common-producecapacity__list">
                     <li class="box-common-producecapacity__list__item">
                         <b> Kính dán an toàn </b>
-                        <p> 3.000.000 m2/năm, khả năng cung ứng 8.800 m2/ngày Kính cường lực </p>
+                        <p class="line__children"> 3.000.000 m2/năm, khả năng cung ứng 8.800 m2/ngày Kính cường lực </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
                         <b> Kính cường lực </b>
-                        <p> 3.290.000 m2/năm, khả năng cung ứng 9.400 m2/ngày Kính hộp </p>
+                        <p class="line__children"> 3.290.000 m2/năm, khả năng cung ứng 9.400 m2/ngày Kính hộp </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
                         <b> Kính hộp </b>
-                        <p> 450.000 m2/năm, khả năng cung ứng 1.285 m2/ngày </p>
+                        <p class="line__children"> 450.000 m2/năm, khả năng cung ứng 1.285 m2/ngày </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
                         <b> Kính Ô tô </b>
-                        <p> 360.000 tấn/năm, khả năng cung ứng 1000 tấn/ngày </p>
+                        <p class="line__children"> 360.000 tấn/năm, khả năng cung ứng 1000 tấn/ngày </p>
                     </li>
                 </ul>
             </div>
@@ -170,14 +170,14 @@
     <!--css in file common.scss----->
     <div class="box-common-many-col-wrapper">
         <div class="container-customize pr-lg-0">
-            <div class="box-common-many-col distance-below hailongglass-header-section">
+            <div class="box-common-many-col distance-below theme-customize-header-section">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="hailongglass-header-section__header">
-                            <h2 class="hailongglass-header-section__header__title">
+                        <div class="theme-customize-header-section__header">
+                            <h2 class="theme-customize-header-section__header__title">
                                 Tại sao chọn Hailong Glass
                             </h2>
-                            <p class="hailongglass-header-section__header__des">
+                            <p class="theme-customize-header-section__header__des">
                                 Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường.
                             </p>
                         </div>
@@ -185,32 +185,32 @@
                         <ul class="box-common-many-col__list mb-0">
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
                                 <b> Kinh Nghiệm </b>
-                                <p> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
+                                <p class="line__children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
                                 <b> Chất Lượng </b>
-                                <p> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
+                                <p class="line__children"> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
                                 <b> Công Nghệ </b>
-                                <p> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
+                                <p class="line__children"> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
                                 <b> Nhân Sự </b>
-                                <p> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
+                                <p class="line__children"> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
                                 <b> Vận Chuyển </b>
-                                <p> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
+                                <p class="line__children"> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
                                 <b> Cam Kết </b>
-                                <p> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
+                                <p class="line__children"> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
                             </li>
                         </ul>
                     </div>
@@ -229,12 +229,12 @@
     <!--css in file common.scss----->
     <div class="box-common-showroom-wrapper">
         <div class="container-customize">
-            <div class="box-common-showroom distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title">
+            <div class="box-common-showroom distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">
                         Showroom Hailong Glass
                     </h2>
-                    <p class="hailongglass-header-section__header__des mb-4">
+                    <p class="theme-customize-header-section__header__des mb-4">
                         Danh sách Showroom Glass
                     </p>
                 </div>
@@ -263,7 +263,7 @@
                                             <div>
                                                 <b class="address"> 162 Hoàng Quốc Việt, Cầu Giấy, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -272,7 +272,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -281,7 +281,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -294,7 +294,7 @@
                                             <div>
                                                 <b class="address"> 162 Hoàng Quốc Việt, Cầu Giấy, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -303,7 +303,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -312,7 +312,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -325,7 +325,7 @@
                                             <div>
                                                 <b class="address"> Duong Linh Trung, Quan Thu Duc, TPHCM </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -334,7 +334,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -343,7 +343,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div>
+                                            <div class="line__children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -356,9 +356,9 @@
 
                         <div class="col-lg-5 col-12">
                             <div class="box__infoOther">
-                                <div class="box__infoOther__header">
-                                    <h3 class="box__infoOther__header__title"> Nhà Máy </h3>
-                                    <p class="box__infoOther__header__des"> Thầy trò HLV Park Hang-seo sẽ mất lợi thế sân nhà nếu các đội khách không được ưu tiên miễn cách ly. </p>
+                                <div class="theme-customize-header-section__header pt-0">
+                                    <h3 class="theme-customize-header-section__header__title text-white mb-2"> Nhà Máy </h3>
+                                    <p class="box__infoOther__header__des line__children"> Thầy trò HLV Park Hang-seo sẽ mất lợi thế sân nhà nếu các đội khách không được ưu tiên miễn cách ly. </p>
                                 </div>
 
                                 <div class="box__infoOther__list">
@@ -366,7 +366,7 @@
                                         <div>
                                             <b class="address white"> 9 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                         </div>
-                                        <div>
+                                        <div class="line__children">
                                             <span class="phone white"> 024.35723838 / 024.22431063 </span>
                                         </div>
                                     </div>
@@ -375,7 +375,7 @@
                                         <div>
                                             <b class="address white"> 1° 25 Nguyễn Văn Cừ - Hồng Hải - Hạ Long </b>
                                         </div>
-                                        <div>
+                                        <div class="line__children">
                                             <span class="phone white"> 024.35723838 / 024.22431063 </span>
                                         </div>
                                     </div>
@@ -392,12 +392,12 @@
     <!--css in file common.scss----->
     <div class="box-common-typeicalproject-carousel-wrapper">
         <div class="container-customize">
-            <div class="box-common-typeicalproject-carousel distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header distance-below">
-                    <h2 class="hailongglass-header-section__header__title">
+            <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header distance-below">
+                    <h2 class="theme-customize-header-section__header__title">
                         Dự án tiêu biểu
                     </h2>
-                    <p class="hailongglass-header-section__header__des mb-0">
+                    <p class="theme-customize-header-section__header__des mb-0">
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
@@ -419,10 +419,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -434,10 +434,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -447,10 +447,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -460,10 +460,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                             </ul>
@@ -481,12 +481,12 @@
 
     <div class="section-news-wrapper">
         <div class="container-customize">
-            <div class="section-news distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header distance-below">
-                    <h2 class="hailongglass-header-section__header__title">
+            <div class="section-news distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header distance-below">
+                    <h2 class="theme-customize-header-section__header__title">
                         Tin tức
                     </h2>
-                    <p class="hailongglass-header-section__header__des">
+                    <p class="theme-customize-header-section__header__des">
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
@@ -506,7 +506,7 @@
                                         <div class="col-core__content__time">
                                             <span> 15:58 25/07/2021 </span>
                                         </div>
-                                        <p class="col-core__content__des">
+                                        <p class="col-core__content__des line-children">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                                         </p>
                                     </a>
@@ -532,7 +532,7 @@
                                         <div class="col-core__content__time">
                                             <span> 15:58 25/07/2021 </span>
                                         </div>
-                                        <p class="col-core__content__des">
+                                        <p class="col-core__content__des line-children">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                                         </p>
                                     </div>
@@ -554,7 +554,7 @@
                                         <div class="col-core__content__time">
                                             <span> 15:58 25/07/2021 </span>
                                         </div>
-                                        <p class="col-core__content__des">
+                                        <p class="col-core__content__des line-children">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                                         </p>
                                     </div>
