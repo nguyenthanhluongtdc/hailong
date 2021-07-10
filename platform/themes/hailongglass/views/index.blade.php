@@ -97,34 +97,34 @@
                             </div>
                             <ul class="list-cate-pro">
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link" href="#" title=""> Kính cường lực </a>
+                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính cường lực </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link" href="#" title=""> Kính low -E </a>
+                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính low -E </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link active" href="#" title=""> Kính dán an toàn </a>
+                                    <a class="list-cate-pro__item__link active" href="#" title=""> Kính dán an toàn </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link" href="#" title=""> Kính rạn </a>
+                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính rạn </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link" href="#" title=""> Kính hộp </a>
+                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính hộp </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link" href="#" title=""> Kính phun cát </a>
+                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính phun cát </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link" href="#" title=""> Kính màu trang trí </a>
+                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính màu trang trí </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link" href="#" title=""> Kính ngăn cháy </a>
+                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính ngăn cháy </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link" href="#" title=""> Kính uốn cong </a>
+                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính uốn cong </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__link" href="#" title=""> Rèm kính hộp </a>
+                                    <a class="list-cate-pro__item__link" href="#" title=""> Rèm kính hộp </a>
                                 </li>
                             </ul>
                         </div>

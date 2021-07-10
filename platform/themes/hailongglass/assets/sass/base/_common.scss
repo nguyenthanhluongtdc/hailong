@@ -159,8 +159,12 @@
                         }
                     }
 
-                    &__des {
-
+                    &:hover {
+                        background-color: $backgroundGreen;
+                        color: $textWhite;
+                        a {
+                            color: $textWhite;
+                        }
                     }
                 }
            } 
@@ -179,16 +183,6 @@
 
                         > .splide__slide__content {
                             order: 1;
-                        }
-                    }
-
-                    >li:nth-child(3n + 3) {
-                        > .splide__slide__content {
-                            background-color: $backgroundGreen;
-                            color: $textWhite;
-                            a {
-                                color: $textWhite;
-                            }
                         }
                     }
             }

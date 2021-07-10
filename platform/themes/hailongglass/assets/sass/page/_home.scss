@@ -156,6 +156,8 @@
                         max-width: calc(50% - #{$size0_625});
                         padding: $size0_625 0;
                         border-bottom: 1px solid $borderf3f3f3;
+                        position: relative;
+                        transition: padding 200ms;
 
                         &:nth-child(odd) {
                             margin-right: $size0_625;
@@ -163,16 +165,6 @@
                         &:nth-child(even) {
                             margin-left: $size0_625;
                         }
-                    }
-
-                    &__link {
-                        color: $textWhite;
-                        text-decoration: none;
-                    }
-
-                    &__link.active{
-                        position: relative;
-                        padding-left: $size1_25;
 
                         &::before {
                             content: "";
@@ -183,8 +175,22 @@
                             background-color: $backgroundWhite;
                             width: $size0_625;
                             height: $size0_125;
+                            display: none;
                         }
-                    }
+
+                        &__link {
+                            color: $textWhite;
+                            text-decoration: none;
+                        }
+    
+                        &:hover {
+                            padding-left: $size1_25;
+                            
+                            &::before {
+                                display: inline-block;
+                            }
+                        }
+                    }                    
                 }
             }
         }
