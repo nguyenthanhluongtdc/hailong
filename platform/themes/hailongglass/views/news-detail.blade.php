@@ -20,7 +20,7 @@
         <div class="container-customize">
             <div class="content__zone">
                 <div class="row">
-                    <div class="col-xl-7 col-lg-8 col-md-12 col-sm-12">
+                    <div class="col-lg-7 col-md-12 col-sm-12">
                         <div class="left">
                             <div class="content__title">
                                 <h1 class="title theme-customize-header-section__header__title ">
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 col-lg-4 col-md-12 col-sm-12">
+                    <div class="col-lg-5 col-md-12 col-sm-12">
                         <div class="right">
                             <div class="releted__post">
                                 <div class="">
