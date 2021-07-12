@@ -96,7 +96,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -112,7 +112,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a> </h5>
+                                        <h5> <a href="/news-detail">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Trong tháng 6, có 140.000 tài khoản chứng khoán cá nhân mở mới, cao hơn 23% so với tháng 5 và là mức cao kỷ lục từ trước tới nay. 
@@ -132,7 +132,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -148,7 +148,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -168,7 +168,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -184,7 +184,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -204,7 +204,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -220,7 +220,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -240,7 +240,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -256,7 +256,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.

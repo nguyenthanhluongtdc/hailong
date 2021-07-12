@@ -26,7 +26,6 @@ body {
         padding-left: 8%;
         padding-right: 8%;
     }
-
     @media (max-width: 768px) {
         padding-left: 15px;
         padding-right: 15px;
@@ -45,7 +44,6 @@ body {
         padding-left: 8% !important;
         padding-right: 8% !important;
     }
-
     @media (max-width: 768px) {
         padding-left: 15px !important;
         padding-right: 15px !important;
@@ -60,4 +58,14 @@ a:hover {
 a {
     color: $night;
     text-decoration: none;
+}
+
+.img-w-100 {
+    width: 100%;
+    max-width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
 }

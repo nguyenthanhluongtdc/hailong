@@ -10,6 +10,7 @@ register_page_template([
     'product-price' => 'Product Price',
     'warranty-policy' => 'Warranty Policy',
     'news' => 'News',
+    'news-detail' => 'News Detail',
 ]);
 
 register_sidebar([
