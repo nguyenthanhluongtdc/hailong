@@ -99,6 +99,8 @@
             .page-item.active .page-link {
                 background-color: $mainColor;
                 color: $white;
+                border-top-left-radius: 0rem;
+                border-bottom-left-radius: 0rem;
             }
             .page-item a,
             .page-item span {
@@ -110,7 +112,6 @@
                 padding: 0;
                 display: inline-block;
                 font-weight: bold;
-                border-radius: $size0_25;
                 box-shadow: 0px 0px 1px 2px rgb(212, 198, 198);
                 cursor: pointer;
             }
@@ -143,7 +144,6 @@
                 font-size: $size1;
                 font-weight: bold;
                 text-align: center;
-                border-radius: 4px;
                 &:hover {
                     background-color: $mainColor;
                     opacity: 1;

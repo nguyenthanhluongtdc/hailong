@@ -11094,6 +11094,8 @@ footer .footer-wrapper .footer__bottom p {
 #news-page .pagination_style .pagination .page-item.active .page-link {
   background-color: #08964a;
   color: white;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
 }
 #news-page .pagination_style .pagination .page-item a,
 #news-page .pagination_style .pagination .page-item span {
@@ -11105,7 +11107,6 @@ footer .footer-wrapper .footer__bottom p {
   padding: 0;
   display: inline-block;
   font-weight: bold;
-  border-radius: 0.25rem;
   box-shadow: 0px 0px 1px 2px #d4c6c6;
   cursor: pointer;
 }
@@ -11132,7 +11133,6 @@ footer .footer-wrapper .footer__bottom p {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
-  border-radius: 4px;
 }
 #news-page .pagination_style .pagination .page-link-last:hover {
   background-color: #08964a;
