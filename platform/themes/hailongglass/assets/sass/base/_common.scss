@@ -490,10 +490,18 @@
     .distance-below {
         padding-bottom: $size5;
     }
+
+    .distance-above {
+        padding-top: $size5;
+    }
 }
 @mixin common-screen-maxw1600() {
     .distance-below {
         padding-bottom: $size3;
+    }
+
+    .distance-above {
+        padding-top: $size3;
     }
 
     .theme-customize-header-section {
@@ -516,6 +524,10 @@
 @mixin common-screen-maxw567() {
     .distance-below {
         padding-bottom: $size2;
+    }
+
+    .distance-above {
+        padding-top: $size2;
     }
     
     .theme-customize-header-section {

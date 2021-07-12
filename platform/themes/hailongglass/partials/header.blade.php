@@ -47,7 +47,7 @@
                             <a class="nav-link" href="introduce">Giới thiệu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sản phẩm</a>
+                            <a class="nav-link" href="/products">Sản phẩm</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Tin tức</a>

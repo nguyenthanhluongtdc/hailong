@@ -57,6 +57,7 @@
 
 @media (max-width: 768px) {
     @include home-screen-maxw768();
+    @include products-screen-maxw768();
 }
 /** end screen 768 **/
 
@@ -70,5 +71,6 @@
 @media (max-width: 567px) {
     @include common-screen-maxw567();
     @include home-screen-maxw567();
+    @include products-screen-maxw567();
 }
 /** end screen 567 **/
