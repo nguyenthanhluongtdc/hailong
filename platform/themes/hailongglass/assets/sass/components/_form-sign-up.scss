@@ -36,8 +36,7 @@
             content: "\f0e0";
             font-family: "Font Awesome 5 Pro";
             top: 0;
-            right: 10%;
-            // width: 100%;
+            right: $size1_5;
             color: $textWhite;
             opacity: 50%;
             font-size: $size1_5625;
@@ -70,7 +69,7 @@
                 margin-left: $size3_125;
             }
             .btn-icon-submit::before {
-                right: -6%;
+                right: -$size1_5;
             }
         }
         .newsletter_img {
@@ -93,14 +92,16 @@
             }
         }
         .newsletter_text {
+            padding-left: $size0_9375;
             p {
                 margin-bottom: $size1;
+                padding: 0 $size1;
             }
         }
         .newsletter_form {
-            padding: 0 10%;
+            padding: 0 $size1;
             .btn-icon-submit::before {
-                right: 16%;
+                right: $size3;
             }
         }
         .newsletter_img {

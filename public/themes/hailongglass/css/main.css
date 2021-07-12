@@ -10619,7 +10619,7 @@ a {
   content: "";
   font-family: "Font Awesome 5 Pro";
   top: 0;
-  right: 10%;
+  right: 1.5rem;
   color: white;
   opacity: 50%;
   font-size: 1.5625rem;
@@ -10644,7 +10644,7 @@ a {
     margin-left: 3.125rem;
   }
   .form-sign-up-wrapper .newsletter_form .btn-icon-submit::before {
-    right: -6%;
+    right: -1.5rem;
   }
   .form-sign-up-wrapper .newsletter_img img {
     min-height: 100px;
@@ -10660,14 +10660,18 @@ a {
     margin: 1rem 0;
     max-width: unset;
   }
+  .form-sign-up-wrapper .newsletter_text {
+    padding-left: 0.9375rem;
+  }
   .form-sign-up-wrapper .newsletter_text p {
     margin-bottom: 1rem;
+    padding: 0 1rem;
   }
   .form-sign-up-wrapper .newsletter_form {
-    padding: 0 10%;
+    padding: 0 1rem;
   }
   .form-sign-up-wrapper .newsletter_form .btn-icon-submit::before {
-    right: 16%;
+    right: 3rem;
   }
   .form-sign-up-wrapper .newsletter_img img {
     margin-top: 1rem;
@@ -11199,20 +11203,25 @@ footer .footer-wrapper .footer__bottom p {
 #news-detail-page .news__detail__wrapper .content__zone .left .share {
   display: flex;
   align-items: center;
-  padding: 20px 0;
+  padding: 1.1875rem 0;
   border-top: solid 1px #d8d9d9;
   border-bottom: solid 1px #d8d9d9;
-  margin: 35px 0;
+  margin: 2.1875rem 0;
 }
 #news-detail-page .news__detail__wrapper .content__zone .left .share .share-text {
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 }
 #news-detail-page .news__detail__wrapper .content__zone .left .share .list-share {
   display: flex;
 }
 #news-detail-page .news__detail__wrapper .content__zone .left .share .list-share .share-item {
-  margin-right: 5px;
+  margin-right: 0.313rem;
   list-style: none;
+}
+@media screen and (max-width: 991px) {
+  #news-detail-page .news__detail__wrapper .content__zone .left .share .list-share .share-item {
+    margin-right: 0.625rem;
+  }
 }
 #news-detail-page .news__detail__wrapper .content__zone .left .info-contact {
   padding: 1rem;
@@ -11239,6 +11248,19 @@ footer .footer-wrapper .footer__bottom p {
   display: block;
 }
 
+@media screen and (max-width: 991px) {
+  #news-detail-page .news__detail__wrapper .content__zone .right {
+    padding: unset;
+  }
+  #news-detail-page .news__detail__wrapper .content__zone .right .releted__post {
+    padding-bottom: 1rem;
+  }
+  #news-detail-page .news__detail__wrapper .content__zone .right .releted__post .list-post-related .time {
+    display: block;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+  }
+}
 #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row {
   display: flex;
   margin-left: -1.25rem;

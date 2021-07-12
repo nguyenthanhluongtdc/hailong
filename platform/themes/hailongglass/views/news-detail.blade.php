@@ -111,7 +111,7 @@
                                                 <img class="img-w-100  mb-4"  src="{{Theme::asset()->url('images/news/news-dt-1.jpg')}}" alt="">
                                             </a>
                                         </div>
-                                        <div class="col-lg-6 col-md-4 col-sm-4">
+                                        <div class="col-lg-6 col-md-6 col-sm-4">
                                             <div class="description">
                                                 <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a>
                                             </div>
@@ -126,7 +126,7 @@
                                                 <img class="img-w-100 mb-4" src="{{Theme::asset()->url('images/news/news-dt-1.jpg')}}" alt="">
                                             </a>
                                         </div>
-                                        <div class="col-lg-6 col-md-4 col-sm-4">
+                                        <div class="col-lg-6 col-md-6 col-sm-4">
                                             <div class="description">
                                                 <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a>
                                             </div>
@@ -141,7 +141,7 @@
                                                 <img class="img-w-100 mb-4" src="{{Theme::asset()->url('images/news/news-dt-1.jpg')}}" alt="">
                                             </a>
                                         </div>
-                                        <div class="col-lg-6 col-md-4 col-sm-4">
+                                        <div class="col-lg-6 col-md-6 col-sm-4">
                                             <div class="description">
                                                 <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a>
                                             </div>
@@ -156,7 +156,7 @@
                                                 <img  class="img-w-100  mb-4" src="{{Theme::asset()->url('images/news/news-dt-1.jpg')}}" alt="">
                                             </a>
                                         </div>
-                                        <div class="col-lg-6 col-md-4 col-sm-4">
+                                        <div class="col-lg-6 col-md-6 col-sm-4">
                                             <div class="description">
                                                 <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a>
                                             </div>
@@ -171,7 +171,7 @@
                                                 <img class="img-w-100 mb-4" src="{{Theme::asset()->url('images/news/news-dt-1.jpg')}}" alt="">
                                             </a>
                                         </div>
-                                        <div class="col-lg-6 col-md-4 col-sm-4">
+                                        <div class="col-lg-6 col-md-6 col-sm-4">
                                             <div class="description">
                                                 <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a>
                                             </div>
