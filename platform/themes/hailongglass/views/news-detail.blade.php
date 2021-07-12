@@ -123,12 +123,12 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-4 col-sm-4">
                                             <a href="" class="news__item">
-                                                <img class="img-w-100 mb-4" src="{{Theme::asset()->url('images/news/news-dt-1.jpg')}}" alt="">
+                                                <img class="img-w-100 mb-4" src="{{Theme::asset()->url('images/news/news-dt-2.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-4">
                                             <div class="description">
-                                                <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a>
+                                                <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày,Dân ùn ùn xếp hàng ở siêu thị, hệ thống online quá tải</a>
                                             </div>
                                             <span class="time">
                                                 15:56 25/07/2020
@@ -138,12 +138,12 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-4 col-sm-4">
                                             <a href="" class="news__item">
-                                                <img class="img-w-100 mb-4" src="{{Theme::asset()->url('images/news/news-dt-1.jpg')}}" alt="">
+                                                <img class="img-w-100 mb-4" src="{{Theme::asset()->url('images/news/news-dt-3.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-4">
                                             <div class="description">
-                                                <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a>
+                                                <a href="">ADB hỗ trợ 4,6 triệu USD giúp Việt Nam tăng trưởng bền vững</a>
                                             </div>
                                             <span class="time">
                                                 15:56 25/07/2020
@@ -153,12 +153,12 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-4 col-sm-4">
                                             <a href="" class="news__item">
-                                                <img  class="img-w-100  mb-4" src="{{Theme::asset()->url('images/news/news-dt-1.jpg')}}" alt="">
+                                                <img  class="img-w-100  mb-4" src="{{Theme::asset()->url('images/news/news-dt-4.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-4">
                                             <div class="description">
-                                                <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a>
+                                                <a href="">Hành trình viết tên trên bản đồ mật ong thế giới của Tracybee</a>
                                             </div>
                                             <span class="time">
                                                 15:56 25/07/2020
@@ -168,12 +168,12 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-4 col-sm-4">
                                             <a href="" class="news__item">
-                                                <img class="img-w-100 mb-4" src="{{Theme::asset()->url('images/news/news-dt-1.jpg')}}" alt="">
+                                                <img class="img-w-100 mb-4" src="{{Theme::asset()->url('images/news/news-dt-5.jpg')}}" alt="">
                                             </a>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-4">
                                             <div class="description">
-                                                <a href="">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a>
+                                                <a href="">Lợi thế đắt giá của bất động sản hướng công viên, sông hồ</a>
                                             </div>
                                             <span class="time">
                                                 15:56 25/07/2020
