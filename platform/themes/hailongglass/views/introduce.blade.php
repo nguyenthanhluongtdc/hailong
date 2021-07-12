@@ -26,7 +26,7 @@
                         </li>
 
                         <li class="__tabs__item">
-                            <a class="__tabs__link" href="#" title="Dây chuyền công nghệ"> Dây chuyền công nghệ </a>
+                            <a class="__tabs__link" href="/teachnological" title="Dây chuyền công nghệ"> Dây chuyền công nghệ </a>
                         </li>
                     </ul>
                 </div>

@@ -11067,6 +11067,70 @@ footer .footer-wrapper .footer__bottom p {
   line-height: 1.25rem;
 }
 
+#teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row {
+  display: flex;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media (max-width: 768px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row {
+    margin-left: -7.5px;
+    padding-top: -7.5px;
+    padding-bottom: 1rem;
+  }
+}
+#teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+@media (max-width: 768px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+}
+#teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col.__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding-top: 2.1875rem;
+}
+@media (max-width: 768px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col.__content {
+    padding-top: 0;
+  }
+}
+#teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col.__content .__content__title {
+  font-size: 1.25rem;
+  color: #08964a;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+#teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col.__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+#teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col.__picture img {
+  max-width: 100%;
+}
+#teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(even) .section-teachnological__row__col.__content {
+  order: 2;
+}
+#teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(even) .section-teachnological__row__col.__picture {
+  order: 1;
+}
+
 /**
 *   import responsive
 **/

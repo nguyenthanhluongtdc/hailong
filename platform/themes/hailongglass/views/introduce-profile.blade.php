@@ -25,7 +25,7 @@
                         </li>
 
                         <li class="__tabs__item">
-                            <a class="__tabs__link" href="#" title="Dây chuyền công nghệ"> Dây chuyền công nghệ </a>
+                            <a class="__tabs__link" href="/teachnological" title="Dây chuyền công nghệ"> Dây chuyền công nghệ </a>
                         </li>
                     </ul>
                 </div>
@@ -76,7 +76,8 @@
                     </li>
                 </ul>
             </div>
-
+            
+            <!--css in file common.scss----->
             <div class="box-common-statistics-wrapper mt-n3">
                 <div class="box-common-statistics">
                     <div class="box-common-statistics__col">
@@ -110,10 +111,11 @@
                     </div>
                 </div>
             </div>
+            <!--end css in file common.scss----->
         </div>
     </div>
     <!--end css in file common.scss----->
-
+    
     <div class="section-quality-standards-wrapper">
         <div class="container-customize">
             <div class="section-quality-standards">

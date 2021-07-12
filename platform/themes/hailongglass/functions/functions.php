@@ -5,6 +5,7 @@ register_page_template([
     'introduce' => 'Introduce',
     'company-info' => 'Company info',
     'introduce-profile' => 'Introduce Profile',
+    'teachnological-line' => 'Teachnological line',
     'products' => 'Products',
     'news' => 'News',
 ]);

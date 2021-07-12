@@ -1,0 +1,68 @@
+#teachnological-line-page {
+    .section-teachnological-line-list-wrapper {
+        .section-teachnological {
+            &__row {
+                display: flex;
+                margin-left: -$size1_25;
+                margin-right: -$size1_25;
+                padding-top: $size2_5;
+                padding-bottom: $size2_5;
+                @media (max-width: 768px) {
+                    margin-left: -7.5px;
+                    padding-top: -7.5px;
+                    padding-bottom: $size1;
+                }
+
+                &__col {
+                    padding-left: $size1_25;
+                    padding-right: $size1_25;
+
+                    @media (max-width: 768px) {
+                        padding-left: 7.5px;
+                        padding-right: 7.5px;
+                    }
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+
+                &__col.__content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: space-between;
+                    padding-top: $size2_1875;
+                    @media (max-width: 768px) {
+                        padding-top: 0;
+                    }
+                    .__content__title {
+                        font-size: $size1_25;
+                        color: $textGreen;
+                        font-weight: bold;
+                        @include split_str(1);
+                    }
+
+                    p {
+                        @include split_str(2)
+                    }
+                }
+
+                &__col.__picture {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+            &__list {
+                >div:nth-child(even) {
+                    .section-teachnological__row {
+                        &__col.__content {
+                            order: 2;
+                        }
+                        &__col.__picture {
+                            order: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
