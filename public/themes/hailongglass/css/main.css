@@ -10580,11 +10580,7 @@ a {
 }
 .form-sign-up-wrapper .newsletter_title h3 {
   font-size: 1.25rem;
-  margin-left: 40px;
-  max-width: 70%;
-}
-.form-sign-up-wrapper .newsletter_text p {
-  margin-bottom: 0;
+  padding: calc(2.5rem - 0.875rem);
 }
 .form-sign-up-wrapper .newsletter_form .form-control {
   opacity: 20%;
@@ -10597,21 +10593,16 @@ a {
   padding-left: 4%;
   align-self: center;
   max-width: 100%;
-  display: block;
 }
 .form-sign-up-wrapper .newsletter_form .btn-icon-submit::before {
   position: absolute;
   content: "";
   font-family: "Font Awesome 5 Pro";
   top: 0;
-  right: 10%;
+  right: 8%;
   color: white;
   opacity: 50%;
   font-size: 1.5625rem;
-}
-.form-sign-up-wrapper .newsletter_img img {
-  min-height: 150px;
-  max-width: 100%;
 }
 
 header {
@@ -10935,11 +10926,11 @@ footer .footer-wrapper .footer__bottom p {
 /***
 *************** Responsive
 ****/
-#news-page .section-banner-wrapper .section-banner-news .theme-customize-header-section__header {
+#news-page .section-banner-wrapper .section-banner-news .hailongglass-header-section__header {
   padding-top: 3.5rem;
   padding-bottom: 1.5rem;
 }
-#news-page .section-banner-wrapper .section-banner-news .theme-customize-header-section__header__title {
+#news-page .section-banner-wrapper .section-banner-news .hailongglass-header-section__header__title {
   margin-bottom: 0;
 }
 #news-page .news-wrapper {
@@ -10960,7 +10951,6 @@ footer .footer-wrapper .footer__bottom p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-family: "Barlow-Medium";
 }
 #news-page .news-wrapper .news-wrapper-section .news-post__title h4 {
   font-size: 1.25rem;
