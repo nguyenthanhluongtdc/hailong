@@ -128,7 +128,7 @@
                             </div>
                             <div class="our-policy__col__content">
                                 <h3 class="__content__title"> Miễn phí vận chuyển </h3>
-                                <p class="__content__des"> trong nội thành các thành phố có văn phòng ở công ty </p>
+                                <p class="__content__des line__children"> trong nội thành các thành phố có văn phòng ở công ty </p>
                             </div>
                         </div>
                     </div>
@@ -140,7 +140,7 @@
                             </div>
                             <div class="our-policy__col__content">
                                 <h3 class="__content__title"> Bảo hành uy tín </h3>
-                                <p class="__content__des"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
+                                <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
                             </div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                             </div>
                             <div class="our-policy__col__content">
                                 <h3 class="__content__title"> Hệ thống quản lý tối ưu </h3>
-                                <p class="__content__des"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
+                                <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
                             </div>
                         </div>
                     </div>
