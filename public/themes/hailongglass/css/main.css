@@ -10105,6 +10105,16 @@ a {
   text-decoration: none;
 }
 
+.img-w-100 {
+  width: 100%;
+  max-width: 100%;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 .theme-customize-header-section__header {
   padding-top: 5rem;
 }
@@ -11173,6 +11183,62 @@ footer .footer-wrapper .footer__bottom p {
     line-height: 2rem;
   }
 }
+#news-detail-page .news__detail__wrapper {
+  margin-top: 4rem;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .content__title .title {
+  font-family: unset;
+  color: #171717;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .time {
+  opacity: 50%;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .post-content {
+  font-family: "Barlow-Medium";
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .share {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-top: solid 1px #d8d9d9;
+  border-bottom: solid 1px #d8d9d9;
+  margin: 35px 0;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .share .share-text {
+  margin-right: 15px;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .share .list-share {
+  display: flex;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .share .list-share .share-item {
+  margin-right: 5px;
+  list-style: none;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .info-contact {
+  padding: 1rem;
+  border: 0.063rem solid #08964a;
+  text-align: center;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .info-contact p {
+  margin-bottom: unset;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .other__post .title {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .other__post .list__post {
+  margin-bottom: 3rem;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .other__post .list__post .post-item {
+  margin-bottom: 0.313rem;
+}
+#news-detail-page .news__detail__wrapper .content__zone .right {
+  padding-left: 3.125rem;
+}
+#news-detail-page .news__detail__wrapper .content__zone .right .releted__post .list-post-related .news__item {
+  display: block;
+}
+
 #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row {
   display: flex;
   margin-left: -1.25rem;

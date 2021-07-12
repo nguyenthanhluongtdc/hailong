@@ -9,6 +9,7 @@ register_page_template([
     'products' => 'Products',
     'product-price' => 'Product Price',
     'news' => 'News',
+    'news-detail' => 'News Detail',
 ]);
 
 register_sidebar([
