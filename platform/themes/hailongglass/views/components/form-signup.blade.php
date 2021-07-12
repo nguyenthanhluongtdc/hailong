@@ -2,20 +2,20 @@
     <div class="form-sign-up-wrapper">
         <div class="row align-items-center">
           
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-12">
                     <div class="newsletter_title text_white">
                         <h3>Đăng ký
                             nhận tin</h3> 
                         
                     </div>
                 </div> 
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-12 pl-0">
                     <div class="newsletter_text text_white">
                         <p>Đăng ký nhận tin mới, tin khuyến mãi và sản phẩm mới của Hailong Glass</p>
                     </div>
                 </div> 
               
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="newsletter_form">
                         <form method="post" action="">
                             <input type="hidden" name="_token" value=""> 
@@ -33,7 +33,7 @@
                 </div>
             
             
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6">
                 <div class="newsletter_img">
                     <img src="{{Theme::asset()->url('images/news/globalization-affects-workplace.jpg')}}" alt="">
                 </div>

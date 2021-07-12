@@ -14,8 +14,8 @@
         </div>
         <div class="container-customize">
             <div class="section-banner-news">
-                <div class="hailongglass-header-section__header">
-                    <h2 class="hailongglass-header-section__header__title">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">
                         Tin mới
                     </h2>
                 </div>
@@ -84,18 +84,18 @@
     <section id="list-news">
         <div class="container-customize">
             <div class="section-news-list">
-                <h2 class="hailongglass-header-section__header__title">Tin tức khác</h2>
+                <h2 class="theme-customize-header-section__header__title">Tin tức khác</h2>
                 <div class="list-news-wrapper">
                     <div class="item-row">
                         <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0"> 
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-1.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -104,14 +104,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 mb-md-line p0-md pl-md-4 pl-sm-0 pr-xs-0 mb-4">
+                            <div class="col-lg-6 mb-md-line p0-md  pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-2.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -126,12 +126,12 @@
                         <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0"> 
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-3.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -140,14 +140,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 mb-md-line p0-md pl-md-4 pl-sm-0 pr-xs-0 mb-4">
+                            <div class="col-lg-6 mb-md-line p0-md  pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-4.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -162,12 +162,12 @@
                         <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0"> 
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-5.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -176,14 +176,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 mb-md-line p0-md pl-md-4 pl-sm-0 pr-xs-0 mb-4">
+                            <div class="col-lg-6 mb-md-line p0-md pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-6.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -198,12 +198,12 @@
                         <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0"> 
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-7.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -212,14 +212,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 mb-md-line p0-md pl-md-4 pl-sm-0 pr-xs-0 mb-4">
+                            <div class="col-lg-6 mb-md-line p0-md  pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-8.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -234,12 +234,12 @@
                         <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0"> 
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-9.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -248,14 +248,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 mb-md-line p0-md pl-md-4 pl-sm-0 pr-xs-0 mb-4">
+                            <div class="col-lg-6 mb-md-line p0-md pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-12 pr-0 mb-4 mb-sm-0">
+                                    <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
                                         <a href="/news-detail">
                                             <img class="mw-100" src="{{Theme::asset()->url('images/news/new-10.jpg')}}" alt="">
                                         </a>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-12">
+                                    <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                         <h5> <a href="/news-details">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
@@ -298,15 +298,15 @@
        
     </section>
     @includeIf("theme.hailongglass::views.components.form-signup")
-     <!--css in file common.scss----->
-     <div class="box-common-typeicalproject-carousel-wrapper">
+    <!--css in file common.scss----->
+    <div class="box-common-typeicalproject-carousel-wrapper">
         <div class="container-customize">
-            <div class="box-common-typeicalproject-carousel distance-below hailongglass-header-section">
-                <div class="hailongglass-header-section__header distance-below">
-                    <h2 class="hailongglass-header-section__header__title">
+            <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header distance-below">
+                    <h2 class="theme-customize-header-section__header__title">
                         Dự án tiêu biểu
                     </h2>
-                    <p class="hailongglass-header-section__header__des mb-0">
+                    <p class="theme-customize-header-section__header__des mb-0">
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
@@ -328,10 +328,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -343,10 +343,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -356,10 +356,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -369,10 +369,10 @@
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
                                             <a href="#" title="">
-                                                Can ho cao cap The Minato Residence
+                                                Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des"> Thiet ke cao cap va tinh te tai khu vuc ngoai troi cua </div>
+                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                             </ul>
@@ -387,6 +387,7 @@
         </div>
     </div>
     <!--end css in file common.scss----->
+
 </div>    
 
 
