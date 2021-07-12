@@ -170,11 +170,11 @@
            } 
 
             &__list {
-                    >li:nth-child(3n + 1) {
+                    >li:nth-child(odd) {
                         border-bottom: 2px solid $borderf3f3f3;
                     }
 
-                    >li:nth-child(3n + 2) {
+                    >li:nth-child(even) {
                         border-top: 2px solid $borderf3f3f3;
 
                         > .splide__slide__img {
@@ -494,6 +494,11 @@
     .distance-above {
         padding-top: $size5;
     }
+
+    .distance-y {
+        padding-top: $size5;
+        padding-bottom: $size5;
+    }
 }
 @mixin common-screen-maxw1600() {
     .distance-below {
@@ -502,6 +507,11 @@
 
     .distance-above {
         padding-top: $size3;
+    }
+
+    .distance-y {
+        padding-top: $size3;
+        padding-bottom: $size3;
     }
 
     .theme-customize-header-section {
@@ -528,6 +538,11 @@
 
     .distance-above {
         padding-top: $size2;
+    }
+
+    .distance-y {
+        padding-top: $size3;
+        padding-bottom: $size3;
     }
     
     .theme-customize-header-section {

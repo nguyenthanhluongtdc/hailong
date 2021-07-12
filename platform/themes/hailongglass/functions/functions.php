@@ -7,6 +7,7 @@ register_page_template([
     'introduce-profile' => 'Introduce Profile',
     'teachnological-line' => 'Teachnological line',
     'products' => 'Products',
+    'product-price' => 'Product Price',
     'news' => 'News',
 ]);
 

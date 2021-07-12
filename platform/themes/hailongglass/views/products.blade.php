@@ -17,7 +17,7 @@
                         </li>
 
                         <li class="__tabs__item">
-                            <a class="__tabs__link" href="#" title="Thông tin công ty"> Bảng giá </a>
+                            <a class="__tabs__link" href="/product-price" title="Thông tin công ty"> Bảng giá </a>
                         </li>
 
                         <li class="__tabs__item">
@@ -43,33 +43,33 @@
         </div>
 
         <div class="container-customize">
-            <ul class="list-cate-pro distance-below distance-above">
-                <li class="list-cate-pro__item">
-                    <a class="list-cate-pro__item__link" href="#" title=""> Kính cường lực </a>
+            <ul class="section-products-list-cate-pro distance-below distance-above">
+                <li class="section-products-list-cate-pro__item">
+                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính cường lực </a>
                 </li>
-                <li class="list-cate-pro__item">
-                    <a class="list-cate-pro__item__link" href="#" title=""> Kính low -E </a>
+                <li class="section-products-list-cate-pro__item">
+                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính low -E </a>
                 </li>
-                <li class="list-cate-pro__item">
-                    <a class="list-cate-pro__item__link active" href="#" title=""> Kính dán an toàn </a>
+                <li class="section-products-list-cate-pro__item">
+                    <a class="section-products-list-cate-pro__item__link active" href="#" title=""> Kính dán an toàn </a>
                 </li>
-                <li class="list-cate-pro__item">
-                    <a class="list-cate-pro__item__link" href="#" title=""> Kính rạn </a>
+                <li class="section-products-list-cate-pro__item">
+                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính rạn </a>
                 </li>
-                <li class="list-cate-pro__item">
-                    <a class="list-cate-pro__item__link" href="#" title=""> Kính hộp </a>
+                <li class="section-products-list-cate-pro__item">
+                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính hộp </a>
                 </li>
-                <li class="list-cate-pro__item">
-                    <a class="list-cate-pro__item__link" href="#" title=""> Kính phun cát </a>
+                <li class="section-products-list-cate-pro__item">
+                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính phun cát </a>
                 </li>
-                <li class="list-cate-pro__item">
-                    <a class="list-cate-pro__item__link" href="#" title=""> Kính màu trang trí </a>
+                <li class="section-products-list-cate-pro__item">
+                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính màu trang trí </a>
                 </li>
-                <li class="list-cate-pro__item">
-                    <a class="list-cate-pro__item__link" href="#" title=""> Kính ngăn cháy </a>
+                <li class="section-products-list-cate-pro__item">
+                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính ngăn cháy </a>
                 </li>
-                <li class="list-cate-pro__item">
-                    <a class="list-cate-pro__item__link" href="#" title=""> Kính uốn cong </a>
+                <li class="section-products-list-cate-pro__item">
+                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính uốn cong </a>
                 </li>
             </ul>
         </div>

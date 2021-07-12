@@ -10245,16 +10245,16 @@ a {
 .box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__slide__content:hover a {
   color: white;
 }
-.box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__list > li:nth-child(3n+1) {
+.box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__list > li:nth-child(odd) {
   border-bottom: 2px solid #f3f3f3;
 }
-.box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__list > li:nth-child(3n+2) {
+.box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__list > li:nth-child(even) {
   border-top: 2px solid #f3f3f3;
 }
-.box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__list > li:nth-child(3n+2) > .splide__slide__img {
+.box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__list > li:nth-child(even) > .splide__slide__img {
   order: 2;
 }
-.box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__list > li:nth-child(3n+2) > .splide__slide__content {
+.box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__list > li:nth-child(even) > .splide__slide__content {
   order: 1;
 }
 .box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel .splide__pagination {
@@ -11237,48 +11237,6 @@ footer .footer-wrapper .footer__bottom p {
   order: 1;
 }
 
-#products-page .section-intro-wrapper .list-cate-pro {
-  padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin-bottom: 0;
-  margin-left: -4rem;
-  margin-right: -4rem;
-}
-#products-page .section-intro-wrapper .list-cate-pro__item {
-  flex: 0 0 33.333336%;
-  max-width: 33.333336%;
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-#products-page .section-intro-wrapper .list-cate-pro__item__link {
-  position: relative;
-  color: #171717;
-  text-decoration: none;
-  display: block;
-  padding: 0.625rem 0;
-  border-bottom: 1px solid #f3f3f3;
-  transition: padding 200ms;
-}
-#products-page .section-intro-wrapper .list-cate-pro__item__link::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #08964a;
-  width: 0.625rem;
-  height: 0.125rem;
-  display: none;
-}
-#products-page .section-intro-wrapper .list-cate-pro__item__link:hover {
-  padding-left: 1.25rem;
-  color: #08964a;
-}
-#products-page .section-intro-wrapper .list-cate-pro__item__link:hover::before {
-  display: inline-block;
-}
 #products-page .section-shoppingguide-wrapper {
   background-color: #f3f3f3;
 }
@@ -11311,6 +11269,81 @@ footer .footer-wrapper .footer__bottom p {
   color: #08964a;
 }
 
+.section-products-list-cate-pro {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: -4rem;
+  margin-right: -4rem;
+}
+.section-products-list-cate-pro__item {
+  flex: 0 0 33.333336%;
+  max-width: 33.333336%;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.section-products-list-cate-pro__item__link {
+  position: relative;
+  color: #171717;
+  text-decoration: none;
+  display: block;
+  padding: 0.625rem 0;
+  border-bottom: 1px solid #f3f3f3;
+  transition: padding 200ms;
+}
+.section-products-list-cate-pro__item__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #08964a;
+  width: 0.625rem;
+  height: 0.125rem;
+  display: none;
+}
+.section-products-list-cate-pro__item__link:hover {
+  padding-left: 1.25rem;
+  color: #08964a;
+}
+.section-products-list-cate-pro__item__link:hover::before {
+  display: inline-block;
+}
+
+#product-price-page .box-common-intro-wrapper .hotline {
+  display: inline-block;
+  padding: 0.438rem 0.625rem;
+  border: 1px solid #08964a;
+}
+#product-price-page .section-products-list-cate-pro-wrapper {
+  background-color: #f3f3f3;
+}
+#product-price-page .section-products-list-cate-pro-wrapper .section-products-list-cate-pro__item__link {
+  border-bottom: 1px solid #d2b0b0;
+}
+#product-price-page .our-policy-wrapper {
+  border-bottom: 2px solid #f3f3f3;
+}
+#product-price-page .our-policy-wrapper .our-policy__col {
+  display: flex;
+}
+#product-price-page .our-policy-wrapper .our-policy__col__icon {
+  margin-right: 1.5rem;
+  font-size: 1.875rem;
+  color: #08964a;
+}
+@media (max-width: 992px) {
+  #product-price-page .our-policy-wrapper .our-policy__col__icon {
+    margin-right: 1rem;
+  }
+}
+#product-price-page .our-policy-wrapper .our-policy__col__content .__content__title {
+  color: #08964a;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 /**
 *   import responsive
 **/
@@ -11327,6 +11360,11 @@ footer .footer-wrapper .footer__bottom p {
 
   .distance-above {
     padding-top: 5rem;
+  }
+
+  .distance-y {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   #home-page .section-ourproduct-wrapper {
@@ -11346,6 +11384,11 @@ footer .footer-wrapper .footer__bottom p {
 
   .distance-above {
     padding-top: 3rem;
+  }
+
+  .distance-y {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .theme-customize-header-section__header {
@@ -11387,7 +11430,7 @@ footer .footer-wrapper .footer__bottom p {
     margin-top: 2rem;
   }
 
-  #products-page .section-intro-wrapper .list-cate-pro__item {
+  .section-products-list-cate-pro__item {
     flex: 0 0 50%;
     max-width: 50%;
   }
@@ -11405,6 +11448,11 @@ footer .footer-wrapper .footer__bottom p {
     padding-top: 2rem;
   }
 
+  .distance-y {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .theme-customize-header-section__header {
     padding-top: 2rem;
   }
@@ -11419,11 +11467,11 @@ footer .footer-wrapper .footer__bottom p {
     font-size: 1.5rem;
   }
 
-  #products-page .section-intro-wrapper .list-cate-pro {
+  .section-products-list-cate-pro {
     margin-left: -1rem;
     margin-right: -1rem;
   }
-  #products-page .section-intro-wrapper .list-cate-pro__item {
+  .section-products-list-cate-pro__item {
     padding-left: 1rem;
     padding-right: 1rem;
   }

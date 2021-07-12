@@ -1,0 +1,56 @@
+#product-price-page {
+    .box-common-intro-wrapper {
+
+        .hotline {
+            display: inline-block;
+            padding: $size0_438 $size0_625;
+            border: 1px solid $borderGreen;
+        }
+    }
+
+    .section-products-list-cate-pro-wrapper {
+        background-color: $backgroundf3f3f3;
+
+        .section-products-list-cate-pro {
+            &__item {
+    
+                &__link {
+                    border-bottom: 1px solid $borderd2b0b0;
+                }
+            }
+        }
+    }
+
+    .our-policy-wrapper {
+        border-bottom: 2px solid $borderf3f3f3;
+
+        .our-policy {
+            
+            &__col {
+                display: flex;
+
+                &__icon {
+                    margin-right: $size1_5;
+                    font-size: $size1_875;
+                    color: $textGreen;
+
+                    @media (max-width: 992px) {
+                        margin-right: $size1;
+                    }
+                }
+
+                &__content {
+                    .__content__title {
+                        color: $textGreen;
+                        font-size: $size1_25;
+                        font-weight: bold;
+                    }
+
+                    .__content__des {
+
+                    }
+                }
+            }
+        }
+    }
+}
