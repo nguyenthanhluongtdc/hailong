@@ -3,7 +3,13 @@
     .newsletter_title {
         h3 {
             font-size: $size1_25;
-            padding:calc(#{$size2_5} - #{$size0_875});
+            margin-left: 40px;
+            max-width: 70%;
+        }
+    }
+    .newsletter_text {
+        p {
+            margin-bottom: 0;
         }
     }
     .newsletter_form {
@@ -18,17 +24,85 @@
             padding-left: 4%;
             align-self: center;
             max-width: 100%;
+            display: block;
         }
         .btn-icon-submit::before {
             position: absolute;
             content: "\f0e0";
             font-family: "Font Awesome 5 Pro";
             top: 0;
-            right: 8%;
+            right: 10%;
             // width: 100%;
             color: $textWhite;
             opacity: 50%;
             font-size: $size1_5625;
+        }
+    }
+    .newsletter_img {
+        img {
+            min-height: 150px;
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:575px) {
+    .form-sign-up-wrapper {
+        text-align: center;
+        .newsletter_title {
+            h3 {
+                margin: $size1 0;
+                max-width: unset;
+            }
+        }
+        .newsletter_text {
+            p {
+                margin-bottom: $size1;
+            }
+        }
+        .newsletter_form {
+            .form-control {
+                margin-left: $size3_125;
+            }
+            .btn-icon-submit::before {
+                right: -6%;
+            }
+        }
+        .newsletter_img {
+            img {
+                min-height: 100px;
+                max-width: 80%;
+                float: right;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .form-sign-up-wrapper {
+        text-align: center;
+        .newsletter_title {
+            h3 {
+                margin: $size1 0;
+                max-width: unset;
+            }
+        }
+        .newsletter_text {
+            p {
+                margin-bottom: $size1;
+            }
+        }
+        .newsletter_form {
+            padding: 0 10%;
+            .btn-icon-submit::before {
+                right: 16%;
+            }
+        }
+        .newsletter_img {
+            img {
+                margin-top: $size1;
+                width: 100%;
+            }
         }
     }
 }
