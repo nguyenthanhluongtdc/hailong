@@ -136,7 +136,7 @@
                     <div class="col-sm-4 px-lg-5 px-3">
                         <div class="our-policy__col">
                             <div class="our-policy__col__icon">
-                                <i class="fad fa-truck-moving"></i>
+                               <i class="fas fa-award"></i>
                             </div>
                             <div class="our-policy__col__content">
                                 <h3 class="__content__title"> Bảo hành uy tín </h3>
@@ -148,7 +148,7 @@
                     <div class="col-sm-4 px-lg-5 px-3">
                         <div class="our-policy__col">
                             <div class="our-policy__col__icon">
-                                <i class="fad fa-truck-moving"></i>
+                                <i class="fab fa-chrome"></i>
                             </div>
                             <div class="our-policy__col__content">
                                 <h3 class="__content__title"> Hệ thống quản lý tối ưu </h3>
