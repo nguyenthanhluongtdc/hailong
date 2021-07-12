@@ -1,0 +1,37 @@
+#warranty-policy-page {
+    #accordion {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -$size2;
+            margin-right: -$size2;
+        }
+
+        .outer-shell {
+            @media (min-width: 768px) {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            margin-bottom: $size1_5;
+            padding-left: $size2;
+            padding-right: $size2;
+            .card {
+                .card-header {
+                    padding: $size0_5 $size1;
+                    h5 {
+                        button {
+                            padding: 0;
+                            box-shadow: none;
+                            text-decoration: none;
+                            color: $textNight;
+                            display: block;
+                            width: 100%;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

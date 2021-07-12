@@ -21,7 +21,7 @@
                         </li>
 
                         <li class="__tabs__item">
-                            <a class="__tabs__link" href="#" title="Hồ sơ năng lực"> Chính sách bảo hành </a>
+                            <a class="__tabs__link" href="/warranty-policy" title="Hồ sơ năng lực"> Chính sách bảo hành </a>
                         </li>
                     </ul>
                 </div>
