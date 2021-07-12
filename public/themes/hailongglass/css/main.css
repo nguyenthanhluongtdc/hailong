@@ -10580,11 +10580,16 @@ a {
 }
 .form-sign-up-wrapper .newsletter_title h3 {
   font-size: 1.25rem;
-  margin-left: 40px;
+  margin-left: 1.875rem;
   max-width: 70%;
+  margin-bottom: unset;
+  font-family: "iCiel-SamsungSharpSans-Bold_SMCPS";
+  color: white;
 }
 .form-sign-up-wrapper .newsletter_text p {
   margin-bottom: 0;
+  color: white;
+  margin-left: -0.375rem;
 }
 .form-sign-up-wrapper .newsletter_form .form-control {
   opacity: 20%;

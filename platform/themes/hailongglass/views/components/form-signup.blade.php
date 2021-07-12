@@ -9,7 +9,7 @@
                         
                     </div>
                 </div> 
-                <div class="col-md-3 col-sm-12">
+                <div class="col-md-3 col-sm-12 pl-0">
                     <div class="newsletter_text text_white">
                         <p>Đăng ký nhận tin mới, tin khuyến mãi và sản phẩm mới của Hailong Glass</p>
                     </div>

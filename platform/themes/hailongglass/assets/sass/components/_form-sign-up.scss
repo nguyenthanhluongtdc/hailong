@@ -3,13 +3,18 @@
     .newsletter_title {
         h3 {
             font-size: $size1_25;
-            margin-left: 40px;
+            margin-left: $size1_875;
             max-width: 70%;
+            margin-bottom: unset;
+            font-family: $iCiel-SamsungSharpSans-Bold_SMCPS;
+            color: $white;
         }
     }
     .newsletter_text {
         p {
             margin-bottom: 0;
+            color: $white;
+            margin-left: -$size0_375;
         }
     }
     .newsletter_form {
