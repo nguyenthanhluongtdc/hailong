@@ -22,16 +22,13 @@
                     border-top: solid 1px #d8d9d9;
                     border-bottom: solid 1px #d8d9d9;
                     margin: $size2_1875 0;
-                    .share-text {
+                    .share_text {
                         margin-right: $size0_9375;
                     }
                     .list-share {
                         display: flex;
                         .share-item {
-                            margin-right: $size0_313;
-                            @media screen and (max-width: 991px) {
-                                margin-right: $size0_625;
-                            }
+                            margin-right: $size0_625;
                             list-style: none;
                         }
                     }
@@ -42,6 +39,9 @@
                     text-align: center;
                     p {
                         margin-bottom: unset;
+                    }
+                    &__link {
+                        color: $mainColor;
                     }
                 }
                 .other__post {

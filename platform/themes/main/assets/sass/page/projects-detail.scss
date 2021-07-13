@@ -1,0 +1,160 @@
+#projects-detail-page {
+    .box-common-intro-wrapper.bottom {
+        .splide {
+            &__arrows {
+                position: unset;
+                bottom: unset;
+                left: unset;
+                display: unset;
+                button {
+                    background: none;
+                    svg {
+                        display: none;
+                    }
+                }
+            }
+            .splide__arrow--prev {
+                left: $size0_375;
+                &:before {
+                    position: absolute;
+                    content: "\f053";
+                    font-family: "Font Awesome 5 Pro";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    color: white;
+                    font-size: 1.5625rem;
+                }
+            }
+            .splide__arrow--next {
+                right: $size0_375;
+                &:before {
+                    position: absolute;
+                    content: "\f054";
+                    font-family: "Font Awesome 5 Pro";
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    color: white;
+                    font-size: 1.5625rem;
+                }
+            }
+        }
+    }
+    .section-intro__content__top {
+        .theme-customize-header-section__header__title {
+            color: unset;
+            font-size: $size1_875;
+            font-family: $Barlow-Regular;
+            margin: $size2_5 0;
+        }
+        .intro__content {
+            @include split_str(7)
+        }
+    }
+    .section-intro__content__bottom {
+        padding: 0 15%;
+        .theme-customize-header-section__header__title {
+            color: unset;
+            font-size: $size1_875;
+            font-family: $Barlow-Regular;
+            margin: $size3 0;
+        }
+        .intro__content {
+            margin-bottom: $size2_25;
+            text-align: center;
+            @include split_str(7)
+        }
+    }
+    .info-wrapper {
+        margin-top: $size2;
+        margin-bottom: $size3;
+        .share {
+            display: flex;
+            align-items: center;
+            padding-top: $size2;
+            .share_text {
+                margin-right: $size0_9375;
+                min-width: $size3_5;
+            }
+            .list-share {
+                display: flex;
+                padding: 0;
+                .share-item {
+                    margin-right: $size0_625;
+                    list-style: none;
+                }
+            }
+        }
+        .info-contact {
+            padding: $size1;
+            border: $size0_063 solid $mainColor;
+            text-align: center;
+            p {
+                margin-bottom: unset;
+            }
+            &__link {
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1440px) {
+    #projects-detail-page {
+        .section-intro__content__top,
+        .section-intro__content__bottom {
+            .theme-customize-header-section__header__title {
+                margin: $size2 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #projects-detail-page {
+        .section-intro__content__top,
+        .section-intro__content__bottom {
+            .theme-customize-header-section__header__title {
+                font-size: $size1_5;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    #projects-detail-page {
+        .section-intro__content__top,
+        .section-intro__content__bottom {
+            .theme-customize-header-section__header__title {
+                margin: 0 0 $size2 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #projects-detail-page {
+        .info-wrapper {
+            .share {
+                margin-bottom: $size2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    #projects-detail-page {
+        .section-intro__content__top,
+        .section-intro__content__bottom {
+            padding: unset;
+            .theme-customize-header-section__header__title {
+                font-size: $size1_25;
+                margin: 0 0 $size1 0;
+            }
+            .intro__content {
+                text-align: unset;
+            }
+        }
+    }
+}

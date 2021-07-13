@@ -58,7 +58,7 @@
                                 </ul>   
                             </div>
                             <div class="info-contact">
-                                <p>Liên hệ ngay để được hộ trợ tư vấn:<a href="">Hotline: 1900 4696</a></p>
+                                <p>Liên hệ ngay để được hộ trợ tư vấn:<a class="info-contact__link" href="">Hotline: 1900 4696</a></p>
                                 
                                 <p> Xem chi tiết sản phẩm tại đây:<a href="http://colorglass.vn/">http://colorglass.vn/</a></p>
                             

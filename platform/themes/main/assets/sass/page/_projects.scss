@@ -16,6 +16,22 @@
     .nav-tabs {
         border-bottom: unset;
     }
+    .theme-customize-header-section__tabs {
+        .__tabs__link {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-top: 1rem;
+        }
+        .nav-link.active::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 0.063rem;
+            background-color: #08964a;
+        }
+    }
 }
 
 .project-wrapper {
