@@ -11,6 +11,8 @@ register_page_template([
     'warranty-policy' => 'Warranty Policy',
     'news' => 'News',
     'news-detail' => 'News Detail',
+    'projects' => 'Projects',
+    'projects-detail' => 'Project Detail',
 ]);
 
 register_sidebar([
