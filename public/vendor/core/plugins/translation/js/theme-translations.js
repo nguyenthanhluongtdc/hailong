@@ -13,10 +13,20 @@ $(document).ready(function () {
 
     var $form = _self.closest('form');
 
+    var translations = [];
+    $.each($form.find('.table tbody tr'), function (index, el) {
+      translations.push({
+        key: $(el).find('.translation-key').val(),
+        value: $(el).find('.translation-value').val()
+      });
+    });
     $.ajax({
       url: $form.prop('action'),
       type: 'POST',
-      data: $form.serialize(),
+      data: {
+        locale: $form.find('input[name=locale]').val(),
+        translations: JSON.stringify(translations)
+      },
       success: function success(data) {
         _self.removeClass('button-loading');
 

@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./platform/themes/main/assets/js/main.js":
-/*!********************************************************!*\
-  !*** ./platform/themes/main/assets/js/main.js ***!
-  \********************************************************/
+/***/ "./platform/themes/main/assets/js/common.js":
+/*!**************************************************!*\
+  !*** ./platform/themes/main/assets/js/common.js ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -16,9 +16,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "./platform/themes/main/assets/js/page/home.js":
-/*!*************************************************************!*\
+/*!*****************************************************!*\
   !*** ./platform/themes/main/assets/js/page/home.js ***!
-  \*************************************************************/
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -33,10 +33,526 @@ home();
 
 /***/ }),
 
-/***/ "./platform/themes/main/assets/sass/main.scss":
+/***/ "./platform/core/base/resources/assets/sass/base/themes/default.scss":
+/*!***************************************************************************!*\
+  !*** ./platform/core/base/resources/assets/sass/base/themes/default.scss ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/base/resources/assets/sass/base/themes/grey.scss":
+/*!************************************************************************!*\
+  !*** ./platform/core/base/resources/assets/sass/base/themes/grey.scss ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/base/resources/assets/sass/base/themes/light.scss":
+/*!*************************************************************************!*\
+  !*** ./platform/core/base/resources/assets/sass/base/themes/light.scss ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/base/resources/assets/sass/core.scss":
 /*!************************************************************!*\
-  !*** ./platform/themes/main/assets/sass/main.scss ***!
+  !*** ./platform/core/base/resources/assets/sass/core.scss ***!
   \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/base/resources/assets/sass/custom/system-info.scss":
+/*!**************************************************************************!*\
+  !*** ./platform/core/base/resources/assets/sass/custom/system-info.scss ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/base/resources/assets/sass/custom/email.scss":
+/*!********************************************************************!*\
+  !*** ./platform/core/base/resources/assets/sass/custom/email.scss ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/base/resources/assets/sass/custom/error-pages.scss":
+/*!**************************************************************************!*\
+  !*** ./platform/core/base/resources/assets/sass/custom/error-pages.scss ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/base/resources/assets/sass/rtl.scss":
+/*!***********************************************************!*\
+  !*** ./platform/core/base/resources/assets/sass/rtl.scss ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/dashboard/resources/assets/sass/dashboard.scss":
+/*!**********************************************************************!*\
+  !*** ./platform/core/dashboard/resources/assets/sass/dashboard.scss ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/media/resources/assets/sass/media.scss":
+/*!**************************************************************!*\
+  !*** ./platform/core/media/resources/assets/sass/media.scss ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/setting/resources/assets/sass/setting.scss":
+/*!******************************************************************!*\
+  !*** ./platform/core/setting/resources/assets/sass/setting.scss ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/table/resources/assets/sass/table.scss":
+/*!**************************************************************!*\
+  !*** ./platform/core/table/resources/assets/sass/table.scss ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/packages/menu/resources/assets/sass/menu.scss":
+/*!****************************************************************!*\
+  !*** ./platform/packages/menu/resources/assets/sass/menu.scss ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/packages/plugin-management/resources/assets/sass/plugin.scss":
+/*!*******************************************************************************!*\
+  !*** ./platform/packages/plugin-management/resources/assets/sass/plugin.scss ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/packages/revision/resources/assets/sass/revision.scss":
+/*!************************************************************************!*\
+  !*** ./platform/packages/revision/resources/assets/sass/revision.scss ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/packages/seo-helper/resources/assets/sass/seo-helper.scss":
+/*!****************************************************************************!*\
+  !*** ./platform/packages/seo-helper/resources/assets/sass/seo-helper.scss ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/packages/slug/resources/assets/sass/slug.scss":
+/*!****************************************************************!*\
+  !*** ./platform/packages/slug/resources/assets/sass/slug.scss ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/packages/theme/resources/assets/sass/custom-css.scss":
+/*!***********************************************************************!*\
+  !*** ./platform/packages/theme/resources/assets/sass/custom-css.scss ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/packages/theme/resources/assets/sass/theme-options.scss":
+/*!**************************************************************************!*\
+  !*** ./platform/packages/theme/resources/assets/sass/theme-options.scss ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/packages/theme/resources/assets/sass/admin-bar.scss":
+/*!**********************************************************************!*\
+  !*** ./platform/packages/theme/resources/assets/sass/admin-bar.scss ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/backup/resources/assets/sass/backup.scss":
+/*!*******************************************************************!*\
+  !*** ./platform/plugins/backup/resources/assets/sass/backup.scss ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/contact/resources/assets/sass/contact.scss":
+/*!*********************************************************************!*\
+  !*** ./platform/plugins/contact/resources/assets/sass/contact.scss ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/contact/resources/assets/sass/contact-public.scss":
+/*!****************************************************************************!*\
+  !*** ./platform/plugins/contact/resources/assets/sass/contact-public.scss ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/cookie-consent/resources/assets/sass/cookie-consent.scss":
+/*!***********************************************************************************!*\
+  !*** ./platform/plugins/cookie-consent/resources/assets/sass/cookie-consent.scss ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/custom-field/resources/assets/sass/edit-field-group.scss":
+/*!***********************************************************************************!*\
+  !*** ./platform/plugins/custom-field/resources/assets/sass/edit-field-group.scss ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/custom-field/resources/assets/sass/edit-field-group-rtl.scss":
+/*!***************************************************************************************!*\
+  !*** ./platform/plugins/custom-field/resources/assets/sass/edit-field-group-rtl.scss ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/custom-field/resources/assets/sass/custom-field.scss":
+/*!*******************************************************************************!*\
+  !*** ./platform/plugins/custom-field/resources/assets/sass/custom-field.scss ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/gallery/resources/assets/sass/gallery.scss":
+/*!*********************************************************************!*\
+  !*** ./platform/plugins/gallery/resources/assets/sass/gallery.scss ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/gallery/resources/assets/sass/object-gallery.scss":
+/*!****************************************************************************!*\
+  !*** ./platform/plugins/gallery/resources/assets/sass/object-gallery.scss ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/gallery/resources/assets/sass/admin-gallery.scss":
+/*!***************************************************************************!*\
+  !*** ./platform/plugins/gallery/resources/assets/sass/admin-gallery.scss ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/language/resources/assets/sass/language.scss":
+/*!***********************************************************************!*\
+  !*** ./platform/plugins/language/resources/assets/sass/language.scss ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/language/resources/assets/sass/language-public.scss":
+/*!******************************************************************************!*\
+  !*** ./platform/plugins/language/resources/assets/sass/language-public.scss ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/log-viewer/resources/assets/sass/log-viewer.scss":
+/*!***************************************************************************!*\
+  !*** ./platform/plugins/log-viewer/resources/assets/sass/log-viewer.scss ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/member/resources/assets/sass/member.scss":
+/*!*******************************************************************!*\
+  !*** ./platform/plugins/member/resources/assets/sass/member.scss ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/member/resources/assets/sass/app.scss":
+/*!****************************************************************!*\
+  !*** ./platform/plugins/member/resources/assets/sass/app.scss ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/social-login/resources/assets/sass/social-login.scss":
+/*!*******************************************************************************!*\
+  !*** ./platform/plugins/social-login/resources/assets/sass/social-login.scss ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/translation/resources/assets/sass/translation.scss":
+/*!*****************************************************************************!*\
+  !*** ./platform/plugins/translation/resources/assets/sass/translation.scss ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/translation/resources/assets/sass/theme-translations.scss":
+/*!************************************************************************************!*\
+  !*** ./platform/plugins/translation/resources/assets/sass/theme-translations.scss ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/plugins/wordpress-importer/resources/assets/scss/wordpress-importer.scss":
+/*!*******************************************************************************************!*\
+  !*** ./platform/plugins/wordpress-importer/resources/assets/scss/wordpress-importer.scss ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/themes/ripple/assets/sass/style.scss":
+/*!*******************************************************!*\
+  !*** ./platform/themes/ripple/assets/sass/style.scss ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/themes/main/assets/sass/common.scss":
+/*!******************************************************!*\
+  !*** ./platform/themes/main/assets/sass/common.scss ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/acl/resources/assets/sass/login.scss":
+/*!************************************************************!*\
+  !*** ./platform/core/acl/resources/assets/sass/login.scss ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/base/resources/assets/sass/base/themes/blue.scss":
+/*!************************************************************************!*\
+  !*** ./platform/core/base/resources/assets/sass/base/themes/blue.scss ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./platform/core/base/resources/assets/sass/base/themes/darkblue.scss":
+/*!****************************************************************************!*\
+  !*** ./platform/core/base/resources/assets/sass/base/themes/darkblue.scss ***!
+  \****************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -142,8 +658,51 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/themes/main/js/main": 0,
-/******/ 			"themes/main/css/main": 0
+/******/ 			"/themes/main/js/common": 0,
+/******/ 			"vendor/core/core/base/css/themes/darkblue": 0,
+/******/ 			"vendor/core/core/base/css/themes/blue": 0,
+/******/ 			"vendor/core/core/acl/css/login": 0,
+/******/ 			"themes/main/css/common": 0,
+/******/ 			"themes/ripple/css/style": 0,
+/******/ 			"vendor/core/plugins/wordpress-importer/css/wordpress-importer": 0,
+/******/ 			"vendor/core/plugins/translation/css/theme-translations": 0,
+/******/ 			"vendor/core/plugins/translation/css/translation": 0,
+/******/ 			"vendor/core/plugins/social-login/css/social-login": 0,
+/******/ 			"vendor/core/plugins/member/css/app": 0,
+/******/ 			"vendor/core/plugins/member/css/member": 0,
+/******/ 			"vendor/core/plugins/log-viewer/css/log-viewer": 0,
+/******/ 			"vendor/core/plugins/language/css/language-public": 0,
+/******/ 			"vendor/core/plugins/language/css/language": 0,
+/******/ 			"vendor/core/plugins/gallery/css/admin-gallery": 0,
+/******/ 			"vendor/core/plugins/gallery/css/object-gallery": 0,
+/******/ 			"vendor/core/plugins/gallery/css/gallery": 0,
+/******/ 			"vendor/core/plugins/custom-field/css/custom-field": 0,
+/******/ 			"vendor/core/plugins/custom-field/css/edit-field-group-rtl": 0,
+/******/ 			"vendor/core/plugins/custom-field/css/edit-field-group": 0,
+/******/ 			"vendor/core/plugins/cookie-consent/css/cookie-consent": 0,
+/******/ 			"vendor/core/plugins/contact/css/contact-public": 0,
+/******/ 			"vendor/core/plugins/contact/css/contact": 0,
+/******/ 			"vendor/core/plugins/backup/css/backup": 0,
+/******/ 			"vendor/core/packages/theme/css/admin-bar": 0,
+/******/ 			"vendor/core/packages/theme/css/theme-options": 0,
+/******/ 			"vendor/core/packages/theme/css/custom-css": 0,
+/******/ 			"vendor/core/packages/slug/css/slug": 0,
+/******/ 			"vendor/core/packages/seo-helper/css/seo-helper": 0,
+/******/ 			"vendor/core/packages/revision/css/revision": 0,
+/******/ 			"vendor/core/packages/plugin-management/css/plugin": 0,
+/******/ 			"vendor/core/packages/menu/css/menu": 0,
+/******/ 			"vendor/core/core/table/css/table": 0,
+/******/ 			"vendor/core/core/setting/css/setting": 0,
+/******/ 			"vendor/core/core/media/css/media": 0,
+/******/ 			"vendor/core/core/dashboard/css/dashboard": 0,
+/******/ 			"vendor/core/core/base/css/rtl": 0,
+/******/ 			"vendor/core/core/base/css/error-pages": 0,
+/******/ 			"vendor/core/core/base/css/email": 0,
+/******/ 			"vendor/core/core/base/css/system-info": 0,
+/******/ 			"vendor/core/core/base/css/core": 0,
+/******/ 			"vendor/core/core/base/css/themes/light": 0,
+/******/ 			"vendor/core/core/base/css/themes/grey": 0,
+/******/ 			"vendor/core/core/base/css/themes/default": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -191,8 +750,51 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["themes/main/css/main"], () => (__webpack_require__("./platform/themes/main/assets/js/main.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["themes/main/css/main"], () => (__webpack_require__("./platform/themes/main/assets/sass/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/themes/main/assets/js/common.js")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/themes/main/assets/sass/common.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/acl/resources/assets/sass/login.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/base/themes/blue.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/base/themes/darkblue.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/base/themes/default.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/base/themes/grey.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/base/themes/light.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/core.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/custom/system-info.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/custom/email.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/custom/error-pages.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/base/resources/assets/sass/rtl.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/dashboard/resources/assets/sass/dashboard.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/media/resources/assets/sass/media.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/setting/resources/assets/sass/setting.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/core/table/resources/assets/sass/table.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/packages/menu/resources/assets/sass/menu.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/packages/plugin-management/resources/assets/sass/plugin.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/packages/revision/resources/assets/sass/revision.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/packages/seo-helper/resources/assets/sass/seo-helper.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/packages/slug/resources/assets/sass/slug.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/packages/theme/resources/assets/sass/custom-css.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/packages/theme/resources/assets/sass/theme-options.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/packages/theme/resources/assets/sass/admin-bar.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/backup/resources/assets/sass/backup.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/contact/resources/assets/sass/contact.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/contact/resources/assets/sass/contact-public.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/cookie-consent/resources/assets/sass/cookie-consent.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/custom-field/resources/assets/sass/edit-field-group.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/custom-field/resources/assets/sass/edit-field-group-rtl.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/custom-field/resources/assets/sass/custom-field.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/gallery/resources/assets/sass/gallery.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/gallery/resources/assets/sass/object-gallery.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/gallery/resources/assets/sass/admin-gallery.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/language/resources/assets/sass/language.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/language/resources/assets/sass/language-public.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/log-viewer/resources/assets/sass/log-viewer.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/member/resources/assets/sass/member.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/member/resources/assets/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/social-login/resources/assets/sass/social-login.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/translation/resources/assets/sass/translation.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/translation/resources/assets/sass/theme-translations.scss")))
+/******/ 	__webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/plugins/wordpress-importer/resources/assets/scss/wordpress-importer.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendor/core/core/base/css/themes/darkblue","vendor/core/core/base/css/themes/blue","vendor/core/core/acl/css/login","themes/main/css/common","themes/ripple/css/style","vendor/core/plugins/wordpress-importer/css/wordpress-importer","vendor/core/plugins/translation/css/theme-translations","vendor/core/plugins/translation/css/translation","vendor/core/plugins/social-login/css/social-login","vendor/core/plugins/member/css/app","vendor/core/plugins/member/css/member","vendor/core/plugins/log-viewer/css/log-viewer","vendor/core/plugins/language/css/language-public","vendor/core/plugins/language/css/language","vendor/core/plugins/gallery/css/admin-gallery","vendor/core/plugins/gallery/css/object-gallery","vendor/core/plugins/gallery/css/gallery","vendor/core/plugins/custom-field/css/custom-field","vendor/core/plugins/custom-field/css/edit-field-group-rtl","vendor/core/plugins/custom-field/css/edit-field-group","vendor/core/plugins/cookie-consent/css/cookie-consent","vendor/core/plugins/contact/css/contact-public","vendor/core/plugins/contact/css/contact","vendor/core/plugins/backup/css/backup","vendor/core/packages/theme/css/admin-bar","vendor/core/packages/theme/css/theme-options","vendor/core/packages/theme/css/custom-css","vendor/core/packages/slug/css/slug","vendor/core/packages/seo-helper/css/seo-helper","vendor/core/packages/revision/css/revision","vendor/core/packages/plugin-management/css/plugin","vendor/core/packages/menu/css/menu","vendor/core/core/table/css/table","vendor/core/core/setting/css/setting","vendor/core/core/media/css/media","vendor/core/core/dashboard/css/dashboard","vendor/core/core/base/css/rtl","vendor/core/core/base/css/error-pages","vendor/core/core/base/css/email","vendor/core/core/base/css/system-info","vendor/core/core/base/css/core","vendor/core/core/base/css/themes/light","vendor/core/core/base/css/themes/grey","vendor/core/core/base/css/themes/default"], () => (__webpack_require__("./platform/themes/ripple/assets/sass/style.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

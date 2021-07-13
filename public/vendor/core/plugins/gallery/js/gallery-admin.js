@@ -8,6 +8,8 @@ var __webpack_exports__ = {};
 
 $(document).ready(function () {
   $('.btn_select_gallery').rvMedia({
+    filter: 'image',
+    view_in: 'all_media',
     onSelectFiles: function onSelectFiles(files) {
       var last_index = $('.list-photos-gallery .photo-gallery-item:last-child').data('id') + 1;
       $.each(files, function (index, file) {

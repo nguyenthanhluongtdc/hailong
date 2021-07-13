@@ -75,7 +75,7 @@
         </div>
     </div>
 
-    <div class="section-product-more-info-wrapper distance-above">
+    <div class="section-product-more-info-wrapper distance-y">
         <div class="container-customize">
             <div class="section-product-more-info">
                 <div class="section-our-policy-wrapper">
@@ -123,7 +123,7 @@
                 <div class="more-info">
                     <div class="theme-customize-header-section__header">
                         <h2 class="theme-customize-header-section__header__title">
-                            Kính cường lực
+                            Đặc tính chung
                         </h2>
                         <p class="theme-customize-header-section__header__des">
                             Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
@@ -134,7 +134,7 @@
                             cao.
                         </p>
 
-                        <p class="theme-customize-header-section__header__des">
+                        <p class="theme-customize-header-section__header__des mt-3">
                             Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
                             sống chúng ta với nhiều đặc tính nổi bật vượt trội hơn so với
                             những loại kính thông thường khác. Trong đó, việc sử dụng kinh
