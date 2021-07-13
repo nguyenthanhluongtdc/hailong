@@ -24,7 +24,7 @@ class HookServiceProvider extends ServiceProvider
      */
     public function addHistoryTab($tabs, $data = null)
     {
-        if (!empty($data) && in_array(get_class($data), config('packages.revision.general.supported', []))) {
+        if (!empty($data) && $this->isSupported($data)) {
             Assets::addScriptsDirectly([
                 '/vendor/core/packages/revision/js/html-diff.js',
                 '/vendor/core/packages/revision/js/revision.js',
@@ -38,6 +38,19 @@ class HookServiceProvider extends ServiceProvider
     }
 
     /**
+     * @param string|BaseModel $model
+     * @return bool
+     */
+    protected function isSupported($model): bool
+    {
+        if (is_object($model)) {
+            $model = get_class($model);
+        }
+
+        return in_array($model, config('packages.revision.general.supported', []));
+    }
+
+    /**
      * @param string $tabs
      * @param BaseModel $data
      * @return string
@@ -46,7 +59,7 @@ class HookServiceProvider extends ServiceProvider
      */
     public function addHistoryContent($tabs, $data = null)
     {
-        if (!empty($data) && in_array(get_class($data), config('packages.revision.general.supported', []))) {
+        if (!empty($data) && $this->isSupported($data)) {
             return $tabs . view('packages/revision::history-content', ['model' => $data])->render();
         }
 

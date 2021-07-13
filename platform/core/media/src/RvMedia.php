@@ -256,6 +256,10 @@ class RvMedia
     {
         $default = config('core.media.media.default_image');
 
+        if (setting('media_default_placeholder_image')) {
+            $default = $this->url(setting('media_default_placeholder_image'));
+        }
+
         if ($relative) {
             return $default;
         }
@@ -395,7 +399,7 @@ class RvMedia
     public function uploadFromEditor(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'upload' => 'required|image|mimes:jpg,jpeg,png',
+            'upload' => 'required|image|mimes:jpg,jpeg,png,webp',
         ]);
 
         if ($validator->fails()) {

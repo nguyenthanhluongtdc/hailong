@@ -119,7 +119,7 @@ class MediaController extends Controller
                 'is_folder' => 'DESC',
             ],
             'paginate'         => [
-                'per_page'      => $request->input('posts_per_page', 30),
+                'per_page'      => (int)$request->input('posts_per_page', 30),
                 'current_paged' => (int)$request->input('paged', 1),
             ],
             'selected_file_id' => $request->input('selected_file_id'),

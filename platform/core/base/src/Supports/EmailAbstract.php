@@ -49,8 +49,13 @@ class EmailAbstract extends Mailable
     public function build()
     {
         $inlineCss = new CssToInlineStyles;
-        $email = $this->from(setting('email_from_address', config('mail.from.address')),
-            setting('email_from_name', config('mail.from.name')))
+
+        $fromAddress = setting('email_from_address', config('mail.from.address'));
+
+        $fromName = setting('email_from_name', config('mail.from.name'));
+
+        $email = $this
+            ->from($fromAddress, $fromName)
             ->subject($this->subject)
             ->html($inlineCss->convert($this->content));
 
@@ -62,6 +67,14 @@ class EmailAbstract extends Mailable
             foreach ($attachments as $file) {
                 $email->attach($file);
             }
+        }
+
+        if (isset($this->data['cc'])) {
+            $email = $this->cc($this->data['cc']);
+        }
+
+        if (isset($this->data['bcc'])) {
+            $email = $this->bcc($this->data['bcc']);
         }
 
         return $email;

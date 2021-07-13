@@ -7,7 +7,7 @@
             <div class="post__content-wrap">
                 <header class="post__header">
                     <h3 class="post__title"><a href="{{ $post->url }}">{{ $post->name }}</a></h3>
-                    <div class="post__meta"><span class="post__created-at"><i class="ion-clock"></i>{{ $post->created_at->format('M d, Y') }}</span>
+                    <div class="post__meta"><span class="post__created-at"><i class="ion-clock"></i>{{ $post->created_at->translatedFormat('M d, Y') }}</span>
                         @if ($post->author->username)
                             <span class="post__author"><i class="ion-android-person"></i><span>{{ $post->author->name }}</span></span>
                         @endif

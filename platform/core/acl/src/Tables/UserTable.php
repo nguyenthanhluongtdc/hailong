@@ -121,24 +121,21 @@ class UserTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-        $select = [
-            'users.id',
-            'users.username',
-            'users.email',
-            'roles.name as role_name',
-            'roles.id as role_id',
-            'users.updated_at',
-            'users.created_at',
-            'users.super_user',
-        ];
-
-        $query = $model
+        $query = $this->repository->getModel()
             ->leftJoin('role_users', 'users.id', '=', 'role_users.user_id')
             ->leftJoin('roles', 'roles.id', '=', 'role_users.role_id')
-            ->select($select);
+            ->select([
+                'users.id as id',
+                'username',
+                'email',
+                'roles.name as role_name',
+                'roles.id as role_id',
+                'users.updated_at as updated_at',
+                'users.created_at as created_at',
+                'super_user',
+            ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -148,22 +145,18 @@ class UserTable extends TableAbstract
     {
         return [
             'username'   => [
-                'name'  => 'users.username',
                 'title' => trans('core/acl::users.username'),
                 'class' => 'text-left',
             ],
             'email'      => [
-                'name'  => 'users.email',
                 'title' => trans('core/acl::users.email'),
                 'class' => 'text-left',
             ],
             'role_name'  => [
-                'name'       => 'role_name',
                 'title'      => trans('core/acl::users.role'),
                 'searchable' => false,
             ],
             'created_at' => [
-                'name'  => 'users.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
@@ -173,7 +166,6 @@ class UserTable extends TableAbstract
                 'width' => '100px',
             ],
             'super_user' => [
-                'name'  => 'users.super_user',
                 'title' => trans('core/acl::users.is_super'),
                 'width' => '100px',
             ],
@@ -210,7 +202,7 @@ class UserTable extends TableAbstract
     public function getFilters(): array
     {
         $filters = $this->getBulkChanges();
-        Arr::forget($filters, 'users.status');
+        Arr::forget($filters, 'status');
 
         return $filters;
     }
@@ -221,23 +213,23 @@ class UserTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'users.username'   => [
+            'username'   => [
                 'title'    => trans('core/acl::users.username'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'users.email'      => [
+            'email'      => [
                 'title'    => trans('core/base::tables.email'),
                 'type'     => 'text',
                 'validate' => 'required|max:120|email',
             ],
-            'users.status'     => [
+            'status'     => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => UserStatusEnum::labels(),
                 'validate' => 'required|in:' . implode(',', UserStatusEnum::values()),
             ],
-            'users.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],
@@ -271,7 +263,7 @@ class UserTable extends TableAbstract
             throw new Exception(trans('core/base::system.disabled_in_demo_mode'));
         }
 
-        if ($inputKey === 'users.status') {
+        if ($inputKey === 'status') {
 
             $hasWarning = false;
 

@@ -1,6 +1,6 @@
 {
     "name": "platform/slug",
-    "description": "Slug/Permalink for Laravel CMS application",
+    "description": "Slug/Permalink",
     "type": "package",
     "autoload": {
         "psr-4": {

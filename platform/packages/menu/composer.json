@@ -1,6 +1,6 @@
 {
     "name": "platform/menu",
-    "description": "Menu package for Laravel CMS application",
+    "description": "Menu package",
     "type": "package",
     "autoload": {
         "psr-4": {

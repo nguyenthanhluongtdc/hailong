@@ -2,6 +2,7 @@
 
 namespace Platform\Support\Repositories\Eloquent;
 
+use Platform\Base\Supports\RepositoryHelper;
 use Platform\Support\Repositories\Interfaces\RepositoryInterface;
 use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
@@ -63,12 +64,8 @@ abstract class RepositoriesAbstract implements RepositoryInterface
     public function findById($id, array $with = [])
     {
         $data = $this->make($with)->where('id', $id);
-        $data = $this->applyBeforeExecuteQuery($data, true);
-        $data = $data->first();
 
-        $this->resetModel();
-
-        return $data;
+        return $this->applyBeforeExecuteQuery($data, true)->first();
     }
 
     /**
@@ -88,15 +85,7 @@ abstract class RepositoriesAbstract implements RepositoryInterface
      */
     public function applyBeforeExecuteQuery($data, $isSingle = false)
     {
-        if (is_in_admin()) {
-            if (!$isSingle) {
-                $data = apply_filters(BASE_FILTER_BEFORE_GET_ADMIN_LIST_ITEM, $data, $this->originalModel);
-            }
-        } elseif (!$isSingle) {
-            $data = apply_filters(BASE_FILTER_BEFORE_GET_FRONT_PAGE_ITEM, $data, $this->originalModel);
-        } else {
-            $data = apply_filters(BASE_FILTER_BEFORE_GET_SINGLE, $data, $this->originalModel);
-        }
+        $data = RepositoryHelper::applyBeforeExecuteQuery($data, $this->originalModel, $isSingle);
 
         $this->resetModel();
 
@@ -119,9 +108,8 @@ abstract class RepositoriesAbstract implements RepositoryInterface
     public function findOrFail($id, array $with = [])
     {
         $data = $this->make($with)->where('id', $id);
-        $data = $this->applyBeforeExecuteQuery($data, true);
-        $result = $data->first();
-        $this->resetModel();
+
+        $result = $this->applyBeforeExecuteQuery($data, true)->first();
 
         if (!empty($result)) {
             return $result;
@@ -330,6 +318,7 @@ abstract class RepositoriesAbstract implements RepositoryInterface
         if (empty($data)) {
             return false;
         }
+
         foreach ($data as $item) {
             $item->delete();
         }

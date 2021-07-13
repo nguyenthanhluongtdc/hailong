@@ -50,8 +50,20 @@ export default {
             this.items.splice(index, 1);
         },
         removeSelectedItem: function () {
-            for(const item of this.items) {
+            for (const item of this.items) {
                 this.items.slice(i, 1);
+            }
+        }
+    },
+    watch: {
+        items(value) {
+            if (value) {
+                this.$nextTick(() => {
+                    if (window.Botble) {
+                        window.Botble.initResources();
+                        window.Botble.initMediaIntegrate();
+                    }
+                });
             }
         }
     }

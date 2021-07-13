@@ -98,6 +98,10 @@ if (!defined('BASE_FILTER_BEFORE_GET_ADMIN_LIST_ITEM')) {
     define('BASE_FILTER_BEFORE_GET_ADMIN_LIST_ITEM', 'before_get_admin_list_item');
 }
 
+if (!defined('BASE_FILTER_BEFORE_GET_ADMIN_SINGLE_ITEM')) {
+    define('BASE_FILTER_BEFORE_GET_ADMIN_SINGLE_ITEM', 'before_get_admin_single_item');
+}
+
 if (!defined('BASE_FILTER_EMAIL_TEMPLATE')) {
     define('BASE_FILTER_EMAIL_TEMPLATE', 'base_filter_email_template');
 }
@@ -144,6 +148,10 @@ if (!defined('BASE_FILTER_ENUM_HTML')) {
 
 if (!defined('BASE_FILTER_SITE_LANGUAGE_DIRECTION')) {
     define('BASE_FILTER_SITE_LANGUAGE_DIRECTION', 'base_filter_site_language_direction');
+}
+
+if (!defined('BASE_FILTER_ADMIN_LANGUAGE_DIRECTION')) {
+    define('BASE_FILTER_ADMIN_LANGUAGE_DIRECTION', 'base_filter_admin_language_direction');
 }
 
 if (!defined('BASE_FILTER_FOOTER_LAYOUT_TEMPLATE')) {

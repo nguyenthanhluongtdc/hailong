@@ -2,6 +2,7 @@
 
 namespace Platform\Media\Providers;
 
+use Aws\S3\S3Client;
 use Platform\Base\Supports\Helper;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Platform\Media\Chunks\Storage\ChunkStorage;
@@ -22,11 +23,14 @@ use Platform\Media\Repositories\Interfaces\MediaFileInterface;
 use Platform\Media\Repositories\Interfaces\MediaFolderInterface;
 use Platform\Media\Repositories\Interfaces\MediaSettingInterface;
 use Platform\Setting\Supports\SettingStore;
-use Illuminate\Support\Facades\Event;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Events\RouteMatched;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
+use League\Flysystem\AwsS3v3\AwsS3Adapter;
+use League\Flysystem\Filesystem;
 
 /**
  * @since 02/07/2016 09:50 AM
@@ -72,22 +76,43 @@ class MediaServiceProvider extends ServiceProvider
             ->loadRoutes()
             ->publishAssets();
 
+        Storage::extend('wasabi', function ($app, $config) {
+            $conf = [
+                'endpoint'        => 'https://' . $config['bucket'] . '.s3.' . $config['region'] . '.wasabisys.com/',
+                'bucket_endpoint' => true,
+                'credentials'     => [
+                    'key'    => $config['key'],
+                    'secret' => $config['secret'],
+                ],
+                'region'          => $config['region'],
+                'version'         => 'latest',
+            ];
+
+            $client = new S3Client($conf);
+
+            $adapter = new AwsS3Adapter($client, $config['bucket'], $config['root']);
+
+            $filesystem = new Filesystem($adapter);
+
+            return $filesystem;
+        });
+
         $config = $this->app->make('config');
         $setting = $this->app->make(SettingStore::class);
 
         $config->set([
-            'filesystems.default'         => $setting->get('media_driver', 'public'),
-            'filesystems.disks.s3.key'    => $setting
+            'filesystems.default'                  => $setting->get('media_driver', 'public'),
+            'filesystems.disks.s3.key'             => $setting
                 ->get('media_aws_access_key_id', $config->get('filesystems.disks.s3.key')),
-            'filesystems.disks.s3.secret' => $setting
+            'filesystems.disks.s3.secret'          => $setting
                 ->get('media_aws_secret_key', $config->get('filesystems.disks.s3.secret')),
-            'filesystems.disks.s3.region' => $setting
+            'filesystems.disks.s3.region'          => $setting
                 ->get('media_aws_default_region', $config->get('filesystems.disks.s3.region')),
-            'filesystems.disks.s3.bucket' => $setting
+            'filesystems.disks.s3.bucket'          => $setting
                 ->get('media_aws_bucket', $config->get('filesystems.disks.s3.bucket')),
-            'filesystems.disks.s3.url'    => $setting
+            'filesystems.disks.s3.url'             => $setting
                 ->get('media_aws_url', $config->get('filesystems.disks.s3.url')),
-            'filesystems.disks.do_spaces' => [
+            'filesystems.disks.do_spaces'          => [
                 'driver'     => 's3',
                 'visibility' => 'public',
                 'key'        => $setting->get('media_do_spaces_access_key_id'),
@@ -95,6 +120,15 @@ class MediaServiceProvider extends ServiceProvider
                 'region'     => $setting->get('media_do_spaces_default_region'),
                 'bucket'     => $setting->get('media_do_spaces_bucket'),
                 'endpoint'   => $setting->get('media_do_spaces_endpoint'),
+            ],
+            'filesystems.disks.wasabi'             => [
+                'driver'     => 'wasabi',
+                'visibility' => 'public',
+                'key'        => $setting->get('media_wasabi_access_key_id'),
+                'secret'     => $setting->get('media_wasabi_secret_key'),
+                'region'     => $setting->get('media_wasabi_default_region'),
+                'bucket'     => $setting->get('media_wasabi_bucket'),
+                'root'       => $setting->get('media_wasabi_root', '/'),
             ],
             'core.media.media.chunk.enabled'       => (bool)$setting->get('media_chunk_enabled',
                 $config->get('core.media.media.chunk.enabled')),

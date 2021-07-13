@@ -26,6 +26,7 @@ class FieldFormatter
                 if (method_exists(get_class(), $method)) {
                     return self::$method($value, implode(':', $parts));
                 }
+
                 break;
             }
         }

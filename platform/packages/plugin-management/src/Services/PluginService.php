@@ -12,7 +12,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use Schema;
+use Illuminate\Support\Facades\Schema;
 
 class PluginService
 {
@@ -106,6 +106,8 @@ class PluginService
                 if ($this->files->isDirectory(plugin_path($plugin . '/database/migrations'))) {
                     $this->app->make('migrator')->run(plugin_path($plugin . '/database/migrations'));
                 }
+
+                $this->app->register($content['provider']);
             }
 
             $this->settingStore

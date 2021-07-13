@@ -19,7 +19,7 @@
                                                 <div class="post__content-wrap">
                                                     <header class="post__header">
                                                         <h3 class="post__title"><a href="{{ $post->url }}">{{ $post->name }}</a></h3>
-                                                        <div class="post__meta"><span class="created__month">{{ $post->created_at->format('M') }}</span><span class="created__date">{{ $post->created_at->format('d') }}</span><span class="created__year">{{ $post->created_at->format('Y') }}</span></div>
+                                                        <div class="post__meta"><span class="created__month">{{ $post->created_at->translatedFormat('M') }}</span><span class="created__date">{{ $post->created_at->translatedFormat('d') }}</span><span class="created__year">{{ $post->created_at->translatedFormat('Y') }}</span></div>
                                                     </header>
                                                     <div class="post__content">
                                                         <p data-number-line="4">{{ $post->description }}</p>
@@ -37,7 +37,7 @@
                                                     <div class="post__content-wrap">
                                                         <header class="post__header">
                                                             <h3 class="post__title"><a href="{{ $post->url }}">{{ $post->name }}</a></h3>
-                                                            <div class="post__meta"><span class="post__created-at">{{ $post->created_at->format('M d, Y') }}</span></div>
+                                                            <div class="post__meta"><span class="post__created-at">{{ $post->created_at->translatedFormat('M d, Y') }}</span></div>
                                                         </header>
                                                     </div>
                                                 </article>

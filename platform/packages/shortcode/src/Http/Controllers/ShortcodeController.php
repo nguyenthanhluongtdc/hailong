@@ -22,6 +22,7 @@ class ShortcodeController extends BaseController
         if ($data instanceof Closure) {
             $data = call_user_func($data);
         }
+        $data = apply_filters(SHORTCODE_REGISTER_CONTENT_IN_ADMIN, $data, $key);
 
         return $response->setData($data);
     }

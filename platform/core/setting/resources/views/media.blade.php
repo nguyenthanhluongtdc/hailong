@@ -24,6 +24,7 @@
                                 <option value="public" @if (config('filesystems.default') === 'public') selected @endif>Local disk</option>
                                 <option value="s3" @if (config('filesystems.default') === 's3') selected @endif>Amazon S3</option>
                                 <option value="do_spaces" @if (config('filesystems.default') === 'do_spaces') selected @endif>DigitalOcean Spaces</option>
+                                <option value="wasabi" @if (config('filesystems.default') === 'wasabi') selected @endif>Wasabi</option>
                             </select>
                             <svg class="svg-next-icon svg-next-icon-size-16">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#select-chevron"></use>
@@ -108,6 +109,47 @@
                             <input type="text" class="next-input" name="media_do_spaces_cdn_custom_domain" id="media_do_spaces_cdn_custom_domain"
                                    value="{{ setting('media_do_spaces_cdn_custom_domain') }}" placeholder="{{ trans('core/setting::setting.media.media_do_spaces_cdn_custom_domain_placeholder') }}">
                         </div>
+                    </div>
+
+                    <div data-type="wasabi" class="setting-wrapper @if (setting('media_driver', config('filesystems.default')) !== 'wasabi') hidden @endif">
+                        <div class="form-group">
+                            <label class="text-title-field"
+                                   for="media_wasabi_access_key_id">{{ trans('core/setting::setting.media.wasabi_access_key_id') }}</label>
+                            <input type="text" class="next-input" name="media_wasabi_access_key_id" id="media_wasabi_access_key_id"
+                                   value="{{ config('filesystems.disks.wasabi.key') }}" placeholder="Ex: AKIAIKYXBSNBXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label class="text-title-field"
+                                   for="media_wasabi_secret_key">{{ trans('core/setting::setting.media.wasabi_secret_key') }}</label>
+                            <input type="text" class="next-input" name="media_wasabi_secret_key" id="media_wasabi_secret_key"
+                                   value="{{ config('filesystems.disks.wasabi.secret') }}" placeholder="Ex: +fivlGCeTJCVVnzpM2WfzzrFIMLHGhxxxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label class="text-title-field"
+                                   for="media_wasabi_default_region">{{ trans('core/setting::setting.media.wasabi_default_region') }}</label>
+                            <input type="text" class="next-input" name="media_wasabi_default_region" id="media_wasabi_default_region"
+                                   value="{{ config('filesystems.disks.wasabi.region') }}" placeholder="Ex: us-east-1">
+                        </div>
+                        <div class="form-group">
+                            <label class="text-title-field"
+                                   for="media_wasabi_bucket">{{ trans('core/setting::setting.media.wasabi_bucket') }}</label>
+                            <input type="text" class="next-input" name="media_wasabi_bucket" id="media_wasabi_bucket"
+                                   value="{{ config('filesystems.disks.wasabi.bucket') }}" placeholder="Ex: your-key">
+                        </div>
+                        <div class="form-group">
+                            <label class="text-title-field"
+                                   for="media_wasabi_root">{{ trans('core/setting::setting.media.wasabi_root') }}</label>
+                            <input type="text" class="next-input" name="media_wasabi_root" id="media_wasabi_root"
+                                   value="{{ config('filesystems.disks.wasabi.root') }}" placeholder="Default: /">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="text-title-field"
+                               for="media_default_placeholder_image">{{ trans('core/setting::setting.media.default_placeholder_image') }}
+                        </label>
+                        {!! Form::mediaImage('media_default_placeholder_image', setting('media_default_placeholder_image')) !!}
                     </div>
 
                     <div class="form-group">

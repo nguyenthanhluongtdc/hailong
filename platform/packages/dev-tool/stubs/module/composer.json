@@ -1,6 +1,6 @@
 {
   "name": "platform/{-name}",
-  "description": "{Name} package for Laravel CMS application",
+  "description": "{Name} package",
   "type": "package",
   "autoload": {
     "psr-4": {

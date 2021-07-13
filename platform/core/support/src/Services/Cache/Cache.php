@@ -53,6 +53,7 @@ class Cache implements CacheInterface
         if (!file_exists($this->config['stored_keys'])) {
             return null;
         }
+
         return $this->cache->get($this->generateCacheKey($key));
     }
 
@@ -107,6 +108,7 @@ class Cache implements CacheInterface
             $cacheKeys = [];
             $cacheKeys[$this->cacheGroup][] = $key;
         }
+
         save_file_data($this->config['stored_keys'], $cacheKeys);
 
         return true;
@@ -126,6 +128,7 @@ class Cache implements CacheInterface
         if (!file_exists($this->config['stored_keys'])) {
             return false;
         }
+
         $key = $this->generateCacheKey($key);
 
         return $this->cache->has($key);
@@ -143,6 +146,7 @@ class Cache implements CacheInterface
         if (file_exists($this->config['stored_keys'])) {
             $cacheKeys = get_file_data($this->config['stored_keys']);
         }
+
         if (!empty($cacheKeys)) {
             $caches = Arr::get($cacheKeys, $this->cacheGroup);
             if ($caches) {
@@ -152,6 +156,7 @@ class Cache implements CacheInterface
                 unset($cacheKeys[$this->cacheGroup]);
             }
         }
+
         if (!empty($cacheKeys)) {
             save_file_data($this->config['stored_keys'], $cacheKeys);
         } else {

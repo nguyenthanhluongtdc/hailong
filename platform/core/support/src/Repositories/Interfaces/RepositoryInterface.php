@@ -12,7 +12,7 @@ use Illuminate\Support\Collection;
 interface RepositoryInterface
 {
     /**
-     * @param Builder $data
+     * @param Builder|Model $data
      * @param bool $isSingle
      * @return Builder
      */
@@ -84,7 +84,7 @@ interface RepositoryInterface
      * Get all models.
      *
      * @param array $with Eager load related models
-     * @return Collection
+     * @return Model
      */
     public function all(array $with = []);
 

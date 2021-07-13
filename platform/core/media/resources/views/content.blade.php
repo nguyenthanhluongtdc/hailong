@@ -95,7 +95,7 @@
                         @if (config('core.media.media.sidebar_display') != 'vertical')
                             <div class="btn-group" role="group">
                                 <div class="dropdown">
-                                    <button class="btn btn-success dropdown-toggle js-rv-media-change-filter-group" type="button" data-toggle="dropdown">
+                                    <button class="btn btn-success dropdown-toggle js-rv-media-change-filter-group js-filter-by-type" type="button" data-toggle="dropdown">
                                         <i class="fa fa-filter"></i> {{ trans('core/media::media.filter') }} <span class="js-rv-media-filter-current"></span>
                                     </button>
                                     <ul class="dropdown-menu">
@@ -129,7 +129,7 @@
 
                             <div class="btn-group" role="group">
                                 <div class="dropdown">
-                                    <button class="btn btn-success dropdown-toggle js-rv-media-change-filter-group" type="button" data-toggle="dropdown">
+                                    <button class="btn btn-success dropdown-toggle js-rv-media-change-filter-group js-filter-by-view-in" type="button" data-toggle="dropdown">
                                         <i class="fa fa-eye"></i> {{ trans('core/media::media.view_in') }} <span class="js-rv-media-filter-current"></span>
                                     </button>
                                     <ul class="dropdown-menu">

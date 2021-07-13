@@ -5,14 +5,14 @@ namespace Platform\Base\Supports;
 use Artisan;
 use Cache;
 use Eloquent;
-use Illuminate\Support\Facades\Event;
 use Exception;
 use File;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Schema;
 use Request;
-use Schema;
 
 class Helper
 {
@@ -212,7 +212,7 @@ class Helper
         $response = curl_exec($curl);
         curl_close($curl);
 
-        return $response ? $response : Request::ip();
+        return $response ?: Request::ip();
     }
 
     /**

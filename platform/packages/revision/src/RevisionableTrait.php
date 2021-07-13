@@ -2,12 +2,12 @@
 
 namespace Platform\Revision;
 
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Support\Facades\Auth;
 use DateTime;
-use Illuminate\Support\Facades\DB;
 use Exception;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @mixin \Eloquent|SoftDeletes

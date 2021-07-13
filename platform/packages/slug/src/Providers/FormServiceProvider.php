@@ -18,6 +18,7 @@ class FormServiceProvider extends ServiceProvider
                 'prefix'     => '',
                 'preview'    => false,
                 'attributes' => [],
+                'editable'   => true,
             ]);
         });
     }

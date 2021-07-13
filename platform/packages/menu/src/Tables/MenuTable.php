@@ -77,18 +77,15 @@ class MenuTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
+        $query = $this->repository->getModel()
+            ->select([
+                'id',
+                'name',
+                'created_at',
+                'status',
+            ]);
 
-        $select = [
-            'menus.id',
-            'menus.name',
-            'menus.created_at',
-            'menus.status',
-        ];
-
-        $query = $model->select($select);
-
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -98,22 +95,18 @@ class MenuTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'menus.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'name'       => [
-                'name'  => 'menus.name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'created_at' => [
-                'name'  => 'menus.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
             'status'     => [
-                'name'  => 'menus.status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
             ],
@@ -142,18 +135,18 @@ class MenuTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'menus.name'       => [
+            'name'       => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'menus.status'     => [
+            'status'     => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => BaseStatusEnum::labels(),
                 'validate' => 'required|' . Rule::in(BaseStatusEnum::values()),
             ],
-            'menus.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

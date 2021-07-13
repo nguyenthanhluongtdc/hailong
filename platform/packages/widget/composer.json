@@ -1,6 +1,6 @@
 {
     "name": "platform/widget",
-    "description": "Widget package for Laravel CMS application",
+    "description": "Widget package",
     "type": "package",
     "autoload": {
         "psr-4": {

@@ -15,9 +15,8 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
     public function getDataSiteMap()
     {
         $data = $this->model
-            ->where('pages.status', BaseStatusEnum::PUBLISHED)
-            ->select('pages.*')
-            ->orderBy('pages.created_at', 'desc');
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->orderBy('created_at', 'desc');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }
@@ -28,11 +27,10 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
     public function getFeaturedPages($limit)
     {
         $data = $this->model
-            ->where(['pages.status' => BaseStatusEnum::PUBLISHED, 'pages.is_featured' => 1])
-            ->orderBy('pages.created_at')
-            ->select('pages.*')
+            ->where(['status' => BaseStatusEnum::PUBLISHED, 'is_featured' => 1])
+            ->orderBy('created_at')
             ->limit($limit)
-            ->orderBy('pages.created_at', 'desc');
+            ->orderBy('created_at', 'desc');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }
@@ -43,15 +41,16 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
     public function whereIn($array, $select = [])
     {
         $pages = $this->model
-            ->whereIn('pages.id', $array)
-            ->where('pages.status', BaseStatusEnum::PUBLISHED);
+            ->whereIn('id', $array)
+            ->where('status', BaseStatusEnum::PUBLISHED);
 
         if (empty($select)) {
-            $select = 'pages.*';
+            $select = ['*'];
         }
+
         $data = $pages
             ->select($select)
-            ->orderBy('pages.created_at');
+            ->orderBy('created_at');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }
@@ -61,14 +60,13 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
      */
     public function getSearch($query, $limit = 10)
     {
-        $pages = $this->model->where('pages.status', BaseStatusEnum::PUBLISHED);
+        $pages = $this->model->where('status', BaseStatusEnum::PUBLISHED);
         foreach (explode(' ', $query) as $term) {
-            $pages = $pages->where('pages.name', 'LIKE', '%' . $term . '%');
+            $pages = $pages->where('name', 'LIKE', '%' . $term . '%');
         }
 
         $data = $pages
-            ->select('pages.*')
-            ->orderBy('pages.created_at', 'desc')
+            ->orderBy('created_at', 'desc')
             ->limit($limit);
 
         return $this->applyBeforeExecuteQuery($data)->get();
@@ -79,9 +77,10 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
      */
     public function getAllPages($active = true)
     {
-        $data = $this->model->select('pages.*');
+        $data = $this->model;
+
         if ($active) {
-            $data = $data->where('pages.status', BaseStatusEnum::PUBLISHED);
+            $data = $data->where('status', BaseStatusEnum::PUBLISHED);
         }
 
         return $this->applyBeforeExecuteQuery($data)->get();

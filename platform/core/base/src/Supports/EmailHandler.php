@@ -104,7 +104,7 @@ class EmailHandler
      */
     public function setVariableValue(string $variable, string $value, string $module = null): self
     {
-        $this->variableValues[$module ? $module : $this->module][$variable] = $value;
+        $this->variableValues[$module ?: $this->module][$variable] = $value;
 
         return $this;
     }
@@ -130,7 +130,7 @@ class EmailHandler
     public function setVariableValues(array $data, string $module = null): self
     {
         foreach ($data as $name => $value) {
-            $this->variableValues[$module ? $module : $this->module][$name] = $value;
+            $this->variableValues[$module ?: $this->module][$name] = $value;
         }
 
         return $this;

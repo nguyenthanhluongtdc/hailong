@@ -1,6 +1,6 @@
 {
     "name": "platform/revision",
-    "description": "Revision package for Laravel CMS application",
+    "description": "Revision package",
     "type": "package",
     "autoload": {
         "psr-4": {

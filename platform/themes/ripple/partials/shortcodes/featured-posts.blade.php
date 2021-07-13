@@ -26,7 +26,7 @@
                                     <div class="post__meta"><span class="post-category"><i class="ion-cube"></i>
                                             @if (!$featureItem->categories->isEmpty())<a href="{{ $featureItem->categories->first()->url }}">{{ $featureItem->categories->first()->name }}</a>@endif
                                     </span>
-                                        <span class="created_at"><i class="ion-clock"></i>{{ $featureItem->created_at->format('M d Y') }}</span>
+                                        <span class="created_at"><i class="ion-clock"></i>{{ $featureItem->created_at->translatedFormat('M d Y') }}</span>
                                         @if ($featureItem->author->name)
                                             <span class="post-author"><i class="ion-android-person"></i><span>{{ $featureItem->author->name }}</span></span>
                                         @endif

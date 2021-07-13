@@ -3,20 +3,22 @@
 namespace Platform\Theme\Providers;
 
 use Platform\Base\Supports\Helper;
-use Platform\Theme\Commands\ThemeAssetsPublishCommand;
-use Platform\Theme\Commands\ThemeAssetsRemoveCommand;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Platform\Theme\Commands\ThemeActivateCommand;
+use Platform\Theme\Commands\ThemeAssetsPublishCommand;
+use Platform\Theme\Commands\ThemeAssetsRemoveCommand;
 use Platform\Theme\Commands\ThemeRemoveCommand;
+use Platform\Theme\Commands\ThemeRenameCommand;
 use Platform\Theme\Contracts\Theme as ThemeContract;
 use Platform\Theme\Http\Middleware\AdminBarMiddleware;
 use Platform\Theme\Theme;
-use Platform\Theme\Commands\ThemeRenameCommand;
-use Illuminate\Support\Facades\Event;
 use File;
+use Html;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 use Theme as ThemeFacade;
 
 class ThemeServiceProvider extends ServiceProvider
@@ -122,19 +124,49 @@ class ThemeServiceProvider extends ServiceProvider
             if (config('packages.theme.general.enable_custom_js')) {
                 if (setting('custom_header_js')) {
                     add_filter(THEME_FRONT_HEADER, function ($html) {
-                        return $html . setting('custom_header_js');
+                        $headerJS = setting('custom_header_js');
+
+                        if (empty($headerJS)) {
+                            return $html;
+                        }
+
+                        if (!Str::contains($headerJS, '<script>') || !Str::contains($headerJS, '</script>')) {
+                            $headerJS = Html::tag('script', $headerJS);
+                        }
+
+                        return $html . $headerJS;
                     }, 15);
                 }
 
                 if (setting('custom_body_js')) {
                     add_filter(THEME_FRONT_BODY, function ($html) {
-                        return $html . setting('custom_body_js');
+                        $bodyJS = setting('custom_body_js');
+
+                        if (empty($bodyJS)) {
+                            return $html;
+                        }
+
+                        if (!Str::contains($bodyJS, '<script>') || !Str::contains($bodyJS, '</script>')) {
+                            $bodyJS = Html::tag('script', $bodyJS);
+                        }
+
+                        return $html . $bodyJS;
                     }, 15);
                 }
 
                 if (setting('custom_footer_js')) {
                     add_filter(THEME_FRONT_FOOTER, function ($html) {
-                        return $html . setting('custom_footer_js');
+                        $footerJS = setting('custom_footer_js');
+
+                        if (empty($footerJS)) {
+                            return $html;
+                        }
+
+                        if (!Str::contains($footerJS, '<script>') || !Str::contains($footerJS, '</script>')) {
+                            $footerJS = Html::tag('script', $footerJS);
+                        }
+
+                        return $html . $footerJS;
                     }, 15);
                 }
             }

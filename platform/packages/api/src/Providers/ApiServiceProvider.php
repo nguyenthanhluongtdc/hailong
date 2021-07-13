@@ -20,8 +20,7 @@ class ApiServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->setNamespace('packages/api')
-            ->publishAssets();
+        $this->setNamespace('packages/api');
 
         $this->app->booted(function () {
             config([

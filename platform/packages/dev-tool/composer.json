@@ -1,6 +1,6 @@
 {
     "name": "platform/dev-tool",
-    "description": "Dev tools package for Laravel CMS application",
+    "description": "Dev tools package",
     "type": "package",
     "autoload": {
         "psr-4": {

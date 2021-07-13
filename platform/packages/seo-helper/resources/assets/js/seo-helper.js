@@ -25,7 +25,12 @@ class SEOHelperManagement {
     }
 
     handleMetaBox() {
-        $('.page-url-seo p').text(this.$document.find('#sample-permalink a').prop('href').replace('?preview=true', ''));
+        let permalink = this.$document.find('#sample-permalink a');
+
+        if (permalink.length) {
+            $('.page-url-seo p').text(permalink.prop('href').replace('?preview=true', ''));
+        }
+
         this.$document.on('click', '.btn-trigger-show-seo-detail', event => {
             event.preventDefault();
             $('.seo-edit-section').toggleClass('hidden');

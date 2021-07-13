@@ -5,20 +5,6 @@ namespace Platform\Theme\Commands\Traits;
 trait ThemeTrait
 {
     /**
-     * Get the theme name.
-     *
-     * @return string
-     */
-    protected function getTheme()
-    {
-        if ($this->hasArgument('name')) {
-            return strtolower($this->argument('name'));
-        }
-
-        return strtolower($this->option('name'));
-    }
-
-    /**
      * Get root writable path.
      *
      * @param string|null $path
@@ -37,5 +23,19 @@ trait ThemeTrait
         }
 
         return rtrim($rootPath, '/') . '/' . rtrim(ltrim(strtolower($theme), '/'), '/') . '/' . $path;
+    }
+
+    /**
+     * Get the theme name.
+     *
+     * @return string
+     */
+    protected function getTheme()
+    {
+        if ($this->hasArgument('name')) {
+            return strtolower($this->argument('name'));
+        }
+
+        return strtolower($this->option('name'));
     }
 }

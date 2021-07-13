@@ -87,16 +87,16 @@ class CustomResourceRegistrar extends ResourceRegistrar
 
         $action = $this->getResourceAction($name, $controller, 'store', $options);
 
-        return $this->router->post($uri, $action)->name($name. '.store');
+        return $this->router->post($uri, $action)->name($name . '.store');
     }
 
     /**
      * Add the index method for a resourceful route.
      *
-     * @param  string  $name
-     * @param  string  $base
-     * @param  string  $controller
-     * @param  array  $options
+     * @param string $name
+     * @param string $base
+     * @param string $controller
+     * @param array $options
      * @return \Illuminate\Routing\Route
      */
     protected function addResourceIndex($name, $base, $controller, $options)

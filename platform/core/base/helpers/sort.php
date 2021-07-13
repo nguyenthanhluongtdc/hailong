@@ -22,6 +22,11 @@ if (!function_exists('sort_item_with_children')) {
         }
 
         foreach ($list as $key => $object) {
+            if ($object->parent_id == $object->id) {
+                array_push($result, $object);
+                continue;
+            }
+
             if ((int)$object->parent_id == (int)$parent) {
                 array_push($result, $object);
                 $object->depth = $depth;

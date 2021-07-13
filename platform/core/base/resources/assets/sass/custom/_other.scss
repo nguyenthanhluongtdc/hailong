@@ -598,8 +598,6 @@ h4.modal-title {
 
 
 .repeater-group {
-    padding: 10px;
-
     .repeater-item-group {
         padding: 10px;
         border: 1px solid #aaaaaa;
@@ -618,4 +616,8 @@ h4.modal-title {
         text-align: center;
         border: 1px solid #ddd;
     }
+}
+
+.fancybox-container {
+    z-index: 999992;
 }

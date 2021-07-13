@@ -167,9 +167,15 @@ class EditorManagement {
 
             $.each(formData, function (name, value) {
                 let element = formElement.find('*[name="' + name + '"]');
-                if (element.data('shortcode-attribute') !== 'content') {
+                if (element.data('shortcode-attribute') !== 'content' && value) {
                     name = name.replace('[]', '');
-                    attributes += ' ' + name + '="' + value + '"';
+                    if (Array.isArray(value)) {
+                        value.map(function (i, e) {
+                            attributes += ' ' + name + '_' + (e + 1) + '="' + i + '"';
+                        })
+                    } else {
+                        attributes += ' ' + name + '="' + value + '"';
+                    }
                 }
             });
 

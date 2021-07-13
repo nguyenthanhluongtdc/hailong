@@ -3,16 +3,6 @@
 namespace Platform\Setting\Http\Controllers;
 
 use Assets;
-use Carbon\Carbon;
-use EmailHandler;
-use Exception;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
-use Illuminate\View\View;
-use Platform\Base\Http\Controllers\BaseController;
-use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Base\Supports\Core;
 use Platform\Base\Supports\Language;
 use Platform\Setting\Http\Requests\EmailTemplateRequest;
@@ -21,6 +11,16 @@ use Platform\Setting\Http\Requests\MediaSettingRequest;
 use Platform\Setting\Http\Requests\SendTestEmailRequest;
 use Platform\Setting\Http\Requests\SettingRequest;
 use Platform\Setting\Repositories\Interfaces\SettingInterface;
+use Carbon\Carbon;
+use EmailHandler;
+use Exception;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Support\Facades\File;
+use Platform\Base\Http\Controllers\BaseController;
+use Platform\Base\Http\Responses\BaseHttpResponse;
+use Illuminate\Http\Request;
+use Illuminate\View\View;
 use Throwable;
 
 class SettingController extends BaseController
@@ -58,7 +58,12 @@ class SettingController extends BaseController
      */
     public function postEdit(SettingRequest $request, BaseHttpResponse $response)
     {
-        $this->saveSettings($request->except(['_token', 'locale', 'default_admin_theme']));
+        $this->saveSettings($request->except([
+            '_token',
+            'locale',
+            'default_admin_theme',
+            'admin_locale_direction',
+        ]));
 
         $locale = $request->input('locale');
         if ($locale != false && array_key_exists($locale, Language::getAvailableLocales())) {
@@ -76,6 +81,15 @@ class SettingController extends BaseController
 
         if (!app()->environment('demo')) {
             setting()->set('default_admin_theme', $adminTheme)->save();
+        }
+
+        $adminLocalDirection = $request->input('admin_locale_direction');
+        if ($adminLocalDirection != setting('admin_locale_direction')) {
+            session()->put('admin_locale_direction', $adminLocalDirection);
+        }
+
+        if (!app()->environment('demo')) {
+            setting()->set('admin_locale_direction', $adminLocalDirection)->save();
         }
 
         return $response
@@ -152,8 +166,8 @@ class SettingController extends BaseController
         $emailContent = get_setting_email_template_content($type, $module, $template);
         $emailSubject = get_setting_email_subject($type, $module, $template);
         $pluginData = [
-            'type' => $type,
-            'name' => $module,
+            'type'          => $type,
+            'name'          => $module,
             'template_file' => $template,
         ];
 
@@ -263,20 +277,18 @@ class SettingController extends BaseController
      */
     public function getVerifyLicense(Core $coreApi, BaseHttpResponse $response)
     {
-        //        if (!File::exists(storage_path('.license'))) {
-        //            return $response->setError()->setMessage('Your license is invalid. Please activate your license!');
-        //        }
+        if (!File::exists(storage_path('.license'))) {
+            return $response->setError()->setMessage('Your license is invalid. Please activate your license!');
+        }
 
         try {
-            // $result = $coreApi->verifyLicense(true);
-            $result = ['status' => true, 'message' => 'Verified! Thanks for purchasing.'];
+            $result = $coreApi->verifyLicense(true);
 
             if (!$result['status']) {
                 return $response->setError()->setMessage($result['message']);
             }
 
-            // $activatedAt = Carbon::createFromTimestamp(filectime($coreApi->getLicenseFilePath()));
-            $activatedAt = Carbon::now('Asia/Ho_Chi_Minh')->addYears(1000);
+            $activatedAt = Carbon::createFromTimestamp(filectime($coreApi->getLicenseFilePath()));
         } catch (Exception $exception) {
             $activatedAt = now();
             $result = ['message' => $exception->getMessage()];
@@ -284,7 +296,7 @@ class SettingController extends BaseController
 
         $data = [
             'activated_at' => $activatedAt->format('M d Y'),
-            'licensed_to' => setting('licensed_to'),
+            'licensed_to'  => setting('licensed_to'),
         ];
 
         return $response->setMessage($result['message'])->setData($data);
@@ -323,7 +335,7 @@ class SettingController extends BaseController
 
             $data = [
                 'activated_at' => $activatedAt->format('M d Y'),
-                'licensed_to' => $request->input('buyer'),
+                'licensed_to'  => $request->input('buyer'),
             ];
 
             return $response->setMessage($result['message'])->setData($data);

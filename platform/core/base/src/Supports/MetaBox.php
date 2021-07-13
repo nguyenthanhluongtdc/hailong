@@ -5,6 +5,8 @@ namespace Platform\Base\Supports;
 use Platform\Base\Repositories\Interfaces\MetaBoxInterface;
 use Exception;
 use Throwable;
+use Illuminate\Database\Eloquent\Model;
+use Platform\Base\Models\MetaBox as MetaBoxModel;
 
 class MetaBox
 {
@@ -171,7 +173,7 @@ class MetaBox
     }
 
     /**
-     * @param \Illuminate\Database\Eloquent\Model $object
+     * @param Model $object
      * @param string $key
      * @param $value
      * @param $options
@@ -206,7 +208,7 @@ class MetaBox
     }
 
     /**
-     * @param \Illuminate\Database\Eloquent\Model $object
+     * @param Model $object
      * @param string $key
      * @param boolean $single
      * @param array $select
@@ -214,7 +216,11 @@ class MetaBox
      */
     public function getMetaData($object, string $key, $single = false, $select = ['meta_value'])
     {
-        $field = $this->getMeta($object, $key, $select);
+        if ($object instanceof MetaBoxModel) {
+            $field = $object;
+        } else {
+            $field = $this->getMeta($object, $key, $select);
+        }
 
         if (!$field) {
             return $single ? '' : [];
@@ -228,7 +234,7 @@ class MetaBox
     }
 
     /**
-     * @param \Illuminate\Database\Eloquent\Model $object
+     * @param Model $object
      * @param string $key
      * @param array $select
      * @return mixed
@@ -243,7 +249,7 @@ class MetaBox
     }
 
     /**
-     * @param \Illuminate\Database\Eloquent\Model $object
+     * @param Model $object
      * @param string $key
      * @return mixed
      * @throws Exception
@@ -255,5 +261,13 @@ class MetaBox
             'reference_id'   => $object->id,
             'reference_type' => get_class($object),
         ]);
+    }
+
+    /**
+     * @return array
+     */
+    public function getMetaBoxes(): array
+    {
+        return $this->metaBoxes;
     }
 }

@@ -14,10 +14,10 @@ class MenuRepository extends RepositoriesAbstract implements MenuInterface
      */
     public function findBySlug($slug, $active, array $select = [], array $with = [])
     {
-        $data = $this->model->where('menus.slug', $slug);
+        $data = $this->model->where('slug', $slug);
 
         if ($active) {
-            $data = $data->where('menus.status', BaseStatusEnum::PUBLISHED);
+            $data = $data->where('status', BaseStatusEnum::PUBLISHED);
         }
 
         if (!empty($select)) {
@@ -43,7 +43,7 @@ class MenuRepository extends RepositoriesAbstract implements MenuInterface
         $slug = Str::slug($name);
         $index = 1;
         $baseSlug = $slug;
-        while ($this->model->where('menus.slug', $slug)->count() > 0) {
+        while ($this->model->where('slug', $slug)->count() > 0) {
             $slug = $baseSlug . '-' . $index++;
         }
 

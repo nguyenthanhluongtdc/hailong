@@ -203,9 +203,11 @@ class ThemeOption
     public function setSection(array $section = []): self
     {
         $this->checkOptName();
+
         if (empty($section)) {
             return $this;
         }
+
         if (!isset($section['id'])) {
             if (isset($section['type']) && $section['type'] == 'divide') {
                 $section['id'] = time();
@@ -355,7 +357,7 @@ class ThemeOption
 
     /**
      * @param string $id
-     * @return bool
+     * @return bool|array
      */
     public function getField(string $id = '')
     {
@@ -479,6 +481,10 @@ class ThemeOption
             $value = clean($value);
         }
 
+        if (is_array($value)) {
+            $value = json_encode($value);
+        }
+
         Setting::set($this->getOptionKey($key, $this->getCurrentLocaleCode()), $value);
 
         return $this;
@@ -491,7 +497,12 @@ class ThemeOption
      */
     protected function getOptionKey(string $key, ?string $locale = ''): string
     {
-        return $this->optName . '-' . setting('theme') . $locale . '-' . $key;
+        $theme = setting('theme');
+        if (!$theme) {
+            $theme = Arr::first(scan_folder(theme_path()));
+        }
+
+        return $this->optName . '-' . $theme . $locale . '-' . $key;
     }
 
     /**
@@ -521,7 +532,8 @@ class ThemeOption
 
             return call_user_func_array([Form::class, $field['type']], array_values($field['attributes']));
         } catch (Exception $exception) {
-            return $exception->getMessage();
+            info($exception->getMessage());
+            return null;
         }
     }
 

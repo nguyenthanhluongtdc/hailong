@@ -1,6 +1,6 @@
 {
     "name": "platform/theme",
-    "description": "Theme package for Laravel CMS application",
+    "description": "Theme package",
     "type": "package",
     "autoload": {
         "psr-4": {

@@ -44,22 +44,21 @@ return [
         'beforeRenderTheme'  => function (Theme $theme) {
             // You may use this event to set up your assets.
 
-            $version = '5.16';
+            $version = '5.17';
 
-            $theme
-                ->asset()
-                ->container('footer')
-                ->usePath()->add('jquery', 'plugins/jquery/jquery.min.js')
-                ->usePath()->add('bootstrap-js', 'plugins/bootstrap/js/bootstrap.min.js', ['jquery'])
-                ->usePath()->add('custom', 'js/custom.min.js', ['jquery'], [], $version)
-                ->usePath()->add('ripple.js', 'js/ripple.js', ['jquery'], [], $version);
+            $theme->asset()->container('footer')->usePath()->add('jquery', 'plugins/jquery/jquery.min.js');
+            $theme->asset()->container('footer')->usePath()
+                ->add('bootstrap-js', 'plugins/bootstrap/js/bootstrap.min.js', ['jquery']);
 
-            $theme
-                ->asset()
-                ->usePath()->add('bootstrap-css', 'plugins/bootstrap/css/bootstrap.min.css')
-                ->usePath()->add('font-awesome', 'plugins/font-awesome/css/font-awesome.min.css')
-                ->usePath()->add('ionicons', 'plugins/ionicons/css/ionicons.min.css')
-                ->usePath()->add('style', 'css/style.css', [], [], $version);
+            $theme->asset()->container('footer')->usePath()
+                ->add('custom', 'js/custom.min.js', ['jquery'], [], $version);
+
+            $theme->asset()->container('footer')->usePath()->add('ripple.js', 'js/ripple.js', ['jquery'], [], $version);
+
+            $theme->asset()->usePath()->add('bootstrap-css', 'plugins/bootstrap/css/bootstrap.min.css');
+            $theme->asset()->usePath()->add('font-awesome', 'plugins/font-awesome/css/font-awesome.min.css');
+            $theme->asset()->usePath()->add('ionicons', 'plugins/ionicons/css/ionicons.min.css');
+            $theme->asset()->usePath()->add('style', 'css/style.css', [], [], $version);
 
             if (function_exists('shortcode')) {
                 $theme->composer(['page', 'post', 'index'], function (\Platform\Shortcode\View\View $view) {

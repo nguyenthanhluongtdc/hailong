@@ -1,6 +1,6 @@
 {
     "name": "platform/api",
-    "description": "API package for Laravel CMS application",
+    "description": "API package",
     "type": "package",
     "autoload": {
         "psr-4": {

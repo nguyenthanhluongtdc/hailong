@@ -34,7 +34,7 @@ class HookServiceProvider extends ServiceProvider
     public function addThemeOptions()
     {
         $pages = $this->app->make(PageInterface::class)
-            ->pluck('pages.name', 'pages.id', ['status' => BaseStatusEnum::PUBLISHED]);
+            ->pluck('name', 'id', ['status' => BaseStatusEnum::PUBLISHED]);
 
         theme_option()
             ->setSection([

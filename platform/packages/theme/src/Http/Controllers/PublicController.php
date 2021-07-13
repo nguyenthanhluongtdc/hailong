@@ -5,8 +5,8 @@ namespace Platform\Theme\Http\Controllers;
 use BaseHelper;
 use Platform\Page\Models\Page;
 use Platform\Page\Services\PageService;
-use Platform\Theme\Events\RenderingSingleEvent;
 use Platform\Theme\Events\RenderingHomePageEvent;
+use Platform\Theme\Events\RenderingSingleEvent;
 use Platform\Theme\Events\RenderingSiteMapEvent;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Routing\Controller;
@@ -19,33 +19,6 @@ use Theme;
 
 class PublicController extends Controller
 {
-    /**
-     * @return \Illuminate\Http\Response|Response
-     */
-    public function getIndex()
-    {
-        if (defined('PAGE_MODULE_SCREEN_NAME')) {
-            $homepageId = BaseHelper::getHomepageId();
-            if ($homepageId) {
-                $slug = SlugHelper::getSlug(null, SlugHelper::getPrefix(Page::class), Page::class, $homepageId);
-
-                if ($slug) {
-                    $data = (new PageService)->handleFrontRoutes($slug);
-
-                    return Theme::scope($data['view'], $data['data'], $data['default_view'])->render();
-                }
-            }
-        }
-
-        SeoHelper::setTitle(theme_option('site_title'));
-
-        Theme::breadcrumb()->add(__('Home'), route('public.index'));
-
-        event(RenderingHomePageEvent::class);
-
-        return Theme::scope('index')->render();
-    }
-
     /**
      * @param string $key
      * @return \Illuminate\Http\RedirectResponse|Response
@@ -82,6 +55,33 @@ class PublicController extends Controller
         }
 
         abort(404);
+    }
+
+    /**
+     * @return \Illuminate\Http\Response|Response
+     */
+    public function getIndex()
+    {
+        if (defined('PAGE_MODULE_SCREEN_NAME')) {
+            $homepageId = BaseHelper::getHomepageId();
+            if ($homepageId) {
+                $slug = SlugHelper::getSlug(null, SlugHelper::getPrefix(Page::class), Page::class, $homepageId);
+
+                if ($slug) {
+                    $data = (new PageService)->handleFrontRoutes($slug);
+
+                    return Theme::scope($data['view'], $data['data'], $data['default_view'])->render();
+                }
+            }
+        }
+
+        SeoHelper::setTitle(theme_option('site_title'));
+
+        Theme::breadcrumb()->add(__('Home'), route('public.index'));
+
+        event(RenderingHomePageEvent::class);
+
+        return Theme::scope('index')->render();
     }
 
     /**

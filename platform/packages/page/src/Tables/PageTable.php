@@ -91,19 +91,15 @@ class PageTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
+        $query = $this->repository->getModel()->select([
+            'id',
+            'name',
+            'template',
+            'created_at',
+            'status',
+        ]);
 
-        $select = [
-            'pages.id',
-            'pages.name',
-            'pages.template',
-            'pages.created_at',
-            'pages.status',
-        ];
-
-        $query = $model->select($select);
-
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -113,28 +109,23 @@ class PageTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'pages.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'name'       => [
-                'name'  => 'pages.name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'template'   => [
-                'name'  => 'pages.template',
                 'title' => trans('core/base::tables.template'),
                 'class' => 'text-left',
             ],
             'created_at' => [
-                'name'  => 'pages.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
                 'class' => 'text-center',
             ],
             'status'     => [
-                'name'  => 'pages.status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
                 'class' => 'text-center',
@@ -164,24 +155,24 @@ class PageTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'pages.name'       => [
+            'name'       => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'pages.status'     => [
+            'status'     => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => BaseStatusEnum::labels(),
                 'validate' => 'required|' . Rule::in(BaseStatusEnum::values()),
             ],
-            'pages.template'   => [
+            'template'   => [
                 'title'    => trans('core/base::tables.template'),
                 'type'     => 'select',
                 'choices'  => get_page_templates(),
                 'validate' => 'required',
             ],
-            'pages.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

@@ -41,6 +41,34 @@ class SettingManagement {
             $('.setting-wrapper[data-type=' + $(event.currentTarget).val() + ']').removeClass('hidden');
         });
 
+        $('.send-test-email-trigger-button').on('click', event => {
+            event.preventDefault();
+            let _self = $(event.currentTarget);
+            let defaultText = _self.text();
+
+            _self.text(_self.data('saving'));
+
+            $.ajax({
+                type: 'POST',
+                url: route('settings.email.edit'),
+                data: _self.closest('form').serialize(),
+                success: res => {
+                    if (!res.error) {
+                        Botble.showSuccess(res.message);
+                        $('#send-test-email-modal').modal('show');
+                    } else {
+                        Botble.showError(res.message);
+                    }
+
+                    _self.text(defaultText);
+                },
+                error: res => {
+                    Botble.handleError(res);
+                    _self.text(defaultText);
+                }
+            });
+        });
+
         $('#send-test-email-btn').on('click', event => {
             event.preventDefault();
             let _self = $(event.currentTarget);

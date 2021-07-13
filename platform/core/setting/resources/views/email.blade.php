@@ -149,7 +149,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button class="btn btn-info" type="button" data-target="#send-test-email-modal" data-toggle="modal">{{ trans('core/setting::setting.test_send_mail') }}</button>
+                        <button class="btn btn-info send-test-email-trigger-button" type="button" data-saving="{{ trans('core/setting::setting.saving') }}">{{ trans('core/setting::setting.test_send_mail') }}</button>
                     </div>
 
                 </div>

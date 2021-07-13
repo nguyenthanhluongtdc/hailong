@@ -16,6 +16,7 @@ use File;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\View\View;
 use Theme;
 use ThemeOption;
@@ -69,6 +70,12 @@ class ThemeController extends BaseController
         foreach ($request->except(['_token', 'ref_lang']) as $key => $value) {
             if (is_array($value)) {
                 $value = json_encode($value);
+
+                $field = ThemeOption::getField($key);
+
+                if ($field && Arr::get($field, 'clean_tags', true)) {
+                    $value = clean(strip_tags($value));
+                }
             }
 
             ThemeOption::setOption($key, $value);
@@ -142,7 +149,9 @@ class ThemeController extends BaseController
             if (!$saved) {
                 return $response
                     ->setError()
-                    ->setMessage(trans('packages/theme::theme.folder_is_not_writeable', ['name' => File::dirname($file)]));
+                    ->setMessage(
+                        trans('packages/theme::theme.folder_is_not_writeable', ['name' => File::dirname($file)])
+                    );
             }
         }
 

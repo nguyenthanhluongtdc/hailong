@@ -32,6 +32,21 @@ class SlugHelper
     }
 
     /**
+     * @param string|array $model
+     * @return $this
+     */
+    public function removeModule($model): self
+    {
+        $supported = $this->supportedModels();
+
+        Arr::forget($supported, $model);
+
+        config(['packages.slug.general.supported' => $supported]);
+
+        return $this;
+    }
+
+    /**
      * @return array
      */
     public function supportedModels(): array

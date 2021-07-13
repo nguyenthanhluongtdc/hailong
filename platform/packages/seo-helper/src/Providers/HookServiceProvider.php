@@ -7,6 +7,7 @@ use BaseHelper;
 use Platform\Base\Models\BaseModel;
 use Platform\Page\Models\Page;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\View;
 use MetaBox;
@@ -75,8 +76,8 @@ class HookServiceProvider extends ServiceProvider
         if (get_class($object) == Page::class && BaseHelper::isHomepage($object->id)) {
             return false;
         }
-
-        $meta = MetaBox::getMetaData($object, 'seo_meta', true);
+        $object->loadMissing('metadata');
+        $meta = $object->getMetaData('seo_meta');
         if (!empty($meta)) {
             if (!empty($meta['seo_title'])) {
                 SeoHelper::setTitle($meta['seo_title']);

@@ -14,7 +14,7 @@
 
     $defaultFields = ['<div class="repeater-item-group form-group mb-3">' . $group . '</div>'];
 
-    $values = json_decode($value ?: '[]', true);
+    $values = (array)json_decode($value ?: '[]', true);
 
     $added = [];
 

@@ -71,6 +71,10 @@ class rvMedia {
                         .closest('.modal-content').removeClass('bb-loading');
                     $(document).find('.rv-media-container .js-change-action[data-type=refresh]').trigger('click');
 
+                    if (Helpers.getRequestParams().filter !== 'everything') {
+                        $('.rv-media-actions .btn.js-rv-media-change-filter-group.js-filter-by-type').hide();
+                    }
+
                     ContextMenuService.destroyContext();
                     ContextMenuService.initContext();
                 });

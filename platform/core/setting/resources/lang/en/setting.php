@@ -161,4 +161,5 @@ return [
     'test_email_send_success'      => 'Send email successfully!',
     'locale_direction_ltr'         => 'Left to Right',
     'locale_direction_rtl'         => 'Right to Left',
+    'saving'                       => 'Saving...',
 ];

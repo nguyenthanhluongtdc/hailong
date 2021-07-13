@@ -9,12 +9,14 @@ use Platform\Table\Supports\TableExportHandler;
 use Carbon\Carbon;
 use Form;
 use Html;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 use Request;
@@ -313,8 +315,8 @@ abstract class TableAbstract extends DataTable
                         'desc',
                     ],
                 ] : [],
-                'responsive' => true,
-                'autoWidth'  => false,
+                'responsive'   => true,
+                'autoWidth'    => false,
             ]);
     }
 
@@ -513,7 +515,7 @@ abstract class TableAbstract extends DataTable
 
     /**
      * @return array
-     * @throws \Throwable
+     * @throws Throwable
      * @since 2.1
      */
     public function buttons()
@@ -765,7 +767,7 @@ abstract class TableAbstract extends DataTable
             }
         }
 
-        return parent::applyScopes($query);
+        return parent::applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query));
     }
 
     /**
@@ -1017,7 +1019,7 @@ abstract class TableAbstract extends DataTable
     /**
      * @param string $image
      * @param array $attributes
-     * @return \Illuminate\Contracts\Foundation\Application|UrlGenerator|\Illuminate\Support\HtmlString|string|string[]|null
+     * @return Application|UrlGenerator|HtmlString|string|string[]|null
      */
     protected function displayThumbnail($image, array $attributes = ['width' => 50])
     {

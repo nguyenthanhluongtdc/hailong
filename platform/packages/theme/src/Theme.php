@@ -716,7 +716,7 @@ class Theme implements ThemeContract
             return $this->regions[$region];
         }
 
-        return $default ? $default : '';
+        return $default ?: '';
     }
 
     /**
@@ -931,7 +931,7 @@ class Theme implements ThemeContract
      */
     public function hasContentArgument($key): bool
     {
-        return (bool)isset($this->arguments[$key]);
+        return isset($this->arguments[$key]);
     }
 
     /**
@@ -985,9 +985,6 @@ class Theme implements ThemeContract
         }
 
         $content->withHeaders([
-            'Author'            => 'Laravel Technologies (contact@laravel-cms.demo.gistensal.com)',
-            'Author-Team'       => 'mailto:get-quote@visualweber.com',
-            'CMS'               => 'Laravel CMS',
             'CMS-Version'       => get_cms_version(),
             'Authorization-At'  => setting('membership_authorization_at'),
             'Activated-License' => !empty(setting('licensed_to')) ? 'Yes' : 'No',

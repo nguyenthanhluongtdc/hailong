@@ -13,13 +13,12 @@ use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\ServiceProvider;
 use Kris\LaravelFormBuilder\FormHelper;
 use SlugHelper;
-use Throwable;
 
 class HookServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        add_filter(BASE_FILTER_SLUG_AREA, [$this, 'addSlugBox'], 17);
+        add_filter(BASE_FILTER_SLUG_AREA, [$this, 'addSlugBox'], 17, 2);
 
         add_filter(BASE_FILTER_BEFORE_GET_FRONT_PAGE_ITEM, [$this, 'getItemSlug'], 3, 2);
 
@@ -27,12 +26,11 @@ class HookServiceProvider extends ServiceProvider
     }
 
     /**
+     * @param string $html
      * @param BaseModel $object
-     * @param null|string  $prefix
      * @return null|string
-     * @throws Throwable
      */
-    public function addSlugBox($object = null)
+    public function addSlugBox($html = null, $object = null)
     {
         if ($object && SlugHelper::isSupportedModel(get_class($object))) {
 
@@ -41,10 +39,10 @@ class HookServiceProvider extends ServiceProvider
 
             $prefix = SlugHelper::getPrefix(get_class($object));
 
-            return view('packages/slug::partials.slug', compact('object', 'prefix'))->render();
+            return $html . view('packages/slug::partials.slug', compact('object', 'prefix'))->render();
         }
 
-        return null;
+        return $html;
     }
 
     /**

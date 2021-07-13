@@ -22,7 +22,7 @@ abstract class CacheAbstractDecorator implements RepositoryInterface
     protected $cache;
 
     /**
-     * PageCacheDecorator constructor.
+     * CacheAbstractDecorator constructor.
      * @param RepositoryInterface $repository
      * @param string|null $cacheGroup
      */
@@ -69,10 +69,7 @@ abstract class CacheAbstractDecorator implements RepositoryInterface
             $this->cache->put($cacheKey, $cacheData);
 
             return $cacheData;
-        } catch (Exception $ex) {
-            info($ex->getMessage());
-            return call_user_func_array([$this->repository, $function], $args);
-        } catch (InvalidArgumentException $ex) {
+        } catch (Exception | InvalidArgumentException $ex) {
             info($ex->getMessage());
             return call_user_func_array([$this->repository, $function], $args);
         }

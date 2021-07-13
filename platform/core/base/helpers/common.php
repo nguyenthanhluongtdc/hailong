@@ -49,9 +49,10 @@ if (!function_exists('render_editor')) {
 
 if (!function_exists('is_in_admin')) {
     /**
+     * @param bool $force
      * @return bool
      */
-    function is_in_admin(): bool
+    function is_in_admin($force = false): bool
     {
         $prefix = BaseHelper::getAdminPrefix();
 
@@ -59,7 +60,7 @@ if (!function_exists('is_in_admin')) {
 
         $isInAdmin = implode('/', $segments) === $prefix;
 
-        return apply_filters(IS_IN_ADMIN_FILTER, $isInAdmin);
+        return $force ? $isInAdmin : apply_filters(IS_IN_ADMIN_FILTER, $isInAdmin);
     }
 }
 

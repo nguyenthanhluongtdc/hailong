@@ -54,7 +54,13 @@ class Assets extends BaseAssets
             return $themes;
         }
 
-        foreach (File::files(public_path($themeFolder)) as $file) {
+        $files = File::files(public_path($themeFolder));
+
+        if (empty($files)) {
+            $files = ['default.css'];
+        }
+
+        foreach ($files as $file) {
             $name = $themeFolder . '/' . basename($file);
             if (!Str::contains($file, '.css.map')) {
                 $themes[basename($file, '.css')] = $name;

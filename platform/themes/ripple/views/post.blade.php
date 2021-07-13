@@ -9,7 +9,7 @@
                     <a href="{{ $post->categories->first()->url }}">{{ $post->categories->first()->name }}</a>
                 </span>
             @endif
-            <span class="post__created-at"><i class="ion-clock"></i>{{ $post->created_at->format('M d, Y') }}</span>
+            <span class="post__created-at"><i class="ion-clock"></i>{{ $post->created_at->translatedFormat('M d, Y') }}</span>
             @if ($post->author->username)
                 <span class="post__author"><i class="ion-android-person"></i><span>{{ $post->author->name }}</span></span>
             @endif
@@ -45,7 +45,7 @@
                                 </div>
                                 <header class="post__header">
                                     <p><a href="{{ $relatedItem->url }}" class="post__title"> {{ $relatedItem->name }}</a></p>
-                                    <div class="post__meta"><span class="post__created-at">{{ $post->created_at->format('M d, Y') }}</span></div>
+                                    <div class="post__meta"><span class="post__created-at">{{ $post->created_at->translatedFormat('M d, Y') }}</span></div>
                                 </header>
                             </article>
                         </div>
