@@ -69,3 +69,17 @@ a {
     max-width: 100%;
     height: auto;
 }
+
+.__text-20 {
+    font-size: $size1_25;
+    @media screen and (max-width: 1440px) {
+        font-size: $size1_125;
+    }
+}
+
+.__text-18 {
+    font-size: $size1_125;
+    @media screen and (max-width: 1440px) {
+        font-size: $size1;
+    }
+}
