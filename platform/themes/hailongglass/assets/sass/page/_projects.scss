@@ -1,3 +1,23 @@
+#projects-page {
+    .nav-link {
+        display: unset;
+        padding: unset;
+    }
+    .nav-tabs .nav-link {
+        margin-bottom: unset;
+        border: unset;
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+    }
+    .nav-tabs .nav-link.active {
+        background-color: unset;
+        border-color: unset;
+    }
+    .nav-tabs {
+        border-bottom: unset;
+    }
+}
+
 .project-wrapper {
     margin-top: $size3;
     .project {
@@ -38,25 +58,4 @@
             }
         }
     }
-}
-
-.nav-link {
-    display: unset;
-    padding: unset;
-}
-
-.nav-tabs .nav-link {
-    margin-bottom: unset;
-    border: unset;
-    border-top-left-radius: unset;
-    border-top-right-radius: unset;
-}
-
-.nav-tabs .nav-link.active {
-    background-color: unset;
-    border-color: unset;
-}
-
-.nav-tabs {
-    border-bottom: unset;
 }
