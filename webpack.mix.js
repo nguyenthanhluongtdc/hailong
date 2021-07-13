@@ -7,10 +7,14 @@ mix.options({
     terser: {
         extractComments: false,
     }
-});
+})
+.setPublicPath('public')
+.copy('platform/themes/main/public/images', 'public/themes/main/images')
+.copy('platform/themes/main/public/fonts', 'public/themes/main/fonts')
+.js('platform/themes/main/assets/js/common.js', 'public/themes/main/js/common.js')
+.sass('platform/themes/main/assets/sass/common.scss', 'public/themes/main/css/common.css');
 
 // Run all webpack.mix.js in app
-glob.sync('./platform/**/**/webpack.mix.js').forEach(item => require(item));
 
 // Run only for a package, replace [package] by the name of package you want to compile assets
 // require('./platform/packages/[package]/webpack.mix.js');
