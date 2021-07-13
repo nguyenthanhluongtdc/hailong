@@ -17,9 +17,8 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
     {
         $data = $this->model
             ->with('slugable')
-            ->where('categories.status', BaseStatusEnum::PUBLISHED)
-            ->select('categories.*')
-            ->orderBy('categories.created_at', 'desc');
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->orderBy('created_at', 'desc');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }
@@ -32,16 +31,15 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
         $data = $this->model
             ->with(array_merge(['slugable'], $with))
             ->where([
-                'categories.status'      => BaseStatusEnum::PUBLISHED,
-                'categories.is_featured' => 1,
+                'status'      => BaseStatusEnum::PUBLISHED,
+                'is_featured' => 1,
             ])
             ->select([
-                'categories.id',
-                'categories.name',
-                'categories.icon',
+                'id',
+                'name',
+                'icon',
             ])
-            ->orderBy('categories.order', 'asc')
-            ->select('categories.*')
+            ->orderBy('order')
             ->limit($limit);
 
         return $this->applyBeforeExecuteQuery($data)->get();
@@ -52,15 +50,15 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
      */
     public function getAllCategories(array $condition = [], array $with = [])
     {
-        $data = $this->model->with('slugable')->select('categories.*');
+        $data = $this->model->with('slugable');
         if (!empty($condition)) {
             $data = $data->where($condition);
         }
 
         $data = $data
             ->where('status', BaseStatusEnum::PUBLISHED)
-            ->orderBy('categories.created_at', 'DESC')
-            ->orderBy('categories.order', 'DESC');
+            ->orderBy('created_at', 'DESC')
+            ->orderBy('order', 'DESC');
 
         if ($with) {
             $data = $data->with($with);
@@ -75,8 +73,8 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
     public function getCategoryById($id)
     {
         $data = $this->model->with('slugable')->where([
-            'categories.id'     => $id,
-            'categories.status' => BaseStatusEnum::PUBLISHED,
+            'id'     => $id,
+            'status' => BaseStatusEnum::PUBLISHED,
         ]);
 
         return $this->applyBeforeExecuteQuery($data, true)->first();
@@ -103,7 +101,7 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
         if ($id instanceof Eloquent) {
             $model = $id;
         } else {
-            $model = $this->getFirstBy(['categories.id' => $id]);
+            $model = $this->getFirstBy(['id' => $id]);
         }
         if (!$model) {
             return null;
@@ -111,7 +109,7 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
 
         $result = [];
 
-        $children = $model->children()->select('categories.id')->get();
+        $children = $model->children()->select('id')->get();
 
         foreach ($children as $child) {
             $result[] = $child->id;
@@ -158,7 +156,7 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
             ->with($with)
             ->withCount($withCount)
             ->orderBy('posts_count', 'desc')
-            ->where('categories.status', BaseStatusEnum::PUBLISHED)
+            ->where('status', BaseStatusEnum::PUBLISHED)
             ->limit($limit);
 
         return $this->applyBeforeExecuteQuery($data)->get();

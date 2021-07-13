@@ -3,7 +3,7 @@
 namespace Platform\Language;
 
 use Platform\PluginManagement\Abstracts\PluginOperationAbstract;
-use Schema;
+use Illuminate\Support\Facades\Schema;
 use Setting;
 
 class Plugin extends PluginOperationAbstract

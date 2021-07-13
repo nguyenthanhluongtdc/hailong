@@ -68,17 +68,14 @@ class RequestLogTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-        $select = [
-            'request_logs.id',
-            'request_logs.url',
-            'request_logs.status_code',
-            'request_logs.count',
-        ];
+        $query = $this->repository->getModel()->select([
+            'id',
+            'url',
+            'status_code',
+            'count',
+        ]);
 
-        $query = $model->select($select);
-
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -88,21 +85,17 @@ class RequestLogTable extends TableAbstract
     {
         return [
             'id'          => [
-                'name'  => 'request_logs.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'url'         => [
-                'name'  => 'request_logs.url',
                 'title' => trans('core/base::tables.url'),
                 'class' => 'text-left',
             ],
             'status_code' => [
-                'name'  => 'request_logs.status_code',
                 'title' => trans('plugins/request-log::request-log.status_code'),
             ],
             'count'       => [
-                'name'  => 'request_logs.count',
                 'title' => trans('plugins/request-log::request-log.count'),
             ],
         ];
@@ -116,7 +109,8 @@ class RequestLogTable extends TableAbstract
         return [
             'empty' => [
                 'link' => route('request-log.empty'),
-                'text' => Html::tag('i', '', ['class' => 'fa fa-trash'])->toHtml() . ' ' . trans('plugins/request-log::request-log.delete_all'),
+                'text' => Html::tag('i', '', ['class' => 'fa fa-trash'])->toHtml() .
+                    ' ' . trans('plugins/request-log::request-log.delete_all'),
             ],
         ];
     }

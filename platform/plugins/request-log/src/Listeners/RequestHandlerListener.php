@@ -4,8 +4,9 @@ namespace Platform\RequestLog\Listeners;
 
 use Platform\RequestLog\Events\RequestHandlerEvent;
 use Platform\RequestLog\Models\RequestLog;
-use Illuminate\Support\Facades\Auth;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class RequestHandlerListener
@@ -39,33 +40,44 @@ class RequestHandlerListener
      */
     public function handle(RequestHandlerEvent $event)
     {
-        $this->requestLog = RequestLog::firstOrNew([
-            'url'         => Str::limit($this->request->fullUrl(), 120),
-            'status_code' => $event->code,
-        ]);
+        try {
+            $url = $this->request->fullUrl();
 
-        if ($referrer = $this->request->header('referrer')) {
-            $referrers = (array)$this->requestLog->referrer ?: [];
-            $referrers[] = $referrer;
-            $this->requestLog->referrer = $referrers;
-        }
-
-        if (Auth::check()) {
-            if (!is_array($this->requestLog->user_id)) {
-                $this->requestLog->user_id = [Auth::id()];
-            } else {
-                $this->requestLog->user_id = array_unique(
-                    array_merge($this->requestLog->user_id, [Auth::id()])
-                );
+            if (Str::contains($url, '.js.map')) {
+                return false;
             }
-        }
 
-        if (!$this->requestLog->exists) {
-            $this->requestLog->count = 1;
-        } else {
-            $this->requestLog->count += 1;
-        }
+            $this->requestLog = RequestLog::firstOrNew([
+                'url'         => Str::limit($url, 120),
+                'status_code' => $event->code,
+            ]);
 
-        return $this->requestLog->save();
+            if ($referrer = $this->request->header('referrer')) {
+                $referrers = (array)$this->requestLog->referrer ?: [];
+                $referrers[] = $referrer;
+                $this->requestLog->referrer = $referrers;
+            }
+
+            if (Auth::check()) {
+                if (!is_array($this->requestLog->user_id)) {
+                    $this->requestLog->user_id = [Auth::id()];
+                } else {
+                    $this->requestLog->user_id = array_unique(
+                        array_merge($this->requestLog->user_id, [Auth::id()])
+                    );
+                }
+            }
+
+            if (!$this->requestLog->exists) {
+                $this->requestLog->count = 1;
+            } else {
+                $this->requestLog->count += 1;
+            }
+
+            return $this->requestLog->save();
+        } catch (Exception $exception) {
+            info($exception->getMessage());
+            return false;
+        }
     }
 }

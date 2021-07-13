@@ -4,13 +4,11 @@ namespace Platform\SocialLogin\Providers;
 
 use Platform\Base\Supports\Helper;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
-use Platform\Setting\Supports\SettingStore;
 use Platform\SocialLogin\Facades\SocialServiceFacade;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use Route;
 
 class SocialLoginServiceProvider extends ServiceProvider
 {
@@ -44,36 +42,6 @@ class SocialLoginServiceProvider extends ServiceProvider
         });
 
         AliasLoader::getInstance()->alias('SocialService', SocialServiceFacade::class);
-
-        $this->app->booted(function () {
-            if (Route::has('auth.social.callback')) {
-                $config = $this->app->make('config');
-                $setting = $this->app->make(SettingStore::class);
-
-                $config->set([
-                    'services.facebook' => [
-                        'client_id'     => $setting->get('social_login_facebook_app_id'),
-                        'client_secret' => $setting->get('social_login_facebook_app_secret'),
-                        'redirect'      => route('auth.social.callback', 'facebook'),
-                    ],
-                    'services.google'   => [
-                        'client_id'     => $setting->get('social_login_google_app_id'),
-                        'client_secret' => $setting->get('social_login_google_app_secret'),
-                        'redirect'      => route('auth.social.callback', 'google'),
-                    ],
-                    'services.github'   => [
-                        'client_id'     => $setting->get('social_login_github_app_id'),
-                        'client_secret' => $setting->get('social_login_github_app_secret'),
-                        'redirect'      => route('auth.social.callback', 'github'),
-                    ],
-                    'services.linkedin' => [
-                        'client_id'     => $setting->get('social_login_linkedin_app_id'),
-                        'client_secret' => $setting->get('social_login_linkedin_app_secret'),
-                        'redirect'      => route('auth.social.callback', 'linkedin'),
-                    ],
-                ]);
-            }
-        });
 
         $this->app->booted(function () {
             $this->app->register(HookServiceProvider::class);

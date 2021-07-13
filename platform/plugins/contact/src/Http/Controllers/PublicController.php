@@ -56,7 +56,7 @@ class PublicController extends Controller
             info($exception->getMessage());
             return $response
                 ->setError()
-                ->setMessage(trans('plugins/contact::contact.email.failed'));
+                ->setMessage(__('Can\'t send message on this time, please try again later!'));
         }
     }
 }

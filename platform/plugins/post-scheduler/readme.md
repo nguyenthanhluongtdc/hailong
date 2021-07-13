@@ -11,7 +11,7 @@ Post Scheduler is a plugin that allows you to modify the created time of posts.
 
 # Screenshots
 
-![Screenshot](https://raw.githubusercontent.com/botble/post-scheduler/master/public/images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/vswb/post-scheduler/master/public/images/screenshot.png)
 
 # Contact us
 - Website: [https://laravel-cms.demo.gistensal.com](https://laravel-cms.demo.gistensal.com)

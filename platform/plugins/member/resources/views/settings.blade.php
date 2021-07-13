@@ -11,17 +11,13 @@
     <div class="flexbox-annotated-section-content">
         <div class="wrapper-content pd-all-20">
             <div class="form-group">
-                <label class="text-title-field"
-                       for="verify_account_email">{{ trans('plugins/member::settings.verify_account_email') }}
-                </label>
-                <div class="ui-select-wrapper">
-                    <select name="verify_account_email" class="ui-select" id="verify_account_email">
-                        <option value="1" @if (setting('verify_account_email', config('plugins.member.general.verify_email')) == 1) selected @endif>{{ trans('core/base::base.yes') }}</option>
-                        <option value="0" @if (setting('verify_account_email', config('plugins.member.general.verify_email')) == 0) selected @endif>{{ trans('core/base::base.no') }}</option>
-                    </select>
-                    <svg class="svg-next-icon svg-next-icon-size-16">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#select-chevron"></use>
-                    </svg>
+                <div class="form-group">
+                    <input type="hidden" name="verify_account_email" value="0">
+                    <label>
+                        <input type="checkbox" class="hrv-checkbox" value="1" @if (setting('verify_account_email', 0)) checked @endif name="verify_account_email">
+                        {{ trans('plugins/member::settings.verify_account_email') }}
+                    </label>
+                    <span class="help-ts">{{ trans('plugins/member::settings.verify_account_email_description') }}</span>
                 </div>
             </div>
         </div>

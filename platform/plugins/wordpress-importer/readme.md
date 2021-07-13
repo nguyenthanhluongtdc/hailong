@@ -12,7 +12,7 @@ Purchase it here: [laravel-cms.demo.gistensal.com](https://mailto:get-quote@visu
 
 # Screenshots
 
-![Screenshot](https://raw.githubusercontent.com/botble/wordpress-importer/master/public/images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/vswb/wordpress-importer/master/public/images/screenshot.png)
 
 # Contact us
 - Website: [https://laravel-cms.demo.gistensal.com](https://laravel-cms.demo.gistensal.com)

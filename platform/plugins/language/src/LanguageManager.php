@@ -120,13 +120,6 @@ class LanguageManager
     protected $defaultLanguageSelect = ['*'];
 
     /**
-     * An array that contains all translated routes by url
-     *
-     * @var array
-     */
-    protected $cachedTranslatedRoutesByUrl = [];
-
-    /**
      * Language constructor.
      * @param LanguageInterface $languageRepository
      * @param LanguageMetaInterface $languageMetaRepository
@@ -165,7 +158,6 @@ class LanguageManager
      * Return an array of all supported Locales
      *
      * @return array
-     *
      */
     public function getSupportedLocales()
     {
@@ -207,7 +199,6 @@ class LanguageManager
     /**
      * @param array $select
      * @return array|Collection
-     *
      * @since 2.0
      */
     public function getActiveLanguage($select = ['*'])
@@ -249,7 +240,6 @@ class LanguageManager
 
     /**
      * @return string
-     *
      * @since 2.1
      */
     public function getHiddenLanguageText()
@@ -276,7 +266,7 @@ class LanguageManager
     /**
      * @param int $id
      * @param string $uniqueKey
-     * @return mixed
+     * @return array
      * @since 2.0
      */
     public function getRelatedLanguageItem($id, $uniqueKey)
@@ -294,94 +284,10 @@ class LanguageManager
     }
 
     /**
-     * Set and return current locale
-     *
-     * @param string $locale Locale to set the App to (optional)
-     * @return string Returns locale (if route has any) or null (if route does not have a locale)
-     * @throws Exception
-     */
-    public function setLocale($locale = null)
-    {
-        if (empty($locale) || !is_string($locale)) {
-            // If the locale has not been passed through the function
-            // it tries to get it from the first segment of the url
-            $locale = $this->request->segment(1);
-
-            $localeFromRequest = $this->request->input('language');
-
-            if ($localeFromRequest && array_key_exists($localeFromRequest, $this->supportedLocales)) {
-                $locale = $localeFromRequest;
-            }
-
-            if (!$locale) {
-                $locale = $this->getForcedLocale();
-            }
-        }
-
-        if (array_key_exists($locale, $this->supportedLocales)) {
-            $this->currentLocale = $locale;
-        } else {
-            // if the first segment/locale passed is not valid
-            // the system would ask which locale have to take
-            // it could be taken by the browser
-            // depending on your configuration
-
-            $locale = null;
-
-            // if we reached this point and hideDefaultLocaleInURL is true
-            // we have to assume we are routing to a defaultLocale route.
-            if ($this->hideDefaultLocaleInURL()) {
-                $this->currentLocale = $this->defaultLocale;
-            }
-            // but if hideDefaultLocaleInURL is false, we have
-            // to retrieve it from the browser...
-            else {
-                $this->currentLocale = $this->getCurrentLocale();
-            }
-        }
-
-        $this->app->setLocale($this->currentLocale);
-
-        return $locale;
-    }
-
-    /**
-     * Returns the translation key for a given path
-     *
-     * @return boolean Returns value of hideDefaultLocaleInURL in config.
-     */
-    public function hideDefaultLocaleInURL()
-    {
-        return setting('language_hide_default', config('plugins.language.general.hideDefaultLocaleInURL'));
-    }
-
-    /**
-     * Returns current language
-     *
-     * @return string current language
-     */
-    public function getCurrentLocale()
-    {
-        if ($this->currentLocale) {
-            return $this->currentLocale;
-        }
-
-        /*if ($this->useAcceptLanguageHeader() && !$this->app->runningInConsole()) {
-            $negotiator = new LanguageNegotiator($this->defaultLocale, $this->getSupportedLocales(), $this->request);
-
-            return $negotiator->negotiateLanguage();
-        }*/
-
-        // or get application default language
-        return $this->getDefaultLocale();
-    }
-
-    /**
      * Returns an URL adapted to $locale or current locale
      *
      * @param string $url URL to adapt. If not passed, the current url would be taken.
      * @param string|boolean $locale Locale to adapt, false to remove locale
-     *
      * @return string URL translated
      */
     public function localizeURL($url = null, $locale = null)
@@ -494,41 +400,40 @@ class LanguageManager
     }
 
     /**
-     * Return locales mapping.
+     * Returns current language
      *
-     * @return array
+     * @return string current language
      */
-    public function getLocalesMapping()
+    public function getCurrentLocale()
     {
-        if (empty($this->localesMapping)) {
-            $this->localesMapping = config('plugins.language.general.localesMapping');
+        if ($this->currentLocale) {
+            return $this->currentLocale;
         }
 
-        return $this->localesMapping;
+        /*if ($this->useAcceptLanguageHeader() && !$this->app->runningInConsole()) {
+            $negotiator = new LanguageNegotiator($this->defaultLocale, $this->getSupportedLocales(), $this->request);
+
+            return $negotiator->negotiateLanguage();
+        }*/
+
+        // or get application default language
+        return $this->getDefaultLocale();
     }
 
     /**
-     * Returns a locale from the mapping.
+     * Check if Locale exists on the supported locales array
      *
-     * @param string|null $locale
-     *
-     * @return string|null
+     * @param string|boolean $locale string|bool Locale to be checked
+     * @return boolean is the locale supported?
      */
-    public function getLocaleFromMapping($locale)
+    public function checkLocaleInSupportedLocales($locale)
     {
-        return $this->getLocalesMapping()[$locale] ?? $locale;
-    }
+        $locales = $this->getSupportedLocales();
+        if ($locale !== false && empty($locales[$locale])) {
+            return false;
+        }
 
-    /**
-     * Returns inversed locale from the mapping.
-     *
-     * @param string|null $locale
-     *
-     * @return string|null
-     */
-    public function getInversedLocaleFromMapping($locale)
-    {
-        return array_flip($this->getLocalesMapping())[$locale] ?? $locale;
+        return true;
     }
 
     /**
@@ -618,6 +523,7 @@ class LanguageManager
                 $attributes = array_merge($attributes, $response);
             }
         }
+
         return $attributes;
     }
 
@@ -625,7 +531,7 @@ class LanguageManager
      * Normalize attributes gotten from request parameters.
      *
      * @param array $attributes The attributes
-     * @return     array  The normalized attributes
+     * @return array  The normalized attributes
      */
     protected function normalizeAttributes($attributes)
     {
@@ -646,8 +552,12 @@ class LanguageManager
      *
      * @return string|false URL translated
      */
-    public function getURLFromRouteNameTranslated($locale, $transKeyName, $attributes = [], $forceDefaultLocation = false)
-    {
+    public function getURLFromRouteNameTranslated(
+        $locale,
+        $transKeyName,
+        $attributes = [],
+        $forceDefaultLocation = false
+    ) {
         if (!$this->checkLocaleInSupportedLocales($locale)) {
             return false;
         }
@@ -674,6 +584,16 @@ class LanguageManager
         }
 
         return rtrim($this->createUrlFromUri($route), '/');
+    }
+
+    /**
+     * Returns the translation key for a given path
+     *
+     * @return boolean Returns value of hideDefaultLocaleInURL in config.
+     */
+    public function hideDefaultLocaleInURL()
+    {
+        return setting('language_hide_default', config('plugins.language.general.hideDefaultLocaleInURL'));
     }
 
     /**
@@ -758,6 +678,32 @@ class LanguageManager
     }
 
     /**
+     * Returns a locale from the mapping.
+     *
+     * @param string|null $locale
+     *
+     * @return string|null
+     */
+    public function getLocaleFromMapping($locale)
+    {
+        return $this->getLocalesMapping()[$locale] ?? $locale;
+    }
+
+    /**
+     * Return locales mapping.
+     *
+     * @return array
+     */
+    public function getLocalesMapping()
+    {
+        if (empty($this->localesMapping)) {
+            $this->localesMapping = config('plugins.language.general.localesMapping');
+        }
+
+        return $this->localesMapping;
+    }
+
+    /**
      * Returns the translated route for the path and the url given
      *
      * @param string $path Path to check if it is a translated route
@@ -820,6 +766,18 @@ class LanguageManager
     protected function checkUrl($url)
     {
         return filter_var($url, FILTER_VALIDATE_URL);
+    }
+
+    /**
+     * Returns inversed locale from the mapping.
+     *
+     * @param string|null $locale
+     *
+     * @return string|null
+     */
+    public function getInversedLocaleFromMapping($locale)
+    {
+        return array_flip($this->getLocalesMapping())[$locale] ?? $locale;
     }
 
     /**
@@ -948,22 +906,6 @@ class LanguageManager
     public function getSupportedLanguagesKeys()
     {
         return array_keys($this->supportedLocales);
-    }
-
-    /**
-     * Check if Locale exists on the supported locales array
-     *
-     * @param string|boolean $locale string|bool Locale to be checked
-     * @return boolean is the locale supported?
-     */
-    public function checkLocaleInSupportedLocales($locale)
-    {
-        $locales = $this->getSupportedLocales();
-        if ($locale !== false && empty($locales[$locale])) {
-            return false;
-        }
-
-        return true;
     }
 
     /**
@@ -1141,16 +1083,6 @@ class LanguageManager
     }
 
     /**
-     * Returns the translation key for a given path
-     *
-     * @return boolean Returns value of useAcceptLanguageHeader in config.
-     */
-    protected function useAcceptLanguageHeader()
-    {
-        return config('plugins.language.general.useAcceptLanguageHeader');
-    }
-
-    /**
      * Returns serialized translated routes for caching purposes.
      *
      * @return string
@@ -1184,6 +1116,89 @@ class LanguageManager
     }
 
     /**
+     * @return string
+     * @throws Exception
+     */
+    public function setRoutesCachePath(): string
+    {
+        $this->setLocale();
+
+        // compute $locale from url.
+        // It is null if url does not contain locale.
+        $locale = $this->getCurrentLocale();
+
+        $localeKeys = $this->getSupportedLocales();
+
+        $path = $this->app->getCachedRoutesPath();
+
+        if ($locale && !in_array($locale,
+                $localeKeys) && (!$this->hideDefaultLocaleInURL() || $locale != $this->getDefaultLocale())) {
+
+            $path = substr($path, 0, -4) . '_' . $locale . '.php';
+
+            if (file_exists($path)) {
+                $key = 'APP_ROUTES_CACHE';
+
+                putenv($key . '=' . $path);
+            }
+        }
+
+        return $path;
+    }
+
+    /**
+     * Set and return current locale
+     *
+     * @param string $locale Locale to set the App to (optional)
+     * @return string Returns locale (if route has any) or null (if route does not have a locale)
+     * @throws Exception
+     */
+    public function setLocale($locale = null)
+    {
+        if (empty($locale) || !is_string($locale)) {
+            // If the locale has not been passed through the function
+            // it tries to get it from the first segment of the url
+            $locale = $this->request->segment(1);
+
+            $localeFromRequest = $this->request->input('language');
+
+            if ($localeFromRequest && array_key_exists($localeFromRequest, $this->supportedLocales)) {
+                $locale = $localeFromRequest;
+            }
+
+            if (!$locale) {
+                $locale = $this->getForcedLocale();
+            }
+        }
+
+        if (array_key_exists($locale, $this->supportedLocales)) {
+            $this->currentLocale = $locale;
+        } else {
+            // if the first segment/locale passed is not valid
+            // the system would ask which locale have to take
+            // it could be taken by the browser
+            // depending on your configuration
+
+            $locale = null;
+
+            // if we reached this point and hideDefaultLocaleInURL is true
+            // we have to assume we are routing to a defaultLocale route.
+            if ($this->hideDefaultLocaleInURL()) {
+                $this->currentLocale = $this->defaultLocale;
+            }
+            // but if hideDefaultLocaleInURL is false, we have
+            // to retrieve it from the browser...
+            else {
+                $this->currentLocale = $this->getCurrentLocale();
+            }
+        }
+
+        $this->app->setLocale($this->currentLocale);
+
+        return $locale;
+    }
+
+    /**
      * Returns the forced environment set route locale.
      *
      * @return string|null
@@ -1200,32 +1215,12 @@ class LanguageManager
     }
 
     /**
-     * @return string
-     * @throws Exception
+     * Returns the translation key for a given path
+     *
+     * @return boolean Returns value of useAcceptLanguageHeader in config.
      */
-    public function setRoutesCachePath(): string
+    protected function useAcceptLanguageHeader()
     {
-        $this->setLocale();
-
-        // compute $locale from url.
-        // It is null if url does not contain locale.
-        $locale = $this->getCurrentLocale();
-
-        $localeKeys = $this->getSupportedLocales();
-
-        $path = $this->app->getCachedRoutesPath();
-
-        if ($locale && !in_array($locale, $localeKeys) && (!$this->hideDefaultLocaleInURL() || $locale != $this->getDefaultLocale())) {
-
-            $path = substr($path, 0, -4) . '_' . $locale . '.php';
-
-            if (file_exists($path)) {
-                $key = 'APP_ROUTES_CACHE';
-
-                putenv($key . '=' . $path);
-            }
-        }
-
-        return $path;
+        return config('plugins.language.general.useAcceptLanguageHeader');
     }
 }

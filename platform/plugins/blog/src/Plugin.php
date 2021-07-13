@@ -6,7 +6,7 @@ use Platform\Blog\Models\Category;
 use Platform\Blog\Models\Tag;
 use Platform\Dashboard\Repositories\Interfaces\DashboardWidgetInterface;
 use Platform\Menu\Repositories\Interfaces\MenuNodeInterface;
-use Schema;
+use Illuminate\Support\Facades\Schema;
 use Platform\PluginManagement\Abstracts\PluginOperationAbstract;
 
 class Plugin extends PluginOperationAbstract

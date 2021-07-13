@@ -18,7 +18,9 @@ class UpdatedContentListener
     public function handle(UpdatedContentEvent $event)
     {
         try {
-            Language::saveLanguage($event->screen, $event->request, $event->data);
+            if ($event->request->input('language')) {
+                Language::saveLanguage($event->screen, $event->request, $event->data);
+            }
         } catch (Exception $exception) {
             info($exception->getMessage());
         }

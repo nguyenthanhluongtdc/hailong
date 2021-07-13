@@ -1,7 +1,16 @@
 @extends('core/base::layouts.master')
 @section('content')
     <div class="clearfix"></div>
-    <p><button class="btn btn-primary" id="generate_backup">{{ trans('plugins/backup::backup.generate_btn') }}</button></p>
+    @if (!function_exists('proc_open'))
+        <div class="note note-warning">
+            <p>{!! clean(trans('plugins/backup::backup.proc_open_disabled_error')) !!}</p>
+        </div>
+    @endif
+
+    @if (auth()->user()->hasPermission('backups.create'))
+        <p><button class="btn btn-primary" id="generate_backup">{{ trans('plugins/backup::backup.generate_btn') }}</button></p>
+    @endif
+
     <table class="table table-striped" id="table-backups">
         <thead>
             <tr>
@@ -24,9 +33,15 @@
             @endif
         </tbody>
     </table>
-    {!! Form::modalAction('create-backup-modal', trans('plugins/backup::backup.create'), 'info', view('plugins/backup::partials.create')->render(), 'create-backup-button', trans('plugins/backup::backup.create_btn')) !!}
-    {!! Form::modalAction('restore-backup-modal', trans('plugins/backup::backup.restore'), 'info', trans('plugins/backup::backup.restore_confirm_msg'), 'restore-backup-button', trans('plugins/backup::backup.restore_btn')) !!}
-    <div data-route-create="{{ route('backups.create') }}"></div>
+
+    @if (auth()->user()->hasPermission('backups.create'))
+        {!! Form::modalAction('create-backup-modal', trans('plugins/backup::backup.create'), 'info', view('plugins/backup::partials.create')->render(), 'create-backup-button', trans('plugins/backup::backup.create_btn')) !!}
+        <div data-route-create="{{ route('backups.create') }}"></div>
+    @endif
+
+    @if (auth()->user()->hasPermission('backups.restore'))
+        {!! Form::modalAction('restore-backup-modal', trans('plugins/backup::backup.restore'), 'info', trans('plugins/backup::backup.restore_confirm_msg'), 'restore-backup-button', trans('plugins/backup::backup.restore_btn')) !!}
+    @endif
 
     @include('core/table::modal')
 @stop

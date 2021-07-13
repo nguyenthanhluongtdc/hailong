@@ -6,7 +6,7 @@ use Platform\Language\Models\LanguageMeta;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Console\Command;
 use Language;
-use Schema;
+use Illuminate\Support\Facades\Schema;
 
 class SyncOldDataCommand extends Command
 {

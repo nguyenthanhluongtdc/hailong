@@ -2,7 +2,6 @@
 
 namespace Platform\Language\Listeners;
 
-use Platform\PluginManagement\Events\ActivatedPluginEvent;
 use Exception;
 use Setting;
 
@@ -12,7 +11,6 @@ class ActivatedPluginListener
     /**
      * Handle the event.
      *
-     * @param ActivatedPluginEvent $event
      * @return void
      */
     public function handle()

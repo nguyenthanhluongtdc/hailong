@@ -45,7 +45,7 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot();
 
-        if (version_compare(get_cms_version(), '5.12') > 0) {
+        if (version_compare(get_cms_version(), '7.0') > 0) {
             Event::listen(['cache:cleared'], function () {
                 Artisan::call('route:trans:clear');
             });

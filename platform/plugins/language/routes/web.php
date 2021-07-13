@@ -12,11 +12,13 @@ Route::group(['namespace' => 'Platform\Language\Http\Controllers', 'middleware' 
                 'as'         => 'languages.store',
                 'uses'       => 'LanguageController@postStore',
                 'permission' => 'languages.create',
+                'middleware' => 'preventDemo',
             ]);
 
             Route::post('edit', [
-                'as'   => 'languages.edit',
-                'uses' => 'LanguageController@update',
+                'as'         => 'languages.edit',
+                'uses'       => 'LanguageController@update',
+                'middleware' => 'preventDemo',
             ]);
 
             Route::delete('delete/{id}', [

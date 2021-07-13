@@ -11,12 +11,12 @@ use Platform\Dashboard\Supports\DashboardWidgetInstance;
 use Platform\Page\Models\Page;
 use Platform\Page\Repositories\Interfaces\PageInterface;
 use Eloquent;
-use Illuminate\Support\Facades\Event;
 use Html;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Menu;
@@ -50,7 +50,8 @@ class HookServiceProvider extends ServiceProvider
         }
 
         if (function_exists('add_shortcode')) {
-            add_shortcode('blog-posts', trans('plugins/blog::base.short_code_name'), trans('plugins/blog::base.short_code_description'), [$this, 'renderBlogPosts']);
+            add_shortcode('blog-posts', trans('plugins/blog::base.short_code_name'),
+                trans('plugins/blog::base.short_code_description'), [$this, 'renderBlogPosts']);
             shortcode()->setAdminConfig('blog-posts',
                 view('plugins/blog::partials.posts-short-code-admin-config')->render());
         }
@@ -62,8 +63,7 @@ class HookServiceProvider extends ServiceProvider
 
     public function addThemeOptions()
     {
-        $pages = $this->app->make(PageInterface::class)
-            ->pluck('pages.name', 'pages.id', ['status' => BaseStatusEnum::PUBLISHED]);
+        $pages = $this->app->make(PageInterface::class)->pluck('name', 'id', ['status' => BaseStatusEnum::PUBLISHED]);
 
         theme_option()
             ->setSection([
@@ -197,7 +197,14 @@ class HookServiceProvider extends ServiceProvider
             if (view()->exists(Theme::getThemeNamespace() . '::views.loop')) {
                 $view = Theme::getThemeNamespace() . '::views.loop';
             }
-            return view($view, ['posts' => get_all_posts(true, 12, ['slugable', 'categories', 'categories.slugable', 'author'])])
+
+            return view($view, [
+                'posts' => get_all_posts(
+                    true,
+                    theme_option('number_of_posts_in_a_category', 12),
+                    ['slugable', 'categories', 'categories.slugable', 'author']
+                ),
+            ])
                 ->render();
         }
 

@@ -16,9 +16,8 @@ class TagRepository extends RepositoriesAbstract implements TagInterface
     {
         $data = $this->model
             ->with('slugable')
-            ->where('tags.status', BaseStatusEnum::PUBLISHED)
-            ->select('tags.*')
-            ->orderBy('tags.created_at', 'desc');
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->orderBy('created_at', 'desc');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }
@@ -42,9 +41,9 @@ class TagRepository extends RepositoriesAbstract implements TagInterface
      */
     public function getAllTags($active = true)
     {
-        $data = $this->model->select('tags.*');
+        $data = $this->model;
         if ($active) {
-            $data = $data->where('tags.status', BaseStatusEnum::PUBLISHED);
+            $data = $data->where('status', BaseStatusEnum::PUBLISHED);
         }
 
         return $this->applyBeforeExecuteQuery($data)->get();

@@ -212,7 +212,7 @@ class PostController extends BaseController
 
         $posts = $this->postRepository->advancedGet([
             'with'     => ['slugable'],
-            'order_by' => ['posts.created_at' => 'desc'],
+            'order_by' => ['created_at' => 'desc'],
             'paginate' => [
                 'per_page'      => $limit,
                 'current_paged' => (int)$request->input('page'),

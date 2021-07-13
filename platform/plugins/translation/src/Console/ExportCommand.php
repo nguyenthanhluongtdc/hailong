@@ -5,7 +5,6 @@ namespace Platform\Translation\Console;
 use Platform\Translation\Manager;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 
 class ExportCommand extends Command
 {
@@ -48,26 +47,17 @@ class ExportCommand extends Command
     public function handle()
     {
         $group = $this->argument('group');
-        $json = $this->option('json');
 
-        if (empty($group) && !$json) {
-            $this->warn('You must either specify a group argument or export as --json');
-
-            return;
-        }
-
-        if (!empty($group) && $json) {
-            $this->warn('You cannot use both group argument and --json option at the same time');
+        if (empty($group)) {
+            $this->warn('You must either specify a group argument');
 
             return;
         }
 
-        $this->manager->exportTranslations($group, $json);
+        $this->manager->exportTranslations($group);
 
         if (!empty($group)) {
             $this->info('Done writing language files for ' . ($group == '*' ? 'ALL groups' : $group . ' group'));
-        } elseif ($json) {
-            $this->info('Done writing JSON language files for translation strings');
         }
     }
 
@@ -80,18 +70,6 @@ class ExportCommand extends Command
     {
         return [
             ['group', InputArgument::OPTIONAL, 'The group to export (`*` for all).'],
-        ];
-    }
-
-    /**
-     * Get the console command options.
-     *
-     * @return array
-     */
-    protected function getOptions()
-    {
-        return [
-            ['json', 'J', InputOption::VALUE_NONE, 'Export anonymous strings to JSON'],
         ];
     }
 }

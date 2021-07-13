@@ -10,7 +10,7 @@ Purchase it here: [laravel-cms.demo.gistensal.com](https://mailto:get-quote@visu
 
 # Screenshots
 
-![Single log](https://raw.githubusercontent.com/botble/log-viewer/master/public/images/screenshot.png)
+![Single log](https://raw.githubusercontent.com/vswb/log-viewer/master/public/images/screenshot.png)
 
 # Credits
 This plugin is using source code from https://github.com/ARCANEDEV/LogViewer by [ARCANEDEV©](http://www.arcanedev.net)

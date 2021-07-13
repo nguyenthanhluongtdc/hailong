@@ -79,25 +79,22 @@ class PostTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-        $select = [
-            'posts.id',
-            'posts.name',
-            'posts.image',
-            'posts.created_at',
-            'posts.status',
-            'posts.updated_at',
-        ];
-
-        $query = $model
+        $query = $this->repository->getModel()
             ->with(['categories'])
-            ->select($select)
+            ->select([
+                'id',
+                'name',
+                'image',
+                'created_at',
+                'status',
+                'updated_at',
+            ])
             ->where([
-                'posts.author_id'   => auth('member')->user()->getAuthIdentifier(),
-                'posts.author_type' => Member::class,
+                'author_id'   => auth('member')->user()->getAuthIdentifier(),
+                'author_type' => Member::class,
             ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -115,35 +112,29 @@ class PostTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'posts.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'image'      => [
-                'name'  => 'posts.image',
                 'title' => trans('core/base::tables.image'),
                 'width' => '70px',
             ],
             'name'       => [
-                'name'  => 'posts.name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'updated_at' => [
-                'name'      => 'posts.updated_at',
                 'title'     => trans('plugins/blog::posts.categories'),
                 'width'     => '150px',
                 'class'     => 'no-sort text-center',
                 'orderable' => false,
             ],
             'created_at' => [
-                'name'  => 'posts.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
                 'class' => 'text-center',
             ],
             'status'     => [
-                'name'  => 'posts.status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
                 'class' => 'text-center',

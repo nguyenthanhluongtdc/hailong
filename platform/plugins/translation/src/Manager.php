@@ -16,8 +16,6 @@ use Symfony\Component\VarExporter\VarExporter;
 
 class Manager
 {
-    const JSON_GROUP = '_json';
-
     /**
      * @var \Illuminate\Foundation\Application
      */
@@ -101,23 +99,6 @@ class Manager
             }
         }
 
-        foreach ($this->files->files($this->app['path.lang']) as $jsonTranslationFile) {
-            if (strpos($jsonTranslationFile, '.json') === false) {
-                continue;
-            }
-            $locale = basename($jsonTranslationFile, '.json');
-            $group = self::JSON_GROUP;
-
-            // Retrieves JSON entries of the given locale only
-            $translations = Lang::getLoader()->load($locale, '*', '*');
-            if ($translations && is_array($translations)) {
-                foreach ($translations as $key => $value) {
-                    $importedTranslation = $this->importTranslation($key, $value, $locale, $group, $replace);
-                    $counter += $importedTranslation ? 1 : 0;
-                }
-            }
-        }
-
         return $counter;
     }
 
@@ -185,12 +166,11 @@ class Manager
 
     /**
      * @param null $group
-     * @param bool $json
      * @throws \Symfony\Component\VarExporter\Exception\ExceptionInterface
      */
-    public function exportTranslations($group = null, $json = false)
+    public function exportTranslations($group = null)
     {
-        if (!empty($group) && !$json) {
+        if (!empty($group)) {
             if (!in_array($group, $this->config['exclude_groups'])) {
                 if ($group == '*') {
                     return $this->exportAllTranslations();
@@ -223,23 +203,6 @@ class Manager
                 Translation::ofTranslatedGroup($group)->update(['status' => Translation::STATUS_SAVED]);
             }
         }
-
-        if ($json) {
-            $tree = $this->makeTree(Translation::ofTranslatedGroup(self::JSON_GROUP)
-                ->orderByGroupKeys(Arr::get($this->config,
-                    'sort_keys', false))->get(), true);
-
-            foreach ($tree as $locale => $groups) {
-                if (isset($groups[self::JSON_GROUP])) {
-                    $translations = $groups[self::JSON_GROUP];
-                    $path = $this->app['path.lang'] . '/' . $locale . '.json';
-                    $output = json_encode($translations, JSON_PRETTY_PRINT);
-                    $this->files->put($path, $output);
-                }
-            }
-
-            Translation::ofTranslatedGroup(self::JSON_GROUP)->update(['status' => Translation::STATUS_SAVED]);
-        }
     }
 
     /**
@@ -251,11 +214,7 @@ class Manager
         $groups = Translation::whereNotNull('value')->selectDistinctGroup()->get('group');
 
         foreach ($groups as $group) {
-            if ($group == self::JSON_GROUP) {
-                $this->exportTranslations(null, true);
-            } else {
-                $this->exportTranslations($group->group);
-            }
+            $this->exportTranslations($group->group);
         }
 
         return true;
@@ -263,37 +222,14 @@ class Manager
 
     /**
      * @param array $translations
-     * @param bool $json
      * @return array
      */
-    protected function makeTree($translations, $json = false)
+    protected function makeTree($translations)
     {
         $array = [];
         foreach ($translations as $translation) {
-            if ($json) {
-                $this->jsonSet($array[$translation->locale][$translation->group], $translation->key,
-                    $translation->value);
-            } else {
-                Arr::set($array[$translation->locale][$translation->group], $translation->key, $translation->value);
-            }
+            Arr::set($array[$translation->locale][$translation->group], $translation->key, $translation->value);
         }
-
-        return $array;
-    }
-
-    /**
-     * @param array $array
-     * @param string $key
-     * @param string $value
-     * @return mixed
-     */
-    public function jsonSet(&$array, $key, $value)
-    {
-        if (empty($key)) {
-            return $array = $value;
-        }
-
-        $array[$key] = $value;
 
         return $array;
     }

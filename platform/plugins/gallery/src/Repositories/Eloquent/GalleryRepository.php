@@ -16,9 +16,9 @@ class GalleryRepository extends RepositoriesAbstract implements GalleryInterface
     {
         $data = $this->model
             ->with($with)
-            ->where('galleries.status', BaseStatusEnum::PUBLISHED)
-            ->orderBy('galleries.order')
-            ->orderBy('galleries.created_at', 'desc');
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->orderBy('order')
+            ->orderBy('created_at', 'desc');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }
@@ -30,10 +30,9 @@ class GalleryRepository extends RepositoriesAbstract implements GalleryInterface
     {
         $data = $this->model
             ->with('slugable')
-            ->where('galleries.status', BaseStatusEnum::PUBLISHED)
-            ->select('galleries.*')
-            ->orderBy('galleries.order', 'asc')
-            ->orderBy('galleries.created_at', 'desc');
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->orderBy('order')
+            ->orderBy('created_at', 'desc');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }
@@ -46,18 +45,18 @@ class GalleryRepository extends RepositoriesAbstract implements GalleryInterface
         $data = $this->model
             ->with($with)
             ->where([
-                'galleries.status'   => BaseStatusEnum::PUBLISHED,
-                'galleries.is_featured' => 1,
+                'status'   => BaseStatusEnum::PUBLISHED,
+                'is_featured' => 1,
             ])
             ->select([
-                'galleries.id',
-                'galleries.name',
-                'galleries.user_id',
-                'galleries.image',
-                'galleries.created_at',
+                'id',
+                'name',
+                'user_id',
+                'image',
+                'created_at',
             ])
-            ->orderBy('galleries.order')
-            ->orderBy('galleries.created_at', 'desc')
+            ->orderBy('order')
+            ->orderBy('created_at', 'desc')
             ->limit($limit);
 
         return $this->applyBeforeExecuteQuery($data)->get();

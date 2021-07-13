@@ -2,6 +2,7 @@
 
 namespace Platform\Translation\Providers;
 
+use Platform\Translation\Console\RemoveUnusedTranslationsCommand;
 use Platform\Translation\Console\UpdateThemeTranslationCommand;
 use Illuminate\Routing\Events\RouteMatched;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
@@ -31,6 +32,7 @@ class TranslationServiceProvider extends ServiceProvider
                 ExportCommand::class,
                 CleanCommand::class,
                 UpdateThemeTranslationCommand::class,
+                RemoveUnusedTranslationsCommand::class,
             ]);
         }
     }

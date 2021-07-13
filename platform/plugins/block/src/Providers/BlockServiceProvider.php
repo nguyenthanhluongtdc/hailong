@@ -55,7 +55,7 @@ class BlockServiceProvider extends ServiceProvider
             if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
                 \CustomField::registerModule(Block::class)
                     ->registerRule('basic', trans('plugins/block::block.name'), Block::class, function () {
-                        return $this->app->make(BlockInterface::class)->pluck('blocks.name', 'blocks.id');
+                        return $this->app->make(BlockInterface::class)->pluck('name', 'id');
                     })
                     ->expandRule('other', trans('plugins/custom-field::rules.model_name'), 'model_name', function () {
                         return [

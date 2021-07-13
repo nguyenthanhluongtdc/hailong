@@ -8,9 +8,9 @@ Purchase it here: [laravel-cms.demo.gistensal.com](https://mailto:get-quote@visu
 
 # Screenshots
 
-![Screenshot](https://raw.githubusercontent.com/botble/page-builder/master/public/images/screenshot-1.png)
+![Screenshot](https://raw.githubusercontent.com/vswb/page-builder/master/public/images/screenshot-1.png)
 
-![Screenshot](https://raw.githubusercontent.com/botble/page-builder/master/public/images/screenshot-2.png)
+![Screenshot](https://raw.githubusercontent.com/vswb/page-builder/master/public/images/screenshot-2.png)
 
 # Contact us
 - Website: [https://laravel-cms.demo.gistensal.com](https://laravel-cms.demo.gistensal.com)

@@ -84,18 +84,15 @@ class BlockTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-        $select = [
-            'blocks.id',
-            'blocks.alias',
-            'blocks.name',
-            'blocks.created_at',
-            'blocks.status',
-        ];
+        $query = $this->repository->getModel()->select([
+            'id',
+            'alias',
+            'name',
+            'created_at',
+            'status',
+        ]);
 
-        $query = $model->select($select);
-
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -105,26 +102,26 @@ class BlockTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'blocks.id',
+                'name'  => 'id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'name'       => [
-                'name'  => 'blocks.name',
+                'name'  => 'name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'alias'      => [
-                'name'  => 'blocks.alias',
+                'name'  => 'alias',
                 'title' => trans('core/base::tables.shortcode'),
             ],
             'created_at' => [
-                'name'  => 'blocks.created_at',
+                'name'  => 'created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
             'status'     => [
-                'name'  => 'blocks.status',
+                'name'  => 'status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
             ],
@@ -153,18 +150,18 @@ class BlockTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'blocks.name'       => [
+            'name'       => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'blocks.status'     => [
+            'status'     => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => BaseStatusEnum::labels(),
                 'validate' => 'required|' . Rule::in(BaseStatusEnum::values()),
             ],
-            'blocks.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

@@ -11,6 +11,7 @@ use Platform\Table\Abstracts\TableAbstract;
 use Carbon\Carbon;
 use Html;
 use Illuminate\Contracts\Routing\UrlGenerator;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\DataTables;
 
@@ -118,29 +119,25 @@ class PostTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-
-        $select = [
-            'posts.id',
-            'posts.name',
-            'posts.image',
-            'posts.created_at',
-            'posts.status',
-            'posts.updated_at',
-            'posts.author_id',
-            'posts.author_type',
-        ];
-
-        $query = $model
+        $query = $this->repository->getModel()
             ->with([
                 'categories' => function ($query) {
                     $query->select(['categories.id', 'categories.name']);
                 },
-                'author'
+                'author',
             ])
-            ->select($select);
+            ->select([
+                'id',
+                'name',
+                'image',
+                'created_at',
+                'status',
+                'updated_at',
+                'author_id',
+                'author_type',
+            ]);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -150,42 +147,35 @@ class PostTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'posts.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'image'      => [
-                'name'  => 'posts.image',
                 'title' => trans('core/base::tables.image'),
                 'width' => '70px',
             ],
             'name'       => [
-                'name'  => 'posts.name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'updated_at' => [
-                'name'      => 'posts.updated_at',
                 'title'     => trans('plugins/blog::posts.categories'),
                 'width'     => '150px',
                 'class'     => 'no-sort text-center',
                 'orderable' => false,
             ],
             'author_id'  => [
-                'name'      => 'posts.author_id',
                 'title'     => trans('plugins/blog::posts.author'),
                 'width'     => '150px',
                 'class'     => 'no-sort text-center',
                 'orderable' => false,
             ],
             'created_at' => [
-                'name'  => 'posts.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
                 'class' => 'text-center',
             ],
             'status'     => [
-                'name'  => 'posts.status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
                 'class' => 'text-center',
@@ -215,12 +205,12 @@ class PostTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'posts.name'       => [
+            'name'       => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'posts.status'     => [
+            'status'     => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => BaseStatusEnum::labels(),
@@ -232,7 +222,7 @@ class PostTable extends TableAbstract
                 'validate' => 'required',
                 'callback' => 'getCategories',
             ],
-            'posts.created_at' => [
+            'created_at' => [
                 'title'    => trans('core/base::tables.created_at'),
                 'type'     => 'date',
                 'validate' => 'required',
@@ -254,7 +244,7 @@ class PostTable extends TableAbstract
     public function applyFilterCondition($query, string $key, string $operator, ?string $value)
     {
         switch ($key) {
-            case 'posts.created_at':
+            case 'created_at':
                 if (!$value) {
                     break;
                 }
@@ -267,12 +257,38 @@ class PostTable extends TableAbstract
                     break;
                 }
 
-                return $query->join('post_categories', 'post_categories.post_id', '=', 'posts.id')
-                    ->join('categories', 'post_categories.category_id', '=', 'categories.id')
-                    ->where('post_categories.category_id', $value);
+                if (!$this->isJoined($query, 'post_categories')) {
+                    $query = $query
+                        ->join('post_categories', 'post_categories.post_id', '=', 'posts.id')
+                        ->join('categories', 'post_categories.category_id', '=', 'categories.id');
+                }
+
+                return $query->where('post_categories.category_id', $value);
         }
 
         return parent::applyFilterCondition($query, $key, $operator, $value);
+    }
+
+    /**
+     * @param Builder $query
+     * @param string $table
+     * @return bool
+     */
+    protected function isJoined($query, $table)
+    {
+        $joins = $query->getQuery()->joins;
+
+        if ($joins == null) {
+            return false;
+        }
+
+        foreach ($joins as $join) {
+            if ($join->table == $table) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**

@@ -15,6 +15,7 @@ class ContactRepository extends RepositoriesAbstract implements ContactInterface
     {
         $data = $this->model->where('status', ContactStatusEnum::UNREAD)->select($select)->get();
         $this->resetModel();
+
         return $data;
     }
 
@@ -25,6 +26,7 @@ class ContactRepository extends RepositoriesAbstract implements ContactInterface
     {
         $data = $this->model->where('status', ContactStatusEnum::UNREAD)->count();
         $this->resetModel();
+
         return $data;
     }
 }

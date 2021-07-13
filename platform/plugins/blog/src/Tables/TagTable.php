@@ -80,17 +80,14 @@ class TagTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-        $select = [
-            'tags.id',
-            'tags.name',
-            'tags.created_at',
-            'tags.status',
-        ];
+        $query = $this->repository->getModel()->select([
+            'id',
+            'name',
+            'created_at',
+            'status',
+        ]);
 
-        $query = $model->select($select);
-
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -100,22 +97,18 @@ class TagTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'tags.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'name'       => [
-                'name'  => 'tags.name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'status'     => [
-                'name'  => 'tags.status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
             ],
             'created_at' => [
-                'name'  => 'tags.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
@@ -144,18 +137,18 @@ class TagTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'tags.name'       => [
+            'name'       => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'tags.status'     => [
+            'status'     => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => BaseStatusEnum::labels(),
                 'validate' => 'required|in:' . implode(',', BaseStatusEnum::values()),
             ],
-            'tags.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

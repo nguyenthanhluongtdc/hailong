@@ -11,7 +11,7 @@ class CommandServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        if (version_compare(get_cms_version(), '5.12') > 0) {
+        if (version_compare(get_cms_version(), '7.0') > 0) {
             $this->commands([
                 SyncOldDataCommand::class,
                 RouteTranslationsClearCommand::class,

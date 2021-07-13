@@ -9,13 +9,13 @@ use Platform\Base\Supports\Language;
 use Platform\Translation\Http\Requests\LocaleRequest;
 use Platform\Translation\Http\Requests\TranslationRequest;
 use Platform\Translation\Manager;
-use Illuminate\Support\Facades\DB;
+use Platform\Translation\Models\Translation;
 use File;
 use Illuminate\Http\Request;
-use Platform\Translation\Models\Translation;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Schema;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 use Theme;
 
 class TranslationController extends BaseController
@@ -154,7 +154,7 @@ class TranslationController extends BaseController
 
         $group = $request->input('group');
 
-        $this->manager->exportTranslations($group, $group === '_json');
+        $this->manager->exportTranslations($group);
 
         return $response->setMessage(trans('plugins/translation::translation.done_publishing'));
     }
@@ -208,10 +208,31 @@ class TranslationController extends BaseController
         $themeLocale = Arr::first(scan_folder(theme_path(Theme::getThemeName() . '/lang')));
 
         if ($themeLocale) {
-            File::copy(theme_path(Theme::getThemeName() . '/lang/' . $themeLocale), resource_path('lang/' . $locale . '.json'));
+            File::copy(theme_path(Theme::getThemeName() . '/lang/' . $themeLocale),
+                resource_path('lang/' . $locale . '.json'));
         }
 
         return $response->setMessage(trans('core/base::notices.create_success_message'));
+    }
+
+    /**
+     * @param string $path
+     * @param string $locale
+     * @return int|void
+     */
+    protected function createLocaleInPath(string $path, $locale)
+    {
+        $folders = File::directories($path);
+
+        foreach ($folders as $module) {
+            foreach (File::directories($module) as $item) {
+                if (File::name($item) == 'en') {
+                    File::copyDirectory($item, $module . '/' . $locale);
+                }
+            }
+        }
+
+        return count($folders);
     }
 
     /**
@@ -247,26 +268,6 @@ class TranslationController extends BaseController
         }
 
         return $response->setMessage(trans('core/base::notices.delete_success_message'));
-    }
-
-    /**
-     * @param string $path
-     * @param string $locale
-     * @return int|void
-     */
-    protected function createLocaleInPath(string $path, $locale)
-    {
-        $folders = File::directories($path);
-
-        foreach ($folders as $module) {
-            foreach (File::directories($module) as $item) {
-                if (File::name($item) == 'en') {
-                    File::copyDirectory($item, $module . '/' . $locale);
-                }
-            }
-        }
-
-        return count($folders);
     }
 
     /**
@@ -341,7 +342,8 @@ class TranslationController extends BaseController
 
         ksort($translations);
 
-        return view('plugins/translation::theme-translations', compact('translations', 'groups', 'group', 'defaultLanguage'));
+        return view('plugins/translation::theme-translations',
+            compact('translations', 'groups', 'group', 'defaultLanguage'));
     }
 
     /**
@@ -350,6 +352,10 @@ class TranslationController extends BaseController
     public function postThemeTranslations(Request $request, BaseHttpResponse $response)
     {
         $translations = $request->input('translations', []);
+
+        if (is_string($translations)) {
+            $translations = json_decode($translations, true);
+        }
 
         $json = [];
 

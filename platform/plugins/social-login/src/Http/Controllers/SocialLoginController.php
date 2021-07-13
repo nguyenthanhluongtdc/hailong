@@ -24,7 +24,25 @@ class SocialLoginController extends BaseController
      */
     public function redirectToProvider($provider)
     {
+        $this->setProvider($provider);
+
         return Socialite::driver($provider)->redirect();
+    }
+
+    /**
+     * @param string $provider
+     */
+    protected function setProvider(string $provider)
+    {
+        config()->set([
+            'services.' . $provider => [
+                'client_id'     => setting('social_login_' . $provider . '_app_id'),
+                'client_secret' => setting('social_login_' . $provider . '_app_secret'),
+                'redirect'      => route('auth.social.callback', $provider),
+            ],
+        ]);
+
+        return true;
     }
 
     /**
@@ -35,6 +53,8 @@ class SocialLoginController extends BaseController
      */
     public function handleProviderCallback($provider, BaseHttpResponse $response)
     {
+        $this->setProvider($provider);
+
         try {
             /**
              * @var \Laravel\Socialite\AbstractUser $oAuth

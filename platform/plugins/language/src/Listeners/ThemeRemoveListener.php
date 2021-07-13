@@ -24,9 +24,9 @@ class ThemeRemoveListener
 
             foreach ($languages as $language) {
                 app(WidgetInterface::class)->deleteBy(['theme' => $event->theme . '-' . $language->lang_code]);
-                app(SettingInterface::class)->getModel()
-                    ->where('key', 'like', 'theme-' . $event->theme . '-' . $language->lang_code . '-%')
-                    ->delete();
+
+                app(SettingInterface::class)
+                    ->deleteBy(['key', 'like', 'theme-' . $event->theme . '-' . $language->lang_code . '-%']);
             }
 
         } catch (Exception $exception) {

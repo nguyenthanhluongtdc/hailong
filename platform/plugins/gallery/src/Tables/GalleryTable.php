@@ -81,20 +81,16 @@ class GalleryTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
+        $query = $this->repository->getModel()->select([
+            'id',
+            'name',
+            'order',
+            'created_at',
+            'status',
+            'image',
+        ]);
 
-        $select = [
-            'galleries.id',
-            'galleries.name',
-            'galleries.order',
-            'galleries.created_at',
-            'galleries.status',
-            'galleries.image',
-        ];
-
-        $query = $model->select($select);
-
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -104,32 +100,26 @@ class GalleryTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'galleries.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'image'      => [
-                'name'  => 'galleries.image',
                 'title' => trans('core/base::tables.image'),
                 'width' => '70px',
             ],
             'name'       => [
-                'name'  => 'galleries.name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'order'      => [
-                'name'  => 'galleries.order',
                 'title' => trans('core/base::tables.order'),
                 'width' => '100px',
             ],
             'created_at' => [
-                'name'  => 'galleries.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
             'status'     => [
-                'name'  => 'galleries.status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
             ],
@@ -158,18 +148,18 @@ class GalleryTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'galleries.name'       => [
+            'name'       => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'galleries.status'     => [
+            'status'     => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => BaseStatusEnum::labels(),
                 'validate' => 'required|' . Rule::in(BaseStatusEnum::values()),
             ],
-            'galleries.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

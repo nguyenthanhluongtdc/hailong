@@ -98,27 +98,22 @@ class CategoryTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'name'       => [
-                'name'  => 'name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'created_at' => [
-                'name'  => 'created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
             'updated_at' => [
-                'name'  => 'updated_at',
                 'title' => trans('core/base::tables.updated_at'),
                 'width' => '100px',
             ],
             'status'     => [
-                'name'  => 'status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
             ],
@@ -147,18 +142,18 @@ class CategoryTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'categories.name'       => [
+            'name'       => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'categories.status'     => [
+            'status'     => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => BaseStatusEnum::labels(),
                 'validate' => 'required|in:' . implode(',', BaseStatusEnum::values()),
             ],
-            'categories.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

@@ -73,18 +73,15 @@ class MemberTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-        $select = [
-            'members.id',
-            'members.first_name',
-            'members.last_name',
-            'members.email',
-            'members.created_at',
-        ];
+        $query = $this->repository->getModel()->select([
+            'id',
+            'first_name',
+            'last_name',
+            'email',
+            'created_at',
+        ]);
 
-        $query = $model->select($select);
-
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -94,22 +91,18 @@ class MemberTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'members.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'first_name' => [
-                'name'  => 'members.first_name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'email'      => [
-                'name'  => 'members.email',
                 'title' => trans('core/base::tables.email'),
                 'class' => 'text-left',
             ],
             'created_at' => [
-                'name'  => 'members.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
@@ -138,22 +131,22 @@ class MemberTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'members.first_name' => [
+            'first_name' => [
                 'title'    => trans('plugins/member::member.first_name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'members.last_name'  => [
+            'last_name'  => [
                 'title'    => trans('plugins/member::member.last_name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'members.email'      => [
+            'email'      => [
                 'title'    => trans('core/base::tables.email'),
                 'type'     => 'text',
                 'validate' => 'required|max:120|email',
             ],
-            'members.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

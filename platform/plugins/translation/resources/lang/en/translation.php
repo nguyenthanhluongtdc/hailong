@@ -18,7 +18,7 @@ return [
     'choose_a_group'           => 'Choose a group',
     'locales'                  => 'Locales',
     'theme-translations'       => 'Theme translations',
-    'admin-translations'       => 'Admin translations',
+    'admin-translations'       => 'Other translations',
     'translate_from'           => 'Translate from',
     'to'                       => 'to',
     'no_other_languages'       => 'No other language to translate!',
@@ -33,4 +33,5 @@ return [
     'select_language'          => 'Select language',
     'flag'                     => 'Flag',
     'folder_is_not_writeable'  => 'Cannot write files! Folder /resources/lang is not writable. Please chmod to make it writable!',
+    'delete'                   => 'Delete',
 ];

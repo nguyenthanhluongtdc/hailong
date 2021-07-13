@@ -2,8 +2,8 @@
 
 namespace Platform\Block;
 
-use Schema;
 use Platform\PluginManagement\Abstracts\PluginOperationAbstract;
+use Illuminate\Support\Facades\Schema;
 
 class Plugin extends PluginOperationAbstract
 {

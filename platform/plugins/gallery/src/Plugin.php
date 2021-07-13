@@ -3,7 +3,7 @@
 namespace Platform\Gallery;
 
 use Platform\PluginManagement\Abstracts\PluginOperationAbstract;
-use Schema;
+use Illuminate\Support\Facades\Schema;
 
 class Plugin extends PluginOperationAbstract
 {

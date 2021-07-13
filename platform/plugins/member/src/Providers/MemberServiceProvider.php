@@ -19,7 +19,6 @@ use Platform\Member\Repositories\Interfaces\MemberActivityLogInterface;
 use Platform\Member\Repositories\Interfaces\MemberInterface;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use Throwable;
 
 class MemberServiceProvider extends ServiceProvider
 {
@@ -116,7 +115,6 @@ class MemberServiceProvider extends ServiceProvider
     /**
      * @param null|string $data
      * @return string
-     * @throws Throwable
      */
     public function addSettings($data = null)
     {

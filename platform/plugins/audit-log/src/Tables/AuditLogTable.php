@@ -64,13 +64,11 @@ class AuditLogTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-        $select = ['audit_histories.*'];
-        $query = $model
+        $query = $this->repository->getModel()
             ->with(['user'])
-            ->select($select);
+            ->select(['*']);
 
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -80,17 +78,17 @@ class AuditLogTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'audit_histories.id',
+                'name'  => 'id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'action'     => [
-                'name'  => 'audit_histories.action',
+                'name'  => 'action',
                 'title' => trans('plugins/audit-log::history.action'),
                 'class' => 'text-left',
             ],
             'user_agent' => [
-                'name'  => 'audit_histories.user_agent',
+                'name'  => 'user_agent',
                 'title' => trans('plugins/audit-log::history.user_agent'),
                 'class' => 'text-left',
             ],

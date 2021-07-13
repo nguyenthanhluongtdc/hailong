@@ -84,19 +84,16 @@ class ContactTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-        $select = [
-            'contacts.id',
-            'contacts.name',
-            'contacts.phone',
-            'contacts.email',
-            'contacts.created_at',
-            'contacts.status',
-        ];
+        $query = $this->repository->getModel()->select([
+            'id',
+            'name',
+            'phone',
+            'email',
+            'created_at',
+            'status',
+        ]);
 
-        $query = $model->select($select);
-
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -106,31 +103,25 @@ class ContactTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'contacts.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'name'       => [
-                'name'  => 'contacts.name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'email'      => [
-                'name'  => 'contacts.email',
                 'title' => trans('plugins/contact::contact.tables.email'),
                 'class' => 'text-left',
             ],
             'phone'      => [
-                'name'  => 'contacts.phone',
                 'title' => trans('plugins/contact::contact.tables.phone'),
             ],
             'created_at' => [
-                'name'  => 'contacts.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
             'status'    => [
-                'name'  => 'contacts.status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
             ],
@@ -151,28 +142,28 @@ class ContactTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'contacts.name'       => [
+            'name'       => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'contacts.email'      => [
+            'email'      => [
                 'title'    => trans('core/base::tables.email'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'contacts.phone'      => [
+            'phone'      => [
                 'title'    => trans('plugins/contact::contact.sender_phone'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'contacts.status'    => [
+            'status'    => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => ContactStatusEnum::labels(),
                 'validate' => 'required|' . Rule::in(ContactStatusEnum::values()),
             ],
-            'contacts.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

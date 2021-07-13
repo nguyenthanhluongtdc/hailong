@@ -96,18 +96,15 @@ class CustomFieldTable extends TableAbstract
      */
     public function query()
     {
-        $model = $this->repository->getModel();
-        $select = [
-            'field_groups.id',
-            'field_groups.title',
-            'field_groups.status',
-            'field_groups.order',
-            'field_groups.created_at',
-        ];
+        $query = $this->repository->getModel()->select([
+            'id',
+            'title',
+            'status',
+            'order',
+            'created_at',
+        ]);
 
-        $query = $model->select($select);
-
-        return $this->applyScopes(apply_filters(BASE_FILTER_TABLE_QUERY, $query, $model, $select));
+        return $this->applyScopes($query);
     }
 
     /**
@@ -117,22 +114,18 @@ class CustomFieldTable extends TableAbstract
     {
         return [
             'id'         => [
-                'name'  => 'field_groups.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'title'      => [
-                'name'  => 'field_groups.title',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
             'created_at' => [
-                'name'  => 'field_groups.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
             'status'     => [
-                'name'  => 'field_groups.status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
             ],
@@ -168,18 +161,18 @@ class CustomFieldTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'field_groups.title'      => [
+            'title'      => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'field_groups.status'     => [
+            'status'     => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => BaseStatusEnum::labels(),
                 'validate' => 'required|' . Rule::in(BaseStatusEnum::values()),
             ],
-            'field_groups.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

@@ -127,9 +127,9 @@ class BackupController extends BaseController
 
     /**
      * @param string $folder
-     * @return \Symfony\Component\HttpFoundation\BinaryFileResponse|boolean
+     * @return BaseHttpResponse|\Symfony\Component\HttpFoundation\BinaryFileResponse
      */
-    public function getDownloadDatabase($folder)
+    public function getDownloadDatabase($folder, BaseHttpResponse $response)
     {
         $path = $this->backup->getBackupPath($folder);
         foreach (scan_folder($path) as $file) {
@@ -138,14 +138,16 @@ class BackupController extends BaseController
             }
         }
 
-        return true;
+        return $response
+            ->setError()
+            ->setMessage(trans('plugins/backup::backup.database_backup_not_existed'));
     }
 
     /**
      * @param string $folder
-     * @return \Symfony\Component\HttpFoundation\BinaryFileResponse|boolean
+     * @return bool|BaseHttpResponse|\Symfony\Component\HttpFoundation\BinaryFileResponse
      */
-    public function getDownloadUploadFolder($folder)
+    public function getDownloadUploadFolder($folder, BaseHttpResponse $response)
     {
         $path = $this->backup->getBackupPath($folder);
         foreach (scan_folder($path) as $file) {
@@ -154,6 +156,8 @@ class BackupController extends BaseController
             }
         }
 
-        return true;
+        return $response
+            ->setError()
+            ->setMessage(trans('plugins/backup::backup.uploads_folder_backup_not_existed'));
     }
 }

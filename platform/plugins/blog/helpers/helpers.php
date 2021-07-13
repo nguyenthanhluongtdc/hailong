@@ -204,9 +204,9 @@ if (!function_exists('get_categories')) {
         $repo = app(CategoryInterface::class);
 
         $categories = $repo->getCategories(Arr::get($args, 'select', ['*']), [
-            'categories.created_at' => 'DESC',
-            'categories.is_default' => 'DESC',
-            'categories.order'      => 'ASC',
+            'created_at' => 'DESC',
+            'is_default' => 'DESC',
+            'order'      => 'ASC',
         ]);
 
         $categories = sort_item_with_children($categories);

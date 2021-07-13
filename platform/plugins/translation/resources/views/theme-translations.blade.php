@@ -31,10 +31,10 @@
                                 <tr>
                                     <td class="text-left" style="width: 50%">
                                         {!! htmlentities($key, ENT_QUOTES, 'UTF-8', false) !!}
-                                        <input type="hidden" name="translations[{{ $key }}][key]" value="{!! htmlentities($key, ENT_QUOTES, 'UTF-8', false) !!}">
+                                        <input type="hidden" name="translations[{{ $key }}][key]" class="translation-key" value="{!! htmlentities($key, ENT_QUOTES, 'UTF-8', false) !!}">
                                     </td>
                                     <td class="text-left" style="width: 50%">
-                                        <input type="text" class="form-control" name="translations[{{ $key }}][value]" value="{!! htmlentities($translation, ENT_QUOTES, 'UTF-8', false) !!}">
+                                        <input type="text" class="form-control translation-value" name="translations[{{ $key }}][value]" value="{!! htmlentities($translation, ENT_QUOTES, 'UTF-8', false) !!}">
                                     </td>
                                 </tr>
                             @endforeach
