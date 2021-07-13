@@ -31,12 +31,12 @@
                             <a href="/news-detail" title="">
                                 <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-city-.jpg')}}">
                                 <div class="news-post__title">
-                                    <h4>Căn hộ cao cấp The Minato Residence</h4>
+                                    <h4 class="__text-20">Căn hộ cao cấp The Minato Residence</h4>
                                 </div>
                                 <div class="news-post__time">
                                     <span>15:56 25/07/2020</span>  
                                 </div>
-                                <div class="news-post__content">
+                                <div class="news-post__content __text-18">
                                     <p> Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.</p>
                                 </div>
                             </a>
@@ -48,12 +48,12 @@
                             <a href="/news-detail" title="">
                                 <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-city-2.jpg')}}">
                                 <div class="news-post__title">
-                                    <h4>Giúp tiểu thương bán hàng trên thương mại điện tử </h4>
+                                    <h4 class="__text-20">Giúp tiểu thương bán hàng trên thương mại điện tử </h4>
                                 </div>
                                 <div class="news-post__time">
                                     <span>15:56 25/07/2020</span>  
                                 </div>
-                                <div class="news-post__content">
+                                <div class="news-post__content __text-18">
                                     <p>Trong bối cảnh hàng loạt chợ truyền thống đóng cửa để phòng dịch, giải pháp hỗ trợ tiểu thương tiếp cận kênh online đang được tính đến. </p>
                                 </div>
                             </a>
@@ -64,12 +64,12 @@
                             <a href="/news-detail" title="">
                                 <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-3.jpg')}}">
                                 <div class="news-post__title">
-                                    <h4>'Nắm' doanh thu người bán trên sàn thương mại điện tử từ 2022</h4>
+                                    <h4 class="__text-20">'Nắm' doanh thu người bán trên sàn thương mại điện tử từ 2022</h4>
                                 </div>
                                 <div class="news-post__time">
                                     <span>15:56 25/07/2020</span>  
                                 </div>
-                                <div class="news-post__content">
+                                <div class="news-post__content __text-18">
                                     <p> Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử.  </p>
                                 </div>
                             </a>
@@ -274,29 +274,7 @@
     
         </div>
     </section>
-    <section>
-        <div class="container-customize">
-            <div class="pagination-wrapper">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="pagination_style">
-                            <nav aria-label="...">
-                                <ul class="pagination">
-                                    {{-- <li class="disabled page-link-last"><span>Trang trước</span></li> --}}
-                                    <li class="active page-item"><span class="page-link">1</span>
-                                        <li class=" page-item"><span class="page-link">2</span></li>
-                                        <li class=" page-item"><span class="page-link">3</span></li>
-                                        <li class=" page-item"><span class="page-link">4</span></li>
-                                    <li class="page-link-last"><a href="" rel="next">Trang sau</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-    </section>
+    @includeIf("theme.hailongglass::views.components.pagination")
     @includeIf("theme.hailongglass::views.components.form-signup")
     <!--css in file common.scss----->
     <div class="box-common-typeicalproject-carousel-wrapper">
