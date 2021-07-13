@@ -28,6 +28,22 @@
                             display: block;
                             width: 100%;
                             text-align: left;
+                            position: relative;
+                        }
+
+                        button::after {
+                            position: absolute;
+                            content: "\f0d7";
+                            font-family: "Font Awesome 5 Pro";
+                            font-weight: bold;
+                            top: 0;
+                            right: 0;
+                            color: $text84cba5;
+                        }
+
+                        button:not(.collapsed)::after {
+                            content: "\f0de";
+                            color: rgb(238, 67, 67);
                         }
                     }
                 }
@@ -35,3 +51,4 @@
         }
     }
 }
+

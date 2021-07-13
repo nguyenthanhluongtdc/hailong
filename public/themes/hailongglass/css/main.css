@@ -11480,6 +11480,20 @@ footer .footer-wrapper .footer__bottom p {
   display: block;
   width: 100%;
   text-align: left;
+  position: relative;
+}
+#warranty-policy-page #accordion .outer-shell .card .card-header h5 button::after {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: bold;
+  top: 0;
+  right: 0;
+  color: #84cba5;
+}
+#warranty-policy-page #accordion .outer-shell .card .card-header h5 button:not(.collapsed)::after {
+  content: "";
+  color: #ee4343;
 }
 
 /**
