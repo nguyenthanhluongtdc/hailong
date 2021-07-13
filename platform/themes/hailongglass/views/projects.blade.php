@@ -52,7 +52,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-1.jpg')}}">
                                         <div class="project__title ">
                                             <h4 class="__text-20">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích</h4>
@@ -65,7 +65,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-2.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">Viettel chọn ABB xây dựng tòa nhà đổi mới sáng tạo</h4>
@@ -78,7 +78,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-3.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-4.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích</h4>
@@ -104,7 +104,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-5.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">Viettel chọn ABB xây dựng tòa nhà đổi mới sáng tạo</h4>
@@ -117,7 +117,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-6.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -130,7 +130,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-7.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích</h4>
@@ -143,7 +143,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-8.jpg')}}">
                                         <div class="project__title ">
                                             <h4 class="__text-20">Viettel chọn ABB xây dựng tòa nhà đổi mới sáng tạo</h4>
@@ -156,7 +156,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -174,7 +174,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -187,7 +187,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -200,7 +200,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -218,7 +218,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -231,7 +231,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -244,7 +244,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -261,7 +261,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -274,7 +274,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
@@ -287,7 +287,7 @@
                             </div>
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
-                                    <a href="/project-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
+                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                         <img class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}">
                                         <div class="project__title">
                                             <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>

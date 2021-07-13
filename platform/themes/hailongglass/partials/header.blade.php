@@ -53,10 +53,10 @@
                             <a class="nav-link" href="/news">Tin tức</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dự án</a>
+                            <a class="nav-link" href="/project">Dự án</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Liên hệ</a>
+                            <a class="nav-link" href="/contact">Liên hệ</a>
                         </li>
                         <li class="bilingual">
                             <a class="en active" href="#"> EN </a>
