@@ -1,0 +1,98 @@
+#product-details-page {
+
+    .section-product-info-wrapper {
+
+        .section-product-info {
+
+            .box-content {
+
+                .line-border {
+                    width: 15%;
+                    height: 2px;
+                    background-color: $backgroundGreen;
+                   
+                    @media (min-width: 769px) {
+                        margin-top: $size2_5;
+                        margin-bottom: $size2_5;
+                        transform: translateX(-30%);
+                    }
+
+                    margin-top: $size1_5;
+                    margin-bottom: $size1_5;
+                }
+
+                &__bottom {
+
+                    .__bottom__line__one {
+                        color: $textGreen;
+                        margin-bottom: $size1;
+                    }
+
+                    .__bottom__line__two {    
+                        margin-bottom: $size1;
+                    }
+
+                    
+                }
+            }
+        }
+    }
+
+    .section-product-more-info-wrapper {
+        background-color: $backgroundf3f3f3;
+
+        .section-our-policy-wrapper {
+            background-color: $backgroundWhite;
+            padding-left: $size1;
+            padding-right: $size1;
+
+            .section-our-policy {
+                padding-top: $size2;
+                padding-bottom: $size1;
+            }
+        }
+    }
+
+    .section-procedure-wrapper {
+
+        .section-procedure {
+            border-bottom: 1px solid $borderf3f3f3;
+            .box__btn {
+                @media (min-width: 1600px) {
+                    margin-top: calc(#{$size9} + #{$size2} + 10px);
+                }
+                margin-top: calc(#{$size9} + 10px);
+
+                @media (max-width: 768px) {
+                    margin-top: $size2;
+                }
+            }
+        }
+    }
+
+    .box__btn {
+
+        button {
+            width: calc(#{$size4} + #{$size4});
+            padding-top: $size0_625;
+            padding-bottom: $size0_625;
+            i {
+                margin-right: $size0_625;
+            }
+        }
+
+        .btn-order {
+            background-color: $backgroundGreen;
+            color: $textWhite;
+            outline: none;
+            border: 1px solid $borderGreen;
+            margin-right: $size0_625;
+        }
+
+        .btn-quote {
+            border: 1px solid $border84cba5;
+            outline: none;
+            color: $textco8b8b8b;
+        }
+    }
+}

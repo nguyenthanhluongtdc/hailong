@@ -97,34 +97,34 @@
                             </div>
                             <ul class="list-cate-pro">
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính cường lực </a>
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title=""> Kính cường lực </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính low -E </a>
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title=""> Kính low -E </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link active" href="#" title=""> Kính dán an toàn </a>
+                                    <a class="list-cate-pro__item__link active" href="/product-detail" title=""> Kính dán an toàn </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính rạn </a>
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title=""> Kính rạn </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính hộp </a>
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title=""> Kính hộp </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính phun cát </a>
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title=""> Kính phun cát </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính màu trang trí </a>
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title=""> Kính màu trang trí </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính ngăn cháy </a>
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title=""> Kính ngăn cháy </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="#" title=""> Kính uốn cong </a>
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title=""> Kính uốn cong </a>
                                 </li>
                                 <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="#" title=""> Rèm kính hộp </a>
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title=""> Rèm kính hộp </a>
                                 </li>
                             </ul>
                         </div>
@@ -170,9 +170,9 @@
     <!--css in file common.scss----->
     <div class="box-common-many-col-wrapper">
         <div class="container-customize pr-lg-0">
-            <div class="box-common-many-col distance-below theme-customize-header-section">
+            <div class="box-common-many-col theme-customize-header-section">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 pb-4">
                         <div class="theme-customize-header-section__header">
                             <h2 class="theme-customize-header-section__header__title">
                                 Tại sao chọn Hailong Glass

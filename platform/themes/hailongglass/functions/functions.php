@@ -8,6 +8,7 @@ register_page_template([
     'teachnological-line' => 'Teachnological line',
     'products' => 'Products',
     'product-price' => 'Product Price',
+    'product-detail' => 'Product Detail',
     'warranty-policy' => 'Warranty Policy',
     'news' => 'News',
     'news-detail' => 'News Detail',

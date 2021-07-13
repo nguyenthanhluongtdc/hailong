@@ -1,40 +1,39 @@
-#products-page {
-    .section-shoppingguide-wrapper {
-        background-color: $backgroundf3f3f3;
-        .section-shoppingguide {
-        &__content {
-            .step {
-            display: grid;
-            grid-template-columns: 15% auto;
+//common use module
+.section-shoppingguide-wrapper {
+    background-color: $backgroundf3f3f3;
+    .section-shoppingguide {
+    &__content {
+        .step {
+        display: grid;
+        grid-template-columns: 15% auto;
 
-            b {
-                font-size: $size1_875;
-                color: $textGreen;
+        b {
+            font-size: $size1_875;
+            color: $textGreen;
 
-                @media (max-width: 992px) {
-                font-size: $size1_5;
-                }
-
-                @media (max-width: 567px) {
-                font-size: $size1_25;
-                }
+            @media (max-width: 992px) {
+            font-size: $size1_5;
             }
 
-            span {
-                padding-top: 0.5rem;
-            }
-
-            i {
-                padding-top: $size1_5;
-                color: $textGreen;
-            }
-
-            .order {
-                color: $textGreen;
-            }
+            @media (max-width: 567px) {
+            font-size: $size1_25;
             }
         }
+
+        span {
+            padding-top: 0.5rem;
         }
+
+        i {
+            padding-top: $size1_5;
+            color: $textGreen;
+        }
+
+        .order {
+            color: $textGreen;
+        }
+        }
+    }
     }
 }
 

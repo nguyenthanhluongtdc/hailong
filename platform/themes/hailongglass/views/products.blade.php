@@ -45,38 +45,38 @@
         <div class="container-customize">
             <ul class="section-products-list-cate-pro distance-below distance-above">
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính cường lực </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính cường lực </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính low -E </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính low -E </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link active" href="#" title=""> Kính dán an toàn </a>
+                    <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title=""> Kính dán an toàn </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính rạn </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính rạn </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính hộp </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính hộp </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính phun cát </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính phun cát </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính màu trang trí </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính màu trang trí </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính ngăn cháy </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính ngăn cháy </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính uốn cong </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính uốn cong </a>
                 </li>
             </ul>
         </div>
     </div>
 
     <div class="section-shoppingguide-wrapper">
-        <div class="container-customize pr-0">
+        <div class="container-customize pr-lg-0">
             <div class="section-shoppingguide distance-below row">
                 <div class="section-shoppingguide__content col-lg-6 px-4">
                     <div class="theme-customize-header-section__header">

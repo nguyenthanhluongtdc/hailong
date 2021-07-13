@@ -3,7 +3,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    width: calc(#{$size1_875} + #{$size1_875});
+    width: $size3_5;
     background-color: $backgroundGreen;
     z-index: 1000;
 
@@ -20,8 +20,8 @@
             display: flex;
             align-items: center;
             width: max-content;
-            padding-top: $size0_9375;
-            padding-bottom: $size0_9375;
+            padding-top: $size0_625;
+            padding-bottom: $size0_625;
             border-top: 1px solid $border84cba5;
             color: $text84cba5;
             transition: transform 200ms;
@@ -30,9 +30,8 @@
 
             &__icon {
                 font-size: $size1_5625;
-                width: calc(#{$size1_875} + #{$size1_875});
+                width: $size3_5;
                 display: inline-block;
-               
             }
 
             &__content {

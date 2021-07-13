@@ -20,36 +20,36 @@
             }
         }
     }
+}
 
-    .our-policy-wrapper {
-        border-bottom: 2px solid $borderf3f3f3;
+.section-our-policy-wrapper {
+    border-bottom: 2px solid $borderf3f3f3;
 
-        .our-policy {
-            
-            &__col {
-                display: flex;
+    .section-our-policy {
+        
+        &__col {
+            display: flex;
 
-                &__icon {
-                    margin-right: $size1_5;
-                    font-size: $size1_875;
-                    width: $size2_5;
+            &__icon {
+                margin-right: $size1_5;
+                font-size: $size1_875;
+                width: $size2_5;
+                color: $textGreen;
+
+                @media (max-width: 992px) {
+                    margin-right: $size1;
+                }
+            }
+
+            &__content {
+                .__content__title {
                     color: $textGreen;
-
-                    @media (max-width: 992px) {
-                        margin-right: $size1;
-                    }
+                    font-size: $size1_25;
+                    font-weight: bold;
                 }
 
-                &__content {
-                    .__content__title {
-                        color: $textGreen;
-                        font-size: $size1_25;
-                        font-weight: bold;
-                    }
+                .__content__des {
 
-                    .__content__des {
-
-                    }
                 }
             }
         }

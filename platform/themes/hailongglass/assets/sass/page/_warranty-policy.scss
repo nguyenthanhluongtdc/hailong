@@ -1,10 +1,11 @@
 #warranty-policy-page {
+   
     #accordion {
+        margin-left: -$size2;
+        margin-right: -$size2;
         @media (min-width: 768px) {
             display: flex;
             flex-wrap: wrap;
-            margin-left: -$size2;
-            margin-right: -$size2;
         }
 
         .outer-shell {

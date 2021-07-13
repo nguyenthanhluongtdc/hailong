@@ -285,7 +285,7 @@
             .line__item {
                 padding-top: $size1_5625;
                 padding-bottom: $size1_5625;
-                border-bottom: 1px solid rgb($borderf3f3f3, $alpha0_5);
+                border-bottom: 1px solid $borderf3f3f3;
 
                 .address {
                     position: relative;
@@ -336,6 +336,9 @@
                 }
 
                 &__list {
+                    >div{
+                        border-bottom: 1px solid rgba($borderf3f3f3, $alpha0_2);
+                    }
                     >div:first-child {
                         padding-top: 0;
                     }
@@ -371,9 +374,28 @@
                     position: absolute;
                     width: $size0_625;
                     height: $size0_125;
-                    background-color: red;
                     top: 0;
                     left: 0;
+                }
+                &:nth-child(1) {
+                    &::before {
+                        background-color: blue;
+                    }
+                }
+                &:nth-child(2) {
+                    &::before {
+                        background-color: yellow;
+                    }
+                }
+                &:nth-child(3) {
+                    &::before {
+                        background-color: red;
+                    }
+                }
+                &:nth-child(4) {
+                    &::before {
+                        background-color: green;
+                    }
                 }
 
                 &:nth-child(odd) {

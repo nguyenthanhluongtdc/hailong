@@ -29,7 +29,7 @@
     </div>
 
     <div class="box-common-intro-wrapper mt-5">
-        <div class="container-customize pr-0">
+        <div class="container-customize pr-md-0">
             <div class="box-common-intro theme-customize-header-section">
                 <div class="row">
                     <div class="col-md-6 col-12">
@@ -87,46 +87,46 @@
             </div>
             <ul class="section-products-list-cate-pro distance-below">
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính cường lực </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính cường lực </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính low -E </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính low -E </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link active" href="#" title=""> Kính dán an toàn </a>
+                    <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title=""> Kính dán an toàn </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính rạn </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính rạn </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính hộp </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính hộp </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính phun cát </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính phun cát </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính màu trang trí </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính màu trang trí </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính ngăn cháy </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính ngăn cháy </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="#" title=""> Kính uốn cong </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính uốn cong </a>
                 </li>
             </ul>
         </div>
     </div>
 
-    <div class="our-policy-wrapper">
+    <div class="section-our-policy-wrapper">
         <div class="container-customize">
-            <div class="our-policy distance-y">
+            <div class="section-our-policy distance-y">
                 <div class="row mx-lg-n5 mx-n3">
                     <div class="col-sm-4 px-lg-5 px-3">
-                        <div class="our-policy__col">
-                            <div class="our-policy__col__icon">
+                        <div class="section-our-policy__col">
+                            <div class="section-our-policy__col__icon">
                                 <i class="fad fa-truck-moving"></i>
                             </div>
-                            <div class="our-policy__col__content">
+                            <div class="section-our-policy__col__content">
                                 <h3 class="__content__title"> Miễn phí vận chuyển </h3>
                                 <p class="__content__des line__children"> trong nội thành các thành phố có văn phòng ở công ty </p>
                             </div>
@@ -134,11 +134,11 @@
                     </div>
 
                     <div class="col-sm-4 px-lg-5 px-3">
-                        <div class="our-policy__col">
-                            <div class="our-policy__col__icon">
+                        <div class="section-our-policy__col">
+                            <div class="section-our-policy__col__icon">
                                <i class="fas fa-award"></i>
                             </div>
-                            <div class="our-policy__col__content">
+                            <div class="section-our-policy__col__content">
                                 <h3 class="__content__title"> Bảo hành uy tín </h3>
                                 <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
                             </div>
@@ -146,11 +146,11 @@
                     </div>
 
                     <div class="col-sm-4 px-lg-5 px-3">
-                        <div class="our-policy__col">
-                            <div class="our-policy__col__icon">
+                        <div class="section-our-policy__col">
+                            <div class="section-our-policy__col__icon">
                                 <i class="fab fa-chrome"></i>
                             </div>
-                            <div class="our-policy__col__content">
+                            <div class="section-our-policy__col__content">
                                 <h3 class="__content__title"> Hệ thống quản lý tối ưu </h3>
                                 <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
                             </div>
