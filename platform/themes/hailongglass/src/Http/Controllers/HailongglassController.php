@@ -1,6 +1,6 @@
 <?php
 
-namespace Theme\Hailongglass\Http\Controllers;
+namespace Theme\Main\Http\Controllers;
 
 use Platform\Theme\Http\Controllers\PublicController;
 use BaseHelper;
@@ -18,7 +18,7 @@ use SiteMapManager;
 use SlugHelper;
 use Theme;
 
-class HailongglassController extends PublicController
+class MainController extends PublicController
 {
      /**
      * @return \Illuminate\Http\Response|Response

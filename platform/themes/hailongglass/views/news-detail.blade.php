@@ -189,5 +189,5 @@
             </div>
         </div>
     </div>
-    @includeIf("theme.hailongglass::views.components.form-signup")
+    @includeIf("theme.main::views.components.form-signup")
 </div>

@@ -307,7 +307,7 @@
        
 
     </div>
-    @includeIf("theme.hailongglass::views.components.pagination")
-    @includeIf("theme.hailongglass::views.components.form-signup")
+    @includeIf("theme.main::views.components.pagination")
+    @includeIf("theme.main::views.components.form-signup")
    
 </div>

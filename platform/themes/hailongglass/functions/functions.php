@@ -19,7 +19,7 @@ register_page_template([
 register_sidebar([
     'id'          => 'second_sidebar',
     'name'        => 'Second sidebar',
-    'description' => 'This is a sample sidebar for hailongglass theme',
+    'description' => 'This is a sample sidebar for main theme',
 ]);
 
 RvMedia::setUploadPathAndURLToPublic();
