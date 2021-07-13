@@ -2,22 +2,22 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./platform/themes/hailongglass/assets/js/main.js":
+/***/ "./platform/themes/main/assets/js/main.js":
 /*!********************************************************!*\
-  !*** ./platform/themes/hailongglass/assets/js/main.js ***!
+  !*** ./platform/themes/main/assets/js/main.js ***!
   \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _page_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page/home */ "./platform/themes/hailongglass/assets/js/page/home.js");
+/* harmony import */ var _page_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page/home */ "./platform/themes/main/assets/js/page/home.js");
 //import page index
 
 
 /***/ }),
 
-/***/ "./platform/themes/hailongglass/assets/js/page/home.js":
+/***/ "./platform/themes/main/assets/js/page/home.js":
 /*!*************************************************************!*\
-  !*** ./platform/themes/hailongglass/assets/js/page/home.js ***!
+  !*** ./platform/themes/main/assets/js/page/home.js ***!
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -33,9 +33,9 @@ home();
 
 /***/ }),
 
-/***/ "./platform/themes/hailongglass/assets/sass/main.scss":
+/***/ "./platform/themes/main/assets/sass/main.scss":
 /*!************************************************************!*\
-  !*** ./platform/themes/hailongglass/assets/sass/main.scss ***!
+  !*** ./platform/themes/main/assets/sass/main.scss ***!
   \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -142,8 +142,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/themes/hailongglass/js/main": 0,
-/******/ 			"themes/hailongglass/css/main": 0
+/******/ 			"/themes/main/js/main": 0,
+/******/ 			"themes/main/css/main": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -191,8 +191,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["themes/hailongglass/css/main"], () => (__webpack_require__("./platform/themes/hailongglass/assets/js/main.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["themes/hailongglass/css/main"], () => (__webpack_require__("./platform/themes/hailongglass/assets/sass/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["themes/main/css/main"], () => (__webpack_require__("./platform/themes/main/assets/js/main.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["themes/main/css/main"], () => (__webpack_require__("./platform/themes/main/assets/sass/main.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
