@@ -7,13 +7,10 @@ mix.options({
     terser: {
         extractComments: false,
     }
-})
-.copy('platform/themes/hailongglass/public/images', 'public/themes/hailongglass/images')
-.copy('platform/themes/hailongglass/public/fonts', 'public/themes/hailongglass/fonts')
-.js('platform/themes/hailongglass/assets/js/main.js', 'public/themes/hailongglass/js/main.js')
-.sass('platform/themes/hailongglass/assets/sass/main.scss', 'public/themes/hailongglass/css/main.css');
+});
 
 // Run all webpack.mix.js in app
+glob.sync('./platform/**/**/webpack.mix.js').forEach(item => require(item));
 
 // Run only for a package, replace [package] by the name of package you want to compile assets
 // require('./platform/packages/[package]/webpack.mix.js');

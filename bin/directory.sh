@@ -238,7 +238,7 @@ if [ -f "$SCRIPT_PATH/../artisan" ]; then
 fi
 
 ################ FOR Zend Framework & Doctrine
-if [ -d "$SCRIPT_PATH/../data/DoctrineModule" ]; then
+if [ -d "$SCRIPT_PATH/../data" ]; then
   ## [ ! -d "$SCRIPT_PATH/../public/themes/webapp/data/captcha"  ] && $MKDIR -m $FDMODE -p $SCRIPT_PATH/../public/themes/webapp/data/captcha && touch $SCRIPT_PATH/../public/themes/webapp/data/captcha/index.html
   ## [ ! -d "$SCRIPT_PATH/../public/themes/webapp/data/pdf"  ] && $MKDIR -m $FDMODE -p $SCRIPT_PATH/../public/themes/webapp/data/pdf && touch $SCRIPT_PATH/../public/themes/webapp/data/pdf/index.html
 
@@ -258,20 +258,6 @@ if [ -d "$SCRIPT_PATH/../data/DoctrineModule" ]; then
   [ ! -d "$SCRIPT_PATH/../data/DoctrineMongoODMModule"  ] && $MKDIR -m $FDMODE -p $SCRIPT_PATH/../data/DoctrineMongoODMModule && touch $SCRIPT_PATH/../data/DoctrineMongoODMModule/.gitignore && echo -e "*\n!.gitignore"$'\r' > $SCRIPT_PATH/../data/DoctrineMongoODMModule/.gitignore
   [ ! -d "$SCRIPT_PATH/../data/DoctrineMongoODMModule/Hydrator"  ] && $MKDIR -m $FDMODE -p $SCRIPT_PATH/../data/DoctrineMongoODMModule/Hydrator && touch $SCRIPT_PATH/../data/DoctrineMongoODMModule/Hydrator/.gitignore && echo -e "*\n!.gitignore"$'\r' > $SCRIPT_PATH/../data/DoctrineMongoODMModule/Hydrator/.gitignore
   [ ! -d "$SCRIPT_PATH/../data/DoctrineMongoODMModule/Proxy"  ] && $MKDIR -m $FDMODE -p $SCRIPT_PATH/../data/DoctrineMongoODMModule/Proxy && touch $SCRIPT_PATH/../data/DoctrineMongoODMModule/Proxy/.gitignore && echo -e "*\n!.gitignore"$'\r' > $SCRIPT_PATH/../data/DoctrineMongoODMModule/Proxy/.gitignore
-fi
-
-## ($CD $SCRIPT_PATH && $FIND $SCRIPT_PATH -type d -exec touch {}/index.html \;)
-
-## get last composer
-if [ -f composer.phar ]; then
-  ## $PHP $PHPCOPTS composer.phar config --global discard-changes true
-  $PHP $PHPCOPTS composer.phar self-update
-else
-  if [ $HASCURL == 1 ]; then
-    curl -sS https://getcomposer.org/installer | $PHP
-  else
-    $PHP $PHPCOPTS -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
-  fi
 fi
 
 ################ FOR LARAVEL
@@ -294,7 +280,7 @@ if [ -f "$SCRIPT_PATH/../artisan" ]; then
 fi
 
 ################ FOR Zend Framework & Doctrine
-if [ -d "$SCRIPT_PATH/../data/DoctrineModule" ]; then
+if [ -d "$SCRIPT_PATH/../data" ]; then
   ($CD $SCRIPT_PATH && $CHMOD -R 0777 $SCRIPT_PATH/../data/ && $CHMOD 0777 $SCRIPT_PATH/../data/cache/)
   echo -e "$BLUE All paths created $NORMAL"
 fi

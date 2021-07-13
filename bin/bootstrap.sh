@@ -238,7 +238,7 @@ if [ -f "$SCRIPT_PATH/../artisan" ]; then
 fi
 
 ################ FOR Zend Framework & Doctrine
-if [ -d "$SCRIPT_PATH/../data/DoctrineModule" ]; then
+if [ -d "$SCRIPT_PATH/../data" ]; then
   ## [ ! -d "$SCRIPT_PATH/../public/themes/webapp/data/captcha"  ] && $MKDIR -m $FDMODE -p $SCRIPT_PATH/../public/themes/webapp/data/captcha && touch $SCRIPT_PATH/../public/themes/webapp/data/captcha/index.html
   ## [ ! -d "$SCRIPT_PATH/../public/themes/webapp/data/pdf"  ] && $MKDIR -m $FDMODE -p $SCRIPT_PATH/../public/themes/webapp/data/pdf && touch $SCRIPT_PATH/../public/themes/webapp/data/pdf/index.html
 
@@ -288,6 +288,19 @@ else
   echo "$PHP $PHPCOPTS composer.phar $DEVMODE install -o -a"
 fi
 
+# install or update front-end library
+if [ -f composer.front.json ]
+    then
+        if [ -f composer.front.lock ]
+            then
+                # COMPOSER=composer.front.json $PHP $PHPCOPTS composer.phar config --global discard-changes true
+                COMPOSER=composer.front.json $PHP $PHPCOPTS composer.phar $DEVMODE update -o -a;
+            else
+                # COMPOSER=composer.front.json $PHP $PHPCOPTS composer.phar config --global discard-changes true
+                COMPOSER=composer.front.json $PHP $PHPCOPTS composer.phar $DEVMODE install -o -a
+        fi
+fi
+
 ################ FOR LARAVEL
 if [ -f "$SCRIPT_PATH/../artisan" ]; then
   ## ($CD $SCRIPT_PATH/../ && $PHP $PHPCOPTS artisan vendor:publish --tag=public --force)
@@ -308,7 +321,7 @@ if [ -f "$SCRIPT_PATH/../artisan" ]; then
 fi
 
 ################ FOR Zend Framework & Doctrine
-if [ -d "$SCRIPT_PATH/../data/DoctrineModule" ]; then
+if [ -d "$SCRIPT_PATH/../data" ]; then
   ($CD $SCRIPT_PATH && $CHMOD -R 0777 $SCRIPT_PATH/../data/ && $CHMOD 0777 $SCRIPT_PATH/../data/cache/)
   echo -e "$BLUE All paths created $NORMAL"
 fi
