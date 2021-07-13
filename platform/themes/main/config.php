@@ -55,12 +55,12 @@ return [
             $theme->asset()->add('font-awesome-pro', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
             
             $theme->asset()->add('splidecss', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css');
-            $theme->asset()->usePath()->add('style', 'css/main.css');
+            $theme->asset()->usePath()->add('style', 'css/common.css');
             $theme->asset()->container('header')->add('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
             $theme->asset()->container('footer')->add('bootstrapjsdelivr', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
             $theme->asset()->container('footer')->add('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
             $theme->asset()->container('header')->add('splidejs', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js');
-            $theme->asset()->container('footer')->usePath()->add('script', 'js/main.js');
+            $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js');
             if (function_exists('shortcode')) {
                 $theme->composer(['index', 'page', 'post'], function (\Platform\Shortcode\View\View $view) {
                     $view->withShortcodes();
