@@ -95,4 +95,133 @@
             color: $textco8b8b8b;
         }
     }
+
+    #orderModal {
+        
+        .modal-dialog {
+            max-width: 60%;
+
+            @media (max-width: 767px) {
+                max-width: 70%;
+            }
+
+            @media (max-width: 567px) {
+                max-width: 90%;
+            }
+            
+            .form-control {
+                height: auto;
+                padding: $size0_25 $size0_625;
+                border-radius: 0;
+            }
+        }
+    }
+
+    #successModal {
+        .modal-dialog {
+            max-width: 60%;
+
+            @media (max-width: 767px) {
+                max-width: 70%;
+            }
+
+            @media (max-width: 567px) {
+                max-width: 90%;
+            }
+            
+            .modal-content {
+                border: none;
+                border-radius: none;
+
+                .col-body {
+                    
+                    position: relative;
+
+                    .bg-md-image {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: -1;
+                    }
+                   
+                    .col-content {
+                        .icon-success {
+                            i {
+                                font-size: $size3_75;
+                                color: $textGreen;
+                            }
+                        }
+            
+                        .read-more {
+                            padding: $size0_625 $size1;
+                            background-color: $backgroundGreen;
+                            color: $textWhite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #product-details-page {
+
+        #orderModal {
+            
+            .modal-dialog {
+                margin: 1.75rem auto;
+                height: calc(100vh - 100px);
+    
+                .position {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                .col-right {
+                    background-color: rgba($color: #000000, $alpha: $alpha0_5);
+                }
+
+                .theme-customize-header-section__header {
+                    &__title {
+                        color: #09e06d;
+                    }
+                    &__des {
+                        color: $textWhite;
+                    }
+                }
+            }
+        }
+
+        #successModal {
+            .modal-dialog {
+                
+                .modal-content {
+    
+                    .modal-body {
+                        position: relative;
+                        .position {
+                            clip-path: circle(40.2% at 83% 4%);
+
+
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                        }
+
+                        .col-body {
+                            box-shadow: 2px 2px 1px 1px #f0f0f0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

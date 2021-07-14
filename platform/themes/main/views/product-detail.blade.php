@@ -58,7 +58,7 @@
                                 <div class="__bottom__line__two"> Quy trình sản xuất </div>
 
                                 <div class="box__btn">
-                                    <button class="btn-order"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
+                                    <button class="btn-order" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
                                     <button class="btn-quote"><i class="fal fa-door-open"></i> Báo giá </button>
                                 </div>
                             </div>
@@ -247,7 +247,7 @@
 
                     <div class="col-lg-2 col-md-3">
                         <div class="box__btn">
-                            <button class="btn-order mr-0 mb-2"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
+                            <button class="btn-order mr-0 mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
                             <button class="btn-quote"><i class="fal fa-door-open"></i> Báo giá </button>
                         </div>
                     </div>
@@ -339,4 +339,108 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row mr-md-0 position-relative">
+                        <div class="col-md-5 col-12 col-left position" style="background-image: url({{Theme::asset()->url('/images/products/ordersucces.jpg')}}); background-repeat: no-repeat; background-size: cover;">
+                            
+                        </div>
+
+                        <div class="col-md-7 p-0 col-12 col-right pl-md-4">
+                            <div class="modal-header border-bottom-0 pb-2">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <i class="fal fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="form-modal pl-md-3 pr-md-5 px-3 pb-4">
+                                <div class="theme-customize-header-section__header pt-0">
+                                    <h2 class="theme-customize-header-section__header__title mb-1 pb-0">
+                                        Đặt hàng
+                                    </h2>
+                                    <p class="theme-customize-header-section__header__des mb-3">
+                                        Quý khách vui lòng điền chính xác thông tin.
+                                    </p>
+                                </div>
+                                <form action="#" method="POST">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="Ho ten">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="SDT">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="Tinh/thanh">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="Quan/huyen">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="Phuong/xa">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="Dia chi giao hang">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="Kinh cuong luc">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" id="recipient-name" placeholder="Upload ban ve">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message-text" placeholder="Ghi chu kem theo"></textarea>
+                                    </div>
+                                    <div class="box__btn">
+                                        <button class="btn-order" data-target="#successModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog mx-auto" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-md-6 position" style="background-image: url({{Theme::asset()->url('/images/products/ordersucces.jpg')}}); background-repeat: no-repeat; background-size: cover;">
+                          
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="col-body p-3">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <i class="fal fa-times"></i>
+                                </button>
+
+                                <div class="col-content distance-y">
+                                    <div class="icon-success mb-lg-5 mb-4">
+                                        <i class="fal fa-check-circle"></i>
+                                    </div>
+                                    <div class="theme-customize-header-section__header pt-0">
+                                        <h2 class="theme-customize-header-section__header__title mb-3 pb-0">
+                                            Quý khách đặt hàng thành công
+                                        </h2>
+                                        <p class="theme-customize-header-section__header__des mb-3">
+                                            Cảm ơn quý khách! <br>
+                                            Chúng tôi sẽ tiếp nhận đơn hàng, kiểm tra lại và xác nhận đơn hàng của Quý khách trước khi làm lệnh sản xuất
+                                        </p>
+                                    </div>
+                                    <a href="/products" title="" class="read-more mt-4 d-inline-block"> Xem thêm sản phẩm </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
