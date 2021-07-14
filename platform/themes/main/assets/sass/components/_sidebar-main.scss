@@ -34,6 +34,13 @@
                 display: inline-block;
             }
 
+            &__text {
+                font-weight: bold;
+                width: $size4_0625;
+                display: inline-block;
+                font-size: $size1_25;
+            }
+
             &__content {
                 display: inline-block;
 

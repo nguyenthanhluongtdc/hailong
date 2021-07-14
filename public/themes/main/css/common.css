@@ -10149,7 +10149,6 @@ a {
 }
 .theme-customize-header-section__header__des {
   margin-bottom: 0;
-  font-size: 1.25rem;
 }
 @media (min-width: 768px) {
   .theme-customize-header-section__header__des {
@@ -10166,6 +10165,9 @@ a {
   .theme-customize-header-section__header__des span {
     margin-bottom: 0.625rem;
   }
+}
+.theme-customize-header-section__header p {
+  font-size: 1.25rem;
 }
 .theme-customize-header-section__tabs__list {
   display: flex;
@@ -10465,13 +10467,13 @@ a {
   background-color: blue;
 }
 .box-common-producecapacity-wrapper .box-common-producecapacity__list__item:nth-child(2)::before {
-  background-color: yellow;
+  background-color: green;
 }
 .box-common-producecapacity-wrapper .box-common-producecapacity__list__item:nth-child(3)::before {
   background-color: red;
 }
 .box-common-producecapacity-wrapper .box-common-producecapacity__list__item:nth-child(4)::before {
-  background-color: green;
+  background-color: yellow;
 }
 .box-common-producecapacity-wrapper .box-common-producecapacity__list__item:nth-child(odd) {
   margin-right: 0.625rem;
@@ -10515,7 +10517,6 @@ a {
   padding: 0.625rem 0;
   border-bottom: 1px solid rgba(243, 243, 243, 0.2);
   position: relative;
-  transition: padding 200ms;
 }
 .list-cate-pro__item:nth-child(odd) {
   margin-right: 0.625rem;
@@ -10523,7 +10524,14 @@ a {
 .list-cate-pro__item:nth-child(even) {
   margin-left: 0.625rem;
 }
-.list-cate-pro__item::before {
+.list-cate-pro__item__link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 1.25rem;
+  position: relative;
+  transition: padding 200ms;
+}
+.list-cate-pro__item__link::before {
   content: "";
   position: absolute;
   left: 0;
@@ -10534,14 +10542,11 @@ a {
   height: 0.125rem;
   display: none;
 }
-.list-cate-pro__item__link {
-  color: white;
-  text-decoration: none;
-}
-.list-cate-pro__item:hover {
+.list-cate-pro__item__link:hover {
   padding-left: 1.25rem;
+  color: white;
 }
-.list-cate-pro__item:hover::before {
+.list-cate-pro__item__link:hover::before {
   display: inline-block;
 }
 
@@ -10671,6 +10676,12 @@ a {
   font-size: 1.5625rem;
   width: 4.0625rem;
   display: inline-block;
+}
+#sidebar-main .box-center .box__item__text {
+  font-weight: bold;
+  width: 4.0625rem;
+  display: inline-block;
+  font-size: 1.25rem;
 }
 #sidebar-main .box-center .box__item__content {
   display: inline-block;
@@ -11065,6 +11076,7 @@ footer .footer-wrapper .footer__bottom p {
 }
 #home-page .section-aboutus-wrapper .section-aboutus__line__des {
   font-weight: bold;
+  font-size: 1.25rem;
 }
 #home-page .section-ourproduct-wrapper .section-ourproduct .section-ourproduct__left {
   width: 100%;

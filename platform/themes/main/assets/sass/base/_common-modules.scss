@@ -12,7 +12,6 @@
 
         &__des {
             margin-bottom: 0;
-            font-size: $size1_25;
 
             @media (min-width: 768px) {
                 display: flex;
@@ -27,6 +26,9 @@
                     margin-bottom: $size0_625;
                 }
             }
+        }
+        p {
+            font-size: $size1_25;
         }
     }
 
@@ -416,7 +418,7 @@
                 }
                 &:nth-child(2) {
                     &::before {
-                        background-color: yellow;
+                        background-color: green;
                     }
                 }
                 &:nth-child(3) {
@@ -426,7 +428,7 @@
                 }
                 &:nth-child(4) {
                     &::before {
-                        background-color: green;
+                        background-color: yellow;
                     }
                 }
 
@@ -481,7 +483,6 @@
         padding: $size0_625 0;
         border-bottom: 1px solid rgba($borderf3f3f3, $alpha0_2);
         position: relative;
-        transition: padding 200ms;
 
         &:nth-child(odd) {
             margin-right: $size0_625;
@@ -490,29 +491,35 @@
             margin-left: $size0_625;
         }
 
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: $backgroundWhite;
-            width: $size0_625;
-            height: $size0_125;
-            display: none;
-        }
-
         &__link {
-            color: $textWhite;
+            color: rgba($textWhite, $alpha0_7);
             text-decoration: none;
-        }
+            font-size: $size1_25;
+            position: relative;
+            transition: padding 200ms;
 
-        &:hover {
-            padding-left: $size1_25;
-            
             &::before {
-                display: inline-block;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $backgroundWhite;
+                width: $size0_625;
+                height: $size0_125;
+                display: none;
+                
             }
+
+            &:hover {
+                padding-left: $size1_25;
+                color: $textWhite;
+
+                &::before {
+                    display: inline-block;
+                }
+            }
+
         }
     }                    
 }

@@ -71,6 +71,12 @@
     <div id="sidebar-main" class="d-md-block d-none">
         <div class="box box-center">
             <button class="box__item">
+                <span class="box__item__text"> 
+                    <b> Zalo</b>
+                    <b> Code</b>
+                </span>
+            </button>
+            <button class="box__item">
                 <span class="box__item__icon"> <i class="fas fa-phone-alt"></i> </span>
                 <div class="box__item__content">
                     <a href="#" title=""> 0989.22.23.222 </a>
@@ -91,7 +97,7 @@
             <button class="box__item back-top">
                 <span class="box__item__icon"><i class="fal fa-arrow-up"></i> </span>
 
-                 <div class="box__item__content d-block">
+                <div class="box__item__content d-block">
                     <span class="text-top"> TOP </span>
                 </div>
             </button>
