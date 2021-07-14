@@ -126,7 +126,7 @@
                     </p>
                 </div>
 
-                <div class="box-common-showroom__content _fsx20r16">
+                <div class="box-common-showroom__content">
                     <div class="row">
                         <div class="col-lg-7 col-12">
                             <div class="box__tabs">

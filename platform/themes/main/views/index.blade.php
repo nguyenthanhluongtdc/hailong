@@ -182,7 +182,7 @@
                             </p>
                         </div>
 
-                        <ul class="box-common-many-col__list mb-0 _fsx20r16">
+                        <ul class="box-common-many-col__list mb-0">
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
                                 <b class="title-parent"> Kinh Nghiệm </b>
                                 <p class="des-children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
@@ -239,7 +239,7 @@
                     </p>
                 </div>
 
-                <div class="box-common-showroom__content _fsx20r16">
+                <div class="box-common-showroom__content">
                     <div class="row">
                         <div class="col-lg-7 col-12">
                             <div class="box__tabs">
@@ -406,7 +406,7 @@
                 </div>
 
                 <div class="splide" id="box-common-typeicalproject-carousel__carousel">
-                    <div class="splide__slider _fsx20r16">
+                    <div class="splide__slider">
                         <!-- relative -->
                         <div class="splide__track">
                             <ul class="splide__list">

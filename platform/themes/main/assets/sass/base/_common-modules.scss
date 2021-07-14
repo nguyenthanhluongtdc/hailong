@@ -112,6 +112,14 @@
                 @media (max-width: 567px){
                     margin-top: $size0_6875;
                 }
+
+                .title-parent {
+                    font-size: $size1_25;
+                }
+
+                .des-children {
+                    font-size: $size1_0625;
+                }
             }
         }
 
@@ -163,7 +171,7 @@
                     }
 
                     &__des {
-                        font-size: $size1_125;
+                        font-size: $size1_0625;
                     }
 
                     &:hover {
@@ -335,10 +343,19 @@
                 color: $textWhite;
                 height: calc(100% - #{$size2_625});
 
+                .address {
+                    font-size: $size1_25;
+                }
+
+                .phone {
+                    font-size: $size1_0625;
+                }
+
                 &__header {
 
                     &__des {
                         @include split_str(2);
+                        font-size: $size1_0625;
                     }
                 }
 
@@ -451,10 +468,60 @@
     }
 }
 
+.list-cate-pro {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+
+    &__item {
+        flex: 0 0 calc(50% - #{$size0_625});
+        max-width: calc(50% - #{$size0_625});
+        padding: $size0_625 0;
+        border-bottom: 1px solid rgba($borderf3f3f3, $alpha0_2);
+        position: relative;
+        transition: padding 200ms;
+
+        &:nth-child(odd) {
+            margin-right: $size0_625;
+        }
+        &:nth-child(even) {
+            margin-left: $size0_625;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $backgroundWhite;
+            width: $size0_625;
+            height: $size0_125;
+            display: none;
+        }
+
+        &__link {
+            color: $textWhite;
+            text-decoration: none;
+        }
+
+        &:hover {
+            padding-left: $size1_25;
+            
+            &::before {
+                display: inline-block;
+            }
+        }
+    }                    
+}
+
 .box__tabs {
 
     &__header {
         margin-right: $size2_5;
+        font-size: $size1_25;
 
         .nav-link {
             background-color: transparent;
@@ -477,6 +544,14 @@
         padding-left: $size2_5;
         padding-top: $size2_5;
         position: relative;
+
+        .address {
+            font-size: $size1_25;
+        }
+
+        .phone {
+            font-size: $size1_0625;
+        }
 
         .btn-read-more {
             padding-right: $size0_9375;
@@ -516,10 +591,6 @@
     line-height: $size2_1875;
     text-align: center;
     display: inline-block;
-}
-
-.line__children {
-    font-size: $size0_85;
 }
 
 /***
