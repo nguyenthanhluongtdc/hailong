@@ -44,10 +44,18 @@
                                 <a href="tel:19004696"> 19004696</a>
                             </span>
                             <span class="phone">
-                                <a href="tel:098 117 222">098 117 222</a> 
+                                <a href="tel:098 117 222">098 117 2222</a> 
                             </span>
                             <p class="phone">
                                 <a href="tel:098 37 88888">098 37 88888</a>
+                            </p>
+                        </div>
+                        <div class="company__email">
+                            <p class="email">
+                                <a href="mailto:vietnhat@vsg.com.vn">vietnhat@vsg.com.vn</a>
+                            </p>
+                            <p class="email">
+                                <a href="mailto:hailong@hailongglass.vn">hailong@hailongglass.vn</a>
                             </p>
                         </div>
                         <div class="company__connect">

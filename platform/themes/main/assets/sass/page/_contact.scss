@@ -24,6 +24,7 @@
                         font-family: "Font Awesome 5 Pro";
                         left: 0;
                         right: 0;
+                        font-weight: bold;
                     }
                 }
             }
@@ -39,6 +40,25 @@
                         font-family: "Font Awesome 5 Pro";
                         left: 0;
                         right: 0;
+                    }
+                    a {
+                        position: relative;
+                        z-index: 10;
+                    }
+                }
+            }
+            &__email {
+                .email {
+                    position: relative;
+                    padding-left: $size1_5625;
+                    &::before {
+                        position: absolute;
+                        content: "\f0e0";
+                        color: $textGreen;
+                        font-family: "Font Awesome 5 Pro";
+                        left: 0;
+                        right: 0;
+                        font-weight: bold;
                     }
                     a {
                         position: relative;
