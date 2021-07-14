@@ -15,9 +15,9 @@
         <div class="container-customize">
             <div class="section-banner-news">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title">
                         Tin mới
-                    </h2>
+                    </h1>
                 </div>
             </div>
         </div>
@@ -28,8 +28,8 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                         <div class="news-post" data-aos="" data-aos-delay="200">
-                            <a href="/news-detail" title="">
-                                <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-city-.jpg')}}">
+                            <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-city-.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
                                 <div class="news-post__title">
                                     <h4 class="__text-20">Căn hộ cao cấp The Minato Residence</h4>
                                 </div>
@@ -45,8 +45,8 @@
                    
                     <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                         <div class="news-post" data-aos="" data-aos-delay="200">
-                            <a href="/news-detail" title="">
-                                <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-city-2.jpg')}}">
+                            <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-city-2.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" >
                                 <div class="news-post__title">
                                     <h4 class="__text-20">Giúp tiểu thương bán hàng trên thương mại điện tử </h4>
                                 </div>
@@ -61,8 +61,8 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                         <div class="news-post" data-aos="" data-aos-delay="200">
-                            <a href="/news-detail" title="">
-                                <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-3.jpg')}}">
+                            <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-3.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
                                 <div class="news-post__title">
                                     <h4 class="__text-20">'Nắm' doanh thu người bán trên sàn thương mại điện tử từ 2022</h4>
                                 </div>
@@ -91,12 +91,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-1.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-1.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -107,12 +107,12 @@
                             <div class="col-lg-6 mb-md-line p0-md  pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-2.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-2.jpg')}}"alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Trong tháng 6, có 140.000 tài khoản chứng khoán cá nhân mở mới, cao hơn 23% so với tháng 5 và là mức cao kỷ lục từ trước tới nay. 
@@ -127,12 +127,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-3.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-3.jpg')}}"alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -143,12 +143,12 @@
                             <div class="col-lg-6 mb-md-line p0-md  pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-4.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-4.jpg')}}"alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -163,12 +163,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-5.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-5.jpg')}}"alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -179,12 +179,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-6.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-6.jpg')}}"alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -199,12 +199,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-7.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-7.jpg')}}"alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -215,12 +215,12 @@
                             <div class="col-lg-6 mb-md-line p0-md  pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-8.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-8.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -235,12 +235,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-9.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence"> 
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-9.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -251,12 +251,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pl-sm-0 pr-xs-0 mb-4">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-4 col-sm-4 col-12 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-10.jpg')}}" alt="">
+                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
+                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-10.jpg')}}"alt="Căn hộ cao cấp The Minato Residence">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-7 col-12">
-                                        <h5> <a href="/news-detail">Căn hộ cao cấp The Minato</a> </h5>
+                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
                                         <span class="time">15:56 25/07/2020</span>
                                         <p class="content">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
@@ -299,13 +299,13 @@
                             <ul class="splide__list">
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <a href="#" title="">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" />
+                                        <a href="#" title="ảnh slider">
+                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}"alt="Căn hộ cao cấp The Minato Residence" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -314,13 +314,13 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <a href="#" title>
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" />
+                                        <a href="#" title="ảnh slider">
+                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="Căn hộ cao cấp The Minato Residence"/>
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -329,11 +329,11 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" />
+                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}"alt="Căn hộ cao cấp The Minato Residence"/>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -342,11 +342,11 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" />
+                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="Căn hộ cao cấp The Minato Residence"/>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>

@@ -4,9 +4,9 @@
         <div class="container-customize">
             <div class="section-banner">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title">
                         Nơi khởi nguồn của nền tảng <br> nông nghiệp Kính An Toàn Tại Việt Nam
-                    </h2>
+                    </h1>
                 </div>
 
                 <div class="theme-customize-header-section__tabs">
@@ -70,7 +70,7 @@
 
                     <div class="col-md-6 col-12 mt-md-0 mt-4">
                         <div class="box-common-intro__picture">
-                            <img width="" height="" src="{{Theme::asset()->url('images/products/image3.jpg')}}" alt="" />
+                            <img width="" height="" src="{{Theme::asset()->url('images/products/image3.jpg')}}" alt="ảnh product" />
                         </div>
                     </div>
                 </div>
@@ -87,31 +87,31 @@
             </div>
             <ul class="section-products-list-cate-pro distance-below">
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính cường lực </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính cường lực </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính low -E </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính low -E </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title=""> Kính dán an toàn </a>
+                    <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title="Kính cường lực"> Kính dán an toàn </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính rạn </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính rạn </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính hộp </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính hộp </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính phun cát </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính phun cát </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính màu trang trí </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính màu trang trí </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính ngăn cháy </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính ngăn cháy </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính uốn cong </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính uốn cong </a>
                 </li>
             </ul>
         </div>

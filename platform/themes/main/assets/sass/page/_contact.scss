@@ -194,10 +194,9 @@
 
 /* On mouse-over, add a grey background color */
 
-.customcheck:hover input~.checkmark {
-    background-color: $mainColor;
-}
-
+// .customcheck:hover input~.checkmark {
+//     background-color: $mainColor;
+// }
 
 /* When the checkbox is checked, add a blue background */
 

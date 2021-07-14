@@ -4,10 +4,10 @@
         <div class="container-customize">
             <div class="section-banner">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title">
                         Tiên phong sản xuất <br>
                         Kính an toàn hàng đầu việt nam
-                    </h2>
+                    </h1>
                 </div>
 
                 <div class="theme-customize-header-section__tabs">
@@ -43,7 +43,7 @@
         </div>
 
         <div class="section-intro__picture">
-            <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/introduce/pexels-charles-parker-5845554.jpg')}}" />
+            <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/introduce/pexels-charles-parker-5845554.jpg')}}" alt="ảnh banner" />
         </div>
     </div>
 
@@ -314,13 +314,13 @@
                             <ul class="splide__list">
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <a href="#" title="">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" />
+                                        <a href="#" title="ảnh slider">
+                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh slider"/>
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -329,13 +329,13 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <a href="#" title>
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" />
+                                        <a href="#" title="ảnh slider">
+                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -344,11 +344,11 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" />
+                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -357,11 +357,11 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" />
+                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>

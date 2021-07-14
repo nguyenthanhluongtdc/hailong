@@ -11748,10 +11748,6 @@ footer .footer-wrapper .footer__bottom p {
 }
 
 /* On mouse-over, add a grey background color */
-.customcheck:hover input ~ .checkmark {
-  background-color: #08964a;
-}
-
 /* When the checkbox is checked, add a blue background */
 .customcheck input:checked ~ .checkmark {
   background-color: #08964a;
