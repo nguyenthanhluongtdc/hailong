@@ -17,6 +17,7 @@ use SeoHelper;
 use SiteMapManager;
 use SlugHelper;
 use Theme;
+use RvMedia;
 
 class MainController extends PublicController
 {
@@ -25,6 +26,16 @@ class MainController extends PublicController
      */
     public function getIndex()
     {
+        SeoHelper::setTitle(theme_option('seo_title', 'Hailongglass'))
+            ->setDescription(theme_option('seo_description', 'Hailongglass'))
+            ->openGraph()
+            ->setTitle(@theme_option('seo_title'))
+            ->setSiteName(@theme_option('site_title'))
+            ->setUrl(route('public.index'))
+            ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'), 'og'))
+            ->addProperty('image:width', '1200')
+            ->addProperty('image:height', '630');
+
         if (defined('PAGE_MODULE_SCREEN_NAME')) {
             $homepageId = BaseHelper::getHomepageId();
             if ($homepageId) {
@@ -33,7 +44,7 @@ class MainController extends PublicController
                 if ($slug) {
                     $data = (new PageService)->handleFrontRoutes($slug);
 
-                    return Theme::scope($data['view'], $data['data'], $data['default_view'])->render();
+                    return Theme::scope('index', $data['data'], $data['default_view'])->render();
                 }
             }
         }
@@ -43,9 +54,8 @@ class MainController extends PublicController
         Theme::breadcrumb()->add(__('Home'), route('public.index'));
 
         event(RenderingHomePageEvent::class);
-
-        return Theme::scope('index')->render();
     }
+    
 
     /**
      * @param string $key
@@ -54,6 +64,16 @@ class MainController extends PublicController
      */
     public function getView($key = null)
     {
+        SeoHelper::setTitle(theme_option('seo_title', 'Hailongglass'))
+        ->setDescription(theme_option('seo_description', 'Hailongglass'))
+        ->openGraph()
+        ->setTitle(@theme_option('seo_title'))
+        ->setSiteName(@theme_option('site_title'))
+        ->setUrl(route('public.index'))
+        ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'), 'og'))
+        ->addProperty('image:width', '1200')
+        ->addProperty('image:height', '630');
+        
         if (empty($key)) {
             return $this->getIndex();
         }
