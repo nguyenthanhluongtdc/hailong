@@ -30,7 +30,7 @@
 
     <div class="box-common-intro-wrapper mt-5">
         <div class="container-customize pr-md-0">
-            <div class="box-common-intro theme-customize-header-section">
+            <div class="box-common-intro theme-customize-header-section _fsx20r16">
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="box-common-intro__content">
@@ -119,7 +119,7 @@
 
     <div class="section-our-policy-wrapper">
         <div class="container-customize">
-            <div class="section-our-policy distance-y">
+            <div class="section-our-policy distance-y _fsx20r16">
                 <div class="row mx-lg-n5 mx-n3">
                     <div class="col-sm-4 px-lg-5 px-3">
                         <div class="section-our-policy__col">

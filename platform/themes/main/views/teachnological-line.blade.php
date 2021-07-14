@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div class="section-intro-wrapper">
+    <div class="section-intro-wrapper _fsx20r16">
         <div class="container-customize">
             <p class="my-5">
                 Hồ sơ năng lực như bức chân dung hoàn chỉnh về một doanh nghiệp. Bức chân dung ấy cũng đầy đủ, chi tiết, càng hiện lên sống động bao nhiêu thì càng
@@ -59,7 +59,7 @@
                     </p>
                 </div>
 
-                <div class="section-teachnological__list">
+                <div class="section-teachnological__list _fsx20r16">
                     <div class="section-teachnological__row">
                         <div class="section-teachnological__row__col __content">
                             <div>

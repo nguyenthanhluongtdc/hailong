@@ -39,7 +39,7 @@
             <div class="box-common-intro section-intro theme-customize-header-section">
                 <div class="row">
                     <div class="col-md-5 col-12 order-2 mt-md-0 mt-4">
-                        <div class="section-intro__content">
+                        <div class="section-intro__content _fsx20r16">
                             <div class="theme-customize-header-section__header pt-0">
                                 <h2 class="theme-customize-header-section__header__title">
                                     Thông tin công ty
@@ -126,7 +126,7 @@
                     </p>
                 </div>
 
-                <div class="box-common-showroom__content">
+                <div class="box-common-showroom__content _fsx20r16">
                     <div class="row">
                         <div class="col-lg-7 col-12">
                             <div class="box__tabs">
@@ -150,7 +150,7 @@
                                             <div>
                                                 <b class="address"> 162 Hoàng Quốc Việt, Cầu Giấy, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -159,7 +159,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -168,7 +168,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -181,7 +181,7 @@
                                             <div>
                                                 <b class="address"> 162 Hoàng Quốc Việt, Cầu Giấy, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -190,7 +190,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -199,7 +199,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -212,7 +212,7 @@
                                             <div>
                                                 <b class="address"> Duong Linh Trung, Quan Thu Duc, TPHCM </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -221,7 +221,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -230,7 +230,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -245,7 +245,7 @@
                             <div class="box__infoOther">
                                 <div class="box__infoOther__header">
                                     <h3 class="box__infoOther__header__title"> Nhà Máy </h3>
-                                    <p class="box__infoOther__header__des line__children"> Thầy trò HLV Park Hang-seo sẽ mất lợi thế sân nhà nếu các đội khách không được ưu tiên miễn cách ly. </p>
+                                    <p class="box__infoOther__header__des des-children"> Thầy trò HLV Park Hang-seo sẽ mất lợi thế sân nhà nếu các đội khách không được ưu tiên miễn cách ly. </p>
                                 </div>
 
                                 <div class="box__infoOther__list">
@@ -253,7 +253,7 @@
                                         <div>
                                             <b class="address white"> 9 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                         </div>
-                                        <div class="line__children">
+                                        <div class="des-children">
                                             <span class="phone white"> 024.35723838 / 024.22431063 </span>
                                         </div>
                                     </div>
@@ -262,7 +262,7 @@
                                         <div>
                                             <b class="address white"> 1° 25 Nguyễn Văn Cừ - Hồng Hải - Hạ Long </b>
                                         </div>
-                                        <div class="line__children">
+                                        <div class="des-children">
                                             <span class="phone white"> 024.35723838 / 024.22431063 </span>
                                         </div>
                                     </div>

@@ -30,7 +30,7 @@
     </div>
 
     <div class="section-intro-wrapper">
-        <div class="container-customize">
+        <div class="container-customize _fsx20r16">
             <p class="my-5">
                 Hồ sơ năng lực như bức chân dung hoàn chỉnh về một doanh nghiệp. Bức chân dung ấy cũng đầy đủ, chi tiết, càng hiện lên sống động bao nhiêu thì càng
                 giúp cho thương hiệu của doanh nghiệp được nhận diện rõ ràng bấy nhiều. Một câu hỏi thường xuyên được đặt ra, vậy làm sao để có một bức chân dung
@@ -77,7 +77,7 @@
 
     <div class="section-shoppingguide-wrapper">
         <div class="container-customize pr-lg-0">
-            <div class="section-shoppingguide distance-below row">
+            <div class="section-shoppingguide distance-below row _fsx20r16">
                 <div class="section-shoppingguide__content col-lg-6 px-4">
                     <div class="theme-customize-header-section__header">
                         <h2 class="theme-customize-header-section__header__title">
@@ -135,7 +135,7 @@
                 </div>
 
                 <div class="splide" id="box-common-typeicalproject-carousel__carousel">
-                    <div class="splide__slider">
+                    <div class="splide__slider _fsx20r16">
                         <!-- relative -->
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -151,7 +151,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -166,7 +166,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -179,7 +179,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -192,7 +192,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                             </ul>

@@ -53,7 +53,7 @@
 
                             </div>
 
-                            <div class="box-content__bottom">
+                            <div class="box-content__bottom _fsx20r16">
                                 <div class="__bottom__line__one"> Đặc tính chung </div>
                                 <div class="__bottom__line__two"> Quy trình sản xuất </div>
 
@@ -88,7 +88,7 @@
                                     </div>
                                     <div class="section-our-policy__col__content">
                                         <h3 class="__content__title"> Miễn phí vận chuyển </h3>
-                                        <p class="__content__des line__children"> trong nội thành các thành phố có văn phòng ở công ty </p>
+                                        <p class="__content__des"> trong nội thành các thành phố có văn phòng ở công ty </p>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
                                     </div>
                                     <div class="section-our-policy__col__content">
                                         <h3 class="__content__title"> Bảo hành uy tín </h3>
-                                        <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
+                                        <p class="__content__des"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                                     </div>
                                     <div class="section-our-policy__col__content">
                                         <h3 class="__content__title"> Hệ thống quản lý tối ưu </h3>
-                                        <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
+                                        <p class="__content__des"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
                                     </div>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                             </ul>
 
                             <div class="tab-content box__tabs__content px-0" id="myTabContent">
-                                <div class="tab-pane fade show active" id="col-tab1" role="tabpanel" aria-labelledby="col-tab1-tab">
+                                <div class="tab-pane fade show active _fsx20r16" id="col-tab1" role="tabpanel" aria-labelledby="col-tab1-tab">
                                     <p>
                                         Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
                                         sống chúng ta với nhiều đặc tính nổi bật vượt trội hơn so với
@@ -299,7 +299,7 @@
 
     <div class="section-shoppingguide-wrapper">
         <div class="container-customize pr-lg-0">
-            <div class="section-shoppingguide distance-below row">
+            <div class="section-shoppingguide distance-below row _fsx20r16">
                 <div class="section-shoppingguide__content col-lg-6 px-lg-4">
                     <div class="theme-customize-header-section__header">
                         <h2 class="theme-customize-header-section__header__title">

@@ -60,6 +60,7 @@
             padding: $size0_625 0;
             border-bottom: 1px solid $borderf3f3f3;
             transition: padding 200ms;
+            font-size: $size1_25;
 
             &::before {
                 content: "";

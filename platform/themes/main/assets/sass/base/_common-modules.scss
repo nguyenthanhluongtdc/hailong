@@ -1,7 +1,7 @@
 
 .theme-customize-header-section {
     &__header {
-        padding-top: $size5;
+        padding-top: $size6_25;
 
         &__title {
             color: $textGreen;
@@ -12,6 +12,8 @@
 
         &__des {
             margin-bottom: 0;
+            font-size: $size1_25;
+
             @media (min-width: 768px) {
                 display: flex;
                 justify-content: space-between;
@@ -44,6 +46,7 @@
                     text-decoration: none;
                     font-weight: bold;
                     color: $textNight;
+                    font-size: $size1_25;
                 }
             }
 
@@ -147,7 +150,7 @@
                     width: 100%;
 
                     &__title {
-                        font-size: 18px;
+                        font-size: $size1_25;
                         
                         a {
                             color: $textNight;
@@ -157,6 +160,10 @@
                                 font-weight: bold;
                             }
                         }
+                    }
+
+                    &__des {
+                        font-size: $size1_125;
                     }
 
                     &:hover {
@@ -368,6 +375,14 @@
                 margin-top: $size0_625;
                 flex: 0 0 calc(50% - #{$size0_625});
                 max-width: calc(50% - #{$size0_625});
+
+                .title-parent {
+                    font-size: $size1_25;
+                }
+
+                .des-children {
+                    font-size: $size1_125;
+                }
                 
                 &::before {
                     content: "";
@@ -412,7 +427,7 @@
 .box-common-statistics-wrapper {
     .box-common-statistics {
         background-color: $backgroundGreen;
-        padding: $size3 $size5;
+        padding: $size3 $size6_25;
         padding-top: $size1_5;
         display: flex;
         flex-wrap: wrap;
@@ -430,6 +445,7 @@
             .__col__down {
                 color: $text84cba5;
                 max-width: 60%;
+                font-size: $size1_125;
             }
         }
     }
@@ -444,6 +460,7 @@
             background-color: transparent;
             border: none;
             font-weight: bold;
+            font-size: $size1_25;
         }
 
         .nav-link.active {
@@ -510,16 +527,16 @@
 ****/
 @mixin common-screen-minw1600() {
     .distance-below {
-        padding-bottom: $size5;
+        padding-bottom: $size6_25;
     }
 
     .distance-above {
-        padding-top: $size5;
+        padding-top: $size6_25;
     }
 
     .distance-y {
-        padding-top: $size5;
-        padding-bottom: $size5;
+        padding-top: $size6_25;
+        padding-bottom: $size6_25;
     }
 }
 @mixin common-screen-maxw1600() {

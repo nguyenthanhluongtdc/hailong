@@ -143,23 +143,23 @@
                 </div>
                 <ul class="box-common-producecapacity__list">
                     <li class="box-common-producecapacity__list__item">
-                        <b> Kính dán an toàn </b>
-                        <p class="line__children"> 3.000.000 m2/năm, khả năng cung ứng 8.800 m2/ngày Kính cường lực </p>
+                        <b class="title-parent"> Kính dán an toàn </b>
+                        <p class="des-children"> 3.000.000 m2/năm, khả năng cung ứng 8.800 m2/ngày Kính cường lực </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
-                        <b> Kính cường lực </b>
-                        <p class="line__children"> 3.290.000 m2/năm, khả năng cung ứng 9.400 m2/ngày Kính hộp </p>
+                        <b class="title-parent"> Kính cường lực </b>
+                        <p class="des-children"> 3.290.000 m2/năm, khả năng cung ứng 9.400 m2/ngày Kính hộp </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
-                        <b> Kính hộp </b>
-                        <p class="line__children"> 450.000 m2/năm, khả năng cung ứng 1.285 m2/ngày </p>
+                        <b class="title-parent"> Kính hộp </b>
+                        <p class="des-children"> 450.000 m2/năm, khả năng cung ứng 1.285 m2/ngày </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
-                        <b> Kính Ô tô </b>
-                        <p class="line__children"> 360.000 tấn/năm, khả năng cung ứng 1000 tấn/ngày </p>
+                        <b class="title-parent"> Kính Ô tô </b>
+                        <p class="des-children"> 360.000 tấn/năm, khả năng cung ứng 1000 tấn/ngày </p>
                     </li>
                 </ul>
             </div>
@@ -182,35 +182,35 @@
                             </p>
                         </div>
 
-                        <ul class="box-common-many-col__list mb-0">
+                        <ul class="box-common-many-col__list mb-0 _fsx20r16">
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
-                                <b> Kinh Nghiệm </b>
-                                <p class="line__children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
+                                <b class="title-parent"> Kinh Nghiệm </b>
+                                <p class="des-children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
-                                <b> Chất Lượng </b>
-                                <p class="line__children"> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
+                                <b class="title-parent"> Chất Lượng </b>
+                                <p class="des-children"> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
-                                <b> Công Nghệ </b>
-                                <p class="line__children"> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
+                                <b class="title-parent"> Công Nghệ </b>
+                                <p class="des-children"> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
-                                <b> Nhân Sự </b>
-                                <p class="line__children"> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
+                                <b class="title-parent"> Nhân Sự </b>
+                                <p class="des-children"> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
-                                <b> Vận Chuyển </b>
-                                <p class="line__children"> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
+                                <b class="title-parent"> Vận Chuyển </b>
+                                <p class="des-children"> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
                             </li>
 
                             <li class="box-common-many-col__list__item col-sm-6 col-12">
-                                <b> Cam Kết </b>
-                                <p class="line__children"> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
+                                <b class="title-parent"> Cam Kết </b>
+                                <p class="des-children"> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
                             </li>
                         </ul>
                     </div>
@@ -239,7 +239,7 @@
                     </p>
                 </div>
 
-                <div class="box-common-showroom__content">
+                <div class="box-common-showroom__content _fsx20r16">
                     <div class="row">
                         <div class="col-lg-7 col-12">
                             <div class="box__tabs">
@@ -263,7 +263,7 @@
                                             <div>
                                                 <b class="address"> 162 Hoàng Quốc Việt, Cầu Giấy, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -272,7 +272,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -281,7 +281,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -294,7 +294,7 @@
                                             <div>
                                                 <b class="address"> 162 Hoàng Quốc Việt, Cầu Giấy, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -303,7 +303,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Tân Dương - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -312,7 +312,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -325,7 +325,7 @@
                                             <div>
                                                 <b class="address"> Duong Linh Trung, Quan Thu Duc, TPHCM </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.22456666 / 024.85862988 </span>
                                             </div>
                                         </div>
@@ -334,7 +334,7 @@
                                             <div>
                                                 <b class="address"> 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 024.35723838 / 024.22431063 </span>
                                             </div>
                                         </div>
@@ -343,7 +343,7 @@
                                             <div>
                                                 <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
                                             </div>
-                                            <div class="line__children">
+                                            <div class="des-children">
                                                 <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
                                             </div>
                                         </div>
@@ -358,7 +358,7 @@
                             <div class="box__infoOther">
                                 <div class="theme-customize-header-section__header pt-0">
                                     <h3 class="theme-customize-header-section__header__title text-white mb-2"> Nhà Máy </h3>
-                                    <p class="box__infoOther__header__des line__children"> Thầy trò HLV Park Hang-seo sẽ mất lợi thế sân nhà nếu các đội khách không được ưu tiên miễn cách ly. </p>
+                                    <p class="box__infoOther__header__des des-children"> Thầy trò HLV Park Hang-seo sẽ mất lợi thế sân nhà nếu các đội khách không được ưu tiên miễn cách ly. </p>
                                 </div>
 
                                 <div class="box__infoOther__list">
@@ -366,7 +366,7 @@
                                         <div>
                                             <b class="address white"> 9 381 Phố Mới - Thủy Nguyên - Hải Phòng </b>
                                         </div>
-                                        <div class="line__children">
+                                        <div class="des-children">
                                             <span class="phone white"> 024.35723838 / 024.22431063 </span>
                                         </div>
                                     </div>
@@ -375,7 +375,7 @@
                                         <div>
                                             <b class="address white"> 1° 25 Nguyễn Văn Cừ - Hồng Hải - Hạ Long </b>
                                         </div>
-                                        <div class="line__children">
+                                        <div class="des-children">
                                             <span class="phone white"> 024.35723838 / 024.22431063 </span>
                                         </div>
                                     </div>
@@ -406,7 +406,7 @@
                 </div>
 
                 <div class="splide" id="box-common-typeicalproject-carousel__carousel">
-                    <div class="splide__slider">
+                    <div class="splide__slider _fsx20r16">
                         <!-- relative -->
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -422,7 +422,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -437,7 +437,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -450,7 +450,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -463,7 +463,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                             </ul>
@@ -494,7 +494,7 @@
                     </p>
                 </div>
 
-                <div class="section-news__content">
+                <div class="section-news__content _fsx20r16">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="col-core col-big">
@@ -506,7 +506,7 @@
                                         <div class="col-core__content__time">
                                             <span> 15:58 25/07/2021 </span>
                                         </div>
-                                        <p class="col-core__content__des line-children">
+                                        <p class="col-core__content__des des-children">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                                         </p>
                                     </a>
@@ -532,7 +532,7 @@
                                         <div class="col-core__content__time">
                                             <span> 15:58 25/07/2021 </span>
                                         </div>
-                                        <p class="col-core__content__des line-children">
+                                        <p class="col-core__content__des des-children">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                                         </p>
                                     </div>
@@ -554,7 +554,7 @@
                                         <div class="col-core__content__time">
                                             <span> 15:58 25/07/2021 </span>
                                         </div>
-                                        <p class="col-core__content__des line-children">
+                                        <p class="col-core__content__des des-children">
                                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                                         </p>
                                     </div>

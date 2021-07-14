@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div class="section-intro-wrapper">
+    <div class="section-intro-wrapper _fsx20r16">
         <div class="container-customize">
             <p class="my-5">
                 Hồ sơ năng lực như bức chân dung hoàn chỉnh về một doanh nghiệp. Bức chân dung ấy cũng đầy đủ, chi tiết, càng hiện lên sống động bao nhiêu thì càng
@@ -56,23 +56,23 @@
                 </div>
                 <ul class="box-common-producecapacity__list">
                     <li class="box-common-producecapacity__list__item">
-                        <b> Kính dán an toàn </b>
-                        <p class="line__children"> 3.000.000 m2/năm, khả năng cung ứng 8.800 m2/ngày Kính cường lực </p>
+                        <b class="title-parent"> Kính dán an toàn </b>
+                        <p class="des-children"> 3.000.000 m2/năm, khả năng cung ứng 8.800 m2/ngày Kính cường lực </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
-                        <b> Kính cường lực </b>
-                        <p class="line__children"> 3.290.000 m2/năm, khả năng cung ứng 9.400 m2/ngày Kính hộp </p>
+                        <b class="title-parent"> Kính cường lực </b>
+                        <p class="des-children"> 3.290.000 m2/năm, khả năng cung ứng 9.400 m2/ngày Kính hộp </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
-                        <b> Kính hộp </b>
-                        <p class="line__children"> 450.000 m2/năm, khả năng cung ứng 1.285 m2/ngày </p>
+                        <b class="title-parent"> Kính hộp </b>
+                        <p class="des-children"> 450.000 m2/năm, khả năng cung ứng 1.285 m2/ngày </p>
                     </li>
 
                     <li class="box-common-producecapacity__list__item">
-                        <b> Kính Ô tô </b>
-                        <p class="line__children"> 360.000 tấn/năm, khả năng cung ứng 1000 tấn/ngày </p>
+                        <b class="title-parent"> Kính Ô tô </b>
+                        <p class="des-children"> 360.000 tấn/năm, khả năng cung ứng 1000 tấn/ngày </p>
                     </li>
                 </ul>
             </div>
@@ -148,8 +148,8 @@
                         </li>
                     </ul>
 
-                    <div class="tab-content box__tabs__content pl-0" id="myTabContent">
-                        <div class="tab-pane fade show active" id="col-tab1" role="tabpanel" aria-labelledby="col-tab1-tab">
+                    <div class="tab-content box__tabs__content pl-0 _fsx20r16" id="myTabContent">
+                        <div class="tab-pane fade show active " id="col-tab1" role="tabpanel" aria-labelledby="col-tab1-tab">
                             <p class="line__item">
                                 - TCVN 6758:2015 Phương tiện giao thông đường bộ - Kinh an toàn và vật liệu
                             </p>
@@ -308,7 +308,7 @@
                 </div>
 
                 <div class="splide" id="box-common-typeicalproject-carousel__carousel">
-                    <div class="splide__slider">
+                    <div class="splide__slider _fsx20r16">
                         <!-- relative -->
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -324,7 +324,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -339,7 +339,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -352,7 +352,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -365,7 +365,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                             </ul>

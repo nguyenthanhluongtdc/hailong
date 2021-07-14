@@ -1,7 +1,6 @@
 
 #home-page {
     .section-intro-wrapper {
-        margin-top: calc(#{$size3_75} + #{$size3_75});
 
         .section-intro {
             display: flex;
@@ -21,6 +20,8 @@
             .info-contact {
                 margin-top: $size0_625;
                 padding-left: 0;
+                font-size: $size1_25;
+                
                 &__item {
                     display: inline-block;
                     margin-right: $size0_625;
@@ -302,7 +303,7 @@
         }
 
         .section-intro-wrapper {
-            margin-top: $size7_5;
+            margin-top: $size9;
         }
 
         .box-common-typeicalproject-carousel-wrapper {

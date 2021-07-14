@@ -34,12 +34,12 @@
         </div>
     </div>
 
-    <div class="box-common-intro-wrapper mt-5">
+    <div class="box-common-intro-wrapper mt-5 ">
         <div class="container-customize pr-0">
             <div class="box-common-intro theme-customize-header-section">
                 <div class="row">
                     <div class="col-md-6 col-12">
-                        <div class="box-common-intro__content">
+                        <div class="box-common-intro__content _fsx20r16">
                             <div class="theme-customize-header-section__header pt-0">
                                 <h2 class="theme-customize-header-section__header__title">
                                     Hailong Glass
@@ -87,20 +87,20 @@
                     </h2>
                 </div>
 
-                <ul class="box-common-many-col__list mb-0">
+                <ul class="box-common-many-col__list mb-0 _fsx20r16">
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Kinh Nghiệm </b>
-                        <p class="line__children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
+                        <p class="des-children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Chất Lượng </b>
-                        <p class="line__children"> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
+                        <p class="des-children"> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Công Nghệ </b>
-                        <p class="line__children"> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
+                        <p class="des-children"> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
                     </li>
                 </ul>
             </div>
@@ -123,35 +123,35 @@
                     </p>
                 </div>
 
-                <ul class="box-common-many-col__list mb-0">
+                <ul class="box-common-many-col__list mb-0 _fsx20r16">
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Kinh Nghiệm </b>
-                        <p class="line__children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
+                        <p class="des-children"> Với gần 20 năm kinh nghiệm trong lĩnh vực sản xuất và gia công kinh, Hải Long là nói khởi nguồn của nền công nghiệp kinh an toàn tại Việt Nam </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Chất Lượng </b>
-                        <p class="line__children"> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
+                        <p class="des-children"> Các sản phẩm của kính an toàn Hải Long . tuân thủ nghiêm ngặt các tiêu chuẩn quản lý chất lượng ISO 9001: 2015 và IS0 14001:2015 trong từng công đoạn sản xuất cùng các tiêu chuẩn JIS, ANSI, EN.</p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Công Nghệ </b>
-                        <p class="line__children"> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
+                        <p class="des-children"> Dây chuyền công nghệ hiện đại của Germany, với nguồn nguyên liệu của Công ty liên doanh Kinh nổi Việt Nam ( VFG) và kính nhập khẩu từ Mỹ, Thái Lan, Bi Indonesia... </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Nhân Sự </b>
-                        <p class="line__children"> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
+                        <p class="des-children"> Tất cả cán bộ công nhân viên của Hải Long được đào tạo bài bản về nội quy, quy trình sản xuất và sự chuyển giao công nghệ sản xuất tiên tiến cuả Tập đoàn NSG,ARC0N,Saint Gobain, AGC. </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Vận Chuyển </b>
-                        <p class="line__children"> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
+                        <p class="des-children"> Ngoài dây chuyền công nghệ, vận tải cũng được đầu tư mạnh để phục vụ khách hàng và công trình trên khắp cả nước. Giao hàng đúng tiến độ. </p>
                     </li>
 
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> Cam Kết </b>
-                        <p class="line__children"> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
+                        <p class="des-children"> Bảo hành sản phẩm kịp thời, chu đáo. Giá thành hợp lý.</p>
                     </li>
                 </ul>
             </div>
@@ -175,7 +175,7 @@
                 </div>
 
                 <div class="splide" id="box-common-typeicalproject-carousel__carousel">
-                    <div class="splide__slider">
+                    <div class="splide__slider _fsx20r16">
                         <!-- relative -->
                         <div class="splide__track">
                             <ul class="splide__list">
@@ -191,7 +191,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -206,7 +206,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -219,7 +219,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
@@ -232,7 +232,7 @@
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
-                                        <div class="splide__slide__content__des line__children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
+                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
                                     </div>
                                 </li>
                             </ul>
