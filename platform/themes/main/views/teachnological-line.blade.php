@@ -4,10 +4,10 @@
         <div class="container-customize">
             <div class="section-banner">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title">
                         Tiên phong sản xuất <br>
                         Kính an toàn hàng đầu việt nam
-                    </h2>
+                    </h1>
                 </div>
 
                 <div class="theme-customize-header-section__tabs">
@@ -43,7 +43,7 @@
         </div>
 
         <div class="section-intro__picture">
-            <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/teachnological/image1.jpg')}}" />
+            <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/teachnological/image1.jpg')}}" alt="ảnh dây chuyền công nghệ" />
         </div>
     </div>
 
@@ -67,11 +67,11 @@
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                             </div>
-                            <a class="btn-read-more" href="" title=""> Chi tiet </a>
+                            <a class="btn-read-more" href="" title="Chi tiet"> Chi tiet </a>
                         </div>
 
                         <div class="section-teachnological__row__col __picture">
-                            <img width="" height="" src="{{Theme::asset()->url('images/teachnological/image2.jpg')}}" />
+                            <img width="" height="" src="{{Theme::asset()->url('images/teachnological/image2.jpg')}}"alt="ảnh dây chuyền công nghệ" />
                         </div>
                     </div>
 
@@ -82,11 +82,11 @@
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                             </div>
-                            <a class="btn-read-more" href="" title=""> Chi tiet </a>
+                            <a class="btn-read-more" href="" title="Chi tiet"> Chi tiet </a>
                         </div>
 
                         <div class="section-teachnological__row__col __picture">
-                            <img width="" height="" src="{{Theme::asset()->url('images/teachnological/image3.jpg')}}" />
+                            <img width="" height="" src="{{Theme::asset()->url('images/teachnological/image3.jpg')}}" alt="ảnh dây chuyền công nghệ"/>
                         </div>
                     </div>
 
@@ -97,11 +97,11 @@
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                             </div>
-                            <a class="btn-read-more" href="" title=""> Chi tiet </a>
+                            <a class="btn-read-more" href="" title="Chi tiet"> Chi tiet </a>
                         </div>
 
                         <div class="section-teachnological__row__col __picture">
-                            <img width="" height="" src="{{Theme::asset()->url('images/teachnological/image4.jpg')}}" />
+                            <img width="" height="" src="{{Theme::asset()->url('images/teachnological/image4.jpg')}}"alt="ảnh dây chuyền công nghệ" />
                         </div>
                     </div>
                 </div>

@@ -41,13 +41,21 @@
                         </div>
                         <div class="company__phone">
                             <span class="phone">
-                                <a href="tel:19004696"> 19004696</a>
+                                <a title="19004696" href="tel:19004696"> 19004696</a>
                             </span>
                             <span class="phone">
-                                <a href="tel:098 117 222">098 117 222</a> 
+                                <a title="098 117 222" href="tel:098 117 222">098 117 2222</a> 
                             </span>
                             <p class="phone">
-                                <a href="tel:098 37 88888">098 37 88888</a>
+                                <a title="098 37 88888" href="tel:098 37 88888">098 37 88888</a>
+                            </p>
+                        </div>
+                        <div class="company__email">
+                            <p class="email">
+                                <a title="vietnhat@vsg.com.vn" href="mailto:vietnhat@vsg.com.vn">vietnhat@vsg.com.vn</a>
+                            </p>
+                            <p class="email">
+                                <a title="hailong@hailongglass.vn" href="mailto:hailong@hailongglass.vn">hailong@hailongglass.vn</a>
                             </p>
                         </div>
                         <div class="company__connect">
@@ -109,7 +117,7 @@
                        
                         <div class="policy custom-checkbox">
                             <label class="customcheck">
-                                <input type="checkbox" checked="checked"><a href="" class="policy__link">Chúng tôi cam kết bảo mật thông tin cá nhân</a>
+                                <input type="checkbox" checked="checked"><a title="Chúng tôi cam kết bảo mật thông tin cá nhân" href="" class="policy__link">Chúng tôi cam kết bảo mật thông tin cá nhân</a>
                                 <span class="checkmark"></span>
                             </label>
                             <button class="send-button" type="submit" value="SEND">

@@ -43,16 +43,16 @@
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" />
+                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" alt="ảnh-slider"/>
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" />
+                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" alt="ảnh-slider"/>
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" />
+                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}"alt="ảnh-slider"  />
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" />
+                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}"alt="ảnh-slider" />
                                         </li>
                                     </ul>
                                 </div>
@@ -90,16 +90,16 @@
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" />
+                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" alt="ảnh-slider" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" />
+                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}"alt="ảnh-slider" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" />
+                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" alt="ảnh-slider" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" />
+                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}"alt="ảnh-slider"  />
                                         </li>
                                     </ul>
                                 </div>
@@ -123,18 +123,18 @@
                             Chia sẻ
                         <p>
                         <ul class="list-share">
-                            <li class="share-item"><a href=""><img class="" src="{{Theme::asset()->url('images/news/facebook.jpg')}}" alt=""></a></li>
-                            <li class="share-item"><a href=""><img class="" src="{{Theme::asset()->url('images/news/instagram.jpg')}}" alt=""></a></li>
-                            <li class="share-item"><a href=""><img class="" src="{{Theme::asset()->url('images/news/lien-ket.jpg')}}" alt=""></a></li>
-                            <li class="share-item"><a href=""><img class="" src="{{Theme::asset()->url('images/news/linkedin.jpg')}}" alt=""></a></li>
+                            <li class="share-item"><a href="" alt="icon" ><img class="" src="{{Theme::asset()->url('images/news/facebook.jpg')}}" alt="icon-fb"></a></li>
+                            <li class="share-item"><a href="" alt="icon" ><img class="" src="{{Theme::asset()->url('images/news/instagram.jpg')}}" alt="icon-insta"></a></li>
+                            <li class="share-item"><a href="" alt="icon" ><img class="" src="{{Theme::asset()->url('images/news/lien-ket.jpg')}}" alt="icon-lk"></a></li>
+                            <li class="share-item"><a href="" alt="icon" ><img class="" src="{{Theme::asset()->url('images/news/linkedin.jpg')}}" alt="icon-link"></a></li>
                         </ul>   
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-12">
                     <div class="info-contact">
-                        <p>Liên hệ ngay để được hộ trợ tư vấn:<a href="" class="info-contact__link">Hotline: 1900 4696</a></p>
+                        <p>Liên hệ ngay để được hộ trợ tư vấn:<a href="" title="Liên hệ ngay để được hộ trợ tư vấn" class="info-contact__link">Hotline: 1900 4696</a></p>
                         
-                        <p> Xem chi tiết sản phẩm tại đây:<a href="http://colorglass.vn/">http://colorglass.vn/</a></p>
+                        <p> Xem chi tiết sản phẩm tại đây:<a href="http://colorglass.vn/" title="Xem chi tiết sản phẩm tại đây">http://colorglass.vn/</a></p>
                 
                     </div>
                    </div>

@@ -4,10 +4,10 @@
         <div class="container-customize">
             <div class="section-banner">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title">
                         Tiên phong sản xuất <br>
                         Kính an toàn hàng đầu việt nam
-                    </h2>
+                    </h1>
                 </div>
 
                 <div class="theme-customize-header-section__tabs">
@@ -67,7 +67,7 @@
 
                     <div class="col-md-7 mt-md-4">
                         <div class="box-picture">
-                            <img class="mw-100" src="{{Theme::asset()->url('/images/products/image5.jpg')}}" width="" height="" />
+                            <img class="mw-100" src="{{Theme::asset()->url('/images/products/image5.jpg')}}" width="" height="" alt="ảnh product" />
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                     </div>
 
                     <div class="row-picture distance-above">
-                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="" width="" height="" />
+                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
                     </div>
                 </div>
             </div>
@@ -193,7 +193,7 @@
                                     </p>
 
                                     <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="" width="" height="" />
+                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="" height="" />
                                     </div>
                                 </div>
 
@@ -208,7 +208,7 @@
                                     </p>
 
                                     <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="" width="" height="" />
+                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="" height="" />
                                     </div>
                                 </div>
 
@@ -223,7 +223,7 @@
                                     </p>
 
                                     <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="" width="" height="" />
+                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="" height="" />
                                     </div>
                                 </div>
 
@@ -238,7 +238,7 @@
                                     </p>
 
                                     <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="" width="" height="" />
+                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="" height="" />
                                     </div>
                                 </div>
                             </div>
@@ -266,31 +266,31 @@
                 </div>
                 <ul class="section-products-list-cate-pro distance-below">
                     <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính cường lực </a>
+                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính cường lực </a>
                     </li>
                     <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính low -E </a>
+                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính low -E "> Kính low -E </a>
                     </li>
                     <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title=""> Kính dán an toàn </a>
+                        <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title="Kính dán an toàn"> Kính dán an toàn </a>
                     </li>
                     <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính rạn </a>
+                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính rạn"> Kính rạn </a>
                     </li>
                     <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính hộp </a>
+                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính hộp"> Kính hộp </a>
                     </li>
                     <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính phun cát </a>
+                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính phun cát"> Kính phun cát </a>
                     </li>
                     <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính màu trang trí </a>
+                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính màu trang trí"> Kính màu trang trí </a>
                     </li>
                     <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính ngăn cháy </a>
+                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính ngăn cháy"> Kính ngăn cháy </a>
                     </li>
                     <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính uốn cong </a>
+                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính uốn cong"> Kính uốn cong </a>
                     </li>
                 </ul>
             </div>
@@ -334,7 +334,7 @@
                 </div>
 
                 <div class="section-shoppingguide__picture col-lg-6 px-lg-4 mt-lg-0 mt-4">
-                    <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/products/image2.jpg')}}" />
+                    <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/products/image2.jpg')}}" alt="ảnh-product" />
                 </div>
             </div>
         </div>
@@ -432,7 +432,7 @@
                                             Chúng tôi sẽ tiếp nhận đơn hàng, kiểm tra lại và xác nhận đơn hàng của Quý khách trước khi làm lệnh sản xuất
                                         </p>
                                     </div>
-                                    <a href="/products" title="" class="read-more mt-4 d-inline-block"> Xem thêm sản phẩm </a>
+                                    <a href="/products" title="xem thêm" class="read-more mt-4 d-inline-block"> Xem thêm sản phẩm </a>
                                 </div>
                             </div>
                         </div>

@@ -4,9 +4,9 @@
         <div class="container-customize">
             <div class="section-banner">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title">
                         Nơi khởi nguồn của nền tảng <br> nông nghiệp Kính An Toàn Tại Việt Nam
-                    </h2>
+                    </h1>
                 </div>
 
                 <div class="theme-customize-header-section__tabs">
@@ -29,7 +29,7 @@
     </div>
 
     <div class="section-picture">
-        <img src="{{Theme::asset()->url('images\products\image4.jpg')}}" alt="" />
+        <img src="{{Theme::asset()->url('images\products\image4.jpg')}}" alt="ảnh product" />
     </div>
 
     <div class="section-collapse-wrapper">

@@ -11625,6 +11625,7 @@ footer .footer-wrapper .footer__bottom p {
   font-family: "Font Awesome 5 Pro";
   left: 0;
   right: 0;
+  font-weight: bold;
 }
 #contact-page .contact-wrapper .company__phone .phone {
   position: relative;
@@ -11640,6 +11641,23 @@ footer .footer-wrapper .footer__bottom p {
   right: 0;
 }
 #contact-page .contact-wrapper .company__phone .phone a {
+  position: relative;
+  z-index: 10;
+}
+#contact-page .contact-wrapper .company__email .email {
+  position: relative;
+  padding-left: 1.5625rem;
+}
+#contact-page .contact-wrapper .company__email .email::before {
+  position: absolute;
+  content: "";
+  color: #08964a;
+  font-family: "Font Awesome 5 Pro";
+  left: 0;
+  right: 0;
+  font-weight: bold;
+}
+#contact-page .contact-wrapper .company__email .email a {
   position: relative;
   z-index: 10;
 }
@@ -11743,10 +11761,6 @@ footer .footer-wrapper .footer__bottom p {
 }
 
 /* On mouse-over, add a grey background color */
-.customcheck:hover input ~ .checkmark {
-  background-color: #08964a;
-}
-
 /* When the checkbox is checked, add a blue background */
 .customcheck input:checked ~ .checkmark {
   background-color: #08964a;

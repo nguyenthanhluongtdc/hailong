@@ -87,16 +87,16 @@
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_58.jpg')}}" />
+                                            <img alt="image" width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_58.jpg')}}" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_63.jpg')}}" />
+                                            <img alt="image" width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_63.jpg')}}" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_64.jpg')}}" />
+                                            <img alt="image" width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_64.jpg')}}" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_65.jpg')}}" />
+                                            <img alt="image" width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_65.jpg')}}" />
                                         </li>
                                     </ul>
                                 </div>
@@ -118,9 +118,9 @@
         <div class="container-customize">
             <div class="box-common-showroom distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title">
                         Showroom Hailong Glass
-                    </h2>
+                    </h1>
                     <p class="theme-customize-header-section__header__des mb-4">
                         Danh sách Showroom Glass
                     </p>

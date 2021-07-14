@@ -4,10 +4,10 @@
         <div class="container-customize">
             <div class="section-banner">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title">
                         Tiên phong sản xuất <br>
                         Kính an toàn hàng đầu việt nam
-                    </h2>
+                    </h1>
                 </div>
 
                 <div class="theme-customize-header-section__tabs">
@@ -39,37 +39,37 @@
         </div>
 
         <div class="section-intro__picture">
-            <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/products/image1.jpg')}}" />
+            <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/products/image1.jpg')}}" alt="ảnh-product" />
         </div>
 
         <div class="container-customize">
             <ul class="section-products-list-cate-pro distance-below distance-above">
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính cường lực </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính cường lực </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính low -E </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính low -E </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title=""> Kính dán an toàn </a>
+                    <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title="Kính cường lực"> Kính dán an toàn </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính rạn </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính rạn </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính hộp </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính hộp </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính phun cát </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính phun cát </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính màu trang trí </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính màu trang trí </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính ngăn cháy </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính ngăn cháy </a>
                 </li>
                 <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title=""> Kính uốn cong </a>
+                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính uốn cong </a>
                 </li>
             </ul>
         </div>
@@ -112,7 +112,7 @@
                 </div>
 
                 <div class="section-shoppingguide__picture col-lg-6 px-4 mt-lg-0 mt-4">
-                    <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/products/image2.jpg')}}" />
+                    <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/products/image2.jpg')}}" alt="ảnh-product"/>
                 </div>
             </div>
         </div>
@@ -141,13 +141,13 @@
                             <ul class="splide__list">
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <a href="#" title="">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" />
+                                        <a href="#" title="Căn hộ cao cấp The Minaton Residence">
+                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}"alt="ảnh-product" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -156,13 +156,13 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <a href="#" title>
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" />
+                                        <a href="#" title="ảnh-slider">
+                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh-slider" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -171,11 +171,11 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" />
+                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh-slider"/>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -184,11 +184,11 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" />
+                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="">
+                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
