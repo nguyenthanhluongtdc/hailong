@@ -1,6 +1,7 @@
 
 #home-page {
     .section-intro-wrapper {
+        margin-top: $size9_375;
 
         .section-intro {
             display: flex;
@@ -247,17 +248,12 @@
 /***
 *************** Responsive
 ****/
-@mixin home-screen-minw1600() {
+@mixin home-screen-minw1681() {
     #home-page {
 
         .section-ourproduct-wrapper {
             margin-top: $size4;
         }
-
-        .section-intro-wrapper {
-            margin-top: $size9;
-        }
-
         .box-common-typeicalproject-carousel-wrapper {
         
             .box-common-typeicalproject-carousel {
@@ -278,14 +274,10 @@
     }
 }
 
-@mixin home-screen-maxw1600() {
+@mixin home-screen-maxw1680() {
     #home-page {
         .section-ourproduct-wrapper {
             margin-top: $size3;
-        }
-
-        .section-intro-wrapper {
-            margin-top: calc(#{$size3_125} + #{$size3_125});
         }
     }
 }
@@ -304,7 +296,7 @@
 @mixin home-screen-maxw992() {
     #home-page {
         .section-intro-wrapper {
-            margin-top: $size3_125;
+            margin-top: $size5;
 
             .section-intro {
                 &__title {
@@ -319,7 +311,7 @@
 @mixin home-screen-maxw768() {
     #home-page {
         .section-intro-wrapper {
-            margin-top: $size2;
+            margin-top: $size4_285;
         }
     }
 }
@@ -328,7 +320,7 @@
 @mixin home-screen-maxw567() {
     #home-page {
         .section-intro-wrapper {
-            margin-top: $size1_5;
+            margin-top: $size2_875;
             .section-intro {
                 &__title {
                     font-size: $size1_5;

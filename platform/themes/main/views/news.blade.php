@@ -84,7 +84,9 @@
     <section id="list-news">
         <div class="container-customize">
             <div class="section-news-list">
-                <h2 class="theme-customize-header-section__header__title">Tin tức khác</h2>
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">Tin tức khác</h2>
+                </div>
                 <div class="list-news-wrapper">
                     <div class="item-row">
                         <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0"> 
