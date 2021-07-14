@@ -11584,6 +11584,180 @@ footer .footer-wrapper .footer__bottom p {
     text-align: unset;
   }
 }
+#contact-page .section-banner-wrapper .section-banner-contact .theme-customize-header-section__header {
+  padding-bottom: 1.5rem;
+}
+#contact-page .section-banner-wrapper .section-banner-contact .theme-customize-header-section__header__title {
+  margin-bottom: 0;
+}
+#contact-page .contact-wrapper {
+  margin: 3rem 0;
+}
+#contact-page .contact-wrapper .company {
+  margin-right: 4rem;
+}
+#contact-page .contact-wrapper .company__address .address {
+  position: relative;
+  padding-left: 1.5625rem;
+}
+#contact-page .contact-wrapper .company__address .address::before {
+  position: absolute;
+  content: "";
+  color: #08964a;
+  font-family: "Font Awesome 5 Pro";
+  left: 0;
+  right: 0;
+}
+#contact-page .contact-wrapper .company__phone .phone {
+  position: relative;
+  padding: 0 1.5625rem;
+}
+#contact-page .contact-wrapper .company__phone .phone::before {
+  position: absolute;
+  content: "";
+  font-weight: bold;
+  color: #08964a;
+  font-family: "Font Awesome 5 Pro";
+  left: 0;
+  right: 0;
+}
+#contact-page .contact-wrapper .company__phone .phone a {
+  position: relative;
+  z-index: 10;
+}
+#contact-page .contact-wrapper .company__connect {
+  margin-top: 5rem;
+}
+#contact-page .contact-wrapper .company__connect h4 {
+  margin-bottom: 1rem;
+}
+#contact-page .contact-wrapper .form-contact-us .policy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contact-page .contact-wrapper .form-contact-us .policy__link {
+  margin-left: 1rem;
+}
+#contact-page .contact-wrapper .form-contact-us .policy .send-button {
+  padding: 0.313rem 1.25rem;
+  background-color: #08964a;
+  color: white;
+  border: unset;
+  margin-left: 1.25rem;
+}
+#contact-page .contact-wrapper .map {
+  margin-top: 3rem;
+  margin-bottom: -6px;
+}
+#contact-page .contact-wrapper .map iframe {
+  width: 100%;
+  height: 500px;
+}
+
+@media screen and (max-width: 991px) {
+  #contact-page .contact-wrapper .company {
+    margin-right: 2rem;
+  }
+  #contact-page .contact-wrapper .form-contact-us {
+    margin-right: 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #contact-page .contact-wrapper .company {
+    margin-right: unset;
+  }
+  #contact-page .contact-wrapper .form-contact-us {
+    margin-right: unset;
+    margin-top: 2.5rem;
+  }
+  #contact-page .contact-wrapper .form-contact-us h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  #contact-page .contact-wrapper .company__connect {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  #contact-page .contact-wrapper .company__connect h4 {
+    margin-bottom: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #contact-page .contact-wrapper .form-contact-us .policy {
+    display: unset;
+  }
+  #contact-page .contact-wrapper .form-contact-us .policy .send-button {
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: unset;
+  }
+}
+/* Create a custom checkbox */
+.customcheck {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.customcheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.customcheck:hover input ~ .checkmark {
+  background-color: #08964a;
+}
+
+/* When the checkbox is checked, add a blue background */
+.customcheck input:checked ~ .checkmark {
+  background-color: #08964a;
+  border-radius: 50%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.customcheck input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.customcheck .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2.4px 2.4px 0;
+  transform: rotate(45deg);
+}
+
 .section-shoppingguide-wrapper {
   background-color: #f3f3f3;
 }

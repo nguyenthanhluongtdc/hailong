@@ -1,0 +1,220 @@
+#contact-page {
+    .section-banner-wrapper {
+        .section-banner-contact {
+            .theme-customize-header-section__header {
+                padding-bottom: $size1_5;
+                &__title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .contact-wrapper {
+        margin: $size3 0;
+        .company {
+            margin-right: $size4;
+            &__address {
+                .address {
+                    position: relative;
+                    padding-left: $size1_5625;
+                    &::before {
+                        position: absolute;
+                        content: "\f3c5";
+                        color: $textGreen;
+                        font-family: "Font Awesome 5 Pro";
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+            &__phone {
+                .phone {
+                    position: relative;
+                    padding: 0 $size1_5625;
+                    &::before {
+                        position: absolute;
+                        content: "\f879";
+                        font-weight: bold;
+                        color: $textGreen;
+                        font-family: "Font Awesome 5 Pro";
+                        left: 0;
+                        right: 0;
+                    }
+                    a {
+                        position: relative;
+                        z-index: 10;
+                    }
+                }
+            }
+            &__connect {
+                margin-top: $size5;
+                h4 {
+                    margin-bottom: $size1;
+                }
+            }
+        }
+        .form-contact-us {
+            .policy {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &__link {
+                    margin-left: $size1;
+                }
+                .send-button {
+                    padding: $size0_313 $size1_25;
+                    background-color: $mainColor;
+                    color: $white;
+                    border: unset;
+                    margin-left: $size1_25;
+                }
+            }
+        }
+        .map {
+            margin-top: $size3;
+            margin-bottom: -6px;
+            iframe {
+                width: 100%;
+                height: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    #contact-page {
+        .contact-wrapper {
+            .company {
+                margin-right: $size2;
+            }
+            .form-contact-us {
+                margin-right: $size1_25;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #contact-page {
+        .contact-wrapper {
+            .company {
+                margin-right: unset;
+            }
+            .form-contact-us {
+                margin-right: unset;
+                margin-top: $size2_5;
+                h4 {
+                    text-align: center;
+                    margin-bottom: $size1;
+                }
+            }
+            .company__connect {
+                margin-top: $size2;
+                text-align: center;
+                h4 {
+                    margin-bottom: $size2_5;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    #contact-page {
+        .contact-wrapper {
+            .form-contact-us {
+                .policy {
+                    display: unset;
+                    .send-button {
+                        width: 100%;
+                        margin-top: $size1;
+                        margin-left: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Create a custom checkbox */
+
+.customcheck {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.customcheck input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.customcheck:hover input~.checkmark {
+    background-color: $mainColor;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.customcheck input:checked~.checkmark {
+    background-color: $mainColor;
+    border-radius: 50%;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.customcheck input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.customcheck .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2.4px 2.4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+//end custom
