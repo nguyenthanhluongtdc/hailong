@@ -11246,20 +11246,15 @@ footer .footer-wrapper .footer__bottom p {
   border-bottom: solid 1px #d8d9d9;
   margin: 2.1875rem 0;
 }
-#news-detail-page .news__detail__wrapper .content__zone .left .share .share-text {
+#news-detail-page .news__detail__wrapper .content__zone .left .share .share_text {
   margin-right: 0.9375rem;
 }
 #news-detail-page .news__detail__wrapper .content__zone .left .share .list-share {
   display: flex;
 }
 #news-detail-page .news__detail__wrapper .content__zone .left .share .list-share .share-item {
-  margin-right: 0.313rem;
+  margin-right: 0.625rem;
   list-style: none;
-}
-@media screen and (max-width: 991px) {
-  #news-detail-page .news__detail__wrapper .content__zone .left .share .list-share .share-item {
-    margin-right: 0.625rem;
-  }
 }
 #news-detail-page .news__detail__wrapper .content__zone .left .info-contact {
   padding: 1rem;
@@ -11268,6 +11263,9 @@ footer .footer-wrapper .footer__bottom p {
 }
 #news-detail-page .news__detail__wrapper .content__zone .left .info-contact p {
   margin-bottom: unset;
+}
+#news-detail-page .news__detail__wrapper .content__zone .left .info-contact__link {
+  color: #08964a;
 }
 #news-detail-page .news__detail__wrapper .content__zone .left .other__post .title {
   font-size: 1.25rem;
@@ -11395,6 +11393,20 @@ footer .footer-wrapper .footer__bottom p {
 #projects-page .nav-tabs {
   border-bottom: unset;
 }
+#projects-page .theme-customize-header-section__tabs .__tabs__link {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+#projects-page .theme-customize-header-section__tabs .nav-link.active::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.063rem;
+  background-color: #08964a;
+}
 
 .project-wrapper {
   margin-top: 3rem;
@@ -11437,6 +11449,320 @@ footer .footer-wrapper .footer__bottom p {
     margin-bottom: unset;
   }
 }
+#projects-detail-page .box-common-intro-wrapper.bottom .splide__arrows {
+  position: unset;
+  bottom: unset;
+  left: unset;
+  display: unset;
+}
+#projects-detail-page .box-common-intro-wrapper.bottom .splide__arrows button {
+  background: none;
+}
+#projects-detail-page .box-common-intro-wrapper.bottom .splide__arrows button svg {
+  display: none;
+}
+#projects-detail-page .box-common-intro-wrapper.bottom .splide .splide__arrow--prev {
+  left: 0.375rem;
+}
+#projects-detail-page .box-common-intro-wrapper.bottom .splide .splide__arrow--prev:before {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 1.5625rem;
+}
+#projects-detail-page .box-common-intro-wrapper.bottom .splide .splide__arrow--next {
+  right: 0.375rem;
+}
+#projects-detail-page .box-common-intro-wrapper.bottom .splide .splide__arrow--next:before {
+  position: absolute;
+  content: "";
+  font-family: "Font Awesome 5 Pro";
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 1.5625rem;
+}
+#projects-detail-page .section-intro__content__top .theme-customize-header-section__header__title {
+  color: unset;
+  font-size: 1.875rem;
+  font-family: "Barlow-Regular";
+  margin: 2.5rem 0;
+}
+#projects-detail-page .section-intro__content__top .intro__content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+}
+#projects-detail-page .section-intro__content__bottom {
+  padding: 0 15%;
+}
+#projects-detail-page .section-intro__content__bottom .theme-customize-header-section__header__title {
+  color: unset;
+  font-size: 1.875rem;
+  font-family: "Barlow-Regular";
+  margin: 3rem 0;
+}
+#projects-detail-page .section-intro__content__bottom .intro__content {
+  margin-bottom: 2.25rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+}
+#projects-detail-page .info-wrapper {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+#projects-detail-page .info-wrapper .share {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+#projects-detail-page .info-wrapper .share .share_text {
+  margin-right: 0.9375rem;
+  min-width: 3.5rem;
+}
+#projects-detail-page .info-wrapper .share .list-share {
+  display: flex;
+  padding: 0;
+}
+#projects-detail-page .info-wrapper .share .list-share .share-item {
+  margin-right: 0.625rem;
+  list-style: none;
+}
+#projects-detail-page .info-wrapper .info-contact {
+  padding: 1rem;
+  border: 0.063rem solid #08964a;
+  text-align: center;
+}
+#projects-detail-page .info-wrapper .info-contact p {
+  margin-bottom: unset;
+}
+#projects-detail-page .info-wrapper .info-contact__link {
+  color: #08964a;
+}
+
+@media screen and (max-width: 1440px) {
+  #projects-detail-page .section-intro__content__top .theme-customize-header-section__header__title,
+#projects-detail-page .section-intro__content__bottom .theme-customize-header-section__header__title {
+    margin: 2rem 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #projects-detail-page .section-intro__content__top .theme-customize-header-section__header__title,
+#projects-detail-page .section-intro__content__bottom .theme-customize-header-section__header__title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  #projects-detail-page .section-intro__content__top .theme-customize-header-section__header__title,
+#projects-detail-page .section-intro__content__bottom .theme-customize-header-section__header__title {
+    margin: 0 0 2rem 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #projects-detail-page .info-wrapper .share {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  #projects-detail-page .section-intro__content__top,
+#projects-detail-page .section-intro__content__bottom {
+    padding: unset;
+  }
+  #projects-detail-page .section-intro__content__top .theme-customize-header-section__header__title,
+#projects-detail-page .section-intro__content__bottom .theme-customize-header-section__header__title {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+  }
+  #projects-detail-page .section-intro__content__top .intro__content,
+#projects-detail-page .section-intro__content__bottom .intro__content {
+    text-align: unset;
+  }
+}
+#contact-page .section-banner-wrapper .section-banner-contact .theme-customize-header-section__header {
+  padding-bottom: 1.5rem;
+}
+#contact-page .section-banner-wrapper .section-banner-contact .theme-customize-header-section__header__title {
+  margin-bottom: 0;
+}
+#contact-page .contact-wrapper {
+  margin: 3rem 0;
+}
+#contact-page .contact-wrapper .company {
+  margin-right: 4rem;
+}
+#contact-page .contact-wrapper .company__address .address {
+  position: relative;
+  padding-left: 1.5625rem;
+}
+#contact-page .contact-wrapper .company__address .address::before {
+  position: absolute;
+  content: "";
+  color: #08964a;
+  font-family: "Font Awesome 5 Pro";
+  left: 0;
+  right: 0;
+}
+#contact-page .contact-wrapper .company__phone .phone {
+  position: relative;
+  padding: 0 1.5625rem;
+}
+#contact-page .contact-wrapper .company__phone .phone::before {
+  position: absolute;
+  content: "";
+  font-weight: bold;
+  color: #08964a;
+  font-family: "Font Awesome 5 Pro";
+  left: 0;
+  right: 0;
+}
+#contact-page .contact-wrapper .company__phone .phone a {
+  position: relative;
+  z-index: 10;
+}
+#contact-page .contact-wrapper .company__connect {
+  margin-top: 5rem;
+}
+#contact-page .contact-wrapper .company__connect h4 {
+  margin-bottom: 1rem;
+}
+#contact-page .contact-wrapper .form-contact-us .policy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contact-page .contact-wrapper .form-contact-us .policy__link {
+  margin-left: 1rem;
+}
+#contact-page .contact-wrapper .form-contact-us .policy .send-button {
+  padding: 0.313rem 1.25rem;
+  background-color: #08964a;
+  color: white;
+  border: unset;
+  margin-left: 1.25rem;
+}
+#contact-page .contact-wrapper .map {
+  margin-top: 3rem;
+  margin-bottom: -6px;
+}
+#contact-page .contact-wrapper .map iframe {
+  width: 100%;
+  height: 500px;
+}
+
+@media screen and (max-width: 991px) {
+  #contact-page .contact-wrapper .company {
+    margin-right: 2rem;
+  }
+  #contact-page .contact-wrapper .form-contact-us {
+    margin-right: 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #contact-page .contact-wrapper .company {
+    margin-right: unset;
+  }
+  #contact-page .contact-wrapper .form-contact-us {
+    margin-right: unset;
+    margin-top: 2.5rem;
+  }
+  #contact-page .contact-wrapper .form-contact-us h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  #contact-page .contact-wrapper .company__connect {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  #contact-page .contact-wrapper .company__connect h4 {
+    margin-bottom: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #contact-page .contact-wrapper .form-contact-us .policy {
+    display: unset;
+  }
+  #contact-page .contact-wrapper .form-contact-us .policy .send-button {
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: unset;
+  }
+}
+/* Create a custom checkbox */
+.customcheck {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.customcheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.customcheck:hover input ~ .checkmark {
+  background-color: #08964a;
+}
+
+/* When the checkbox is checked, add a blue background */
+.customcheck input:checked ~ .checkmark {
+  background-color: #08964a;
+  border-radius: 50%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.customcheck input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.customcheck .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2.4px 2.4px 0;
+  transform: rotate(45deg);
+}
+
 .section-shoppingguide-wrapper {
   background-color: #f3f3f3;
 }

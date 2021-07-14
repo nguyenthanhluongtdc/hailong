@@ -16,15 +16,15 @@
         <div class="container-customize">
             <div class="section-banner">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title">
                         Kính An Toàn, Thẩm Mỹ <br>
                         Nâng Tầm Ngôi Nhà Việt
-                    </h2>
+                    </h1>
                 </div>
 
                 <div class="theme-customize-header-section__tabs">
                     <ul class=" nav nav-tabs theme-customize-header-section__tabs__list mb-0" id="tab-project" role="tablist">
-                        <li class="__tabs__item active mr-5" role="project">
+                        <li class="__tabs__item mr-5" role="project">
                             <a class="__tabs__link nav-link active" id="project-home-tab" data-toggle="tab" role="tab" aria-controls="all-project" aria-selected="true" href="#all-project" title="Tất Cả"> Tất Cả </a>
                         </li>
 

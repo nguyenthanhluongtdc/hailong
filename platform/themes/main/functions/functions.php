@@ -14,6 +14,7 @@ register_page_template([
     'news-detail' => 'News Detail',
     'projects' => 'Projects',
     'projects-detail' => 'Project Detail',
+    'contact' => 'Contact',
 ]);
 
 register_sidebar([

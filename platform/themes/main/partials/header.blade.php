@@ -53,7 +53,7 @@
                             <a class="nav-link" href="/news">Tin tức</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/project">Dự án</a>
+                            <a class="nav-link" href="/projects">Dự án</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contact">Liên hệ</a>
