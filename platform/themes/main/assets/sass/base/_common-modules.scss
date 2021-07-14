@@ -604,22 +604,23 @@
 /***
 *************** Responsive
 ****/
+.distance-below {
+    padding-bottom: $size6_25;
+}
+
+.distance-above {
+    padding-top: $size6_25;
+}
+
+.distance-y {
+    padding-top: $size6_25;
+    padding-bottom: $size6_25;
+}
 @mixin common-screen-minw1681() {
-    .distance-below {
-        padding-bottom: $size6_25;
-    }
-
-    .distance-above {
-        padding-top: $size6_25;
-    }
-
-    .distance-y {
-        padding-top: $size6_25;
-        padding-bottom: $size6_25;
-    }
+   
 }
 @mixin common-screen-maxw1680() {
-   
+
 }
 
 @mixin common-screen-maxw992() {

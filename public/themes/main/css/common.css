@@ -10616,6 +10616,19 @@ a {
 /***
 *************** Responsive
 ****/
+.distance-below {
+  padding-bottom: 6.25rem;
+}
+
+.distance-above {
+  padding-top: 6.25rem;
+}
+
+.distance-y {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+}
+
 /**
 *   import folder components
 **/
@@ -12163,19 +12176,6 @@ footer .footer-wrapper .footer__bottom p {
 * screen 1680
 **/
 @media (min-width: 1681px) {
-  .distance-below {
-    padding-bottom: 6.25rem;
-  }
-
-  .distance-above {
-    padding-top: 6.25rem;
-  }
-
-  .distance-y {
-    padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
-  }
-
   #home-page .section-ourproduct-wrapper {
     margin-top: 4rem;
   }
