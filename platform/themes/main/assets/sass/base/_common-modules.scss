@@ -558,12 +558,12 @@
             background-color: $backgroundGreen;
             color: $textWhite;
             text-decoration: none;
-            font-size: $size0_8125;
+            font-size: $size1;
             position: absolute;
             right: $size0_9375;
             bottom: 0;
-            height: $size1_5625;
-            line-height: $size1_5625;
+            height: $size1_875;
+            line-height: $size1_875;
             transform: translateY(50%);
 
             &::before {
@@ -572,6 +572,7 @@
                 font-family: "Font Awesome 5 Pro";
                 font-weight: bold;
                 right: $size0_438;
+                margin-left: $size0_625;
             }
         }
 

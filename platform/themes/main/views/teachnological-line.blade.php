@@ -67,7 +67,7 @@
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                             </div>
-                            <a class="btn-read-more" href="" title="Chi tiet"> Chi tiet </a>
+                            <a class="btn-read-more" href="" title="Chi tiết"> Chi tiết </a>
                         </div>
 
                         <div class="section-teachnological__row__col __picture">
@@ -82,7 +82,7 @@
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                             </div>
-                            <a class="btn-read-more" href="" title="Chi tiet"> Chi tiet </a>
+                            <a class="btn-read-more" href="" title="Chi tiết"> Chi tiết </a>
                         </div>
 
                         <div class="section-teachnological__row__col __picture">
@@ -97,7 +97,7 @@
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
                             </div>
-                            <a class="btn-read-more" href="" title="Chi tiet"> Chi tiet </a>
+                            <a class="btn-read-more" href="" title="Chi tiết"> Chi tiết </a>
                         </div>
 
                         <div class="section-teachnological__row__col __picture">

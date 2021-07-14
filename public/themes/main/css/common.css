@@ -10040,6 +10040,11 @@ body {
   font-family: "Barlow-Regular";
 }
 
+@media (max-width: 1600px) {
+  html, body {
+    font-size: 14px;
+  }
+}
 .container-customize:not(.important) {
   max-width: 1920px;
   padding-left: 16%;
@@ -10573,12 +10578,12 @@ a {
   background-color: #08964a;
   color: white;
   text-decoration: none;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   position: absolute;
   right: 0.9375rem;
   bottom: 0;
-  height: 1.5625rem;
-  line-height: 1.5625rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
   transform: translateY(50%);
 }
 .box__tabs__content .btn-read-more::before {
@@ -10587,6 +10592,7 @@ a {
   font-family: "Font Awesome 5 Pro";
   font-weight: bold;
   right: 0.438rem;
+  margin-left: 0.625rem;
 }
 .box__tabs__content .tab-pane > div:first-child {
   padding-top: 0;
@@ -10634,7 +10640,7 @@ a {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 3.5rem;
+  width: 4.0625rem;
   background-color: #08964a;
   z-index: 1000;
 }
@@ -10663,7 +10669,7 @@ a {
 }
 #sidebar-main .box-center .box__item__icon {
   font-size: 1.5625rem;
-  width: 3.5rem;
+  width: 4.0625rem;
   display: inline-block;
 }
 #sidebar-main .box-center .box__item__content {
