@@ -1,30 +1,23 @@
+@php
+    $slug_page_introduce = get_slug_by_template('introduce');
+ 
+@endphp
+
 <div id="home-page">
     <div class="section-intro-wrapper">
         <div class="container-customize">
             <div class="section-intro distance-below">
                 <div class="d-inline-block">
-                    <h1 class="section-intro__title"> Kính an toàn, tiết kiệm năng lượng, <br> hướng tới môi trường xanh. </h1>
+                    <h1 class="section-intro__title"> {!!has_field($page,'title_main')!!} </h1>
                     <ul class="info-contact mb-0">
+                        @foreach(has_field($page, 'hotline_info') as $row)
                         <li class="info-contact__item">
                             <a class="info-contact__link" href="#" title="cskh">
-                                <span> CSKH 24/7: </span>
-                                <b> 19004696 </b>
+                                <span> {{has_sub_field($row, 'title')}} </span>
+                                <b> {{has_sub_field($row, 'content')}} </b>
                             </a>
                         </li>
-                        <li class="info-contact__item">
-                            <a class="info-contact__link" href="#" title="phone">
-                                <span> Hotline: </span>
-                                <b> 098.11.77.0909 </b>
-                                <b> - 098.22.88.8809 </b>
-                            </a>
-                        </li>
-                        <li class="info-contact__item">
-                            <a class="info-contact__link" href="#" title="contact">
-                                <span> Email: </span>
-                                <b> theme-customize@gmail.com </b>
-                                <b> vietnhat@vsg.com.vn </b>
-                            </a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -36,15 +29,11 @@
                     <!-- relative -->
                     <div class="splide__track">
                         <ul class="splide__list">
+                        @foreach(has_field($page, 'banner_image') as $row)
                             <li class="splide__slide">
-                                <img alt=" ảnh slider" width="" height="" src="{{Theme::asset()->url('images/home/d7e5ae83ee0a1a54431b.jpg')}}" />
+                                <img alt=" ảnh slider" width="" height="" src="{{ RvMedia::getImageUrl(get_sub_field($row, 'image'))}}" />
                             </li>
-                            <li class="splide__slide">
-                                <img alt=" ảnh slider" width="" height="" src="{{Theme::asset()->url('images/home/d7e5ae83ee0a1a54431b.jpg')}}" />
-                            </li>
-                            <li class="splide__slide">
-                                <img alt="ảnh slider" width="" height="" src="{{Theme::asset()->url('images/home/d7e5ae83ee0a1a54431b.jpg')}}" />
-                            </li>
+                        @endforeach
                         </ul>
                     </div>
                 </div>
@@ -62,7 +51,7 @@
                 <div class="theme-customize-header-section__header mb-3">
                     <h2 class="theme-customize-header-section__header__title"> Về chúng tôi </h2>
                     <p class="theme-customize-header-section__header__des">
-                        Công ty TNHH SX và TM Hải Long thành lập ngày 30/05/2001, sau gần 20 năm xây dựng, trưởng thành và phát triển đã trở thành nhà gia công kính hàng đầu tại Việt Nam với thương hiệu theme-customize - Kính an toàn Hải Long
+                        Công ty TNHH SX và TM Hải Long thành lập ngày 30/05/2001, sau gần 20 năm xây dựng, trưởng thành và phát triển đã trở thành nhà gia công kính hàng đầu tại Việt Nam với thương hiệu theme-customize - Kính an toàn Hải Long.
                     </p>
                 </div>
                 <p class="section-aboutus__line__des">
@@ -442,7 +431,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}"  alt="ảnh slider"/>
+                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -501,15 +490,15 @@
                                 <img width="" height="" class="col-core__img w-100" src="{{Theme::asset()->url('images/home/72e1b2f6447fb021e96e.jpg')}}" alt="ảnh home" />
 
                                 <div class="col-core__content">
-                                    <a href="#" title="Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp">
-                                        <h3 class="col-core__content__title"> Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp </h3>
-                                        <div class="col-core__content__time">
-                                            <span> 15:58 25/07/2021 </span>
-                                        </div>
-                                        <p class="col-core__content__des des-children">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                                        </p>
-                                    </a>
+                                    <h3 class="col-core__content__title">
+                                        <a href="#" title="Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp"> Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp </a>
+                                    </h3>
+                                    <div class="col-core__content__time">
+                                        <span> 15:58 25/07/2021 </span>
+                                    </div>
+                                    <p class="col-core__content__des des-children">
+                                        Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -575,7 +564,25 @@
             , cover: true
             , rewind: true
             , lazyLoad: 'sequential'
-        , }).mount();
+            , height: '35.625rem'
+            , breakpoints: {
+                '1680': {
+                    height: '38.46153846153846rem',
+                },
+                '1200': {
+                    height: '27.384615384615383rem'
+                },
+                '992': {
+                    height: '22.307692307692307rem'
+                },
+                '576': {
+                    height: '13.076923076923077rem'
+                },
+                '360': {
+                    height: '8.153846153846153rem'
+                }
+            }
+        }).mount();
 
 
         new Splide('#box-common-typeicalproject-carousel__carousel', {
@@ -590,7 +597,7 @@
                     perPage: 1
                     , gap: '1rem'
                 , }
-            , }
+            }
         }).mount();
     })
 

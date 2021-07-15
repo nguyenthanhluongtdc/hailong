@@ -68,7 +68,7 @@
 
                         &::before {
                             position: absolute;
-                            content: "\f149";
+                            content: "\f175";
                             font-family: "Font Awesome 5 Pro";
                             top: 0;
                             left: 0;
@@ -177,6 +177,10 @@
                             color: $textNight;
                             text-decoration: none;
                         }
+
+                        a:hover {
+                            font-weight: bold;
+                        }
                     }
 
                     &__time {
@@ -210,11 +214,13 @@
                     right: 0;
                     background-color: rgba($backgroundGreen, $alpha0_7);
                     padding: $size0_9375;
+                    color: $textWhite;
                     
                     a {
                         color: $textWhite;
                         text-decoration: none;
                     }
+                   
                 }
             }
 

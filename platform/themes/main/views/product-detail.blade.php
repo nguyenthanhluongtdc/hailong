@@ -58,7 +58,7 @@
                                 <div class="__bottom__line__two"> Quy trình sản xuất </div>
 
                                 <div class="box__btn">
-                                    <button class="btn-order" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
+                                    <button class="btn-order mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
                                     <button class="btn-quote"><i class="fal fa-door-open"></i> Báo giá </button>
                                 </div>
                             </div>
