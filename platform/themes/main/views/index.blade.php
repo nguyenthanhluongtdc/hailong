@@ -557,6 +557,18 @@
     </div>
 </div>
 
+<style>
+    .box-sub {
+        display: none;
+    }
+
+    .navbar-nav {
+        margin-right: 0 !important;
+        margin-left: auto !important;
+        padding-left: 0 !important;
+    }
+</style>
+
 <script>
     $(document).ready(function() {
         new Splide('#section-intro__carousel', {

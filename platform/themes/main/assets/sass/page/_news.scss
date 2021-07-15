@@ -49,18 +49,35 @@
     }
     .section-news-list {
         h2 {
-            margin: $size3_125 0;
             @media screen and (max-width: 992px) {
-                margin: $size2_5 0;
                 text-transform: capitalize;
             }
         }
         .list-news-wrapper {
             .item-row {
+                .row-main {
+                    @media(max-width: 480px) {
+                        >div {
+                            >.row {
+                                >div {
+                                    flex: 0 0 100%;
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
                 h5 {
                     font-size: $size1_125;
                     margin-bottom: $size0_6875;
                     @include split_str(1);
+
+                    a {
+                        font-weight: bold;
+                        &:hover {
+                            color: $textGreen;
+                        }
+                    }
                 }
                 .time {
                     opacity: 50%;

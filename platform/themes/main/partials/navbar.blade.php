@@ -7,7 +7,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse align-items-end mb-lg-0 mb-3" id="navbarToggler">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 align-items-lg-end">
+            <ul class="navbar-nav pl-5 mr-auto mt-2 mt-lg-0 align-items-lg-end">
             @if(!empty($menu_nodes[0]))
                 @foreach($menu_nodes as $key => $row)
                 <li class="nav-item {{$key==0?'active':''}}">

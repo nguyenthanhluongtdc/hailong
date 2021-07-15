@@ -161,8 +161,4 @@
             , lazyLoad: 'sequential'
         , }).mount();
     })
-    
-
-    
-
 </script>

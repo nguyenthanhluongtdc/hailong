@@ -25,6 +25,11 @@
                                         <p>
                                             Nơi cấp: Sở Kế Hoạch & Đầu Tư Tp.Hà Nội
                                         </p>
+                                        <p class="pt-4">
+                                            <span> <img src="{{Theme::asset()->url('images/footer/image3.jpg')}}" /> </span>
+                                            <span class="px-2"> <img src="{{Theme::asset()->url('images/footer/image1.jpg')}}" /> </span>
+                                            <span> <img src="{{Theme::asset()->url('images/footer/image2.jpg')}}" /> </span>
+                                        </p>
                                     </div>
                                 </div>
 
@@ -117,7 +122,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div class="footer__col__list--icon">
+                                        <div class="footer__col__list--icon pt-4">
                                             <a class="__item__icon" href="#" title="Facebook"> 
                                                 <img width="" height="" src="{{Theme::asset()->url('images/hailong/fb_icon.png')}}" /> 
                                             </a>

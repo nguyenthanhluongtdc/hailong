@@ -61,6 +61,10 @@ body {
     }
 }
 
+._fsx17r16 {
+    font-size: $size1_0625;
+}
+
 a:hover {
     text-decoration: none;
     color: $night;
@@ -83,14 +87,8 @@ a {
 
 .__text-20 {
     font-size: $size1_25;
-    @media screen and (max-width: 1440px) {
-        font-size: $size1_125;
-    }
 }
 
 .__text-18 {
     font-size: $size1_125;
-    @media screen and (max-width: 1440px) {
-        font-size: $size1;
-    }
 }

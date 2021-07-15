@@ -338,12 +338,12 @@
             }
 
             .box__infoOther {
-                margin-top: $size2_625;
+                margin-top: $size3_125;
                 padding: $size1_25;
                 padding-bottom: 0;
                 background-color: $backgroundGreen;
                 color: $textWhite;
-                height: calc(100% - #{$size2_625});
+                height: calc(100% - #{$size3_125});
 
                 .address {
                     font-size: $size1_25;
@@ -594,9 +594,9 @@
 .btn-read-more {
     color: $textNight;
     border: 1px solid $borderGreen;
-    width: $size6_25;
-    height: $size2_1875;
-    line-height: $size2_1875;
+    width: $size7_5;
+    height: $size2_8125;
+    line-height: $size2_6875;
     text-align: center;
     display: inline-block;
 }
