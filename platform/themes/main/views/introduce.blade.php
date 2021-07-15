@@ -116,7 +116,7 @@
             <div class="box-common-many-col theme-customize-header-section">
                 <div class="theme-customize-header-section__header d-md-flex">
                     <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0">
-                        Tại sao chọn Hailong Glass
+                        Tại sao chọn <br> Hailong Glass
                     </h2>
                     <p class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0">
                         Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường.
