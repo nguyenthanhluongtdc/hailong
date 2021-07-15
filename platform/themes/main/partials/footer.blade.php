@@ -4,13 +4,13 @@
                     <div class="footer">
                         <div class="footer__top">
                             <div class="row">
-                                <div class="col-lg-3 col-sm-6 col-12 mb-sm-0 mb-4 footer__col">
+                                <div class="col-lg-2 col-sm-6 col-12 mb-sm-0 mb-4 footer__col">
                                     <a class="link-theme-customize text-decoration-none" href="/" title="Logo">
                                         <img class="mw-100" src="{{Theme::asset()->url('images/hailong/logo.png')}}" alt="Logo" />
                                     </a>
                                 </div>
 
-                                <div class="col-lg-3 col-sm-6 col-12 mb-sm-0 mb-3 footer__col">
+                                <div class="col-lg-4 col-sm-6 col-12 mb-sm-0 mb-3 footer__col">
                                     <div class="f-listaddress">
                                         <p class="footer__col__title">
                                             <strong> CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI HẢI LONG </strong>
@@ -25,11 +25,12 @@
                                         <p>
                                             Nơi cấp: Sở Kế Hoạch & Đầu Tư Tp.Hà Nội
                                         </p>
-                                        <p class="pt-4">
-                                            <span> <img src="{{Theme::asset()->url('images/footer/image3.jpg')}}" /> </span>
-                                            <span class="px-2"> <img src="{{Theme::asset()->url('images/footer/image1.jpg')}}" /> </span>
-                                            <span> <img src="{{Theme::asset()->url('images/footer/image2.jpg')}}" /> </span>
-                                        </p>
+                                        <div class="pt-4 row">
+                                            <div class="col-3"> <img class="mw-100" src="{{Theme::asset()->url('images/footer/image4.jpg')}}" /> </div>
+                                            <div class="col-3 pl-0"> <img class="mw-100" src="{{Theme::asset()->url('images/footer/image3.jpg')}}" /> </div>
+                                            <div class="px-2 col-2 pl-0"> <img class="mw-100" src="{{Theme::asset()->url('images/footer/image1.jpg')}}" /> </div>
+                                            <div class="col-4 px-0"> <img class="mw-100" src="{{Theme::asset()->url('images/footer/image2.jpg')}}" /> </div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -137,7 +138,7 @@
                         </div>
 
                         <div class="footer__bottom copyright">
-                            <p> All right reservedn @2021 - Hailong Glass </p>
+                            <p> All rights reserved @2021 - Hailong Glass </p>
                         </div>
                     </div>
                 </div>

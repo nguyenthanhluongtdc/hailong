@@ -1,6 +1,5 @@
 @php
-    $slug_page_introduce = get_slug_by_template('introduce');
- 
+    $page_introduce = get_page_by_template ('introduce');
 @endphp
 
 <div id="home-page">
@@ -23,23 +22,28 @@
             </div>
         </div>
 
-        <div class="container-customize pr-0">
-            <div class="splide" id="section-intro__carousel">
-                <div class="splide__slider">
-                    <!-- relative -->
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                        @foreach(has_field($page, 'banner_image') as $row)
-                            <li class="splide__slide">
-                                <img alt=" ảnh slider" width="" height="" src="{{ RvMedia::getImageUrl(get_sub_field($row, 'image'))}}" />
-                            </li>
-                        @endforeach
-                        </ul>
-                    </div>
-                </div>
+        <div class="intro-slider">
+            <div class="slider-bg">
 
-                <div>
-                    <!-- extra contents -->
+            </div>
+            <div class="container-customize pr-0">
+                <div class="splide" id="section-intro__carousel">
+                    <div class="splide__slider">
+                        <!-- relative -->
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                @foreach(has_field($page, 'banner_image') as $row)
+                                <li class="splide__slide">
+                                    <img alt=" ảnh slider" width="" height="" src="{{ RvMedia::getImageUrl(get_sub_field($row, 'image'))}}" />
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- extra contents -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,12 +55,12 @@
                 <div class="theme-customize-header-section__header mb-3">
                     <h2 class="theme-customize-header-section__header__title"> Về chúng tôi </h2>
                     <p class="theme-customize-header-section__header__des">
-                        Công ty TNHH SX và TM Hải Long thành lập ngày 30/05/2001, sau gần 20 năm xây dựng, trưởng thành và phát triển đã trở thành nhà gia công kính hàng đầu tại Việt Nam với thương hiệu theme-customize - Kính an toàn Hải Long.
+                        @if($page_introduce)
+                        {{$page_introduce->description}}
+                        @endif
                     </p>
                 </div>
-                <p class="section-aboutus__line__des">
-                    Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường.
-                </p>
+                <p class="section-aboutus__line__des"> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường </p>
                 <div class="section-aboutus__line__btn">
                     <a class="btn-read-more" href="#" title="Xem thêm">
                         Xem thêm
@@ -562,11 +566,53 @@
         display: none;
     }
 
-    .navbar-nav {
-        margin-right: 0 !important;
-        margin-left: auto !important;
-        padding-left: 0 !important;
+    header {
+        margin-top: 2rem;
     }
+
+    .container-customize-header {
+        max-width: 1920px;
+        padding-left: 16% !important;
+        padding-right: 16% !important;
+    }
+
+    @media (max-width: 1680px) {
+        .container-customize-header {
+            padding-left: 10% !important;
+            padding-right: 10% !important;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .container-customize-header {
+            padding-left: 8% !important;
+            padding-right: 8% !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container-customize-header {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+
+    .bilingual {
+        display: block !important;
+    }
+
+    @media (min-width: 992px) {
+        .col-index-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        .col-index-9 {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+
 </style>
 
 <script>
@@ -579,18 +625,18 @@
             , height: '35.625rem'
             , breakpoints: {
                 '1680': {
-                    height: '38.46153846153846rem',
-                },
-                '1200': {
+                    height: '38.46153846153846rem'
+                , }
+                , '1200': {
                     height: '27.384615384615383rem'
-                },
-                '992': {
+                }
+                , '992': {
                     height: '22.307692307692307rem'
-                },
-                '576': {
+                }
+                , '576': {
                     height: '13.076923076923077rem'
-                },
-                '360': {
+                }
+                , '360': {
                     height: '8.153846153846153rem'
                 }
             }

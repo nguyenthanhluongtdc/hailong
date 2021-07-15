@@ -37,6 +37,17 @@ if (!function_exists('get_slug_by_template')) {
     }
 }
 
+if (!function_exists('get_page_by_template')) {
+    /**
+     * @param string $slug
+     * @return mixed
+     */
+    function get_page_by_template($template="")
+    {
+        return app(PageInterface::class)->getPageByTemplate($template);
+    }
+}
+
 if (!function_exists('get_all_pages')) {
     /**
      * @param boolean $active

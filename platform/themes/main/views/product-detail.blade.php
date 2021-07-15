@@ -65,10 +65,11 @@
                         </div>
                     </div>
 
-                    <div class="col-md-7 mt-md-4">
-                        <div class="box-picture">
-                            <img class="mw-100" src="{{Theme::asset()->url('/images/products/image5.jpg')}}" width="" height="" alt="ảnh product" />
+                    <div class="col-md-7 mt-xl-5 mt-4">
+                        <div class="box-picture h-100 d-md-block d-none" style="background-image: url({{Theme::asset()->url('/images/products/image5.jpg')}}); background-size: cover; background-repeat: no-repeat;">
                         </div>
+
+                        <img class="mw-100 mt-md-0 mt-n2 d-md-none d-block" src="{{Theme::asset()->url('/images/products/image5.jpg')}}" alt="" width="" height="">
                     </div>
                 </div>
             </div>
@@ -145,7 +146,32 @@
                     </div>
 
                     <div class="row-picture distance-above">
-                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
+                        <div class="splide" id="section-product-more-info__carousel">
+                            <div class="splide__slider">
+                                <!-- relative -->
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
+                                        </li>
+                                        <li class="splide__slide">
+                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
+                                        </li>
+                                        <li class="splide__slide">
+                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
+                                        </li>
+                                        <li class="splide__slide">
+                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div>
+                                <!-- extra contents -->
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -306,30 +332,36 @@
                             Hướng dẫn mua hàng
                         </h2>
                         <p class="theme-customize-header-section__header__des mb-4">
-                            Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường.
+                            Để sở hữu những sản phẩm kính đáp ứng các yêu cầu Tiêu chuẩn
+                            Việt Nam ( TCVN ) và Tiêu chuẩn Nhật Bản JIS) quý khách có thể
+                            thực hiện các bước sau
                         </p>
                     </div>
 
                     <p class="step">
                         <b> B1. </b>
-                        <span> Quy khach co the xem thong tin san pham muon Đặt hàng </span>
+                        <span>Quý khách có thể xem thông
+                            tin chi tiết sản phẩm muốn </span>
                     </p>
 
                     <p class="step">
                         <b> B2. </b>
-                        <span> Click vao nut
+                        <span> Click vào nút
                             <a href="#" class="order" title="Đặt hàng"> Đặt hàng </a>
                         </span>
                     </p>
 
                     <p class="step">
                         <b> B1. </b>
-                        <span> Dien chinh xac vao form hien thi </span>
+                        <span> Điển chính xác thông tin
+                            vào form hiển thị</span>
                     </p>
 
                     <p class="step">
                         <i class="fas fa-check-circle"></i>
-                        <span> sau khi quy khach hoan thanh nhung buoc tren, chung toi se tiep nhan </span>
+                        <span> Sau khi quý khách hoàn thành những bước trên, chúng
+                            tôi sẽ tiếp nhận đơn hàng, kiểm tra lại và xác nhận đơn
+                            | hàng của Quý khách trước khi làm lệnh sản xuất. </span>
                     </p>
                 </div>
 
@@ -346,7 +378,7 @@
                 <div class="modal-body p-0">
                     <div class="row mr-md-0 position-relative">
                         <div class="col-md-5 col-12 col-left position" style="background-image: url({{Theme::asset()->url('/images/products/ordersucces.jpg')}}); background-repeat: no-repeat; background-size: cover;">
-                            
+
                         </div>
 
                         <div class="col-md-7 p-0 col-12 col-right pl-md-4">
@@ -410,7 +442,7 @@
                 <div class="modal-body p-0">
                     <div class="row">
                         <div class="col-md-6 position" style="background-image: url({{Theme::asset()->url('/images/products/ordersucces.jpg')}}); background-repeat: no-repeat; background-size: cover;">
-                          
+
                         </div>
 
                         <div class="col-md-6">
@@ -444,3 +476,14 @@
 </div>
 
 
+<script>
+    $(document).ready(function() {
+        new Splide('#section-product-more-info__carousel', {
+            heightRatio: 0.5625
+            , cover: true
+            , rewind: true
+            , lazyLoad: 'sequential'
+        }).mount();
+    })
+
+</script>

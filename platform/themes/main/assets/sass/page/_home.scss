@@ -1,7 +1,7 @@
 
 #home-page {
     .section-intro-wrapper {
-        margin-top: $size9_375;
+        margin-top: $size6_25;
 
         .section-intro {
             display: flex;
@@ -109,10 +109,23 @@
                 }
             }
         }
+
+        .intro-slider {
+            position: relative;
+            
+            .slider-bg {
+                position: absolute;
+                height: 50%;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background-color: $backgroundf3f3f3;
+            }
+        }
     }
 
     .section-aboutus-wrapper {
-
+        background-color: $backgroundf3f3f3;
         .section-aboutus {
             &__line__des {
                 font-weight: bold;
@@ -122,7 +135,7 @@
     }
 
     .section-ourproduct-wrapper {
-
+        background-color: $backgroundf3f3f3;
         .section-ourproduct{
             .section-ourproduct__left {
                 width: 100%;
@@ -258,7 +271,7 @@
     #home-page {
 
         .section-ourproduct-wrapper {
-            margin-top: $size4;
+            padding-top: $size4;
         }
         .box-common-typeicalproject-carousel-wrapper {
         
@@ -283,7 +296,7 @@
 @mixin home-screen-maxw1680() {
     #home-page {
         .section-ourproduct-wrapper {
-            margin-top: $size3;
+            padding-top: $size3;
         }
     }
 }

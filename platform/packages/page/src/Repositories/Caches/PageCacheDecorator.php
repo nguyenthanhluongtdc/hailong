@@ -51,4 +51,9 @@ class PageCacheDecorator extends CacheAbstractDecorator implements PageInterface
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }
+
+    public function getPageByTemplate($template = "")
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }

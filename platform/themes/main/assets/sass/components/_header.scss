@@ -1,6 +1,6 @@
 
 header {
-    margin-top: $size4;
+    margin-top: 15px;
     position: relative;
     @media(max-width: 768px) {
         margin-top: 15px;
@@ -30,6 +30,7 @@ header {
 
             .bilingual {
                 margin: auto 0;
+                display: none;
 
                 a{
                     padding: $size0_625 $size0_9375;
@@ -83,15 +84,10 @@ header {
     .box-sub {
         position: absolute;
         bottom: 0;
-        right: $size6_25;
         background-color: $backgroundGreen;
         color: $textWhite;
         padding: $size0_9375 $size1_25; 
         transform: translateY(50%);
-
-        @media(max-width: 1200px) {
-            transform: translateY(110%);
-        }
 
         @media (max-width: 992px) {
             display: none;

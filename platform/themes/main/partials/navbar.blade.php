@@ -1,25 +1,30 @@
 <nav class="navbar navbar-expand-lg pb-0 px-0 navbar-light">
-    <div class="container-customize important container align-items-end">
-        <a class="link-theme-customize text-decoration-none col-lg-3 col-9 pb-3 pl-0" href="/" title="Logo">
+    <div class="container-customize-header align-items-end">
+        <a class="link-theme-customize text-decoration-none col-lg-2 col-index-3 col-9 pb-2 pl-0" href="/" title="Logo">
             <img class="mw-100" src="{{Theme::asset()->url('images/hailong/logo.png')}}" alt="Logo" />
         </a>
-        <button class="navbar-toggler py-sm-1 px-sm-2 p-0 mb-3" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler py-sm-1 px-sm-2 p-0 mb-3 mr-lg-0 mr-md-5 " type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse align-items-end mb-lg-0 mb-3" id="navbarToggler">
-            <ul class="navbar-nav pl-5 mr-auto mt-2 mt-lg-0 align-items-lg-end">
-            @if(!empty($menu_nodes[0]))
+        <div class="collapse navbar-collapse align-items-end mb-lg-0 mb-3 col-lg-8 col-index-9" id="navbarToggler">
+            <ul class="navbar-nav mx-auto mt-2 mt-lg-0 align-items-lg-end">
+                @if(!empty($menu_nodes[0]))
                 @foreach($menu_nodes as $key => $row)
                 <li class="nav-item {{$key==0?'active':''}}">
                     <a class="nav-link" href="{{$row->url}}"> {{$row->title}} </a>
                 </li>
                 @endforeach
-            @endif
+                @endif
                 <li class="bilingual">
                     <a class="en active" href="#"> EN </a>
                     <a class="vn" href="#"> VN </a>
                 </li>
             </ul>
+        </div>
+        <div class="col-lg-2 mr-auto position-relative">
+            <div class="box-sub">
+                <span> CSKH24/7: </span> <b> 19004696 </b>
+            </div>
         </div>
     </div>
 </nav>

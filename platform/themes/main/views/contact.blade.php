@@ -39,16 +39,16 @@
                                 Huyện Phú Xuyên, Thành phố Hà Nội
                             </p>
                         </div>
-                        <div class="company__phone">
+                        <div class="company__phone my-4">
                             <span class="phone">
                                 <a title="19004696" href="tel:19004696"> 19004696</a>
                             </span>
                             <span class="phone">
                                 <a title="098 117 222" href="tel:098 117 222">098 117 2222</a> 
                             </span>
-                            <p class="phone">
+                            <span class="phone">
                                 <a title="098 37 88888" href="tel:098 37 88888">098 37 88888</a>
-                            </p>
+                            </span>
                         </div>
                         <div class="company__email">
                             <p class="email">

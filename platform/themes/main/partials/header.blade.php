@@ -37,10 +37,6 @@
                 'view' => 'navbar',
             ])
         !!}
-
-        <div class="box-sub">
-            <span> CSKH24/7: </span>  <b> 19004696 </b>
-        </div>
     </header>
 
     <div id="sidebar-main" class="d-md-block d-none">

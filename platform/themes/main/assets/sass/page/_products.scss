@@ -2,38 +2,51 @@
 .section-shoppingguide-wrapper {
     background-color: $backgroundf3f3f3;
     .section-shoppingguide {
-    &__content {
-        .step {
-        display: grid;
-        grid-template-columns: 15% auto;
+        position: relative;
+        &__content {
+            .step {
+            display: grid;
+            grid-template-columns: 15% auto;
 
-        b {
-            font-size: $size1_875;
-            color: $textGreen;
+            b {
+                font-size: $size1_875;
+                color: $textGreen;
 
-            @media (max-width: 992px) {
-            font-size: $size1_5;
+                @media (max-width: 992px) {
+                font-size: $size1_5;
+                }
+
+                @media (max-width: 567px) {
+                font-size: $size1_25;
+                }
             }
 
-            @media (max-width: 567px) {
-            font-size: $size1_25;
+            span {
+                padding-top: 0.5rem;
+            }
+
+            i {
+                padding-top: $size1_5;
+                color: $textGreen;
+            }
+
+            .order {
+                color: $textGreen;
+            }
             }
         }
 
-        span {
-            padding-top: 0.5rem;
+        &__picture {
+            @media (max-width: 767px) {
+                clip-path: circle(87.5% at 100% 83%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0.4;
+            }
         }
-
-        i {
-            padding-top: $size1_5;
-            color: $textGreen;
-        }
-
-        .order {
-            color: $textGreen;
-        }
-        }
-    }
     }
 }
 

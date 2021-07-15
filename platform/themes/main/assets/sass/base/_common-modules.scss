@@ -633,6 +633,19 @@
             }
         }
     }
+
+    .distance-below {
+        padding-bottom: $size3_6875;
+    }
+
+    .distance-above {
+        padding-top: $size3_6875;
+    }
+
+    .distance-y {
+        padding-top: $size3_6875;
+        padding-bottom: $size3_6875;
+    }
 }
 
 @mixin common-screen-maxw567() {
