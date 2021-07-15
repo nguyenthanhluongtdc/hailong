@@ -11,8 +11,8 @@ bin/*
 !bin/*.sh
 
 ############# Laravel #############
-storage/*
-public/storage/
+#storage/*
+#public/storage/
 
 ################ GUIDE LINE ####################
 ## To gitignore every file and folder under a directory recursively:
@@ -460,7 +460,7 @@ image/cache/
 system/cache/
 system/logs/
 
-system/storage/
+#system/storage/
 
 # vQmod log files
 vqmod/logs/*
@@ -526,8 +526,8 @@ tests/media/templates/view/*
 
 /node_modules
 /public/hot
-/public/storage
-/storage/*.key
+#/public/storage
+#/storage/*.key
 /vendor
 .DS_Store
 Thumbs.db
@@ -542,9 +542,9 @@ npm-debug.log
 sftp-config.json
 .phpstorm.meta.php
 _ide_helper_models.php
-/storage/app/backup
-/storage/cache_keys.json
-/storage/languages.json
+#/storage/app/backup
+#/storage/cache_keys.json
+#/storage/languages.json
 
 __MACOSX
 /.phpintel
@@ -554,9 +554,9 @@ _ide_helper.php
 package-lock.json
 /.sass-cache
 
-storage/settings.json
+#storage/settings.json
 
 public/mix-manifest.json
 
-/storage/installing
+#/storage/installing
 public/docs
