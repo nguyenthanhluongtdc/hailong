@@ -325,9 +325,11 @@
 
     <div class="section-shoppingguide-wrapper">
         <div class="container-customize pr-lg-0">
-            <div class="section-shoppingguide distance-below row _fsx20r16">
-                <div class="section-shoppingguide__content col-lg-6 px-lg-4">
-                    <div class="theme-customize-header-section__header">
+            <div class="section-shoppingguide row _fsx20r16">
+                <div class="section-shoppingguide__picture order-md-2 col-lg-6 col-md-5 px-4 mt-lg-0" style="background-image: url({{Theme::asset()->url('images/products/image2.jpg')}}); background-size: cover; background-repeat: no-repeat;">
+                </div>
+                <div class="section-shoppingguide__content order-md-1 col-lg-6 col-md-7 px-4 distance-below">
+                     <div class="theme-customize-header-section__header">
                         <h2 class="theme-customize-header-section__header__title">
                             Hướng dẫn mua hàng
                         </h2>
@@ -363,10 +365,6 @@
                             tôi sẽ tiếp nhận đơn hàng, kiểm tra lại và xác nhận đơn
                             | hàng của Quý khách trước khi làm lệnh sản xuất. </span>
                     </p>
-                </div>
-
-                <div class="section-shoppingguide__picture col-lg-6 px-lg-4 mt-lg-0 mt-4">
-                    <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/products/image2.jpg')}}" alt="ảnh-product" />
                 </div>
             </div>
         </div>
