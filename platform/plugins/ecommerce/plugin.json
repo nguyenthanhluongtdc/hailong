@@ -1,0 +1,9 @@
+{
+    "name": "Ecommerce",
+    "namespace": "Platform\\Ecommerce\\",
+    "provider": "Platform\\Ecommerce\\Providers\\EcommerceServiceProvider",
+    "author": "Laravel Technologies",
+    "url": "https://laravel-cms.demo.gistensal.com",
+    "version": "1.3",
+    "description": "Plugin for E-commerce features"
+}

@@ -39,26 +39,13 @@
                                         <p class="footer__col__title">
                                             <strong> Thông Tin </strong>
                                         </p>
-                                        <ul class="f-listinfo__content footer__col__list">
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Giới Thiệu </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#" title="Cac van phong dai dien">Các Văn Phòng Đại Diện </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#" title="Chinh sach va quy dinh chung"> Chính Sách Và Quy Định Chung </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#" title="Chinh sach van chuyen"> Chính Sách Bảo Mật Thông Tin Cá Nhân </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title="Chinh sach doi tra"> Chính Sách Đổi Trả </a>
-                                            </li>
-                                        </ul>
+                                        {!!
+                                            Menu::renderMenuLocation('col-information-menu', [
+                                                'options' => [],
+                                                'theme' => true,
+                                                'view' => 'col-info-footer',
+                                            ])
+                                        !!}
                                     </div>
                                 </div>
 
@@ -111,12 +98,12 @@
                                             </li>
                                         </ul>
                                         <div class="footer__col__list--icon pt-4">
-                                            <a class="__item__icon" href="#" title="Facebook"> 
-                                                <img width="" height="" src="{{Theme::asset()->url('images/hailong/fb_icon.png')}}" /> 
+                                            <a class="__item__icon" href="#" title="Facebook">
+                                                <img width="" height="" src="{{Theme::asset()->url('images/hailong/fb_icon.png')}}" />
                                             </a>
 
-                                            <a class="__item__icon" href="#" title="Zalo"> 
-                                                <img src="{{Theme::asset()->url('images/hailong/zalo_icon.png')}}" /> 
+                                            <a class="__item__icon" href="#" title="Zalo">
+                                                <img src="{{Theme::asset()->url('images/hailong/zalo_icon.png')}}" />
                                             </a>
                                         </div>
                                     </div>

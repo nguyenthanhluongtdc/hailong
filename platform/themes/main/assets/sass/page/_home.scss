@@ -189,6 +189,8 @@
                         a {
                             color: $textNight;
                             text-decoration: none;
+                            font-weight: bold;
+                            @include split_str(1);
                         }
 
                         a:hover {
@@ -206,6 +208,10 @@
                         @include split_str(3);
                         font-size: $size1;
                         margin-bottom: 0;
+
+                        @media(max-width: 567px) {
+                            @include split_str(2);
+                        }
                     }
                 }
 

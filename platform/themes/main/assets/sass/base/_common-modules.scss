@@ -339,7 +339,8 @@
 
             .box__infoOther {
                 margin-top: $size2_8125;
-                padding: $font-size20;
+                padding: $size30;
+                padding-top: 2.2rem;
                 padding-bottom: 0;
                 background-color: $backgroundGreen;
                 color: $textWhite;
@@ -569,8 +570,8 @@
             position: absolute;
             right: $size0_9375;
             bottom: 0;
-            height: $font-size30;
-            line-height: $font-size30;
+            height: $size2;
+            line-height: $size2;
             transform: translateY(50%);
 
             &::before {
