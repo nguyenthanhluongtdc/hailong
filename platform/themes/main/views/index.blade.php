@@ -34,7 +34,7 @@
                             <ul class="splide__list">
                                 @foreach(has_field($page, 'banner_image') as $row)
                                 <li class="splide__slide">
-                                    <img alt=" ảnh slider" width="" height="" src="{{ RvMedia::getImageUrl(get_sub_field($row, 'image'))}}" />
+                                    <img alt=" ảnh slider" width="1600" height="570" src="{{ RvMedia::getImageUrl(get_sub_field($row, 'image'))}}" />
                                 </li>
                                 @endforeach
                             </ul>
@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-md-4 col-12 order-md-1 order-2 pr-md-0">
                         <div class="section-ourproduct__left h-100">
-                            <img class="w-100 h-100" width="" height="" src="{{rvMedia::getImageUrl(has_field($page,'image_module_product'))}}" alt="product" />
+                            <img class="w-100 h-100" width="600" height="540" src="{{rvMedia::getImageUrl(has_field($page,'image_module_product'))}}" alt="product" />
                         </div>
                     </div>
 
@@ -286,7 +286,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="ảnh slider">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh slider" />
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh slider" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
@@ -301,7 +301,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="ảnh slider">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
@@ -315,7 +315,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider" />
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -328,7 +328,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -377,7 +377,7 @@
                             <div class="col-lg-6">
                                 <div class="col-core col-big">
                                     <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}"> 
-                                        <img width="" height="" class="col-core__img w-100" src="{{rvMedia::getImageUrl($posts[0]->image)}}" alt="{{$posts[0]->name}}" atl="" />
+                                        <img width="640" height="430" class="col-core__img w-100" src="{{rvMedia::getImageUrl($posts[0]->image)}}" alt="{{$posts[0]->name}}" atl="" />
                                     </a>
 
                                     <div class="col-core__content">
@@ -403,7 +403,7 @@
                                     <div class="col-core col-flex-box">
                                         <div class="col-core__box__img pr-md-3 pr-0">
                                             <a href="{{$post->url}}" title="{{$post->name}}">
-                                                <img width="" height="" class="col-core__img" src="{{rvMedia::getImageUrl($post->image)}}" alt="{{$post->name}}" />
+                                                <img width="250" height="160" class="col-core__img" src="{{rvMedia::getImageUrl($post->image)}}" alt="{{$post->name}}" />
                                             </a>
                                         </div>
 

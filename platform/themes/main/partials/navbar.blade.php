@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg pb-0 px-0 navbar-light">
     <div class="container-customize-header align-items-end">
         <a class="link-theme-customize text-decoration-none col-lg-2 col-index-3 col-9 pb-2 pl-0" href="/" title="Logo">
-            <img class="mw-100" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="Logo" />
+            <img width="370" height="110" class="mw-100" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="Logo" />
         </a>
         <button class="navbar-toggler border-0 py-sm-1 px-sm-2 p-0 mb-3 mr-lg-0 mr-md-5 " type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fal fa-bars"></i>

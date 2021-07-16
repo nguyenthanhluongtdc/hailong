@@ -35,7 +35,7 @@
             
             <div class="col-md-3 col-sm-6">
                 <div class="newsletter_img">
-                    <img src="{{Theme::asset()->url('images/news/globalization-affects-workplace.jpg')}}" alt="">
+                    <img width="310" height="150" src="{{Theme::asset()->url('images/news/globalization-affects-workplace.jpg')}}" alt="">
                 </div>
             </div> 
         </div>

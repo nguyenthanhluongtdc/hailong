@@ -69,7 +69,7 @@
                         <div class="box-picture h-100 d-md-block d-none" style="background-image: url({{Theme::asset()->url('/images/products/image5.jpg')}}); background-size: cover; background-repeat: no-repeat;">
                         </div>
 
-                        <img class="mw-100 mt-md-0 mt-n2 d-md-none d-block" src="{{Theme::asset()->url('/images/products/image5.jpg')}}" alt="" width="" height="">
+                        <img class="mw-100 mt-md-0 mt-n2 d-md-none d-block" src="{{Theme::asset()->url('/images/products/image5.jpg')}}" alt="" width="750" height="500">
                     </div>
                 </div>
             </div>
@@ -152,16 +152,16 @@
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
-                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
+                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="1400" height="750" />
                                         </li>
                                         <li class="splide__slide">
-                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
+                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="1400" height="750" />
                                         </li>
                                         <li class="splide__slide">
-                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
+                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="1400" height="750" />
                                         </li>
                                         <li class="splide__slide">
-                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" alt=""/>
+                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="1400" height="750" alt=""/>
                                         </li>
                                     </ul>
                                 </div>
@@ -219,7 +219,7 @@
                                     </p>
 
                                     <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="" height="" />
+                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="1110" height="500" />
                                     </div>
                                 </div>
 
@@ -234,7 +234,7 @@
                                     </p>
 
                                     <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="" height="" />
+                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="1110" height="500" />
                                     </div>
                                 </div>
 
@@ -249,7 +249,7 @@
                                     </p>
 
                                     <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="" height="" />
+                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="1110" height="500" />
                                     </div>
                                 </div>
 
@@ -264,7 +264,7 @@
                                     </p>
 
                                     <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="" height="" />
+                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="1110" height="500" />
                                     </div>
                                 </div>
                             </div>

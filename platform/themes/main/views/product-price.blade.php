@@ -28,12 +28,17 @@
         </div>
     </div>
 
-    <div class="box-common-intro-wrapper mt-5">
+    <div class="box-common-intro-wrapper">
         <div class="container-customize pr-md-0">
             <div class="box-common-intro theme-customize-header-section _fsx20r16">
-                <div class="row">
-                    <div class="col-md-6 col-12">
-                        <div class="box-common-intro__content">
+                <div class="row position-relative">
+                    <div class="col-md-6 col-12 order-md-2 mt-lg-5 mt-4 absolute box-common-intro__picture" style="background-image: url({{Theme::asset()->url('images/products/image3.jpg')}}); background-size: cover; background-repeat: no-repeat;">
+                        {{-- <div class="box-common-intro__picture h-100" > 
+                            <img width="" height="" src="{{Theme::asset()->url('images/products/image3.jpg')}}" alt="ảnh product" />
+                        </div> --}}
+                    </div>
+                    <div class="col-md-6 col-12 order-md-1">
+                        <div class="box-common-intro__content distance-y">
                             <div class="theme-customize-header-section__header pt-0">
                                 <h2 class="theme-customize-header-section__header__title">
                                     Báo giá sản phẩm
@@ -65,12 +70,6 @@
                             <a class="hotline" href="#" title="Hotline">
                                 <span> Hotline: </span> <b> 0992772499 </b>
                             </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-12 mt-md-0 mt-4">
-                        <div class="box-common-intro__picture">
-                            <img width="" height="" src="{{Theme::asset()->url('images/products/image3.jpg')}}" alt="ảnh product" />
                         </div>
                     </div>
                 </div>

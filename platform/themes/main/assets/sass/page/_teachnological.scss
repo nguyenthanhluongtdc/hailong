@@ -7,6 +7,7 @@
                 margin-right: -$font-size20;
                 padding-top: $size2_5;
                 padding-bottom: $size2_5;
+                flex-wrap: wrap;
                 @media (max-width: 768px) {
                     margin-left: -7.5px;
                     padding-top: -7.5px;
@@ -23,6 +24,11 @@
                     }
                     flex: 0 0 50%;
                     max-width: 50%;
+
+                    @media (max-width: 575px) {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
                 }
 
                 &__col.__content {

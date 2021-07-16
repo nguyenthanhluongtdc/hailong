@@ -240,6 +240,20 @@
                 max-width: 200%;
             }
         }
+
+        .position-relative {
+            .box-common-intro__picture {
+                @media(max-width: 767px) {
+                    clip-path: circle(50% at 74% 24%);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    opacity: 0.2;
+                }
+            }
+        }
         &__picture.video {
             &::before {
                 content: "\f144";

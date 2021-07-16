@@ -6,7 +6,7 @@
                             <div class="row">
                                 <div class="col-lg-2 col-sm-6 col-12 mb-sm-0 mb-4 footer__col">
                                     <a class="link-theme-customize text-decoration-none" href="/" title="Logo">
-                                        <img class="mw-100" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="Logo" />
+                                        <img class="mw-100" width="400" height="120" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="Logo" />
                                     </a>
                                 </div>
 
@@ -26,10 +26,10 @@
                                             Nơi cấp: Sở Kế Hoạch & Đầu Tư Tp.Hà Nội
                                         </p>
                                         <div class="pt-4 row">
-                                            <div class="col-3"> <img class="mw-100" src="{{Theme::asset()->url('images/footer/image4.jpg')}}" alt="" /> </div>
-                                            <div class="col-3 pl-0"> <img class="mw-100" src="{{Theme::asset()->url('images/footer/image3.jpg')}}" alt="" /> </div>
-                                            <div class="px-2 col-2 pl-0"> <img class="mw-100" src="{{Theme::asset()->url('images/footer/image1.jpg')}}" alt="" /> </div>
-                                            <div class="col-4 px-0"> <img class="mw-100" src="{{Theme::asset()->url('images/footer/image2.jpg')}}" alt=""  /> </div>
+                                            <div class="col-3"> <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image4.jpg')}}" alt="" /> </div>
+                                            <div class="col-3 pl-0"> <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image3.jpg')}}" alt="" /> </div>
+                                            <div class="px-2 col-2 pl-0"> <img width="80" height="50" class="mw-100" src="{{Theme::asset()->url('images/footer/image1.jpg')}}" alt="" /> </div>
+                                            <div class="col-4 px-0"> <img width="120" height="50" class="mw-100" src="{{Theme::asset()->url('images/footer/image2.jpg')}}" alt=""  /> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -99,11 +99,11 @@
                                         </ul>
                                         <div class="footer__col__list--icon pt-4">
                                             <a class="__item__icon" href="#" title="Facebook">
-                                                <img width="" height="" src="{{Theme::asset()->url('images/hailong/fb_icon.png')}}" alt=""/>
+                                                <img width="35" height="35" src="{{Theme::asset()->url('images/hailong/fb_icon.png')}}" alt=""/>
                                             </a>
 
                                             <a class="__item__icon" href="#" title="Zalo">
-                                                <img src="{{Theme::asset()->url('images/hailong/zalo_icon.png')}}" alt="" />
+                                                <img width="35" height="35" src="{{Theme::asset()->url('images/hailong/zalo_icon.png')}}" alt="" />
                                             </a>
                                         </div>
                                     </div>

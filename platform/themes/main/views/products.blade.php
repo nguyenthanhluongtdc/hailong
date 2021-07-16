@@ -39,7 +39,7 @@
         </div>
 
         <div class="section-intro__picture">
-            <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/products/image1.jpg')}}" alt="ảnh-product" />
+            <img class="mw-100" width="1900" height="500" src="{{Theme::asset()->url('images/products/image1.jpg')}}" alt="ảnh-product" />
         </div>
 
         <div class="container-customize">
@@ -146,7 +146,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="Căn hộ cao cấp The Minaton Residence">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh-product" />
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh-product" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
@@ -161,7 +161,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="ảnh-slider">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh-slider" />
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh-slider" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
@@ -175,7 +175,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh-slider"/>
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh-slider"/>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -188,7 +188,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">

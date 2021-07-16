@@ -87,16 +87,16 @@
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
-                                            <img alt="image" width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_58.jpg')}}" />
+                                            <img alt="image" width="900" height="500" src="{{Theme::asset()->url('images/introduce/Rectangle_58.jpg')}}" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img alt="image" width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_63.jpg')}}" />
+                                            <img alt="image" width="900" height="500" src="{{Theme::asset()->url('images/introduce/Rectangle_63.jpg')}}" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img alt="image" width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_64.jpg')}}" />
+                                            <img alt="image" width="900" height="500" src="{{Theme::asset()->url('images/introduce/Rectangle_64.jpg')}}" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img alt="image" width="" height="" src="{{Theme::asset()->url('images/introduce/Rectangle_65.jpg')}}" />
+                                            <img alt="image" width="900" height="500" src="{{Theme::asset()->url('images/introduce/Rectangle_65.jpg')}}" />
                                         </li>
                                     </ul>
                                 </div>

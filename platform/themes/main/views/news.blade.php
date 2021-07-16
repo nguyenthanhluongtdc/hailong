@@ -32,7 +32,7 @@
                     <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                         <div class="news-post">
                             <a href="{{$latest_post->url}}" title="{{$latest_post->name}}">
-                                <img class="img-w-100 " src="{{ RvMedia::getImageUrl($latest_post->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$latest_post->name}}">
+                                <img class="img-w-100" width="600" height="270" src="{{ RvMedia::getImageUrl($latest_post->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$latest_post->name}}">
                                 <div class="news-post__title">
                                     <h4 class="__text-20">{{$latest_post->name}}</h4>
                                 </div>
@@ -69,7 +69,7 @@
                                    
                                     <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
                                         <a href="{{$all_post->url}}" title="{{$all_post->name}}">
-                                            <img class="mw-100 img-w-100" src="{{ RvMedia::getImageUrl($all_post->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$all_post->name}}">
+                                            <img width="500" height="350" class="mw-100 img-w-100" src="{{ RvMedia::getImageUrl($all_post->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$all_post->name}}">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-7 col-sm-7 col-7">
@@ -126,7 +126,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="ảnh slider">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
@@ -141,7 +141,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="ảnh slider">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
@@ -155,7 +155,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -168,7 +168,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">

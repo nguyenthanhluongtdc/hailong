@@ -43,7 +43,7 @@
         </div>
 
         <div class="section-intro__picture">
-            <img class="mw-100" width="" height="" src="{{Theme::asset()->url('images/teachnological/image1.jpg')}}" alt="ảnh dây chuyền công nghệ" />
+            <img class="mw-100" width="1900" height="500" src="{{Theme::asset()->url('images/teachnological/image1.jpg')}}" alt="ảnh dây chuyền công nghệ" />
         </div>
     </div>
 
@@ -61,7 +61,7 @@
 
                 <div class="section-teachnological__list _fsx20r16">
                     <div class="section-teachnological__row">
-                        <div class="section-teachnological__row__col __content">
+                        <div class="section-teachnological__row__col order-sm-1 order-2 __content">
                             <div>
                                 <h3 class="__content__title"> Phân xưởng kính cường lực </h3>
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
@@ -70,13 +70,13 @@
                             <a class="btn-read-more" href="" title="Chi tiết"> Chi tiết </a>
                         </div>
 
-                        <div class="section-teachnological__row__col __picture">
-                            <img width="" height="" src="{{Theme::asset()->url('images/teachnological/image2.jpg')}}"alt="ảnh dây chuyền công nghệ" />
+                        <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
+                            <img width="640" height="360" src="{{Theme::asset()->url('images/teachnological/image2.jpg')}}"alt="ảnh dây chuyền công nghệ" />
                         </div>
                     </div>
 
                     <div class="section-teachnological__row">
-                        <div class="section-teachnological__row__col __content">
+                        <div class="section-teachnological__row__col order-sm-1 order-2 __content">
                             <div>
                                 <h3 class="__content__title"> Phân xưởng kính cường lực </h3>
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
@@ -85,13 +85,13 @@
                             <a class="btn-read-more" href="" title="Chi tiết"> Chi tiết </a>
                         </div>
 
-                        <div class="section-teachnological__row__col __picture">
-                            <img width="" height="" src="{{Theme::asset()->url('images/teachnological/image3.jpg')}}" alt="ảnh dây chuyền công nghệ"/>
+                        <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
+                            <img width="640" height="360" src="{{Theme::asset()->url('images/teachnological/image3.jpg')}}" alt="ảnh dây chuyền công nghệ"/>
                         </div>
                     </div>
 
                     <div class="section-teachnological__row">
-                        <div class="section-teachnological__row__col __content">
+                        <div class="section-teachnological__row__col order-sm-1 order-2 __content">
                             <div>
                                 <h3 class="__content__title"> Phân xưởng kính cường lực </h3>
                                 <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
@@ -100,8 +100,8 @@
                             <a class="btn-read-more" href="" title="Chi tiết"> Chi tiết </a>
                         </div>
 
-                        <div class="section-teachnological__row__col __picture">
-                            <img width="" height="" src="{{Theme::asset()->url('images/teachnological/image4.jpg')}}"alt="ảnh dây chuyền công nghệ" />
+                        <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
+                            <img width="640" height="360" src="{{Theme::asset()->url('images/teachnological/image4.jpg')}}"alt="ảnh dây chuyền công nghệ" />
                         </div>
                     </div>
                 </div>

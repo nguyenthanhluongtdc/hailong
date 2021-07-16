@@ -60,7 +60,7 @@
                         </div>
                         <div class="company__connect">
                             <h4 class="__text-18">Kết Nối với HẢI LONG bằng Zalo QR Code</h4>
-                            <img src="{{Theme::asset()->url('images/contact/qr-zalo.jpg')}}" alt="zalo-code">
+                            <img src="{{Theme::asset()->url('images/contact/qr-zalo.jpg')}}" alt="zalo-code" width="110" height="110">
                         </div>
                     </div>
                     

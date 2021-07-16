@@ -35,7 +35,7 @@
     </div>
 
     <div class="box-common-intro-wrapper mt-5 ">
-        <div class="container-customize pr-0">
+        <div class="container-customize pr-md-0">
             <div class="box-common-intro theme-customize-header-section">
                 <div class="row">
                     <div class="col-md-6 col-12">
@@ -69,7 +69,7 @@
 
                     <div class="col-md-6 col-12">
                         <div class="box-common-intro__picture video">
-                            <img width="" height="" src="{{Theme::asset()->url('images/home/d7e5ae83ee0a1a54431b.jpg')}}" alt="video-box" />
+                            <img width="850" height="350" src="{{Theme::asset()->url('images/home/banner.jpg')}}" alt="video-box" />
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
             </div>
         </div>
         <div class="box-common-many-col__picture">
-            <img width="" height="" src="{{Theme::asset()->url('images/introduce/pexels-sevenstorm-juhaszimrus-443383.jpg')}}" alt="ảnh intro" />
+            <img width="1900" height="500" src="{{Theme::asset()->url('images/introduce/pexels-sevenstorm-juhaszimrus-443383.jpg')}}" alt="ảnh intro" />
         </div>
     </div>
 
@@ -182,7 +182,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="ảnh slider">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}"  alt="ảnh slider"/>
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}"  alt="ảnh slider"/>
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
@@ -197,7 +197,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="Căn hộ cao cấp The Minaton Residence">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
@@ -211,7 +211,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider"/>
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider"/>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -224,7 +224,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="" height="" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider"/>
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider"/>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">

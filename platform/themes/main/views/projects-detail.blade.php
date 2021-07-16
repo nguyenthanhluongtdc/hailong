@@ -43,16 +43,16 @@
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" alt="ảnh-slider"/>
+                                            <img class="img-w-100" width="900" height="500" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" alt="ảnh-slider"/>
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" alt="ảnh-slider"/>
+                                            <img class="img-w-100" width="900" height="500" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}" alt="ảnh-slider"/>
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}"alt="ảnh-slider"  />
+                                            <img class="img-w-100" width="900" height="500" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}"alt="ảnh-slider"  />
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}"alt="ảnh-slider" />
+                                            <img class="img-w-100" width="900" height="500" src="{{Theme::asset()->url('images/project/da-dt-1.jpg')}}"alt="ảnh-slider" />
                                         </li>
                                     </ul>
                                 </div>
@@ -90,16 +90,16 @@
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" alt="ảnh-slider" />
+                                            <img class="img-w-100" width="1500" height="750" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" alt="ảnh-slider" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}"alt="ảnh-slider" />
+                                            <img class="img-w-100" width="1500" height="750" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}"alt="ảnh-slider" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" alt="ảnh-slider" />
+                                            <img class="img-w-100" width="1500" height="750" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}" alt="ảnh-slider" />
                                         </li>
                                         <li class="splide__slide">
-                                            <img class="img-w-100" width="" height="" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}"alt="ảnh-slider"  />
+                                            <img class="img-w-100" width="1500" height="750" src="{{Theme::asset()->url('images/project/da-dt-2.jpg')}}"alt="ảnh-slider"  />
                                         </li>
                                     </ul>
                                 </div>

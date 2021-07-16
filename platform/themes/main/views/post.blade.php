@@ -40,10 +40,10 @@
                                     Chia sẻ
                                 <p>
                                  <ul class="list-share">
-                                     <li class="share-item"><a href="" title="icon"><img class="img-fluid" src="{{Theme::asset()->url('images/news/facebook.jpg')}}" alt="icon-fb"></a></li>
-                                     <li class="share-item"><a href="" title="icon"><img class="img-fluid" src="{{Theme::asset()->url('images/news/instagram.jpg')}}" alt="icon-share"></a></li>
-                                     <li class="share-item"><a href="" title="icon"><img class="img-fluid" src="{{Theme::asset()->url('images/news/lien-ket.jpg')}}" alt="icon-lk"></a></li>
-                                     <li class="share-item"><a href="" title="icon"><img class="img-fluid" src="{{Theme::asset()->url('images/news/linkedin.jpg')}}" alt="icon-linkedin"></a></li>
+                                     <li class="share-item"><a href="" title="icon"><img width="20" height="20" class="img-fluid" src="{{Theme::asset()->url('images/news/facebook.jpg')}}" alt="icon-fb"></a></li>
+                                     <li class="share-item"><a href="" title="icon"><img width="20" height="20" class="img-fluid" src="{{Theme::asset()->url('images/news/instagram.jpg')}}" alt="icon-share"></a></li>
+                                     <li class="share-item"><a href="" title="icon"><img width="20" height="20" class="img-fluid" src="{{Theme::asset()->url('images/news/lien-ket.jpg')}}" alt="icon-lk"></a></li>
+                                     <li class="share-item"><a href="" title="icon"><img width="20" height="20" class="img-fluid" src="{{Theme::asset()->url('images/news/linkedin.jpg')}}" alt="icon-linkedin"></a></li>
                                 </ul>   
                             </div>
                             <div class="info-contact">
@@ -78,7 +78,7 @@
                                     <div class="row">
                                       <div class="col-lg-6 col-md-4 col-sm-4">
                                             <a href="{{$post_related->url}}" class="news__item" title="{{$post_related->name}}">
-                                                <img class="img-w-100  mb-4"  src="{{ RvMedia::getImageUrl($post_related->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$post_related->name}}">
+                                                <img class="img-w-100  mb-4" width="600" height="400"  src="{{ RvMedia::getImageUrl($post_related->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$post_related->name}}">
                                             </a>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-4">

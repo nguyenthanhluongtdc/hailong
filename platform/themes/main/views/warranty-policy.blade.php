@@ -29,7 +29,7 @@
     </div>
 
     <div class="section-picture">
-        <img src="{{Theme::asset()->url('images\products\image4.jpg')}}" alt="ảnh product" />
+        <img width="1900" height="500" src="{{Theme::asset()->url('images\products\image4.jpg')}}" alt="ảnh product" />
     </div>
 
     <div class="section-collapse-wrapper">
