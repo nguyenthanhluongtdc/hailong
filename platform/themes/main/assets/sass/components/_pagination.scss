@@ -4,9 +4,6 @@
         flex-wrap: wrap;
         .page-item {
             margin-right: $size0_625;
-            &:first-child {
-                margin-left: -$size0_25;
-            }
             .page-link {
                 &:last-child {
                     border-top-right-radius: 0;
