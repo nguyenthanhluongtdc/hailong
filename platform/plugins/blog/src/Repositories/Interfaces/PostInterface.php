@@ -82,7 +82,7 @@ interface PostInterface extends RepositoryInterface
      * @param bool $active
      * @return mixed
      */
-    public function getAllPosts($perPage = 12, $active = true, array $with = ['slugable']);
+    public function getAllPosts($perPage = 10, $active = true, array $with = ['slugable']);
 
     /**
      * @param int $limit

@@ -1,3 +1,4 @@
+@php $posts  =  get_all_posts();  @endphp
 <div id="news-page">
     <div class="section-banner-wrapper">
         <div class="section-breadcrumb ">
@@ -26,55 +27,25 @@
         <div class="container-customize">
             <div class="news-wrapper-section">
                 <div class="row">
+                    @foreach (get_latest_posts(3,[],[]) as $latest_post)
+                 
                     <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
-                        <div class="news-post" data-aos="" data-aos-delay="200">
-                            <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-city-.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
+                        <div class="news-post">
+                            <a href="{{$latest_post->url}}" title="{{$latest_post->name}}">
+                                <img class="img-w-100 " src="{{ RvMedia::getImageUrl($latest_post->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$latest_post->name}}">
                                 <div class="news-post__title">
-                                    <h4 class="__text-20">Căn hộ cao cấp The Minato Residence</h4>
+                                    <h4 class="__text-20">{{$latest_post->name}}</h4>
                                 </div>
                                 <div class="news-post__time">
-                                    <span>15:56 25/07/2020</span>
+                                    <span>{{$latest_post->created_at->format('H:i d/m/Y') }}</span>
                                 </div>
                                 <div class="news-post__content __text-18">
-                                    <p> Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.</p>
+                                    <p>{{$latest_post->description}}</p>
                                 </div>
                             </a>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
-                        <div class="news-post" data-aos="" data-aos-delay="200">
-                            <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-city-2.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                <div class="news-post__title">
-                                    <h4 class="__text-20">Giúp tiểu thương bán hàng trên thương mại điện tử </h4>
-                                </div>
-                                <div class="news-post__time">
-                                    <span>15:56 25/07/2020</span>
-                                </div>
-                                <div class="news-post__content __text-18">
-                                    <p>Trong bối cảnh hàng loạt chợ truyền thống đóng cửa để phòng dịch, giải pháp hỗ trợ tiểu thương tiếp cận kênh online đang được tính đến. </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
-                        <div class="news-post" data-aos="" data-aos-delay="200">
-                            <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                <img class="img-background" src="{{Theme::asset()->url('images/news/architecture-buildings-3.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                <div class="news-post__title">
-                                    <h4 class="__text-20">'Nắm' doanh thu người bán trên sàn thương mại điện tử từ 2022</h4>
-                                </div>
-                                <div class="news-post__time">
-                                    <span>15:56 25/07/2020</span>
-                                </div>
-                                <div class="news-post__content __text-18">
-                                    <p> Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
             </div>
@@ -90,173 +61,46 @@
                 <div class="list-news-wrapper">
                     <div class="item-row">
                         <div class="row row-main ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
+                            @if ($posts->count())
+                            @foreach ($posts as $all_post)
+                           
                             <div class="col-md-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 pr-lg-0 pr-md-4 mb-4 mb-xl-5">
                                 <div class="row">
+                                   
                                     <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-1.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
+                                        <a href="{{$all_post->url}}" title="{{$all_post->name}}">
+                                            <img class="mw-100 img-w-100" src="{{ RvMedia::getImageUrl($all_post->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$all_post->name}}">
                                         </a>
                                     </div>
                                     <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
+                                        <h5> <a href="{{$all_post->url}}" title="{{$all_post->name}}">{{$all_post->name}}</a> </h5>
+                                        <span class="time">{{$all_post->created_at->format('H:i d/m/Y') }}</span>
                                         <p class="content">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
+                                            {{$all_post->description}}
                                         </p>
                                     </div>
+                                  
                                 </div>
-                            </div>
-                            <div class="col-md-6 mb-md-line p0-md  pl-sm-0 pr-xs-0 mb-4 mb-xl-5">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-2.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Hơn 4.600 tài khoản chứng khoán cá nhân mở mới mỗi ngày</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
-                                        <p class="content">
-                                            Trong tháng 6, có 140.000 tài khoản chứng khoán cá nhân mở mới, cao hơn 23% so với tháng 5 và là mức cao kỷ lục từ trước tới nay.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4 mb-xl-5">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-3.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
-                                        <p class="content">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-md-line p0-md  pl-sm-0 pr-xs-0 mb-4 mb-xl-5">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-4.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
-                                        <p class="content">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4 mb-xl-5">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-5.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
-                                        <p class="content">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-md-line p0-md pl-sm-0 pr-xs-0 mb-4 mb-xl-5">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-6.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
-                                        <p class="content">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4 mb-xl-5">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-7.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
-                                        <p class="content">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-md-line p0-md  pl-sm-0 pr-xs-0 mb-4 mb-xl-5">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-8.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
-                                        <p class="content">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 mb-4 mb-xl-5">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-9.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
-                                        <p class="content">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-md-line p0-md pl-sm-0 pr-xs-0 mb-4 mb-xl-5">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
-                                        <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">
-                                            <img class="mw-100" src="{{Theme::asset()->url('images/news/new-10.jpg')}}" alt="Căn hộ cao cấp The Minato Residence">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-7 col-sm-7 col-7">
-                                        <h5> <a href="/news-detail" title="Căn hộ cao cấp The Minato Residence">Căn hộ cao cấp The Minato</a> </h5>
-                                        <span class="time">15:56 25/07/2020</span>
-                                        <p class="content">
-                                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> 
+                            @endforeach
+                            @endif
+                          
                         </div>
+                     
                     </div>
+                    {{-- <div class="page-pagination text-right">
+                        {!! $posts->withQueryString()->links() !!}
+                    </div> --}}
+                    {{-- @includeIf("theme.main::views.components.pagination") --}}
+                    {{ $posts->onEachSide(1)->links('theme.main::views.components.pagination') }}
+                    
+                   
                 </div>
+              
             </div>
         </div>
     </section>
-    @includeIf("theme.main::views.components.pagination")
+  
     @includeIf("theme.main::views.components.form-signup")
     <!--css in file common.scss----->
     <div class="box-common-typeicalproject-carousel-wrapper">

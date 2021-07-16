@@ -201,7 +201,7 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
     /**
      * {@inheritDoc}
      */
-    public function getAllPosts($perPage = 12, $active = true, array $with = ['slugable'])
+    public function getAllPosts($perPage = 10, $active = true, array $with = ['slugable'])
     {
         $data = $this->model
             ->with($with)
