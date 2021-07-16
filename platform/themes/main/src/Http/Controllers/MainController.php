@@ -117,4 +117,5 @@ class MainController extends PublicController
         // show your site map (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf')
         return SiteMapManager::render();
     }
+
 }

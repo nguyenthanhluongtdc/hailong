@@ -302,12 +302,12 @@
                     </div>
                 </div>
             </div>
-          
+            @includeIf("theme.main::views.components.pagination")
         </div>
        
 
     </div>
-    @includeIf("theme.main::views.components.pagination")
+
     @includeIf("theme.main::views.components.form-signup")
    
 </div>

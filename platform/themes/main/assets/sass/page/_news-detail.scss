@@ -59,11 +59,18 @@
                         }
                     }
                 }
-
                 .post-content {
                     .des-title {
                         font-size: $font-size18;
                         font-weight: bold;
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        margin: 0 auto;
+                        cursor: pointer;
+                        padding: 10px 0 20px;
                     }
                 }
             }
@@ -79,8 +86,9 @@
                             font-size: $font-size18;
                             font-weight: bold;
                             margin-bottom: $size1;
-
-                           a:hover { color: $textGreen; }
+                            a:hover {
+                                color: $textGreen;
+                            }
                         }
                         .time {
                             opacity: 50%;

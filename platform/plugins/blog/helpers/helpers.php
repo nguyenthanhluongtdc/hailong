@@ -90,7 +90,7 @@ if (!function_exists('get_all_posts')) {
      */
     function get_all_posts(
         $active = true,
-        $perPage = 12,
+        $perPage = 10,
         array $with = ['slugable', 'categories', 'categories.slugable', 'author']
     ) {
         return app(PostInterface::class)->getAllPosts($perPage, $active, $with);
