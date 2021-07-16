@@ -32,7 +32,7 @@
 
             &__icon {
                 margin-right: $size1_5;
-                font-size: $size1_875;
+                font-size: $font-size30;
                 width: $size2_5;
                 color: $textGreen;
 
@@ -44,12 +44,12 @@
             &__content {
                 .__content__title {
                     color: $textGreen;
-                    font-size: $size1_25;
+                    font-size: $font-size20;
                     font-weight: bold;
                 }
 
                 .__content__des {
-                    font-size: $size1_125;
+                    font-size: $font-size18;
                 }
             }
         }

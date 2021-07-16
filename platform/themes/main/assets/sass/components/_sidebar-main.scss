@@ -38,14 +38,14 @@
                 font-weight: bold;
                 width: $size4_0625;
                 display: inline-block;
-                font-size: $size1_25;
+                font-size: $font-size20;
             }
 
             &__content {
                 display: inline-block;
 
                 a {
-                    font-size: $size1_125;
+                    font-size: $font-size18;
                     font-weight: bold;
                     color: $textWhite;
                     text-decoration: none;
@@ -67,7 +67,7 @@
             display: block;
 
             .box__item__icon {
-                font-size: $size1_25;
+                font-size: $font-size20;
             }
         }
     }

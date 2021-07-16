@@ -44,7 +44,7 @@
     .section-intro__content__top {
         .theme-customize-header-section__header__title {
             color: unset;
-            font-size: $size1_875;
+            font-size: $font-size30;
             font-family: $Barlow-Regular;
             margin: $size2_5 0;
         }
@@ -56,7 +56,7 @@
         padding: 0 15%;
         .theme-customize-header-section__header__title {
             color: unset;
-            font-size: $size1_875;
+            font-size: $font-size30;
             font-family: $Barlow-Regular;
             margin: $size3 0;
         }
@@ -149,7 +149,7 @@
         .section-intro__content__bottom {
             padding: unset;
             .theme-customize-header-section__header__title {
-                font-size: $size1_25;
+                font-size: $font-size20;
                 margin: 0 0 $size1 0;
             }
             .intro__content {

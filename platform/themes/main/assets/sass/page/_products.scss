@@ -9,7 +9,7 @@
             grid-template-columns: 15% auto;
 
             b {
-                font-size: $size1_875;
+                font-size: $font-size30;
                 color: $textGreen;
 
                 @media (max-width: 992px) {
@@ -17,7 +17,7 @@
                 }
 
                 @media (max-width: 567px) {
-                font-size: $size1_25;
+                font-size: $font-size20;
                 }
             }
 
@@ -73,7 +73,7 @@
             padding: $size0_625 0;
             border-bottom: 1px solid $borderf3f3f3;
             transition: padding 200ms;
-            font-size: $size1_25;
+            font-size: $font-size20;
 
             &::before {
                 content: "";
@@ -87,7 +87,7 @@
                 display: none;
             }
             &:hover {
-                padding-left: $size1_25;
+                padding-left: $font-size20;
                 color: $textGreen;
                 &::before {
                     display: inline-block;

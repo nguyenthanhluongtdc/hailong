@@ -1,7 +1,7 @@
 
 #home-page {
     .section-intro-wrapper {
-        margin-top: $size6_25;
+        margin-top: $size100;
 
         .section-intro {
             display: flex;
@@ -14,14 +14,14 @@
 
             &__title {
                 color: $textGreen; 
-                font-size: $size2_5;
+                font-size: $font-size40;
                 font-family: $iCiel-SamsungSharpSans-Bold_SMCPS;
             }
 
             .info-contact {
                 margin-top: $size0_625;
                 padding-left: 0;
-                font-size: $size1_25;
+                font-size: $font-size20;
                 
                 &__item {
                     display: inline-block;
@@ -47,7 +47,7 @@
         .splide {
             &__arrows {
                 position: absolute;
-                bottom: $size1_25;
+                bottom: $font-size20;
                 left: $size1_5;
                 .splide__arrow {
                     top: 0;
@@ -129,7 +129,7 @@
         .section-aboutus {
             &__line__des {
                 font-weight: bold;
-                font-size: $size1_25;
+                font-size: $font-size20;
             }
         }
     }
@@ -149,11 +149,11 @@
                 background-color: $backgroundGreen;
                 padding: $size3_75;
                 @media (max-width: 567px) {
-                    padding: $size1_25;
+                    padding: $font-size20;
                 }
 
                 .__header {
-                    margin-bottom: $size2_5;
+                    margin-bottom: $font-size40;
                     .__title {
                         color: $textWhite;
                     }
@@ -183,7 +183,7 @@
                 &__content {
                     
                     &__title {
-                        font-size: $size1_125;
+                        font-size: $font-size18;
                         margin-bottom: 0;
 
                         a {
@@ -240,7 +240,7 @@
             .box-news-main {
                 .col-flex-box {
                     display: flex;
-                    margin-bottom: $size1_25;
+                    margin-bottom: $font-size20;
     
                     .col-core {
                         &__box__img {
@@ -319,7 +319,7 @@
 
             .section-intro {
                 &__title {
-                    font-size: $size1_875;
+                    font-size: $font-size30;
                 }
             }
         }

@@ -83,11 +83,11 @@
                     margin-left: $size1;
                 }
                 .send-button {
-                    padding: $size0_313 $size1_25;
+                    padding: $size0_313 $font-size20;
                     background-color: $mainColor;
                     color: $white;
                     border: unset;
-                    margin-left: $size1_25;
+                    margin-left: $font-size20;
                 }
             }
         }
@@ -109,7 +109,7 @@
                 margin-right: $size2;
             }
             .form-contact-us {
-                margin-right: $size1_25;
+                margin-right: $font-size20;
             }
         }
     }

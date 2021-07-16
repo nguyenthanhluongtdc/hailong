@@ -9,7 +9,7 @@
                         color: $night;
                         font-size: $size2_1875;
                         @media screen and (max-width: 567px) {
-                            font-size: $size1_25;
+                            font-size: $font-size20;
                         }
                     }
                 }
@@ -49,7 +49,7 @@
                 }
                 .other__post {
                     .title {
-                        font-size: $size1_25;
+                        font-size: $font-size20;
                         margin-top: $size1_5;
                     }
                     .list__post {
@@ -62,7 +62,7 @@
 
                 .post-content {
                     .des-title {
-                        font-size: $size1_125;
+                        font-size: $font-size18;
                         font-weight: bold;
                     }
                 }
@@ -76,7 +76,7 @@
                         }
                         .title-related {
                             @include split_str(3);
-                            font-size: $size1_125;
+                            font-size: $font-size18;
                             font-weight: bold;
                             margin-bottom: $size1;
 

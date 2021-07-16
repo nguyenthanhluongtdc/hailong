@@ -4,12 +4,13 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: $Barlow-Regular;
+    font-size: 18px;
 }
 
 
 @media (max-width: 1680px) {
     html,body {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
@@ -49,19 +50,19 @@ body {
 }
 
 ._fsx20r16 {
-    font-size: $size1_25;
+    font-size: $font-size20;
 
     .title-parent {
 
     }
 
     .des-children {
-        font-size: $size1_0625;
+        font-size: $font-size17;
     }
 }
 
 ._fsx17r16 {
-    font-size: $size1_0625;
+    font-size: $font-size17;
 }
 
 a:hover {
@@ -85,9 +86,9 @@ a {
 }
 
 .__text-20 {
-    font-size: $size1_25;
+    font-size: $font-size20;
 }
 
 .__text-18 {
-    font-size: $size1_125;
+    font-size: $font-size18;
 }

@@ -3,8 +3,8 @@
         .section-teachnological {
             &__row {
                 display: flex;
-                margin-left: -$size1_25;
-                margin-right: -$size1_25;
+                margin-left: -$font-size20;
+                margin-right: -$font-size20;
                 padding-top: $size2_5;
                 padding-bottom: $size2_5;
                 @media (max-width: 768px) {
@@ -14,8 +14,8 @@
                 }
 
                 &__col {
-                    padding-left: $size1_25;
-                    padding-right: $size1_25;
+                    padding-left: $font-size20;
+                    padding-right: $font-size20;
 
                     @media (max-width: 768px) {
                         padding-left: 7.5px;

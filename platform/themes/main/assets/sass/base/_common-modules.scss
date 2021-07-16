@@ -1,11 +1,11 @@
 
 .theme-customize-header-section {
     &__header {
-        padding-top: $size6_25;
+        padding-top: $size100;
 
         &__title {
             color: $textGreen;
-            font-size: $size1_875;
+            font-size: $font-size30;
             margin-bottom: $size1_5;
             font-family: $iCiel-SamsungSharpSans-Bold_SMCPS;
         }
@@ -28,7 +28,7 @@
             }
         }
         p {
-            font-size: $size1_25;
+            font-size: $font-size20;
         }
     }
 
@@ -48,7 +48,7 @@
                     text-decoration: none;
                     font-weight: bold;
                     color: $textNight;
-                    font-size: $size1_25;
+                    font-size: $font-size20;
                 }
             }
 
@@ -110,24 +110,24 @@
             width: 100%;
 
             &__item {
-                margin-top: $size1_875;
+                margin-top: $font-size30;
                 @media (max-width: 567px){
                     margin-top: $size0_6875;
                 }
 
                 .title-parent {
-                    font-size: $size1_25;
+                    font-size: $font-size20;
                 }
 
                 .des-children {
-                    font-size: $size1_0625;
+                    font-size: $font-size17;
                 }
             }
         }
 
         &__picture {
             width: 100%;
-            margin-top: $size1_25;
+            margin-top: $font-size20;
 
             img {
                 max-width: 100%;
@@ -160,7 +160,7 @@
                     width: 100%;
 
                     &__title {
-                        font-size: $size1_25;
+                        font-size: $font-size20;
                         
                         a {
                             color: $textNight;
@@ -173,7 +173,7 @@
                     }
 
                     &__des {
-                        font-size: $size1_0625;
+                        font-size: $font-size17;
                     }
 
                     &:hover {
@@ -249,7 +249,7 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 color: $textWhite;
-                font-size: $size1_875;
+                font-size: $font-size30;
             }
         }
     }
@@ -257,7 +257,7 @@
     .splide {
         &__arrows {
             position: absolute;
-            bottom: $size1_25;
+            bottom: $font-size20;
             left: $size1_5;
             display: none;
         }
@@ -338,26 +338,26 @@
             }
 
             .box__infoOther {
-                margin-top: $size3_125;
-                padding: $size1_25;
+                margin-top: $size2_8125;
+                padding: $font-size20;
                 padding-bottom: 0;
                 background-color: $backgroundGreen;
                 color: $textWhite;
-                height: calc(100% - #{$size3_125});
+                height: calc(100% - #{$size2_8125});
 
                 .address {
-                    font-size: $size1_25;
+                    font-size: $font-size20;
                 }
 
                 .phone {
-                    font-size: $size1_0625;
+                    font-size: $font-size17;
                 }
 
                 &__header {
 
                     &__des {
                         @include split_str(2);
-                        font-size: $size1_0625;
+                        font-size: $font-size17;
                     }
                 }
 
@@ -396,11 +396,11 @@
                 max-width: calc(50% - #{$size0_625});
 
                 .title-parent {
-                    font-size: $size1_25;
+                    font-size: $font-size20;
                 }
 
                 .des-children {
-                    font-size: $size1_125;
+                    font-size: $font-size18;
                 }
                 
                 &::before {
@@ -446,7 +446,7 @@
 .box-common-statistics-wrapper {
     .box-common-statistics {
         background-color: $backgroundGreen;
-        padding: $size3 $size6_25;
+        padding: $size3 $size100;
         padding-top: $size1_5;
         display: flex;
         flex-wrap: wrap;
@@ -456,7 +456,7 @@
             padding-top: $size1_5;
 
             .__col__up {
-                font-size: $size2_1875;
+                font-size: $size30;
                 color: $textWhite;
                 font-family: $iCiel-SamsungSharpSans-Bold_SMCPS;
             }
@@ -464,7 +464,7 @@
             .__col__down {
                 color: $text84cba5;
                 max-width: 60%;
-                font-size: $size1_125;
+                font-size: $font-size18;
             }
         }
     }
@@ -494,7 +494,7 @@
         &__link {
             color: rgba($textWhite, $alpha0_7);
             text-decoration: none;
-            font-size: $size1_25;
+            font-size: $font-size20;
             position: relative;
             transition: padding 200ms;
 
@@ -512,7 +512,7 @@
             }
 
             &:hover {
-                padding-left: $size1_25;
+                padding-left: $font-size20;
                 color: $textWhite;
 
                 &::before {
@@ -528,13 +528,13 @@
 
     &__header {
         margin-right: $size2_5;
-        font-size: $size1_25;
+        font-size: $font-size20;
 
         .nav-link {
             background-color: transparent;
             border: none;
             font-weight: bold;
-            font-size: $size1_25;
+            font-size: $font-size20;
         }
 
         .nav-link.active {
@@ -547,17 +547,17 @@
 
     &__content {
         background-color: $backgroundWhite;
-        padding-right: $size1_25;
+        padding-right: $font-size20;
         padding-left: $size2_5;
         padding-top: $size2_5;
         position: relative;
 
         .address {
-            font-size: $size1_25;
+            font-size: $font-size20;
         }
 
         .phone {
-            font-size: $size1_0625;
+            font-size: $font-size17;
         }
 
         .btn-read-more {
@@ -569,8 +569,8 @@
             position: absolute;
             right: $size0_9375;
             bottom: 0;
-            height: $size1_875;
-            line-height: $size1_875;
+            height: $font-size30;
+            line-height: $font-size30;
             transform: translateY(50%);
 
             &::before {
@@ -605,16 +605,16 @@
 *************** Responsive
 ****/
 .distance-below {
-    padding-bottom: $size6_25;
+    padding-bottom: $size100;
 }
 
 .distance-above {
-    padding-top: $size6_25;
+    padding-top: $size100;
 }
 
 .distance-y {
-    padding-top: $size6_25;
-    padding-bottom: $size6_25;
+    padding-top: $size100;
+    padding-bottom: $size100;
 }
 @mixin common-screen-minw1681() {
    
@@ -626,25 +626,25 @@
 @mixin common-screen-maxw992() {
     .theme-customize-header-section {
         &__header {
-            padding-top: $size3_6875;
+            padding-top: $size50;
             &__title {
-                font-size: $size1_4375;
+                font-size: $font-size20root15;
                 margin-bottom: $size1;
             }
         }
     }
 
     .distance-below {
-        padding-bottom: $size3_6875;
+        padding-bottom: $size50;
     }
 
     .distance-above {
-        padding-top: $size3_6875;
+        padding-top: $size50;
     }
 
     .distance-y {
-        padding-top: $size3_6875;
-        padding-bottom: $size3_6875;
+        padding-top: $size50;
+        padding-bottom: $size50;
     }
 }
 
@@ -664,7 +664,7 @@
     
     .theme-customize-header-section {
         &__header {
-            padding-top: $size2_1875;
+            padding-top: $size30;
         }
     }
 }
