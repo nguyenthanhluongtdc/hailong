@@ -5,8 +5,18 @@ header {
     @media(max-width: 768px) {
         margin-top: 15px;
     }
+
+    .navbar-toggler {
+        i {
+            font-size: 30px;
+
+            @media (max-width: 380px) {
+                font-size: 22px;
+            }
+        }
+    }
+
     nav {
-    
         .navbar-collapse {
             .nav-item {
                 .nav-link {

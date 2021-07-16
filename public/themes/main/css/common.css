@@ -10046,6 +10046,11 @@ body {
     font-size: 15px;
   }
 }
+@media (max-width: 768px) {
+  html, body {
+    font-size: 14px;
+  }
+}
 .container-customize:not(.important) {
   max-width: 1920px;
   padding-left: 16%;
@@ -10811,6 +10816,14 @@ header {
     margin-top: 15px;
   }
 }
+header .navbar-toggler i {
+  font-size: 30px;
+}
+@media (max-width: 380px) {
+  header .navbar-toggler i {
+    font-size: 22px;
+  }
+}
 header nav .navbar-collapse .nav-item .nav-link {
   text-decoration: none;
   color: #171717;
@@ -10883,12 +10896,12 @@ header .box-sub {
 /***
 *************** Responsive
 ****/
+footer {
+  font-size: 0.833334rem;
+}
 footer .footer-wrapper .footer__top {
   padding-top: 3.75rem;
   padding-bottom: 3.75rem;
-}
-footer .footer-wrapper .footer__top .footer__col__title {
-  font-size: 1rem;
 }
 footer .footer-wrapper .footer__top .footer__col__list {
   list-style: none;

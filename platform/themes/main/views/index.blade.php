@@ -165,7 +165,7 @@
         <div class="container-customize pr-lg-0">
             <div class="box-common-many-col theme-customize-header-section">
                 <div class="row">
-                    <div class="col-lg-6 pb-4">
+                    <div class="col-lg-6 pb-5">
                         <div class="theme-customize-header-section__header">
                             <h2 class="theme-customize-header-section__header__title">
                                 Tại sao chọn Hailong Glass
@@ -209,8 +209,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="box-common-many-col__picture mt-0">
-                            <img width="" height="" src="{{Theme::asset()->url('images/home/1994cb478ece7a9023df.jpg')}}" alt="ảnh product" />
+                        <div class="box-common-many-col__picture mt-0 h-100" style="background-image: url({{Theme::asset()->url('images/home/1994cb478ece7a9023df.jpg')}}); background-size: cover; background-repeat: no-repeat;">
                         </div>
                     </div>
                 </div>

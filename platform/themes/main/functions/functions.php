@@ -10,6 +10,7 @@ register_page_template([
     'product-price' => 'Product Price',
     'product-detail' => 'Product Detail',
     'warranty-policy' => 'Warranty Policy',
+    'policy' => 'Policy',
     'news' => 'News',
     'news-detail' => 'News Detail',
     'projects' => 'Projects',

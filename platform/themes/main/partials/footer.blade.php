@@ -6,7 +6,7 @@
                             <div class="row">
                                 <div class="col-lg-2 col-sm-6 col-12 mb-sm-0 mb-4 footer__col">
                                     <a class="link-theme-customize text-decoration-none" href="/" title="Logo">
-                                        <img class="mw-100" src="{{Theme::asset()->url('images/hailong/logo.png')}}" alt="Logo" />
+                                        <img class="mw-100" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="Logo" />
                                     </a>
                                 </div>
 
@@ -78,20 +78,7 @@
                                             </li>
 
                                             <li>
-                                                <a href="#" title="Gioi thieu"> Hướng dẫn mua hàng
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Quy trình sản xuất
-                                                </a>
-                                            </li>
-                                            <li>
                                                 <a href="#" title="Gioi thieu"> Báo giá
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Chính sách bảo hành
                                                 </a>
                                             </li>
                                         </ul>
