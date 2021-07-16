@@ -377,7 +377,7 @@
                             <div class="col-lg-6">
                                 <div class="col-core col-big">
                                     <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}"> 
-                                        <img width="" height="" class="col-core__img w-100" src="{{rvMedia::getImageUrl($posts[0]->image)}}" alt="{{$posts[0]->name}}" />
+                                        <img width="" height="" class="col-core__img w-100" src="{{rvMedia::getImageUrl($posts[0]->image)}}" alt="{{$posts[0]->name}}" atl="" />
                                     </a>
 
                                     <div class="col-core__content">

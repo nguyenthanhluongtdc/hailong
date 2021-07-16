@@ -146,7 +146,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="Căn hộ cao cấp The Minaton Residence">
-                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}"alt="ảnh-product" />
+                                            <img width="" height="" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh-product" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">

@@ -161,7 +161,7 @@
                                              <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
                                         </li>
                                         <li class="splide__slide">
-                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" />
+                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="" height="" alt=""/>
                                         </li>
                                     </ul>
                                 </div>
