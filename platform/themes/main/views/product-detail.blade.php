@@ -273,7 +273,7 @@
 
                     <div class="col-lg-2 col-md-3">
                         <div class="box__btn">
-                            <button class="btn-order mr-0 mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
+                            <button class="btn-order mr-md-0 mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
                             <button class="btn-quote"><i class="fal fa-door-open"></i> Báo giá </button>
                         </div>
                     </div>
@@ -349,7 +349,7 @@
                     <p class="step">
                         <b> B2. </b>
                         <span> Click vào nút
-                            <a href="#" class="order" title="Đặt hàng"> Đặt hàng </a>
+                            <a href="#" class="order" title="Đặt hàng" data-target="#orderModal" data-toggle="modal"> Đặt hàng </a>
                         </span>
                     </p>
 

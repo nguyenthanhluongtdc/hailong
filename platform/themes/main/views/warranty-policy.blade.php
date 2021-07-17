@@ -12,7 +12,7 @@
                 <div class="theme-customize-header-section__tabs">
                     <ul class="theme-customize-header-section__tabs__list mb-0">
                         <li class="__tabs__item">
-                            <a class="__tabs__link" href="/products" title="Tổng quan Hailong Glass"> Sản phẩm </a>
+                            <a class="__tabs__link" href="/san-pham" title="Tổng quan Hailong Glass"> Sản phẩm </a>
                         </li>
 
                         <li class="__tabs__item">
@@ -29,7 +29,7 @@
     </div>
 
     <div class="section-picture">
-        <img width="1900" height="500" src="{{Theme::asset()->url('images\products\image4.jpg')}}" alt="ảnh product" />
+        <img width="1900" height="500" class="mw-100" src="{{Theme::asset()->url('images\products\image4.jpg')}}" alt="ảnh product" />
     </div>
 
     <div class="section-collapse-wrapper">

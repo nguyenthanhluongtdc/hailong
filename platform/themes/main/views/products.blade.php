@@ -13,7 +13,7 @@
                 <div class="theme-customize-header-section__tabs">
                     <ul class="theme-customize-header-section__tabs__list mb-0">
                         <li class="__tabs__item active">
-                            <a class="__tabs__link" href="/products" title="Tổng quan Hailong Glass"> Sản phẩm </a>
+                            <a class="__tabs__link" href="/san-pham" title="Tổng quan Hailong Glass"> Sản phẩm </a>
                         </li>
 
                         <li class="__tabs__item">
