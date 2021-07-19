@@ -72,3 +72,39 @@
         }
     }
 }
+
+.modal.dccn {
+    .modal-dialog {
+        max-width: 60%;
+
+        .modal-header {
+            padding-top: 0;
+            border: 0;
+
+            .close {
+                transform: translateY(-.5rem);
+            }
+        }
+
+        .modal-content {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-radius: none;
+
+            table {
+                th, td {
+                    padding-left: 1.5rem;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border: 1px solid $borderd2b0b0;
+                }
+
+                th {
+                    border-top: 0;
+                    border-left: 0;
+                    border-right: 0;
+                }
+            }
+        }
+    }
+}

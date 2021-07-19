@@ -1,9 +1,0 @@
-{
-    "name": "Project",
-    "namespace": "Platform\\Project\\",
-    "provider": "Platform\\Project\\Providers\\ProjectServiceProvider",
-    "author": "N/A",
-    "url": "N/A",
-    "version": "1.0",
-    "description": "The description for module project"
-}

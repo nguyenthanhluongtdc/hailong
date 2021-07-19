@@ -10319,6 +10319,7 @@ img {
 
 .box-common-intro-wrapper .box-common-intro {
   overflow: hidden;
+  position: relative;
 }
 .box-common-intro-wrapper .box-common-intro__content {
   border-bottom: 1px solid #f3f3f3;
@@ -10351,6 +10352,11 @@ img {
   transform: translate(-50%, -50%);
   color: white;
   font-size: 1.6667rem;
+}
+.box-common-intro-wrapper .box-common-intro .last-position > p:last-child {
+  position: absolute;
+  right: 40%;
+  bottom: 0;
 }
 .box-common-intro-wrapper .splide__arrows {
   position: absolute;
@@ -11500,6 +11506,33 @@ footer .footer-wrapper .footer__bottom p {
 }
 #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(even) .section-teachnological__row__col.__picture {
   order: 1;
+}
+
+.modal.dccn .modal-dialog {
+  max-width: 60%;
+}
+.modal.dccn .modal-dialog .modal-header {
+  padding-top: 0;
+  border: 0;
+}
+.modal.dccn .modal-dialog .modal-header .close {
+  transform: translateY(-0.5rem);
+}
+.modal.dccn .modal-dialog .modal-content {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: none;
+}
+.modal.dccn .modal-dialog .modal-content table th, .modal.dccn .modal-dialog .modal-content table td {
+  padding-left: 1.5rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #c7c7c7;
+}
+.modal.dccn .modal-dialog .modal-content table th {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 #projects-page .nav-link {
