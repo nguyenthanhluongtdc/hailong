@@ -1,5 +1,5 @@
 @php
-    $page_introduce = get_page_by_template ('introduce');
+$page_introduce = get_page_by_template ('introduce');
 @endphp
 
 <div id="home-page">
@@ -60,9 +60,9 @@
                         @endif
                     </p>
                 </div>
-                    @if($page_introduce)
-                        {!!$page_introduce->content!!}
-                    @endif
+                @if($page_introduce)
+                {!!$page_introduce->content!!}
+                @endif
                 <div class="section-aboutus__line__btn">
                     <a class="btn-read-more" href="{{route('public.single').get_slug_by_template('introduce')}}" title="Xem thêm">
                         Xem thêm
@@ -87,16 +87,16 @@
                             <div class="theme-customize-header-section__header __header mt-0 pt-0">
                                 <h2 class="theme-customize-header-section__header__title __title mb-2"> {{has_field($page, 'title_module_product')}} </h2>
                                 <p class="theme-customize-header-section__header__des __des">
-                                    {{has_field($page, 'description_module_product')}} 
+                                    {{has_field($page, 'description_module_product')}}
                                 </p>
                             </div>
                             <ul class="list-cate-pro">
-                                @if(get_products()) 
-                                    @foreach(get_products() as $product)
-                                        <li class="list-cate-pro__item">
-                                            <a class="list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> {{$product->name}} </a>
-                                        </li>
-                                    @endforeach
+                                @if(get_products())
+                                @foreach(get_products() as $product)
+                                <li class="list-cate-pro__item">
+                                    <a class="list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> {{$product->name}} </a>
+                                </li>
+                                @endforeach
                                 @endif
                             </ul>
                         </div>
@@ -115,14 +115,14 @@
                 </div>
                 <ul class="box-common-producecapacity__list">
                     @if(get_field($page, 'col_module_nlsx'))
-                        @foreach(has_field($page, 'col_module_nlsx') as $row)
-                            <li class="box-common-producecapacity__list__item">
-                                <b class="title-parent"> {{get_sub_field($row, 'title')}} </b>
-                                <p class="des-children">
-                                    {{get_sub_field($row, 'description')}}
-                                </p>
-                            </li>
-                        @endforeach
+                    @foreach(has_field($page, 'col_module_nlsx') as $row)
+                    <li class="box-common-producecapacity__list__item">
+                        <b class="title-parent"> {{get_sub_field($row, 'title')}} </b>
+                        <p class="des-children">
+                            {{get_sub_field($row, 'description')}}
+                        </p>
+                    </li>
+                    @endforeach
                     @endif
                 </ul>
             </div>
@@ -141,20 +141,20 @@
                                 {{has_field($page, 'title_module_whychoose')}}
                             </h2>
                             <p class="theme-customize-header-section__header__des">
-                               {{has_field($page, 'description_module_whychoose')}}
+                                {{has_field($page, 'description_module_whychoose')}}
                             </p>
                         </div>
 
                         <ul class="box-common-many-col__list mb-0">
                             @if(has_field($page, 'col_module_whychoose'))
-                                @foreach(has_field($page, 'col_module_whychoose') as $row)
-                                    <li class="box-common-many-col__list__item col-sm-6 col-12">
-                                        <b class="title-parent"> {{has_sub_field($row, 'title')}} </b>
-                                        <p class="des-children">
-                                            {{has_sub_field($row, 'description')}}
-                                        </p>
-                                    </li>
-                                @endforeach
+                            @foreach(has_field($page, 'col_module_whychoose') as $row)
+                            <li class="box-common-many-col__list__item col-sm-6 col-12">
+                                <b class="title-parent"> {{has_sub_field($row, 'title')}} </b>
+                                <p class="des-children">
+                                    {{has_sub_field($row, 'description')}}
+                                </p>
+                            </li>
+                            @endforeach
                             @endif
                         </ul>
                     </div>
@@ -188,37 +188,61 @@
                             <div class="box__tabs">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     @if(has_field($page, 'tab_module_showroom'))
-                                        @foreach(has_field($page, 'tab_module_showroom') as $key => $tab)
-                                            <li class="nav-item box__tabs__header" role="presentation">
-                                                <button class="nav-link px-0 {{$key==0?'active':''}}" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true"> 
-                                                    {{has_sub_field($tab, 'domain')}}
-                                                </button>
-                                            </li>
-                                        @endforeach
+                                    @foreach(has_field($page, 'tab_module_showroom') as $key => $tab)
+                                    <li class="nav-item box__tabs__header" role="presentation">
+                                        <button class="nav-link px-0 {{$key==0?'active':''}}" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true">
+                                            {{has_sub_field($tab, 'domain')}}
+                                        </button>
+                                    </li>
+                                    @endforeach
                                     @endif
                                 </ul>
 
                                 <div class="tab-content box__tabs__content" id="myTabContent">
                                     @if(has_field($page, 'tab_module_showroom'))
-                                        @foreach(has_field($page, 'tab_module_showroom') as $key => $tab)
-                                            <div class="tab-pane fade show {{$key==0?'active':''}}" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
-                                                @foreach(has_sub_field($tab, 'row_content') as $row)
-                                                    <div class="line__item">
-                                                        <div>
-                                                            <b class="address"> 
-                                                                {{has_sub_field($row, 'address')}}
-                                                            </b>
-                                                        </div>
-                                                        <div class="des-children">
-                                                            <span class="phone">
-                                                                {{has_sub_field($row, 'phone')}}
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                @endforeach
-                                                <a class="btn-read-more small" href="#" title="Read more"> Xem thêm </a>
+                                    @foreach(has_field($page, 'tab_module_showroom') as $key => $tab)
+                                    <div class="tab-pane fade  {{$key==0?'show active':''}}" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
+                                        @foreach(has_sub_field($tab, 'row_content') as $row)
+                                        <div class="line__item">
+                                            <div>
+                                                <b class="address">
+                                                    {{has_sub_field($row, 'address')}}
+                                                </b>
                                             </div>
+                                            <div class="des-children">
+                                                <span class="phone">
+                                                    {{has_sub_field($row, 'phone')}}
+                                                </span>
+                                            </div>
+                                        </div>
                                         @endforeach
+                                        <div class="line__item">
+                                            <div>
+                                                <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
+                                            </div>
+                                            <div class="des-children">
+                                                <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
+                                            </div>
+                                        </div>
+                                        <div class="line__item">
+                                            <div>
+                                                <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
+                                            </div>
+                                            <div class="des-children">
+                                                <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
+                                            </div>
+                                        </div>
+                                        <div class="line__item">
+                                            <div>
+                                                <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
+                                            </div>
+                                            <div class="des-children">
+                                                <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
+                                            </div>
+                                        </div>
+                                        <a class="btn-read-more tabs small" href="#" title="Read more"> Xem thêm </a>
+                                    </div>
+                                    @endforeach
                                     @endif
                                 </div>
                             </div>
@@ -227,8 +251,8 @@
                         <div class="col-lg-5 col-12">
                             <div class="box__infoOther">
                                 <div class="theme-customize-header-section__header pt-0">
-                                    <h3 class="theme-customize-header-section__header__title text-white mb-2"> 
-                                        {{has_field($page, 'title_module_nhamay')}} 
+                                    <h3 class="theme-customize-header-section__header__title text-white mb-2">
+                                        {{has_field($page, 'title_module_nhamay')}}
                                     </h3>
                                     <p class="box__infoOther__header__des des-children">
                                         {{has_field($page, 'description_module_nhamay')}}
@@ -237,20 +261,20 @@
 
                                 <div class="box__infoOther__list">
                                     @if(has_field($page, 'content_module_nhamay'))
-                                        @foreach(has_field($page, 'content_module_nhamay') as $row)
-                                        <div class="line__item">
-                                            <div>
-                                                <b class="address white">
-                                                    {{get_sub_field($row, 'address')}}
-                                                </b>
-                                            </div>
-                                            <div class="des-children">
-                                                <span class="phone white">
-                                                    {{get_sub_field($row, 'phone')}}
-                                                </span>
-                                            </div>
+                                    @foreach(has_field($page, 'content_module_nhamay') as $row)
+                                    <div class="line__item">
+                                        <div>
+                                            <b class="address white">
+                                                {{get_sub_field($row, 'address')}}
+                                            </b>
                                         </div>
-                                        @endforeach
+                                        <div class="des-children">
+                                            <span class="phone white">
+                                                {{get_sub_field($row, 'phone')}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    @endforeach
                                     @endif
                                 </div>
                             </div>
@@ -363,67 +387,67 @@
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
-                        <a class="btn-read-more" href="#" title="Read more"> Xem thêm  </a>
+                        <a class="btn-read-more" href="#" title="Read more"> Xem thêm </a>
                     </p>
                 </div>
 
                 <div class="section-news__content _fsx20r16">
                     <div class="row">
-                        @php 
-                            $posts = get_latest_posts(3);
+                        @php
+                        $posts = get_latest_posts(3);
                         @endphp
 
                         @if(!empty($posts))
-                            <div class="col-lg-6">
-                                <div class="col-core col-big">
-                                    <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}"> 
-                                        <img width="640" height="430" class="col-core__img w-100" src="{{rvMedia::getImageUrl($posts[0]->image)}}" alt="{{$posts[0]->name}}" atl="" />
-                                    </a>
+                        <div class="col-lg-6">
+                            <div class="col-core col-big">
+                                <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}">
+                                    <img width="640" height="430" class="col-core__img w-100" src="{{rvMedia::getImageUrl($posts[0]->image)}}" alt="{{$posts[0]->name}}" atl="" />
+                                </a>
 
-                                    <div class="col-core__content">
-                                        <h3 class="col-core__content__title">
-                                            <a href="#" title="Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp"> {{$posts[0]->name}} </a>
-                                        </h3>
-                                        <div class="col-core__content__time">
-                                            <span> {{$posts[0]->created_at->format('H:i d/m/Y')}} </span>
-                                        </div>
-                                        <p class="col-core__content__des des-children">
-                                            {{$posts[0]->description}}
-                                        </p>
+                                <div class="col-core__content">
+                                    <h3 class="col-core__content__title">
+                                        <a href="#" title="Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp"> {{$posts[0]->name}} </a>
+                                    </h3>
+                                    <div class="col-core__content__time">
+                                        <span> {{$posts[0]->created_at->format('H:i d/m/Y')}} </span>
                                     </div>
+                                    <p class="col-core__content__des des-children">
+                                        {{$posts[0]->description}}
+                                    </p>
                                 </div>
                             </div>
+                        </div>
                         @endif
 
                         @if(count($posts) > 1)
-                            <div class="col-lg-6 mt-lg-0 mt-3">
-                                <div class="box-news-main">
+                        <div class="col-lg-6 mt-lg-0 mt-3">
+                            <div class="box-news-main">
                                 @php unset($posts[0]) @endphp
                                 @foreach($posts as $post)
-                                    <div class="col-core col-flex-box">
-                                        <div class="col-core__box__img pr-md-3 pr-0">
-                                            <a href="{{$post->url}}" title="{{$post->name}}">
-                                                <img width="250" height="160" class="col-core__img" src="{{rvMedia::getImageUrl($post->image)}}" alt="{{$post->name}}" />
-                                            </a>
-                                        </div>
-
-                                        <div class="col-core__content">
-                                            <h3 class="col-core__content__title">
-                                                <a href="#" title="{{$post->name}}">
-                                                    {{$post->name}}
-                                                </a>
-                                            </h3>
-                                            <div class="col-core__content__time">
-                                                <span> {{$post->created_at->format('H:i d/m/Y')}} </span>
-                                            </div>
-                                            <p class="col-core__content__des des-children">
-                                                {{$post->description}}
-                                            </p>
-                                        </div>
+                                <div class="col-core col-flex-box">
+                                    <div class="col-core__box__img pr-md-3 pr-0">
+                                        <a href="{{$post->url}}" title="{{$post->name}}">
+                                            <img width="250" height="160" class="col-core__img" src="{{rvMedia::getImageUrl($post->image)}}" alt="{{$post->name}}" />
+                                        </a>
                                     </div>
-                                @endforeach
+
+                                    <div class="col-core__content">
+                                        <h3 class="col-core__content__title">
+                                            <a href="#" title="{{$post->name}}">
+                                                {{$post->name}}
+                                            </a>
+                                        </h3>
+                                        <div class="col-core__content__time">
+                                            <span> {{$post->created_at->format('H:i d/m/Y')}} </span>
+                                        </div>
+                                        <p class="col-core__content__des des-children">
+                                            {{$post->description}}
+                                        </p>
+                                    </div>
                                 </div>
+                                @endforeach
                             </div>
+                        </div>
                         @endif
                     </div>
                 </div>
@@ -489,25 +513,25 @@
 <script>
     $(document).ready(function() {
         new Splide('#section-intro__carousel', {
-            heightRatio: 0.5625,
-            cover: true,
-            rewind: true,
-            lazyLoad: 'sequential',
-            height: '35.625rem',
-            breakpoints: {
+            heightRatio: 0.5625
+            , cover: true
+            , rewind: true
+            , lazyLoad: 'sequential'
+            , height: '35.625rem'
+            , breakpoints: {
                 '1680': {
                     height: '31.666666666666668rem'
-                },
-                '1200': {
+                }
+                , '1200': {
                     height: '23.733333333333334rem'
-                },
-                '992': {
+                }
+                , '992': {
                     height: '20rem'
-                },
-                '576': {
+                }
+                , '576': {
                     height: '11rem'
-                },
-                '360': {
+                }
+                , '360': {
                     height: '7rem'
                 }
             }
@@ -515,19 +539,34 @@
 
 
         new Splide('#box-common-typeicalproject-carousel__carousel', {
-            perPage: 3,
-            gap: 40,
-            breakpoints: {
+            perPage: 3
+            , gap: 40
+            , breakpoints: {
                 '992': {
-                    perPage: 2,
-                    gap: '1rem',
-                },
-                '480': {
-                    perPage: 1,
-                    gap: '1rem',
-                }
+                    perPage: 2
+                    , gap: '1rem'
+                , }
+                , '480': {
+                    perPage: 1
+                    , gap: '1rem'
+                , }
             }
         }).mount();
+
+        $(".btn-read-more.tabs").on('click', function(e) {
+            e.preventDefault();
+
+            if ($('.tab-pane.show .line__item:hidden').length == 0) {
+                $('.tab-pane.show .line__item').slice(3).slideUp();
+                $(this).text('Xem thêm');
+            }else {
+                $('.tab-pane.show .line__item:hidden').slice(0, 2).slideDown();
+
+                if ($('.tab-pane.show .line__item:hidden').length == 0) {
+                    $(this).text('Thu gọn');
+                }
+            }
+        });
     })
 
 </script>

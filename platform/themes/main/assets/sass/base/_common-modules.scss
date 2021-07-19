@@ -349,6 +349,10 @@
                         color: $textWhite;
                     }
                 }
+
+                &:nth-child(1n + 4) {
+                    display: none;
+                }
             }
 
             .box__infoOther {
@@ -575,7 +579,7 @@
             font-size: $font-size17;
         }
 
-        .btn-read-more {
+        .btn-read-more, .btn-hidden {
             padding-right: $size0_9375;
             background-color: $backgroundGreen;
             color: $textWhite;
@@ -606,7 +610,7 @@
     }
 }
 
-.btn-read-more {
+.btn-read-more, .btn-hidden {
     color: $textNight;
     border: 1px solid $borderGreen;
     width: $size7_5;

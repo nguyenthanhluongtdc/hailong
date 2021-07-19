@@ -243,8 +243,8 @@
 
                         <div class="col-lg-5 col-12">
                             <div class="box__infoOther">
-                                <div class="box__infoOther__header">
-                                    <h3 class="box__infoOther__header__title"> Nhà Máy </h3>
+                                <div class="theme-customize-header-section__header pt-0">
+                                    <h3 class="theme-customize-header-section__header__title text-white mb-2"> Nhà Máy </h3>
                                     <p class="box__infoOther__header__des des-children"> Thầy trò HLV Park Hang-seo sẽ mất lợi thế sân nhà nếu các đội khách không được ưu tiên miễn cách ly. </p>
                                 </div>
 

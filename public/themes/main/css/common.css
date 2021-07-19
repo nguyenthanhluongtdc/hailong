@@ -10412,6 +10412,9 @@ img {
 .box-common-showroom-wrapper .box-common-showroom__content .line__item .phone.white::before, .box-common-showroom-wrapper .box-common-showroom__content .line__item .address.white::before {
   color: white;
 }
+.box-common-showroom-wrapper .box-common-showroom__content .line__item:nth-child(1n+4) {
+  display: none;
+}
 .box-common-showroom-wrapper .box-common-showroom__content .box__infoOther {
   margin-top: 2.8125rem;
   padding: 2rem;
@@ -10591,7 +10594,7 @@ img {
 .box__tabs__content .phone {
   font-size: 0.9444444444rem;
 }
-.box__tabs__content .btn-read-more {
+.box__tabs__content .btn-read-more, .box__tabs__content .btn-hidden {
   padding-right: 0.9375rem;
   background-color: #08964a;
   color: white;
@@ -10604,7 +10607,7 @@ img {
   line-height: 2rem;
   transform: translateY(50%);
 }
-.box__tabs__content .btn-read-more::before {
+.box__tabs__content .btn-read-more::before, .box__tabs__content .btn-hidden::before {
   position: absolute;
   content: "";
   font-family: "Font Awesome 5 Pro";
@@ -10616,7 +10619,7 @@ img {
   padding-top: 0;
 }
 
-.btn-read-more {
+.btn-read-more, .btn-hidden {
   color: #171717;
   border: 1px solid #08964a;
   width: 7.5rem;
