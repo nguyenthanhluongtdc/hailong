@@ -15,6 +15,9 @@ class IntroduceCreateIntroduceTable extends Migration
         Schema::create('app_introduces', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
+            $table->longText('content')->nullable();
+            $table->string('image', 255)->nullable();
+            $table->string('template', 60)->nullable();
             $table->string('status', 60)->default('published');
             $table->timestamps();
         });
