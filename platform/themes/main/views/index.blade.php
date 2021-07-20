@@ -88,7 +88,7 @@ $page_introduce = get_page_by_template ('introduce');
                             <ul class="list-cate-pro">
                                 @if(!empty($products))
                                     @foreach($products as $key => $product)
-                                    @php $images[] = rvMedia::getImageUrl($product->image); @endphp
+                                    @php $imageProducts[] = rvMedia::getImageUrl($product->image); @endphp
                                         <li class="list-cate-pro__item">
                                             <a class="list-cate-pro__item__link" href="/product-detail" title="Kính cường lực" data-image-id="{{$key}}"> {{$product->name}} </a>
                                         </li>
@@ -127,7 +127,7 @@ $page_introduce = get_page_by_template ('introduce');
     <!--end css in file common.scss----->
 
     <!--css in file common.scss----->
-    <div class="box-common-many-col-wrapper">
+    <div class="box-common-many-col-wrapper bg-white">
         <div class="container-customize pr-lg-0">
             <div class="box-common-many-col theme-customize-header-section">
                 <div class="row">
@@ -143,8 +143,9 @@ $page_introduce = get_page_by_template ('introduce');
 
                         <ul class="box-common-many-col__list mb-0">
                             @if(has_field($page, 'col_module_whychoose'))
-                            @foreach(has_field($page, 'col_module_whychoose') as $row)
-                            <li class="box-common-many-col__list__item col-sm-6 col-12">
+                            @foreach(has_field($page, 'col_module_whychoose') as $key => $row)
+                            @php $imageWhy[] = rvMedia::getImageUrl(has_sub_field($row, 'image')); @endphp
+                            <li class="box-common-many-col__list__item col-sm-6 col-12 item-why" data-image-id="{{$key}}">
                                 <b class="title-parent"> {{has_sub_field($row, 'title')}} </b>
                                 <p class="des-children">
                                     {{has_sub_field($row, 'description')}}
@@ -156,7 +157,7 @@ $page_introduce = get_page_by_template ('introduce');
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="box-common-many-col__picture mt-0 h-100" style="background-image: url({{rvMedia::getImageUrl(has_field($page, 'image_module_whychoose'))}}); background-size: cover; background-repeat: no-repeat;">
+                        <div class="box-common-many-col__picture mt-0 h-100" id="image-why-choose" style="background-image: url({{rvMedia::getImageUrl(has_field($page, 'image_module_whychoose'))}}); background-size: cover; background-repeat: no-repeat;">
                         </div>
                     </div>
                 </div>
@@ -260,7 +261,7 @@ $page_introduce = get_page_by_template ('introduce');
     <!--end css in file common.scss----->
 
     <!--css in file common.scss----->
-    <div class="box-common-typeicalproject-carousel-wrapper">
+    <div class="box-common-typeicalproject-carousel-wrapper bg-white">
         <div class="container-customize">
             <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header distance-below">
@@ -506,8 +507,20 @@ $page_introduce = get_page_by_template ('introduce');
 
 <script>
     $(document).ready(function() {
-        //Google map
+        let imageWhy = [<?php echo '"'.implode('","', $imageWhy).'"' ?>];
+        var imageModuleWhy = document.getElementById('image-why-choose');
+        var arrItemWhy = document.getElementsByClassName('item-why');
+        for(var i=0; i<arrItemWhy.length; i++) {
+            arrItemWhy[i].onmouseover = function(e) {  
+                e.preventDefault();
+                var imgId = $(this).attr('data-image-id');
+                var imgSrc = imageWhy[imgId];
+                var style = ['background-image: url(', imgSrc, ');'].join('');
+                imageModuleWhy.setAttribute('style', style);
+            }
+        }
 
+        //Google map
         var map = document.getElementsByClassName("modal-map")[0];
         var arr = document.getElementsByClassName('link-map');
     
@@ -580,14 +593,14 @@ $page_introduce = get_page_by_template ('introduce');
             }
         });
 
-        let images = [<?php echo '"'.implode('","', $images).'"' ?>];
+        let imageProducts = [<?php echo '"'.implode('","', $imageProducts).'"' ?>];
         var imageOurproduct = document.getElementById('image-ourproduct');
         var arr = document.getElementsByClassName('list-cate-pro__item__link');
         for(var i=0; i<arr.length; i++) {
             arr[i].onmouseover = function(e) {  
                 var a = e.target;
                 var imgId = a.getAttribute('data-image-id');
-                var imgSrc = images[imgId];
+                var imgSrc = imageProducts[imgId];
                 imageOurproduct.src = imgSrc;
             }
         }
