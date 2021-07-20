@@ -68,10 +68,13 @@ $page_introduce = get_page_by_template ('introduce');
         <div class="container-customize pl-md-0">
             <div class="section-ourproduct theme-customize-header-section">
                 <div class="row">
+                    @php $products = get_products(); @endphp
                     <div class="col-md-4 col-12 order-md-1 order-2 pr-md-0">
-                        <div class="section-ourproduct__left h-100">
-                            <img class="w-100 h-100" width="600" height="540" src="{{rvMedia::getImageUrl(has_field($page,'image_module_product'))}}" alt="product" />
-                        </div>
+                        @if(!empty($products))
+                            <div class="section-ourproduct__left h-100">
+                                <img class="w-100 h-100 " id="image-ourproduct" width="600" height="540" src="{{rvMedia::getImageUrl($products[0]->image)}}" alt="product" />
+                            </div>
+                        @endif
                     </div>
 
                     <div class="col-md-8 col-12 order-md-2 order-1 pl-md-0">
@@ -83,12 +86,13 @@ $page_introduce = get_page_by_template ('introduce');
                                 </p>
                             </div>
                             <ul class="list-cate-pro">
-                                @if(get_products())
-                                @foreach(get_products() as $product)
-                                <li class="list-cate-pro__item">
-                                    <a class="list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> {{$product->name}} </a>
-                                </li>
-                                @endforeach
+                                @if(!empty($products))
+                                    @foreach($products as $key => $product)
+                                    @php $images[] = rvMedia::getImageUrl($product->image); @endphp
+                                        <li class="list-cate-pro__item">
+                                            <a class="list-cate-pro__item__link" href="/product-detail" title="Kính cường lực" data-image-id="{{$key}}"> {{$product->name}} </a>
+                                        </li>
+                                    @endforeach
                                 @endif
                             </ul>
                         </div>
@@ -563,6 +567,18 @@ $page_introduce = get_page_by_template ('introduce');
                 }
             }
         });
+
+        let images = [<?php echo '"'.implode('","', $images).'"' ?>];
+        var imageOurproduct = document.getElementById('image-ourproduct');
+        var arr = document.getElementsByClassName('list-cate-pro__item__link');
+        for(var i=0; i<arr.length; i++) {
+            arr[i].onmouseover = function(e) {  
+                var a = e.target;
+                var imgId = a.getAttribute('data-image-id');
+                var imgSrc = images[imgId];
+                imageOurproduct.src = imgSrc;
+            }
+        }
     })
 
 </script>
