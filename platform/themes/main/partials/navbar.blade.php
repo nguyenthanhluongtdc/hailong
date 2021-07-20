@@ -16,8 +16,8 @@
                 @endforeach
                 @endif
                 <li class="bilingual">
-                    <a class="en active" href="#"> EN </a>
-                    <a class="vn" href="#"> VN </a>
+                    <a class="en active" rel="alternate" hreflang="en" href="{{ Language::getLocalizedURL('en') }}"> EN </a>
+                    <a class="vn" rel="alternate" hreflang="vi" href="{{ Language::getLocalizedURL('vi') }}"> VN </a>
                 </li>
             </ul>
         </div>
