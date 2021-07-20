@@ -16,8 +16,8 @@
                 @endforeach
                 @endif
                 <li class="bilingual">
-                    <a class="en active" rel="alternate" hreflang="en" href=""> EN </a>
-                    <a class="vn" rel="alternate" hreflang="vi" href=""> VN </a>
+                    <a class="en" href="#" title=""> EN </a>
+                    <a class="vn active" href="#" title=""> VN </a>
                 </li>
             </ul>
         </div>

@@ -69,7 +69,7 @@ $page_introduce = get_page_by_template ('introduce');
             <div class="section-ourproduct theme-customize-header-section">
                 <div class="row">
                     @php $products = get_products(); @endphp
-                    <div class="col-md-4 col-12 order-md-1 order-2 pr-md-0">
+                    <div class="col-md-4 col-12 order-md-1 order-2 pr-md-0 set-height">
                         @if(!empty($products))
                             <div class="section-ourproduct__left h-100">
                                 <img class="w-100 h-100 " id="image-ourproduct" width="600" height="540" src="{{rvMedia::getImageUrl($products[0]->image)}}" alt="product" />
@@ -77,7 +77,7 @@ $page_introduce = get_page_by_template ('introduce');
                         @endif
                     </div>
 
-                    <div class="col-md-8 col-12 order-md-2 order-1 pl-md-0">
+                    <div class="col-md-8 col-12 order-md-2 order-1 pl-md-0 get-height">
                         <div class="section-ourproduct__right h-100">
                             <div class="theme-customize-header-section__header __header mt-0 pt-0">
                                 <h2 class="theme-customize-header-section__header__title __title mb-2"> {{has_field($page, 'title_module_product')}} </h2>
@@ -272,7 +272,7 @@ $page_introduce = get_page_by_template ('introduce');
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
-                        <a class="btn-read-more" href="#" title="Read more"> Xem thêm </a>
+                        <a class="btn-read-more" href="/projects" title="Read more"> Xem thêm </a>
                     </p>
                 </div>
 
@@ -283,13 +283,13 @@ $page_introduce = get_page_by_template ('introduce');
                             <ul class="splide__list">
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <a href="#" title="ảnh slider">
+                                        <a href="/projects-detail" title="ảnh slider">
                                             <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh slider" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="ảnh slider">
+                                            <a href="/projects-detail" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -298,13 +298,13 @@ $page_introduce = get_page_by_template ('introduce');
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <a href="#" title="ảnh slider">
+                                        <a href="/projects-detail" title="ảnh slider">
                                             <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="ảnh slider">
+                                            <a href="/projects-detail" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -313,11 +313,13 @@ $page_introduce = get_page_by_template ('introduce');
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider" />
+                                        <a href="/projects-detail" title="">
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider" />
+                                        </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="ảnh slider">
+                                            <a href="/projects-detail" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -326,11 +328,13 @@ $page_introduce = get_page_by_template ('introduce');
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
+                                        <a href="/projects-detail" title="">
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
+                                        </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="ảnh slider">
+                                            <a href="/projects-detail" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -451,62 +455,12 @@ $page_introduce = get_page_by_template ('introduce');
     </div>
 </div>
 
-<style>
-    .box-sub {
-        display: none;
-    }
-
-    header {
-        margin-top: 2rem;
-    }
-
-    .container-customize-header {
-        max-width: 1920px;
-        padding-left: 16% !important;
-        padding-right: 16% !important;
-    }
-
-    @media (max-width: 1680px) {
-        .container-customize-header {
-            padding-left: 10% !important;
-            padding-right: 10% !important;
-        }
-    }
-
-    @media (max-width: 992px) {
-        .container-customize-header {
-            padding-left: 8% !important;
-            padding-right: 8% !important;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .container-customize-header {
-            padding-left: 15px !important;
-            padding-right: 15px !important;
-        }
-    }
-
-    .bilingual {
-        display: block !important;
-    }
-
-    @media (min-width: 992px) {
-        .col-index-3 {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-
-        .col-index-9 {
-            flex: 0 0 75%;
-            max-width: 75%;
-        }
-    }
-
-</style>
-
 <script>
     $(document).ready(function() {
+
+        $('.set-height').height($('.get-height').height())
+
+        //hover module product, change image src
         let imageWhy = [<?php echo '"'.implode('","', $imageWhy).'"' ?>];
         var imageModuleWhy = document.getElementById('image-why-choose');
         var arrItemWhy = document.getElementsByClassName('item-why');
@@ -607,3 +561,58 @@ $page_introduce = get_page_by_template ('introduce');
     })
 
 </script>
+
+
+<style>
+    .box-sub {
+        display: none;
+    }
+
+    header {
+        margin-top: 2rem;
+    }
+
+    .container-customize-header {
+        max-width: 1920px;
+        padding-left: 16% !important;
+        padding-right: 16% !important;
+    }
+
+    @media (max-width: 1680px) {
+        .container-customize-header {
+            padding-left: 10% !important;
+            padding-right: 10% !important;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .container-customize-header {
+            padding-left: 8% !important;
+            padding-right: 8% !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container-customize-header {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+
+    .bilingual {
+        display: block !important;
+    }
+
+    @media (min-width: 992px) {
+        .col-index-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        .col-index-9 {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
+
+</style>
