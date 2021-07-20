@@ -26,10 +26,8 @@ header {
                     padding-right: $size1; 
                     font-size: $font-size20;
                 }
-            }
 
-            .nav-item.active {
-                .nav-link {
+                .nav-link.active {
                     padding-left: 0;
                     padding-right: 0;
                     margin-left: $size1;

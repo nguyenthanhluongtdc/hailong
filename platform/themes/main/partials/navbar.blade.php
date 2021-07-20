@@ -10,7 +10,7 @@
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0 align-items-lg-end">
                 @if(!empty($menu_nodes[0]))
                 @foreach($menu_nodes as $key => $row)
-                <li class="nav-item {{$key==0?'active':''}}">
+                <li class="nav-item">
                     <a class="nav-link" href="{{$row->url}}"> {{$row->title}} </a>
                 </li>
                 @endforeach
@@ -28,3 +28,15 @@
         </div>
     </div>
 </nav>
+
+<script>
+   jQuery(function($) {
+        var path = window.location.href; 
+        // because the 'href' property of the DOM element is the absolute path
+        $('.navbar-nav li a').each(function() {
+            if (this.href === path) {
+            $(this).addClass('active');
+            }
+        });
+    });
+</script>

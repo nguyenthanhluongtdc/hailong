@@ -18,7 +18,7 @@
                             @foreach(has_field($page, 'content_module_companyinfo') as $row)
                             <p class="section-intro__content">
                                 <i> {!! has_sub_field($row, 'title') !!} </i> <br>
-                                <span> {!! has_sub_field($row, 'description') !!} </span>
+                                <b> {!! has_sub_field($row, 'description') !!} </b>
                             </p>
                             @endforeach
                             @endif

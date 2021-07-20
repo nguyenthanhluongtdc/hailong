@@ -3,31 +3,22 @@
         .section-teachnological {
             &__row {
                 display: flex;
-                margin-left: -$font-size20;
-                margin-right: -$font-size20;
-                padding-top: $size2_5;
-                padding-bottom: $size2_5;
+                padding-top: $size3_5;
+                padding-bottom: $size3_5;
                 flex-wrap: wrap;
                 @media (max-width: 768px) {
-                    margin-left: -7.5px;
-                    padding-top: -7.5px;
-                    padding-bottom: $size1;
+                    padding-bottom: $size1_5;
                 }
 
                 &__col {
-                    padding-left: $font-size20;
-                    padding-right: $font-size20;
-
-                    @media (max-width: 768px) {
-                        padding-left: 7.5px;
-                        padding-right: 7.5px;
-                    }
                     flex: 0 0 50%;
                     max-width: 50%;
 
                     @media (max-width: 575px) {
                         flex: 0 0 100%;
                         max-width: 100%;
+                        padding-left: 15px;
+                        padding-right: 15px;
                     }
                 }
 
@@ -44,10 +35,6 @@
                         color: $textGreen;
                         font-weight: bold;
                         @include split_str(1);
-                    }
-
-                    p {
-                        @include split_str(2)
                     }
                 }
 
@@ -67,6 +54,45 @@
                             order: 1;
                         }
                     }
+
+                    @media (min-width: 576px) {
+                        .__content {
+                            padding-right: 16%;
+                            padding-left: $size3;
+                            @media (max-width: 1680px) {
+                                padding-right: 10%;
+                            }
+                            @media (max-width: 992px) {
+                                padding-right: 8%;
+                            }
+                            @media (max-width: 768px) {
+                                padding-right: 15px;
+                            }
+                        }
+
+                        .__picture {
+                            padding-left: 5%;
+                        }
+                    }
+                }
+
+                >div:nth-child(odd) {
+
+                    @media (min-width: 576px) {
+                        .__content {
+                            padding-left: 16%;
+                            padding-right: $size3;
+                            @media (max-width: 1680px) {
+                                padding-left: 10%;
+                            }
+                            @media (max-width: 992px) {
+                                padding-left: 8%;
+                            }
+                            @media (max-width: 768px) {
+                                padding-left: 15px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -76,6 +102,15 @@
 .modal.dccn {
     .modal-dialog {
         max-width: 60%;
+
+        @media(max-width: 992px) {
+            max-width: 70%;
+            margin: 1.75rem auto;
+        }
+
+        @media(max-width: 576px) {
+            max-width: 80%;
+        }
 
         .modal-header {
             padding-top: 0;

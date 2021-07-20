@@ -226,8 +226,12 @@
 
 .box-common-intro-wrapper {
 
+    .title-underline strong {
+        color: $textGreen;
+        white-space: pre-line;
+    }   
+
     .box-common-intro {
-        overflow: hidden;
         position: relative;
 
         &__content {
@@ -559,6 +563,21 @@
 
         }
     }                    
+}
+
+.line-border {
+    width: 15%;
+    height: 2px;
+    background-color: $backgroundGreen;
+   
+    @media (min-width: 769px) {
+        margin-top: $size2_5;
+        margin-bottom: $size2_5;
+        transform: translateX(-30%);
+    }
+
+    margin-top: $size1_5;
+    margin-bottom: $size1_5;
 }
 
 .box__tabs {

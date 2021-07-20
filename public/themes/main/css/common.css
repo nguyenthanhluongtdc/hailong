@@ -10317,8 +10317,11 @@ img {
   display: none;
 }
 
+.box-common-intro-wrapper .title-underline strong {
+  color: #08964a;
+  white-space: pre-line;
+}
 .box-common-intro-wrapper .box-common-intro {
-  overflow: hidden;
   position: relative;
 }
 .box-common-intro-wrapper .box-common-intro__content {
@@ -10576,6 +10579,21 @@ img {
 }
 .list-cate-pro__item__link:hover::before {
   display: inline-block;
+}
+
+.line-border {
+  width: 15%;
+  height: 2px;
+  background-color: #08964a;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 769px) {
+  .line-border {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    transform: translateX(-30%);
+  }
 }
 
 .box__tabs__header {
@@ -10904,7 +10922,7 @@ header nav .navbar-collapse .nav-item .nav-link {
   padding-right: 1rem;
   font-size: 1.1111111111rem;
 }
-header nav .navbar-collapse .nav-item.active .nav-link {
+header nav .navbar-collapse .nav-item .nav-link.active {
   padding-left: 0;
   padding-right: 0;
   margin-left: 1rem;
@@ -11497,35 +11515,25 @@ footer .footer-wrapper .footer__bottom p {
 }
 #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row {
   display: flex;
-  margin-left: -1.1111111111rem;
-  margin-right: -1.1111111111rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
   flex-wrap: wrap;
 }
 @media (max-width: 768px) {
   #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row {
-    margin-left: -7.5px;
-    padding-top: -7.5px;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
 }
 #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col {
-  padding-left: 1.1111111111rem;
-  padding-right: 1.1111111111rem;
   flex: 0 0 50%;
   max-width: 50%;
-}
-@media (max-width: 768px) {
-  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col {
-    padding-left: 7.5px;
-    padding-right: 7.5px;
-  }
 }
 @media (max-width: 575px) {
   #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col {
     flex: 0 0 100%;
     max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col.__content {
@@ -11549,13 +11557,6 @@ footer .footer-wrapper .footer__bottom p {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
-#teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col.__content p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
 #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__row__col.__picture img {
   max-width: 100%;
 }
@@ -11565,9 +11566,67 @@ footer .footer-wrapper .footer__bottom p {
 #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(even) .section-teachnological__row__col.__picture {
   order: 1;
 }
+@media (min-width: 576px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(even) .__content {
+    padding-right: 16%;
+    padding-left: 3rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 1680px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(even) .__content {
+    padding-right: 10%;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(even) .__content {
+    padding-right: 8%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(even) .__content {
+    padding-right: 15px;
+  }
+}
+@media (min-width: 576px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(even) .__picture {
+    padding-left: 5%;
+  }
+}
+@media (min-width: 576px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(odd) .__content {
+    padding-left: 16%;
+    padding-right: 3rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 1680px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(odd) .__content {
+    padding-left: 10%;
+  }
+}
+@media (min-width: 576px) and (max-width: 992px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(odd) .__content {
+    padding-left: 8%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  #teachnological-line-page .section-teachnological-line-list-wrapper .section-teachnological__list > div:nth-child(odd) .__content {
+    padding-left: 15px;
+  }
+}
 
 .modal.dccn .modal-dialog {
   max-width: 60%;
+}
+@media (max-width: 992px) {
+  .modal.dccn .modal-dialog {
+    max-width: 70%;
+    margin: 1.75rem auto;
+  }
+}
+@media (max-width: 576px) {
+  .modal.dccn .modal-dialog {
+    max-width: 80%;
+  }
 }
 .modal.dccn .modal-dialog .modal-header {
   padding-top: 0;
@@ -12174,20 +12233,6 @@ footer .footer-wrapper .footer__bottom p {
   color: #ee4343;
 }
 
-#product-details-page .section-product-info-wrapper .section-product-info .box-content .line-border {
-  width: 15%;
-  height: 2px;
-  background-color: #08964a;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-@media (min-width: 769px) {
-  #product-details-page .section-product-info-wrapper .section-product-info .box-content .line-border {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    transform: translateX(-30%);
-  }
-}
 #product-details-page .section-product-info-wrapper .section-product-info .box-content__bottom .__bottom__line__one {
   color: #08964a;
   margin-bottom: 1rem;

@@ -11,17 +11,23 @@
                         <div class="box-common-intro__content _fsx20r16">
                             <div class="theme-customize-header-section__header pt-0">
                                 <h2 class="theme-customize-header-section__header__title">
-                                    {{get_field($page, 'title_module_introductory')}}
+                                    {{has_field($page, 'title_module_introductory')}}
                                 </h2>
                             </div>
 
-                           {!!get_field($page, 'content_module_introductory')!!}
+                           {!!has_field($page, 'content_module_introductory')!!}
+
+                           <div class="line-border mt-md-4 mt-3"> </div>
+
+                            <p class="title-underline">
+                                    <strong> {!!has_field($page, 'description_module_introductory')!!} </strong>
+                            </p>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-12">
                         <div class="box-common-intro__picture video">
-                            <img width="850" height="350" src="{{rvMedia::getImageUrl(get_field($page, 'video_module_introductory'))}}" alt="video-box" />
+                            <img width="850" height="350" src="{{rvMedia::getImageUrl(has_field($page, 'video_module_introductory'))}}" alt="video-box" />
                         </div>
                     </div>
                 </div>
@@ -43,9 +49,9 @@
                 @if(has_field($page, 'col_module_value'))
                     @foreach(has_field($page, 'col_module_value') as $row)
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
-                        <b> {{get_sub_field($row, 'title')}} </b>
+                        <b> {{has_sub_field($row, 'title')}} </b>
                         <p class="des-children"> 
-                            {!!get_sub_field($row, 'description')!!}
+                            {!!has_sub_field($row, 'description')!!}
                         </p>
                     </li>
                     @endforeach
@@ -54,7 +60,7 @@
             </div>
         </div>
         <div class="box-common-many-col__picture">
-            <img width="1900" height="500" src="{{rvMedia::getImageUrl(get_field($page, 'image_module_value'))}}" alt="ảnh intro" />
+            <img width="1900" height="500" src="{{rvMedia::getImageUrl(has_field($page, 'image_module_value'))}}" alt="ảnh intro" />
         </div>
     </div>
 
@@ -64,10 +70,10 @@
             <div class="box-common-many-col theme-customize-header-section">
                 <div class="theme-customize-header-section__header d-md-flex">
                     <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0">
-                        {!!get_field($page, 'title_module_whychoose_introduce')!!}
+                        {!!has_field($page, 'title_module_whychoose_introduce')!!}
                     </h2>
                     <p class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0">
-                        {!!get_field($page, 'description_module_whychoose_introduce')!!}
+                        {!!has_field($page, 'description_module_whychoose_introduce')!!}
                     </p>
                 </div>
 
@@ -75,9 +81,9 @@
                 @if(has_field($page, 'col_module_whychoose_introduce'))
                     @foreach(has_field($page, 'col_module_whychoose_introduce') as $row)
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
-                        <b> {{get_sub_field($row, 'title')}} </b>
+                        <b> {{has_sub_field($row, 'title')}} </b>
                         <p class="des-children"> 
-                            {!!get_sub_field($row, 'description')!!}
+                            {!!has_sub_field($row, 'description')!!}
                         </p>
                     </li>
                     @endforeach

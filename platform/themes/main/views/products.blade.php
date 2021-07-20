@@ -78,9 +78,9 @@
     <div class="section-shoppingguide-wrapper">
         <div class="container-customize pr-lg-0">
             <div class="section-shoppingguide row _fsx20r16">
-                <div class="section-shoppingguide__picture order-md-2 col-lg-6 col-md-5 px-4 mt-lg-0" style="background-image: url({{Theme::asset()->url('images/products/image2.jpg')}}); background-size: cover; background-repeat: no-repeat;">
+                <div class="section-shoppingguide__picture order-md-2 col-lg-6 col-md-6 px-4 mt-lg-0" style="background-image: url({{Theme::asset()->url('images/products/image2.jpg')}}); background-size: cover; background-repeat: no-repeat;">
                 </div>
-                <div class="section-shoppingguide__content order-md-1 col-lg-6 col-md-7 px-4 distance-below">
+                <div class="section-shoppingguide__content order-md-1 col-lg-6 col-md-6 px-4 distance-below">
                      <div class="theme-customize-header-section__header">
                         <h2 class="theme-customize-header-section__header__title">
                             Hướng dẫn mua hàng
