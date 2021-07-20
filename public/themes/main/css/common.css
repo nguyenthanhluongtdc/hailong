@@ -10404,6 +10404,7 @@ img {
   font-family: "Font Awesome 5 Pro";
   left: 0;
   right: 0;
+  font-weight: bold;
 }
 .box-common-showroom-wrapper .box-common-showroom__content .line__item .phone {
   position: relative;
@@ -10435,6 +10436,10 @@ img {
 }
 .box-common-showroom-wrapper .box-common-showroom__content .box__infoOther .address {
   font-size: 1.1111111111rem;
+  color: white;
+}
+.box-common-showroom-wrapper .box-common-showroom__content .box__infoOther .address::before {
+  color: white;
 }
 .box-common-showroom-wrapper .box-common-showroom__content .box__infoOther .phone {
   font-size: 0.9444444444rem;
@@ -11286,6 +11291,11 @@ footer .footer-wrapper .footer__bottom p {
 }
 #home-page .section-news__content .box-news-main > div:last-child {
   margin-bottom: 0;
+}
+
+#map-canvas {
+  width: 100%;
+  height: 400px;
 }
 
 /***

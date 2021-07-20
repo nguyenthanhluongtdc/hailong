@@ -101,9 +101,9 @@
                                         @foreach(has_sub_field($tab, 'row_content') as $row)
                                         <div class="line__item">
                                             <div>
-                                                <b class="address">
-                                                    {{has_sub_field($row, 'address')}}
-                                                </b>
+                                                <a href="#" title="{{has_sub_field($row, 'address')}}" class="address link-map" data-lat="{{get_sub_field($row, 'url_google_map')}}" data-toggle="modal" data-target="#myMapModal">
+                                                    <b> {{has_sub_field($row, 'address')}} </b>
+                                                </a>
                                             </div>
                                             <div class="des-children">
                                                 <span class="phone">
@@ -112,30 +112,6 @@
                                             </div>
                                         </div>
                                         @endforeach
-                                        <div class="line__item">
-                                            <div>
-                                                <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
-                                            </div>
-                                            <div class="des-children">
-                                                <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
-                                            </div>
-                                        </div>
-                                        <div class="line__item">
-                                            <div>
-                                                <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
-                                            </div>
-                                            <div class="des-children">
-                                                <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
-                                            </div>
-                                        </div>
-                                        <div class="line__item">
-                                            <div>
-                                                <b class="address"> 369 Nguyễn Trãi, Thanh Xuân, HN </b>
-                                            </div>
-                                            <div class="des-children">
-                                                <span class="phone"> 369 Nguyễn Trãi, Thanh Xuân, HN </span>
-                                            </div>
-                                        </div>
                                         <a class="btn-read-more tabs small" href="#" title="Read more"> Xem thêm </a>
                                     </div>
                                     @endforeach
@@ -160,9 +136,9 @@
                                     @foreach(has_field($page, 'content_module_nhamay') as $row)
                                     <div class="line__item">
                                         <div>
-                                            <b class="address white">
-                                                {{get_sub_field($row, 'address')}}
-                                            </b>
+                                            <a href="#" title="{{has_sub_field($row, 'address')}}" class="address link-map" data-lat="{{get_sub_field($row, 'url_google_map')}}" data-toggle="modal" data-target="#myMapModal">
+                                                <b> {{has_sub_field($row, 'address')}} </b>
+                                            </a>
                                         </div>
                                         <div class="des-children">
                                             <span class="phone white">
@@ -204,12 +180,12 @@
                         <div class="splide__track">
                             <ul class="splide__list">
                                 @if(has_field($page, 'listimage_module_partner'))
-                                    @foreach(has_field($page, 'listimage_module_partner') as $row)
-                                        <li class="splide__slide">
-                                            <div class="splide__slide__img" style="background: url({{rvMedia::getImageUrl(get_sub_field($row, 'image'))}}) no-repeat; background-size: cover; background-position: center;height: 60px; width: 120px;">
-                                            </div>
-                                        </li>
-                                    @endforeach
+                                @foreach(has_field($page, 'listimage_module_partner') as $row)
+                                <li class="splide__slide">
+                                    <div class="splide__slide__img" style="background: url({{rvMedia::getImageUrl(get_sub_field($row, 'image'))}}) no-repeat; background-size: cover; background-position: center;height: 60px; width: 120px;">
+                                    </div>
+                                </li>
+                                @endforeach
                                 @endif
                             </ul>
                         </div>
@@ -225,45 +201,76 @@
     <!--end css in file common.scss----->
 </div>
 
+<!--Google map-->
+<div class="modal fade" id="myMapModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100">Google Map <span id="lat" class="float-right"></span></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="map-canvas" class="">
+                    <iframe class="w-100 h-100 modal-map" src="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     $(document).ready(function() {
+        var map = document.getElementsByClassName("modal-map")[0];
+        var arr = document.getElementsByClassName('link-map');
+
+        for (var i = 0; i < arr.length; i++) {
+            arr[i].onclick = function(e) {
+                var a = e.target;
+                var url = a.getAttribute('data-lat');
+                map.src = url;
+            }
+        }
+
         new Splide('#section-intro__carousel', {
             heightRatio: 0.5625
             , cover: true
             , rewind: true
             , lazyLoad: 'sequential'
         , }).mount();
-    })
 
-    new Splide('#box-common-typeicalproject-carousel__carousel', {
-        perPage: 5
-        , gap: 40
-        , breakpoints: {
-            '992': {
-                perPage: 2
-                , gap: '1rem'
+
+        new Splide('#box-common-typeicalproject-carousel__carousel', {
+            perPage: 5
+            , gap: 40
+            , breakpoints: {
+                '992': {
+                    perPage: 2
+                    , gap: '1rem'
+                , }
+                , '480': {
+                    perPage: 1
+                    , gap: '1rem'
+                , }
             , }
-            , '480': {
-                perPage: 1
-                , gap: '1rem'
-            , }
-        , }
-    }).mount();
-
-
-    $(".btn-read-more.tabs").on('click', function(e) {
-        e.preventDefault();
+        }).mount();
 
         if ($('.tab-pane.show .line__item:hidden').length == 0) {
-            $('.tab-pane.show .line__item').slice(3).slideUp();
-            $(this).text('Xem thêm');
-        } else {
-            $('.tab-pane.show .line__item:hidden').slice(0, 2).slideDown();
+            $('.btn-read-more.tabs').hide();
+        }
+        $(".btn-read-more.tabs").on('click', function(e) {
+            e.preventDefault();
 
             if ($('.tab-pane.show .line__item:hidden').length == 0) {
-                $(this).text('Thu gọn');
+                $('.tab-pane.show .line__item').slice(3).slideUp();
+                $(this).text('Xem thêm');
+            } else {
+                $('.tab-pane.show .line__item:hidden').slice(0, 2).slideDown();
+
+                if ($('.tab-pane.show .line__item:hidden').length == 0) {
+                    $(this).text('Thu gọn');
+                }
             }
-        }
-    });
+        });
+    })
 
 </script>

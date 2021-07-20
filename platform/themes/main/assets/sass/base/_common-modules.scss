@@ -342,6 +342,7 @@
                         font-family: "Font Awesome 5 Pro";
                         left: 0;
                         right: 0;
+                        font-weight: bold;
                     }
                 }
                 .phone {
@@ -380,6 +381,11 @@
 
                 .address {
                     font-size: $font-size20;
+                    color: $textWhite;
+
+                    &::before {
+                        color: $textWhite;
+                    }
                 }
 
                 .phone {
