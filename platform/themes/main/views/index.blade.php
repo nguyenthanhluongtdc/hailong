@@ -53,18 +53,10 @@ $page_introduce = get_page_by_template ('introduce');
         <div class="container-customize">
             <div class="section-aboutus theme-customize-header-section">
                 <div class="theme-customize-header-section__header mb-3">
-                    <h2 class="theme-customize-header-section__header__title"> Về chúng tôi </h2>
-                    <p class="theme-customize-header-section__header__des">
-                        @if($page_introduce)
-                        {{$page_introduce->description}}
-                        @endif
-                    </p>
-                </div>
-                @if($page_introduce)
-                {!!$page_introduce->content!!}
-                @endif
+                    <h2 class="theme-customize-header-section__header__title"> {!!has_field($page, 'title_module_aboutus')!!} </h2>
+                    {!! has_field($page, 'description_module_aboutus') !!}
                 <div class="section-aboutus__line__btn">
-                    <a class="btn-read-more" href="{{route('public.single').get_slug_by_template('introduce')}}" title="Xem thêm">
+                    <a class="btn-read-more" href="{{route('public.single').get_slug_introduce_by_template('introduce')}}" title="Xem thêm">
                         Xem thêm
                     </a>
                 </div>
@@ -387,7 +379,7 @@ $page_introduce = get_page_by_template ('introduce');
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
-                        <a class="btn-read-more" href="#" title="Read more"> Xem thêm </a>
+                        <a class="btn-read-more" href="{{route('public.single').get_slug_by_template('news')}}" title="Read more"> Xem thêm </a>
                     </p>
                 </div>
 
@@ -399,9 +391,13 @@ $page_introduce = get_page_by_template ('introduce');
 
                         @if(!empty($posts))
                         <div class="col-lg-6">
-                            <div class="col-core col-big">
-                                <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}">
-                                    <img width="640" height="430" class="col-core__img w-100" src="{{rvMedia::getImageUrl($posts[0]->image)}}" alt="{{$posts[0]->name}}" atl="" />
+                            <div class="col-core col-big h-100">
+                                <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}" class="h-100 w-100 d-lg-inline-block">
+                                    <img src="{{rvMedia::getImageUrl($posts[0]->image)}}" alt="{{$posts[0]->name}}" class="d-lg-none w-100" />
+
+                                    <div class="img h-100 d-lg-block d-none" style="background-image: url({{rvMedia::getImageUrl($posts[0]->image)}}); background-size: cover; background-repeat: no-repeat;">
+
+                                    </div>
                                 </a>
 
                                 <div class="col-core__content">

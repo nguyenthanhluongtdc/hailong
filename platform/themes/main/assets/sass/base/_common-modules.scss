@@ -510,8 +510,16 @@
         flex: 0 0 calc(50% - #{$size0_625});
         max-width: calc(50% - #{$size0_625});
         padding: $size0_625 0;
-        border-bottom: 1px solid rgba($borderf3f3f3, $alpha0_2);
+        border-top: 1px solid rgba($borderf3f3f3, $alpha0_2);
         position: relative;
+
+        &:nth-child(1) {
+            border-top: 0;
+        }
+
+        &:nth-child(2) {
+            border-top: 0;
+        }
 
         &:nth-child(odd) {
             margin-right: $size0_625;

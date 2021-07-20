@@ -202,12 +202,16 @@
                         font-size: $size0_9375;
                         margin-top: $size0_625;
                         margin-bottom: $size0_625;
+                        color: rgba($color: $textNight, $alpha: 0.5);
                     }
 
                     &__des,p {
-                        @include split_str(3);
                         font-size: $size1;
                         margin-bottom: 0;
+                        @media(min-width: 1200px) {
+                            @include split_str(3);
+                        }
+                        @include split_str(2);
 
                         @media(max-width: 567px) {
                             @include split_str(2);
@@ -234,6 +238,10 @@
                     background-color: rgba($backgroundGreen, $alpha0_7);
                     padding: $size0_9375;
                     color: $textWhite;
+
+                    &__time {
+                        color: $textWhite !important;
+                    }
                     
                     a {
                         color: $textWhite;
