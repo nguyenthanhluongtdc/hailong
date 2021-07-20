@@ -11301,6 +11301,20 @@ footer .footer-wrapper .footer__bottom p {
 /***
 *************** Responsive
 ****/
+.box-common-partner-carousel-wrapper .box-common-partner-carousel .splide__slide {
+  border: 1px solid #f3f3f3;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.box-common-partner-carousel-wrapper .box-common-partner-carousel .splide__slide img {
+  max-width: 100%;
+  height: auto;
+}
+.box-common-partner-carousel-wrapper .box-common-partner-carousel .splide__arrows {
+  display: none;
+}
+
 #news-page .section-banner-wrapper .section-banner-news .theme-customize-header-section__header {
   padding-bottom: 1.5rem;
 }

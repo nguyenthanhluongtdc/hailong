@@ -159,10 +159,10 @@
     <!--end css in file common.scss----->
 
     <!--css in file common.scss----->
-    <div class="box-common-typeicalproject-carousel-wrapper">
+    <div class="box-common-partner-carousel-wrapper">
         <div class="container-customize">
-            <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
-                <div class="theme-customize-header-section__header distance-below d-md-flex">
+            <div class="box-common-partner-carousel distance-below theme-customize-header-section">
+                <div class="theme-customize-header-section__header mb-lg-4 mb-3 d-md-flex">
                     <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0">
                         {!! has_field($page, 'title_module_partner') !!}
                     </h2>
@@ -174,7 +174,7 @@
                     </p>
                 </div>
 
-                <div class="splide" id="box-common-typeicalproject-carousel__carousel">
+                <div class="splide" id="box-common-partner-carousel__carousel">
                     <div class="splide__slider">
                         <!-- relative -->
                         <div class="splide__track">
@@ -182,8 +182,7 @@
                                 @if(has_field($page, 'listimage_module_partner'))
                                 @foreach(has_field($page, 'listimage_module_partner') as $row)
                                 <li class="splide__slide">
-                                    <div class="splide__slide__img" style="background: url({{rvMedia::getImageUrl(get_sub_field($row, 'image'))}}) no-repeat; background-size: cover; background-position: center;height: 60px; width: 120px;">
-                                    </div>
+                                    <img src="{{rvMedia::getImageUrl(get_sub_field($row, 'image'))}}" alt="Doi tac" width="250" height="100" />
                                 </li>
                                 @endforeach
                                 @endif
@@ -239,9 +238,9 @@
         , }).mount();
 
 
-        new Splide('#box-common-typeicalproject-carousel__carousel', {
+        new Splide('#box-common-partner-carousel__carousel', {
             perPage: 5
-            , gap: 40
+            , gap: 20
             , breakpoints: {
                 '992': {
                     perPage: 2
