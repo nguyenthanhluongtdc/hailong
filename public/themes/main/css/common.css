@@ -11020,6 +11020,25 @@ footer .footer-wrapper .footer__top .footer__col__list--icon .__item__icon img {
   max-width: 100%;
   height: auto;
 }
+footer .footer-wrapper .footer__top .footer__col__list__icon {
+  border-top: 2px solid #f3f3f3;
+  border-bottom: 2px solid #f3f3f3;
+  padding: 1rem 0;
+}
+footer .footer-wrapper .footer__top .footer__col__list__icon img {
+  height: 60px;
+  width: auto;
+}
+@media (max-width: 1600px) {
+  footer .footer-wrapper .footer__top .footer__col__list__icon img {
+    height: 50px;
+  }
+}
+@media (max-width: 992px) {
+  footer .footer-wrapper .footer__top .footer__col__list__icon img {
+    height: 30px;
+  }
+}
 footer .footer-wrapper .footer__bottom p {
   text-align: center;
 }

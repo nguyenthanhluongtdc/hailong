@@ -25,11 +25,21 @@
                                         <p>
                                             Nơi cấp: Sở Kế Hoạch & Đầu Tư Tp.Hà Nội
                                         </p>
-                                        <div class="pt-4 row">
-                                            <div class="col-3"> <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image4.jpg')}}" alt="" /> </div>
-                                            <div class="col-3 pl-0"> <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image3.jpg')}}" alt="" /> </div>
-                                            <div class="px-2 col-2 pl-0"> <img width="80" height="50" class="mw-100" src="{{Theme::asset()->url('images/footer/image1.jpg')}}" alt="" /> </div>
-                                            <div class="col-4 px-0"> <img width="120" height="50" class="mw-100" src="{{Theme::asset()->url('images/footer/image2.jpg')}}" alt=""  /> </div>
+                                        <div class="pt-4 row footer__col__list__icon">
+                                            <div class="col-3"> 
+                                                <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image4.jpg')}}" alt="" /> 
+                                            </div>
+                                            <div class="col-3 pl-0"> 
+                                                <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image3.jpg')}}" alt="" /> 
+                                            </div>
+                                            <div class="px-2 col-2 pl-0"> 
+                                                <img width="80" height="50" class="mw-100" src="{{Theme::asset()->url('images/footer/image1.jpg')}}" alt="" /> 
+                                            </div>
+                                            <div class="col-4 px-0"> 
+                                                <a href="http://online.gov.vn/?AspxAutoDetectCookieSupport=1" title="">
+                                                    <img width="120" height="50" class="mw-100" src="{{Theme::asset()->url('images/footer/image2.jpg')}}" alt=""  />
+                                                </a> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

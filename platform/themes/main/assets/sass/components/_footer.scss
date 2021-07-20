@@ -38,6 +38,24 @@ footer {
                             }
                         }
                     }
+
+                    &__list__icon {
+                        border-top: 2px solid $borderf3f3f3;
+                        border-bottom: 2px solid $borderf3f3f3;
+                        padding: $size1 0;
+                        img {
+                            height: 60px;
+                            width: auto;
+
+                            @media(max-width: 1600px) {
+                                height: 50px;
+                            }
+
+                            @media(max-width: 992px) {
+                                height: 30px;
+                            }
+                        }
+                    }
                 }
             }
 
