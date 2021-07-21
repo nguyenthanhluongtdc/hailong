@@ -1,22 +1,20 @@
-@php
-$page_introduce = get_page_by_template ('introduce');
-@endphp
-
 <div id="home-page">
     <div class="section-intro-wrapper">
         <div class="container-customize">
             <div class="section-intro distance-below">
                 <div class="d-inline-block">
-                    <h1 class="section-intro__title"> {!!has_field($page,'title_main')!!} </h1>
+                    <h1 class="section-intro__title"> {!! has_field($page,'title_main')  ? get_field($page,'title_main') : "" !!} </h1>
                     <ul class="info-contact mb-0">
-                        @foreach(has_field($page, 'hotline_info') as $row)
-                        <li class="info-contact__item">
-                            <a class="info-contact__link" href="#" title="cskh">
-                                <span> {{has_sub_field($row, 'title')}} </span>
-                                <b> {{has_sub_field($row, 'content')}} </b>
-                            </a>
-                        </li>
-                        @endforeach
+                        @if(has_field($page, 'hotline_info'))
+                            @foreach(get_field($page, 'hotline_info') as $row)
+                            <li class="info-contact__item">
+                                <a class="info-contact__link" href="#" title="cskh">
+                                    <span> {{has_sub_field($row, 'title') ? get_sub_field($row, 'title') : ""}} </span>
+                                    <b> {{has_sub_field($row, 'content') ? get_sub_field($row, 'content') : ""}} </b>
+                                </a>
+                            </li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -32,11 +30,13 @@ $page_introduce = get_page_by_template ('introduce');
                         <!-- relative -->
                         <div class="splide__track">
                             <ul class="splide__list">
-                                @foreach(has_field($page, 'banner_image') as $row)
-                                <li class="splide__slide">
-                                    <img alt=" ảnh slider" width="1600" height="570" src="{{ RvMedia::getImageUrl(get_sub_field($row, 'image'))}}" />
-                                </li>
-                                @endforeach
+                                @if(has_field($page, 'banner_image'))
+                                    @foreach(get_field($page, 'banner_image') as $row)
+                                    <li class="splide__slide">
+                                        <img alt=" ảnh slider" width="1600" height="570" src="{{ RvMedia::getImageUrl(get_sub_field($row, 'image'))}}" />
+                                    </li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -53,11 +53,11 @@ $page_introduce = get_page_by_template ('introduce');
         <div class="container-customize">
             <div class="section-aboutus theme-customize-header-section">
                 <div class="theme-customize-header-section__header mb-3">
-                    <h2 class="theme-customize-header-section__header__title"> {!!has_field($page, 'title_module_aboutus')!!} </h2>
-                    {!! has_field($page, 'description_module_aboutus') !!}
+                    <h2 class="theme-customize-header-section__header__title"> {!!has_field($page, 'title_module_aboutus') ? get_field($page, 'title_module_aboutus') : ""!!} </h2>
+                    {!! has_field($page, 'description_module_aboutus') ? get_field($page, 'description_module_aboutus') : "" !!}
                 <div class="section-aboutus__line__btn">
-                    <a class="btn-read-more" href="{{route('public.single').get_slug_introduce_by_template('introduce')}}" title="Xem thêm">
-                        Xem thêm
+                    <a class="btn-read-more" href="{{route('public.single').get_slug_introduce_by_template('introduce')}}" title="{{ __("Read more") }}">
+                        {{ __("Read more") }}
                     </a>
                 </div>
             </div>
@@ -69,34 +69,32 @@ $page_introduce = get_page_by_template ('introduce');
             <div class="section-ourproduct theme-customize-header-section">
                 <div class="row">
                     @php $products = get_products(); @endphp
-                    <div class="col-md-4 col-12 order-md-1 order-2 pr-md-0 set-height">
-                        @if(!empty($products))
+                    @if(isset($products) && $products->count() >= 1)
+                        <div class="col-md-4 col-12 order-md-1 order-2 pr-md-0 set-height">
                             <div class="section-ourproduct__left h-100">
-                                <img class="w-100 h-100 " id="image-ourproduct" width="600" height="540" src="{{rvMedia::getImageUrl($products[0]->image)}}" alt="product" />
+                                <img class="w-100 h-100 " id="image-ourproduct" width="600" height="540" src="{{\RvMedia::getImageUrl($products->first()->image)}}" alt="product" />
                             </div>
-                        @endif
-                    </div>
+                        </div>
 
-                    <div class="col-md-8 col-12 order-md-2 order-1 pl-md-0 get-height">
-                        <div class="section-ourproduct__right h-100">
-                            <div class="theme-customize-header-section__header __header mt-0 pt-0">
-                                <h2 class="theme-customize-header-section__header__title __title mb-2"> {{has_field($page, 'title_module_product')}} </h2>
-                                <p class="theme-customize-header-section__header__des __des">
-                                    {{has_field($page, 'description_module_product')}}
-                                </p>
-                            </div>
-                            <ul class="list-cate-pro">
-                                @if(!empty($products))
+                        <div class="col-md-8 col-12 order-md-2 order-1 pl-md-0 get-height">
+                            <div class="section-ourproduct__right h-100">
+                                <div class="theme-customize-header-section__header __header mt-0 pt-0">
+                                    <h2 class="theme-customize-header-section__header__title __title mb-2"> {{has_field($page, 'title_module_product') ? get_field($page, 'title_module_product') : ""}} </h2>
+                                    <p class="theme-customize-header-section__header__des __des">
+                                        {{has_field($page, 'description_module_product') ? get_field($page, 'description_module_product') : ""}}
+                                    </p>
+                                </div>
+                                <ul class="list-cate-pro">
                                     @foreach($products as $key => $product)
-                                    @php $imageProducts[] = rvMedia::getImageUrl($product->image); @endphp
+                                        @php $imageProducts[] = RvMedia::getImageUrl($product->image); @endphp
                                         <li class="list-cate-pro__item">
-                                            <a class="list-cate-pro__item__link" href="/product-detail" title="Kính cường lực" data-image-id="{{$key}}"> {{$product->name}} </a>
+                                            <a class="list-cate-pro__item__link" href="{{ $product->url }}" title="Kính cường lực" data-image-id="{{$key}}"> {{$product->name}} </a>
                                         </li>
                                     @endforeach
-                                @endif
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -107,18 +105,18 @@ $page_introduce = get_page_by_template ('introduce');
         <div class="container-customize">
             <div class="box-common-producecapacity distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title"> {{has_field($page, 'title_module_nlsx')}} </h2>
+                    <h2 class="theme-customize-header-section__header__title"> {{has_field($page, 'title_module_nlsx') ? get_field($page, 'title_module_nlsx') : ''}} </h2>
                 </div>
                 <ul class="box-common-producecapacity__list">
-                    @if(get_field($page, 'col_module_nlsx'))
-                    @foreach(has_field($page, 'col_module_nlsx') as $row)
-                    <li class="box-common-producecapacity__list__item">
-                        <b class="title-parent"> {{get_sub_field($row, 'title')}} </b>
-                        <p class="des-children">
-                            {{get_sub_field($row, 'description')}}
-                        </p>
-                    </li>
-                    @endforeach
+                    @if(has_field($page, 'col_module_nlsx'))
+                        @foreach(get_field($page, 'col_module_nlsx') as $row)
+                            <li class="box-common-producecapacity__list__item">
+                                <b class="title-parent"> {{get_sub_field($row, 'title')}} </b>
+                                <p class="des-children">
+                                    {{get_sub_field($row, 'description')}}
+                                </p>
+                            </li>
+                        @endforeach
                     @endif
                 </ul>
             </div>
@@ -134,31 +132,35 @@ $page_introduce = get_page_by_template ('introduce');
                     <div class="col-lg-6 pb-5">
                         <div class="theme-customize-header-section__header">
                             <h2 class="theme-customize-header-section__header__title">
-                                {{has_field($page, 'title_module_whychoose')}}
+                                {{has_field($page, 'title_module_whychoose') ? get_field($page, 'title_module_whychoose') : ""}}
                             </h2>
                             <p class="theme-customize-header-section__header__des">
-                                {{has_field($page, 'description_module_whychoose')}}
+                                {{has_field($page, 'description_module_whychoose') ? get_field($page, 'description_module_whychoose') : ""}}
                             </p>
                         </div>
 
                         <ul class="box-common-many-col__list mb-0">
                             @if(has_field($page, 'col_module_whychoose'))
-                            @foreach(has_field($page, 'col_module_whychoose') as $key => $row)
-                            @php $imageWhy[] = rvMedia::getImageUrl(has_sub_field($row, 'image')); @endphp
-                            <li class="box-common-many-col__list__item col-sm-6 col-12 item-why" data-image-id="{{$key}}">
-                                <b class="title-parent"> {{has_sub_field($row, 'title')}} </b>
-                                <p class="des-children">
-                                    {{has_sub_field($row, 'description')}}
-                                </p>
-                            </li>
-                            @endforeach
+                                @foreach(get_field($page, 'col_module_whychoose') as $key => $row)
+                                    @if(has_sub_field($row, 'image'))
+                                        @php $imageWhy[] = RvMedia::getImageUrl(get_sub_field($row, 'image')); @endphp
+                                    @endif
+                                    <li class="box-common-many-col__list__item col-sm-6 col-12 item-why" data-image-id="{{$key}}">
+                                        <b class="title-parent"> {{has_sub_field($row, 'title') ? get_sub_field($row, 'title') : ""}} </b>
+                                        <p class="des-children">
+                                            {{has_sub_field($row, 'description') ? get_sub_field($row, 'description') : ""}}
+                                        </p>
+                                    </li>
+                                @endforeach
                             @endif
                         </ul>
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="box-common-many-col__picture mt-0 h-100" id="image-why-choose" style="background-image: url({{rvMedia::getImageUrl(has_field($page, 'image_module_whychoose'))}}); background-size: cover; background-repeat: no-repeat;">
-                        </div>
+                        @if(has_field($page, 'image_module_whychoose'))
+                            <div class="box-common-many-col__picture mt-0 h-100" id="image-why-choose" style="background-image: url({{RvMedia::getImageUrl(get_field($page, 'image_module_whychoose'))}}); background-size: cover; background-repeat: no-repeat;">
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -172,10 +174,10 @@ $page_introduce = get_page_by_template ('introduce');
             <div class="box-common-showroom distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header">
                     <h2 class="theme-customize-header-section__header__title">
-                        {{has_field($page, 'title_module_showroom')}}
+                        {{has_field($page, 'title_module_showroom') ? get_field($page, 'title_module_showroom') : ""}}
                     </h2>
                     <p class="theme-customize-header-section__header__des mb-4">
-                        {{has_field($page, 'description_module_showroom')}}
+                        {{has_field($page, 'description_module_showroom') ? get_field($page, 'description_module_showroom') : ""}}
                     </p>
                 </div>
 
@@ -185,38 +187,38 @@ $page_introduce = get_page_by_template ('introduce');
                             <div class="box__tabs">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     @if(has_field($page, 'tab_module_showroom'))
-                                    @foreach(has_field($page, 'tab_module_showroom') as $key => $tab)
-                                    <li class="nav-item box__tabs__header" role="presentation">
-                                        <button class="nav-link px-0 {{$key==0?'active':''}}" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true">
-                                            {{has_sub_field($tab, 'domain')}}
-                                        </button>
-                                    </li>
-                                    @endforeach
+                                        @foreach(get_field($page, 'tab_module_showroom') as $key => $tab)
+                                        <li class="nav-item box__tabs__header" role="presentation">
+                                            <button class="nav-link px-0 {{$key==0?'active':''}}" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true">
+                                                {{has_sub_field($tab, 'domain') ? get_sub_field($tab, 'domain') : ""}}
+                                            </button>
+                                        </li>
+                                        @endforeach
                                     @endif
                                 </ul>
 
                                 <div class="tab-content box__tabs__content" id="myTabContent">
                                     @if(has_field($page, 'tab_module_showroom'))
-                                    @foreach(has_field($page, 'tab_module_showroom') as $key => $tab)
-                                    <div class="tab-pane fade  {{$key==0?'show active':''}}" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
-                                        @foreach(has_sub_field($tab, 'row_content') as $row)
-                                        <div class="line__item">
-                                            <div>
-                                                <a href="#" title="{{has_sub_field($row, 'address')}}" class="address link-map" data-lat="{{get_sub_field($row, 'url_google_map')}}" data-toggle="modal" data-target="#myMapModal">
-                                                    <b> {{has_sub_field($row, 'address')}} </b>
-                                                </a>
+                                        @foreach(get_field($page, 'tab_module_showroom') as $key => $tab)
+                                        <div class="tab-pane fade  {{$key==0?'show active':''}}" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
+                                            @foreach(has_sub_field($tab, 'row_content') as $row)
+                                            <div class="line__item">
+                                                <div>
+                                                    <a href="#" title="{{has_sub_field($row, 'address') ? get_sub_field($row, 'address') : ""}}" class="address link-map" data-lat="{{has_sub_field($row, 'url_google_map') ? get_sub_field($row, 'url_google_map') : ""}}" data-toggle="modal" data-target="#myMapModal">
+                                                        <b> {{has_sub_field($row, 'address') ? get_sub_field($row, 'address') : ""}} </b>
+                                                    </a>
+                                                </div>
+                                                <div class="des-children">
+                                                    <span class="phone">
+                                                        {{has_sub_field($row, 'phone') ? get_sub_field($row, 'phone') : ""}}
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <div class="des-children">
-                                                <span class="phone">
-                                                    {{has_sub_field($row, 'phone')}}
-                                                </span>
-                                            </div>
+                                            @endforeach
+
+                                            <a class="btn-read-more tabs small" href="#" title="{{ __("Read more") }}"> {{ __("Read more") }} </a>
                                         </div>
                                         @endforeach
-                                       
-                                        <a class="btn-read-more tabs small" href="#" title="Read more"> Xem thêm </a>
-                                    </div>
-                                    @endforeach
                                     @endif
                                 </div>
                             </div>
@@ -226,29 +228,29 @@ $page_introduce = get_page_by_template ('introduce');
                             <div class="box__infoOther">
                                 <div class="theme-customize-header-section__header pt-0">
                                     <h3 class="theme-customize-header-section__header__title text-white mb-2">
-                                        {{has_field($page, 'title_module_nhamay')}}
+                                        {{has_field($page, 'title_module_nhamay') ? get_field($page, 'title_module_nhamay') : ""}}
                                     </h3>
                                     <p class="box__infoOther__header__des des-children">
-                                        {{has_field($page, 'description_module_nhamay')}}
+                                        {{has_field($page, 'description_module_nhamay') ? get_field($page, 'description_module_nhamay') : ""}}
                                     </p>
                                 </div>
 
                                 <div class="box__infoOther__list">
                                     @if(has_field($page, 'content_module_nhamay'))
-                                    @foreach(has_field($page, 'content_module_nhamay') as $row)
-                                    <div class="line__item">
-                                        <div>
-                                           <a href="#" title="{{has_sub_field($row, 'address')}}" class="address link-map" data-lat="{{get_sub_field($row, 'url_google_map')}}" data-toggle="modal" data-target="#myMapModal">
-                                                <b> {{has_sub_field($row, 'address')}} </b>
-                                            </a>
+                                        @foreach(get_field($page, 'content_module_nhamay') as $row)
+                                        <div class="line__item">
+                                            <div>
+                                                <a href="#" title="{{has_sub_field($row, 'address') ? get_sub_field($row, 'address') : ""}}" class="address link-map" data-lat="{{has_sub_field($row, 'url_google_map') ? get_sub_field($row, 'url_google_map') : ""}}" data-toggle="modal" data-target="#myMapModal">
+                                                    <b> {{has_sub_field($row, 'address') ? get_sub_field($row, 'address') : ""}} </b>
+                                                </a>
+                                            </div>
+                                            <div class="des-children">
+                                                <span class="phone white">
+                                                    {{has_sub_field($row, 'phone') ? get_sub_field($row, 'phone') : ""}}
+                                                </span>
+                                            </div>
                                         </div>
-                                        <div class="des-children">
-                                            <span class="phone white">
-                                                {{get_sub_field($row, 'phone')}}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    @endforeach
+                                        @endforeach
                                     @endif
                                 </div>
                             </div>
@@ -266,13 +268,13 @@ $page_introduce = get_page_by_template ('introduce');
             <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header distance-below">
                     <h2 class="theme-customize-header-section__header__title">
-                        Dự án tiêu biểu
+                        {{ __("Typical projects") }}
                     </h2>
                     <p class="theme-customize-header-section__header__des mb-0">
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
-                        <a class="btn-read-more" href="/projects" title="Read more"> Xem thêm </a>
+                        <a class="btn-read-more" href="/projects" title="{{ __("Read more") }}"> {{ __("Read more") }} </a>
                     </p>
                 </div>
 
@@ -359,7 +361,7 @@ $page_introduce = get_page_by_template ('introduce');
             <div class="section-news distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header distance-below">
                     <h2 class="theme-customize-header-section__header__title">
-                        Tin tức
+                        {{ __('News') }}
                     </h2>
                     <p class="theme-customize-header-section__header__des">
                         <span>
@@ -372,7 +374,7 @@ $page_introduce = get_page_by_template ('introduce');
                 <div class="section-news__content _fsx20r16">
                     <div class="row">
                         @php
-                        $posts = get_latest_posts(3);
+                            $posts = get_latest_posts(3);
                         @endphp
 
                         @if(!empty($posts))
@@ -443,7 +445,7 @@ $page_introduce = get_page_by_template ('introduce');
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title w-100">Google Map <span id="lat" class="float-right"></span></h4>
+                <h4 class="modal-title w-100">{{ __("Google Map") }} <span id="lat" class="float-right"></span></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
@@ -461,11 +463,11 @@ $page_introduce = get_page_by_template ('introduce');
         $('.set-height').height($('.get-height').height())
 
         //hover module product, change image src
-        let imageWhy = [<?php echo '"'.implode('","', $imageWhy).'"' ?>];
+        let imageWhy = [<?php echo '"'.implode('","', $imageWhy ?? []).'"' ?>];
         var imageModuleWhy = document.getElementById('image-why-choose');
         var arrItemWhy = document.getElementsByClassName('item-why');
         for(var i=0; i<arrItemWhy.length; i++) {
-            arrItemWhy[i].onmouseover = function(e) {  
+            arrItemWhy[i].onmouseover = function(e) {
                 e.preventDefault();
                 var imgId = $(this).attr('data-image-id');
                 var imgSrc = imageWhy[imgId];
@@ -477,16 +479,16 @@ $page_introduce = get_page_by_template ('introduce');
         //Google map
         var map = document.getElementsByClassName("modal-map")[0];
         var arr = document.getElementsByClassName('link-map');
-    
+
         for(var i=0; i<arr.length; i++) {
-            arr[i].onclick = function(e) {  
+            arr[i].onclick = function(e) {
                 var a = e.target;
                 var url = a.getAttribute('data-lat');
                 map.src = url;
             }
         }
 
-        
+
         new Splide('#section-intro__carousel', {
             heightRatio: 0.5625
             , cover: true
@@ -551,7 +553,7 @@ $page_introduce = get_page_by_template ('introduce');
         var imageOurproduct = document.getElementById('image-ourproduct');
         var arr = document.getElementsByClassName('list-cate-pro__item__link');
         for(var i=0; i<arr.length; i++) {
-            arr[i].onmouseover = function(e) {  
+            arr[i].onmouseover = function(e) {
                 var a = e.target;
                 var imgId = a.getAttribute('data-image-id');
                 var imgSrc = imageProducts[imgId];
