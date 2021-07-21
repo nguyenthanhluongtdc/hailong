@@ -64,7 +64,7 @@
                             @if ($posts->count())
                             @foreach ($posts as $all_post)
                            
-                            <div class="col-md-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 pr-lg-0 pr-md-4 mb-4 mb-xl-5">
+                            <div class="col-md-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 pr-lg-0 pr-md-5 mb-5 mb-xl-5">
                                 <div class="row">
                                    
                                     <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0">
