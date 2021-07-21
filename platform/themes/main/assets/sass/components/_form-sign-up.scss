@@ -11,6 +11,7 @@
         }
     }
     .newsletter_text {
+        border-right: 3px solid $a19A51;
         p {
             margin-bottom: 0;
             color: $white;
@@ -20,6 +21,7 @@
     .newsletter_form {
         .form-control {
             opacity: 20%;
+            // display: inline;
         }
         button {
             cursor: pointer;
