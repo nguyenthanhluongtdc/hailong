@@ -1,4 +1,3 @@
-
 <div id="introduce-overview-page">
 
     @includeIf("theme.main::views.components.tabs-banner",['page'=>$page])
@@ -15,19 +14,25 @@
                                 </h2>
                             </div>
 
-                           {!!has_field($page, 'content_module_introductory')!!}
+                            {!!has_field($page, 'content_module_introductory')!!}
 
-                           <div class="line-border mt-md-4 mt-3"> </div>
+                            <div class="line-border mt-md-4 mt-3"> </div>
 
                             <p class="title-underline">
-                                    <strong> {!!has_field($page, 'description_module_introductory')!!} </strong>
+                                <strong> {!!has_field($page, 'description_module_introductory')!!} </strong>
                             </p>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-12">
-                        <div class="box-common-intro__picture video">
-                            <img width="850" height="350" src="{{rvMedia::getImageUrl(has_field($page, 'video_module_introductory'))}}" alt="video-box" />
+
+                        <div class="ytvideo box-common-intro__picture" data-video="7ixLP6mUqnw" style="width:560px; height:315px; background-image:url({{rvMedia::getImageUrl(has_field($page, 'video_module_introductory'))}})">
+
+                            <div class="seo">
+                                Have a meaningful description of the video here
+                            </div>
+                            <span class="playbutton"></span>
+
                         </div>
                     </div>
                 </div>
@@ -46,7 +51,7 @@
                 </div>
 
                 <ul class="box-common-many-col__list mb-0 _fsx20r16">
-                @if(has_field($page, 'col_module_value'))
+                    @if(has_field($page, 'col_module_value'))
                     @foreach(has_field($page, 'col_module_value') as $row)
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> {{has_sub_field($row, 'title')}} </b>
@@ -55,7 +60,7 @@
                         </p>
                     </li>
                     @endforeach
-                @endif
+                    @endif
                 </ul>
             </div>
         </div>
@@ -78,7 +83,7 @@
                 </div>
 
                 <ul class="box-common-many-col__list mb-0 _fsx20r16">
-                @if(has_field($page, 'col_module_whychoose_introduce'))
+                    @if(has_field($page, 'col_module_whychoose_introduce'))
                     @foreach(has_field($page, 'col_module_whychoose_introduce') as $row)
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
                         <b> {{has_sub_field($row, 'title')}} </b>
@@ -87,7 +92,7 @@
                         </p>
                     </li>
                     @endforeach
-                @endif
+                    @endif
                 </ul>
             </div>
         </div>
@@ -117,7 +122,7 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="ảnh slider">
-                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}"  alt="ảnh slider"/>
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh slider" />
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
@@ -146,7 +151,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider"/>
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -159,7 +164,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider"/>
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -184,7 +189,6 @@
 </div>
 
 <script>
-
     $(document).ready(function() {
         new Splide('#box-common-typeicalproject-carousel__carousel', {
             perPage: 3
@@ -201,5 +205,15 @@
             , }
         , }).mount();
     })
+
+    // VIDEO 2
+    $('.ytvideo[data-video]').one('click', function() {
+
+        var $this = $(this);
+        var width = $this.attr("width");
+        var height = $this.attr("height");
+
+        $this.html('<iframe src="https://www.youtube.com/embed/' + $this.data("video") + '?autoplay=1"></iframe>');
+    });
 
 </script>

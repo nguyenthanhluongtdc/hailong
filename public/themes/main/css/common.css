@@ -10945,7 +10945,7 @@ header nav .navbar-collapse .bilingual {
   display: none;
 }
 header nav .navbar-collapse .bilingual a {
-  padding: 0.625rem 0.9375rem;
+  padding: 0.625rem;
   border: 1px solid #08964a;
   color: #171717;
   display: inline-block;
@@ -10968,7 +10968,7 @@ header nav .navbar-collapse.show .nav-item.active .nav-link {
   border-bottom: 2px solid #f3f3f3;
 }
 header nav .navbar-collapse.show .bilingual {
-  margin-top: 0.5rem;
+  margin: 1rem;
   border: 1px solid #f3f3f3;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -11326,6 +11326,44 @@ footer .footer-wrapper .footer__bottom p {
 /***
 *************** Responsive
 ****/
+#introduce-overview-page .imgvideo {
+  cursor: pointer;
+}
+#introduce-overview-page .playbutton::before {
+  content: "";
+  position: absolute;
+  font-family: "Font Awesome 5 Pro";
+  top: 50%;
+  left: 50%;
+  width: 74px;
+  height: 74px;
+  font-size: 30px;
+  margin: -37px 0 0 -37px;
+  z-index: 10;
+  color: white;
+  opacity: 0.6;
+}
+#introduce-overview-page .ytvideo {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* pour anciens Chrome et Safari */
+  background-size: cover;
+  /* version standardisée */
+  cursor: pointer;
+}
+#introduce-overview-page .ytvideo iframe {
+  border-style: none;
+  height: 100%;
+  width: 100%;
+}
+#introduce-overview-page .ytvideo .seo {
+  display: none;
+}
+
 .box-common-partner-carousel-wrapper .box-common-partner-carousel .splide__slide {
   border: 1px solid #f3f3f3;
   padding: 1rem 2rem;

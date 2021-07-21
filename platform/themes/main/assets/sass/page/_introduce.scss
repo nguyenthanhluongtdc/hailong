@@ -1,4 +1,45 @@
 #introduce-overview-page {
 
-    
+    .imgvideo {
+        cursor: pointer;
+      }
+      
+      .playbutton::before{
+        content: "\f144";
+        position: absolute;
+        font-family: "Font Awesome 5 Pro";
+        top: 50%;
+        left: 50%;
+        width: 74px;
+        height: 74px;
+        font-size: 30px;
+        margin: -37px 0 0 -37px;
+        z-index: 10;
+        color: $textWhite;
+        opacity: .6;
+      }
+      
+      .ytvideo {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        /* pour anciens Chrome et Safari */
+        background-size: cover;
+        /* version standardisée */
+        cursor: pointer;
+      }
+      
+      .ytvideo iframe {
+        border-style: none;
+        height: 100%;
+        width: 100%;
+      }
+      
+      .ytvideo .seo {
+        display: none;
+      }
 }
