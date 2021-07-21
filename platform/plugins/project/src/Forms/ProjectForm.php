@@ -57,6 +57,11 @@ class ProjectForm extends FormAbstract
                     'with-short-code' => true,
                 ],
             ])
+            ->add('images[]', 'mediaImages', [
+                'label'      => trans('plugins/ecommerce::products.form.image'),
+                'label_attr' => ['class' => 'control-label'],
+                'values'     => $projectId ? $this->getModel()->images : [],
+            ])
             ->add('categories[]', 'categoryMulti', [
                 'label'      => trans('plugins/project::project.form.categories'),
                 'label_attr' => ['class' => 'control-label required'],
