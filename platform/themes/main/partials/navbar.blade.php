@@ -8,17 +8,14 @@
         </button>
         <div class="collapse navbar-collapse align-items-end mb-lg-0 mb-3 col-lg-8 col-index-9" id="navbarToggler">
             <ul class="navbar-nav mx-auto mt-2 mt-lg-0 align-items-lg-end">
-                @if(!empty($menu_nodes[0]))
-                @foreach($menu_nodes as $key => $row)
-                <li class="nav-item">
-                    <a class="nav-link" href="{{$row->url}}"> {{$row->title}} </a>
-                </li>
-                @endforeach
+                @if(isset($menu_nodes) && count($menu_nodes) > 0)
+                    @foreach($menu_nodes as $key => $row)
+                    <li class="nav-item">
+                        <a class="nav-link {{ url()->full() === $row->url ? 'active' : '' }}" href="{{$row->url}}"> {{$row->title}} </a>
+                    </li>
+                    @endforeach
                 @endif
-                <li class="bilingual">
-                    <a class="en" href="#" title=""> EN </a>
-                    <a class="vn active" href="#" title=""> VN </a>
-                </li>
+                {!! apply_filters('language_switcher') !!}
             </ul>
         </div>
         <div class="col-lg-2 mr-auto position-relative">
@@ -28,15 +25,3 @@
         </div>
     </div>
 </nav>
-
-<script>
-   jQuery(function($) {
-        var path = window.location.href; 
-        // because the 'href' property of the DOM element is the absolute path
-        $('.navbar-nav li a').each(function() {
-            if (this.href === path) {
-            $(this).addClass('active');
-            }
-        });
-    });
-</script>
