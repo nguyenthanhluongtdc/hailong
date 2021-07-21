@@ -56,7 +56,7 @@
                     <h2 class="theme-customize-header-section__header__title"> {!!has_field($page, 'title_module_aboutus') ? get_field($page, 'title_module_aboutus') : ""!!} </h2>
                     {!! has_field($page, 'description_module_aboutus') ? get_field($page, 'description_module_aboutus') : "" !!}
                 <div class="section-aboutus__line__btn">
-                    <a class="btn-read-more" href="{{route('public.single').get_slug_introduce_by_template('introduce')}}" title="{{ __("Read more") }}">
+                    <a class="btn-read-more" href="#" title="{{ __("Read more") }}">
                         {{ __("Read more") }}
                     </a>
                 </div>
