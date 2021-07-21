@@ -25,7 +25,7 @@
                                         <p>
                                             Nơi cấp: Sở Kế Hoạch & Đầu Tư Tp.Hà Nội
                                         </p>
-                                        <div class="pt-4 row footer__col__list__icon">
+                                        <div class="pt-4 pb-4 row footer__col__list__icon">
                                             <div class="col-3"> 
                                                 <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image4.jpg')}}" alt="" /> 
                                             </div>
