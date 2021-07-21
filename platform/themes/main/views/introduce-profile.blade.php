@@ -1,5 +1,5 @@
 <div id="introduce-profile-page">
-    @includeIf("theme.main::views.components.tabs-banner",['page'=>$page])
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-tabs'])
 
     <div class="section-intro-wrapper _fsx20r16">
         <div class="container-customize">
@@ -112,7 +112,7 @@
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
-                        <a class="btn-read-more" href="#" title="Read more"> Xem thêm </a>
+                        <a class="btn-read-more" href="#" title="{!! __("Read more") !!}"> {!! __("Read more") !!} </a>
                     </p>
                 </div>
 

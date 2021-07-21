@@ -1,6 +1,5 @@
 <div id="teachnological-line-page">
-    @includeIf("theme.main::views.components.tabs-banner",['page'=>$page])
-
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-tabs'])
     <div class="section-intro-wrapper _fsx20r16">
         <div class="container-customize">
             <p class="my-5">
@@ -40,7 +39,9 @@
                                     Đồng thời theo dõi và cập nhật sản lượng cũng như vật tư giúp thực
                                     hiện kế hoạch sản xuất chính xác và hiệu suất cao. </p>
                             </div>
-                            <button class="btn-read-more bg-white" data-toggle="modal" data-target="#exampleModalCenter" href="#" title="Chi tiết"> Chi tiết </button>
+                            <button class="btn-read-more bg-white" data-toggle="modal" data-target="#exampleModalCenter" href="#" title="{!! __('Details') !!}"> 
+                                {!! __('Details') !!} 
+                            </button>
                         </div>
 
                         <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
@@ -62,7 +63,9 @@
                                     lực, kính dán keo, kính hộp hoặc đóng gói giao cho khách hàng.
                                 </p>
                             </div>
-                            <button class="btn-read-more bg-white" href="#" data-toggle="modal" data-target="#exampleModalCenter" title="Chi tiết"> Chi tiết </button>
+                            <button class="btn-read-more bg-white" href="#" data-toggle="modal" data-target="#exampleModalCenter" title="{!! __('Details') !!}">
+                                {!! __('Details') !!}
+                            </button>
                         </div>
 
                         <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
@@ -82,7 +85,9 @@
                                     xác tối đa trong quá trình uốn. Hệ thống giả lưu trữ cho phép chứa
                                     một số lượng lớn các thanh profile. </p>
                             </div>
-                            <button class="btn-read-more bg-white" href="#" data-toggle="modal" data-target="#exampleModalCenter" title="Chi tiết"> Chi tiết </button>
+                            <button class="btn-read-more bg-white" href="#" data-toggle="modal" data-target="#exampleModalCenter" title="{!! __('Details') !!}">
+                            {!! __('Details') !!}
+                            </button>
                         </div>
 
                         <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
@@ -96,7 +101,7 @@
 
     <!--css in file common.scss----->
     <div class="container-customize mt-4">
-        <div class="box-common-statistics-wrapper mt-n3">
+        <div class="box-common-statistics-wrapper distance-below mt-n3">
             <div class="box-common-statistics">
                 @if(has_field($page, 'stats_module_dccn'))
                 @foreach(has_field($page, 'stats_module_dccn') as $row)

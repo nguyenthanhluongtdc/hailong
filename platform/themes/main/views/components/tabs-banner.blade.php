@@ -4,19 +4,20 @@
         <div class="section-banner">
             <div class="theme-customize-header-section__header">
                 <h1 class="theme-customize-header-section__header__title">
-                    Tiên phong sản xuất <br>
-                    Kính an toàn hàng đầu việt nam
+                    @if(isset($title)) {!! __("$title") !!} @endif
                 </h1>
             </div>
             <div class="theme-customize-header-section__tabs">
                 <ul class="theme-customize-header-section__tabs__list mb-0">
-                    {!!
-                        Menu::renderMenuLocation('introduce-tabs', [
-                            'options' => [],
-                            'theme'   => true,
-                            'view' => 'introduce-tabs',
-                        ])
-                    !!}
+                    @if(isset($menu) && !empty($menu))
+                        {!!
+                            Menu::renderMenuLocation($menu, [
+                                'options' => [],
+                                'theme'   => true,
+                                'view' => 'introduce-tabs',
+                            ])
+                        !!}
+                    @endif
                 </ul>
             </div>
         </div>

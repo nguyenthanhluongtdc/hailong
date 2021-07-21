@@ -1,37 +1,25 @@
 <div id="projects-page">
     <div class="section-banner-wrapper">
-        <div class="section-breadcrumb">
-            <div class="container-customize">
-                <ul class="section-breadcrumb__list pt-4">
-                    <li class="__breadcrumb__item">
-                        <a class="__breadcrumb__link" href="/" title="Trang chu"> Trang chủ </a> 
-                    </li>
-                    <li class="__breadcrumb__item active">
-                        Dự án
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
+        @includeIf("theme.main::views.components.breadcrumb")
         <div class="container-customize">
             <div class="section-banner">
                 <div class="theme-customize-header-section__header">
                     <h1 class="theme-customize-header-section__header__title">
-                        Kính An Toàn, Thẩm Mỹ <br>
-                        Nâng Tầm Ngôi Nhà Việt
+                        {!! __('Title Project') !!}
                     </h1>
                 </div>
-
                 <div class="theme-customize-header-section__tabs">
-                    <ul class=" nav nav-tabs theme-customize-header-section__tabs__list mb-0" id="tab-project" role="tablist">
-                        <li class="__tabs__item mr-5" role="project">
-                            <a class="__tabs__link nav-link active" id="project-home-tab" data-toggle="tab" role="tab" aria-controls="tab-all" aria-selected="true" href="#tab-all" title="Tất Cả"> Tất Cả </a>
+                    <ul class="theme-customize-header-section__tabs__list mb-0">
+                        <li class="__tabs__item  ">
+                            <a class="__tabs__link" href="http://localhost:8001/dan-dung" target="_self" title="Dân dụng">
+                                Tất cả
+                            </a>
                         </li>
                         {!!
                             Menu::renderMenuLocation('project-categories-menu', [
                                 'options' => [],
                                 'theme'   => true,
-                                'view' => 'project-tabs',
+                                'view' => 'introduce-tabs',
                             ])
                         !!}
                     </ul>
@@ -39,6 +27,7 @@
             </div>
         </div>
     </div>
+    
     <div class="project-wrapper">
         <div class="container-customize">
             <div class="project-wrapper-section">
@@ -163,136 +152,6 @@
                                 </div>
                             </div>
 
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab0" role="tabpanel" aria-labelledby="tab0-tab">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
-                                <div class="project">
-                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
-                                        <img width="550" height="400" class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}"alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">
-                                        <div class="project__title">
-                                            <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
-                                        </div>
-                                        <div class="project__content __text-18">
-                                            <p>Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
-                                <div class="project">
-                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
-                                        <img width="550" height="400" class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}"alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">
-                                        <div class="project__title">
-                                            <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
-                                        </div>
-                                        <div class="project__content __text-18">
-                                            <p>Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
-                                <div class="project">
-                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
-                                        <img width="550" height="400" class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}"alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">
-                                        <div class="project__title">
-                                            <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
-                                        </div>
-                                        <div class="project__content __text-18">
-                                            <p>Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
-                                <div class="project">
-                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
-                                        <img width="550" height="400" class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}"alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">
-                                        <div class="project__title">
-                                            <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
-                                        </div>
-                                        <div class="project__content __text-18">
-                                            <p>Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
-                                <div class="project">
-                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
-                                        <img width="550" height="400" class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}"alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">
-                                        <div class="project__title">
-                                            <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
-                                        </div>
-                                        <div class="project__content __text-18">
-                                            <p>Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
-                                <div class="project">
-                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
-                                        <img width="550" height="400" class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}"alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">
-                                        <div class="project__title">
-                                            <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
-                                        </div>
-                                        <div class="project__content __text-18">
-                                            <p>Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
-                                <div class="project">
-                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
-                                        <img width="550" height="400" class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}"alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">
-                                        <div class="project__title">
-                                            <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
-                                        </div>
-                                        <div class="project__content __text-18">
-                                            <p>Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
-                                <div class="project">
-                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
-                                        <img width="550" height="400" class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}"alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">
-                                        <div class="project__title">
-                                            <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
-                                        </div>
-                                        <div class="project__content __text-18">
-                                            <p>Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
-                                <div class="project">
-                                    <a href="/projects-detail" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
-                                        <img width="550" height="400" class="" src="{{Theme::asset()->url('images/project/da-9.jpg')}}"alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">
-                                        <div class="project__title">
-                                            <h4 class="__text-20">The Berry Luxury - Landmark 81 Apartment, TP. Hồ Chí Minh</h4>
-                                        </div>
-                                        <div class="project__content __text-18">
-                                            <p>Dự kiến từ đầu năm sau, sàn thương mại điện tử phải kết nối thông tin với cơ quan thuế theo chuẩn dữ liệu bằng phương thức điện tử. </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

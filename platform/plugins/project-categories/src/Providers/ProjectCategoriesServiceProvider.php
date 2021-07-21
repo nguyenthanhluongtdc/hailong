@@ -53,6 +53,7 @@ class ProjectCategoriesServiceProvider extends ServiceProvider
 
         $this->app->register(HookServiceProvider::class);
 
-        \SlugHelper::registerModule(ProjectCategories::class);
+        \SlugHelper::registerModule(ProjectCategories::class, 'Project Categories');
+        SlugHelper::setPrefix(ProjectCategories::class, 'du-an');
     }
 }

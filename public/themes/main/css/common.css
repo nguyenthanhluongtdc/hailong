@@ -10251,9 +10251,6 @@ img {
   height: auto;
 }
 
-.box-common-typeicalproject-carousel-wrapper {
-  border-bottom: 2px solid #f3f3f3;
-}
 .box-common-typeicalproject-carousel-wrapper .box-common-typeicalproject-carousel {
   padding-bottom: 6rem;
 }
@@ -10999,6 +10996,7 @@ header .box-sub {
 *************** Responsive
 ****/
 footer {
+  border-top: 1px solid #f3f3f3;
   font-size: 0.833334rem;
 }
 footer .footer-wrapper .footer__top {

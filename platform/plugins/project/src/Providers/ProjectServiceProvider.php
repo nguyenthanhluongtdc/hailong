@@ -59,5 +59,6 @@ class ProjectServiceProvider extends ServiceProvider
         });
 
         \SlugHelper::registerModule(Project::class);
+        \Gallery::registerModule([Project::class]);
     }
 }

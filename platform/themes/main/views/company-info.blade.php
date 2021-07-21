@@ -1,5 +1,5 @@
 <div id="company-info-page">
-    @includeIf("theme.main::views.components.tabs-banner",['page'=>$page])
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-tabs'])
 
     <!--css in file common.scss----->
     <div class="box-common-intro-wrapper mt-5">
@@ -112,7 +112,9 @@
                                             </div>
                                         </div>
                                         @endforeach
-                                        <a class="btn-read-more tabs small" href="#" title="Read more"> Xem thêm </a>
+                                        <a class="btn-read-more tabs small" href="#" title="{!! __("Read more") !!}">
+                                            {!! __("Read more") !!}
+                                        </a>
                                     </div>
                                     @endforeach
                                     @endif
