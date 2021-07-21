@@ -48,18 +48,18 @@
 </div>
 
 <script>
-    var btn = $('#backtop');
+    var btnBackTop = $('#backtop');
     var btnZalo = $('.sub-zalo');
 
     $(window).scroll(function() {
         if ($(window).scrollTop() > 300) {
-            btn.addClass('show');
+            btnBackTop.addClass('show');
         } else {
-            btn.removeClass('show');
+            btnBackTop.removeClass('show');
         }
     });
 
-    btn.on('click', function(e) {
+    btnBackTop.on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: 0
@@ -70,8 +70,16 @@
         $('.zalocode').show('slow');
         
         $('.icon-close').click(function(){
-           $('.zalocode').hide();
+           $('.zalocode').hide('slow');
         })
+
+        $("body").click(function(){
+            $(".zalocode").hide('slow')
+        });
+
+        $(".zalocode").click(function(e){
+            e.stopPropagation();
+        });
     })
 
 </script>
