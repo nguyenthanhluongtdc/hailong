@@ -38,9 +38,9 @@
 
                         {{-- Next Page Link --}}
                         @if ($posts->hasMorePages())
-                            <li class="page-item"><a href="{{ $posts->nextPageUrl() }}" rel="next" class="page-link">»</a></li>
+                            <li class="page-item"><a href="{{ $posts->nextPageUrl() }}" rel="next" class="page-link">Trang Sau</a></li>
                         @else
-                            <li class="page-item disabled"><span class="page-link">»</span></li>
+                            <li class="page-item disabled"><span class="page-link">Trang Sau</span></li>
                         @endif
                     </ul>
                 @endif 
