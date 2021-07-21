@@ -5,6 +5,7 @@ namespace Platform\ProjectCategories\Models;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
+use Platform\Project\Models\Project;
 
 class ProjectCategories extends BaseModel
 {
@@ -33,4 +34,12 @@ class ProjectCategories extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
+
+    /**
+     * @return BelongsToMany
+     */
+    public function projects(): BelongsToMany
+    {
+        return $this->belongsToMany(Project::class, 'project_categories')->with('slugable');
+    }
 }

@@ -5,4 +5,9 @@ return [
     'construction' => 'Construction',
     'create' => 'New project',
     'edit'   => 'Edit project',
+    'form'   => [
+        'categories' => 'Categories',
+        'image' => 'Images',
+        'content' => 'Content',
+    ]
 ];

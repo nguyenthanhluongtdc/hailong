@@ -57,5 +57,7 @@ class ProjectServiceProvider extends ServiceProvider
                 'permissions' => ['project.index'],
             ]);
         });
+
+        \SlugHelper::registerModule(Project::class);
     }
 }

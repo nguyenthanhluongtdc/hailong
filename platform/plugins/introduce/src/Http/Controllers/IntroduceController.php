@@ -167,6 +167,7 @@ class IntroduceController extends BaseController
 
     public function getIntroduce() {
         //dd(Route::getFacadeRoot()->current()->uri());
+      
        $key = get_slug_introduce_by_template('introduce');
 
        if(empty($key)) {

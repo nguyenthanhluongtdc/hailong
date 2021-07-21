@@ -14,7 +14,6 @@ Route::group(['namespace' => 'Platform\Introduce\Http\Controllers', 'middleware'
         });
     });
 
-
     Route::get(get_slug_introduce_by_template('introduce'),'IntroduceController@getIntroduce');
     Route::get(get_slug_introduce_by_template('company-info'),'IntroduceController@getCompanyInfo');
     Route::get(get_slug_introduce_by_template('teachnological-line'),'IntroduceController@getTeachnologicalLine');
