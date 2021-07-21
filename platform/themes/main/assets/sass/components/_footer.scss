@@ -1,22 +1,16 @@
 footer {
     font-size: $font-size15;
     .footer-wrapper {
-       .footer {
+        .footer {
             &__top {
                 padding-top: $size3_75;
                 padding-bottom: $size3_75;
-
                 .footer__col {
-                    &__title {
-                        
-                    }
-
+                    &__title {}
                     &__list {
                         list-style: none;
                         padding-left: 0;
-
                         li {
-
                             a {
                                 text-decoration: none;
                                 color: $textNight;
@@ -24,33 +18,28 @@ footer {
                             margin-bottom: $size0_625;
                         }
                     }
-
                     &__list--icon {
                         .__item__icon {
                             display: inline-block;
                             width: 30px;
                             height: 30px;
                             margin-right: 10px;
-
                             img {
                                 max-width: 100%;
                                 height: auto;
                             }
                         }
                     }
-
                     &__list__icon {
-                        border-top: 2px solid $borderf3f3f3;
-                        border-bottom: 2px solid $borderf3f3f3;
+                        border-top: 1px solid $borderf3f3f3;
+                        border-bottom: 1px solid $borderf3f3f3;
                         padding: $size1 0;
                         img {
                             height: 60px;
                             width: auto;
-
                             @media(max-width: 1600px) {
                                 height: 50px;
                             }
-
                             @media(max-width: 992px) {
                                 height: 30px;
                             }
@@ -58,12 +47,11 @@ footer {
                     }
                 }
             }
-
             &__bottom {
                 p {
                     text-align: center;
                 }
             }
-       }
+        }
     }
 }
