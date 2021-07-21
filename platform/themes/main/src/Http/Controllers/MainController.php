@@ -97,8 +97,8 @@ class MainController extends PublicController
         }
 
         event(new RenderingSingleEvent($slug));
-        Theme::layout('default');
 
+        Theme::layout('default');
 
         if (!empty($result) && is_array($result)) {
             return Theme::scope(isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', ''), $result['data'], Arr::get($result, 'default_view'))->render();

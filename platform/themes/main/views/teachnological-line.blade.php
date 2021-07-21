@@ -1,5 +1,5 @@
 <div id="teachnological-line-page">
-    @includeIf("theme.main::views.components.tabs-banner",['introduces'=>$introduces, 'page'=>$page])
+    @includeIf("theme.main::views.components.tabs-banner",['page'=>$page])
 
     <div class="section-intro-wrapper _fsx20r16">
         <div class="container-customize">

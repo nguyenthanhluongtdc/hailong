@@ -11,15 +11,13 @@
 
                 <div class="theme-customize-header-section__tabs">
                     <ul class="theme-customize-header-section__tabs__list mb-0">
-                        @if(!empty($introduces)) 
-                            @foreach($introduces as $introduce)
-                                <li class="__tabs__item {{$introduce->id == $page->id ? 'active':''}}">
-                                    <a class="__tabs__link" href="{{$introduce->url}}" title="Tổng quan Hailong Glass"> 
-                                        {{$introduce->name}}
-                                    </a>
-                                </li>
-                            @endforeach
-                        @endif
+                        {!!
+                            Menu::renderMenuLocation('introduce-tabs', [
+                                'options' => [],
+                                'theme'   => true,
+                                'view' => 'introduce-tabs',
+                            ])
+                        !!}
                     </ul>
                 </div>
             </div>

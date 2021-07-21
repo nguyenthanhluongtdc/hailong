@@ -24,4 +24,5 @@ register_sidebar([
     'description' => 'This is a sample sidebar for main theme',
 ]);
 
+Menu::addMenuLocation('introduce-tabs', 'Danh sách tabs giới thiệu');
 RvMedia::setUploadPathAndURLToPublic();
