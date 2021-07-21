@@ -1,3 +1,5 @@
+import Page from "./page/home";
 
-//import page index
-import home from './page/home';
+$(document).ready(function() {
+    Page.default();
+});
