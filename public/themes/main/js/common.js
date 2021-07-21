@@ -13,6 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 
 $(document).ready(function () {
   _page_home__WEBPACK_IMPORTED_MODULE_0__.default.default();
+  _page_home__WEBPACK_IMPORTED_MODULE_0__.default.initMap();
 });
 
 /***/ }),

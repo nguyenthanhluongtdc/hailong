@@ -1,5 +1,5 @@
 <div id="company-info-page">
-    @includeIf("theme.main::views.components.tabs-banner",['introduces'=>$introduces, 'page'=>$page])
+    @includeIf("theme.main::views.components.tabs-banner",['page'=>$page])
 
     <!--css in file common.scss----->
     <div class="box-common-intro-wrapper mt-5">

@@ -25,20 +25,15 @@
                 <div class="theme-customize-header-section__tabs">
                     <ul class=" nav nav-tabs theme-customize-header-section__tabs__list mb-0" id="tab-project" role="tablist">
                         <li class="__tabs__item mr-5" role="project">
-                            <a class="__tabs__link nav-link active" id="project-home-tab" data-toggle="tab" role="tab" aria-controls="all-project" aria-selected="true" href="#all-project" title="Tất Cả"> Tất Cả </a>
+                            <a class="__tabs__link nav-link active" id="project-home-tab" data-toggle="tab" role="tab" aria-controls="tab-all" aria-selected="true" href="#tab-all" title="Tất Cả"> Tất Cả </a>
                         </li>
-
-                        <li class="__tabs__item  mr-5" role="project">
-                            <a class="__tabs__link nav-link" id="project-villa-tab" data-toggle="tab" role="tab" aria-controls="villa" aria-selected="false" href="#villa" title="Biệt Thự">Biệt Thự </a>
-                        </li>
-
-                        <li class="__tabs__item  mr-5" role="project">
-                            <a class="__tabs__link nav-link" id="project-building-tab" data-toggle="tab" role="tab" aria-controls="building" aria-selected="false" href="#building" title="Tòa Nhà">Tòa Nhà </a>
-                        </li>
-
-                        <li class="__tabs__item" role="project">
-                            <a class="__tabs__link nav-link" id="project-civil-tab" data-toggle="tab" role="tab" aria-controls="civil" aria-selected="false" href="#civil" title="Dân Dụng">Dân Dụng</a>
-                        </li>
+                        {!!
+                            Menu::renderMenuLocation('project-categories-menu', [
+                                'options' => [],
+                                'theme'   => true,
+                                'view' => 'project-tabs',
+                            ])
+                        !!}
                     </ul>
                 </div>
             </div>
@@ -48,7 +43,7 @@
         <div class="container-customize">
             <div class="project-wrapper-section">
                 <div class="tab-content" id="Tab-project">
-                    <div class="tab-pane fade show active" id="all-project" role="tabpanel" aria-labelledby="all-project-tab">
+                    <div class="tab-pane fade show active" id="tab-all" role="tabpanel" aria-labelledby="tab-all-tab">
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
@@ -170,7 +165,7 @@
 
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="villa" role="tabpanel" aria-labelledby="villa-tab">
+                    <div class="tab-pane fade" id="tab0" role="tabpanel" aria-labelledby="tab0-tab">
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
@@ -214,7 +209,7 @@
 
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="building" role="tabpanel" aria-labelledby="building-tab">
+                    <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
@@ -257,7 +252,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="civil" role="tabpanel" aria-labelledby="civil-tab">
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
                                 <div class="project">
@@ -304,8 +299,6 @@
             </div>
             @includeIf("theme.main::views.components.pagination")
         </div>
-       
-
     </div>
 
     @includeIf("theme.main::views.components.form-signup")

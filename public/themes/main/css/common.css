@@ -10813,6 +10813,9 @@ img {
 .form-sign-up-wrapper {
   background-color: #08964a;
 }
+.form-sign-up-wrapper .newsletter_title {
+  padding: 1rem;
+}
 .form-sign-up-wrapper .newsletter_title h3 {
   font-size: 1.1111111111rem;
   margin-left: 1.6667rem;
@@ -10820,6 +10823,9 @@ img {
   margin-bottom: unset;
   font-family: "iCiel-SamsungSharpSans-Bold_SMCPS";
   color: white;
+}
+.form-sign-up-wrapper .newsletter_text {
+  border-right: 3px solid #119A51;
 }
 .form-sign-up-wrapper .newsletter_text p {
   margin-bottom: 0;
@@ -11021,8 +11027,8 @@ footer .footer-wrapper .footer__top .footer__col__list--icon .__item__icon img {
   height: auto;
 }
 footer .footer-wrapper .footer__top .footer__col__list__icon {
-  border-top: 2px solid #f3f3f3;
-  border-bottom: 2px solid #f3f3f3;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
   padding: 1rem 0;
 }
 footer .footer-wrapper .footer__top .footer__col__list__icon img {

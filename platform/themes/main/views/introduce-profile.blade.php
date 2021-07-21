@@ -1,99 +1,106 @@
+<div id="introduce-profile-page">
+    @includeIf("theme.main::views.components.tabs-banner",['page'=>$page])
 
-<div id="introduce-overview-page">
+    <div class="section-intro-wrapper _fsx20r16">
+        <div class="container-customize">
+            <p class="my-5">
+                {!! get_field($page, 'description_module_introductory_profile') !!}
+            </p>
+        </div>
 
-   @includeIf("theme.main::views.components.tabs-banner",['introduces'=>$introduces, 'page'=>$page])
-
-    <div class="box-common-intro-wrapper mt-5 ">
-        <div class="container-customize pr-md-0">
-            <div class="box-common-intro theme-customize-header-section">
-                <div class="row">
-                    <div class="col-md-6 col-12">
-                        <div class="box-common-intro__content _fsx20r16">
-                            <div class="theme-customize-header-section__header pt-0">
-                                <h2 class="theme-customize-header-section__header__title">
-                                    {{has_field($page, 'title_module_introductory')}}
-                                </h2>
-                            </div>
-
-                           {!!has_field($page, 'content_module_introductory')!!}
-
-                           <div class="line-border mt-md-4 mt-3"> </div>
-
-                            <p class="title-underline">
-                                    <strong> {!!has_field($page, 'description_module_introductory')!!} </strong>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-12">
-                        <div class="box-common-intro__picture video">
-                            <img width="850" height="350" src="{{rvMedia::getImageUrl(has_field($page, 'video_module_introductory'))}}" alt="video-box" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="section-intro__picture">
+            <img class="mw-100" width="1900" height="500" src="{{rvMedia::getImageUrl(get_field($page, 'image_module_introductory_profile'))}}" alt="ảnh banner" />
         </div>
     </div>
 
-    <!----css in file common.scss----->
-    <div class="box-common-many-col-wrapper">
+    <!--css in file common.scss----->
+    <div class="box-common-producecapacity-wrapper bg-white">
         <div class="container-customize">
-            <div class="box-common-many-col theme-customize-header-section">
+            <div class="box-common-producecapacity distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header">
                     <h2 class="theme-customize-header-section__header__title">
-                        {{has_field($page, 'title_module_value')}}
+                        {!! has_field($page, 'title_module_nlsx_profile') !!}
                     </h2>
                 </div>
-
-                <ul class="box-common-many-col__list mb-0 _fsx20r16">
-                @if(has_field($page, 'col_module_value'))
-                    @foreach(has_field($page, 'col_module_value') as $row)
-                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
-                        <b> {{has_sub_field($row, 'title')}} </b>
-                        <p class="des-children"> 
-                            {!!has_sub_field($row, 'description')!!}
-                        </p>
-                    </li>
-                    @endforeach
-                @endif
+                <ul class="box-common-producecapacity__list">
+                    @if(has_field($page, 'list_module_nlsx_profile'))
+                        @foreach(has_field($page, 'list_module_nlsx_profile') as $row)
+                            <li class="box-common-producecapacity__list__item">
+                                <b class="title-parent"> {!! get_sub_field($row, 'title') !!} </b>
+                                <p class="des-children">
+                                    {!! get_sub_field($row, 'description') !!}
+                                </p>
+                            </li>
+                        @endforeach
+                    @endif
                 </ul>
             </div>
-        </div>
-        <div class="box-common-many-col__picture">
-            <img width="1900" height="500" src="{{rvMedia::getImageUrl(has_field($page, 'image_module_value'))}}" alt="ảnh intro" />
+
+            <!--css in file common.scss----->
+            <div class="box-common-statistics-wrapper mt-n3">
+                <div class="box-common-statistics">
+                    @if(has_field($page, 'stats_module_nlsx_profile'))
+                        @foreach(has_field($page, 'stats_module_nlsx_profile') as $row)
+                            <div class="box-common-statistics__col">
+                                <div class="__col__up count">
+                                    {!! has_sub_field($row, 'number') !!}
+                                </div>
+
+                                <div class="__col__down">
+                                    {!! has_sub_field($row, 'description') !!}
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
+            <!--end css in file common.scss----->
         </div>
     </div>
+    <!--end css in file common.scss----->
 
-    <!----css in file common.scss----->
-    <div class="box-common-many-col-wrapper">
+    <div class="section-quality-standards-wrapper">
         <div class="container-customize">
-            <div class="box-common-many-col theme-customize-header-section">
-                <div class="theme-customize-header-section__header d-md-flex">
-                    <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0">
-                        {!!has_field($page, 'title_module_whychoose_introduce')!!}
+            <div class="section-quality-standards">
+                <div class="theme-customize-header-section__header">
+                    <h2 class="theme-customize-header-section__header__title">
+                        {!! has_field($page, 'title_module_tccl') !!}
                     </h2>
-                    <p class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0">
-                        {!!has_field($page, 'description_module_whychoose_introduce')!!}
+                    <p class="theme-customize-header-section__header__des mb-4">
+                        {!! has_field($page, 'description_module_tccl') !!}
                     </p>
                 </div>
 
-                <ul class="box-common-many-col__list mb-0 _fsx20r16">
-                @if(has_field($page, 'col_module_whychoose_introduce'))
-                    @foreach(has_field($page, 'col_module_whychoose_introduce') as $row)
-                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
-                        <b> {{has_sub_field($row, 'title')}} </b>
-                        <p class="des-children"> 
-                            {!!has_sub_field($row, 'description')!!}
-                        </p>
-                    </li>
-                    @endforeach
-                @endif
-                </ul>
+                <!-----css in file common.scss--->
+                <div class="box__tabs">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        @if(has_field($page, 'tabs_module_tccl'))
+                            @foreach(has_field($page, 'tabs_module_tccl') as $key => $row)
+                                <li class="nav-item box__tabs__header" role="presentation">
+                                    <button class="nav-link px-0 {{$key==0?'active':''}}" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true">
+                                        {!! has_sub_field($row, 'title_tab') !!}
+                                    </button>
+                                </li>
+                            @endforeach
+                        @endif
+                    </ul>
+
+                    <div class="tab-content box__tabs__content pl-0 _fsx20r16" id="myTabContent">
+                        @if(has_field($page, 'tabs_module_tccl'))
+                            @foreach(has_field($page, 'tabs_module_tccl') as $key => $row)
+                                <div class="tab-pane fade show {{$key==0?'active':''}} " id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
+                                    {!! has_sub_field($row, 'content_tab') !!}
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+                <!-----end css in file common.scss--->
             </div>
         </div>
     </div>
 
-    <!----css in file common.scss----->
+    <!--css in file common.scss----->
     <div class="box-common-typeicalproject-carousel-wrapper">
         <div class="container-customize">
             <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
@@ -117,12 +124,12 @@
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
                                         <a href="#" title="ảnh slider">
-                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}"  alt="ảnh slider"/>
+                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh slider"/>
                                         </a>
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
-                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
+                                            <a href="#" title="ảnh slider">
                                                 Căn hộ cao cấp The Minaton Residence
                                             </a>
                                         </h3>
@@ -131,7 +138,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <a href="#" title="Căn hộ cao cấp The Minaton Residence">
+                                        <a href="#" title="ảnh slider">
                                             <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                         </a>
                                     </div>
@@ -146,7 +153,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider"/>
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -159,7 +166,7 @@
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider"/>
+                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
                                     </div>
                                     <div class="splide__slide__content">
                                         <h3 class="splide__slide__content__title">
@@ -181,11 +188,35 @@
             </div>
         </div>
     </div>
+    <!--end css in file common.scss----->
 </div>
 
 <script>
+    var counters = $(".__col__up.count");
+    var countersQuantity = counters.length;
+    var counter = [];
+
+    for (i = 0; i < countersQuantity; i++) {
+        counter[i] = parseFloat(counters[i].innerHTML);
+    }
+
+    var count = function(start, value, id) {
+        var localStart = start;
+        setInterval(function() {
+            if (localStart < value) {
+                localStart++;
+                counters[id].innerHTML = localStart;
+            }
+        }, 4);
+    }
+
+    for (j = 0; j < countersQuantity; j++) {
+        count(0, counter[j], j);
+    }
+
 
     $(document).ready(function() {
+
         new Splide('#box-common-typeicalproject-carousel__carousel', {
             perPage: 3
             , gap: 40
@@ -199,7 +230,7 @@
                     , gap: '1rem'
                 , }
             , }
-        , }).mount();
+        }).mount();
     })
 
 </script>

@@ -51,6 +51,8 @@ class ProjectCategoriesServiceProvider extends ServiceProvider
             ]);
         });
 
+        $this->app->register(HookServiceProvider::class);
+
         \SlugHelper::registerModule(ProjectCategories::class);
     }
 }
