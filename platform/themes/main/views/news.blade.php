@@ -56,7 +56,7 @@
         <div class="container-customize">
             <div class="section-news-list">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">Tin tức khác</h2>
+                    <h2 class="theme-customize-header-section__header__title">{{ trans('other news') }}</h2>
                 </div>
                 <div class="list-news-wrapper">
                     <div class="item-row">
