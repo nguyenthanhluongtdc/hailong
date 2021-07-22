@@ -27,8 +27,8 @@
             </a>
         </button>
 
-        <button class="box__item">
-            <span class="box__item__icon"> <i class="fas fa-comment-alt-lines"></i> </span>
+        <button class="box__item" id="fb-root">
+            <span class="box__item__icon" > <i class="fas fa-comment-alt-lines"></i> </span>
 
         </button>
 
