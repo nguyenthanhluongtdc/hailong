@@ -92,5 +92,6 @@ return [
         'max_price_filter'             => 'Maximum price to filter',
         'logo_in_the_checkout_page'    => 'Logo in the checkout page (Default is the main logo)',
         'logo_in_invoices'             => 'Logo in invoices (Default is the main logo)',
+        'number_product_page_home'     => 'Product number in home page',
     ],
 ];

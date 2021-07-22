@@ -26,7 +26,7 @@ if (!function_exists('get_products')) {
      * @param array $params
      * @return mixed
      */
-    function get_products(array $params = [])
+    function get_products(array $params = [], $limit = 6)
     {
         $params = array_merge([
             'condition' => [
@@ -37,7 +37,7 @@ if (!function_exists('get_products')) {
                 'ec_products.order'      => 'ASC',
                 'ec_products.created_at' => 'DESC',
             ],
-            'take'      => null,
+            'take'      => $limit,
             'paginate'  => [
                 'per_page'      => null,
                 'current_paged' => 1,
@@ -47,7 +47,7 @@ if (!function_exists('get_products')) {
             ],
             'with'      => ['slugable'],
         ], $params);
-
+        
         return app(ProductInterface::class)->getProducts($params);
     }
 }

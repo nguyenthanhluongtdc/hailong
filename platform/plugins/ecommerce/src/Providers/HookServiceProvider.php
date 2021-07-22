@@ -211,6 +211,18 @@ class HookServiceProvider extends ServiceProvider
                         ],
                     ],
                     [
+                        'id'         => 'number_product_page_home',
+                        'type'       => 'number',
+                        'label'      => trans('plugins/ecommerce::ecommerce.theme_options.number_product_page_home'),
+                        'attributes' => [
+                            'name'    => 'number_product_page_home',
+                            'value'   => 12,
+                            'options' => [
+                                'class' => 'form-control',
+                            ],
+                        ],
+                    ],
+                    [
                         'id'         => 'logo_in_the_checkout_page',
                         'type'       => 'mediaImage',
                         'label'      => trans('plugins/ecommerce::ecommerce.theme_options.logo_in_the_checkout_page'),

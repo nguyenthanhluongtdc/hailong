@@ -68,7 +68,7 @@
         <div class="container-customize pl-md-0">
             <div class="section-ourproduct theme-customize-header-section">
                 <div class="row">
-                    @php $products = get_products(); @endphp
+                    @php $products = get_products([],theme_option('number_product_page_home')); @endphp
                     @if(isset($products) && $products->count() >= 1)
                         <div class="col-md-4 col-12 order-md-1 order-2 pr-md-0 set-height">
                             <div class="section-ourproduct__left h-100">
