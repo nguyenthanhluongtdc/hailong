@@ -5,8 +5,6 @@ namespace Platform\Page\Repositories\Eloquent;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Page\Repositories\Interfaces\PageInterface;
 use Platform\Support\Repositories\Eloquent\RepositoriesAbstract;
-use Platform\Page\Models\Page;
-use Slughelper;
 
 class PageRepository extends RepositoriesAbstract implements PageInterface
 {
@@ -87,22 +85,4 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }
-
-    public function getByTemplate($template = "")
-    {
-        $page = app(PageInterface::class)->getFirstBy(['template' => $template], ['*']);
-
-        if (\blank($page)) {
-            return '';
-        }
-
-        $slug = Slughelper::getSlug(\null, Slughelper::getPrefix(Page::class), Page::class, $page->id);
-
-        return (SlugHelper::getPrefix(Page::class) . '/' . $slug->key) ?? '';
-    }
-
-    public function getPageByTemplate($template = "") {
-        return app(PageInterface::class)->getFirstBy(['template' => $template]);
-    }
-    
 }
