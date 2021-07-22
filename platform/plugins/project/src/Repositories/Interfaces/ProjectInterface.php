@@ -6,4 +6,5 @@ use Platform\Support\Repositories\Interfaces\RepositoryInterface;
 
 interface ProjectInterface extends RepositoryInterface
 {
+    public function getByCategory($categoryId, $paginate = 12, $limit = 0);
 }
