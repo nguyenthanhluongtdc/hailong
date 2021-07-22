@@ -136,8 +136,8 @@
 {{-- <div id="fb-root"></div> --}}
 
 <!-- Your Plugin chat code class="fb-customerchat"-->
-{{-- <div id="fb-customer-chat" >
-</div> --}}
+<div id="fb-customer-chat" >
+</div>
 
 <script>
   var chatbox = document.getElementById('fb-customer-chat');
