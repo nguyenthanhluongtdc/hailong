@@ -135,8 +135,8 @@
 <!-- Messenger Plugin chat Code -->
 {{-- <div id="fb-root"></div> --}}
 
-<!-- Your Plugin chat code -->
-<div id="fb-customer-chat" class="fb-customerchat">
+<!-- Your Plugin chat code class="fb-customerchat"-->
+<div id="fb-customer-chat" >
 </div>
 
 <script>
