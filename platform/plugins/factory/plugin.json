@@ -1,0 +1,9 @@
+{
+    "name": "Factory",
+    "namespace": "Platform\\Factory\\",
+    "provider": "Platform\\Factory\\Providers\\FactoryServiceProvider",
+    "author": "N/A",
+    "url": "N/A",
+    "version": "1.0",
+    "description": "The description for module factory"
+}
