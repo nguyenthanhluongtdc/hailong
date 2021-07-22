@@ -28,7 +28,7 @@
         </button>
 
         <button class="box__item"  >
-            <span class="box__item__icon" id="fb-root" > <i class="fas fa-comment-alt-lines"></i> </span>
+            <span class="box__item__icon fb-customerchat messenger"  > <i class="fas fa-comment-alt-lines"></i> </span>
 
         </button>
 
@@ -50,13 +50,18 @@
 <script>
     var btnBackTop = $('#backtop');
     var btnZalo = $('.sub-zalo');
-
+    var btnmessenger =$('.messenger')
     $(window).scroll(function() {
         if ($(window).scrollTop() > 300) {
             btnBackTop.addClass('show');
         } else {
             btnBackTop.removeClass('show');
         }
+    });
+    btnmessenger.on('click', function(e) {
+        $(".messenger").on("click", function () {
+        FB.CustomerChat.show();
+    });
     });
 
     btnBackTop.on('click', function(e) {
@@ -83,23 +88,3 @@
     })
 
 </script>
-<script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "100787755617214");
-    chatbox.setAttribute("attribution", "biz_inbox");
-  
-    window.fbAsyncInit = function() {
-      FB.init({
-        xfbml            : true,
-        version          : 'v11.0'
-      });
-    };
-  
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
