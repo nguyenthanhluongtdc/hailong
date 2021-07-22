@@ -34,10 +34,16 @@ header {
                 margin: auto 0;
                 display: none;
                 a {
-                    padding: $size0_625;
+                    padding: $size0_625 0;
+                    width: $size3_125;
+                    text-align: center;
                     border: 1px solid $backgroundGreen;
                     color: $textNight;
                     display: inline-block;
+
+                    span {
+                        text-transform: uppercase;
+                    }
                 }
                 >a:first-child {
                     margin-right: -5px;
@@ -65,6 +71,9 @@ header {
                 margin: $size1;
                 border: 1px solid $borderf3f3f3;
                 width: max-content;
+                span{
+                    text-transform: uppercase;
+                }
                 a:not(.active) {
                     color: $textWhite;
                 }
