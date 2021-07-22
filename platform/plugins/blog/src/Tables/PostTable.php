@@ -243,7 +243,6 @@ class PostTable extends TableAbstract
      */
     public function applyFilterCondition($query, string $key, string $operator, ?string $value)
     {
-        dd('sdf');
         switch ($key) {
             case 'created_at':
                 if (!$value) {
