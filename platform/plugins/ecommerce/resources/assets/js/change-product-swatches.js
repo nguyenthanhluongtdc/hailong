@@ -44,9 +44,6 @@ class ChangeProductSwatches {
                     selectedAttributeSets++;
                 }
             });
-            // if (selectedAttributeSets === $(event.currentTarget).closest('.product-attributes').find('.attribute-swatches-wrapper').length) {
-            //     _self.getProductVariation($(event.currentTarget).closest('.product-attributes'));
-            // }
             _self.getProductVariation($(event.currentTarget).closest('.product-attributes'));
         });
     }
@@ -84,33 +81,52 @@ class ChangeProductSwatches {
             }
         });
 
-        _self.xhr = $.ajax({
-            url: $productAttributes.data('target'),
-            type: 'GET',
-            data: {
-                attributes: attributes
-            },
-            beforeSend: () => {
-                if (window.onBeforeChangeSwatches && typeof window.onBeforeChangeSwatches === 'function') {
-                    window.onBeforeChangeSwatches();
-                }
-            },
-            success: data => {
-                if (window.onChangeSwatchesSuccess && typeof window.onChangeSwatchesSuccess === 'function') {
-                    window.onChangeSwatchesSuccess(data);
-                }
-            },
-            complete: data => {
-                if (window.onChangeSwatchesComplete && typeof window.onChangeSwatchesComplete === 'function') {
-                    window.onChangeSwatchesComplete(data);
-                }
-            },
-            error: data => {
-                if (window.onChangeSwatchesError && typeof window.onChangeSwatchesError === 'function') {
-                    window.onChangeSwatchesError(data);
-                }
-            },
-        });
+        if (attributes.length) {
+            _self.xhr = $.ajax({
+                url: $productAttributes.data('target'),
+                type: 'GET',
+                data: {
+                    attributes: attributes
+                },
+                beforeSend: () => {
+                    if (window.onBeforeChangeSwatches && typeof window.onBeforeChangeSwatches === 'function') {
+                        window.onBeforeChangeSwatches(attributes);
+                    }
+                },
+                success: data => {
+                    if (window.onChangeSwatchesSuccess && typeof window.onChangeSwatchesSuccess === 'function') {
+                        window.onChangeSwatchesSuccess(data);
+                    }
+                },
+                complete: data => {
+                    if (window.onChangeSwatchesComplete && typeof window.onChangeSwatchesComplete === 'function') {
+                        window.onChangeSwatchesComplete(data);
+                    }
+                },
+                error: data => {
+                    if (window.onChangeSwatchesError && typeof window.onChangeSwatchesError === 'function') {
+                        window.onChangeSwatchesError(data);
+                    }
+                },
+            });
+        } else {
+
+            if (window.onBeforeChangeSwatches && typeof window.onBeforeChangeSwatches === 'function') {
+                window.onBeforeChangeSwatches({attributes});
+            }
+
+            if (window.onChangeSwatchesSuccess && typeof window.onChangeSwatchesSuccess === 'function') {
+                window.onChangeSwatchesSuccess(null);
+            }
+
+            if (window.onChangeSwatchesComplete && typeof window.onChangeSwatchesComplete === 'function') {
+                window.onChangeSwatchesComplete(null);
+            }
+
+            if (window.onChangeSwatchesError && typeof window.onChangeSwatchesError === 'function') {
+                window.onChangeSwatchesError(null);
+            }
+        }
     }
 }
 

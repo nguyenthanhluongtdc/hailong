@@ -19,7 +19,6 @@ return [
         'height'                  => 'Cao',
         'weight'                  => 'Cân nặng',
         'image'                   => 'Hình ảnh',
-        'label'                   => 'Nhóm sản phẩm',
         'product_type'            => [
             'title' => 'Loại sản phẩm',
         ],
@@ -58,7 +57,6 @@ return [
     'brand'                       => 'Thương hiệu',
     'cannot_delete'               => 'Product could not be deleted',
     'product_deleted'             => 'Product deleted',
-    'product_collections'         => 'Nhóm sản phẩm',
     'products'                    => 'Sản phẩm',
     'menu'                        => 'Sản phẩm',
     'control'                     => [

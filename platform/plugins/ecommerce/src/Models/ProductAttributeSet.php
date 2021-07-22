@@ -46,4 +46,17 @@ class ProductAttributeSet extends BaseModel
     {
         return $this->hasMany(ProductAttribute::class, 'attribute_set_id')->orderBy('order', 'ASC');
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        self::deleting(function (ProductAttributeSet $productAttributeSet) {
+            $attributes = ProductAttribute::where('attribute_set_id', $productAttributeSet->id)->get();
+
+            foreach ($attributes as $attribute) {
+                $attribute->delete();
+            }
+        });
+    }
 }
