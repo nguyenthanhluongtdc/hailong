@@ -119,62 +119,27 @@
                         <!-- relative -->
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <div class="splide__slide__img">
-                                        <a href="#" title="ảnh slider">
-                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="ảnh slider" />
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title">
-                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
-                                                Căn hộ cao cấp The Minaton Residence
+                                @if(get_feadture_projects( theme_option('number_typical_projects') ))
+                                    @foreach(get_feadture_projects(theme_option('number_typical_projects')) as $project)
+                                    <li class="splide__slide">
+                                        <div class="splide__slide__img">
+                                            <a href="{{$project->url}}" title="{{$project->name}}">
+                                                <img width="410" height="440" src="{{rvMedia::getImageUrl($project->images)}}" alt="ảnh slider" />
                                             </a>
-                                        </h3>
-                                        <div class="splide__slide__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide__img">
-                                        <a href="#" title="Căn hộ cao cấp The Minaton Residence">
-                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title">
-                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
-                                                Căn hộ cao cấp The Minaton Residence
-                                            </a>
-                                        </h3>
-                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="ảnh slider" />
-                                    </div>
-                                    <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title">
-                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
-                                                Căn hộ cao cấp The Minaton Residence
-                                            </a>
-                                        </h3>
-                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="ảnh slider" />
-                                    </div>
-                                    <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title">
-                                            <a href="#" title="Căn hộ cao cấp The Minaton Residence">
-                                                Căn hộ cao cấp The Minaton Residence
-                                            </a>
-                                        </h3>
-                                        <div class="splide__slide__content__des des-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
-                                    </div>
-                                </li>
+                                        </div>
+                                        <div class="splide__slide__content">
+                                            <h3 class="splide__slide__content__title">
+                                                <a href="{{$project->url}}" title="{{$project->name}}">
+                                                    {!! $project->name !!}
+                                                </a>
+                                            </h3>
+                                            <div class="splide__slide__des des-children">
+                                                {!! $project->description !!}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </div>
                     </div>

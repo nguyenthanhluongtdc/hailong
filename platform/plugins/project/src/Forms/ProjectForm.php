@@ -57,6 +57,10 @@ class ProjectForm extends FormAbstract
                     'with-short-code' => true,
                 ],
             ])
+            ->add('images', 'mediaImage', [
+                'label'      => trans('core/base::forms.image'),
+                'label_attr' => ['class' => 'control-label'],
+            ])
             ->add('categories[]', 'categoryMulti', [
                 'label'      => trans('plugins/project::project.form.categories'),
                 'label_attr' => ['class' => 'control-label required'],

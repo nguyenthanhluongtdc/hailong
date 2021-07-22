@@ -6,10 +6,11 @@ use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
 use Platform\Project\Models\Project;
+use Platform\Slug\Traits\SlugTrait;
 
 class ProjectCategories extends BaseModel
 {
-    use EnumCastable;
+    use EnumCastable, SlugTrait;
 
     /**
      * The database table used by the model.

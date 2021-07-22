@@ -1,4 +1,5 @@
 <?php
+
 use Platform\ProjectCategories\Models\ProjectCategories;
 
 
@@ -15,12 +16,16 @@ Route::group(['namespace' => 'Platform\ProjectCategories\Http\Controllers', 'mid
             ]);
         });
     });
-
-    Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function() {
-        Route::get(SlugHelper::getPrefix(ProjectCategories::class, 'projects') . '/{slug}', [
-            'uses' => 'ProjectCategoriesController@getProjectCategories',
-            'as' => 'public.projectcategories',
-        ]);
-    });
-
 });
+
+Route::group(
+    ['namespace' => 'Platform\ProjectCategories\Http\Controllers'],
+    function () {
+        Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
+            Route::get(SlugHelper::getPrefix(ProjectCategories::class, 'project-categories') . '/{slug}', [
+                'uses' => 'PublicController@getProjectsByCategory',
+                'as' => 'public.project-categories.project',
+            ]);
+        });
+    }
+);

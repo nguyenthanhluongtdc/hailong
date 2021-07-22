@@ -57,8 +57,24 @@ class ProjectServiceProvider extends ServiceProvider
                 'permissions' => ['project.index'],
             ]);
         });
-
+        
+        $this->app->register(HookServiceProvider::class);
         \SlugHelper::registerModule(Project::class);
+        \SlugHelper::setPrefix(Project::class, 'projects');
         \Gallery::registerModule([Project::class]);
+
+        $this->app->booted(function () {
+            if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
+                \CustomField::registerModule(Project::class)
+                    ->registerRule('basic', __('Your plugin name'), Project::class, function () {
+                        return $this->app->make(ProjectInterface::class)->pluck('name', 'id');
+                    })
+                    ->expandRule('other', 'Model', 'model_name', function () {
+                        return [
+                            Project::class => __('Project'),
+                        ];
+                    });
+            }
+        });
     }
 }
