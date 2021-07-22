@@ -1,7 +1,2 @@
 *
 !.gitignore
-
-public/themes/main/css/common.css
-public/themes/main/css/common.css.map
-public/themes/main/js/common.js
-#storage/framework/
