@@ -27,7 +27,7 @@
             </a>
         </button>
 
-        <button class="box__item" >
+        <button class="box__item" class="fb-customerchat">
             <span class="box__item__icon" > <i class="fas fa-comment-alt-lines"></i> </span>
 
         </button>
