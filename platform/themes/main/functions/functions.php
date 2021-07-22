@@ -1,4 +1,6 @@
 <?php
+use Platform\Slug\Repositories\Interfaces\SlugInterface;
+use Platform\Page\Models\Page;
 
 register_page_template([
     'default' => 'Default',
@@ -26,3 +28,18 @@ register_sidebar([
 
 Menu::addMenuLocation('introduce-tabs', 'Danh sách tabs giới thiệu');
 RvMedia::setUploadPathAndURLToPublic();
+
+if(!function_exists('get_page_by_reference')) {
+    function get_page_by_reference($reference_id) {
+        return app(SlugInterface::class)->getFirstBy([
+            'reference_id' => $reference_id,
+            'reference_type' => Page::class,
+        ])->key;
+    }
+}
+
+add_shortcode('typical-project', 'My block', 'Custom block for me', function() {
+    return view('theme.main::views.shortcode.typical-project')->render(); 
+});
+
+

@@ -60,7 +60,7 @@ return [
             $theme->asset()->container('header')->add('splidejs', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js');
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
             if (function_exists('shortcode')) {
-                $theme->composer(['index', 'page', 'post'], function (\Platform\Shortcode\View\View $view) {
+                $theme->composer(['index', 'page', 'post','products','introduce'], function (\Platform\Shortcode\View\View $view) {
                     $view->withShortcodes();
                 });
             }

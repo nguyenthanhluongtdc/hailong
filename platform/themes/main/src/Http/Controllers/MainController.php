@@ -43,7 +43,8 @@ class MainController extends PublicController
 
                 if ($slug) {
                     $data = (new PageService)->handleFrontRoutes($slug);
-
+                    
+                    Theme::layout('default');
                     return Theme::scope('index', $data['data'], $data['default_view'])->render();
                 }
             }

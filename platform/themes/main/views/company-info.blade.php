@@ -207,7 +207,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title w-100">Google Map <span id="lat" class="float-right"></span></h4>
+                <h4 class="modal-title w-100"> {!! __('Google map') !!} <span id="lat" class="float-right"></span></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">

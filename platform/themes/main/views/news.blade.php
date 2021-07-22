@@ -1,28 +1,6 @@
 @php $posts  =  get_all_posts();  @endphp
 <div id="news-page">
-    <div class="section-banner-wrapper">
-        <div class="section-breadcrumb ">
-            <div class="container-customize">
-                <ul class="section-breadcrumb__list pt-4">
-                    <li class="__breadcrumb__item">
-                        <a class="__breadcrumb__link" href="/" title="Trang chu"> Trang chủ </a>
-                    </li>
-                    <li class="__breadcrumb__item active">
-                        Tin tức
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="container-customize">
-            <div class="section-banner-news">
-                <div class="theme-customize-header-section__header">
-                    <h1 class="theme-customize-header-section__header__title">
-                        Tin mới
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
+    @includeIf('theme.main::views.components.tabs-banner',['title'=>__('News')])
     <div class="news-wrapper">
         <div class="container-customize">
             <div class="news-wrapper-section">
@@ -102,95 +80,8 @@
     </section>
   
     @includeIf("theme.main::views.components.form-signup")
-    <!--css in file common.scss----->
-    <div class="box-common-typeicalproject-carousel-wrapper">
-        <div class="container-customize">
-            <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
-                <div class="theme-customize-header-section__header distance-below">
-                    <h2 class="theme-customize-header-section__header__title">
-                        Dự án tiêu biểu
-                    </h2>
-                    <p class="theme-customize-header-section__header__des mb-0">
-                        <span>
-                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
-                        </span>
-                        <a class="btn-read-more" href="#" title="Read more"> Xem thêm </a>
-                    </p>
-                </div>
 
-                <div class="splide" id="box-common-typeicalproject-carousel__carousel">
-                    <div class="splide__slider">
-                        <!-- relative -->
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <div class="splide__slide__img">
-                                        <a href="#" title="ảnh slider">
-                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/pexels-photo.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title">
-                                            <a href="#" title="ảnh slider">
-                                                Căn hộ cao cấp The Minaton Residence
-                                            </a>
-                                        </h3>
-                                        <div class="splide__slide__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide__img">
-                                        <a href="#" title="ảnh slider">
-                                            <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
-                                        </a>
-                                    </div>
-                                    <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title">
-                                            <a href="#" title="ảnh slider">
-                                                Căn hộ cao cấp The Minaton Residence
-                                            </a>
-                                        </h3>
-                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/aircraft-airplane-blue-219014.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
-                                    </div>
-                                    <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title">
-                                            <a href="#" title="ảnh slider">
-                                                Căn hộ cao cấp The Minaton Residence
-                                            </a>
-                                        </h3>
-                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
-                                    </div>
-                                </li>
-                                <li class="splide__slide">
-                                    <div class="splide__slide__img">
-                                        <img width="410" height="440" src="{{Theme::asset()->url('images/home/architecture-buildings-city-373965.jpg')}}" alt="Căn hộ cao cấp The Minato Residence" />
-                                    </div>
-                                    <div class="splide__slide__content">
-                                        <h3 class="splide__slide__content__title">
-                                            <a href="#" title="ảnh slider">
-                                                Căn hộ cao cấp The Minaton Residence
-                                            </a>
-                                        </h3>
-                                        <div class="splide__slide__content__des line-children"> Thiết kế cao cấp và tinh tế tại khu vực ngoài trời troi cua </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div>
-                        <!-- extra contents -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end css in file common.scss----->
+    {!! do_shortcode('[typical-project][/typical-project]') !!}
 
 </div>
 
