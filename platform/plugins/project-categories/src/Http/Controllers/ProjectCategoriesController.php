@@ -15,6 +15,10 @@ use Platform\Base\Events\UpdatedContentEvent;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\ProjectCategories\Forms\ProjectCategoriesForm;
 use Platform\Base\Forms\FormBuilder;
+use Platform\Slug\Repositories\Interfaces\SlugInterface;
+use Platform\ProjectCategories\Models\ProjectCategories;
+use Platform\Base\Enums\BaseStatusEnum;
+use SlugHelper;
 
 class ProjectCategoriesController extends BaseController
 {
@@ -23,12 +27,18 @@ class ProjectCategoriesController extends BaseController
      */
     protected $projectCategoriesRepository;
 
+     /**
+     * @var SlugInterface
+     */
+    protected $slugRepository;
+
     /**
      * @param ProjectCategoriesInterface $projectCategoriesRepository
      */
-    public function __construct(ProjectCategoriesInterface $projectCategoriesRepository)
+    public function __construct(ProjectCategoriesInterface $projectCategoriesRepository, SlugInterface $slugRepository)
     {
         $this->projectCategoriesRepository = $projectCategoriesRepository;
+        $this->slugRepository = $slugRepository;
     }
 
     /**
@@ -154,5 +164,29 @@ class ProjectCategoriesController extends BaseController
         }
 
         return $response->setMessage(trans('core/base::notices.delete_success_message'));
+    }
+
+    public function getProjectCategories($slug, ProjectCategoriesInterface $categoryRepository) {
+
+        $slug = $this->slugRepository->getFirstBy([
+            'key' => $slug,
+            'reference_type' => ProjectCategories::class,
+            'prefix' => SlugHelper::getPrefix(ProjectCategories::class)
+        ]);
+
+        if(!$slug) {
+            abort(404);
+        }
+
+        $condition = [
+            'app_project_categories.id' => $slug->reference_id,
+            'app_project_categories.status' => BaseStatusEnum::PUBLISHED,
+        ];
+
+        $category = $categoryRepository->getFirstBy($condition);
+
+        $projects = $categoryRepository->getByCategory($category->id);
+
+        dd($projects);
     }
 }
