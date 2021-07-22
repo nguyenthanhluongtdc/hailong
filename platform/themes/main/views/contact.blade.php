@@ -30,37 +30,48 @@
                     <div class="company">
                         <div class="company__name">
                             <h4 class="__text-18">
-                                CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI HẢI LONG
+                                @if(has_field($page, 'company_name_page_content'))
+                                    {!! has_field($page, 'company_name_page_content') !!}
+                                @endif
                             </h4>
                         </div>
                         <div class="company__address">
                             <p class="__text-18 address">
-                                Tiểu khu Mỹ Lâm, Thị Trấn Phú Xuyên,
-                                Huyện Phú Xuyên, Thành phố Hà Nội
+                                @if(has_field($page, 'company_address_page_contact'))
+                                    {!! has_field($page, 'company_address_page_contact') !!}
+                                @endif
                             </p>
                         </div>
                         <div class="company__phone my-4">
-                            <span class="phone">
-                                <a title="19004696" href="tel:19004696"> 19004696</a>
-                            </span>
-                            <span class="phone">
-                                <a title="098 117 222" href="tel:098 117 222">098 117 2222</a> 
-                            </span>
-                            <span class="phone">
-                                <a title="098 37 88888" href="tel:098 37 88888">098 37 88888</a>
-                            </span>
+                            @if(has_field($page, 'list_phone_page_contact'))
+                                @foreach(has_field($page, 'list_phone_page_contact') as $row)
+                                    <span class="phone">
+                                        <a title="19004696" href="tel:19004696"> {!! has_sub_field($row, 'phone') !!} </a>
+                                    </span>
+                                @endforeach
+                            @endif
                         </div>
                         <div class="company__email">
+                            @if(has_field($page, 'list_email_page_contact'))
+                                @foreach(has_field($page, 'list_email_page_contact') as $row)
+                                    <p class="email">
+                                        <a title="vietnhat@vsg.com.vn" href="mailto:vietnhat@vsg.com.vn"> {!! has_sub_field($row, 'email') !!} </a>
+                                    </p>
+                                @endforeach
+                            @endif
                             <p class="email">
                                 <a title="vietnhat@vsg.com.vn" href="mailto:vietnhat@vsg.com.vn">vietnhat@vsg.com.vn</a>
                             </p>
-                            <p class="email">
-                                <a title="hailong@hailongglass.vn" href="mailto:hailong@hailongglass.vn">hailong@hailongglass.vn</a>
-                            </p>
                         </div>
                         <div class="company__connect">
-                            <h4 class="__text-18">Kết Nối với HẢI LONG bằng Zalo QR Code</h4>
-                            <img src="{{Theme::asset()->url('images/contact/qr-zalo.jpg')}}" alt="zalo-code" width="110" height="110">
+                            <h4 class="__text-18">
+                                @if(has_field($page, 'title_zalocode_page_contact'))
+                                    {!! has_field($page, 'title_zalocode_page_contact') !!}
+                                @endif
+                            </h4>
+                            @if(has_field($page, 'image_zalocode_page_contact'))
+                                <img src="{{rvMedia::getImageUrl(has_field($page, 'image_zalocode_page_contact'))}}" alt="zalo-code" width="110" height="110">
+                            @endif
                         </div>
                     </div>
                     
@@ -89,39 +100,41 @@
                         @endif
 
                       
-                                <h4 class="__text-20 mb-3">Quý Khách vui lòng điền chính xác thông tin</h4>
+                                <h4 class="__text-20 mb-3"> {{ __('Title Form Contact') }} </h4>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contact_name" placeholder="Họ tên" name="name" value="{{ old('name') }}">   
+                                    <input type="text" class="form-control" id="contact_name" placeholder="Họ tên" name="name" value="{{ __('Full name') }}">   
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contact_phone" placeholder="Số điện thoại" name="phone" value="{{ old('phone') }}">
+                                    <input type="text" class="form-control" id="contact_phone" placeholder="Số điện thoại" name="phone" value="{{ __('Phone number') }}">
                                 </div>
                                 
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="contact_email" placeholder="Email" name="email" value="{{ old('email') }}">
+                                    <input type="email" class="form-control" id="contact_email" placeholder="Email" name="email" value="{{ __('Email') }}">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="contact_address" placeholder="Địa chỉ" name="address" value="{{ old('address') }}">
-                                </div>
-                                 
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="subject" value="{{ old('subject') }}" id="contact_subject"
-                                        placeholder="{{ __('Tiêu đề') }}">
+                                    <input type="text" class="form-control" id="contact_address" placeholder="Địa chỉ" name="address" value="{{ __('Address') }}">
                                 </div>
                                  
                                 <div class="form-group">
-                                    <textarea name="content" id="contact_content" class="form-control" rows="5" placeholder="{{ __('Nội dung') }}">{{ old('content') }}</textarea>
+                                    <input type="text" class="form-control" name="subject" value="{{ __('Subject') }}" id="contact_subject"
+                                        placeholder="{{ __('Subject') }}">
+                                </div>
+                                 
+                                <div class="form-group">
+                                    <textarea name="content" id="contact_content" class="form-control" rows="5" placeholder="{{ __('Content') }}">{{ __('Content') }}</textarea>
                                 </div>
                             
                      
                        
                         <div class="policy custom-checkbox">
                             <label class="customcheck">
-                                <input type="checkbox" checked="checked"><a title="Chúng tôi cam kết bảo mật thông tin cá nhân" href="" class="policy__link">Chúng tôi cam kết bảo mật thông tin cá nhân</a>
+                                <input type="checkbox" checked="checked"><a title="Chúng tôi cam kết bảo mật thông tin cá nhân" href="" class="policy__link">
+                                    {{__('Commit')}}
+                                </a>
                                 <span class="checkmark"></span>
                             </label>
                             <button class="send-button" type="submit" value="SEND">
-                                Gửi
+                                {{__('Send')}}
                             </button>
 
                         </div>
@@ -133,7 +146,7 @@
         </div>
         <div class="container-customize pl-0 pr-0">
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.419858223261!2d105.91114816437334!3d20.733769903160308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135b62fc6496905%3A0xdd734a80307986cf!2zVGnhu4N1IGtodSBN4bu5IEzDom0sIHR0LiBQaMO6IFh1ecOqbiwgUGjDuiBYdXnDqm4sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1626238242925!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="{{has_field($page, 'link_map_page_contact')}}"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
          <!--css in file common.scss----->
