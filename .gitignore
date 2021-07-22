@@ -1,5 +1,6 @@
 ################ GLOBAL INGNORE ################
 ################################################
+storage
 logs/
 public/phpMyAdmin
 public/phpRedisAdmin/
