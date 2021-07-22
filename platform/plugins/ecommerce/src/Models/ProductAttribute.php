@@ -55,4 +55,13 @@ class ProductAttribute extends BaseModel
     {
         return (int)$value;
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        self::deleting(function (ProductAttribute $productAttribute) {
+            ProductVariationItem::where('attribute_id', $productAttribute->id)->delete();
+        });
+    }
 }

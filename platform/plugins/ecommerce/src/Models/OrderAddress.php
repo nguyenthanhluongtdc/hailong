@@ -5,6 +5,8 @@ namespace Platform\Ecommerce\Models;
 use Platform\Base\Models\BaseModel;
 use Platform\Base\Supports\Avatar;
 use Platform\Base\Supports\Helper;
+use Exception;
+use RvMedia;
 
 class OrderAddress extends BaseModel
 {
@@ -47,6 +49,10 @@ class OrderAddress extends BaseModel
      */
     public function getAvatarUrlAttribute()
     {
-        return (string)(new Avatar)->create($this->name)->toBase64();
+        try {
+            return (new Avatar)->create($this->name)->toBase64();
+        } catch (Exception $exception) {
+            return RvMedia::getDefaultImage();
+        }
     }
 }
