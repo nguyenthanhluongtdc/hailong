@@ -2,13 +2,15 @@
     @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-tabs'])
     <div class="section-intro-wrapper _fsx20r16">
         <div class="container-customize">
-            <p class="my-5">
-                {!! get_field($page, 'description_module_introductory_dccn') !!}
-            </p>
+            <div class="my-5">
+                {!! has_field($page, 'description_module_introductory_dccn') ? get_field($page, 'description_module_introductory_dccn') : "" !!}
+            </div>
         </div>
 
         <div class="section-intro__picture">
-            <img class="mw-100" width="1900" height="500" src="{{rvMedia::getImageUrl(get_field($page, 'image_module_introductory_dccn'))}}" alt="ảnh dây chuyền công nghệ" />
+            @if(has_field($page, 'image_module_introductory_dccn'))
+                <img class="mw-100" width="1900" height="500" src="{{rvMedia::getImageUrl(get_field($page, 'image_module_introductory_dccn'))}}" alt="ảnh dây chuyền công nghệ" />
+            @endif
         </div>
     </div>
 
@@ -17,83 +19,35 @@
             <div class="section-teachnological">
                 <div class="theme-customize-header-section__header container-customize">
                     <h2 class="theme-customize-header-section__header__title pl-0">
-                        Các dây chuyền công nghệ chính
+                        {!! has_field($page, 'tieu_detechnical_line') ? get_field($page, 'tieu_detechnical_line') : "" !!}
                     </h2>
-                    <p class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0">
-                        Về thông tin, phần này doanh nghiệp nên thể hiện một cách ngắn gọn các loại hình kinh doanh, sản phẩm hay dịch vụ mà Công ty mình cung cấp. Tránh
-                        lan man và đi quá sâu vào chi tiết từng sản phẩm vi đây là phần sẽ được hỏi kĩ hơn ở phía sau hay ở các ấn phẩm khác như Brochure hay Catalogue...
-                    </p>
+                    <div class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0">
+                        {!! has_field($page, 'mo_tatechnical_line') ? get_field($page, 'mo_tatechnical_line') : "" !!}
+                    </div>
                 </div>
 
                 <div class="section-teachnological__list _fsx20r16">
+                    @if(has_field($page, 'day_chuyentechnical_line'))
+                        @foreach (get_field($page, 'day_chuyentechnical_line') as $item)
+                            <div class="section-teachnological__row">
+                                <div class="section-teachnological__row__col order-sm-1 order-2 __content">
+                                    <div>
+                                        <h3 class="__content__title">{!! has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : "" !!}</h3>
+                                        {!! has_sub_field($item, 'mo_ta') ? get_sub_field($item, 'mo_ta') : "" !!}
+                                    </div>
+                                    <button class="btn-read-more bg-white" data-toggle="modal" data-target="#exampleModalCenter" href="#" title="{!! __('Details') !!}">
+                                        {!! __('Details') !!}
+                                    </button>
+                                </div>
 
-                    <div class="section-teachnological__row">
-                        <div class="section-teachnological__row__col order-sm-1 order-2 __content">
-                            <div>
-                                <h3 class="__content__title"> Phân xưởng kính cường lực </h3>
-                                <p> Đây là một trong những dây chuyền hiện đại bậc nhất của tập đoàn
-                                    LiSED và được vận hành tự động hoàn toàn, cho phép cất được
-                                    nhiều hình dạng sinh khác nhau. </p>
-                                <p>Nhà hệ thống phần mềm tiên tiến, quá trình sản xuất có thể kết hợp
-                                    nhiều đơn hàng trong một lần cắt và hạn chế tối đa hau phi kinh.
-                                    Đồng thời theo dõi và cập nhật sản lượng cũng như vật tư giúp thực
-                                    hiện kế hoạch sản xuất chính xác và hiệu suất cao. </p>
+                                <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
+                                    @if(has_sub_field($item, 'hinh_anh'))
+                                        <img width="640" height="360" class="w-100" src="{{get_image_url(get_sub_field($item, 'hinh_anh'))}}" alt="{{ has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : "" }}" />
+                                    @endif
+                                </div>
                             </div>
-                            <button class="btn-read-more bg-white" data-toggle="modal" data-target="#exampleModalCenter" href="#" title="{!! __('Details') !!}"> 
-                                {!! __('Details') !!} 
-                            </button>
-                        </div>
-
-                        <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
-                            <img width="640" height="360" class="w-100" src="{{Theme::asset()->url('images/teachnological/image2.jpg')}}" alt="ảnh dây chuyền công nghệ" />
-                        </div>
-                    </div>
-
-                    <div class="section-teachnological__row">
-                        <div class="section-teachnological__row__col order-sm-1 order-2 __content">
-                            <div>
-                                <h3 class="__content__title"> Phân xưởng kính cường lực </h3>
-                                <p> Dây chuyền mài cạnh, rửa và sấy kính là dây chuyền công nghệ tiên
-                                    tiến được sản xuất bởi tập đoàn LiSEC. Quá trình gia công được vận
-                                    hành tự động hóa hoàn toàn cho chất lượng tối ưu và tiết kiệm chi
-                                    phí sản xuất. Máy sử dụng dây mài kim cương, cho phép mài hai mép
-                                    của một cạnh cùng một lúc. </p>
-                                <p> Sau khi được mài cạnh, rửa và sấy khô, kinh đạt tiêu chuẩn về mặt
-                                    kết cấu cũng như quang học và được dùng để sản xuất kính cường
-                                    lực, kính dán keo, kính hộp hoặc đóng gói giao cho khách hàng.
-                                </p>
-                            </div>
-                            <button class="btn-read-more bg-white" href="#" data-toggle="modal" data-target="#exampleModalCenter" title="{!! __('Details') !!}">
-                                {!! __('Details') !!}
-                            </button>
-                        </div>
-
-                        <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
-                            <img width="640" height="360" class="w-100" src="{{Theme::asset()->url('images/teachnological/image3.jpg')}}" alt="ảnh dây chuyền công nghệ" />
-                        </div>
-                    </div>
-
-                    <div class="section-teachnological__row">
-                        <div class="section-teachnological__row__col order-sm-1 order-2 __content">
-                            <div>
-                                <h3 class="__content__title"> Phân xưởng kính cường lực </h3>
-                                <p> Máy uốn khung cho thanh profile của SADO GROUP là giải pháp hoàn
-                                    hảo nhất cho quá trình sản xuất kính hộp vì máy thực hiện uốn liên
-                                    tục với chu kỳ uốn ngắn hơn. Đầu tiên, các thanh profile sẽ được tự
-                                    động đưa vào, kết nối và cắt theo đúng chiều dài.</p>
-                                <p> Thiết bị đưa thanh profile liên tục vào hệ thống đảm bảo độ chính
-                                    xác tối đa trong quá trình uốn. Hệ thống giả lưu trữ cho phép chứa
-                                    một số lượng lớn các thanh profile. </p>
-                            </div>
-                            <button class="btn-read-more bg-white" href="#" data-toggle="modal" data-target="#exampleModalCenter" title="{!! __('Details') !!}">
-                            {!! __('Details') !!}
-                            </button>
-                        </div>
-
-                        <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
-                            <img width="640" height="360" class="w-100" src="{{Theme::asset()->url('images/teachnological/image4.jpg')}}" alt="ảnh dây chuyền công nghệ" />
-                        </div>
-                    </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>
@@ -104,17 +58,17 @@
         <div class="box-common-statistics-wrapper distance-below mt-n3">
             <div class="box-common-statistics">
                 @if(has_field($page, 'stats_module_dccn'))
-                @foreach(has_field($page, 'stats_module_dccn') as $row)
-                <div class="box-common-statistics__col">
-                    <div class="__col__up">
-                        {!! has_sub_field($row, 'number') !!}
-                    </div>
+                    @foreach(get_field($page, 'stats_module_dccn') as $row)
+                    <div class="box-common-statistics__col">
+                        <div class="__col__up">
+                            {!! has_sub_field($row, 'number') ? get_sub_field($row, 'number') : "" !!}
+                        </div>
 
-                    <div class="__col__down">
-                        {!! has_sub_field($row, 'description') !!}
+                        <div class="__col__down">
+                            {!! has_sub_field($row, 'description') ? get_sub_field($row, 'description') : "" !!}
+                        </div>
                     </div>
-                </div>
-                @endforeach
+                    @endforeach
                 @endif
             </div>
         </div>
