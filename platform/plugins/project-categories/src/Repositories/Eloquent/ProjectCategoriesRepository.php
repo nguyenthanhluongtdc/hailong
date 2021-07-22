@@ -15,14 +15,14 @@ class ProjectCategoriesRepository extends RepositoriesAbstract implements Projec
         }
 
         $data = $this->model
-            ->where('app_projects.status', BaseStatusEnum::PUBLISHED)
-            ->join('app_project_category_project', 'app_project_category_project.project_id', '=', 'app_projects.id')
-            ->join('app_project_categories', 'app_project_category_project.category_id', '=', 'app_project_categories.id')
-            ->whereIn('app_project_category_project.category_id', $categoryId)
-            ->select('app_projects.*')
-            ->distinct()
-            ->with('slugable')
-            ->orderBy('app_projects.created_at', 'desc');
+        ->where('app_projects.status', BaseStatusEnum::PUBLISHED)
+        ->join('app_project_category_project', 'app_project_category_project.project_id', '=', 'app_projects.id')
+        ->join('app_project_categories', 'app_project_categories.id', '=', 'app_project_category_project.category_id')
+        ->whereIn('app_project_category_project.category_id', $categoryId)
+        ->select('app_projects.*')
+        ->distinct()
+        ->with('slugable')
+        ->orderBy('app_projects.created_at', 'desc');
             
         if ($paginate != 0) {
             return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
