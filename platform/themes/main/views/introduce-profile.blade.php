@@ -1,5 +1,5 @@
 <div id="introduce-profile-page">
-    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-tabs'])
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-menu'])
 
     <div class="section-intro-wrapper _fsx20r16">
         <div class="container-customize">

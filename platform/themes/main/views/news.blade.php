@@ -70,8 +70,9 @@
                         {!! $posts->withQueryString()->links() !!}
                     </div> --}}
                     {{-- @includeIf("theme.main::views.components.pagination") --}}
-                    {{ $posts->onEachSide(1)->links('theme.main::views.components.pagination') }}
-                    
+                    @if(!empty($posts))
+                        @includeIf("theme.main::views.components.pagination-project",['datas'=>$posts])
+                    @endif
                    
                 </div>
               

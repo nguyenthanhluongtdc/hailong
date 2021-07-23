@@ -1,4 +1,4 @@
-@php $posts =  get_all_posts();  @endphp
+
 @if ($posts->hasPages())
 <div class="pagination-wrapper">
     <div class="row">

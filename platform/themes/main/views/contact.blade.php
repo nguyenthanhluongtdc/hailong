@@ -1,27 +1,5 @@
 <div id="contact-page">
-    <div class="section-banner-wrapper">
-        <div class="section-breadcrumb ">
-            <div class="container-customize">
-                <ul class="section-breadcrumb__list pt-4">
-                    <li class="__breadcrumb__item">
-                        <a class="__breadcrumb__link" href="/" title="Trang chu"> Trang chủ </a>
-                    </li>
-                    <li class="__breadcrumb__item active">
-                        Liên hệ
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="container-customize">
-            <div class="section-banner-contact">
-                <div class="theme-customize-header-section__header">
-                    <h1 class="theme-customize-header-section__header__title">
-                        Liên hệ chúng tôi
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
+   @includeIf('theme.main::views.components.tabs-banner',['title'=>__('Contact us')])
 
     <div class="contact-wrapper">
         <div class="container-customize">

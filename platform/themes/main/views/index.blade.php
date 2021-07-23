@@ -275,7 +275,7 @@
                     </h2>
                     <p class="theme-customize-header-section__header__des">
                         <span>
-                            Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
+                            {!! __('Description news') !!}
                         </span>
                         <a class="btn-read-more" href="{{route('public.single')."/".get_slug_by_reference(theme_option('news_id'))}}" title="Read more"> {{ __('Read more') }} </a>
                     </p>

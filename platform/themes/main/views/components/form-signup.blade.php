@@ -4,14 +4,12 @@
           
                 <div class="col-md-2 col-sm-12">
                     <div class="newsletter_title text_white">
-                        <h3>Đăng ký
-                            nhận tin</h3> 
-                        
+                        <h3> {!! __('Title newsletter') !!} </h3> 
                     </div>
                 </div> 
                 <div class="col-md-3 col-sm-12 pl-0">
                     <div class="newsletter_text text_white">
-                        <p>Đăng ký nhận tin mới, tin khuyến mãi và sản phẩm mới của Hailong Glass</p>
+                        <p> {!! __('Sign up to receive news, promotions and new products of Hailong Glass') !!} </p>
                     </div>
                 </div> 
               
@@ -20,7 +18,7 @@
                         <form method="POST" action="{{ route('public.newsletter.subscribe') }}">
                             @csrf
                             {{-- <input type="hidden" name="_token" value="">  --}}
-                            <input name="email" type="email" placeholder="Nhập email của bạn" class="form-control"> 
+                            <input name="email" type="email" placeholder="{!! __('Enter your email') !!}" class="form-control"> 
                             <button type="submit" class="btn-icon-submit">
                                 {{-- <img src="{{Theme::asset()->url('images/news/Icon zocial-email.jpg')}}" alt="">
                                  --}}
