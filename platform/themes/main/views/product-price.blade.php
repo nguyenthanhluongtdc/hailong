@@ -1,81 +1,37 @@
 <div id="product-price-page">
-    <div class="section-banner-wrapper">
-        @includeIf("theme.theme-customize::views.components.breadcrumb")
-        <div class="container-customize">
-            <div class="section-banner">
-                <div class="theme-customize-header-section__header">
-                    <h1 class="theme-customize-header-section__header__title">
-                        Nơi khởi nguồn của nền tảng <br> nông nghiệp Kính An Toàn Tại Việt Nam
-                    </h1>
-                </div>
 
-                <div class="theme-customize-header-section__tabs">
-                    <ul class="theme-customize-header-section__tabs__list mb-0">
-                        <li class="__tabs__item">
-                            <a class="__tabs__link" href="/san-pham" title="Tổng quan Hailong Glass"> Sản phẩm </a>
-                        </li>
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Product','menu'=>'products-menu'])
 
-                        <li class="__tabs__item active">
-                            <a class="__tabs__link" href="/product-price" title="Thông tin công ty"> Bảng giá </a>
-                        </li>
+    @if(isset($page))
+        <div class="box-common-intro-wrapper">
+            <div class="container-customize pr-md-0">
+                <div class="box-common-intro theme-customize-header-section _fsx20r16">
+                    <div class="row position-relative">
+                        <div
+                            class="col-md-6 col-12 order-md-2 mt-lg-5 mt-4 absolute box-common-intro__picture"
+                            style="background-image: url({{ get_image_url($page->image) }}); background-size: cover; background-repeat: no-repeat;"
+                        ></div>
+                        <div class="col-md-6 col-12 order-md-1">
+                            <div class="box-common-intro__content distance-y">
+                                <div class="theme-customize-header-section__header pt-0">
+                                    <h2 class="theme-customize-header-section__header__title">
+                                        {{ $page->description ?? "" }}
+                                    </h2>
+                                </div>
+                                {!! $page->content !!}
 
-                        <li class="__tabs__item">
-                            <a class="__tabs__link" href="/warranty-policy" title="Hồ sơ năng lực"> Chính sách bảo hành </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box-common-intro-wrapper">
-        <div class="container-customize pr-md-0">
-            <div class="box-common-intro theme-customize-header-section _fsx20r16">
-                <div class="row position-relative">
-                    <div class="col-md-6 col-12 order-md-2 mt-lg-5 mt-4 absolute box-common-intro__picture" style="background-image: url({{Theme::asset()->url('images/products/image3.jpg')}}); background-size: cover; background-repeat: no-repeat;">
-                        {{-- <div class="box-common-intro__picture h-100" > 
-                            <img width="" height="" src="{{Theme::asset()->url('images/products/image3.jpg')}}" alt="ảnh product" />
-                        </div> --}}
-                    </div>
-                    <div class="col-md-6 col-12 order-md-1">
-                        <div class="box-common-intro__content distance-y">
-                            <div class="theme-customize-header-section__header pt-0">
-                                <h2 class="theme-customize-header-section__header__title">
-                                    Báo giá sản phẩm
-                                </h2>
+                                @if(has_field($page, 'hotline_product_price'))
+                                    <a class="hotline" href="tel:{{ get_field($page, 'hotline_product_price') }}" title="{{ __("Hotline") }}">
+                                        <span> {{ __("Hotline") }}: </span> <b> {{ get_field($page, 'hotline_product_price') }} </b>
+                                    </a>
+                                @endif
                             </div>
-
-                            <p>
-                                Công ty TNHH SX & TM Hải Long thành lập ngày 30/ 05/ 2001, sau
-                                gần 20 năm xây dựng, trưởng thành và phát triển đã trở thành
-                                nhà gia công kinh hàng đầu tại Việt Nam. Thương hiệu được
-                                khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân
-                                thiện với môi trường.
-                            </p>
-
-                            <p>
-                                Các sản phẩm Kinh an toàn Hải Long đã và đang được sử dụng
-                                trong nhiều công trình trọng điểm của quốc gia, trong các công
-                                trinh lên khang trang, sang trọng, hiện đại và được đông đảo
-                                khách hàng tin dùng.Các sản phẩm Kinh an toàn Hải Long đã và đang được sử dụng
-                                trong nhiều công trình trọng điểm của quốc gia, trong các công
-                                trinh lên khang trang, sang trọng, hiện đại và được đông đảo
-                                khách hàng tin dùng.
-                            </p>
-
-                            <p>
-                                Kinh an toan. Tiet kiem nang luong. Huong toi moi truong xanh
-                            </p>
-
-                            <a class="hotline" href="#" title="Hotline">
-                                <span> Hotline: </span> <b> 0992772499 </b>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
 
     <div class="section-products-list-cate-pro-wrapper bg-f3">
         <div class="container-customize">
@@ -120,41 +76,26 @@
         <div class="container-customize">
             <div class="section-our-policy distance-y _fsx20r16">
                 <div class="row mx-lg-n5 mx-n3">
-                    <div class="col-sm-4 px-lg-5 px-3">
-                        <div class="section-our-policy__col">
-                            <div class="section-our-policy__col__icon">
-                                <i class="fad fa-truck-moving"></i>
-                            </div>
-                            <div class="section-our-policy__col__content">
-                                <h3 class="__content__title"> Miễn phí vận chuyển </h3>
-                                <p class="__content__des line__children"> trong nội thành các thành phố có văn phòng ở công ty </p>
-                            </div>
-                        </div>
-                    </div>
+                    @php
+                        $slogans = theme_option("slogan_repeater", []);
+                        if(!blank($slogans)) {
+                            $slogans = json_decode($slogans) ?? [];
+                        }
+                    @endphp
 
-                    <div class="col-sm-4 px-lg-5 px-3">
-                        <div class="section-our-policy__col">
-                            <div class="section-our-policy__col__icon">
-                               <i class="fas fa-award"></i>
-                            </div>
-                            <div class="section-our-policy__col__content">
-                                <h3 class="__content__title"> Bảo hành uy tín </h3>
-                                <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 px-lg-5 px-3">
-                        <div class="section-our-policy__col">
-                            <div class="section-our-policy__col__icon">
-                                <i class="fab fa-chrome"></i>
-                            </div>
-                            <div class="section-our-policy__col__content">
-                                <h3 class="__content__title"> Hệ thống quản lý tối ưu </h3>
-                                <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
+                    @foreach ($slogans as $item)
+                        <div class="col-sm-4 px-lg-5 px-3">
+                            <div class="section-our-policy__col">
+                                <div class="section-our-policy__col__icon">
+                                    <i class="{{ $item[0]->value ?? "" }}"></i>
+                                </div>
+                                <div class="section-our-policy__col__content">
+                                    <h3 class="__content__title">{{ $item[1]->value ?? "" }}</h3>
+                                    <p class="__content__des line__children">{{ $item[2]->value ?? "" }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

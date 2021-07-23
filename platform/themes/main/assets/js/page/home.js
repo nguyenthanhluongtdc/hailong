@@ -22,10 +22,6 @@ export default {
 
             this.initSlice();
 
-            if ($(".tab-pane.show .line__item:hidden").length == 0) {
-                $(".btn-read-more.tabs").hide();
-            }
-
             $(".btn-read-more.tabs").on("click", function(e) {
                 e.preventDefault();
 

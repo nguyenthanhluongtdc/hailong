@@ -80,7 +80,8 @@ app()->booted(function () {
                     'class' => 'form-control',
                 ],
             ],
-        ])->setField([
+        ])
+        ->setField([
             'id'         => 'products_id',
             'section_id' => 'opt-text-subsection-page',
             'type'       => 'select',
@@ -91,6 +92,64 @@ app()->booted(function () {
                 'value'   => '',
                 'options' => [
                     'class' => 'form-control',
+                ]
+            ]
+        ])
+        ->setSection([ // Set section with no field
+            'title' => __('Slogan'),
+            'desc' => __('Slogan settings'),
+            'id' => 'opt-slogan',
+            'subsection' => true,
+            'icon' => 'fa fa-home',
+        ])
+        ->setField([
+            'id'         => 'slogan_repeater',
+            'section_id' => 'opt-slogan',
+            'type'       => 'repeater',
+            'label'      => __('Repeater Slogan'),
+            'attributes' => [
+                'name'   => 'slogan_repeater',
+                'value'  => null,
+                'fields' => [
+
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Icon'),
+                        'attributes' => [
+                            'name'  => 'icon',
+                            'value' => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                        'helper' => __('Get icon in link https://fontawesome.com/v5.15/icons')
+                    ],
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Title'),
+                        'attributes' => [
+                            'name'    => 'title',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ],
+                    [
+                        'type'       => 'textarea',
+                        'label'      => __('Description'),
+                        'attributes' => [
+                            'name'    => 'description',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                                'rows'         => 3,
+                            ],
+                        ],
+                    ],
                 ],
             ],
         ]);

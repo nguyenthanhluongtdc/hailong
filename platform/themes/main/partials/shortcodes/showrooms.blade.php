@@ -33,7 +33,7 @@
 
                             <div class="tab-content box__tabs__content" id="myTabContent">
                                 @foreach($regions as $key => $region)
-                                    <div class="tab-pane fade  {{$key == 'north' ?'show active':''}}" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
+                                    <div class="tab-pane tab-showroom fade  {{$key == 'north' ?'show active':''}}" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
                                         @if(isset($tabShowrooms[$key]))
                                             @foreach($tabShowrooms[$key] as $showroom)
                                                 <div class="line__item">
@@ -50,7 +50,10 @@
                                                 </div>
                                             @endforeach
                                         @endif
-                                        {{-- <a class="btn-read-more tabs small" href="#" title="{{ __("Read more") }}"> {{ __("Read more") }} </a> --}}
+
+                                        @if($tabShowrooms[$key]->count() > 3)
+                                            <a class="btn-read-more tabs small" href="#" title="{{ __("Read more") }}"> {{ __("Read more") }} </a>
+                                        @endif
                                     </div>
                                 @endforeach
                             </div>
