@@ -66,6 +66,7 @@ app()->booted(function () {
                                 'data-counter' => 255,
                             ],
                         ],
+                        'helper' => __('Get icon in link https://fontawesome.com/v5.15/icons')
                     ],
                     [
                         'type'       => 'text',
