@@ -101,42 +101,42 @@
                             @endif
                         @endif
 
+                        {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST', 'class' => 'contact-form']) !!}
+                            <h4 class="__text-20 mb-3"> {{ __('Title Form Contact') }} </h4>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="contact_name" placeholder="{{ __('Full name') }}" name="name" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="contact_phone" placeholder="{{ __('Phone number') }}" name="phone" value="">
+                            </div>
 
-                        <h4 class="__text-20 mb-3"> {{ __('Title Form Contact') }} </h4>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="contact_name" placeholder="{{ __('Full name') }}" name="name" value="">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="contact_phone" placeholder="{{ __('Phone number') }}" name="phone" value="">
-                        </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="contact_email" placeholder="{{ __('Email') }}" name="email" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="contact_address" placeholder="{{ __('Address') }}" name="address" value="">
+                            </div>
 
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="contact_email" placeholder="{{ __('Email') }}" name="email" value="">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="contact_address" placeholder="{{ __('Address') }}" name="address" value="">
-                        </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" value="" id="contact_subject" placeholder="{{ __('Subject') }}">
+                            </div>
 
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="subject" value="" id="contact_subject" placeholder="{{ __('Subject') }}">
-                        </div>
+                            <div class="form-group">
+                                <textarea name="content" id="contact_content" class="form-control" rows="5" placeholder="{{ __('Content') }}"> </textarea>
+                            </div>
 
-                        <div class="form-group">
-                            <textarea name="content" id="contact_content" class="form-control" rows="5" placeholder="{{ __('Content') }}"> </textarea>
-                        </div>
+                            <div class="policy custom-checkbox">
+                                <label class="customcheck">
+                                    <input type="checkbox" checked="checked"><a title=" {{__('Commit')}}" href="" class="policy__link">
+                                        {{__('Commit')}}
+                                    </a>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <button class="send-button" type="submit" value="SEND">
+                                    {{__('Send')}}
+                                </button>
 
-                        <div class="policy custom-checkbox">
-                            <label class="customcheck">
-                                <input type="checkbox" checked="checked"><a title=" {{__('Commit')}}" href="" class="policy__link">
-                                    {{__('Commit')}}
-                                </a>
-                                <span class="checkmark"></span>
-                            </label>
-                            <button class="send-button" type="submit" value="SEND">
-                                {{__('Send')}}
-                            </button>
-
-                        </div>
+                            </div>
                         {!! Form::close() !!}
 
                     </div>

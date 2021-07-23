@@ -17,8 +17,9 @@
               
                 <div class="col-md-4 col-sm-6">
                     <div class="newsletter_form">
-                        <form method="post" action="">
-                            <input type="hidden" name="_token" value=""> 
+                        <form method="POST" action="{{ route('public.newsletter.subscribe') }}">
+                            @csrf
+                            {{-- <input type="hidden" name="_token" value="">  --}}
                             <input name="email" type="email" placeholder="Nhập email của bạn" class="form-control"> 
                             <button type="submit" class="btn-icon-submit">
                                 {{-- <img src="{{Theme::asset()->url('images/news/Icon zocial-email.jpg')}}" alt="">

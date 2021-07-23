@@ -31,10 +31,15 @@ RvMedia::setUploadPathAndURLToPublic();
 
 if(!function_exists('get_page_by_reference')) {
     function get_page_by_reference($reference_id) {
-        return app(SlugInterface::class)->getFirstBy([
+        $slug =  app(SlugInterface::class)->getFirstBy([
             'reference_id' => $reference_id,
             'reference_type' => Page::class,
-        ])->key;
+        ]);
+
+        if(!$slug) {
+            return "";
+        }
+        return $slug->key;
     }
 }
 

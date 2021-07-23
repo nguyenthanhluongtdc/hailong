@@ -1,6 +1,10 @@
 <?php
-
+use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Page\Repositories\Interfaces\PageInterface;
 app()->booted(function () {
+    $pages = app(PageInterface::class)
+    ->pluck('name', 'id', ['status' => BaseStatusEnum::PUBLISHED]);
+
     theme_option()
         ->setField([
             'id'         => 'copyright',
@@ -36,6 +40,45 @@ app()->booted(function () {
             'attributes' => [
                 'name'  => 'primary_color',
                 'value' => '#ff2b4a',
+            ],
+        ])->setField([
+            'id'         => 'aboutus_id',
+            'section_id' => 'opt-text-subsection-page',
+            'type'       => 'select',
+            'label'      => __('link about us page on home page'),
+            'attributes' => [
+                'name'  => 'aboutus_id',
+                'list'    => ['' => trans('packages/page::pages.settings.select')] + $pages,
+                'value'   => '',
+                'options' => [
+                    'class' => 'form-control',
+                ],
+            ],
+        ])->setField([
+            'id'         => 'project_id',
+            'section_id' => 'opt-text-subsection-page',
+            'type'       => 'select',
+            'label'      => __('link project page on home page'),
+            'attributes' => [
+                'name'  => 'project_id',
+                'list'    => ['' => trans('packages/page::pages.settings.select')] + $pages,
+                'value'   => '',
+                'options' => [
+                    'class' => 'form-control',
+                ],
+            ],
+        ])->setField([
+            'id'         => 'news_id',
+            'section_id' => 'opt-text-subsection-page',
+            'type'       => 'select',
+            'label'      => __('link news page on home page'),
+            'attributes' => [
+                'name'  => 'news_id',
+                'list'    => ['' => trans('packages/page::pages.settings.select')] + $pages,
+                'value'   => '',
+                'options' => [
+                    'class' => 'form-control',
+                ],
             ],
         ]);
 });
