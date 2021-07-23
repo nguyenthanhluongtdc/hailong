@@ -41,7 +41,7 @@
                             <div class="box-common-intro__content distance-y">
                                 <div class="theme-customize-header-section__header pt-0">
                                     <h2 class="theme-customize-header-section__header__title">
-                                        {{ $page->name ?? "" }}
+                                        {{ $page->description ?? "" }}
                                     </h2>
                                 </div>
                                 {!! $page->content !!}
