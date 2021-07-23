@@ -10,6 +10,7 @@ use Platform\Table\Abstracts\TableAbstract;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Yajra\DataTables\DataTables;
 use Html;
+use Illuminate\Support\Arr;
 
 class ShowroomTable extends TableAbstract
 {
@@ -54,6 +55,9 @@ class ShowroomTable extends TableAbstract
                     return $item->name;
                 }
                 return Html::link(route('showroom.edit', $item->id), $item->name);
+            })
+            ->editColumn('region', function ($item) {
+                return Arr::get(get_regions(), $item->region) ?? "";
             })
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);

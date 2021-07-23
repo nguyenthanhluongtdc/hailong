@@ -149,7 +149,7 @@
             </div>
         </div>
         <!--css in file common.scss----->
-        <div class="box-common-showroom-wrapper">
+        {{-- <div class="box-common-showroom-wrapper">
             <div class="container-customize">
                 <div class="box-common-showroom distance-below theme-customize-header-section">
                     <div class="theme-customize-header-section__header">
@@ -308,9 +308,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!--end css in file common.scss----->
-
+        {!! do_shortcode('[showrooms][/showrooms]') !!}
     </div>
 
 </div>

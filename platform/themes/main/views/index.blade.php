@@ -170,7 +170,7 @@
     <!--end css in file common.scss----->
 
     <!--css in file common.scss----->
-    <div class="box-common-showroom-wrapper">
+    {{-- <div class="box-common-showroom-wrapper">
         <div class="container-customize">
             <div class="box-common-showroom distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header">
@@ -260,9 +260,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+    {!! do_shortcode('[showrooms][/showrooms]') !!}
     <!--end css in file common.scss----->
-    
+
     @php echo generate_shortcode('typical-project') @endphp
 
     <div class="section-news-wrapper">
