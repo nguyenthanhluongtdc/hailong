@@ -1,6 +1,6 @@
 <div id="introduce-overview-page">
 
-    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-tabs'])
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-menu'])
 
     <div class="box-common-intro-wrapper mt-5">
         <div class="container-customize pr-md-0">

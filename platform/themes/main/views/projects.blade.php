@@ -2,29 +2,7 @@
 @php $projects = get_all_projects(theme_option('number_projects_page_main')); @endphp
 
 <div id="projects-page">
-    <div class="section-banner-wrapper">
-        @includeIf("theme.main::views.components.breadcrumb")
-        <div class="container-customize">
-            <div class="section-banner">
-                <div class="theme-customize-header-section__header">
-                    <h1 class="theme-customize-header-section__header__title">
-                        {!! __('Title Project') !!}
-                    </h1>
-                </div>
-                <div class="theme-customize-header-section__tabs">
-                    <ul class="theme-customize-header-section__tabs__list mb-0">
-                        {!!
-                            Menu::renderMenuLocation('project-categories-menu', [
-                                'options' => [],
-                                'theme'   => true,
-                                'view' => 'introduce-tabs',
-                            ])
-                        !!}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Project','menu'=>'project-categories-menu'])
     
     <div class="project-wrapper">
         <div class="container-customize">

@@ -1,33 +1,5 @@
 <div id="product-details-page">
-    <div class="section-banner-wrapper">
-        @includeIf("theme.theme-customize::views.components.breadcrumb")
-        <div class="container-customize">
-            <div class="section-banner">
-                <div class="theme-customize-header-section__header">
-                    <h1 class="theme-customize-header-section__header__title">
-                        Tiên phong sản xuất <br>
-                        Kính an toàn hàng đầu việt nam
-                    </h1>
-                </div>
-
-                <div class="theme-customize-header-section__tabs">
-                    <ul class="theme-customize-header-section__tabs__list mb-0">
-                        <li class="__tabs__item active">
-                            <a class="__tabs__link" href="/products" title="Tổng quan Hailong Glass"> Sản phẩm </a>
-                        </li>
-
-                        <li class="__tabs__item">
-                            <a class="__tabs__link" href="/product-price" title="Thông tin công ty"> Bảng giá </a>
-                        </li>
-
-                        <li class="__tabs__item">
-                            <a class="__tabs__link" href="/warranty-policy" title="Hồ sơ năng lực"> Chính sách bảo hành </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+   @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Product-Detail','menu'=>'products-menu'])
 
     <div class="section-product-info-wrapper">
         <div class="container-customize pr-md-0">
@@ -37,15 +9,10 @@
                         <div class="box-content">
                             <div class="theme-customize-header-section__header">
                                 <h2 class="theme-customize-header-section__header__title">
-                                    Kính cường lực
+                                    {!! $product->name !!}
                                 </h2>
                                 <p class="theme-customize-header-section__header__des">
-                                    Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
-                                    sống chúng ta với nhiều đặc tính nổi bật vượt trội hơn so với
-                                    những loại kính thông thường khác. Trong đó, việc sử dụng kinh
-                                    cường lực đến từ thương hiệu Việt Nhật - Hải Long đem đến sự an
-                                    toàn cho ngôi nhà của bạn mà vẫn đảm bảo được tính thẩm mỹ
-                                    cao.
+                                    {!! $product->description !!}
                                 </p>
                             </div>
 
@@ -54,22 +21,22 @@
                             </div>
 
                             <div class="box-content__bottom _fsx20r16">
-                                <div class="__bottom__line__one"> Đặc tính chung </div>
-                                <div class="__bottom__line__two"> Quy trình sản xuất </div>
+                                <div class="__bottom__line__one"> {!! __('General characteristics') !!} </div>
+                                <div class="__bottom__line__two"> {!! __('Production process') !!} </div>
 
                                 <div class="box__btn">
-                                    <button class="btn-order mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
-                                    <button class="btn-quote"><i class="fal fa-door-open"></i> Báo giá </button>
+                                    <button class="btn-order mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> {!! __('Order') !!} </button>
+                                    <button class="btn-quote"><i class="fal fa-door-open"></i> {!! __('Quote') !!} </button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-7 mt-xl-5 mt-4">
-                        <div class="box-picture h-100 d-md-block d-none" style="background-image: url({{Theme::asset()->url('/images/products/image5.jpg')}}); background-size: cover; background-repeat: no-repeat;">
+                        <div class="box-picture h-100 d-md-block d-none" style="background-image: url({{rvMedia::getImageUrl($product->image)}}); background-size: cover; background-repeat: no-repeat;">
                         </div>
 
-                        <img class="mw-100 mt-md-0 mt-n2 d-md-none d-block" src="{{Theme::asset()->url('/images/products/image5.jpg')}}" alt="" width="750" height="500">
+                        <img class="mw-100 mt-md-0 mt-n2 d-md-none d-block" src="{{rvMedia::getImageUrl($product->image)}}" alt="" width="750" height="500">
                     </div>
                 </div>
             </div>
@@ -126,23 +93,7 @@
                         <h2 class="theme-customize-header-section__header__title">
                             Đặc tính chung
                         </h2>
-                        <p class="theme-customize-header-section__header__des">
-                            Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
-                            sống chúng ta với nhiều đặc tính nổi bật vượt trội hơn so với
-                            những loại kính thông thường khác. Trong đó, việc sử dụng kinh
-                            cường lực đến từ thương hiệu Việt Nhật - Hải Long đem đến sự an
-                            toàn cho ngôi nhà của bạn mà vẫn đảm bảo được tính thẩm mỹ
-                            cao.
-                        </p>
-
-                        <p class="theme-customize-header-section__header__des mt-3">
-                            Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
-                            sống chúng ta với nhiều đặc tính nổi bật vượt trội hơn so với
-                            những loại kính thông thường khác. Trong đó, việc sử dụng kinh
-                            cường lực đến từ thương hiệu Việt Nhật - Hải Long đem đến sự an
-                            toàn cho ngôi nhà của bạn mà vẫn đảm bảo được tính thẩm mỹ
-                            cao.
-                        </p>
+                       {!! $product->content !!}
                     </div>
 
                     <div class="row-picture distance-above">
@@ -151,18 +102,11 @@
                                 <!-- relative -->
                                 <div class="splide__track">
                                     <ul class="splide__list">
+                                        @foreach ($productImages as $img)
                                         <li class="splide__slide">
-                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="1400" height="750" />
+                                            <img width="1400" height="750" src="{{ RvMedia::getImageUrl($img, 'product_detail') }}" data-zoom-image="{{ RvMedia::getImageUrl($img, 'product_detail') }}" alt="{{ $product->name }}" />
                                         </li>
-                                        <li class="splide__slide">
-                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="1400" height="750" />
-                                        </li>
-                                        <li class="splide__slide">
-                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="1400" height="750" />
-                                        </li>
-                                        <li class="splide__slide">
-                                             <img class="mw-100" src="{{Theme::asset()->url('/images/products/image6.jpg')}}" alt="ảnh-product" width="1400" height="750" alt=""/>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -171,7 +115,7 @@
                                 <!-- extra contents -->
                             </div>
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
@@ -273,8 +217,8 @@
 
                     <div class="col-lg-2 col-md-3">
                         <div class="box__btn">
-                            <button class="btn-order mr-md-0 mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
-                            <button class="btn-quote"><i class="fal fa-door-open"></i> Báo giá </button>
+                            <button class="btn-order mr-md-0 mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i>{!! __('Order') !!} </button>
+                            <button class="btn-quote"><i class="fal fa-door-open"></i> {!! __('Quote') !!} </button>
                         </div>
                     </div>
                 </div>
@@ -329,7 +273,7 @@
                 <div class="section-shoppingguide__picture order-md-2 col-lg-6 col-md-5 px-4 mt-lg-0" style="background-image: url({{Theme::asset()->url('images/products/image2.jpg')}}); background-size: cover; background-repeat: no-repeat;">
                 </div>
                 <div class="section-shoppingguide__content order-md-1 col-lg-6 col-md-7 px-4 distance-below">
-                     <div class="theme-customize-header-section__header">
+                    <div class="theme-customize-header-section__header">
                         <h2 class="theme-customize-header-section__header__title">
                             Hướng dẫn mua hàng
                         </h2>
@@ -388,18 +332,18 @@
                             <div class="form-modal pl-md-3 pr-md-5 px-3 pb-4">
                                 <div class="theme-customize-header-section__header pt-0">
                                     <h2 class="theme-customize-header-section__header__title mb-1 pb-0">
-                                        Đặt hàng
+                                        {!! __('Order') !!}
                                     </h2>
                                     <p class="theme-customize-header-section__header__des mb-3">
-                                        Quý khách vui lòng điền chính xác thông tin.
+                                        {!! __('Please fill in the information correctly') !!}
                                     </p>
                                 </div>
                                 <form action="#" method="POST">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="Ho ten">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="{!!__('Full name')!!}">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="SDT">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="{!!__('Phone number')!!}">
                                     </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="recipient-name" placeholder="Tinh/thanh">
@@ -423,7 +367,7 @@
                                         <textarea class="form-control" id="message-text" placeholder="Ghi chu kem theo"></textarea>
                                     </div>
                                     <div class="box__btn">
-                                        <button class="btn-order" data-target="#successModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> Đặt hàng </button>
+                                        <button class="btn-order" data-target="#successModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> {!!__('Order')!!} </button>
                                     </div>
                                 </form>
                             </div>

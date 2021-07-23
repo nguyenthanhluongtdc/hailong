@@ -304,9 +304,9 @@ class PublicProductController
             ]);
         }
 
-        return Theme::scope('ecommerce.product',
+        return Theme::scope('main.product',
             compact('product', 'selectedAttrs', 'productImages', 'variationDefault', 'productVariation'),
-            'plugins/ecommerce::themes.product')
+            'theme.main::views.product')
             ->render();
     }
 

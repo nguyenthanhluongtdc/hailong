@@ -1,81 +1,36 @@
 <div id="products-page">
-    <div class="section-banner-wrapper">
-        @includeIf("theme.theme-customize::views.components.breadcrumb")
-        <div class="container-customize">
-            <div class="section-banner">
-                <div class="theme-customize-header-section__header">
-                    <h1 class="theme-customize-header-section__header__title">
-                        Tiên phong sản xuất <br>
-                        Kính an toàn hàng đầu việt nam
-                    </h1>
-                </div>
-
-                <div class="theme-customize-header-section__tabs">
-                    <ul class="theme-customize-header-section__tabs__list mb-0">
-                        <li class="__tabs__item active">
-                            <a class="__tabs__link" href="/san-pham" title="Tổng quan Hailong Glass"> Sản phẩm </a>
-                        </li>
-
-                        <li class="__tabs__item">
-                            <a class="__tabs__link" href="/product-price" title="Thông tin công ty"> Bảng giá </a>
-                        </li>
-
-                        <li class="__tabs__item">
-                            <a class="__tabs__link" href="/warranty-policy" title="Hồ sơ năng lực"> Chính sách bảo hành </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Product','menu'=>'products-menu'])
 
     <div class="section-intro-wrapper">
         <div class="container-customize _fsx20r16">
             <p class="my-5">
-                Hồ sơ năng lực như bức chân dung hoàn chỉnh về một doanh nghiệp. Bức chân dung ấy cũng đầy đủ, chi tiết, càng hiện lên sống động bao nhiêu thì càng
-                giúp cho thương hiệu của doanh nghiệp được nhận diện rõ ràng bấy nhiều. Một câu hỏi thường xuyên được đặt ra, vậy làm sao để có một bức chân dung
-                doanh nghiệp hoàn chỉnh và ấn tượng
+                @if(has_field($page, 'description_module_introductory_page_products'))
+                    {!! has_field($page, 'description_module_introductory_page_products') !!}
+                @endif
             </p>
         </div>
 
         <div class="section-intro__picture">
-            <img class="mw-100" width="1900" height="500" src="{{Theme::asset()->url('images/products/image1.jpg')}}" alt="ảnh-product" />
+            @if(has_field($page, 'image_module_introductory_page_products'))
+                <img class="mw-100" width="1900" height="500" src="{{rvMedia::getImageUrl(has_field($page, 'image_module_introductory_page_products'))}}" alt="ảnh-product" />
+            @endif
         </div>
 
         <div class="container-customize">
             <div class="theme-customize-header-section__header">
                 <h2 class="theme-customize-header-section__header__title">
-                    Danh sách sản phẩm
+                    {!! __('List of products') !!}
                 </h2>
             </div>
             <ul class="section-products-list-cate-pro distance-below">
-                <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính cường lực </a>
-                </li>
-                <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính low -E </a>
-                </li>
-                <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title="Kính cường lực"> Kính dán an toàn </a>
-                </li>
-                <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính rạn </a>
-                </li>
-                <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính hộp </a>
-                </li>
-                <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính phun cát </a>
-                </li>
-                <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính màu trang trí </a>
-                </li>
-                <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính ngăn cháy </a>
-                </li>
-                <li class="section-products-list-cate-pro__item">
-                    <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính uốn cong </a>
-                </li>
+                @php $products = get_products([],theme_option('number_of_products_per_page')); @endphp
+                @if(isset($products) && $products->count() >= 1)
+                    @foreach($products as $product)
+                        <li class="section-products-list-cate-pro__item">
+                            <a class="section-products-list-cate-pro__item__link" href="{{$product->url}}" title="Kính cường lực"> {{$product->name}} </a>
+                        </li>
+                    @endforeach
+                @endif
             </ul>
         </div>
     </div>
