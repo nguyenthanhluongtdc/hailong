@@ -102,41 +102,26 @@
         <div class="container-customize">
             <div class="section-our-policy distance-y _fsx20r16">
                 <div class="row mx-lg-n5 mx-n3">
-                    <div class="col-sm-4 px-lg-5 px-3">
-                        <div class="section-our-policy__col">
-                            <div class="section-our-policy__col__icon">
-                                <i class="fad fa-truck-moving"></i>
-                            </div>
-                            <div class="section-our-policy__col__content">
-                                <h3 class="__content__title"> Miễn phí vận chuyển </h3>
-                                <p class="__content__des line__children"> trong nội thành các thành phố có văn phòng ở công ty </p>
-                            </div>
-                        </div>
-                    </div>
+                    @php
+                        $slogans = theme_option("slogan_repeater", []);
+                        if(!blank($slogans)) {
+                            $slogans = json_decode($slogans) ?? [];
+                        }
+                    @endphp
 
-                    <div class="col-sm-4 px-lg-5 px-3">
-                        <div class="section-our-policy__col">
-                            <div class="section-our-policy__col__icon">
-                               <i class="fas fa-award"></i>
-                            </div>
-                            <div class="section-our-policy__col__content">
-                                <h3 class="__content__title"> Bảo hành uy tín </h3>
-                                <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 px-lg-5 px-3">
-                        <div class="section-our-policy__col">
-                            <div class="section-our-policy__col__icon">
-                                <i class="fab fa-chrome"></i>
-                            </div>
-                            <div class="section-our-policy__col__content">
-                                <h3 class="__content__title"> Hệ thống quản lý tối ưu </h3>
-                                <p class="__content__des line__children"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
+                    @foreach ($slogans as $item)
+                        <div class="col-sm-4 px-lg-5 px-3">
+                            <div class="section-our-policy__col">
+                                <div class="section-our-policy__col__icon">
+                                    <i class="{{ $item[0]->value ?? "" }}"></i>
+                                </div>
+                                <div class="section-our-policy__col__content">
+                                    <h3 class="__content__title">{{ $item[1]->value ?? "" }}</h3>
+                                    <p class="__content__des line__children">{{ $item[2]->value ?? "" }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

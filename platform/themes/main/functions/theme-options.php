@@ -37,5 +37,62 @@ app()->booted(function () {
                 'name'  => 'primary_color',
                 'value' => '#ff2b4a',
             ],
+        ])
+        ->setSection([ // Set section with no field
+            'title' => __('Slogan'),
+            'desc' => __('Slogan settings'),
+            'id' => 'opt-slogan',
+            'subsection' => true,
+            'icon' => 'fa fa-home',
+        ])
+        ->setField([
+            'id'         => 'slogan_repeater',
+            'section_id' => 'opt-slogan',
+            'type'       => 'repeater',
+            'label'      => __('Repeater Slogan'),
+            'attributes' => [
+                'name'   => 'slogan_repeater',
+                'value'  => null,
+                'fields' => [
+
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Icon'),
+                        'attributes' => [
+                            'name'  => 'icon',
+                            'value' => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ],
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Title'),
+                        'attributes' => [
+                            'name'    => 'title',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ],
+                    [
+                        'type'       => 'textarea',
+                        'label'      => __('Description'),
+                        'attributes' => [
+                            'name'    => 'description',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                                'rows'         => 3,
+                            ],
+                        ],
+                    ],
+                ],
+            ],
         ]);
 });
