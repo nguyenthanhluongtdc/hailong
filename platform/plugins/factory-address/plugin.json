@@ -1,9 +1,0 @@
-{
-    "name": "FactoryAddress",
-    "namespace": "Platform\\FactoryAddress\\",
-    "provider": "Platform\\FactoryAddress\\Providers\\FactoryAddressServiceProvider",
-    "author": "N/A",
-    "url": "N/A",
-    "version": "1.0",
-    "description": "The description for module factory_address"
-}

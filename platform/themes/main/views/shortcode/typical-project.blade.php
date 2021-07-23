@@ -10,7 +10,7 @@
                       <span>
                           {!! __("Description typical projects") !!}
                       </span>
-                      <a class="btn-read-more" href="{{route('public.single')."/".get_page_by_reference(theme_option('project_id'))}}" title="{{ __("Read more") }}"> {{ __("Read more") }} </a>
+                      <a class="btn-read-more" href="{{route('public.single')."/".get_slug_by_reference(theme_option('project_id'))}}" title="{{ __("Read more") }}"> {{ __("Read more") }} </a>
                   </p>
               </div>
 

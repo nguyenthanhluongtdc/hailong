@@ -29,8 +29,8 @@ register_sidebar([
 Menu::addMenuLocation('introduce-tabs', 'Danh sách tabs giới thiệu');
 RvMedia::setUploadPathAndURLToPublic();
 
-if(!function_exists('get_page_by_reference')) {
-    function get_page_by_reference($reference_id) {
+if(!function_exists('get_slug_by_reference')) {
+    function get_slug_by_reference($reference_id) {
         $slug =  app(SlugInterface::class)->getFirstBy([
             'reference_id' => $reference_id,
             'reference_type' => Page::class,
@@ -40,6 +40,20 @@ if(!function_exists('get_page_by_reference')) {
             return "";
         }
         return $slug->key;
+    }
+}
+
+if(!function_exists('get_page_by_id')) {
+    function get_page_by_id($id) {
+       if($id) {
+            $page = Page::where('id',$id)->first();
+            
+            if(!empty($page)) {
+                return $page;
+            } 
+
+            return null;
+       }
     }
 }
 

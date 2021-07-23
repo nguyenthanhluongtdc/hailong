@@ -80,5 +80,18 @@ app()->booted(function () {
                     'class' => 'form-control',
                 ],
             ],
+        ])->setField([
+            'id'         => 'products_id',
+            'section_id' => 'opt-text-subsection-page',
+            'type'       => 'select',
+            'label'      => __('Get product page'),
+            'attributes' => [
+                'name'  => 'products_id',
+                'list'    => ['' => trans('packages/page::pages.settings.select')] + $pages,
+                'value'   => '',
+                'options' => [
+                    'class' => 'form-control',
+                ],
+            ],
         ]);
 });

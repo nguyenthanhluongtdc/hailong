@@ -267,52 +267,7 @@
         </div>
     </div>
 
-    <div class="section-shoppingguide-wrapper">
-        <div class="container-customize pr-lg-0">
-            <div class="section-shoppingguide row _fsx20r16">
-                <div class="section-shoppingguide__picture order-md-2 col-lg-6 col-md-5 px-4 mt-lg-0" style="background-image: url({{Theme::asset()->url('images/products/image2.jpg')}}); background-size: cover; background-repeat: no-repeat;">
-                </div>
-                <div class="section-shoppingguide__content order-md-1 col-lg-6 col-md-7 px-4 distance-below">
-                    <div class="theme-customize-header-section__header">
-                        <h2 class="theme-customize-header-section__header__title">
-                            Hướng dẫn mua hàng
-                        </h2>
-                        <p class="theme-customize-header-section__header__des mb-4">
-                            Để sở hữu những sản phẩm kính đáp ứng các yêu cầu Tiêu chuẩn
-                            Việt Nam ( TCVN ) và Tiêu chuẩn Nhật Bản JIS) quý khách có thể
-                            thực hiện các bước sau
-                        </p>
-                    </div>
-
-                    <p class="step">
-                        <b> B1. </b>
-                        <span>Quý khách có thể xem thông
-                            tin chi tiết sản phẩm muốn </span>
-                    </p>
-
-                    <p class="step">
-                        <b> B2. </b>
-                        <span> Click vào nút
-                            <a href="#" class="order" title="Đặt hàng" data-target="#orderModal" data-toggle="modal"> Đặt hàng </a>
-                        </span>
-                    </p>
-
-                    <p class="step">
-                        <b> B1. </b>
-                        <span> Điển chính xác thông tin
-                            vào form hiển thị</span>
-                    </p>
-
-                    <p class="step">
-                        <i class="fas fa-check-circle"></i>
-                        <span> Sau khi quý khách hoàn thành những bước trên, chúng
-                            tôi sẽ tiếp nhận đơn hàng, kiểm tra lại và xác nhận đơn
-                            | hàng của Quý khách trước khi làm lệnh sản xuất. </span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+    {!! do_shortcode('[shoppingguide][/shoppingguide]') !!}
 
     <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

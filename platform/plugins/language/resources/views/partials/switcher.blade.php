@@ -62,13 +62,13 @@
 
 
 <li class="bilingual">
-    @php 
+    @php
         $supportedLocales = Language::getSupportedLocales();
         $showRelated = setting('language_show_default_item_if_current_version_not_existed', true);
     @endphp
     @foreach ($supportedLocales as $localeCode => $properties)
         <a rel="alternate" hreflang="{{ $localeCode }}" class="{{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
-            <span> {{ $properties['lang_locale'] }} </span>
+            <span class="text-uppercase"> {{ $properties['lang_locale'] }} </span>
         </a>
     @endforeach
 </li>

@@ -57,7 +57,7 @@
                     <h2 class="theme-customize-header-section__header__title"> {!!has_field($page, 'title_module_aboutus') ? get_field($page, 'title_module_aboutus') : ""!!} </h2>
                     {!! has_field($page, 'description_module_aboutus') ? get_field($page, 'description_module_aboutus') : "" !!}
                 <div class="section-aboutus__line__btn">
-                    <a class="btn-read-more" href="{{route('public.single')."/".get_page_by_reference(theme_option('aboutus_id'))}}" title="{{ __("Read more") }}">
+                    <a class="btn-read-more" href="{{route('public.single')."/".get_slug_by_reference(theme_option('aboutus_id'))}}" title="{{ __("Read more") }}">
                         {{ __("Read more") }}
                     </a>
                 </div>
@@ -170,7 +170,7 @@
     <!--end css in file common.scss----->
 
     <!--css in file common.scss----->
-    <div class="box-common-showroom-wrapper">
+    {{-- <div class="box-common-showroom-wrapper">
         <div class="container-customize">
             <div class="box-common-showroom distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header">
@@ -260,9 +260,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+    {!! do_shortcode('[showrooms][/showrooms]') !!}
     <!--end css in file common.scss----->
-    
+
     @php echo generate_shortcode('typical-project') @endphp
 
     <div class="section-news-wrapper">
@@ -276,7 +277,7 @@
                         <span>
                             Theo doanh nghiệp này, ở thời đại mà nhất cử nhất động của mọi người đều công khai trên mạng xã hội, tính riêng tư được giới siêu giàu rất coi trọng.
                         </span>
-                        <a class="btn-read-more" href="{{route('public.single')."/".get_page_by_reference(theme_option('news_id'))}}" title="Read more"> {{ __('Read more') }} </a>
+                        <a class="btn-read-more" href="{{route('public.single')."/".get_slug_by_reference(theme_option('news_id'))}}" title="Read more"> {{ __('Read more') }} </a>
                     </p>
                 </div>
 

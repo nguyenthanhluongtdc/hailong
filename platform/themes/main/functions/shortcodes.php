@@ -23,4 +23,19 @@ app()->booted(function () {
     });
 
     shortcode()->setAdminConfig('youtube', Theme::partial('shortcodes.youtube-admin-config'));
+
+    if (is_plugin_active('showroom')) {
+        add_shortcode('showrooms', __("Showrooms"), __("Add showrooms"), function ($shortCode) {
+            return Theme::partial('shortcodes.showrooms', [
+                'title' => $shortCode->title,
+                'description' => $shortCode->description,
+                'title_factory' => $shortCode->title_factory,
+                'description_factory' => $shortCode->description_factory
+            ]);
+        });
+    }
+
+    add_shortcode('shoppingguide', __("Shoppingguide"), __("Add shoppingguide"), function () {
+        return Theme::partial('shortcodes.shoppingguide');
+    });
 });
