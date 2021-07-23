@@ -43,7 +43,12 @@
         </div>
 
         <div class="container-customize">
-            <ul class="section-products-list-cate-pro distance-below distance-above">
+            <div class="theme-customize-header-section__header">
+                <h2 class="theme-customize-header-section__header__title">
+                    Danh sách sản phẩm
+                </h2>
+            </div>
+            <ul class="section-products-list-cate-pro distance-below">
                 <li class="section-products-list-cate-pro__item">
                     <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính cường lực </a>
                 </li>

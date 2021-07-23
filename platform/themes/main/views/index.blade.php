@@ -159,7 +159,7 @@
 
                     <div class="col-lg-6">
                         @if(has_field($page, 'image_module_whychoose'))
-                            <div class="box-common-many-col__picture mt-0 h-100" id="image-why-choose" style="background-image: url({{RvMedia::getImageUrl(get_field($page, 'image_module_whychoose'))}}); background-size: cover; background-repeat: no-repeat;">
+                            <div class="box-common-many-col__picture bg-image mt-0 h-100" id="image-why-choose" style="background-image: url({{RvMedia::getImageUrl(get_field($page, 'image_module_whychoose'))}});">
                             </div>
                         @endif
                     </div>
@@ -299,7 +299,7 @@
 
                                 <div class="col-core__content">
                                     <h3 class="col-core__content__title">
-                                        <a href="#" title="Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp"> {{$posts[0]->name}} </a>
+                                        <a href="{{$posts[0]->url}} " title="Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp"> {{$posts[0]->name}} </a>
                                     </h3>
                                     <div class="col-core__content__time">
                                         <span> {{$posts[0]->created_at->format('H:i d/m/Y')}} </span>

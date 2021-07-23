@@ -134,6 +134,11 @@
                 height: auto;
             }
         }
+
+        &__picture.bg-image {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     }
 }
 
@@ -208,7 +213,7 @@
                 bottom: -45px;
 
                     &__page {
-                        background-color: transparent;
+                        background: $backgroundWhite;
                         border: 2px solid $borderGreen;
                     }
 
@@ -572,7 +577,7 @@
 }
 
 .line-border {
-    width: 15%;
+    width: 12%;
     height: 2px;
     background-color: $backgroundGreen;
    

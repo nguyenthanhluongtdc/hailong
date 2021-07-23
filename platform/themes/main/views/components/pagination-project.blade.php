@@ -8,11 +8,11 @@
                     @if ($datas->hasPages())
                     <ul class="pagination paginate">
                         {{-- Previous Page Link --}}
-                        @if ($datas->onFirstPage())
+                        {{-- @if ($datas->onFirstPage())
                             <li class="page-item disabled" aria-current="page"><span class="page-link">«</span></li>
                         @else
                             <li class="page-item"><a href="{{ $datas->previousPageUrl() }}" rel="prev" class="page-link">«</a></li>
-                        @endif
+                        @endif --}}
 
                         @if($datas->currentPage() > 2)
                             <li class="page-item"><a class="page-link" href="{{ $datas->url(1) }}">1</a></li>
