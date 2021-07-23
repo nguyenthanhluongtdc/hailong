@@ -28,54 +28,36 @@
         </div>
     </div>
 
-    <div class="box-common-intro-wrapper">
-        <div class="container-customize pr-md-0">
-            <div class="box-common-intro theme-customize-header-section _fsx20r16">
-                <div class="row position-relative">
-                    <div class="col-md-6 col-12 order-md-2 mt-lg-5 mt-4 absolute box-common-intro__picture" style="background-image: url({{Theme::asset()->url('images/products/image3.jpg')}}); background-size: cover; background-repeat: no-repeat;">
-                        {{-- <div class="box-common-intro__picture h-100" > 
-                            <img width="" height="" src="{{Theme::asset()->url('images/products/image3.jpg')}}" alt="ảnh product" />
-                        </div> --}}
-                    </div>
-                    <div class="col-md-6 col-12 order-md-1">
-                        <div class="box-common-intro__content distance-y">
-                            <div class="theme-customize-header-section__header pt-0">
-                                <h2 class="theme-customize-header-section__header__title">
-                                    Báo giá sản phẩm
-                                </h2>
+    @if(isset($page))
+        <div class="box-common-intro-wrapper">
+            <div class="container-customize pr-md-0">
+                <div class="box-common-intro theme-customize-header-section _fsx20r16">
+                    <div class="row position-relative">
+                        <div
+                            class="col-md-6 col-12 order-md-2 mt-lg-5 mt-4 absolute box-common-intro__picture"
+                            style="background-image: url({{ get_image_url($page->image) }}); background-size: cover; background-repeat: no-repeat;"
+                        ></div>
+                        <div class="col-md-6 col-12 order-md-1">
+                            <div class="box-common-intro__content distance-y">
+                                <div class="theme-customize-header-section__header pt-0">
+                                    <h2 class="theme-customize-header-section__header__title">
+                                        {{ $page->name ?? "" }}
+                                    </h2>
+                                </div>
+                                {!! $page->content !!}
+
+                                @if(has_field($page, 'hotline_product_price'))
+                                    <a class="hotline" href="tel:{{ get_field($page, 'hotline_product_price') }}" title="{{ __("Hotline") }}">
+                                        <span> {{ __("Hotline") }}: </span> <b> {{ get_field($page, 'hotline_product_price') }} </b>
+                                    </a>
+                                @endif
                             </div>
-
-                            <p>
-                                Công ty TNHH SX & TM Hải Long thành lập ngày 30/ 05/ 2001, sau
-                                gần 20 năm xây dựng, trưởng thành và phát triển đã trở thành
-                                nhà gia công kinh hàng đầu tại Việt Nam. Thương hiệu được
-                                khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân
-                                thiện với môi trường.
-                            </p>
-
-                            <p>
-                                Các sản phẩm Kinh an toàn Hải Long đã và đang được sử dụng
-                                trong nhiều công trình trọng điểm của quốc gia, trong các công
-                                trinh lên khang trang, sang trọng, hiện đại và được đông đảo
-                                khách hàng tin dùng.Các sản phẩm Kinh an toàn Hải Long đã và đang được sử dụng
-                                trong nhiều công trình trọng điểm của quốc gia, trong các công
-                                trinh lên khang trang, sang trọng, hiện đại và được đông đảo
-                                khách hàng tin dùng.
-                            </p>
-
-                            <p>
-                                Kinh an toan. Tiet kiem nang luong. Huong toi moi truong xanh
-                            </p>
-
-                            <a class="hotline" href="#" title="Hotline">
-                                <span> Hotline: </span> <b> 0992772499 </b>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
 
     <div class="section-products-list-cate-pro-wrapper bg-f3">
         <div class="container-customize">
