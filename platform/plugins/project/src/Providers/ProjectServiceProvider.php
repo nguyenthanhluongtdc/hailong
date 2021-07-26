@@ -61,7 +61,7 @@ class ProjectServiceProvider extends ServiceProvider
         $this->app->register(HookServiceProvider::class);
         \SlugHelper::registerModule(Project::class);
         \SlugHelper::setPrefix(Project::class, 'projects');
-        if (is_plugin_active('Gallery')) {
+        if (is_plugin_active('gallery')) {
             \Gallery::registerModule([Project::class]);
         }
         $this->app->booted(function () {
