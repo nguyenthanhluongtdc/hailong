@@ -81,6 +81,10 @@
                     color: $textWhite;
                 }
             }
+
+            ._char:last-child {
+                display: none;
+            }
         }
 
         .box__item.back-top {

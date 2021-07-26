@@ -16,16 +16,17 @@
             </button>
 
         @else 
+            @php
+                $supportedLocales = array_reverse(Language::getSupportedLocales());
+                $showRelated = setting('language_show_default_item_if_current_version_not_existed', true);
+            @endphp
             <button class="box__item">
-                <span class="box__item__icon language_current text-uppercase"> 
-                    @if(Language::getCurrentLocale()=='vi')
-                        VN
-                    @else 
-                        {{Language::getCurrentLocale()}}
-                    @endif
-                </span>
-                <div class="box__item__content">
-                </div>
+                @foreach ($supportedLocales as $localeCode => $properties)
+                    <a rel="alternate" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
+                        <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
+                    </a>
+                    <span class="_char"> | </span>
+                @endforeach
             </button>
 
         @endif
