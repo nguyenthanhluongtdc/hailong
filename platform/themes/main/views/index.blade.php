@@ -5,43 +5,19 @@
                 <div class="d-inline-block">
                     <h1 class="section-intro__title"> {!! has_field($page,'title_main') ? get_field($page,'title_main') : "" !!} </h1>
                     <ul class="info-contact mb-0">
-                        <li class="info-contact__item">
-                            <span>
-                                {!! __('CSKH24/7') !!}
-                            </span>
-                            <a class="info-contact__link" href="tel: {{has_field($page, 'cskh_page_home')}}" title="{{has_field($page, 'cskh_page_home')}}">
-                                {{has_field($page, 'cskh_page_home')}}
-                            </a>
-                        </li>
-
-                        @if(has_field($page, 'list_hotline_page_home'))
+                        @if(has_field($page, 'hotline_info'))
+                            @foreach(get_field($page, 'hotline_info') as $row)
                             <li class="info-contact__item">
-                                <span>
-                                    {!! __('HOTLINE') !!}
-                                </span>
-
-                                @foreach(has_field($page, 'list_hotline_page_home') as $row)
-                                    <a class="info-contact__link" href="tel: {{has_sub_field($row, 'value')}}" title="{{has_sub_field($row, 'value')}}">
-                                        {{has_sub_field($row, 'value')}}
-                                    </a>
-
-                                    <span class="_char"> - </span>
-                                @endforeach
+                                <a class="info-contact__link" href="#" title="cskh">
+                                    <span> {{has_sub_field($row, 'title') ? get_sub_field($row, 'title') : ""}} </span>
+                                    @if(has_sub_field($row, 'content'))
+                                            @foreach (get_sub_field($row, 'content') as $key => $item)
+                                                <b>{{ $key != 0 ? "- " : '' }} {{ get_sub_field($item, 'value') ?? "" }}</b>
+                                            @endforeach
+                                    @endif
+                                </a>
                             </li>
-                        @endif
-
-                        @if(has_field($page, 'list_email_page_home'))
-                            <li class="info-contact__item">
-                                <span>
-                                    {!! __('EMAIL') !!}
-                                </span>
-                                @foreach(has_field($page, 'list_email_page_home') as $row)
-                                    <a class="info-contact__link" href="mailto: {{has_sub_field($row, 'value')}}" title="{{has_sub_field($row, 'value')}}">
-                                        {{has_sub_field($row, 'value')}}
-                                    </a>
-                                    <span class="_char"> - </span>
-                                @endforeach
-                            </li>
+                            @endforeach
                         @endif
                     </ul>
                 </div>

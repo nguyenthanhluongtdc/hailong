@@ -589,6 +589,8 @@ class EcommerceServiceProvider extends ServiceProvider
             if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
                 \Language::registerModule($models);
             }
+
+            \Gallery::registerModule($models);
         });
 
         $this->app->register(EventServiceProvider::class);

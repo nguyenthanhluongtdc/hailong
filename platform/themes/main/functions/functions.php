@@ -1,4 +1,5 @@
 <?php
+
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
 use Platform\Page\Models\Page;
 use Platform\Base\Enums\BaseStatusEnum;
@@ -32,26 +33,28 @@ register_sidebar([
 Menu::addMenuLocation('introduce-tabs', 'Danh sách tabs giới thiệu');
 RvMedia::setUploadPathAndURLToPublic();
 
-if(!function_exists('get_slug_by_reference')) {
-    function get_slug_by_reference($reference_id) {
+if (!function_exists('get_slug_by_reference')) {
+    function get_slug_by_reference($reference_id)
+    {
         $slug =  app(SlugInterface::class)->getFirstBy([
             'reference_id' => $reference_id,
             'reference_type' => Page::class,
         ]);
 
-        if(!$slug) {
+        if (!$slug) {
             return "";
         }
         return $slug->key;
     }
 }
 
-if(!function_exists('get_page_by_id')) {
-    function get_page_by_id($id) {
-       if($id) {
-            $page = Page::where('id',$id)->first();
+if (!function_exists('get_page_by_id')) {
+    function get_page_by_id($id)
+    {
+        if ($id) {
+            $page = Page::where('id', $id)->first();
             return $page->count() ? $page : [];
-       }
+        }
     }
 }
 
@@ -64,7 +67,7 @@ if (!function_exists('get_price_notification_products')) {
     {
         $params = array_merge([
             'condition' => [
-                'ec_products.is_price_notification'  => 1,
+                // 'ec_products.is_price_notification'  => 1,
                 'ec_products.is_variation' => 0,
                 'ec_products.status'       => BaseStatusEnum::PUBLISHED,
             ],
@@ -73,7 +76,7 @@ if (!function_exists('get_price_notification_products')) {
                 'ec_products.created_at' => 'DESC',
             ],
             'select'    => ['ec_products.*'],
-            'with'      => [],
+            'with'      => ['productAttributeSets'],
         ], $params);
 
         return app(ProductInterface::class)->advancedGet($params);
@@ -127,8 +130,6 @@ if (!function_exists('get_other_products')) {
     }
 }
 
-add_shortcode('typical-project', 'My block', 'Custom block for me', function() {
-    return view('theme.main::views.shortcode.typical-project')->render(); 
+add_shortcode('typical-project', 'My block', 'Custom block for me', function () {
+    return view('theme.main::views.shortcode.typical-project')->render();
 });
-
-
