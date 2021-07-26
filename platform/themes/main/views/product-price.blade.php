@@ -39,10 +39,10 @@
             </div>
             <ul class="section-products-list-cate-pro distance-below">
                 @if(!empty(get_price_notification_products([], theme_option('number_of_products_per_page'))))
-                @foreach(get_price_notification_products([], theme_option('number_of_products_per_page')) as $key => $product)
-                @php
-                $slug = \Illuminate\Support\Str::slug( $product->name?$product->name:'product'.$key).'-key'.$key;
-                @endphp
+                    @foreach(get_price_notification_products([], theme_option('number_of_products_per_page')) as $key => $product)
+                    @php
+                    $slug = \Illuminate\Support\Str::slug( $product->name?$product->name:'product'.$key).'-key'.$key;
+                    @endphp
                 <li class="section-products-list-cate-pro__item">
                     <button class="section-products-list-cate-pro__item__link bg-transparent border-0 outline-0" href="{{$product->url}}" title="{!! $product->name !!}" data-toggle="modal" data-target="#{{$slug}}"> {!! $product->name !!} </button>
 

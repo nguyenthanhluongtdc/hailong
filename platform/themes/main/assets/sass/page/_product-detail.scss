@@ -46,7 +46,7 @@
                 @media (min-width: 1681px) {
                     margin-top: calc(#{$size9} + #{$size2} + 10px);
                 }
-                margin-top: calc(#{$size9} + 10px);
+                margin-top: calc(#{$size9} + #{$size2} + 10px);
 
                 @media (max-width: 768px) {
                     margin-top: $size2;
