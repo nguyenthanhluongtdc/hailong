@@ -381,12 +381,7 @@
 
 <script>
     window._homePage = {
-        imageWhy: [ < ? php echo '"'.implode('","', $imageWhy ? ? []).
-            '"' ? >
-        ]
-        , imageProducts: [ < ? php echo '"'.implode('","', $imageProducts).
-            '"' ? >
-        ]
+        imageWhy: {!! json_encode( $imageWhy ?? []) !!}, imageProducts: {!! json_encode($imageProducts ?? []) !!}
     }
 
 </script>
