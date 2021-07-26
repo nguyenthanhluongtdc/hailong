@@ -205,38 +205,62 @@
                                          {!! __('Please fill in the information correctly') !!}
                                      </p>
                                  </div>
-                                 <form action="#" method="POST">
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" id="recipient-name" placeholder="{!!__('Full name')!!}">
-                                     </div>
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" id="recipient-name" placeholder="{!!__('Phone number')!!}">
-                                     </div>
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" id="recipient-name" placeholder="Tinh/thanh">
-                                     </div>
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" id="recipient-name" placeholder="Quan/huyen">
-                                     </div>
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" id="recipient-name" placeholder="Phuong/xa">
-                                     </div>
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" id="recipient-name" placeholder="Dia chi giao hang">
-                                     </div>
-                                     <div class="form-group">
-                                         <input type="text" class="form-control" id="recipient-name" placeholder="Kinh cuong luc">
-                                     </div>
-                                     <div class="form-group">
-                                         <input type="file" class="form-control" id="recipient-name" placeholder="Upload ban ve">
-                                     </div>
-                                     <div class="form-group">
-                                         <textarea class="form-control" id="message-text" placeholder="Ghi chu kem theo"></textarea>
-                                     </div>
-                                     <div class="box__btn">
-                                         <button class="btn-order" data-target="#successModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i> {!!__('Order')!!} </button>
-                                     </div>
-                                 </form>
+                                 {{-- <form action="{{route('public.checkout.process')}}" method="POST"> --}}
+                                    @csrf
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="{!!__('Full name')!!}">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="{!!__('Phone number')!!}">
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control ui dropdown city" name="city" id="">
+                                            <option hidden selected="selected"  value="" >Tỉnh/thành</option>
+                                            @forelse(@$provinces as $row)
+                                                <option {{ old('city') == @$row->name ? 'selected' : '' }}
+                                                    value="{{ @$row->name }}">{{ @$row->name }}</option>
+                                            @empty
+                                            @endforelse
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" name="district" id="">
+                                            <option hidden selected="selected"  value="" >Quận/huyện</option>
+                                            @forelse(@$districts as $row)
+                                                <option {{ old('district') == @$row->name ? 'selected' : '' }}
+                                                    value="{{ @$row->name }}">{{ @$row->name }}</option>
+                                            @empty
+                                            @endforelse
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" name="ward" id="">
+                                            <option hidden selected="selected"  value="" >Phường/xã</option>
+                                            @forelse(@$wards as $row)
+                                                <option {{ old('ward') == @$row->name ? 'selected' : '' }}
+                                                    value="{{ @$row->name }}">{{ @$row->name }}</option>
+                                            @empty
+                                            @endforelse
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="Địa chỉ giao hàng">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="recipient-name" placeholder="Kính cường lực">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="file" type="file" hidden>
+                                        <label for="file">Upload bản vẽ (định dạng jpg, pdf, tiff...)</label>
+                                        <!-- <input type="file" class="form-control" id="recipient-name" placeholder="Upload bản vẽ"> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message-text" placeholder="Ghi chú kèm theo"></textarea>
+                                    </div>
+                                    <div class="box__btn">
+                                        <button class="btn-order" ><i class="fal fa-shopping-cart"></i> {!!__('Order')!!} </button>
+                                    </div>
+                                {{-- </form> --}}
                              </div>
                          </div>
                      </div>
