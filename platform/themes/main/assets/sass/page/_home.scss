@@ -1,4 +1,3 @@
-
 #home-page {
     .section-intro-wrapper {
         margin-top: $size100;
@@ -9,11 +8,14 @@
             flex-wrap: wrap;
 
             &__picture {
-                img { max-width: 100%; height: auto; }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
             }
 
             &__title {
-                color: $textGreen; 
+                color: $textGreen;
                 font-size: $font-size40;
                 font-family: $iCiel-SamsungSharpSans-Bold_SMCPS;
             }
@@ -22,7 +24,7 @@
                 margin-top: $size0_625;
                 padding-left: 0;
                 font-size: $font-size20;
-                
+
                 &__item {
                     display: inline-block;
                     margin-right: $size0_625;
@@ -59,7 +61,7 @@
                     left: 0;
                     right: 0;
                     transform: translateY(0);
-                    
+
                     &--prev {
                         display: none;
                     }
@@ -98,7 +100,7 @@
                     border: 2px solid $backgroundWhite;
                 }
 
-                &__page.is-active{
+                &__page.is-active {
                     transform: scale(1.4);
                     background: $backgroundWhite;
                 }
@@ -117,7 +119,7 @@
 
         .intro-slider {
             position: relative;
-            
+
             .slider-bg {
                 position: absolute;
                 height: 50%;
@@ -141,12 +143,14 @@
 
     .section-ourproduct-wrapper {
         background-color: $backgroundf3f3f3;
-        .section-ourproduct{
+        .section-ourproduct {
             .section-ourproduct__left {
                 width: 100%;
 
                 img {
                     max-width: 100%;
+                    object-fit: cover;
+                    object-position: center;
                 }
             }
             .section-ourproduct__right {
@@ -176,17 +180,13 @@
     }
 
     .section-news {
-
         &__content {
-
             .col-core {
-
                 &__img {
                     max-width: 100%;
                 }
 
                 &__content {
-                    
                     &__title {
                         font-size: $font-size18;
                         margin-bottom: 0;
@@ -210,24 +210,23 @@
                         color: rgba($color: $textNight, $alpha: 0.5);
                     }
 
-                    &__des,p {
+                    &__des,
+                    p {
                         font-size: $size1;
                         margin-bottom: 0;
-                        @media(min-width: 1200px) {
+                        @media (min-width: 1200px) {
                             @include split_str(3);
                         }
                         @include split_str(2);
 
-                        @media(max-width: 567px) {
+                        @media (max-width: 567px) {
                             @include split_str(2);
                         }
                     }
                 }
 
                 &__box__img {
-
                     &__img {
-
                     }
                 }
             }
@@ -247,12 +246,11 @@
                     &__time {
                         color: $textWhite !important;
                     }
-                    
+
                     a {
                         color: $textWhite;
                         text-decoration: none;
                     }
-                   
                 }
             }
 
@@ -260,14 +258,14 @@
                 .col-flex-box {
                     display: flex;
                     margin-bottom: $font-size20;
-    
+
                     .col-core {
                         &__box__img {
                             flex: 0 0 41.6666666667%;
                             max-width: 41.6666666667%;
                             padding-right: 15px;
                         }
-    
+
                         &__content {
                             flex: 0 0 58.3333333333%;
                             max-width: 58.3333333333%;
@@ -276,7 +274,7 @@
                     }
                 }
 
-                >div:last-child {
+                > div:last-child {
                     margin-bottom: 0;
                 }
             }
@@ -285,32 +283,27 @@
 }
 
 #map-canvas {
-  width: 100%;
-  height: 400px;
+    width: 100%;
+    height: 400px;
 }
 /***
 *************** Responsive
 ****/
 @mixin home-screen-minw1681() {
     #home-page {
-
         .section-ourproduct-wrapper {
             padding-top: $size4;
         }
         .box-common-typeicalproject-carousel-wrapper {
-        
             .box-common-typeicalproject-carousel {
-    
                 .splide {
                     &__slide {
-        
                         &__content {
-    
                             &__title {
                                 font-size: 20px;
                             }
                         }
-                    } 
+                    }
                 }
             }
         }
@@ -327,12 +320,10 @@
 
 //screen min-width 1200
 @mixin home-screen-minw1200() {
-  
 }
 
 //screen max-width 1200
 @mixin home-screen-maxw1200() {
-    
 }
 
 //screen max-width 992
