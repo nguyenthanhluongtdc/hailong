@@ -26,7 +26,8 @@ class PublicController extends BaseController {
             abort(404);
         }
 
-        $project = $this->projectRepository->getProject($slug->reference_id);
+        $project = $this->projectRepository->getProject($slug);
+        
         $category = $project->categories->first();
 
         SeoHelper::setTitle($project->name)
