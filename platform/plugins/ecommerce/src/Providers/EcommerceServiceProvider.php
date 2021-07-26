@@ -583,6 +583,12 @@ class EcommerceServiceProvider extends ServiceProvider
                 ProductCategory::class,
                 ProductTag::class,
             ]);
+
+            $models = [Product::class];
+
+            if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+                \Language::registerModule($models);
+            }
         });
 
         $this->app->register(EventServiceProvider::class);
