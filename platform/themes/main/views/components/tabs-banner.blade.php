@@ -5,7 +5,7 @@
             @if(isset($title))
                 <div class="theme-customize-header-section__header mt-n4">
                     <h1 class="theme-customize-header-section__header__title">
-                        {!! __("$title") !!}
+                        {!! __($title) !!}
                     </h1>
                 </div>
             @endif
@@ -13,7 +13,7 @@
             @if(isset($menu) && !empty($menu))
                 <div class="theme-customize-header-section__tabs">
                     <ul class="theme-customize-header-section__tabs__list mb-0">
-                    
+
                             {!!
                                 Menu::renderMenuLocation($menu, [
                                     'options' => [],
@@ -21,7 +21,7 @@
                                     'view' => 'introduce-tabs',
                                 ])
                             !!}
-                        
+
                     </ul>
                 </div>
             @endif

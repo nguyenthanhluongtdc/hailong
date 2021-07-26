@@ -1,4 +1,5 @@
 <div id="products-page">
+
     @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Product','menu'=>'products-menu'])
 
     <div class="section-intro-wrapper">
@@ -19,7 +20,7 @@
         <div class="container-customize">
             <div class="theme-customize-header-section__header">
                 <h2 class="theme-customize-header-section__header__title">
-                    {!! __('List of products') !!}
+                    {{ __('List of products') }}
                 </h2>
             </div>
             <ul class="section-products-list-cate-pro distance-below">
@@ -34,7 +35,7 @@
             </ul>
         </div>
     </div>
-    
+
     {!! do_shortcode('[shoppingguide][/shoppingguide]') !!}
 
     <!--css in file common.scss----->
