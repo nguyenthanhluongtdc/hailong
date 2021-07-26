@@ -50,9 +50,9 @@
                     <div class="section-our-policy distance-y _fsx20r16">
                         <div class="row mx-lg-n5 mx-n3">
                             @php
-                            $slogans = theme_option("slogan_repeater", []);
+                                $slogans = theme_option("slogan_repeater", []);
                             if(!blank($slogans)) {
-                            $slogans = json_decode($slogans) ?? [];
+                                $slogans = json_decode($slogans) ?? [];
                             }
                             @endphp
 
@@ -112,20 +112,18 @@
             <div class="section-production-process distance-below">
                 <div class="row">
                     <div class="col-lg-10 col-md-9">
-                        @if(has_field($product, 'title_production_process_page_product_detail'))
-                            <div class="theme-customize-header-section__header">
-                                <h2 class="theme-customize-header-section__header__title">
-                                    {!! has_field($product, 'title_production_process_page_product_detail') !!}
-                                </h2>
-                            </div>
-                        @endif
+                        <div class="theme-customize-header-section__header">
+                            <h2 class="theme-customize-header-section__header__title">
+                                {!! __('Production process') !!}
+                            </h2>
+                        </div>
 
                         @if(has_field($product, 'listtabs_production_process_page_product_detail'))
                             <div class="box__tabs">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     @foreach(has_field($product, 'listtabs_production_process_page_product_detail') as $key => $row)
                                         <li class="nav-item box__tabs__header" role="presentation">
-                                            <button class="nav-link {{$key==0?'active':''}} px-0" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true"> 
+                                            <button class="nav-link {{$key==0?'active':''}} px-0" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true">
                                                 {!! has_sub_field($row, 'title') !!}
                                             </button>
                                         </li>
@@ -166,7 +164,7 @@
                     <ul class="section-products-list-cate-pro distance-below">
                         @foreach(get_other_products($product) as $other_product)
                             <li class="section-products-list-cate-pro__item">
-                                <a class="section-products-list-cate-pro__item__link" href="{{$other_product->url}}" title="Kính cường lực"> 
+                                <a class="section-products-list-cate-pro__item__link" href="{{$other_product->url}}" title="Kính cường lực">
                                     {!! $other_product->name !!}
                                 </a>
                             </li>
