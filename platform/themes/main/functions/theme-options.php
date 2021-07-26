@@ -95,6 +95,34 @@ app()->booted(function () {
                 ]
             ]
         ])
+        ->setField([
+            'id' => 'number_of_post_featured',
+            'section_id' => 'opt-text-subsection-blog',
+            'type' => 'number', // text, password, email, number
+            'label' => __('Number of post featured'),
+            'attributes' => [
+                'name' => 'number_of_post_featured',
+                'value' => 3, // default value
+                'options' => [
+                    'class' => 'form-control',
+                    'data-counter' => 120,
+                ]
+            ]
+        ])
+        ->setField([
+            'id' => 'number_of_post_other',
+            'section_id' => 'opt-text-subsection-blog',
+            'type' => 'number', // text, password, email, number
+            'label' => __('Number of post other'),
+            'attributes' => [
+                'name' => 'number_of_post_other',
+                'value' => 8, // default value
+                'options' => [
+                    'class' => 'form-control',
+                    'data-counter' => 120,
+                ]
+            ]
+        ])
         ->setSection([ // Set section with no field
             'title' => __('Slogan'),
             'desc' => __('Slogan settings'),
@@ -150,6 +178,104 @@ app()->booted(function () {
                             ],
                         ],
                     ],
+                ],
+            ],
+        ])->setSection([ // Set section with no field
+            'title' => __('Footer'),
+            'desc' => __('Footer settings'),
+            'id' => 'opt-footer',
+            'subsection' => true,
+            'icon' => 'fa fa-home',
+        ])->setField([
+            'id'         => 'footer_info_repeater',
+            'section_id' => 'opt-footer',
+            'type'       => 'repeater',
+            'label'      => __('More information about the company'),
+            'attributes' => [
+                'name'   => 'footer_info_repeater',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Text'),
+                        'attributes' => [
+                            'name'    => 'information_id',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ]
+                ],
+            ],
+        ])->setField([
+            'id'         => 'footer_col_link_one_repeater',
+            'section_id' => 'opt-footer',
+            'type'       => 'repeater',
+            'label'      => __('Link column one'),
+            'attributes' => [
+                'name'   => 'footer_col_link_one_repeater',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'select',
+                        'label'      => __('Link page'),
+                        'attributes' => [
+                            'name'  => 'link_page_id',
+                            'list'    => ['' => trans('packages/page::pages.settings.select')] + $pages,
+                            'value'   => '',
+                            'options' => [
+                                'class' => 'form-control',
+                            ],
+                        ],
+                    ]
+                ],
+            ],
+        ])->setField([
+            'id'         => 'footer_col_link_two_repeater',
+            'section_id' => 'opt-footer',
+            'type'       => 'repeater',
+            'label'      => __('Link column two'),
+            'attributes' => [
+                'name'   => 'footer_col_link_two_repeater',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'select',
+                        'label'      => __('Link page'),
+                        'attributes' => [
+                            'name'  => 'link_page_id',
+                            'list'    => ['' => trans('packages/page::pages.settings.select')] + $pages,
+                            'value'   => '',
+                            'options' => [
+                                'class' => 'form-control',
+                            ],
+                        ],
+                    ]
+                ],
+            ],
+        ])->setField([
+            'id'         => 'footer_col_link_three_repeater',
+            'section_id' => 'opt-footer',
+            'type'       => 'repeater',
+            'label'      => __('Link column three'),
+            'attributes' => [
+                'name'   => 'footer_col_link_three_repeater',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'select',
+                        'label'      => __('Link page'),
+                        'attributes' => [
+                            'name'  => 'link_page_id',
+                            'list'    => ['' => trans('packages/page::pages.settings.select')] + $pages,
+                            'value'   => '',
+                            'options' => [
+                                'class' => 'form-control',
+                            ],
+                        ],
+                    ]
                 ],
             ],
         ]);

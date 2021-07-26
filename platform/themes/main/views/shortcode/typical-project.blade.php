@@ -19,12 +19,12 @@
                       <!-- relative -->
                       <div class="splide__track">
                           <ul class="splide__list">
-                              @if(get_feadture_projects( theme_option('number_typical_projects') ))
-                              @foreach(get_feadture_projects(theme_option('number_typical_projects')) as $project)
+                              @if(get_featured_projects([], theme_option('number_typical_projects') ))
+                              @foreach(get_featured_projects([], theme_option('number_typical_projects')) as $project)
                               <li class="splide__slide">
                                   <div class="splide__slide__img">
                                       <a href="{{$project->url}}" title="{{$project->name}}">
-                                          <img width="410" height="440" src="{{rvMedia::getImageUrl($project->images)}}" alt="ảnh slider" />
+                                          <img width="410" height="440" src="{{rvMedia::getImageUrl($project->image)}}" alt="ảnh slider" />
                                       </a>
                                   </div>
                                   <div class="splide__slide__content">

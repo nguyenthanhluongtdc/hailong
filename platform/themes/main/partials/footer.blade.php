@@ -13,18 +13,24 @@
                                 <div class="col-lg-4 col-sm-6 col-12 mb-sm-0 mb-3 footer__col">
                                     <div class="f-listaddress">
                                         <p class="footer__col__title">
-                                            <strong> CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI HẢI LONG </strong>
+                                            <strong> {!! __('Company name') !!} </strong>
                                         </p>
-                                        <p>
-                                            Đ/C: Tiểu khu Mỹ Lâm, Thị Trấn Phú Xuyên,
-                                            Huyện Phú Xuyên, Thành phố Hà Nội
-                                        </p>
-                                        <p>
-                                            Mã Số Thuế: 0500417176 Đăng ký lần đầu 30/05/2001
-                                        </p>
-                                        <p>
-                                            Nơi cấp: Sở Kế Hoạch & Đầu Tư Tp.Hà Nội
-                                        </p>
+
+                                        @php  
+                                            $info = theme_option('footer_info_repeater');
+                                            if(!blank($info)) {
+                                                $info = json_decode($info) ?? [];
+                                            } 
+                                        @endphp
+                                        
+                                        @if(!empty($info) && !blank($info))
+                                            @foreach($info as $row)
+                                                <p>
+                                                    {!! $row[0]->value !!}
+                                                </p>
+                                            @endforeach
+                                        @endif
+                                        
                                         <div class="pt-4 pb-4 mt-4 mb-4 row footer__col__list__icon">
                                             <div class="col-3"> 
                                                 <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image4.jpg')}}" alt="" /> 
@@ -47,37 +53,59 @@
                                 <div class="col-lg-2 col-sm-4 col-12 mb-sm-0 mb-3 footer__col">
                                     <div class="f-listinfo">
                                         <p class="footer__col__title">
-                                            <strong> Thông Tin </strong>
+                                            <strong> {!! __('Information') !!} </strong>
                                         </p>
-                                        {!!
-                                            Menu::renderMenuLocation('col-information-menu', [
-                                                'options' => [],
-                                                'theme' => true,
-                                                'view' => 'col-info-footer',
-                                            ])
-                                        !!}
+                                        <ul class="f-listinfo__content footer__col__list">
+                                            @php 
+                                                $col_link_one = theme_option('footer_col_link_one_repeater');
+                                                if(!blank($col_link_one)){
+                                                    $col_link_one = json_decode($col_link_one) ?? [];
+                                                }
+                                            @endphp
+
+                                            @if(!empty($col_link_one) && !blank($col_link_one))
+                                                @foreach($col_link_one as $row)
+                                                    @php 
+                                                        $page = get_page_by_id($row[0]->value);
+                                                    @endphp
+
+                                                    @if(!empty($page))
+                                                        <li>
+                                                            <a href="{{$page->url}}" title="{{$page->name}}"> {!! $page->name !!} </a>
+                                                        </li>
+                                                    @endif
+                                                @endforeach
+                                            @endif
+                                        </ul>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-2 col-sm-4 col-6 footer__col">
                                     <div class="f-listaboutus">
                                         <p class="footer__col__title">
-                                            <strong> Về chúng tôi </strong>
+                                            <strong> {!! __('About us') !!} </strong>
                                         </p>
                                         <ul class="f-listaboutus__content footer__col__list">
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Sản phẩm </a>
-                                            </li>
+                                            @php 
+                                                $col_link_one = theme_option('footer_col_link_two_repeater');
+                                                if(!blank($col_link_one)){
+                                                    $col_link_one = json_decode($col_link_one) ?? [];
+                                                }
+                                            @endphp
 
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Chính sách bảo hành
-                                                </a>
-                                            </li>
+                                            @if(!empty($col_link_one) && !blank($col_link_one))
+                                                @foreach($col_link_one as $row)
+                                                    @php 
+                                                        $page = get_page_by_id($row[0]->value);
+                                                    @endphp
 
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Báo giá
-                                                </a>
-                                            </li>
+                                                    @if(!empty($page))
+                                                        <li>
+                                                            <a href="{{$page->url}}" title="{{$page->name}}"> {!! $page->name !!} </a>
+                                                        </li>
+                                                    @endif
+                                                @endforeach
+                                            @endif
                                         </ul>
                                     </div>
                                 </div>
@@ -88,24 +116,26 @@
                                             <strong> &nbsp </strong>
                                         </p>
                                         <ul class="f-listinfo-other__content footer__col__list">
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Tuyển dụng </a>
-                                            </li>
+                                            @php 
+                                                $col_link_one = theme_option('footer_col_link_three_repeater');
+                                                if(!blank($col_link_one)){
+                                                    $col_link_one = json_decode($col_link_one) ?? [];
+                                                }
+                                            @endphp
 
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Chăm sóc khách hàng
-                                                </a>
-                                            </li>
+                                            @if(!empty($col_link_one) && !blank($col_link_one))
+                                                @foreach($col_link_one as $row)
+                                                    @php 
+                                                        $page = get_page_by_id($row[0]->value);
+                                                    @endphp
 
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Tin tức
-                                                </a>
-                                            </li>
-
-                                            <li>
-                                                <a href="#" title="Gioi thieu"> Liên hệ
-                                                </a>
-                                            </li>
+                                                    @if(!empty($page))
+                                                        <li>
+                                                            <a href="{{$page->url}}" title="{{$page->name}}"> {!! $page->name !!} </a>
+                                                        </li>
+                                                    @endif
+                                                @endforeach
+                                            @endif
                                         </ul>
                                         <div class="footer__col__list--icon pt-4">
                                             <a class="__item__icon" href="#" title="Facebook">
@@ -122,7 +152,7 @@
                         </div>
 
                         <div class="footer__bottom copyright">
-                            <p> All rights reserved @2021 - Hailong Glass </p>
+                            <p> {!! __('All rights reserved @2021 - Hailong Glass') !!} </p>
                         </div>
                     </div>
                 </div>

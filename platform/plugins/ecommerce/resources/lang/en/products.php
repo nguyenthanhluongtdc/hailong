@@ -17,6 +17,7 @@ return [
         'width'                              => 'Width',
         'height'                             => 'Height',
         'weight'                             => 'Weight',
+        'is_price_notification'              => 'Price notification',
         'date'                               => [
             'end'   => 'From date',
             'start' => 'To date',
@@ -106,6 +107,7 @@ return [
     'edit_this_product'                              => 'Edit this product',
     'delete'                                         => 'Delete',
     'related_products'                               => 'Related products',
+    'other_products'                                 => 'Other products',
     'cross_selling_products'                         => 'Cross-selling products',
     'up_selling_products'                            => 'Up-selling products',
     'grouped_products'                               => 'Grouped products',

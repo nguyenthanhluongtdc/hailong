@@ -38,4 +38,12 @@ class ProjectRepository extends RepositoriesAbstract implements ProjectInterface
 
         return $this->applyBeforeExecuteQuery($data)->first();
     }
+
+    public function getAllProject($paginate = 6) {
+        $data = $this->model
+                ->where('status', BaseStatusEnum::PUBLISHED)
+                ->orderBy('created_at', 'DESC');
+
+        return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
+    }
 }

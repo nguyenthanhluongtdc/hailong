@@ -1,6 +1,9 @@
 <?php
 use Platform\Slug\Repositories\Interfaces\SlugInterface;
 use Platform\Page\Models\Page;
+use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Ecommerce\Repositories\Interfaces\ProductInterface;
+use Illuminate\Support\Facades\DB;
 
 register_page_template([
     'default' => 'Default',
@@ -47,13 +50,80 @@ if(!function_exists('get_page_by_id')) {
     function get_page_by_id($id) {
        if($id) {
             $page = Page::where('id',$id)->first();
-            
-            if(!empty($page)) {
-                return $page;
-            } 
-
-            return null;
+            return $page->count() ? $page : [];
        }
+    }
+}
+
+if (!function_exists('get_price_notification_products')) {
+    /**
+     * @param array $params
+     * @return mixed
+     */
+    function get_price_notification_products(array $params = [], $limit = 9)
+    {
+        $params = array_merge([
+            'condition' => [
+                'ec_products.is_price_notification'  => 1,
+                'ec_products.is_variation' => 0,
+                'ec_products.status'       => BaseStatusEnum::PUBLISHED,
+            ],
+            'take'      => $limit,
+            'order_by'  => [
+                'ec_products.created_at' => 'DESC',
+            ],
+            'select'    => ['ec_products.*'],
+            'with'      => [],
+        ], $params);
+
+        return app(ProductInterface::class)->advancedGet($params);
+    }
+}
+
+if (!function_exists('get_other_products')) {
+    /**
+     * Get other products of $product
+     * @param Product $product
+     * @param int $limit
+     * @return array
+     */
+    function get_other_products($product)
+    {
+        $params = [
+            'condition' => [
+                'ec_products.status'       => BaseStatusEnum::PUBLISHED,
+                'ec_products.is_variation' => 0,
+            ],
+            'order_by'  => [
+                'ec_products.order'      => 'ASC',
+                'ec_products.created_at' => 'DESC',
+            ],
+            'take'      => null,
+            'select'    => [
+                'ec_products.*',
+            ],
+            'with'      => [
+                'slugable',
+                'variations',
+                'productCollections',
+                'variationAttributeSwatchesForProductList',
+                'promotions',
+            ],
+        ];
+
+        try {
+            $relatedIds = $product->otherProducts()->allRelatedIds()->toArray();
+        } catch (Exception $exception) {
+            return [];
+        }
+
+        if (!empty($relatedIds)) {
+            $params['condition'][] = ['ec_products.id', 'IN', $relatedIds];
+        } else {
+            $params['condition'][] = ['ec_products.id', '!=', $product->id];
+        }
+
+        return app(ProductInterface::class)->getProducts($params);
     }
 }
 

@@ -14,8 +14,11 @@ class Updatetable extends Migration
     public function up()
     {
         //
-        Schema::table('app_introduces', function (Blueprint $table) {
-            $table->string('template', 60)->nullable();
+        Schema::create('ec_product_other_relations', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->id();
+            $table->integer('from_product_id')->unsigned()->index();
+            $table->integer('to_product_id')->unsigned()->index();
         });
     }
 

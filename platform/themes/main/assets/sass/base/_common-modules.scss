@@ -395,6 +395,10 @@
 
                 .phone {
                     font-size: $font-size17;
+
+                    &::before {
+                        color: $textWhite;
+                    }
                 }
 
                 &__header {

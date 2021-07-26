@@ -334,6 +334,13 @@ class CreateEcommerceTables extends Migration
             $table->integer('to_product_id')->unsigned()->index();
         });
 
+        Schema::create('ec_product_other_relations', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->id();
+            $table->integer('from_product_id')->unsigned()->index();
+            $table->integer('to_product_id')->unsigned()->index();
+        });
+
         Schema::create('ec_product_cross_sale_relations', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->id();

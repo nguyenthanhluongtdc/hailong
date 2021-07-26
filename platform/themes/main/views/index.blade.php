@@ -327,7 +327,7 @@
 
                                     <div class="col-core__content">
                                         <h3 class="col-core__content__title">
-                                            <a href="#" title="{{$post->name}}">
+                                            <a href="{{$post->url}}" title="{{$post->name}}">
                                                 {{$post->name}}
                                             </a>
                                         </h3>

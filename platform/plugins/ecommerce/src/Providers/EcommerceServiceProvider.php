@@ -596,5 +596,19 @@ class EcommerceServiceProvider extends ServiceProvider
                 }
             }
         });
+
+        $this->app->booted(function () {
+            if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
+                \CustomField::registerModule(Product::class)
+                    ->registerRule('basic', __('Product'), Product::class, function () {
+                        return $this->app->make(ProductInterface::class)->pluck('name', 'id');
+                    })
+                    ->expandRule('other', 'Model', 'model_name', function () {
+                        return [
+                            Product::class => __('Product'),
+                        ];
+                    });
+            }
+        });
     }
 }

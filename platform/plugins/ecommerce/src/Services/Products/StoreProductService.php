@@ -111,6 +111,11 @@ class StoreProductService
                 $product->crossSales()->attach(array_filter(explode(',', $request->input('cross_sale_products', ''))));
             }
 
+            if ($request->has('other_products')) {
+                $product->otherProducts()->detach();
+                $product->otherProducts()->attach(array_filter(explode(',', $request->input('other_products', ''))));
+            }
+
             if ($request->has('up_sale_products')) {
                 $product->upSales()->detach();
                 $product->upSales()->attach(array_filter(explode(',', $request->input('up_sale_products', ''))));

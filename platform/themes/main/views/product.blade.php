@@ -1,5 +1,5 @@
 <div id="product-details-page">
-   @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Product-Detail','menu'=>'products-menu'])
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Product-Detail','menu'=>'products-menu'])
 
     <div class="section-product-info-wrapper">
         <div class="container-customize pr-md-0">
@@ -47,43 +47,28 @@
         <div class="container-customize">
             <div class="section-product-more-info">
                 <div class="section-our-policy-wrapper">
-                    <div class="section-our-policy distance-y">
+                    <div class="section-our-policy distance-y _fsx20r16">
                         <div class="row mx-lg-n5 mx-n3">
-                            <div class="col-sm-4 px-lg-5 px-3">
-                                <div class="section-our-policy__col">
-                                    <div class="section-our-policy__col__icon">
-                                        <i class="fad fa-truck-moving"></i>
-                                    </div>
-                                    <div class="section-our-policy__col__content">
-                                        <h3 class="__content__title"> Miễn phí vận chuyển </h3>
-                                        <p class="__content__des"> trong nội thành các thành phố có văn phòng ở công ty </p>
-                                    </div>
-                                </div>
-                            </div>
+                            @php
+                            $slogans = theme_option("slogan_repeater", []);
+                            if(!blank($slogans)) {
+                            $slogans = json_decode($slogans) ?? [];
+                            }
+                            @endphp
 
+                            @foreach ($slogans as $item)
                             <div class="col-sm-4 px-lg-5 px-3">
                                 <div class="section-our-policy__col">
                                     <div class="section-our-policy__col__icon">
-                                        <i class="fas fa-award"></i>
+                                        <i class="{{ $item[0]->value ?? "" }}"></i>
                                     </div>
                                     <div class="section-our-policy__col__content">
-                                        <h3 class="__content__title"> Bảo hành uy tín </h3>
-                                        <p class="__content__des"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
+                                        <h3 class="__content__title">{{ $item[1]->value ?? "" }}</h3>
+                                        <p class="__content__des line__children">{{ $item[2]->value ?? "" }}</p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-sm-4 px-lg-5 px-3">
-                                <div class="section-our-policy__col">
-                                    <div class="section-our-policy__col__icon">
-                                        <i class="fab fa-chrome"></i>
-                                    </div>
-                                    <div class="section-our-policy__col__content">
-                                        <h3 class="__content__title"> Hệ thống quản lý tối ưu </h3>
-                                        <p class="__content__des"> Xử lý, thu hồi sản phẩm lỗi hỏng tại công trình. </p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -91,9 +76,9 @@
                 <div class="more-info">
                     <div class="theme-customize-header-section__header">
                         <h2 class="theme-customize-header-section__header__title">
-                            Đặc tính chung
+                           {!! __('Common characteristic') !!}
                         </h2>
-                       {!! $product->content !!}
+                        {!! $product->content !!}
                     </div>
 
                     <div class="row-picture distance-above">
@@ -122,97 +107,40 @@
         </div>
     </div>
 
-    <div class="section-procedure-wrapper">
+    <div class="section-production-process-wrapper">
         <div class="container-customize">
-            <div class="section-procedure distance-below">
+            <div class="section-production-process distance-below">
                 <div class="row">
                     <div class="col-lg-10 col-md-9">
-                        <div class="theme-customize-header-section__header">
-                            <h2 class="theme-customize-header-section__header__title">
-                                Quy trình sản xuất
-                            </h2>
-                        </div>
-                        <div class="box__tabs">
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item box__tabs__header" role="presentation">
-                                    <button class="nav-link active px-0" id="col-tab1-tab" data-bs-toggle="tab" data-bs-target="#col-tab1" type="button" role="tab" aria-controls="col-tab1" aria-selected="true"> Cắt kính </button>
-                                </li>
+                        @if(has_field($product, 'title_production_process_page_product_detail'))
+                            <div class="theme-customize-header-section__header">
+                                <h2 class="theme-customize-header-section__header__title">
+                                    {!! has_field($product, 'title_production_process_page_product_detail') !!}
+                                </h2>
+                            </div>
+                        @endif
 
-                                <li class="nav-item box__tabs__header" role="presentation">
-                                    <button class="nav-link px-0" id="col-tab2-tab" data-bs-toggle="tab" data-bs-target="#col-tab2" type="button" role="tab" aria-controls="col-tab2" aria-selected="true"> Mài kính </button>
-                                </li>
+                        @if(has_field($product, 'listtabs_production_process_page_product_detail'))
+                            <div class="box__tabs">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    @foreach(has_field($product, 'listtabs_production_process_page_product_detail') as $key => $row)
+                                        <li class="nav-item box__tabs__header" role="presentation">
+                                            <button class="nav-link {{$key==0?'active':''}} px-0" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true"> 
+                                                {!! has_sub_field($row, 'title') !!}
+                                            </button>
+                                        </li>
+                                    @endforeach
+                                </ul>
 
-                                <li class="nav-item box__tabs__header" role="presentation">
-                                    <button class="nav-link px-0" id="col-tab3-tab" data-bs-toggle="tab" data-bs-target="#col-tab3" type="button" role="tab" aria-controls="col-tab3" aria-selected="true"> Khoan, khoét và rửa kính </button>
-                                </li>
-
-                                <li class="nav-item box__tabs__header" role="presentation">
-                                    <button class="nav-link px-0" id="col-tab4-tab" data-bs-toggle="tab" data-bs-target="#col-tab4" type="button" role="tab" aria-controls="col-tab4" aria-selected="true"> Công đoạn tôi kính </button>
-                                </li>
-                            </ul>
-
-                            <div class="tab-content box__tabs__content px-0" id="myTabContent">
-                                <div class="tab-pane fade show active _fsx20r16" id="col-tab1" role="tabpanel" aria-labelledby="col-tab1-tab">
-                                    <p>
-                                        Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
-                                        sống chúng ta với nhiều đặc tính nổi bật vượt trội hơn so với
-                                        những loại kính thông thường khác. Trong đó, việc sử dụng kinh
-                                        cường lực đến từ thương hiệu Việt Nhật - Hải Long đem đến sự an
-                                        toàn cho ngôi nhà của bạn mà vẫn đảm bảo được tính thẩm mỹ
-                                        cao.
-                                    </p>
-
-                                    <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="1110" height="500" />
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade px-0" id="col-tab2" role="tabpanel" aria-labelledby="col-tab2-tab">
-                                    <p>
-                                        Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
-                                        sống chúng ta với nhiều đặc tính nổi bật vượt trội hơn so với
-                                        những loại kính thông thường khác. Trong đó, việc sử dụng kinh
-                                        cường lực đến từ thương hiệu Việt Nhật - Hải Long đem đến sự an
-                                        toàn cho ngôi nhà của bạn mà vẫn đảm bảo được tính thẩm mỹ
-                                        cao.
-                                    </p>
-
-                                    <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="1110" height="500" />
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade px-0" id="col-tab3" role="tabpanel" aria-labelledby="col-tab3-tab">
-                                    <p>
-                                        Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
-                                        sống chúng ta với nhiều đặc tính nổi bật vượt trội hơn so với
-                                        những loại kính thông thường khác. Trong đó, việc sử dụng kinh
-                                        cường lực đến từ thương hiệu Việt Nhật - Hải Long đem đến sự an
-                                        toàn cho ngôi nhà của bạn mà vẫn đảm bảo được tính thẩm mỹ
-                                        cao.
-                                    </p>
-
-                                    <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="1110" height="500" />
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade px-0" id="col-tab4" role="tabpanel" aria-labelledby="col-tab3-tab">
-                                    <p>
-                                        Kính Cường Lực hiện nay được ứng dụng phổ biến trong cuộc
-                                        sống chúng ta với nhiều đặc tính nổi bật vượt trội hơn so với
-                                        những loại kính thông thường khác. Trong đó, việc sử dụng kinh
-                                        cường lực đến từ thương hiệu Việt Nhật - Hải Long đem đến sự an
-                                        toàn cho ngôi nhà của bạn mà vẫn đảm bảo được tính thẩm mỹ
-                                        cao.
-                                    </p>
-
-                                    <div class="tab-picture mt-lg-5 mt-3">
-                                        <img class="mw-100" src="{{Theme::asset()->url('/images/products/image7.jpg')}}" alt="ảnh-product" width="1110" height="500" />
-                                    </div>
+                                <div class="tab-content box__tabs__content px-0" id="myTabContent">
+                                    @foreach(has_field($product, 'listtabs_production_process_page_product_detail') as $key => $row)
+                                        <div class="tab-pane fade show {{$key==0?'active':''}} _fsx20r16" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
+                                            {!! has_sub_field($row, 'content') !!}
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
-                        </div>
+                        @endif
                     </div>
 
                     <div class="col-lg-2 col-md-3">
@@ -226,46 +154,28 @@
         </div>
     </div>
 
-    <div class="section-other-product-wrapper">
-        <div class="container-customize">
-            <div class="section-other-product">
-                <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
-                        Sản phẩm khác
-                    </h2>
+    @if(!empty(get_other_products($product)))
+        <div class="section-other-product-wrapper">
+            <div class="container-customize">
+                <div class="section-other-product">
+                    <div class="theme-customize-header-section__header">
+                        <h2 class="theme-customize-header-section__header__title">
+                            {!! __('Other products') !!}
+                        </h2>
+                    </div>
+                    <ul class="section-products-list-cate-pro distance-below">
+                        @foreach(get_other_products($product) as $other_product)
+                            <li class="section-products-list-cate-pro__item">
+                                <a class="section-products-list-cate-pro__item__link" href="{{$other_product->url}}" title="Kính cường lực"> 
+                                    {!! $other_product->name !!}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
-                <ul class="section-products-list-cate-pro distance-below">
-                    <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính cường lực"> Kính cường lực </a>
-                    </li>
-                    <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính low -E "> Kính low -E </a>
-                    </li>
-                    <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link active" href="/product-detail" title="Kính dán an toàn"> Kính dán an toàn </a>
-                    </li>
-                    <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính rạn"> Kính rạn </a>
-                    </li>
-                    <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính hộp"> Kính hộp </a>
-                    </li>
-                    <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính phun cát"> Kính phun cát </a>
-                    </li>
-                    <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính màu trang trí"> Kính màu trang trí </a>
-                    </li>
-                    <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính ngăn cháy"> Kính ngăn cháy </a>
-                    </li>
-                    <li class="section-products-list-cate-pro__item">
-                        <a class="section-products-list-cate-pro__item__link" href="/product-detail" title="Kính uốn cong"> Kính uốn cong </a>
-                    </li>
-                </ul>
             </div>
         </div>
-    </div>
+    @endif
 
     {!! do_shortcode('[shoppingguide][/shoppingguide]') !!}
 

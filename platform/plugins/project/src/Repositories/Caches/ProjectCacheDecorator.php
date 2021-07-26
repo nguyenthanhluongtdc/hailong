@@ -19,4 +19,9 @@ class ProjectCacheDecorator extends CacheAbstractDecorator implements ProjectInt
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }
+
+    public function getAllProject($paginate)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }

@@ -26,7 +26,8 @@ class Project extends BaseModel
         'name',
         'description',
         'content',
-        'images',
+        'image',
+        'is_featured',
         'status',
     ];
 

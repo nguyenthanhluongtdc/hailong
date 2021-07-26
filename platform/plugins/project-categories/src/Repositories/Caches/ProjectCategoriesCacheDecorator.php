@@ -7,4 +7,11 @@ use Platform\ProjectCategories\Repositories\Interfaces\ProjectCategoriesInterfac
 
 class ProjectCategoriesCacheDecorator extends CacheAbstractDecorator implements ProjectCategoriesInterface
 {
+    /**
+     * {@inheritDoc}
+     */
+    public function getAllCategory()
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }

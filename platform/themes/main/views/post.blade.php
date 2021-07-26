@@ -1,21 +1,5 @@
 <div id="news-detail-page">
-    <div class="section-banner-wrapper pb-4">
-        <div class="section-breadcrumb">
-            <div class="container-customize">
-                <ul class="section-breadcrumb__list pt-4">
-                    <li class="__breadcrumb__item">
-                        <a class="__breadcrumb__link" href="/" title="Trang chu"> Trang chủ </a> 
-                    </li>
-                    <li class="__breadcrumb__item">
-                    Tin tức
-                    </li>
-                    <li class="__breadcrumb__item active">
-                        Căn hộ cao cấp The Minato Residence
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    @includeIf('theme.main::views.components.tabs-banner')
     <div class="news__detail__wrapper">
         <div class="container-customize">
             <div class="content__zone">
@@ -55,7 +39,7 @@
                             <div class="other__post">    
                                     <h4 class="title theme-customize-header-section__header__title">Tin tức khác</h4>
                                <ul class="list__post">
-                                @foreach (get_recent_posts(5) as $post_recent)
+                                @foreach (get_recent_posts(theme_option('number_of_post_other')) as $post_recent)
                                    <li class="post-item">
                                        <a href="{{$post_recent->url}}" title="{{$post_recent->name}}">
                                             {{$post_recent->name}}
@@ -71,7 +55,7 @@
                         <div class="right">
                             <div class="releted__post">
                                 <div class="">
-                                    <h4 class="title-related theme-customize-header-section__header__title" >Tin liên quan</h4>
+                                    <h4 class="title-related theme-customize-header-section__header__title" > {!! __('Related post') !!} </h4>
                                 </div>
                                 <div class="list-post-related">
                                     @foreach (get_related_posts($post->id,5) as $post_related)

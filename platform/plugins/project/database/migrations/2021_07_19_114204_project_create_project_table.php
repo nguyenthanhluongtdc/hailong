@@ -18,7 +18,7 @@ class ProjectCreateProjectTable extends Migration
             $table->text('description')->nullable();
             $table->longText('content')->nullable();
             $table->string('status', 60)->default('published');
-            $table->text('images')->nullable();
+            $table->text('image')->nullable();
             $table->timestamps();
         });
     }

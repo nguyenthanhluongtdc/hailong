@@ -5,6 +5,7 @@ use Platform\Base\Http\Controllers\BaseController;
 use Platform\Project\Repositories\Interfaces\ProjectInterface;
 use Platform\Gallery\Repositories\Interfaces\GalleryMetaInterface;
 use SlugHelper;
+use SeoHelper;
 use Theme;
 
 class PublicController extends BaseController {
@@ -26,8 +27,18 @@ class PublicController extends BaseController {
         }
 
         $project = $this->projectRepository->getProject($slug->reference_id);
-        Theme::breadcrumb()->add(__('Home'), route('public.index'))
-                            ->add($project->name, $project->url);
+        $category = $project->categories->first();
+
+        SeoHelper::setTitle($project->name)
+                    ->setDescription($project->description);
+
+        Theme::breadcrumb()->add(__('Home'), route('public.index'));
+        
+        if($category) {
+            Theme::breadcrumb()->add($category->name, $category->url);
+        }
+                            
+        Theme::breadcrumb()->add(SeoHelper::getTitle(), $project->url);              
 
         $galleries = app(GalleryMetaInterface::class)->getFirstBy(
             [

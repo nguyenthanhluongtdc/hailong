@@ -57,15 +57,9 @@ class ProjectForm extends FormAbstract
                     'with-short-code' => true,
                 ],
             ])
-            ->add('images', 'mediaImage', [
+            ->add('image', 'mediaImage', [
                 'label'      => trans('core/base::forms.image'),
                 'label_attr' => ['class' => 'control-label'],
-            ])
-            ->add('categories[]', 'categoryMulti', [
-                'label'      => trans('plugins/project::project.form.categories'),
-                'label_attr' => ['class' => 'control-label required'],
-                'choices'    => get_all_project_categories(),
-                'value'      => old('categories', $selectedCategories),
             ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
@@ -74,6 +68,17 @@ class ProjectForm extends FormAbstract
                     'class' => 'form-control select-full',
                 ],
                 'choices'    => BaseStatusEnum::labels(),
+            ])
+            ->add('is_featured', 'onOff', [
+                'label'         => trans('core/base::forms.is_featured'),
+                'label_attr'    => ['class' => 'control-label'],
+                'default_value' => false,
+            ])
+            ->add('categories[]', 'categoryMulti', [
+                'label'      => trans('plugins/project::project.form.categories'),
+                'label_attr' => ['class' => 'control-label required'],
+                'choices'    => get_all_project_categories(),
+                'value'      => old('categories', $selectedCategories),
             ])
             ->setBreakFieldPoint('status');
     }

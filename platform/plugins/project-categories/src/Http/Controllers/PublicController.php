@@ -9,6 +9,7 @@ use Platform\ProjectCategories\Models\ProjectCategories;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Project\Repositories\Interfaces\ProjectInterface;
 use SlugHelper;
+use SeoHelper;
 use Theme;
 
 class PublicCOntroller extends BaseController
@@ -61,6 +62,13 @@ class PublicCOntroller extends BaseController
         $paginate = theme_option('number_projects_per_page_in_category'); 
 
         $projects = $this->projectRepository->getByCategory($category->id, $paginate);
+
+        SeoHelper::setTitle($category->name)
+                    ->setDescription($category->description);
+
+        Theme::breadcrumb()->add(__('Home'), route('public.index'))
+                            ->add(SeoHelper::getTitle(), $category->url);
+        
 
         return Theme::scope('project-categories.projects', compact('projects'),
             'plugins/project-categories::projects')->render();
