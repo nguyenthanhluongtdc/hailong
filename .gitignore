@@ -564,5 +564,5 @@ public/docs
 public/themes/main/css/common.css
 public/themes/main/css/common.css.map
 public/themes/main/js/common.js
-#storage/framework/
-#storage/app/purifier/
+storage/framework/
+storage/app/purifier/
