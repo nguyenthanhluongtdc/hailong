@@ -30,7 +30,7 @@
     </div>
     @endif
 
-    <div class="section-products-list-cate-pro-wrapper bg-f3">
+    <div class="section-products-list-cate-pro-wrapper bg-f3 price-notification">
         <div class="container-customize">
             <div class="theme-customize-header-section__header">
                 <h2 class="theme-customize-header-section__header__title">
@@ -49,11 +49,13 @@
                     <div class="modal fade" id="{{$slug}}" role="dialog" aria-labelledby="{{$slug}}" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle"> {!! $product->name !!} </h5>
+                                <div>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
+                                        <i class="fal fa-times"></i>
                                     </button>
+                                </div>
+                                <div class="modal-header">
+                                    <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle"> {!! $product->name !!} </h5>
                                 </div>
                                 <div class="modal-body p-0">
                                     @if(has_field($product, 'content_module_price_notification_page_product_detail'))

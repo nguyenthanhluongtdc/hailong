@@ -20,6 +20,74 @@
             }
         }
     }
+
+    .price-notification {
+        .modal-dialog {
+            @media (min-width: 1200px) {
+                max-width: 60%;
+            }
+            max-width: 70%;
+            @media (max-width: 576px) {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .modal-content {
+                padding-bottom: $size3;
+                border: none;
+                margin-left: -1px;
+                margin-right: -1px;
+                border-radius: 0;
+                overflow: hidden;
+                .modal-header {
+                    padding-top: 0;
+                    border: none;
+                    @media (min-width: 1200px) {
+                        padding-left: $size2_5;
+                    }
+                    padding-left: $size1;
+                    h5 {
+                        font-size: $size1_5;
+                        text-transform: capitalize;
+                    }
+                }
+
+                .modal-body {
+                    border: none;
+                    table {
+                        border: none;
+                        tbody {
+                            th,td {
+                                @media (min-width: 1200px) {
+                                    padding-left: $size2_5;
+                                }
+                                padding-left: $size1;
+                                padding-top: $size1;
+                                padding-bottom: $size1;
+                                border-color: $borderececec;
+                            }
+
+                            >tr:first-child {
+                                th, td {
+                                    border-top: none;
+                                    border-left: none;
+                                    border-right: none;
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .close {
+                i {
+                    font-size: $size2;
+                    padding: $size1_5;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
 }
 
 .section-our-policy-wrapper {
