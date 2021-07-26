@@ -57,12 +57,13 @@ class ProjectServiceProvider extends ServiceProvider
                 'permissions' => ['project.index'],
             ]);
         });
-        
+
         $this->app->register(HookServiceProvider::class);
         \SlugHelper::registerModule(Project::class);
         \SlugHelper::setPrefix(Project::class, 'projects');
-        \Gallery::registerModule([Project::class]);
-
+        if (is_plugin_active('Gallery')) {
+            \Gallery::registerModule([Project::class]);
+        }
         $this->app->booted(function () {
             if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
                 \CustomField::registerModule(Project::class)
