@@ -17,6 +17,7 @@
                     opacity: 50%;
                     margin-bottom: $size1_5;
                     display: inline-block;
+                    font-size: $font-size17; 
                 }
                 .share {
                     display: flex;
@@ -92,6 +93,9 @@
                         }
                         .time {
                             opacity: 50%;
+                            font-size: $font-size17; 
+                            margin-top: $size1;
+                            display: inline-block;
                         }
                     }
                 }

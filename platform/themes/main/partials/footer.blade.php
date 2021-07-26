@@ -32,20 +32,20 @@
                                         @endif
                                         
                                         <div class="pt-4 pb-4 mt-4 mb-4 row footer__col__list__icon">
-                                            <div class="col-3"> 
-                                                <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image4.jpg')}}" alt="" /> 
-                                            </div>
-                                            <div class="col-3 pl-0"> 
-                                                <img width="90" height="60" class="mw-100" src="{{Theme::asset()->url('images/footer/image3.jpg')}}" alt="" /> 
-                                            </div>
-                                            <div class="px-2 col-2 pl-0"> 
-                                                <img width="80" height="50" class="mw-100" src="{{Theme::asset()->url('images/footer/image1.jpg')}}" alt="" /> 
-                                            </div>
-                                            <div class="col-4 px-0"> 
-                                                <a href="http://online.gov.vn/?AspxAutoDetectCookieSupport=1" title="">
-                                                    <img width="120" height="50" class="mw-100" src="{{Theme::asset()->url('images/footer/image2.jpg')}}" alt=""  />
-                                                </a> 
-                                            </div>
+                                            @php 
+                                                $linked_list = theme_option('footer_linked_list_repeater');
+                                                if(!blank($linked_list)){
+                                                    $linked_list = json_decode($linked_list) ?? [];
+                                                }
+                                            @endphp
+
+                                            @foreach($linked_list as $item)
+                                                <div class="col-3 px-0"> 
+                                                    <a href="{{$item[1]->value}}" title="{{$item[0]->value}}">
+                                                        <img width="120" height="50" class="mw-100" src="{{rvMedia::getImageUrl($item[2]->value)}}" alt=""  />
+                                                    </a> 
+                                                </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -87,14 +87,14 @@
                                         </p>
                                         <ul class="f-listaboutus__content footer__col__list">
                                             @php 
-                                                $col_link_one = theme_option('footer_col_link_two_repeater');
-                                                if(!blank($col_link_one)){
-                                                    $col_link_one = json_decode($col_link_one) ?? [];
+                                                $col_link_two = theme_option('footer_col_link_two_repeater');
+                                                if(!blank($col_link_two)){
+                                                    $col_link_two = json_decode($col_link_two) ?? [];
                                                 }
                                             @endphp
 
-                                            @if(!empty($col_link_one) && !blank($col_link_one))
-                                                @foreach($col_link_one as $row)
+                                            @if(!empty($col_link_two) && !blank($col_link_two))
+                                                @foreach($col_link_two as $row)
                                                     @php 
                                                         $page = get_page_by_id($row[0]->value);
                                                     @endphp
@@ -117,14 +117,14 @@
                                         </p>
                                         <ul class="f-listinfo-other__content footer__col__list">
                                             @php 
-                                                $col_link_one = theme_option('footer_col_link_three_repeater');
-                                                if(!blank($col_link_one)){
-                                                    $col_link_one = json_decode($col_link_one) ?? [];
+                                                $col_link_three = theme_option('footer_col_link_three_repeater');
+                                                if(!blank($col_link_three)){
+                                                    $col_link_three = json_decode($col_link_three) ?? [];
                                                 }
                                             @endphp
 
-                                            @if(!empty($col_link_one) && !blank($col_link_one))
-                                                @foreach($col_link_one as $row)
+                                            @if(!empty($col_link_three) && !blank($col_link_three))
+                                                @foreach($col_link_three as $row)
                                                     @php 
                                                         $page = get_page_by_id($row[0]->value);
                                                     @endphp
@@ -138,13 +138,18 @@
                                             @endif
                                         </ul>
                                         <div class="footer__col__list--icon pt-4">
-                                            <a class="__item__icon" href="#" title="Facebook">
-                                                <img width="35" height="35" src="{{Theme::asset()->url('images/hailong/fb_icon.png')}}" alt=""/>
-                                            </a>
+                                            @php
+                                                $social_network = theme_option("footer_social_network_repeater", []);
+                                                if(!blank($social_network)) {
+                                                $social_network = json_decode($social_network) ?? [];
+                                                }
+                                            @endphp
 
-                                            <a class="__item__icon" href="#" title="Zalo">
-                                                <img width="35" height="35" src="{{Theme::asset()->url('images/hailong/zalo_icon.png')}}" alt="" />
-                                            </a>
+                                            @foreach($social_network as $item)
+                                                <a class="__item__icon" href="{{rvMedia::getImageUrl($item[1]->value)}}" title="{{rvMedia::getImageUrl($item[0]->value)}}">
+                                                    <img width="35" height="35" src="{{rvMedia::getImageUrl($item[2]->value)}}" alt=""/>
+                                                </a>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +157,7 @@
                         </div>
 
                         <div class="footer__bottom copyright">
-                            <p> {!! __('All rights reserved @2021 - Hailong Glass') !!} </p>
+                            <p> {!! theme_option('copyright') !!} </p>
                         </div>
                     </div>
                 </div>

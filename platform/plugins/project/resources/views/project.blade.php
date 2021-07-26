@@ -55,7 +55,7 @@
         <div class="container-customize">
             <div class="box-common-intro section-intro theme-customize-header-section">
                 
-                <div class="section-intro__content__bottom">
+                <div class="section-intro__content__bottom text-center">
                     @if(has_field($project, 'title_module_list_image'))
                         <div class="theme-customize-header-section__header pt-0">
                             <h2 class="theme-customize-header-section__header__title">
@@ -100,21 +100,39 @@
                 <div class="col-lg-3 col-md-4 col-12">
                     <div class="share">
                         <p class="share_text">
-                            Chia sẻ
+                            {!! __('Share') !!}
                             <p>
+                            @php
+                                $social_network = theme_option("social_network_repeater", []);
+                                if(!blank($social_network)) {
+                                    $social_network = json_decode($social_network) ?? [];
+                                }
+                            @endphp
+
+                            @if(!blank($social_network) && !empty($social_network))
                                 <ul class="list-share">
-                                    <li class="share-item"><a href="" alt="icon"><img class="" src="{{Theme::asset()->url('images/news/facebook.jpg')}}" alt="icon-fb"></a></li>
-                                    <li class="share-item"><a href="" alt="icon"><img class="" src="{{Theme::asset()->url('images/news/instagram.jpg')}}" alt="icon-insta"></a></li>
-                                    <li class="share-item"><a href="" alt="icon"><img class="" src="{{Theme::asset()->url('images/news/lien-ket.jpg')}}" alt="icon-lk"></a></li>
-                                    <li class="share-item"><a href="" alt="icon"><img class="" src="{{Theme::asset()->url('images/news/linkedin.jpg')}}" alt="icon-link"></a></li>
+                                @foreach($social_network as $item)
+                                    <li class="share-item">
+                                        <a href="{{$item[1]->value}}" title="{{$item[0]->value}}">
+                                            <img width="" height="" src="{{rvMedia::getImageUrl($item[2]->value)}}" alt="{{$item[0]->value}}">
+                                        </a>
+                                    </li>
+                                @endforeach
                                 </ul>
+                            @endif
+                            </p>
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-8 col-12">
-                    <div class="info-contact">
-                        <p>Liên hệ ngay để được hộ trợ tư vấn:<a href="" title="Liên hệ ngay để được hộ trợ tư vấn" class="info-contact__link">Hotline: 1900 4696</a></p>
-
-                        <p> Xem chi tiết sản phẩm tại đây:<a href="http://colorglass.vn/" title="Xem chi tiết sản phẩm tại đây">http://colorglass.vn/</a></p>
+                    <div class="info-contact d-xl-flex justify-content-between px-5">
+                        <div class="mr-xl-3"> {!! __('Contact us now for a consultation') !!}
+                            <a href="tel: {{theme_option('number_phone_genaral')}}" title="{{theme_option('number_phone_genaral')}}" class="info-contact__link">Hotline: {{theme_option('number_phone_genaral')}}</a>
+                        </div>
+                        <span class="d-xl-block d-none"> | </span>
+                        <div class="ml-xl-3"> {!! __('See product details here') !!}
+                            <a href="{{theme_option('website_link_general')}}" target="__blank" title="{{theme_option('website_link_general')}}">{{theme_option('website_link_general')}}</a>
+                        </div>
 
                     </div>
                 </div>

@@ -21,23 +21,41 @@
                             </div>
                             <div class="share">
                                 <p class="share_text">
-                                    Chia sẻ
+                                    {!! __('Share') !!}
                                 <p>
-                                 <ul class="list-share">
-                                     <li class="share-item"><a href="" title="icon"><img width="20" height="20" class="img-fluid" src="{{Theme::asset()->url('images/news/facebook.jpg')}}" alt="icon-fb"></a></li>
-                                     <li class="share-item"><a href="" title="icon"><img width="20" height="20" class="img-fluid" src="{{Theme::asset()->url('images/news/instagram.jpg')}}" alt="icon-share"></a></li>
-                                     <li class="share-item"><a href="" title="icon"><img width="20" height="20" class="img-fluid" src="{{Theme::asset()->url('images/news/lien-ket.jpg')}}" alt="icon-lk"></a></li>
-                                     <li class="share-item"><a href="" title="icon"><img width="20" height="20" class="img-fluid" src="{{Theme::asset()->url('images/news/linkedin.jpg')}}" alt="icon-linkedin"></a></li>
-                                </ul>   
+                                @php
+                                    $social_network = theme_option("social_network_repeater", []);
+                                    if(!blank($social_network)) {
+                                        $social_network = json_decode($social_network) ?? [];
+                                    }
+                                @endphp
+
+                                @if(!blank($social_network) && !empty($social_network))
+                                    <ul class="list-share">
+                                        @foreach($social_network as $item)
+                                            <li class="share-item">
+                                                <a href="{{$item[1]->value}}" title="{{$item[0]->value}}">
+                                                    <img width="20" height="20" class="img-fluid" src="{{rvMedia::getImageUrl($item[2]->value)}}" alt="icon-fb">
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>   
+                                @endif
                             </div>
-                            <div class="info-contact">
-                                <p>Liên hệ ngay để được hộ trợ tư vấn:<a class="info-contact__link" href="" title="hot-line">Hotline: 1900 4696</a></p>
+                            <div class="info-contact text-left">
+                                <p>{!! __('Contact us now for a consultation') !!}
+                                    <a class="info-contact__link" href="tel: {{theme_option('number_phone_genaral')}}" title="{{theme_option('number_phone_genaral')}}">{{theme_option('number_phone_genaral')}}</a>
+                                </p>
                                 
-                                <p> Xem chi tiết sản phẩm tại đây:<a href="http://colorglass.vn/" title="Xem chi tiết sản phẩm tại đây">http://colorglass.vn/</a></p>
-                            
+                                <p>{!! __('See product details here') !!}
+                                    <a href="{{theme_option('website_link_general')}}" title="Xem chi tiết sản phẩm tại đây">{{theme_option('website_link_general')}}
+                                    </a>
+                                </p>
                             </div>
                             <div class="other__post">    
-                                    <h4 class="title theme-customize-header-section__header__title">Tin tức khác</h4>
+                                    <h4 class="title theme-customize-header-section__header__title">
+                                        {!! __('other news') !!}
+                                    </h4>
                                <ul class="list__post">
                                 @foreach (get_recent_posts(theme_option('number_of_post_other')) as $post_recent)
                                    <li class="post-item">

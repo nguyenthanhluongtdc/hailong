@@ -1,17 +1,33 @@
 <div id="sidebar-main" class="d-md-block d-none">
+
     <div class="box box-center">
-        <button class="box__item button-zalo">
-            <span class="box__item__text sub-zalo">
-                <b> Zalo</b>
-                <b> Code</b>
+        @if(isset($zalocode))
+            <button class="box__item button-zalo">
+                <span class="box__item__text sub-zalo">
+                    <b> Zalo</b>
+                    <b> Code</b>
+                </span>
+
+                <div class="zalocode">
+                    <i class="fas fa-times-circle icon-close"></i>
+                    <img src="{{Theme::asset()->url('images/contact/zalocode.jpg')}}" alt="" />
+                </div>
+
+            </button>
+        @endif
+
+        <button class="box__item">
+            <span class="box__item__icon language_current text-uppercase"> 
+                @if(Language::getCurrentLocale()=='vi')
+                    VN
+                @else 
+                    {{Language::getCurrentLocale()}}
+                @endif
             </span>
-
-            <div class="zalocode">
-                <i class="fas fa-times-circle icon-close"></i>
-                <img src="{{Theme::asset()->url('images/contact/zalocode.jpg')}}" alt="" />
+            <div class="box__item__content">
             </div>
-
         </button>
+
         <button class="box__item">
             <span class="box__item__icon"> <i class="fas fa-phone-alt"></i> </span>
             <div class="box__item__content">

@@ -278,5 +278,180 @@ app()->booted(function () {
                     ]
                 ],
             ],
+        ])
+        ->setField([
+            'id'         => 'footer_social_network_repeater',
+            'section_id' => 'opt-footer',
+            'type'       => 'repeater',
+            'label'      => __('Social network'),
+            'attributes' => [
+                'name'   => 'footer_social_network_repeater',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Name'),
+                        'attributes' => [
+                            'name'    => 'name',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ],
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Link'),
+                        'attributes' => [
+                            'name'    => 'link',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ],
+                    [
+                        'type'       => 'mediaImage',
+                        'label'      => __('Image'),
+                        'attributes' => [
+                            'name'    => 'image',
+                            'value'   => null
+                        ],
+                    ]
+                ],
+            ],
+        ])
+        ->setField([
+            'id'         => 'footer_linked_list_repeater',
+            'section_id' => 'opt-footer',
+            'type'       => 'repeater',
+            'label'      => __('Linked list'),
+            'attributes' => [
+                'name'   => 'footer_linked_list_repeater',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Name'),
+                        'attributes' => [
+                            'name'    => 'name',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ],
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Link'),
+                        'attributes' => [
+                            'name'    => 'link',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ],
+                    [
+                        'type'       => 'mediaImage',
+                        'label'      => __('Image'),
+                        'attributes' => [
+                            'name'    => 'image',
+                            'value'   => null
+                        ],
+                    ]
+                ],
+            ],
+        ])
+        ->setSection([ // Set section with no field
+            'title' => __('Social Network'),
+            'desc' => __('Social Networksettings'),
+            'id' => 'opt-social-network',
+            'subsection' => true,
+            'icon' => 'fa fa-home',
+        ])
+        ->setField([
+            'id'         => 'social_network_repeater',
+            'section_id' => 'opt-social-network',
+            'type'       => 'repeater',
+            'label'      => __('Repeater Social network'),
+            'attributes' => [
+                'name'   => 'social_network_repeater',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Social network name'),
+                        'attributes' => [
+                            'name'    => 'name',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ],
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Link'),
+                        'attributes' => [
+                            'name'  => 'link',
+                            'value' => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ]
+                    ],
+                    [
+                        'type'       => 'mediaImage',
+                        'label'      => __('Image'),
+                        'attributes' => [
+                            'name'    => 'image',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 255,
+                            ],
+                        ],
+                    ]
+                ],
+            ],
+        ])->setField([
+            'id' => 'number_phone_genaral',
+            'section_id' => 'opt-text-subsection-general',
+            'type' => 'text', // text, password, email, number
+            'label' => __('SDT'),
+            'attributes' => [
+                'name' => 'number_phone_genaral',
+                'value' => null, // default value
+                'options' => [
+                    'class' => 'form-control',
+                    'data-counter' => 11,
+                ]
+            ]
+        ])->setField([
+            'id' => 'website_link_general',
+            'section_id' => 'opt-text-subsection-general',
+            'type' => 'text', // text, password, email, number
+            'label' => __('web link'),
+            'attributes' => [
+                'name' => 'website_link_general',
+                'value' => null, // default value
+                'options' => [
+                    'class' => 'form-control',
+                    'data-counter' => 200,
+                ]
+            ]
+        ])->setSection([ // Set section with no field
+            'title' => __('Sidebar'),
+            'desc' => __('Sidebar settings'),
+            'id' => 'opt-sidebar',
+            'subsection' => true,
+            'icon' => 'fa fa-home',
         ]);
 });

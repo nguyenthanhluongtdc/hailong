@@ -105,9 +105,10 @@
 
                             <div class="policy custom-checkbox">
                                 <label class="customcheck">
-                                    <input type="checkbox" checked="checked"><a title=" {{__('Commit')}}" href="" class="policy__link">
+                                    <input type="checkbox" checked="checked">
+                                    <span title=" {{__('Commit')}}" class="policy__link">
                                         {{__('Commit')}}
-                                    </a>
+                                    </span>
                                     <span class="checkmark"></span>
                                 </label>
                                 <button class="send-button" type="submit" value="SEND">
