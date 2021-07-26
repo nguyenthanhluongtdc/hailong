@@ -38,5 +38,3 @@
             ])
         !!}
     </header>
-
-    @includeIf("theme.main::views.components.sidebar")

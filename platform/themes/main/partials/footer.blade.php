@@ -163,20 +163,22 @@
                 </div>
             </div>
         </footer>
-
+        
         {!! Theme::footer() !!}
-        </body>
-        </html>
-<!-- Messenger Plugin chat Code -->
-{{-- <div id="fb-root"></div> --}}
-
+        @if(url()->current()==route('public.single'))
+            @includeIf("theme.main::views.components.sidebar",['zalocode'=>true])
+        @else
+            @includeIf("theme.main::views.components.sidebar")
+        @endif
+    </body>
+</html>
 <!-- Your Plugin chat code -->
 <div id="fb-customer-chat" class="fb-customerchat">
 </div>
 
 <script>
   var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "100787755617214");
+  chatbox.setAttribute("page_id", "{{theme_option('facebook_id_sidebar')}}");
   chatbox.setAttribute("attribution", "biz_inbox");
 
   window.fbAsyncInit = function() {

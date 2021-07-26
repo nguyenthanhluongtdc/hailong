@@ -63,6 +63,9 @@
                     color: $textWhite;
                     text-decoration: none;
                 }
+                .char_:last-child {
+                    display: none;
+                }
                 
                 span.text-top {
                     display: block;

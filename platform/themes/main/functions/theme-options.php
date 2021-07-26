@@ -447,11 +447,129 @@ app()->booted(function () {
                     'data-counter' => 200,
                 ]
             ]
-        ])->setSection([ // Set section with no field
+        ])
+        ->setSection([ // Set section with no field
             'title' => __('Sidebar'),
             'desc' => __('Sidebar settings'),
             'id' => 'opt-sidebar',
             'subsection' => true,
             'icon' => 'fa fa-home',
+        ])
+        ->setField([ // Set field for section
+            'id' => 'image_zalocode_sidebar',
+            'section_id' => 'opt-sidebar',
+            'type' => 'mediaImage',
+            'label' => __('Image zalocode'),
+            'attributes' => [
+                'name' => 'image_zalocode_sidebar',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => __('Image zalocode'),
+                    'data-counter' => 200,
+                ]
+            ],
+            'helper' =>  __('Get icon in link https://fontawesome.com/v5.15/icons'),
+        ])
+        ->setField([ // Set field for section
+            'id' => 'icon_phone_sidebar',
+            'section_id' => 'opt-sidebar',
+            'type' => 'text',
+            'label' => __('Icon phone'),
+            'attributes' => [
+                'name' => 'icon_phone_sidebar',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => __('Icon phone'),
+                    'data-counter' => 200,
+                ]
+            ],
+            'helper' =>  __('Get icon in link https://fontawesome.com/v5.15/icons'),
+        ])
+        ->setField([
+            'id'         => 'phone_number_list',
+            'section_id' => 'opt-sidebar',
+            'type'       => 'repeater',
+            'label'      => __('Repeater Phone number'),
+            'attributes' => [
+                'name'   => 'phone_number_list',
+                'value'  => null,
+                'fields' => [
+                    [
+                        'type'       => 'text',
+                        'label'      => __('Phone number'),
+                        'attributes' => [
+                            'name'    => 'phone_number',
+                            'value'   => null,
+                            'options' => [
+                                'class'        => 'form-control',
+                                'data-counter' => 20,
+                            ],
+                        ],
+                    ],
+                ]
+            ],
+        ]) 
+        ->setField([ // Set field for section
+            'id' => 'icon_email_sidebar',
+            'section_id' => 'opt-sidebar',
+            'type' => 'text',
+            'label' => __('Icon email'),
+            'attributes' => [
+                'name' => 'icon_email_sidebar',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => __('Icon email'),
+                    'data-counter' => 200,
+                ]
+            ],
+            'helper' =>  __('Get icon in link https://fontawesome.com/v5.15/icons'),
+        ])
+        ->setField([ // Set field for section
+            'id' => 'text_email_sidebar',
+            'section_id' => 'opt-sidebar',
+            'type' => 'text',
+            'label' => __('Text email'),
+            'attributes' => [
+                'name' => 'text_email_sidebar',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => __('Text email'),
+                    'data-counter' => 200,
+                ]
+            ]
+        ]) 
+        ->setField([ // Set field for section
+            'id' => 'icon_message_sidebar',
+            'section_id' => 'opt-sidebar',
+            'type' => 'text',
+            'label' => __('Icon message'),
+            'attributes' => [
+                'name' => 'icon_message_sidebar',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => __('Icon message'),
+                    'data-counter' => 200,
+                ]
+            ]
+        ])
+        ->setField([ // Set field for section
+            'id' => 'facebook_id_sidebar',
+            'section_id' => 'opt-sidebar',
+            'type' => 'text',
+            'label' => __('Facebook id'),
+            'attributes' => [
+                'name' => 'facebook_id_sidebar',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => __('Facebook id'),
+                    'data-counter' => 200,
+                ]
+            ]
         ]);
 });

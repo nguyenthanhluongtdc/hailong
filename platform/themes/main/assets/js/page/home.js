@@ -1,26 +1,46 @@
 export default {
     default: function() {
         try {
-            const { imageWhy, imageProducts } = window._homePage;
+            if(window._homePage != undefined) {
+                const { imageWhy, imageProducts } = window._homePage;
+
+                if(imageWhy.length!=0) {
+                    //hover module product, change image src
+                    var imageModuleWhy = document.getElementById("image-why-choose");
+                    var arrItemWhy = document.getElementsByClassName("item-why");
+                    for (var i = 0; i < arrItemWhy.length; i++) {
+                        arrItemWhy[i].onmouseover = function(e) {
+                            e.preventDefault();
+                            var imgId = $(this).attr("data-image-id");
+                            var imgSrc = imageWhy[imgId];
+                            var style = ["background-image: url(", imgSrc, ");"].join(
+                                ""
+                            );
+                            imageModuleWhy.setAttribute("style", style);
+                        };
+                    }
+                }
+
+                if(imageProducts.length!=0) {
+                    var imageOurproduct = document.getElementById("image-ourproduct");
+                    var arr = document.getElementsByClassName(
+                        "list-cate-pro__item__link"
+                    );
+                    for (var i = 0; i < arr.length; i++) {
+                        arr[i].onmouseover = function(e) {
+                            var a = e.target;
+                            var imgId = a.getAttribute("data-image-id");
+                            var imgSrc = imageProducts[imgId];
+                            imageOurproduct.src = imgSrc;
+                        };
+                    }
+                }
+
+                this.initSlice();
+            }
+            
 
             $(".set-height").height($(".get-height").height());
-
-            //hover module product, change image src
-            var imageModuleWhy = document.getElementById("image-why-choose");
-            var arrItemWhy = document.getElementsByClassName("item-why");
-            for (var i = 0; i < arrItemWhy.length; i++) {
-                arrItemWhy[i].onmouseover = function(e) {
-                    e.preventDefault();
-                    var imgId = $(this).attr("data-image-id");
-                    var imgSrc = imageWhy[imgId];
-                    var style = ["background-image: url(", imgSrc, ");"].join(
-                        ""
-                    );
-                    imageModuleWhy.setAttribute("style", style);
-                };
-            }
-
-            this.initSlice();
 
             $(".btn-read-more.tabs").on("click", function(e) {
                 e.preventDefault();
@@ -41,19 +61,8 @@ export default {
                 }
             });
 
-            var imageOurproduct = document.getElementById("image-ourproduct");
-            var arr = document.getElementsByClassName(
-                "list-cate-pro__item__link"
-            );
-            for (var i = 0; i < arr.length; i++) {
-                arr[i].onmouseover = function(e) {
-                    var a = e.target;
-                    var imgId = a.getAttribute("data-image-id");
-                    var imgSrc = imageProducts[imgId];
-                    imageOurproduct.src = imgSrc;
-                };
-            }
-            this.initSlice();
+           
+
         } catch (error) {
             console.log("error", error);
         }

@@ -292,4 +292,5 @@
         {!! do_shortcode('[showrooms][/showrooms]') !!}
     </div>
 
+    @includeIf("theme.main::views.components.modal-google-map");
 </div>

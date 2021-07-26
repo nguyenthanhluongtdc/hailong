@@ -10,47 +10,66 @@
 
                 <div class="zalocode">
                     <i class="fas fa-times-circle icon-close"></i>
-                    <img src="{{Theme::asset()->url('images/contact/zalocode.jpg')}}" alt="" />
+                    <img src="{{rvMedia::getImageUrl(theme_option('image_zalocode_sidebar'))}}" alt="Zalo code" />
                 </div>
 
             </button>
+
+        @else 
+            <button class="box__item">
+                <span class="box__item__icon language_current text-uppercase"> 
+                    @if(Language::getCurrentLocale()=='vi')
+                        VN
+                    @else 
+                        {{Language::getCurrentLocale()}}
+                    @endif
+                </span>
+                <div class="box__item__content">
+                </div>
+            </button>
+
         @endif
 
         <button class="box__item">
-            <span class="box__item__icon language_current text-uppercase"> 
-                @if(Language::getCurrentLocale()=='vi')
-                    VN
-                @else 
-                    {{Language::getCurrentLocale()}}
-                @endif
-            </span>
-            <div class="box__item__content">
-            </div>
+            <span class="box__item__icon"> <i class="fas {{theme_option('icon_phone_sidebar')}}"></i> </span>
+            @php
+                $phone_number_list = theme_option("phone_number_list", []);
+                if(!blank($phone_number_list)) {
+                    $phone_number_list = json_decode($phone_number_list) ?? [];
+                }
+            @endphp
+
+            @if(!blank($phone_number_list && !empty($phone_number_list)))
+                <div class="box__item__content">
+                    @foreach($phone_number_list as $item)
+                        <a href="tel: {{$item[0]->value}}" title="{{$item[0]->value}}" >
+                            {{$item[0]->value}}
+                        </a>
+                        <span class="char_ mx-2">
+                            |
+                        </span> 
+                    @endforeach
+                </div>
+            @endif
         </button>
 
         <button class="box__item">
-            <span class="box__item__icon"> <i class="fas fa-phone-alt"></i> </span>
-            <div class="box__item__content">
-                <a href="tel: 09892223222" title="0989.22.23.222" class="mr-2"> 0989.22.23.222 </a> |
-                <a href="tel: 09892223222" title="0989.22.23.222" class="ml-2"> 0989.22.23.222 </a>
-            </div>
-        </button>
-
-        <button class="box__item">
-            <a class="d-flex align-items-center" href="mailto: haillong@gmail.com">
-                <i class="box__item__icon fas fa-envelope"></i>
+            <a class="d-flex align-items-center" href="mailto: {{theme_option('text_email_sidebar')}}">
+                <i class="box__item__icon {{theme_option('icon_email_sidebar')}}"></i>
                 <span class="text"> Email </span>
             </a>
         </button>
 
-        <button class="box__item"  >
-            <span class="box__item__icon fb-customerchat messenger"  > <i class="fas fa-comment-alt-lines"></i> </span>
-
-        </button>
-
+        @if(theme_option('icon_message_sidebar')!=null)
+            <button class="box__item"  >
+                <span class="box__item__icon fb-customerchat messenger"> 
+                    <i class="{{theme_option('icon_message_sidebar')}}"></i> 
+                </span>
+            </button>
+        @endif
+        
         <button class="box__item back-top" id="backtop">
             <span class="box__item__icon"><i class="fal fa-arrow-up"></i> </span>
-
             <div class="box__item__content d-block">
                 <span class="text-top"> TOP </span>
             </div>
