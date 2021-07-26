@@ -34,12 +34,12 @@
                         <!-- relative -->
                         <div class="splide__track">
                             <ul class="splide__list">
-                                @if(has_field($page, 'banner_image'))
-                                @foreach(get_field($page, 'banner_image') as $row)
-                                <li class="splide__slide">
-                                    <img alt=" ảnh slider" width="1600" height="570" src="{{ RvMedia::getImageUrl(get_sub_field($row, 'image'))}}" />
-                                </li>
-                                @endforeach
+                                @if(has_field($page, 'list_banner_image_page_home'))
+                                    @foreach(has_field($page, 'list_banner_image_page_home') as $row)
+                                        <li class="splide__slide">
+                                            <img alt="ảnh slider" width="1600" height="570" src="{{ rvMedia::getImageUrl(has_sub_field($row, 'img'))}}" />
+                                        </li>
+                                    @endforeach
                                 @endif
                             </ul>
                         </div>
