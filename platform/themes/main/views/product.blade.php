@@ -25,7 +25,7 @@
                              </div>
 
                              <div class="box-content__bottom _fsx20r16">
-                                 <div class="__bottom__line__one"> {!! __('General characteristics') !!} </div>
+                                 <div class="__bottom__line__one"> {!! __('Common characteristic') !!} </div>
                                  <div class="__bottom__line__two"> {!! __('Production process') !!} </div>
 
                                  <div class="box__btn">
