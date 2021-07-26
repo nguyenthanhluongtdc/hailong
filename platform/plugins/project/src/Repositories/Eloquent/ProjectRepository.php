@@ -26,17 +26,21 @@ class ProjectRepository extends RepositoriesAbstract implements ProjectInterface
         return $this->applyBeforeExecuteQuery($data)->limit($limit)->get();
     }
 
-    public function getProject($projectId) {
-        $data = $this->model
-                ->where(function($query) use ($projectId) {
-                    $query
-                    ->where([
-                        'id' => $projectId,
-                        'status' =>  BaseStatusEnum::PUBLISHED
-                    ]);
-                });
+    public function getProject($slug) {
 
-        return $this->applyBeforeExecuteQuery($data)->first();
+        $condition = [
+            'id'     => $slug->reference_id,
+            'status' => BaseStatusEnum::PUBLISHED,
+        ];
+
+        $project = app(ProjectInterface::class)
+            ->getFirstBy($condition);
+
+        if (empty($project)) {
+            abort(404);
+        }
+
+        return $project;
     }
 
     public function getAllProject($paginate = 6) {

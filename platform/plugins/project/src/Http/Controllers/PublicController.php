@@ -26,7 +26,8 @@ class PublicController extends BaseController {
             abort(404);
         }
 
-        $project = $this->projectRepository->getProject($slug->reference_id);
+        $project = $this->projectRepository->getProject($slug);
+        
         $category = $project->categories->first();
 
         SeoHelper::setTitle($project->name)
@@ -38,13 +39,18 @@ class PublicController extends BaseController {
             Theme::breadcrumb()->add($category->name, $category->url);
         }
                             
-        Theme::breadcrumb()->add(SeoHelper::getTitle(), $project->url);              
+        Theme::breadcrumb()->add(SeoHelper::getTitle(), $project->url); 
+        
+        $galleries = [];
+        if (is_plugin_active('gallery')) {
+            $galleries = app(GalleryMetaInterface::class)->getFirstBy(
+                [
+                    'reference_id'=>$project->id,
+                    'reference_type' => Project::class,
+                ]);
+        }
 
-        $galleries = app(GalleryMetaInterface::class)->getFirstBy(
-            [
-                'reference_id'=>$project->id,
-                'reference_type' => Project::class,
-            ]);
+        
 
         return Theme::scope('project.project', compact('project','galleries'), 'plugins/project::project')->render();
     }

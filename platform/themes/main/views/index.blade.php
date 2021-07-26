@@ -3,21 +3,50 @@
         <div class="container-customize">
             <div class="section-intro distance-below">
                 <div class="d-inline-block">
-                    <h1 class="section-intro__title"> {!! has_field($page,'title_main') ? get_field($page,'title_main') : "" !!} </h1>
+                    <h1 class="section-intro__title"> {!! has_field($page,'title_page_home') ? get_field($page,'title_page_home') : "" !!} </h1>
                     <ul class="info-contact mb-0">
-                        @if(has_field($page, 'hotline_info'))
-                            @foreach(get_field($page, 'hotline_info') as $row)
-                            <li class="info-contact__item">
-                                <a class="info-contact__link" href="#" title="cskh">
-                                    <span> {{has_sub_field($row, 'title') ? get_sub_field($row, 'title') : ""}} </span>
-                                    @if(has_sub_field($row, 'content'))
-                                            @foreach (get_sub_field($row, 'content') as $key => $item)
-                                                <b>{{ $key != 0 ? "- " : '' }} {{ get_sub_field($item, 'value') ?? "" }}</b>
-                                            @endforeach
-                                    @endif
+                        @if(has_field($page, 'cskh_page_home'))
+                         <li class="info-contact__item">
+                                <span> 
+                                    {!! __('CSKH24/7') !!} 
+                                </span>
+                                <a class="info-contact__link" href="tel: {{has_field($page, 'cskh_page_home')}}" title="{{has_field($page, 'cskh_page_home')}}">
+                                    {!! has_field($page, 'cskh_page_home') !!}
                                 </a>
                             </li>
-                            @endforeach
+                        @endif
+
+                        @if(has_field($page, 'list_hotline_page_home'))
+                            <li class="info-contact__item">
+                                <span> 
+                                    {!! __('Hotline') !!}:
+                                </span>
+                                @foreach(has_field($page, 'list_hotline_page_home') as $row)
+                                    <a class="info-contact__link" href="tel: {{has_sub_field($row, 'value')}}" title="{{has_sub_field($row, 'value')}}">
+                                        {!! has_sub_field($row, 'value') !!}
+                                    </a>
+                                    <span class="_char">
+                                        -
+                                    </span>
+                                @endforeach
+                            </li>
+                        @endif
+
+                        @if(has_field($page, 'list_email_page_home'))
+                            <li class="info-contact__item">
+                                <span> 
+                                    {!! __('Email') !!}:
+                                </span>
+                                @foreach(has_field($page, 'list_email_page_home') as $row)
+                                    <a class="info-contact__link" href="mailto: {{has_sub_field($row, 'value')}}" title="{{has_sub_field($row, 'value')}}">
+                                        {!! has_sub_field($row, 'value') !!}
+                                    </a>
+
+                                    <span class="_char">
+                                        -
+                                    </span>
+                                @endforeach
+                            </li>
                         @endif
                     </ul>
                 </div>
@@ -363,56 +392,3 @@
 
 </script>
 
-<style>
-    .box-sub {
-        display: none;
-    }
-
-    header {
-        margin-top: 2rem;
-    }
-
-    .container-customize-header {
-        max-width: 1920px;
-        padding-left: 16% !important;
-        padding-right: 16% !important;
-    }
-
-    @media (max-width: 1680px) {
-        .container-customize-header {
-            padding-left: 10% !important;
-            padding-right: 10% !important;
-        }
-    }
-
-    @media (max-width: 992px) {
-        .container-customize-header {
-            padding-left: 8% !important;
-            padding-right: 8% !important;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .container-customize-header {
-            padding-left: 15px !important;
-            padding-right: 15px !important;
-        }
-    }
-
-    .bilingual {
-        display: block !important;
-    }
-
-    @media (min-width: 992px) {
-        .col-index-3 {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-
-        .col-index-9 {
-            flex: 0 0 75%;
-            max-width: 75%;
-        }
-    }
-
-</style>

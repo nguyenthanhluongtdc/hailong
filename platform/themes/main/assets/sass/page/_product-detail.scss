@@ -40,6 +40,10 @@
 
     .section-production-process-wrapper {
 
+        img {
+            max-width: 100%;
+        }
+
         .section-production-process {
             border-bottom: 1px solid $borderf3f3f3;
             .box__btn {
