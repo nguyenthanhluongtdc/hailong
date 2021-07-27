@@ -134,7 +134,6 @@
 
 <script>
      window._scriptCopyLink = {
-        check: true,
         message: "{{ __('Copy successful') }}"
     };
 </script>
