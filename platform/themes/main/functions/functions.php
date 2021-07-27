@@ -34,7 +34,9 @@ Menu::addMenuLocation('introduce-tabs', 'Danh sách tabs giới thiệu');
 RvMedia::setUploadPathAndURLToPublic();
 RvMedia::addSize('news_home_featured', 250, 160)
     ->addSize('news_featured', 600, 270)
-    ->addSize('news_thumbnail', 272, 183);
+    ->addSize('news_thumbnail', 272, 183)
+    ->addSize('project_home_featured', 410, 440)
+    ->addSize('project_featured', 550, 400);
 
 if (!function_exists('get_slug_by_reference')) {
     function get_slug_by_reference($reference_id)
