@@ -27,7 +27,7 @@
 
                         @if(has_sub_field($step, 'description'))
                             <p class="step">
-                                <b> B{{$key++}}. </b>
+                                <b> B{{$key + 1}}. </b>
                                 <span>
                                     {!! has_sub_field($step, 'description') !!}
                                 </span>
