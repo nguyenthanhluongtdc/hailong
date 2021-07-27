@@ -125,6 +125,29 @@ export default {
             });
 
            
+		    var id = '#dialog';
+		
+		//transition effect		
+            $('#mask').fadeIn(500);	
+            $('#mask').fadeTo("slow");	
+                
+            //transition effect
+            $(id).fadeIn(1000); 	
+        
+            //if close button is clicked
+            $('.window .close').click(function (e) {
+                //Cancel the link behavior
+                e.preventDefault();
+                
+                $('#mask').hide();
+                $('.window').hide();
+            });		
+            
+            //if mask is clicked
+            $('#mask').click(function () {
+                $(this).hide();
+                $('.window').hide();
+            });		
 
         } catch (error) {
             console.log("error", error);
