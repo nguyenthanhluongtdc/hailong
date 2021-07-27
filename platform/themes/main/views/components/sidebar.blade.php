@@ -15,13 +15,19 @@
 
             </button>
 
-        @else 
+        @else
             @php
-                $supportedLocales = array_reverse(Language::getSupportedLocales());
+                $supportedLocales = array_reverse(Language::getSupportedLocales()) ;
                 $showRelated = setting('language_show_default_item_if_current_version_not_existed', true);
+                $currentLocate = Arr::get($supportedLocales, Language::getCurrentLocale(), []);
             @endphp
+
             <button class="box__item">
-                @foreach ($supportedLocales as $localeCode => $properties)
+                <a rel="alternate" hreflang="{{ Language::getCurrentLocale() }}" class="box__item__icon language_current text-uppercase" href="{{ $showRelated ? Language::getLocalizedURL(Language::getCurrentLocale()) : url(Language::getCurrentLocale()) }}">
+                    <span class="text-uppercase"> {{ $currentLocate['lang_locale']=='vi'?'VN': $currentLocate['lang_locale'] }} </span>
+                </a>
+                <span class="_char"> | </span>
+                @foreach (array_diff_key($supportedLocales, [Language::getCurrentLocale() => "xy"])  as $localeCode => $properties)
                     <a rel="alternate" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
                         <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
                     </a>
@@ -48,7 +54,7 @@
                         </a>
                         <span class="char_ mx-2">
                             |
-                        </span> 
+                        </span>
                     @endforeach
                 </div>
             @endif
@@ -63,12 +69,12 @@
 
         @if(theme_option('icon_message_sidebar')!=null)
             <button class="box__item"  >
-                <span class="box__item__icon fb-customerchat messenger"> 
-                    <i class="{{theme_option('icon_message_sidebar')}}"></i> 
+                <span class="box__item__icon fb-customerchat messenger">
+                    <i class="{{theme_option('icon_message_sidebar')}}"></i>
                 </span>
             </button>
         @endif
-        
+
         <button class="box__item back-top" id="backtop">
             <span class="box__item__icon"><i class="fal fa-arrow-up"></i> </span>
             <div class="box__item__content d-block">
@@ -109,7 +115,7 @@
 
     btnZalo.hover(function(){
         $('.zalocode').show('slow');
-        
+
         $('.icon-close').click(function(){
            $('.zalocode').hide('slow');
         })
