@@ -7,8 +7,8 @@
                     <ul class="info-contact mb-0">
                         @if(has_field($page, 'cskh_page_home'))
                          <li class="info-contact__item">
-                                <span> 
-                                    {!! __('CSKH24/7') !!} 
+                                <span>
+                                    {!! __('CSKH24/7') !!}
                                 </span>
                                 <a class="info-contact__link" href="tel: {{has_field($page, 'cskh_page_home')}}" title="{{has_field($page, 'cskh_page_home')}}">
                                     {!! has_field($page, 'cskh_page_home') !!}
@@ -18,7 +18,7 @@
 
                         @if(has_field($page, 'list_hotline_page_home'))
                             <li class="info-contact__item">
-                                <span> 
+                                <span>
                                     {!! __('Hotline') !!}:
                                 </span>
                                 @foreach(has_field($page, 'list_hotline_page_home') as $row)
@@ -34,7 +34,7 @@
 
                         @if(has_field($page, 'list_email_page_home'))
                             <li class="info-contact__item">
-                                <span> 
+                                <span>
                                     {!! __('Email') !!}:
                                 </span>
                                 @foreach(has_field($page, 'list_email_page_home') as $row)
@@ -316,64 +316,64 @@
             <div class="section-news__content _fsx20r16">
                 <div class="row">
                     @php
-                    $posts = get_latest_posts(3);
+                        $posts = get_latest_posts(3);
                     @endphp
 
                     @if(!empty($posts))
-                    <div class="col-lg-6">
-                        <div class="col-core col-big h-100">
-                            <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}" class="h-100 w-100 d-lg-inline-block">
-                                <img src="{{rvMedia::getImageUrl($posts[0]->image)}}" alt="{{$posts[0]->name}}" class="d-lg-none w-100" />
+                        <div class="col-lg-6">
+                            <div class="col-core col-big h-100">
+                                <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}" class="h-100 w-100 d-lg-inline-block">
+                                    <img src="{{rvMedia::getImageUrl($posts[0]->image, 'news_home_featured')}}" alt="{{$posts[0]->name}}" class="d-lg-none w-100" />
 
-                                <div class="img h-100 d-lg-block d-none" style="background-image: url({{rvMedia::getImageUrl($posts[0]->image)}}); background-size: cover; background-repeat: no-repeat;">
+                                    <div class="img h-100 d-lg-block d-none" style="background-image: url({{rvMedia::getImageUrl($posts[0]->image, 'news_home_featured')}}); background-size: cover; background-repeat: no-repeat;">
 
-                                </div>
-                            </a>
-
-                            <div class="col-core__content">
-                                <h3 class="col-core__content__title">
-                                    <a href="{{$posts[0]->url}} " title="Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp"> {{$posts[0]->name}} </a>
-                                </h3>
-                                <div class="col-core__content__time">
-                                    <span> {{$posts[0]->created_at->format('H:i d/m/Y')}} </span>
-                                </div>
-                                <p class="col-core__content__des des-children">
-                                    {{$posts[0]->description}}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-
-                    @if(count($posts) > 1)
-                    <div class="col-lg-6 mt-lg-0 mt-3">
-                        <div class="box-news-main">
-                            @php unset($posts[0]) @endphp
-                            @foreach($posts as $post)
-                            <div class="col-core col-flex-box">
-                                <div class="col-core__box__img pr-md-3 pr-0">
-                                    <a href="{{$post->url}}" title="{{$post->name}}">
-                                        <img width="250" height="160" class="col-core__img" src="{{rvMedia::getImageUrl($post->image)}}" alt="{{$post->name}}" />
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
 
                                 <div class="col-core__content">
                                     <h3 class="col-core__content__title">
-                                        <a href="{{$post->url}}" title="{{$post->name}}">
-                                            {{$post->name}}
-                                        </a>
+                                        <a href="{{$posts[0]->url}} " title="Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp"> {{$posts[0]->name}} </a>
                                     </h3>
                                     <div class="col-core__content__time">
-                                        <span> {{$post->created_at->format('H:i d/m/Y')}} </span>
+                                        <span> {{$posts[0]->created_at->format('H:i d/m/Y')}} </span>
                                     </div>
                                     <p class="col-core__content__des des-children">
-                                        {{$post->description}}
+                                        {{$posts[0]->description}}
                                     </p>
                                 </div>
                             </div>
-                            @endforeach
                         </div>
-                    </div>
+                    @endif
+
+                    @if(count($posts) > 1)
+                        <div class="col-lg-6 mt-lg-0 mt-3">
+                            <div class="box-news-main">
+                                @php unset($posts[0]) @endphp
+                                @foreach($posts as $post)
+                                <div class="col-core col-flex-box">
+                                    <div class="col-core__box__img pr-md-3 pr-0">
+                                        <a href="{{$post->url}}" title="{{$post->name}}">
+                                            <img width="250" height="160" class="col-core__img" src="{{rvMedia::getImageUrl($post->image, 'news_home_featured')}}" alt="{{$post->name}}" />
+                                        </a>
+                                    </div>
+
+                                    <div class="col-core__content">
+                                        <h3 class="col-core__content__title">
+                                            <a href="{{$post->url}}" title="{{$post->name}}">
+                                                {{$post->name}}
+                                            </a>
+                                        </h3>
+                                        <div class="col-core__content__time">
+                                            <span> {{$post->created_at->format('H:i d/m/Y')}} </span>
+                                        </div>
+                                        <p class="col-core__content__des des-children">
+                                            {{$post->description}}
+                                        </p>
+                                    </div>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
                     @endif
                 </div>
             </div>
