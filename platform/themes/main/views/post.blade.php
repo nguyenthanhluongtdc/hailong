@@ -1,5 +1,30 @@
 <div id="news-detail-page">
-    @includeIf('theme.main::views.components.tabs-banner')
+    <div class="section-banner-wrapper">
+        <div class="section-breadcrumb">
+            <div class="container-customize">
+                <ul class="section-breadcrumb__list py-4">
+                    @foreach (Theme::breadcrumb()->getCrumbs() as $i => $crumb)
+                        @if ($i != (count(Theme::breadcrumb()->getCrumbs()) - 1))
+                            @if($i==0) 
+                                <li class="__breadcrumb__item">
+                                    <a class="__breadcrumb__link" href="{{ $crumb['url'] }}" title="{!! $crumb['label'] !!}"> {!! $crumb['label'] !!} </a> 
+                                </li>
+                            @else 
+                                <li class="__breadcrumb__item">
+                                    {!! $crumb['label'] !!}
+                                </li>
+                            @endif
+                        @else
+                            <li class="__breadcrumb__item active">
+                                {!! $crumb['label'] !!}
+                            </li>
+                        @endif
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="news__detail__wrapper">
         <div class="container-customize">
             <div class="content__zone">

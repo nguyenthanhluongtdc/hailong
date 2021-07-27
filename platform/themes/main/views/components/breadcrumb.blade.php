@@ -4,7 +4,7 @@
             @foreach (Theme::breadcrumb()->getCrumbs() as $i => $crumb)
                 @if ($i != (count(Theme::breadcrumb()->getCrumbs()) - 1))
                     <li class="__breadcrumb__item">
-                        <a class="__breadcrumb__link" href="{{ $crumb['url'] }}" title="Trang chu"> {!! $crumb['label'] !!} </a> 
+                        <a class="__breadcrumb__link" href="{{ $crumb['url'] }}" title="{!! $crumb['label'] !!}"> {!! $crumb['label'] !!} </a> 
                     </li>
                 @else
                     <li class="__breadcrumb__item active">
