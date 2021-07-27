@@ -105,7 +105,7 @@
                         @if(isset($products) && $products->count() >= 1)
                         <div class="col-md-4 col-12 order-md-1 order-2 pr-md-0 set-height">
                             <div class="section-ourproduct__left h-100">
-                                <img class="w-100 h-100 " id="image-ourproduct" width="600" height="540" src="{{\RvMedia::getImageUrl($products->first()->image)}}" alt="product" />
+                                <img class="w-100 h-100 " id="image-ourproduct" width="600" height="540" src="{{\RvMedia::getImageUrl($products->first()->image, 'product_home_featured', false, RvMedia::getDefaultImage())}}" alt="product" />
                             </div>
                         </div>
 
@@ -119,7 +119,7 @@
                                 </div>
                                 <ul class="list-cate-pro">
                                     @foreach($products as $key => $product)
-                                    @php $imageProducts[] = RvMedia::getImageUrl($product->image); @endphp
+                                    @php $imageProducts[] = RvMedia::getImageUrl($product->image, 'product_home_featured', false, RvMedia::getDefaultImage()); @endphp
                                     <li class="list-cate-pro__item">
                                         <a class="list-cate-pro__item__link" href="{{ $product->url }}" title="Kính cường lực" data-image-id="{{$key}}"> {{$product->name}} </a>
                                     </li>

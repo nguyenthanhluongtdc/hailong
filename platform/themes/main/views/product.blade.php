@@ -40,7 +40,7 @@
                          <div class="box-picture h-100 d-md-block d-none" style="background-image: url({{rvMedia::getImageUrl($product->image)}}); background-size: cover; background-repeat: no-repeat;">
                          </div>
 
-                         <img class="mw-100 mt-md-0 mt-n2 d-md-none d-block" src="{{rvMedia::getImageUrl($product->image)}}" alt="" width="750" height="500">
+                         <img class="mw-100 mt-md-0 mt-n2 d-md-none d-block" src="{{rvMedia::getImageUrl($product->image, 'product_featured', false, RvMedia::getDefaultImage())}}" alt="" width="750" height="500">
                      </div>
                  </div>
              </div>
