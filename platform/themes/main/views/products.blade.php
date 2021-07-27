@@ -1,5 +1,4 @@
 <div id="products-page">
-
     @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Product','menu'=>'products-menu'])
 
     <div class="section-intro-wrapper">

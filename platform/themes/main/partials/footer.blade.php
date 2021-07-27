@@ -38,13 +38,11 @@
                                                     $linked_list = json_decode($linked_list) ?? [];
                                                 }
                                             @endphp
-
+                                            
                                             @foreach($linked_list as $item)
-                                                <div class="col-3 px-0"> 
                                                     <a href="{{$item[1]->value}}" title="{{$item[0]->value}}">
                                                         <img width="120" height="50" class="mw-100" src="{{rvMedia::getImageUrl($item[2]->value)}}" alt=""  />
                                                     </a> 
-                                                </div>
                                             @endforeach
                                         </div>
                                     </div>

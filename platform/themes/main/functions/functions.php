@@ -60,7 +60,8 @@ if (!function_exists('get_page_by_id')) {
     {
         if ($id) {
             $page = Page::where('id', $id)->first();
-            return $page->count() ? $page : [];
+
+            return $page ? $page : [];
         }
     }
 }
