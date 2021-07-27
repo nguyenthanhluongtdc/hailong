@@ -31,7 +31,7 @@
                                             @endforeach
                                         @endif
                                         
-                                        <div class="pt-4 pb-4 mt-4 mb-4 row footer__col__list__icon">
+                                        <div class="pt-4 pb-4 mt-4 mb-4 footer__col__list__icon">
                                             @php 
                                                 $linked_list = theme_option('footer_linked_list_repeater');
                                                 if(!blank($linked_list)){
