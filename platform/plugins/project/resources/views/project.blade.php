@@ -145,7 +145,14 @@
     @endif
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
+
 <script>
+    window._scriptCopyLink = {
+        check: true,
+        message: "{{ __('Copy successful') }}"
+    };
+
     $(document).ready(function() {
         new Splide('#section-intro__carousel__top', {
             heightRatio: 0.5625

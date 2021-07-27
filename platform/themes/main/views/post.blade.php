@@ -104,3 +104,9 @@
     </div>
     @includeIf("theme.main::views.components.form-signup")
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
+
+<script>
+    window._scriptCopyLink = true;
+</script>
