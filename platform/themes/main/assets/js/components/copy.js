@@ -1,7 +1,7 @@
 export default function copy() {
     const {check, message} = window._scriptCopyLink;
 
-   if(check) {
+   if(check!=undefined) {
         var $temp = $("<input>");
         var $url = $(location).attr('href');
 
