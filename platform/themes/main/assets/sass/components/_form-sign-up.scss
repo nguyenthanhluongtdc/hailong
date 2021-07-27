@@ -20,10 +20,6 @@
         }
     }
     .newsletter_form {
-        .form-control {
-            opacity: 20%;
-            // display: inline;
-        }
         button {
             cursor: pointer;
             background: none;
@@ -50,6 +46,26 @@
             min-height: 150px;
             max-width: 100%;
         }
+    }
+}
+
+.newsletter_form {
+    input[type=email]{
+        color: $textWhite ;
+        background-color: #5bac6f;
+        border: none;
+        border-radius: 0;
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $textWhite;
+        opacity: 1; /* Firefox */
+    }
+
+    input[type=email]:focus{
+        color: $textWhite ;
+        background-color: #5bac6f;
+        border: none;
     }
 }
 
