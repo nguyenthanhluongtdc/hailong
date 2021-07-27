@@ -448,6 +448,16 @@ app()->booted(function () {
                 ]
             ]
         ])
+        ->setField([
+            'id' => 'image_popup',
+            'section_id' => 'opt-text-subsection-general',
+            'type' => 'mediaImage',
+            'label' => __('Image popup'),
+            'attributes' => [
+                'name' => 'image_popup',
+                'value' => null,
+            ],
+        ])
         ->setSection([ // Set section with no field
             'title' => __('Sidebar'),
             'desc' => __('Sidebar settings'),
