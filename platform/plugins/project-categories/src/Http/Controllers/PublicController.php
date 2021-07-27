@@ -58,7 +58,14 @@ class PublicCOntroller extends BaseController
             abort(404);
         }
 
-        $category = $slug->reference;
+        $condition = [
+            'id'     => $slug->reference_id,
+            'status' => BaseStatusEnum::PUBLISHED,
+        ];
+
+        $category = app(ProjectCategoriesInterface::class)
+                    ->getFirstBy($condition, ['*'], ['slugable']);
+
         $paginate = theme_option('number_projects_per_page_in_category'); 
 
         $projects = $this->projectRepository->getByCategory($category->id, $paginate);
@@ -68,7 +75,10 @@ class PublicCOntroller extends BaseController
 
         Theme::breadcrumb()->add(__('Home'), route('public.index'))
                             ->add(SeoHelper::getTitle(), $category->url);
-        
+
+        if (isset($category->slug) && $category->slug !== $slug->key) {
+            return redirect()->to(route('public.single', SlugHelper::getPrefix(ProjectCategories::class) . '/' . $category->slug));
+        }
 
         return Theme::scope('project-categories.projects', compact('projects'),
             'plugins/project-categories::projects')->render();
