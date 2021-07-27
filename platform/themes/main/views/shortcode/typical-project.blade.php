@@ -24,7 +24,7 @@
                               <li class="splide__slide">
                                   <div class="splide__slide__img">
                                       <a href="{{$project->url}}" title="{{$project->name}}">
-                                          <img width="410" height="440" src="{{rvMedia::getImageUrl($project->image)}}" alt="ảnh slider" />
+                                          <img width="410" height="440" src="{{rvMedia::getImageUrl($project->image, 'project_home_featured', false, RvMedia::getDefaultImage())}}" alt="ảnh slider" />
                                       </a>
                                   </div>
                                   <div class="splide__slide__content">
