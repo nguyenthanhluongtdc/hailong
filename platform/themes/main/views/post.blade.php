@@ -108,5 +108,8 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
 
 <script>
-    window._scriptCopyLink = true;
+     window._scriptCopyLink = {
+        check: true,
+        message: "{{ __('Copy successful') }}"
+    };
 </script>
