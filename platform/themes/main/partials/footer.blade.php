@@ -164,7 +164,7 @@
         
         {!! Theme::footer() !!}
         @if(url()->current()==route('public.single'))
-            @includeIf("theme.main::views.components.sidebar",['zalocode'=>true])
+            @includeIf("theme.main::views.components.sidebar",['language'=>true])
         @else
             @includeIf("theme.main::views.components.sidebar")
         @endif

@@ -50,10 +50,6 @@ export default {
                 header {
                     margin-top: 2rem;
                 }
-
-                .bilingual {
-                    display: inline-block;
-                }
             
                 .container-customize-header {
                     max-width: 1920px;
@@ -83,7 +79,7 @@ export default {
                 }
             
                 .bilingual {
-                    display: block !important;
+                    display: none !important;
                 }
             
                 @media (min-width: 992px) {
