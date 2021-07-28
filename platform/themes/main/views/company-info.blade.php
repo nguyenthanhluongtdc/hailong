@@ -206,16 +206,6 @@
 
 <script>
     $(document).ready(function() {
-        var map = document.getElementsByClassName("modal-map")[0];
-        var arr = document.getElementsByClassName('link-map');
-
-        for (var i = 0; i < arr.length; i++) {
-            arr[i].onclick = function(e) {
-                var a = e.target;
-                var url = a.getAttribute('data-lat');
-                map.src = url;
-            }
-        }
 
         new Splide('#section-intro__carousel', {
             heightRatio: 0.5625
@@ -239,24 +229,6 @@
                 , }
             , }
         }).mount();
-
-        if ($('.tab-pane.show .line__item:hidden').length == 0) {
-            $('.btn-read-more.tabs').hide();
-        }
-        $(".btn-read-more.tabs").on('click', function(e) {
-            e.preventDefault();
-
-            if ($('.tab-pane.show .line__item:hidden').length == 0) {
-                $('.tab-pane.show .line__item').slice(3).slideUp();
-                $(this).text('Xem thêm');
-            } else {
-                $('.tab-pane.show .line__item:hidden').slice(0, 2).slideDown();
-
-                if ($('.tab-pane.show .line__item:hidden').length == 0) {
-                    $(this).text('Thu gọn');
-                }
-            }
-        });
     })
 
 </script>
