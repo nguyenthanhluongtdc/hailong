@@ -36,7 +36,7 @@
                          </div>
                      </div>
 
-                     <div class="col-md-7 mt-xl-5 mt-4">
+                     <div class="col-md-7 mt-xl-5 mt-4" data-aos="fade-up-left">
                          <div class="box-picture h-100 d-md-block d-none" style="background-image: url({{rvMedia::getImageUrl($product->image)}}); background-size: cover; background-repeat: no-repeat;">
                          </div>
 

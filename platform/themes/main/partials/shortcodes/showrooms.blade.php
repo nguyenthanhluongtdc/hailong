@@ -19,7 +19,7 @@
 
             <div class="box-common-showroom__content">
                 <div class="row">
-                    <div class="col-lg-7 col-12">
+                    <div class="col-lg-7 col-12" data-aos="zoom-in">
                         <div class="box__tabs">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 @foreach($regions as $key => $region)
@@ -60,7 +60,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-5 col-12">
+                    <div class="col-lg-5 col-12" data-aos="zoom-in">
                         <div class="box__infoOther">
                             <div class="theme-customize-header-section__header pt-0">
                                 <h3 class="theme-customize-header-section__header__title text-white mb-2">
