@@ -306,9 +306,10 @@ class PublicProductController
                 'take'      => 1,
             ]);
         }
-        $districts = District::select('name')->get();
-        $provinces = Province::select('name')->get();
-        $wards = Ward::select('name')->get();
+        $districts = District::select('id', 'name')->get();
+        $provinces = Province::select('id', 'name')->get();
+        $wards = Ward::select('id', 'name')->get();
+        $products = 'dsadsa';
 
         return Theme::scope('main.product',
             compact('product', 'selectedAttrs', 'productImages', 'variationDefault', 'productVariation', 'districts', 'provinces', 'wards'),

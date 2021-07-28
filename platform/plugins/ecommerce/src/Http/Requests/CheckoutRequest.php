@@ -20,14 +20,14 @@ class CheckoutRequest extends Request
         $rules = [
             'payment_method'  => 'required|' . Rule::in(PaymentMethodEnum::values()),
             'shipping_method' => 'required|' . Rule::in(ShippingMethodEnum::values()),
-            'amount'          => 'required|min:0',
+            // 'amount'          => 'required|min:0',
         ];
 
-        $rules['address.address_id'] = 'required_without:address.name';
+        // $rules['address.address_id'] = 'required_without:address.name';
         if (!$this->has('address.address_id') || $this->input('address.address_id') === 'new') {
             $rules['address.name'] = 'required|min:3|max:120';
             $rules['address.phone'] = 'required|numeric';
-            $rules['address.email'] = 'required|email';
+            // $rules['address.email'] = 'required|email';
             $rules['address.state'] = 'required';
             $rules['address.city'] = 'required';
             $rules['address.address'] = 'required|string';
@@ -36,12 +36,11 @@ class CheckoutRequest extends Request
         if ($this->input('create_account') == 1) {
             $rules['password'] = 'required|min:6';
             $rules['password_confirmation'] = 'required|same:password';
-            $rules['address.email'] = 'required|max:60|min:6|email|unique:ec_customers,email';
+            // $rules['address.email'] = 'required|max:60|min:6|email|unique:ec_customers,email';
             $rules['address.name'] = 'required|min:3|max:120';
         }
 
         $rules = apply_filters(PROCESS_CHECOUT_RULES_REQUEST_ECOMMERCE, $rules);
-
         return $rules;
     }
 
@@ -53,7 +52,7 @@ class CheckoutRequest extends Request
         $messages = [
             'address.name.required'    => trans('plugins/ecommerce::order.address_name_required'),
             'address.phone.required'   => trans('plugins/ecommerce::order.address_phone_required'),
-            'address.email.required'   => trans('plugins/ecommerce::order.address_email_required'),
+            // 'address.email.required'   => trans('plugins/ecommerce::order.address_email_required'),
             'address.email.unique'     => trans('plugins/ecommerce::order.address_email_unique'),
             'address.state.required'   => trans('plugins/ecommerce::order.address_state_required'),
             'address.city.required'    => trans('plugins/ecommerce::order.address_city_required'),

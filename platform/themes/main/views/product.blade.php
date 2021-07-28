@@ -187,62 +187,80 @@
                                          {!! __('Please fill in the information correctly') !!}
                                      </p>
                                  </div>
-                                 {{-- <form action="{{route('public.checkout.process')}}" method="POST"> --}}
+                                 <form action="{{route('public.checkout.process-custom')}}" method="POST" id="CheckoutForm" enctype="multipart/form-data">
                                     @csrf
+                                    <input type="text" name="payment_method" hidden value="cod">
+                                    <input type="text" name="shipping_method" hidden value="default">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="{!!__('Full name')!!}">
+                                        <div class="ui input focus w-100">
+                                            <input autocomplete="off" type="text" name="address[name]" value="{{ old('customer_name') }}" placeholder="{!!__('Full name')!!}">
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="{!!__('Phone number')!!}">
+                                        <div class="ui input focus w-100">
+                                            <input autocomplete="off" type="text" name="address[phone]" placeholder="{!!__('Phone number')!!}">
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <select class="form-control ui dropdown city" name="city" id="">
+                                        <select class="ui search selection dropdown city w-100" name="address[city]">
                                             <option hidden selected="selected"  value="" >Tỉnh/thành</option>
                                             @forelse(@$provinces as $row)
-                                                <option {{ old('city') == @$row->name ? 'selected' : '' }}
-                                                    value="{{ @$row->name }}">{{ @$row->name }}</option>
+                                                <option {{ old('city') == @$row->id ? 'selected' : '' }}
+                                                    value="{{ @$row->id }}">{{ @$row->name }}</option>
                                             @empty
                                             @endforelse
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <select class="form-control" name="district" id="">
+                                        <select class="ui search selection dropdown district w-100" name="address[state]" id="">
                                             <option hidden selected="selected"  value="" >Quận/huyện</option>
                                             @forelse(@$districts as $row)
-                                                <option {{ old('district') == @$row->name ? 'selected' : '' }}
-                                                    value="{{ @$row->name }}">{{ @$row->name }}</option>
+                                                <option {{ old('district') == @$row->id ? 'selected' : '' }}
+                                                    value="{{ @$row->id }}">{{ @$row->name }}</option>
                                             @empty
                                             @endforelse
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <select class="form-control" name="ward" id="">
+                                        <select class="ui search selection dropdown ward w-100" name="address[ward]" id="">
                                             <option hidden selected="selected"  value="" >Phường/xã</option>
                                             @forelse(@$wards as $row)
-                                                <option {{ old('ward') == @$row->name ? 'selected' : '' }}
-                                                    value="{{ @$row->name }}">{{ @$row->name }}</option>
+                                                <option {{ old('ward') == @$row->id ? 'selected' : '' }}
+                                                    value="{{ @$row->id }}">{{ @$row->name }}</option>
                                             @empty
                                             @endforelse
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="Địa chỉ giao hàng">
+                                        <div class="ui input focus w-100">
+                                            <input autocomplete="off" name="address[address]" type="text" placeholder="Địa chỉ giao hàng">
+                                        </div>
+                                    </div>
+                                    @php $products = get_products([],theme_option('number_of_products_per_page')); @endphp
+                                    <div class="form-group">
+                                        <select class="ui search selection dropdown product w-100" name="product">
+                                            <option hidden selected="selected"  value="" >Sản phẩm</option>
+                                            @forelse(@$products as $row)
+                                                <option {{ @$product->id == @$row->id ? 'selected' : '' }}
+                                                    value="{{ @$row->id }}">{{ @$row->name }}</option>
+                                            @empty
+                                            @endforelse
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="Kính cường lực">
+                                        <div class="ui input focus w-100">
+                                            <input autocomplete="off" class="input-file-attach" id="file" name="attach_file" type="file" hidden>
+                                            <label class="input-file-trigger" for="file">Upload bản vẽ (định dạng jpg, pdf, tiff...)</label>
+                                        </div>
+                                        <p class="file-return"></p>
                                     </div>
                                     <div class="form-group">
-                                        <input id="file" type="file" hidden>
-                                        <label for="file">Upload bản vẽ (định dạng jpg, pdf, tiff...)</label>
-                                        <!-- <input type="file" class="form-control" id="recipient-name" placeholder="Upload bản vẽ"> -->
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="message-text" placeholder="Ghi chú kèm theo"></textarea>
+                                        <textarea name="description" rows="3" class="form-control" placeholder="Ghi chú kèm theo"></textarea>
                                     </div>
                                     <div class="box__btn">
-                                        <button class="btn-order" ><i class="fal fa-shopping-cart"></i> {!!__('Order')!!} </button>
+                                        <button type="submit" class="btn-order" ><i class="fal fa-shopping-cart"></i> {!!__('Order')!!} </button>
                                     </div>
-                                {{-- </form> --}}
+                                </form>
                              </div>
                          </div>
                      </div>
@@ -282,7 +300,7 @@
 
                          <div class="col-md-6">
                              <div class="col-body p-3">
-                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close">
                                      <i class="fal fa-times"></i>
                                  </button>
 
@@ -310,15 +328,208 @@
      </div>
  </div>
 
+<script>
+    $(document).ready(function() {
+        new Splide('#section-product-more-info__carousel', {
+            heightRatio: 0.5625
+            , cover: true
+            , rewind: true
+            , lazyLoad: 'sequential'
+        }).mount();
 
- <script>
-     $(document).ready(function() {
-         new Splide('#section-product-more-info__carousel', {
-             heightRatio: 0.5625
-             , cover: true
-             , rewind: true
-             , lazyLoad: 'sequential'
-         }).mount();
-     })
+        $.validator.addMethod("regxPhone", function (value, element, regexpr) {
+            return regexpr.test(value);
+        }, "Số điện thoại sai định dạng");
 
- </script>
+        $("#CheckoutForm").validate({
+            ignore: [],
+            rules: {
+                'address[name]': {
+                    required: true,
+                }, 
+                'address[phone]': {
+                    required: true,
+                    digits: true,
+                    regxPhone: /(09|08|07|05|03)+([0-9]{8})\b/
+                },
+                'address[city]': {
+                    required: true,
+                },
+                'address[state]': {
+                    required: true,
+                },
+                'address[ward]': {
+                    required: true,
+                },
+                'address[address]': {
+                    required: true,
+                },
+                product: {
+                    required: true,
+                },
+                attach_file: {
+                    extension: "jpg|png|jpeg|pdf|tiff"
+                }
+            },
+            messages: {
+                'address[name]': 'Thông tin này không được bỏ trống!',
+                'address[phone]': {
+                    required: 'Thông tin này không được bỏ trống!',
+                    digits: 'Số điện thoại không hợp lệ!'
+                },
+                'address[city]': "Thông tin này không được bỏ trống!",
+                'address[state]': "Thông tin này không được bỏ trống!",
+                'address[ward]': "Thông tin này không được bỏ trống!",
+                'address[address]': "Thông tin này không được bỏ trống!",
+                product: "Thông tin này không được bỏ trống!",
+                attach_file: "File không đúng định dạng!",
+            },
+            errorElement: "div",
+            validClass: "valid-validate",
+            errorClass: "error-validate",
+            errorPlacement: function (error, element) {
+                error.insertAfter(element.parents('.form-group'));
+            },
+            submitHandler: function (form) {
+                // Helper.showProcessingLoader();
+                form.submit();
+            },
+        });
+
+        var fileInput  = document.querySelector( ".input-file-attach" ),  
+            button     = document.querySelector( ".input-file-trigger" ),
+            the_return = document.querySelector(".file-return");
+        button.addEventListener( "keydown", function( event ) {  
+            if ( event.keyCode == 13 || event.keyCode == 32 ) {  
+                fileInput.focus();  
+            }  
+        });
+        button.addEventListener( "click", function( event ) {
+            fileInput.focus();
+            return false;
+        });  
+        fileInput.addEventListener( "change", function( event ) {
+            var fullPath = this.value;
+            if (fullPath) {
+                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+                var filename = fullPath.substring(startIndex);
+                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                    filename = filename.substring(1);
+                }
+            }
+            the_return.innerHTML = filename ? ('File đã chọn: ' + filename) : '';  
+        });
+        var success = "{{Session::get('success')}}"
+        if(success) {
+            $('#successModal').modal('show');
+        }
+        $('#close').on('click', function () {
+            $('#successModal').modal('hide');
+        })
+    });
+    var Popup = {
+        city:function(){
+            if($('.city').length){
+                var ignoreDiacritics = true;
+                $('.ui.dropdown.city').dropdown({
+                    ignoreDiacritics: ignoreDiacritics,
+                    // sortSelect: true,
+                    fullTextSearch: 'exact',
+                    onChange: function(value, text, $choice) {
+                        if(text){
+                            $.ajax({
+                                headers: {
+                                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                                        "content"
+                                    )
+                                },
+                                url: "{{route('address.district')}}",
+                                method: "GET",
+                                data: {
+                                    city: value
+                                },
+                                dataType: "json",
+                                beforeSend: function() {
+                                    $('.ui.dropdown.district').api('set loading');
+                                    $('.ui.dropdown.ward').api('set loading');
+                                },
+                                success: function(result, status, xhr) {
+                                    $('select[name="address[state]"]')[0].innerHTML = result.html_district;
+                                    $('select[name="address[ward]"]')[0].innerHTML = result.html_ward;
+                                },
+                                error: function(xhr, status, error) {
+                                },
+                                complete: function(xhr, status) {
+                                    $('.ui.dropdown.district').api('remove loading');
+                                    $('.ui.dropdown.ward').api('remove loading');
+                                    // $('.ui.dropdown.district').destroy();
+                                    // $('.ui.dropdown.ward').destroy();
+                                    $('.ui.dropdown.district').dropdown();
+                                    $('.ui.dropdown.ward').dropdown();
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        },
+        district:function(){
+            if($('.district').length){
+                var ignoreDiacritics = true;
+                $('.ui.dropdown.district').dropdown({
+                    ignoreDiacritics: ignoreDiacritics,
+                    // sortSelect: true,
+                    fullTextSearch: 'exact',
+                    onChange: function(value, text, $choice) {
+                        if(text){
+                            $.ajax({
+                                headers: {
+                                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                                        "content"
+                                    )
+                                },
+                                url: "{{route('address.ward')}}",
+                                method: "GET",
+                                data: {
+                                    district: value
+                                },
+                                dataType: "json",
+                                beforeSend: function() {
+                                    $('.ui.dropdown.ward').api('set loading');
+                                },
+                                success: function(result, status, xhr) {
+                                    $('select[name="address[ward]"]')[0].innerHTML = result.html;
+                                },
+                                error: function(xhr, status, error) {
+                                },
+                                complete: function(xhr, status) {
+                                    $('.ui.dropdown.ward').api('remove loading');
+                                    // $('.ui.dropdown.ward').destroy();
+                                    $('.ui.dropdown.ward').dropdown();
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+        }
+    }
+    if($('.ward').length){
+        var ignoreDiacritics = true;
+        $('.ui.dropdown.ward').dropdown({
+            ignoreDiacritics: ignoreDiacritics,
+            sortSelect: true,
+            fullTextSearch:'exact',
+        });
+    }
+    if($('.product').length){
+        var ignoreDiacritics = true;
+        $('.ui.dropdown.product').dropdown({
+            ignoreDiacritics: ignoreDiacritics,
+            sortSelect: true,
+            fullTextSearch:'exact',
+        });
+    }
+    Popup.city();
+    Popup.district();
+</script>

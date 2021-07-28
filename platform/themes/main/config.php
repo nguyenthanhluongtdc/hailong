@@ -51,6 +51,11 @@ return [
             // You may use this event to set up your assets.
             $theme->asset()->add('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
             $theme->asset()->add('font-awesome-pro', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+            //sementic css
+            $theme->asset()->add('transition', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css');
+            $theme->asset()->add('dropdown', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css');
+            $theme->asset()->add('accordion', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.css');
+            $theme->asset()->add('semantic', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css');
 
             $theme->asset()->add('splidecss', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css');
             $theme->asset()->usePath()->add('style', 'css/common.css');
@@ -58,6 +63,12 @@ return [
             $theme->asset()->container('footer')->add('bootstrapjsdelivr', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js');
             $theme->asset()->container('footer')->add('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
             $theme->asset()->container('header')->add('splidejs', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js');
+            $theme->asset()->container('footer')->add('jqueryvalidate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js');
+            $theme->asset()->container('footer')->add('jqueryadditional', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js');
+            //semantic js
+            $theme->asset()->container('header')->add('transition', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.js');
+            $theme->asset()->container('header')->usePath()->add('semantic', 'js/plugins/semantic/semantic.min.js');
+            $theme->asset()->container('header')->add('accordion', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/accordion.min.js');
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
             $theme->asset()->add('aos', 'https://unpkg.com/aos@next/dist/aos.css');
             $theme->asset()->container('footer')->add('aos', 'https://unpkg.com/aos@next/dist/aos.js');
