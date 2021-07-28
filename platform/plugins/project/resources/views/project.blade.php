@@ -54,7 +54,7 @@
         <div class="container-customize">
             <div class="box-common-intro section-intro theme-customize-header-section">
                 
-                <div class="section-intro__content__bottom text-center">
+                <div class="section-intro__content__bottom text-center" data-aos="flip-right">
                     @if(has_field($project, 'title_module_list_image'))
                         <div class="theme-customize-header-section__header pt-0">
                             <h2 class="theme-customize-header-section__header__title">
@@ -68,7 +68,7 @@
                     @endif
 
                 </div>
-                <div class="splide" id="section-intro__carousel__bottom">
+                <div class="splide" id="section-intro__carousel__bottom" data-aos="zoom-in">
                     @if(has_field($project, 'images_module_list_image'))
                         <div class="splide__slider">
                             <!-- relative -->
