@@ -86,7 +86,7 @@ header {
     }
     .box-sub {
         position: absolute;
-        bottom: 0;
+        bottom: -25px;
         background-color: $backgroundGreen;
         color: $textWhite;
         padding: $size0_9375 $font-size20;

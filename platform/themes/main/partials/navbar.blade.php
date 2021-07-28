@@ -15,7 +15,7 @@
                     </li>
                     @endforeach
                 @endif
-                {!! apply_filters('language_switcher') !!}
+                {{-- {!! apply_filters('language_switcher') !!} --}}
             </ul>
         </div>
         <div class="col-lg-2 mr-auto position-relative">
