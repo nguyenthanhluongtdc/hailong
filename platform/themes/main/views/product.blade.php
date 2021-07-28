@@ -330,12 +330,14 @@
 
 <script>
     $(document).ready(function() {
-        new Splide('#section-product-more-info__carousel', {
-            heightRatio: 0.5625
-            , cover: true
-            , rewind: true
-            , lazyLoad: 'sequential'
-        }).mount();
+        if($('#section-product-more-info__carousel').length){
+            new Splide('#section-product-more-info__carousel', {
+                heightRatio: 0.5625
+                , cover: true
+                , rewind: true
+                , lazyLoad: 'sequential'
+            }).mount();
+        }
 
         $.validator.addMethod("regxPhone", function (value, element, regexpr) {
             return regexpr.test(value);
@@ -462,10 +464,6 @@
                                 complete: function(xhr, status) {
                                     $('.ui.dropdown.district').api('remove loading');
                                     $('.ui.dropdown.ward').api('remove loading');
-                                    // $('.ui.dropdown.district').destroy();
-                                    // $('.ui.dropdown.ward').destroy();
-                                    $('.ui.dropdown.district').dropdown();
-                                    $('.ui.dropdown.ward').dropdown();
                                 }
                             });
                         }
@@ -504,8 +502,6 @@
                                 },
                                 complete: function(xhr, status) {
                                     $('.ui.dropdown.ward').api('remove loading');
-                                    // $('.ui.dropdown.ward').destroy();
-                                    $('.ui.dropdown.ward').dropdown();
                                 }
                             });
                         }
