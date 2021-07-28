@@ -72,6 +72,42 @@
     }
 } 
 
+form#CheckoutForm {
+    div.error-validate {
+        color: #ac2b31;
+        margin-bottom: 10px;
+        margin-top: -20px;
+    }
+    .ui.dropdown {
+        border: 1px solid #85b7d9;
+        .default.text {
+            color: rgba(0,0,0,.8);
+        }
+    }
+    .input-file-trigger {
+        margin-bottom: 0px;
+        padding: .67857143em 1em;
+        width: 100%;
+        border: 1px solid #85b7d9;
+        background: #fff;
+        color: rgba(0,0,0,.8);
+        border-radius: .28571429rem;
+    }
+    p.file-return {
+        color: #2b63ac;
+        margin-top: 0px;
+        margin-bottom: 1rem;
+    }
+    textarea {
+        width: 100%;
+        padding: .67857143em 1em;
+        border: 1px solid #85b7d9;
+        background: #fff;
+        color: rgba(0,0,0,.8);
+        border-radius: .28571429rem;
+    }
+}
+
 .section-banner-wrapper {
     background-color: $backgroundf3f3f3;
     

@@ -121,6 +121,12 @@ Route::group(['namespace' => 'Platform\Ecommerce\Http\Controllers', 'middleware'
 
 Route::group(['namespace' => 'Platform\Ecommerce\Http\Controllers\Fronts', 'middleware' => ['web', 'core']], function () {
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
+        Route::group(['prefix' => 'checkout', 'as' => 'public.checkout.'], function () {
+            Route::post('process', [
+                'as'   => 'process-custom',
+                'uses' => 'PublicCheckoutController@postCheckoutCustom',
+            ]);
+        });
         Route::group(['prefix' => 'checkout/{token}', 'as' => 'public.checkout.'], function () {
             Route::get('/', [
                 'as'   => 'information',

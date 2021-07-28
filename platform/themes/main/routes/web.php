@@ -25,5 +25,18 @@ Route::group(['namespace' => 'Theme\Main\Http\Controllers', 'middleware' => ['we
         Route::get('{slug?}' . config('core.base.general.public_single_ending_url'), 'MainController@getView')
             ->name('public.single');
 
+        /*Route địa chỉ*/
+        Route::group(
+            [
+                'prefix' => 'dia-chi',
+                'as' => 'address.'
+            ],
+            function () {
+                Route::get('/quan-huyen', 'AddressController@getDistrict')->name('district');
+                Route::get('/phuong-xa', 'AddressController@getWard')->name('ward');
+            }
+        );
+        /*Route địa chỉ*/
+
     });
 });
