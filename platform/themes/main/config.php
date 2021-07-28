@@ -59,6 +59,8 @@ return [
             $theme->asset()->container('footer')->add('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
             $theme->asset()->container('header')->add('splidejs', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js');
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
+            $theme->asset()->add('aos', 'https://unpkg.com/aos@next/dist/aos.css');
+            $theme->asset()->container('footer')->add('aos', 'https://unpkg.com/aos@next/dist/aos.js');
             if (function_exists('shortcode')) {
                 $theme->composer(['index', 'page', 'post','products','introduce'], function (\Platform\Shortcode\View\View $view) {
                     $view->withShortcodes();

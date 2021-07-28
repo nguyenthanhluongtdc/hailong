@@ -4,7 +4,7 @@
         <div class="section-banner">
             @if(isset($title))
                 <div class="theme-customize-header-section__header mt-n4">
-                    <h1 class="theme-customize-header-section__header__title">
+                    <h1 class="theme-customize-header-section__header__title" data-aos="fade-down">
                         {!! __($title) !!}
                     </h1>
                 </div>

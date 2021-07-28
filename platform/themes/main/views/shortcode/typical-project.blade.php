@@ -3,10 +3,10 @@
       <div class="container-customize">
           <div class="box-common-typeicalproject-carousel distance-below theme-customize-header-section">
               <div class="theme-customize-header-section__header distance-below">
-                  <h2 class="theme-customize-header-section__header__title">
+                  <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                       {{ __("Typical projects") }}
                   </h2>
-                  <p class="theme-customize-header-section__header__des mb-0">
+                  <p class="theme-customize-header-section__header__des mb-0" data-aos="fade-left" data-aos-delay="200">
                       <span>
                           {!! __("Description typical projects") !!}
                       </span>
@@ -21,7 +21,7 @@
                           <ul class="splide__list">
                               @if(get_featured_projects([], theme_option('number_typical_projects') ))
                               @foreach(get_featured_projects([], theme_option('number_typical_projects')) as $project)
-                              <li class="splide__slide">
+                              <li class="splide__slide" data-aos="fade-up">
                                   <div class="splide__slide__img">
                                       <a href="{{$project->url}}" title="{{$project->name}}">
                                           <img width="410" height="440" src="{{rvMedia::getImageUrl($project->image, 'project_home_featured', false, RvMedia::getDefaultImage())}}" alt="ảnh slider" />

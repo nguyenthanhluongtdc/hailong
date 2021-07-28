@@ -12,19 +12,19 @@
                      <div class="col-md-5 distance-below">
                          <div class="box-content">
                              <div class="theme-customize-header-section__header">
-                                 <h2 class="theme-customize-header-section__header__title">
+                                 <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                                      {!! $product->name !!}
                                  </h2>
-                                 <p class="theme-customize-header-section__header__des">
+                                 <div class="theme-customize-header-section__header__des" data-aos="fade-left">
                                      {!! $product->description !!}
-                                 </p>
+                                 </div>
                              </div>
 
                              <div class="line-border">
 
                              </div>
 
-                             <div class="box-content__bottom _fsx20r16">
+                             <div class="box-content__bottom _fsx20r16" data-aos="fade-up">
                                  <div class="__bottom__line__one"> {!! __('Common characteristic') !!} </div>
                                  <div class="__bottom__line__two"> {!! __('Production process') !!} </div>
 
@@ -50,40 +50,18 @@
      <div class="section-product-more-info-wrapper distance-y">
          <div class="container-customize">
              <div class="section-product-more-info">
-                 <div class="section-our-policy-wrapper">
-                     <div class="section-our-policy distance-y _fsx20r16">
-                         <div class="row mx-lg-n5 mx-n3">
-                             @php
-                             $slogans = theme_option("slogan_repeater", []);
-                             if(!blank($slogans)) {
-                             $slogans = json_decode($slogans) ?? [];
-                             }
-                             @endphp
-
-                             @foreach ($slogans as $item)
-                             <div class="col-sm-4 px-lg-5 px-3">
-                                 <div class="section-our-policy__col">
-                                     <div class="section-our-policy__col__icon">
-                                         <i class="{{ $item[0]->value ?? "" }}"></i>
-                                     </div>
-                                     <div class="section-our-policy__col__content">
-                                         <h3 class="__content__title">{{ $item[1]->value ?? "" }}</h3>
-                                         <p class="__content__des line__children">{{ $item[2]->value ?? "" }}</p>
-                                     </div>
-                                 </div>
-                             </div>
-                             @endforeach
-                         </div>
-                     </div>
-                 </div>
+                 {!! do_shortcode('[our-policy][/our-policy]') !!}
 
                  <div class="more-info">
                     @if(!empty($product->content))
                         <div class="theme-customize-header-section__header">
-                            <h2 class="theme-customize-header-section__header__title">
+                            <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                                 {!! __('Common characteristic') !!}
                             </h2>
-                            {!! $product->content !!}
+                            
+                            <div data-aos="fade-left">
+                                {!! $product->content !!}
+                            </div>
                         </div>
                     @endif
 
@@ -122,12 +100,12 @@
                     <div class="row">
                         <div class="col-lg-10 col-md-9">
                             <div class="theme-customize-header-section__header">
-                                <h2 class="theme-customize-header-section__header__title">
+                                <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                                     {!! __('Production process') !!}
                                 </h2>
                             </div>
 
-                            <div class="box__tabs">
+                            <div class="box__tabs" data-aos="fade-up">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     @foreach(has_field($product, 'listtabs_production_process_page_product_detail') as $key => $row)
                                     <li class="nav-item box__tabs__header" role="presentation">
@@ -165,13 +143,13 @@
          <div class="container-customize">
              <div class="section-other-product">
                  <div class="theme-customize-header-section__header">
-                     <h2 class="theme-customize-header-section__header__title">
+                     <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                          {!! __('Other products') !!}
                      </h2>
                  </div>
                  <ul class="section-products-list-cate-pro distance-below">
-                     @foreach(get_other_products($product) as $other_product)
-                     <li class="section-products-list-cate-pro__item">
+                     @foreach(get_other_products($product) as $key => $other_product)
+                     <li class="section-products-list-cate-pro__item" data-aos="{{$key%2==0?'fade-right':'fade-left'}}">
                          <a class="section-products-list-cate-pro__item__link" href="{{$other_product->url}}" title="Kính cường lực">
                              {!! $other_product->name !!}
                          </a>

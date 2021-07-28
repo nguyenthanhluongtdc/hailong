@@ -6,16 +6,16 @@
                     @foreach (Theme::breadcrumb()->getCrumbs() as $i => $crumb)
                         @if ($i != (count(Theme::breadcrumb()->getCrumbs()) - 1))
                             @if($i==0) 
-                                <li class="__breadcrumb__item">
+                                <li class="__breadcrumb__item" data-aos="fade-down" data-aos-delay="{{$i*200}}">
                                     <a class="__breadcrumb__link" href="{{ $crumb['url'] }}" title="{!! $crumb['label'] !!}"> {!! $crumb['label'] !!} </a> 
                                 </li>
                             @else 
-                                <li class="__breadcrumb__item">
+                                <li class="__breadcrumb__item" data-aos="fade-down" data-aos-delay="{{$i*200}}">
                                     {!! $crumb['label'] !!}
                                 </li>
                             @endif
                         @else
-                            <li class="__breadcrumb__item active">
+                            <li class="__breadcrumb__item active" data-aos="fade-down" data-aos-delay="{{$i*200}}">
                                 {!! $crumb['label'] !!}
                             </li>
                         @endif
@@ -32,15 +32,15 @@
                     <div class="col-lg-7 col-md-12 col-sm-12">
                         <div class="left">
                             <div class="content__title">
-                                <h1 class="title theme-customize-header-section__header__title ">
+                                <h1 class="title theme-customize-header-section__header__title" data-aos="fade-right">
                                  {{$post->name}}
                                 </h1>
                             </div>
         
-                            <span class="time">
+                            <span class="time" data-aos="fade-left">
                                 {{$post->created_at->format('H:i d/m/Y') }}
                             </span>
-                            <div class="post-content">
+                            <div class="post-content" data-aos="flip-up">
                              {!!$post->content!!}
         
                             </div>
@@ -56,7 +56,7 @@
                                 @endphp
 
                                 @if(!blank($social_network) && !empty($social_network))
-                                    <ul class="list-share">
+                                    <ul class="list-share" data-aos="fade-right">
                                         @foreach($social_network as $item)
                                             <li class="share-item">
                                                 <a href="{{$item[1]->value}}" title="{{$item[0]->value}}">
@@ -67,7 +67,7 @@
                                     </ul>   
                                 @endif
                             </div>
-                            <div class="info-contact text-left">
+                            <div class="info-contact text-left" data-aos="flip-up">
                                 <p>{!! __('Contact us now for a consultation') !!}
                                     <a class="info-contact__link" href="tel: {{theme_option('number_phone_genaral')}}" title="{{theme_option('number_phone_genaral')}}">{{theme_option('number_phone_genaral')}}</a>
                                 </p>
@@ -77,7 +77,7 @@
                                     </a>
                                 </p>
                             </div>
-                            <div class="other__post">    
+                            <div class="other__post" data-aos="fade-up">    
                                     <h4 class="title theme-customize-header-section__header__title">
                                         {!! __('other news') !!}
                                     </h4>
@@ -98,25 +98,25 @@
                         <div class="right">
                             <div class="releted__post">
                                 <div class="">
-                                    <h4 class="title-related theme-customize-header-section__header__title" > {!! __('Related post') !!} </h4>
+                                    <h4 class="title-related theme-customize-header-section__header__title" data-aos="fade-left"> {!! __('Related post') !!} </h4>
                                 </div>
                                 <div class="list-post-related">
-                                    @foreach (get_related_posts($post->id,5) as $post_related)
-                                    <div class="row">
-                                      <div class="col-lg-6 col-md-4 col-sm-4">
-                                            <a href="{{$post_related->url}}" class="news__item" title="{{$post_related->name}}">
-                                                <img class="img-w-100  mb-4" width="600" height="400"  src="{{ RvMedia::getImageUrl($post_related->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$post_related->name}}">
-                                            </a>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-4">
-                                            <div class="description">
-                                                <a href="{{$post_related->url}}" title="{{$post_related->name}}">{{$post_related->name}}</a>
+                                    @foreach (get_related_posts($post->id,5) as $key => $post_related)
+                                        <div class="row" data-aos="fade-left" data-aos-delay={{$key*200}}>
+                                            <div class="col-lg-6 col-md-4 col-sm-4">
+                                                <a href="{{$post_related->url}}" class="news__item" title="{{$post_related->name}}">
+                                                    <img class="img-w-100  mb-4" width="600" height="400"  src="{{ RvMedia::getImageUrl($post_related->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$post_related->name}}">
+                                                </a>
                                             </div>
-                                            <span class="time">
-                                                {{$post->created_at->format('H:i d/m/Y') }}
-                                            </span>
+                                            <div class="col-lg-6 col-md-6 col-sm-4">
+                                                <div class="description">
+                                                    <a href="{{$post_related->url}}" title="{{$post_related->name}}">{{$post_related->name}}</a>
+                                                </div>
+                                                <span class="time">
+                                                    {{$post->created_at->format('H:i d/m/Y') }}
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
                                     @endforeach 
                                 </div>
                             </div>

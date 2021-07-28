@@ -2,13 +2,13 @@
     @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-menu'])
 
     <div class="section-intro-wrapper _fsx20r16">
-        <div class="container-customize">
+        <div class="container-customize" data-aos="fade-down">
             <p class="my-5">
                 {!! get_field($page, 'description_module_introductory_profile') !!}
             </p>
         </div>
 
-        <div class="section-intro__picture">
+        <div class="section-intro__picture" data-aos="fade-up">
             <img class="mw-100" width="1900" height="500" src="{{rvMedia::getImageUrl(get_field($page, 'image_module_introductory_profile'))}}" alt="ảnh banner" />
         </div>
     </div>
@@ -18,14 +18,14 @@
         <div class="container-customize">
             <div class="box-common-producecapacity distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                         {!! has_field($page, 'title_module_nlsx_profile') !!}
                     </h2>
                 </div>
                 <ul class="box-common-producecapacity__list">
                     @if(has_field($page, 'list_module_nlsx_profile'))
-                        @foreach(has_field($page, 'list_module_nlsx_profile') as $row)
-                            <li class="box-common-producecapacity__list__item">
+                        @foreach(has_field($page, 'list_module_nlsx_profile') as $key => $row)
+                            <li class="box-common-producecapacity__list__item" data-aos="{{$key%2==0?'fade-right':'fade-left'}}" >
                                 <b class="title-parent"> {!! get_sub_field($row, 'title') !!} </b>
                                 <p class="des-children">
                                     {!! get_sub_field($row, 'description') !!}
@@ -37,7 +37,7 @@
             </div>
 
             <!--css in file common.scss----->
-            <div class="box-common-statistics-wrapper mt-n3">
+            <div class="box-common-statistics-wrapper mt-n3" data-aos="fade-down">
                 <div class="box-common-statistics">
                     @if(has_field($page, 'stats_module_nlsx_profile'))
                         @foreach(has_field($page, 'stats_module_nlsx_profile') as $row)
@@ -63,16 +63,16 @@
         <div class="container-customize">
             <div class="section-quality-standards">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                         {!! has_field($page, 'title_module_tccl') !!}
                     </h2>
-                    <p class="theme-customize-header-section__header__des mb-4">
+                    <p class="theme-customize-header-section__header__des mb-4" data-aos="fade-left">
                         {!! has_field($page, 'description_module_tccl') !!}
                     </p>
                 </div>
 
                 <!-----css in file common.scss--->
-                <div class="box__tabs">
+                <div class="box__tabs" data-aos="fade-up">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         @if(has_field($page, 'tabs_module_tccl'))
                             @foreach(has_field($page, 'tabs_module_tccl') as $key => $row)
@@ -104,28 +104,7 @@
 </div>
 
 <script>
-    var counters = $(".__col__up.count");
-    var countersQuantity = counters.length;
-    var counter = [];
-
-    for (i = 0; i < countersQuantity; i++) {
-        counter[i] = parseFloat(counters[i].innerHTML);
-    }
-
-    var count = function(start, value, id) {
-        var localStart = start;
-        setInterval(function() {
-            if (localStart < value) {
-                localStart++;
-                counters[id].innerHTML = localStart;
-            }
-        }, 4);
-    }
-
-    for (j = 0; j < countersQuantity; j++) {
-        count(0, counter[j], j);
-    }
-
+    window._counter = true;
 
     $(document).ready(function() {
 

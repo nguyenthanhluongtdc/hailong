@@ -30,8 +30,8 @@
                     <div class="tab-pane fade show active" id="tab-all" role="tabpanel" aria-labelledby="tab-all-tab">
                         <div class="row">
                             @if(!empty($projects))
-                                @foreach($projects as $project)
-                                    <div class="col-lg-4 col-sm-6 col-12 mb-lg-0">
+                                @foreach($projects as $key => $project)
+                                    <div class="col-lg-4 col-sm-6 col-12 mb-lg-0" data-aos="fade-right" data-aos-delay="{{$key*150}}" >
                                         <div class="project">
                                             <a href="{{$project->url}}" class="project__link" title="Nhà kính 2 tầng đẹp nhất">
                                                 <img width="550" height="400" class="" src="{{rvMedia::getImageUrl($project->image, 'project_featured', false, RvMedia::getDefaultImage())}}" alt=">Nhà kính 2 tầng đẹp nhất 2018 được nhiều chủ đầu tư yêu thích">

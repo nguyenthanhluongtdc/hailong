@@ -38,4 +38,8 @@ app()->booted(function () {
     add_shortcode('shoppingguide', __("Shoppingguide"), __("Add shoppingguide"), function () {
         return Theme::partial('shortcodes.shoppingguide');
     });
+
+    add_shortcode('our-policy', __("Our-policy"), __("Add our-policy"), function () {
+        return Theme::partial('shortcodes.our-policy');
+    });
 });

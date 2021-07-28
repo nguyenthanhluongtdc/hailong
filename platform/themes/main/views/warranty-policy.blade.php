@@ -2,7 +2,7 @@
     @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Product','menu'=>'products-menu'])
 
     @if(isset($page))
-        <div class="section-picture">
+        <div class="section-picture" data-aos="flip-right">
             <img width="1900" height="500" class="mw-100" src="{{ get_image_url($page->image) }}" alt="ảnh product" />
         </div>
 
@@ -10,15 +10,17 @@
             <div class="container-customize">
                 <div class="section-collapse">
                     <div class="theme-customize-header-section__header distance-below">
-                        <h2 class="theme-customize-header-section__header__title">
+                        <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                             {{ $page->description ?? "" }}
                         </h2>
-                        {!! $page->content ?? "" !!}
+                        <div data-aos="fade-left">
+                            {!! $page->content ?? "" !!}
+                        </div>
                     </div>
                     <div id="accordion">
                         @if(has_field($page, 'another_field_policy'))
                             @foreach (get_field($page, 'another_field_policy') as $key => $item)
-                                <div class="outer-shell">
+                                <div class="outer-shell" data-aos="{{$key%2==0?'fade-right':'fade-left'}}" data-aos-delay="200">
                                     <div class="card">
                                         <div class="card-header" id="heading_{{ $key }}">
                                             <h5 class="mb-0">

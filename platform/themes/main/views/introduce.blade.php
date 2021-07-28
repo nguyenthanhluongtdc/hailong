@@ -9,22 +9,24 @@
                     <div class="col-md-6 col-12">
                         <div class="box-common-intro__content _fsx20r16">
                             <div class="theme-customize-header-section__header pt-0">
-                                <h2 class="theme-customize-header-section__header__title">
+                                <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                                     {{has_field($page, 'title_module_introductory')}}
                                 </h2>
                             </div>
 
-                            {!!has_field($page, 'content_module_introductory')!!}
+                            <div data-aos="fade-up">
+                                {!!has_field($page, 'content_module_introductory')!!}
+                            </div>
 
-                            <div class="line-border mt-md-4 mt-3"> </div>
+                            <div class="line-border mt-md-4 mt-3" data-aos="fade-right"> </div>
 
-                            <p class="title-underline">
+                            <p class="title-underline" data-aos="fade-up">
                                 <strong> {!!has_field($page, 'description_module_introductory')!!} </strong>
                             </p>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-12">
+                    <div class="col-md-6 col-12" data-aos="flip-right">
 
                         <div class="ytvideo box-common-intro__picture" data-video="7ixLP6mUqnw" style="width:560px; height:315px; background-image:url({{rvMedia::getImageUrl(has_field($page, 'video_module_introductory'))}})">
 
@@ -45,7 +47,7 @@
         <div class="container-customize">
             <div class="box-common-many-col theme-customize-header-section">
                 <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title">
+                    <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                         {{has_field($page, 'title_module_value')}}
                     </h2>
                 </div>
@@ -53,7 +55,7 @@
                 <ul class="box-common-many-col__list mb-0 _fsx20r16">
                     @if(has_field($page, 'col_module_value'))
                     @foreach(has_field($page, 'col_module_value') as $row)
-                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
+                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12" data-aos="zoom-in-down">
                         <b> {{has_sub_field($row, 'title')}} </b>
                         <p class="des-children">
                             {!!has_sub_field($row, 'description')!!}
@@ -64,7 +66,7 @@
                 </ul>
             </div>
         </div>
-        <div class="box-common-many-col__picture">
+        <div class="box-common-many-col__picture" data-aos="zoom-out-up">
             <img width="1900" height="500" src="{{rvMedia::getImageUrl(has_field($page, 'image_module_value'))}}" alt="ảnh intro" />
         </div>
     </div>
@@ -74,10 +76,10 @@
         <div class="container-customize">
             <div class="box-common-many-col theme-customize-header-section">
                 <div class="theme-customize-header-section__header d-md-flex">
-                    <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0">
+                    <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0" data-aos="fade-right">
                         {!!has_field($page, 'title_module_whychoose_introduce')!!}
                     </h2>
-                    <p class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0">
+                    <p class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0" data-aos="fade-left">
                         {!!has_field($page, 'description_module_whychoose_introduce')!!}
                     </p>
                 </div>
@@ -85,7 +87,7 @@
                 <ul class="box-common-many-col__list mb-0 _fsx20r16">
                     @if(has_field($page, 'col_module_whychoose_introduce'))
                     @foreach(has_field($page, 'col_module_whychoose_introduce') as $row)
-                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12">
+                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12" data-aos="zoom-in-down">
                         <b> {{has_sub_field($row, 'title')}} </b>
                         <p class="des-children">
                             {!!has_sub_field($row, 'description')!!}

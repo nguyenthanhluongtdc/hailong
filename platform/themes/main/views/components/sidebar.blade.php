@@ -7,21 +7,22 @@
                 $showRelated = setting('language_show_default_item_if_current_version_not_existed', true);
                 $currentLocate = Arr::get($supportedLocales, Language::getCurrentLocale(), []);
             @endphp
-            <button class="box__item">
+            <button class="box__item" data-aos="fade-down" data-aos-delay="0">
                 <a rel="alternate" hreflang="{{ Language::getCurrentLocale() }}" class="box__item__icon language_current text-uppercase" href="{{ $showRelated ? Language::getLocalizedURL(Language::getCurrentLocale()) : url(Language::getCurrentLocale()) }}">
                     <span class="text-uppercase"> {{ $currentLocate['lang_locale']=='vi'?'VN': $currentLocate['lang_locale'] }} </span>
                 </a>
                 <span class="_char"> | </span>
-                @foreach (array_diff_key($supportedLocales, [Language::getCurrentLocale() => "xy"]) as $localeCode => $properties)
-                <a rel="alternate" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
-                    <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
-                </a>
-                <span class="_char"> | </span>
+
+                @foreach (array_diff_key($supportedLocales, [Language::getCurrentLocale() => "xy"]) as  $localeCode => $properties)
+                    <a rel="alternate" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
+                        <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
+                    </a>
+                    <span class="_char"> | </span>
                 @endforeach
             </button>
         @else
 
-        <button class="box__item button-zalo">
+        <button class="box__item button-zalo" data-aos="fade-down" data-aos-delay="0">
             <span class="box__item__text sub-zalo">
                 <b> Zalo</b>
                 <b> Code</b>
@@ -35,7 +36,7 @@
         </button>
         @endif
 
-        <button class="box__item">
+        <button class="box__item" data-aos="fade-down" data-aos-delay="400">
             <span class="box__item__icon"> <i class="fas {{theme_option('icon_phone_sidebar')}}"></i> </span>
             @php
                 $phone_number_list = theme_option("phone_number_list", []);
@@ -58,7 +59,7 @@
             @endif
         </button>
 
-        <button class="box__item">
+        <button class="box__item" data-aos="fade-down" data-aos-delay="800">
             <a class="d-flex align-items-center" href="mailto: {{theme_option('text_email_sidebar')}}">
                 <i class="box__item__icon {{theme_option('icon_email_sidebar')}}"></i>
                 <span class="text"> Email </span>
@@ -66,14 +67,14 @@
         </button>
 
         @if(theme_option('icon_message_sidebar')!=null)
-        <button class="box__item">
+        <button class="box__item" data-aos="fade-down" data-aos-delay="1200">
             <span class="box__item__icon fb-customerchat messenger">
                 <i class="{{theme_option('icon_message_sidebar')}}"></i>
             </span>
         </button>
         @endif
 
-        <button class="box__item back-top" id="backtop">
+        <button class="box__item back-top" id="backtop" data-aos="fade-down" data-aos-delay="1600">
             <span class="box__item__icon"><i class="fal fa-arrow-up"></i> </span>
             <div class="box__item__content d-block">
                 <span class="text-top"> TOP </span>

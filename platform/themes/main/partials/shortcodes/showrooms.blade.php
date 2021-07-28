@@ -2,10 +2,10 @@
     <div class="container-customize">
         <div class="box-common-showroom distance-below theme-customize-header-section">
             <div class="theme-customize-header-section__header">
-                <h2 class="theme-customize-header-section__header__title">
+                <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                     {{ $title ?? __("Showroom Hailong Glass") }}
                 </h2>
-                <p class="theme-customize-header-section__header__des mb-4">
+                <p class="theme-customize-header-section__header__des mb-4" data-aos="fade-left" data-aos-delay="200">
                     {{ $title ?? __("Glass Showroom List (Click on the address to see the map)") }}
                 </p>
             </div>

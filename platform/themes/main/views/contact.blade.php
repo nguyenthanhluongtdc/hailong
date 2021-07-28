@@ -4,7 +4,7 @@
     <div class="contact-wrapper">
         <div class="container-customize">
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-md-6 col-12" data-aos="fade-right">
                     <div class="company">
                         <div class="company__name">
                             <h4 class="__text-18">
@@ -54,7 +54,7 @@
                     </div>
 
                 </div>
-                <div class="col-md-6 col-12">
+                <div class="col-md-6 col-12" data-aos="fade-left">
                     <div id="contact-form" class="form-horizontal form-contact-us">
                         {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}
                         @if(session()->has('success_msg') || session()->has('error_msg') || isset($errors))
@@ -122,7 +122,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-customize pl-0 pr-0">
+        <div class="container-customize pl-0 pr-0" data-aos="flip-up" data-aos-delay="400">
             <div class="map">
                 <iframe src="{{has_field($page, 'link_map_page_contact')}}" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>

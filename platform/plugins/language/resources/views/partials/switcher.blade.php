@@ -61,7 +61,7 @@
 
 
 
-<li class="bilingual">
+<li class="bilingual" data-aos="fade-left" data-aos-delay="0">
     @php
         $supportedLocales = array_reverse(Language::getSupportedLocales());
         $showRelated = setting('language_show_default_item_if_current_version_not_existed', true);

@@ -11,18 +11,17 @@
                     <div class="col-lg-5 col-12">
                         <div class="section-intro__content__top">
                             <div class="theme-customize-header-section__header pt-0">
-                                <h1 class="theme-customize-header-section__header__title">
+                                <h1 class="theme-customize-header-section__header__title" data-aos="fade-right">
                                     {!! $project->name !!}
                                 </h1>
                             </div>
 
-                            <p class="intro__content __text-18">
+                            <div class="intro__content __text-18" data-aos="flip-up">
                                 {!! $project->content !!}
-                            </p>
-
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-7  col-12 pl-lg-4 pt-4 pt-lg-0">
+                    <div class="col-lg-7  col-12 pl-lg-4 pt-4 pt-lg-0" data-aos="fade-left">
                         @if(!empty($galleries['images']))
                             <div class="splide" id="section-intro__carousel__top">
                                 <div class="splide__slider">
@@ -97,7 +96,7 @@
     <div class="container-customize">
         <div class="info-wrapper">
             <div class="row">
-                <div class="col-lg-3 col-md-4 col-12">
+                <div class="col-lg-3 col-md-4 col-12" data-aos="fade-right">
                     <div class="share">
                         <p class="share_text">
                             {!! __('Share') !!}
@@ -124,7 +123,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-8 col-12">
+                <div class="col-lg-9 col-md-8 col-12" data-aos="flip-up">
                     <div class="info-contact d-xl-flex justify-content-between px-5">
                         <div class="mr-xl-3"> {!! __('Contact us now for a consultation') !!}
                             <a href="tel: {{theme_option('number_phone_genaral')}}" title="{{theme_option('number_phone_genaral')}}" class="info-contact__link">Hotline: {{theme_option('number_phone_genaral')}}</a>
@@ -137,8 +136,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 

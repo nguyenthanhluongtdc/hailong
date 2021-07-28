@@ -1,4 +1,4 @@
-<div class="container-customize">
+<div class="container-customize" data-aos="flip-up">
     <div class="form-sign-up-wrapper">
         <div class="row align-items-center">
           

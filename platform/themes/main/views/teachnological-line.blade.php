@@ -1,13 +1,13 @@
 <div id="teachnological-line-page">
     @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-menu'])
     <div class="section-intro-wrapper _fsx20r16">
-        <div class="container-customize">
+        <div class="container-customize" data-aos="fade-down">
             <div class="my-5">
                 {!! has_field($page, 'description_module_introductory_dccn') ? get_field($page, 'description_module_introductory_dccn') : "" !!}
             </div>
         </div>
 
-        <div class="section-intro__picture">
+        <div class="section-intro__picture" data-aos="fade-up">
             @if(has_field($page, 'image_module_introductory_dccn'))
                 <img class="mw-100" width="1900" height="500" src="{{rvMedia::getImageUrl(get_field($page, 'image_module_introductory_dccn'))}}" alt="ảnh dây chuyền công nghệ" />
             @endif
@@ -18,10 +18,10 @@
         <div class="">
             <div class="section-teachnological">
                 <div class="theme-customize-header-section__header container-customize">
-                    <h2 class="theme-customize-header-section__header__title pl-0">
+                    <h2 class="theme-customize-header-section__header__title pl-0" data-aos="fade-right">
                         {!! has_field($page, 'tieu_detechnical_line') ? get_field($page, 'tieu_detechnical_line') : "" !!}
                     </h2>
-                    <div class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0">
+                    <div class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0" data-aos="fade-left">
                         {!! has_field($page, 'mo_tatechnical_line') ? get_field($page, 'mo_tatechnical_line') : "" !!}
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     @if(has_field($page, 'day_chuyentechnical_line'))
                         @foreach (get_field($page, 'day_chuyentechnical_line') as $item)
                             <div class="section-teachnological__row">
-                                <div class="section-teachnological__row__col order-sm-1 order-2 __content">
+                                <div class="section-teachnological__row__col order-sm-1 order-2 __content" data-aos="fade-right">
                                     <div>
                                         <h3 class="__content__title">{!! has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : "" !!}</h3>
                                         {!! has_sub_field($item, 'mo_ta') ? get_sub_field($item, 'mo_ta') : "" !!}
@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
 
-                                <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
+                                <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture" data-aos="fade-left">
                                     @if(has_sub_field($item, 'hinh_anh'))
                                         <img width="640" height="360" class="w-100" src="{{get_image_url(get_sub_field($item, 'hinh_anh'))}}" alt="{{ has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : '' }}" />
                                     @endif
@@ -69,13 +69,13 @@
     </div>
 
     <!--css in file common.scss----->
-    <div class="container-customize mt-4">
+    <div class="container-customize mt-4" data-aos="fade-down">
         <div class="box-common-statistics-wrapper distance-below mt-n3">
             <div class="box-common-statistics">
                 @if(has_field($page, 'stats_module_dccn'))
                     @foreach(get_field($page, 'stats_module_dccn') as $row)
                     <div class="box-common-statistics__col">
-                        <div class="__col__up">
+                        <div class="__col__up count">
                             {!! has_sub_field($row, 'number') ? get_sub_field($row, 'number') : "" !!}
                         </div>
 
@@ -92,25 +92,5 @@
 </div>
 
 <script>
- var counters = $(".__col__up.count");
-    var countersQuantity = counters.length;
-    var counter = [];
-
-    for (i = 0; i < countersQuantity; i++) {
-        counter[i] = parseFloat(counters[i].innerHTML);
-    }
-
-    var count = function(start, value, id) {
-        var localStart = start;
-        setInterval(function() {
-            if (localStart < value) {
-                localStart++;
-                counters[id].innerHTML = localStart;
-            }
-        }, 4);
-    }
-
-    for (j = 0; j < countersQuantity; j++) {
-        count(0, counter[j], j);
-    }
+    window._counter = true;
 </script>

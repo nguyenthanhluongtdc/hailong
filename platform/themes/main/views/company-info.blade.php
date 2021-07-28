@@ -9,18 +9,18 @@
                     <div class="col-md-5 col-12 order-2 mt-md-0 mt-4">
                         <div class="section-intro__content last-position _fsx20r16">
                             <div class="theme-customize-header-section__header pt-0">
-                                <h2 class="theme-customize-header-section__header__title">
+                                <h2 class="theme-customize-header-section__header__title" data-aos="fade-left">
                                     {!! get_field($page, 'title_module_companyinfo') !!}
                                 </h2>
                             </div>
 
                             @if(has_field($page, 'content_module_companyinfo'))
-                            @foreach(has_field($page, 'content_module_companyinfo') as $row)
-                            <p class="section-intro__content">
-                                <i> {!! has_sub_field($row, 'title') !!} </i> <br>
-                                <b> {!! has_sub_field($row, 'description') !!} </b>
-                            </p>
-                            @endforeach
+                                @foreach(has_field($page, 'content_module_companyinfo') as $key => $row)
+                                    <p class="section-intro__content" data-aos="fade-up" data-aos-delay="{{$key*200}}">
+                                        <i> {!! has_sub_field($row, 'title') !!} </i> <br>
+                                        <b> {!! has_sub_field($row, 'description') !!} </b>
+                                    </p>
+                                @endforeach
                             @endif
 
                             {{-- <p class="section-intro__content d-flex">
@@ -38,7 +38,7 @@
                     </div>
 
                     <div class="col-md-7 col-12 order-1 pr-5">
-                        <div class="splide" id="section-intro__carousel">
+                        <div class="splide" id="section-intro__carousel" >
                             <div class="splide__slider">
                                 <!-- relative -->
                                 <div class="splide__track">
@@ -166,14 +166,13 @@
         <div class="container-customize">
             <div class="box-common-partner-carousel distance-below theme-customize-header-section">
                 <div class="theme-customize-header-section__header mb-lg-4 mb-3 d-md-flex">
-                    <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0">
+                    <h2 class="theme-customize-header-section__header__title col-lg-3 col-md-4 pl-0" data-aos="fade-right">
                         {!! has_field($page, 'title_module_partner') !!}
                     </h2>
-                    <p class="theme-customize-header-section__header__des mb-md-4 mb-0">
+                    <p class="theme-customize-header-section__header__des mb-md-4 mb-0" data-aos="fade-left">
                         <span>
                             {!! has_field($page, 'description_module_partner') !!}
                         </span>
-
                     </p>
                 </div>
 
@@ -183,8 +182,8 @@
                         <div class="splide__track">
                             <ul class="splide__list">
                                 @if(has_field($page, 'listimage_module_partner'))
-                                @foreach(has_field($page, 'listimage_module_partner') as $row)
-                                <li class="splide__slide">
+                                @foreach(has_field($page, 'listimage_module_partner') as $key => $row)
+                                <li class="splide__slide" data-aos="fade-up" data-aos-delay="{{$key*200}}">
                                     <img src="{{rvMedia::getImageUrl(get_sub_field($row, 'image'))}}" alt="Doi tac" width="250" height="100" />
                                 </li>
                                 @endforeach
