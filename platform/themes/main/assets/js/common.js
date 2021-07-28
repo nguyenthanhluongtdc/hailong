@@ -1,10 +1,11 @@
 import Page from "./page/home";
-import Introduce from "./page/introduce";
+import initCounter from "./components/counter";
 import copy from './components/copy'
 
 $(document).ready(function() {
     Page.default();
     Page.initMap();
-    Introduce.initCounter();
+
+    initCounter();
     copy();
 });

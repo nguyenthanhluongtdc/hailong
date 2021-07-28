@@ -54,26 +54,13 @@
                                             <strong> {!! __('Information') !!} </strong>
                                         </p>
                                         <ul class="f-listinfo__content footer__col__list">
-                                            @php
-                                                $col_link_one = theme_option('footer_col_link_one_repeater');
-                                                if(!blank($col_link_one)){
-                                                    $col_link_one = json_decode($col_link_one) ?? [];
-                                                }
-                                            @endphp
-
-                                            @if(!empty($col_link_one) && !blank($col_link_one))
-                                                @foreach($col_link_one as $row)
-                                                    @php
-                                                        $page = get_page_by_id($row[0]->value);
-                                                    @endphp
-
-                                                    @if(!empty($page))
-                                                        <li>
-                                                            <a href="{{$page->url}}" title="{{$page->name}}"> {!! $page->name !!} </a>
-                                                        </li>
-                                                    @endif
-                                                @endforeach
-                                            @endif
+                                             {!!
+                                                Menu::renderMenuLocation('footer-column-one-menu', [ 
+                                                    'options' => [],
+                                                    'theme'   => true,
+                                                    'view' => 'col-info-footer',
+                                                ])
+                                            !!}
                                         </ul>
                                     </div>
                                 </div>
@@ -84,26 +71,13 @@
                                             <strong> {!! __('About us') !!} </strong>
                                         </p>
                                         <ul class="f-listaboutus__content footer__col__list">
-                                            @php
-                                                $col_link_two = theme_option('footer_col_link_two_repeater');
-                                                if(!blank($col_link_two)){
-                                                $col_link_two = json_decode($col_link_two) ?? [];
-                                            }
-                                            @endphp
-
-                                            @if(!empty($col_link_two) && !blank($col_link_two))
-                                            @foreach($col_link_two as $row)
-                                            @php
-                                            $page = get_page_by_id($row[0]->value);
-                                            @endphp
-
-                                            @if(!empty($page))
-                                            <li>
-                                                <a href="{{$page->url}}" title="{{$page->name}}"> {!! $page->name !!} </a>
-                                            </li>
-                                            @endif
-                                            @endforeach
-                                            @endif
+                                            {!!
+                                                Menu::renderMenuLocation('footer-column-two-menu', [ 
+                                                    'options' => [],
+                                                    'theme'   => true,
+                                                    'view' => 'col-info-footer',
+                                                ])
+                                            !!}
                                         </ul>
                                     </div>
                                 </div>
@@ -114,32 +88,19 @@
                                             <strong> &nbsp </strong>
                                         </p>
                                         <ul class="f-listinfo-other__content footer__col__list">
-                                            @php
-                                            $col_link_three = theme_option('footer_col_link_three_repeater');
-                                            if(!blank($col_link_three)){
-                                            $col_link_three = json_decode($col_link_three) ?? [];
-                                            }
-                                            @endphp
-
-                                            @if(!empty($col_link_three) && !blank($col_link_three))
-                                            @foreach($col_link_three as $row)
-                                            @php
-                                            $page = get_page_by_id($row[0]->value);
-                                            @endphp
-
-                                            @if(!empty($page))
-                                            <li>
-                                                <a href="{{$page->url}}" title="{{$page->name}}"> {!! $page->name !!} </a>
-                                            </li>
-                                            @endif
-                                            @endforeach
-                                            @endif
+                                            {!!
+                                                Menu::renderMenuLocation('footer-column-three-menu', [ 
+                                                    'options' => [],
+                                                    'theme'   => true,
+                                                    'view' => 'col-info-footer',
+                                                ])
+                                            !!}
                                         </ul>
                                         <div class="footer__col__list--icon pt-4">
                                             @php
                                             $social_network = theme_option("footer_social_network_repeater", []);
                                             if(!blank($social_network)) {
-                                            $social_network = json_decode($social_network) ?? [];
+                                                $social_network = json_decode($social_network) ?? [];
                                             }
                                             @endphp
 
