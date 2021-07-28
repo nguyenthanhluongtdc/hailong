@@ -78,83 +78,87 @@
                  </div>
 
                  <div class="more-info">
-                     <div class="theme-customize-header-section__header">
-                         <h2 class="theme-customize-header-section__header__title">
-                             {!! __('Common characteristic') !!}
-                         </h2>
-                         {!! $product->content !!}
-                     </div>
+                    @if(!empty($product->content))
+                        <div class="theme-customize-header-section__header">
+                            <h2 class="theme-customize-header-section__header__title">
+                                {!! __('Common characteristic') !!}
+                            </h2>
+                            {!! $product->content !!}
+                        </div>
+                    @endif
 
-                     <div class="row-picture distance-above">
-                         <div class="splide" id="section-product-more-info__carousel">
-                             <div class="splide__slider">
-                                 <!-- relative -->
-                                 <div class="splide__track">
-                                     <ul class="splide__list">
-                                         @foreach ($productImages as $img)
-                                         <li class="splide__slide">
-                                             <img width="1400" height="750" src="{{ RvMedia::getImageUrl($img, 'product_detail') }}" data-zoom-image="{{ RvMedia::getImageUrl($img, 'product_detail') }}" alt="{{ $product->name }}" />
-                                         </li>
-                                         @endforeach
-                                     </ul>
-                                 </div>
-                             </div>
+                    @if(count($productImages) > 1)
+                        <div class="row-picture distance-above">
+                            <div class="splide" id="section-product-more-info__carousel">
+                                <div class="splide__slider">
+                                    <!-- relative -->
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                        @php unset($productImages[0]) @endphp
+                                            @foreach ($productImages as $img)
+                                            <li class="splide__slide">
+                                                <img width="1400" height="750" src="{{ RvMedia::getImageUrl($img, 'product_detail') }}" data-zoom-image="{{ RvMedia::getImageUrl($img, 'product_detail') }}" alt="{{ $product->name }}" />
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
 
-                             <div>
-                                 <!-- extra contents -->
-                             </div>
-                         </div>
-
-                     </div>
+                                <div>
+                                    <!-- extra contents -->
+                                </div>
+                            </div>
+                        </div>
+                    @endif
                  </div>
              </div>
          </div>
      </div>
 
-     <div class="section-production-process-wrapper">
-         <div class="container-customize">
-             <div class="section-production-process distance-below">
-                 <div class="row">
-                     <div class="col-lg-10 col-md-9">
-                         <div class="theme-customize-header-section__header">
-                             <h2 class="theme-customize-header-section__header__title">
-                                 {!! __('Production process') !!}
-                             </h2>
-                         </div>
+    @if(has_field($product, 'listtabs_production_process_page_product_detail'))
+        <div class="section-production-process-wrapper">
+            <div class="container-customize">
+                <div class="section-production-process distance-below">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-9">
+                            <div class="theme-customize-header-section__header">
+                                <h2 class="theme-customize-header-section__header__title">
+                                    {!! __('Production process') !!}
+                                </h2>
+                            </div>
 
-                         @if(has_field($product, 'listtabs_production_process_page_product_detail'))
-                         <div class="box__tabs">
-                             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                 @foreach(has_field($product, 'listtabs_production_process_page_product_detail') as $key => $row)
-                                 <li class="nav-item box__tabs__header" role="presentation">
-                                     <button class="nav-link {{$key==0?'active':''}} px-0" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true">
-                                         {!! has_sub_field($row, 'title') !!}
-                                     </button>
-                                 </li>
-                                 @endforeach
-                             </ul>
+                            <div class="box__tabs">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    @foreach(has_field($product, 'listtabs_production_process_page_product_detail') as $key => $row)
+                                    <li class="nav-item box__tabs__header" role="presentation">
+                                        <button class="nav-link {{$key==0?'active':''}} px-0" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true">
+                                            {!! has_sub_field($row, 'title') !!}
+                                        </button>
+                                    </li>
+                                    @endforeach
+                                </ul>
 
-                             <div class="tab-content box__tabs__content px-0" id="myTabContent">
-                                 @foreach(has_field($product, 'listtabs_production_process_page_product_detail') as $key => $row)
-                                 <div class="tab-pane fade show {{$key==0?'active':''}} _fsx20r16" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
-                                     {!! has_sub_field($row, 'content') !!}
-                                 </div>
-                                 @endforeach
-                             </div>
-                         </div>
-                         @endif
-                     </div>
+                                <div class="tab-content box__tabs__content px-0" id="myTabContent">
+                                    @foreach(has_field($product, 'listtabs_production_process_page_product_detail') as $key => $row)
+                                    <div class="tab-pane fade show {{$key==0?'active':''}} _fsx20r16" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
+                                        {!! has_sub_field($row, 'content') !!}
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
 
-                     <div class="col-lg-2 col-md-3">
-                         <div class="box__btn">
-                             <button class="btn-order mr-md-0 mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i>{!! __('Order') !!} </button>
-                             <button class="btn-quote" data-toggle="modal" data-target="#{{$slug}}"><i class="fal fa-door-open"></i> {!! __('Quote') !!} </button>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
+                        <div class="col-lg-2 col-md-3">
+                            <div class="box__btn">
+                                <button class="btn-order mr-md-0 mb-2" data-target="#orderModal" data-toggle="modal"><i class="fal fa-shopping-cart"></i>{!! __('Order') !!} </button>
+                                <button class="btn-quote" data-toggle="modal" data-target="#{{$slug}}"><i class="fal fa-door-open"></i> {!! __('Quote') !!} </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 
      @if(!empty(get_other_products($product)))
      <div class="section-other-product-wrapper">
