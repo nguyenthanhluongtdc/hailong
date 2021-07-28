@@ -1,9 +1,11 @@
 <?php
+
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Page\Repositories\Interfaces\PageInterface;
+
 app()->booted(function () {
     $pages = app(PageInterface::class)
-    ->pluck('name', 'id', ['status' => BaseStatusEnum::PUBLISHED]);
+        ->pluck('name', 'id', ['status' => BaseStatusEnum::PUBLISHED]);
 
     theme_option()
         ->setField([
@@ -448,15 +450,53 @@ app()->booted(function () {
                 ]
             ]
         ])
+        ->setSection([ // Set section with no field
+            'title' => __('Popup'),
+            'desc' => __('Popup settings'),
+            'id' => 'opt-text-subsection-popup',
+            'subsection' => true,
+            'icon' => 'fa fa-home',
+        ])
         ->setField([
             'id' => 'image_popup',
-            'section_id' => 'opt-text-subsection-general',
+            'section_id' => 'opt-text-subsection-popup',
             'type' => 'mediaImage',
             'label' => __('Image popup'),
             'attributes' => [
                 'name' => 'image_popup',
                 'value' => null,
+
             ],
+        ])
+        ->setField([
+            'id' => 'link_popup',
+            'section_id' => 'opt-text-subsection-popup',
+            'type' => 'text', // text, password, email, number
+            'label' => __('Link popup'),
+            'attributes' => [
+                'name' => 'link_popup',
+                'value' => null, // default value
+                'options' => [
+                    'class' => 'form-control',
+                    'data-counter' => 200,
+                ]
+            ]
+        ])
+        ->setField([
+            'id' => 'enable_popup',
+            'section_id' => 'opt-text-subsection-popup',
+            'type' => 'onOff',
+            'label' => __('Enable popup'),
+            'attributes' => [
+                'name' => 'enable_popup',
+                'value' => 0,
+                'data' => [
+                    0 => 'No',
+                    1 => 'Yes',
+                ],
+                'options' => [], // Optional
+            ],
+            'helper' => __('Enable popup in home page'),
         ])
         ->setSection([ // Set section with no field
             'title' => __('Sidebar'),
@@ -520,7 +560,7 @@ app()->booted(function () {
                     ],
                 ]
             ],
-        ]) 
+        ])
         ->setField([ // Set field for section
             'id' => 'icon_email_sidebar',
             'section_id' => 'opt-sidebar',
@@ -551,7 +591,7 @@ app()->booted(function () {
                     'data-counter' => 200,
                 ]
             ]
-        ]) 
+        ])
         ->setField([ // Set field for section
             'id' => 'icon_message_sidebar',
             'section_id' => 'opt-sidebar',
