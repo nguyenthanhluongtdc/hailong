@@ -11,10 +11,6 @@ use Platform\Base\Supports\Helper;
 use Illuminate\Support\Facades\Event;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Routing\Events\RouteMatched;
-use CustomField;
-use Gallery;
-use Language;
-use SlugHelper;
 
 class ProjectServiceProvider extends ServiceProvider
 {
@@ -44,35 +40,42 @@ class ProjectServiceProvider extends ServiceProvider
             }
 
             dashboard_menu()->registerItem([
+                'id'          => 'cms-plugins-construction',
+                'priority'    => 5,
+                'parent_id'   => null,
+                'name'        => 'plugins/project::project.construction',
+                'icon'        => 'fa fa-building',
+                'url'         => route('project.index'),
+                'permissions' => ['project.index'],
+            ])->registerItem([
                 'id'          => 'cms-plugins-project',
-                'priority'    => 1,
-                'parent_id'   => 'cms-plugins-projects-category',
-                'name'        => 'Dự án',
-                'icon'        => null,
+                'priority'    => 4,
+                'parent_id'   => 'cms-plugins-construction',
+                'name'        => 'plugins/project::project.name',
+                'icon'        => '',
                 'url'         => route('project.index'),
                 'permissions' => ['project.index'],
             ]);
         });
+
+        $this->app->register(HookServiceProvider::class);
         \SlugHelper::registerModule(Project::class);
-        \SlugHelper::setPrefix(Project::class, 'du-an');
-        $this->app->booted(function () {
-            \SlugHelper::registerModule(Project::class);
-            \SlugHelper::setPrefix(Project::class, 'du-an');
-        });
+        \SlugHelper::setPrefix(Project::class, 'projects');
+        if (is_plugin_active('gallery')) {
+            \Gallery::registerModule([Project::class]);
+        }
         $this->app->booted(function () {
             if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
-                CustomField::registerModule(Projects::class)
-                    ->registerRule('basic', __('plugins/projects::projects.name'), Projects::class, function () {
-                        return $this->app->make(ProjectsInterface::class)->pluck('name', 'id');
+                \CustomField::registerModule(Project::class)
+                    ->registerRule('basic', __('Your plugin name'), Project::class, function () {
+                        return $this->app->make(ProjectInterface::class)->pluck('name', 'id');
                     })
                     ->expandRule('other', 'Model', 'model_name', function () {
                         return [
-                            Projects::class => __('plugins/projects::projects.name'),
+                            Project::class => __('Project'),
                         ];
                     });
             }
         });
-       
     }
-    
 }

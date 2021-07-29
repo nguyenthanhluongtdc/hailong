@@ -1,149 +1,96 @@
 <div id="teachnological-line-page">
-    <div class="section-banner-wrapper">
-        @includeIf("theme.theme-customize::views.components.breadcrumb")
-        <div class="container-customize">
-            <div class="section-banner">
-                <div class="theme-customize-header-section__header">
-                    <h1 class="theme-customize-header-section__header__title">
-                        Tiên phong sản xuất <br>
-                        Kính an toàn hàng đầu việt nam
-                    </h1>
-                </div>
-
-                <div class="theme-customize-header-section__tabs">
-                    <ul class="theme-customize-header-section__tabs__list mb-0">
-                        <li class="__tabs__item">
-                            <a class="__tabs__link" href="#" title="Tổng quan Hailong Glass"> Tổng quan Hailong Glass </a>
-                        </li>
-
-                        <li class="__tabs__item">
-                            <a class="__tabs__link" href="/company-info" title="Thông tin công ty"> Thông tin công ty </a>
-                        </li>
-
-                        <li class="__tabs__item">
-                            <a class="__tabs__link" href="/profile" title="Hồ sơ năng lực"> Hồ sơ năng lực </a>
-                        </li>
-
-                        <li class="__tabs__item active">
-                            <a class="__tabs__link" href="#" title="Dây chuyền công nghệ"> Dây chuyền công nghệ </a>
-                        </li>
-                    </ul>
-                </div>
+    @includeIf("theme.main::views.components.tabs-banner",['title'=> 'Title Introduce','menu'=>'introduce-menu'])
+    <div class="section-intro-wrapper _fsx20r16">
+        <div class="container-customize" data-aos="fade-down">
+            <div class="my-5">
+                {!! has_field($page, 'description_module_introductory_dccn') ? get_field($page, 'description_module_introductory_dccn') : "" !!}
             </div>
         </div>
-    </div>
 
-    <div class="section-intro-wrapper _fsx20r16">
-        <div class="container-customize">
-            <p class="my-5">
-                Hồ sơ năng lực như bức chân dung hoàn chỉnh về một doanh nghiệp. Bức chân dung ấy cũng đầy đủ, chi tiết, càng hiện lên sống động bao nhiêu thì càng
-                giúp cho thương hiệu của doanh nghiệp được nhận diện rõ ràng bấy nhiều. Một câu hỏi thường xuyên được đặt ra, vậy làm sao để có một bức chân dung
-                doanh nghiệp hoàn chỉnh và ấn tượng
-            </p>
-        </div>
-
-        <div class="section-intro__picture">
-            <img class="mw-100" width="1900" height="500" src="{{Theme::asset()->url('images/teachnological/image1.jpg')}}" alt="ảnh dây chuyền công nghệ" />
+        <div class="section-intro__picture" data-aos="fade-up">
+            @if(has_field($page, 'image_module_introductory_dccn'))
+                <img class="mw-100" width="1900" height="500" src="{{rvMedia::getImageUrl(get_field($page, 'image_module_introductory_dccn'))}}" alt="ảnh dây chuyền công nghệ" />
+            @endif
         </div>
     </div>
 
     <div class="section-teachnological-line-list-wrapper">
-        <div class="container-customize">
+        <div class="">
             <div class="section-teachnological">
-                <div class="theme-customize-header-section__header">
-                    <h2 class="theme-customize-header-section__header__title pl-0">
-                        Các dây chuyền công nghệ chính
+                <div class="theme-customize-header-section__header container-customize">
+                    <h2 class="theme-customize-header-section__header__title pl-0" data-aos="fade-right">
+                        {!! has_field($page, 'tieu_detechnical_line') ? get_field($page, 'tieu_detechnical_line') : "" !!}
                     </h2>
-                    <p class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0">
-                        Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường.
-                    </p>
+                    <div class="theme-customize-header-section__header__des align-items-end mb-md-4 mb-0" data-aos="fade-left">
+                        {!! has_field($page, 'mo_tatechnical_line') ? get_field($page, 'mo_tatechnical_line') : "" !!}
+                    </div>
                 </div>
 
                 <div class="section-teachnological__list _fsx20r16">
-                    <div class="section-teachnological__row">
-                        <div class="section-teachnological__row__col order-sm-1 order-2 __content">
-                            <div>
-                                <h3 class="__content__title"> Phân xưởng kính cường lực </h3>
-                                <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
-                                <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
+                    @if(has_field($page, 'day_chuyentechnical_line'))
+                        @foreach (get_field($page, 'day_chuyentechnical_line') as $item)
+                            <div class="section-teachnological__row">
+                                <div class="section-teachnological__row__col order-sm-1 order-2 __content" data-aos="fade-right">
+                                    <div>
+                                        <h3 class="__content__title">{!! has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : "" !!}</h3>
+                                        {!! has_sub_field($item, 'mo_ta') ? get_sub_field($item, 'mo_ta') : "" !!}
+                                    </div>
+                                    <button class="btn-read-more bg-white" data-toggle="modal" data-target="#technical_line_{{ \Illuminate\Support\Str::slug(has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : '', '_') }}" href="#" title="{!! __('Details') !!}">
+                                        {!! __('Details') !!}
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade dccn" id="technical_line_{{ \Illuminate\Support\Str::slug(has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : '', '_') }}" tabindex="-1" role="dialog" aria-labelledby="technical_line_{{ \Illuminate\Support\Str::slug(has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : '', '_') }}" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle"> {{ has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : "" }} </h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <i class="fal fa-times"></i>
+                                                    </button>
+                                                </div>
+                                                {!! has_sub_field($item, 'chi_tiet') ? get_sub_field($item, 'chi_tiet') : "" !!}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture" data-aos="fade-left">
+                                    @if(has_sub_field($item, 'hinh_anh'))
+                                        <img width="640" height="360" class="w-100" src="{{get_image_url(get_sub_field($item, 'hinh_anh'))}}" alt="{{ has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : '' }}" />
+                                    @endif
+                                </div>
                             </div>
-                            <a class="btn-read-more" href="" title="Chi tiết"> Chi tiết </a>
-                        </div>
-
-                        <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
-                            <img width="640" height="360" src="{{Theme::asset()->url('images/teachnological/image2.jpg')}}"alt="ảnh dây chuyền công nghệ" />
-                        </div>
-                    </div>
-
-                    <div class="section-teachnological__row">
-                        <div class="section-teachnological__row__col order-sm-1 order-2 __content">
-                            <div>
-                                <h3 class="__content__title"> Phân xưởng kính cường lực </h3>
-                                <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
-                                <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
-                            </div>
-                            <a class="btn-read-more" href="" title="Chi tiết"> Chi tiết </a>
-                        </div>
-
-                        <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
-                            <img width="640" height="360" src="{{Theme::asset()->url('images/teachnological/image3.jpg')}}" alt="ảnh dây chuyền công nghệ"/>
-                        </div>
-                    </div>
-
-                    <div class="section-teachnological__row">
-                        <div class="section-teachnological__row__col order-sm-1 order-2 __content">
-                            <div>
-                                <h3 class="__content__title"> Phân xưởng kính cường lực </h3>
-                                <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
-                                <p> Thương hiệu được khẳng định bởi uy tín, chất lượng, tính an toàn và đặc biệt thân thiện với môi trường. </p>
-                            </div>
-                            <a class="btn-read-more" href="" title="Chi tiết"> Chi tiết </a>
-                        </div>
-
-                        <div class="section-teachnological__row__col order-sm-2 order-1 mb-sm-0 mb-3 __picture">
-                            <img width="640" height="360" src="{{Theme::asset()->url('images/teachnological/image4.jpg')}}"alt="ảnh dây chuyền công nghệ" />
-                        </div>
-                    </div>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>
     </div>
 
     <!--css in file common.scss----->
-    <div class="container-customize mt-4">
-        <div class="box-common-statistics-wrapper mt-n3">
+    <div class="container-customize mt-4" data-aos="fade-down">
+        <div class="box-common-statistics-wrapper distance-below mt-n3">
             <div class="box-common-statistics">
-                <div class="box-common-statistics__col">
-                    <div class="__col__up">
-                        19.504
-                    </div>
+                @if(has_field($page, 'stats_module_dccn'))
+                    @foreach(get_field($page, 'stats_module_dccn') as $row)
+                    <div class="box-common-statistics__col">
+                        <div class="__col__up count">
+                            {!! has_sub_field($row, 'number') ? get_sub_field($row, 'number') : "" !!}
+                        </div>
 
-                    <div class="__col__down">
-                        Cong trinh su dung Hailong Glass
+                        <div class="__col__down">
+                            {!! has_sub_field($row, 'description') ? get_sub_field($row, 'description') : "" !!}
+                        </div>
                     </div>
-                </div>
-
-                <div class="box-common-statistics__col">
-                    <div class="__col__up">
-                        50.000+
-                    </div>
-
-                    <div class="__col__down">
-                        San pham tung ra thi truong
-                    </div>
-                </div>
-
-                <div class="box-common-statistics__col">
-                    <div class="__col__up">
-                        1975
-                    </div>
-
-                    <div class="__col__down">
-                        Can bo, cong nhan lam viec
-                    </div>
-                </div>
+                    @endforeach
+                @endif
             </div>
         </div>
     </div>
     <!--end css in file common.scss----->
 </div>
+
+<script>
+    window._counter = true;
+</script>

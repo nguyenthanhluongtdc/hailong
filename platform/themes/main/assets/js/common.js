@@ -1,3 +1,11 @@
+import Page from "./page/home";
+import initCounter from "./components/counter";
+import copy from './components/copy'
 
-//import page index
-import home from './page/home';
+$(document).ready(function() {
+    Page.default();
+    Page.initMap();
+
+    initCounter();
+    copy();
+});

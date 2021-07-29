@@ -67,6 +67,7 @@ class Product extends BaseModel
         'status',
         'views',
         'stock_status',
+        'is_price_notification',
     ];
 
     /**
@@ -111,6 +112,10 @@ class Product extends BaseModel
             $product->groupedProduct()->detach();
 
             Review::where('product_id', $product->id)->delete();
+
+            if (is_plugin_active('language-advanced')) {
+                $product->translations()->delete();
+            }
         });
 
         self::updated(function (Product $product) {
@@ -181,6 +186,15 @@ class Product extends BaseModel
     public function crossSales()
     {
         return $this->belongsToMany(Product::class, 'ec_product_cross_sale_relations', 'from_product_id',
+            'to_product_id');
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function otherProducts()
+    {
+        return $this->belongsToMany(Product::class, 'ec_product_other_relations', 'from_product_id',
             'to_product_id');
     }
 
@@ -266,14 +280,6 @@ class Product extends BaseModel
     public function parentProduct()
     {
         return $this->belongsToMany(Product::class, 'ec_product_variations', 'product_id', 'configurable_product_id');
-    }
-
-    /**
-     * @return HasMany
-     */
-    public function pVariations()
-    {
-        return $this->hasMany(ProductVariation::class, 'product_id');
     }
 
     /**

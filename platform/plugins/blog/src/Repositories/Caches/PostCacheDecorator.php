@@ -26,6 +26,14 @@ class PostCacheDecorator extends CacheAbstractDecorator implements PostInterface
     /**
      * {@inheritDoc}
      */
+    public function getListPostLatestPaginate($paginate = 6)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getByUserId($authorId, $limit = 6)
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
@@ -82,7 +90,7 @@ class PostCacheDecorator extends CacheAbstractDecorator implements PostInterface
     /**
      * {@inheritDoc}
      */
-    public function getAllPosts($perPage = 10, $active = true, array $with = ['slugable'])
+    public function getAllPosts($perPage = 12, $active = true, array $with = ['slugable'])
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }

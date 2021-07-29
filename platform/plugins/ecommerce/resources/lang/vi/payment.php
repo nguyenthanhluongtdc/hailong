@@ -2,9 +2,7 @@
 
 return [
     'name'                       => 'Thanh toán',
-    'all_payment'                => 'Tất cả thanh toán',
     'payment_method'             => 'Phương thức thanh toán',
-    'checkout_success'           => 'Thanh toán thành công!',
     'view_payment'               => 'Xem thanh toán #',
     'charge_id'                  => 'Mã giao dịch',
     'amount'                     => 'Số tiền',

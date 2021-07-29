@@ -10,7 +10,6 @@ use Platform\Table\Abstracts\TableAbstract;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Yajra\DataTables\DataTables;
 use Html;
-use Platform\Project\Models\Project;
 
 class ProjectTable extends TableAbstract
 {
@@ -59,15 +58,6 @@ class ProjectTable extends TableAbstract
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
             })
-            ->editColumn('image', function ($item) {
-                if ($this->request()->input('action') === 'excel') {
-                    return get_object_image($item->image, 'thumb');
-                }
-                return Html::image(get_object_image($item->image, 'thumb'), $item->name, ['width' => 50]);
-            })
-            ->editColumn('projects_category', function ($item) {
-                return Project::whereStatus(BaseStatusEnum::PUBLISHED)->where('id',$item->projects_category)->first()->name ?? '';
-             })
             ->editColumn('created_at', function ($item) {
                 return BaseHelper::formatDate($item->created_at);
             })
@@ -88,12 +78,10 @@ class ProjectTable extends TableAbstract
     {
         $query = $this->repository->getModel()
             ->select([
-               'app_projects.id',
-               'app_projects.name',
-               'app_projects.image',
-               'app_projects.projects_category',
-               'app_projects.created_at',
-               'app_projects.status',
+               'id',
+               'name',
+               'created_at',
+               'status',
            ]);
 
         return $this->applyScopes($query);
@@ -106,32 +94,18 @@ class ProjectTable extends TableAbstract
     {
         return [
             'id' => [
-                'name'  => 'app_projects.id',
                 'title' => trans('core/base::tables.id'),
                 'width' => '20px',
             ],
             'name' => [
-                'name'  => 'app_projects.name',
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
-            'image' => [
-                'name'  => 'app_projects.image',
-                'title' => 'Image',
-                'class' => 'text-left',
-            ],
-            'projects_category' => [
-                'name'  => 'app_projects.projects_category',
-                'title' => 'Loại dự án',
-                'class' => 'text-left',
-            ],
             'created_at' => [
-                'name'  => 'app_projects.created_at',
                 'title' => trans('core/base::tables.created_at'),
                 'width' => '100px',
             ],
             'status' => [
-                'name'  => 'app_projects.status',
                 'title' => trans('core/base::tables.status'),
                 'width' => '100px',
             ],
@@ -160,18 +134,18 @@ class ProjectTable extends TableAbstract
     public function getBulkChanges(): array
     {
         return [
-            'app_projects.name' => [
+            'name' => [
                 'title'    => trans('core/base::tables.name'),
                 'type'     => 'text',
                 'validate' => 'required|max:120',
             ],
-            'app_projects.status' => [
+            'status' => [
                 'title'    => trans('core/base::tables.status'),
                 'type'     => 'select',
                 'choices'  => BaseStatusEnum::labels(),
                 'validate' => 'required|in:' . implode(',', BaseStatusEnum::values()),
             ],
-            'app_projects.created_at' => [
+            'created_at' => [
                 'title' => trans('core/base::tables.created_at'),
                 'type'  => 'date',
             ],

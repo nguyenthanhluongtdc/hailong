@@ -44,6 +44,17 @@ if (!function_exists('get_related_posts')) {
     }
 }
 
+if (!function_exists('get_latest_posts_paginate')) {
+    /**
+     * @param array $params
+     * @return mixed
+     */
+    function get_latest_posts_paginate($paginate = 6)
+    {
+       return app(PostInterface::class)->getListPostLatestPaginate($paginate);
+    }
+}
+
 if (!function_exists('get_posts_by_category')) {
     /**
      * @param int $categoryId
@@ -90,7 +101,7 @@ if (!function_exists('get_all_posts')) {
      */
     function get_all_posts(
         $active = true,
-        $perPage = 10,
+        $perPage = 12,
         array $with = ['slugable', 'categories', 'categories.slugable', 'author']
     ) {
         return app(PostInterface::class)->getAllPosts($perPage, $active, $with);

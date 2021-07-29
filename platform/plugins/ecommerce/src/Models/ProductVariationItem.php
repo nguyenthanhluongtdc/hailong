@@ -42,7 +42,7 @@ class ProductVariationItem extends BaseModel
     }
 
     /**
-     * @return BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function attributeSet()
     {

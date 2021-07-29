@@ -64,7 +64,13 @@ class StoreProductService
 
         $product->fill($data);
 
-        $product->images = json_encode(array_values(array_filter($request->input('images', []))));
+        $images = [];
+
+        if ($request->input('images', [])) {
+            $images = array_values(array_filter($request->input('images', [])));
+        }
+
+        $product->images = json_encode($images);
 
         if (!$hasVariation || $forceUpdateAll) {
             if ($product->sale_price > $product->price) {
@@ -103,6 +109,11 @@ class StoreProductService
             if ($request->has('cross_sale_products')) {
                 $product->crossSales()->detach();
                 $product->crossSales()->attach(array_filter(explode(',', $request->input('cross_sale_products', ''))));
+            }
+
+            if ($request->has('other_products')) {
+                $product->otherProducts()->detach();
+                $product->otherProducts()->attach(array_filter(explode(',', $request->input('other_products', ''))));
             }
 
             if ($request->has('up_sale_products')) {

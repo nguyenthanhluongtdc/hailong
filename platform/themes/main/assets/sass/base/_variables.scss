@@ -7,6 +7,9 @@ $f3f3f3: #f3f3f3;
 $co84cba5: #84cba5;
 $co8b8b8b: #8b8b8b;
 $d2b0b0: #c7c7c7;
+$a19A51: #119A51;
+$d1d1d1: #d1d1d1;
+$ececec: #ececec;
 //text
 $textGreen: $mainColor;
 $textNight: $night;
@@ -24,7 +27,8 @@ $borderGreen: $mainColor;
 $borderf3f3f3: $f3f3f3;
 $border84cba5: $co84cba5;
 $borderd2b0b0: #c7c7c7;
-
+$borderd1d1d1: $d1d1d1;
+$borderececec: $ececec;
 //alpha
 $alpha0_1: .1;
 $alpha0_2: .2;
@@ -41,7 +45,6 @@ $iCiel-SamsungSharpSans-Bold_SMCPS: "iCiel-SamsungSharpSans-Bold_SMCPS";
 $Barlow-ExtraLight: "Barlow-ExtraLight";
 $Barlow-Regular: "Barlow-Regular";
 $Barlow-Medium:"Barlow-Medium";
-
 //font-size: 
 $font-size20: 1.1111111111111112rem;
 $font-size18: 1rem;
@@ -49,16 +52,12 @@ $font-size17: 0.9444444444444444rem;
 $font-size15: 0.833334rem;
 $font-size30: 1.6667rem;
 $font-size40: 2.2223rem;
-
 //root: 15
 $font-size20root15: 1.3333rem;
-
-$size100: 5.5rem; 
-
+$size100: 5.5rem;
 //root: 15
 $size50: 3.3rem;
-$size30: 2rem; 
-
+$size30: 2rem;
 //1px => root: 16
 $size0_063: .063rem;
 //2px => root: 16
@@ -191,10 +190,8 @@ $size0_85: .85rem;
 //64px => root: 16	
 //80px => root: 20
 $size4 :4rem;
-
 //65px
 $size4_0625: 4.0625rem;
-
 //60px => root: 14px
 $size4_285: 4.285rem;
 //100px => root: 16
@@ -207,8 +204,6 @@ $size5: 5rem;
 $size6: 6rem;
 //150px => root: 20
 $size7_5: 7.5rem;
-
 $size9: 9rem;
-
 //150px => root: 16px
 $size9_375: 9.375rem;

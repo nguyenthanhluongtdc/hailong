@@ -6,21 +6,6 @@
 
             .box-content {
 
-                .line-border {
-                    width: 15%;
-                    height: 2px;
-                    background-color: $backgroundGreen;
-                   
-                    @media (min-width: 769px) {
-                        margin-top: $size2_5;
-                        margin-bottom: $size2_5;
-                        transform: translateX(-30%);
-                    }
-
-                    margin-top: $size1_5;
-                    margin-bottom: $size1_5;
-                }
-
                 &__bottom {
 
                     .__bottom__line__one {
@@ -53,15 +38,19 @@
         }
     }
 
-    .section-procedure-wrapper {
+    .section-production-process-wrapper {
 
-        .section-procedure {
+        img {
+            max-width: 100%;
+        }
+
+        .section-production-process {
             border-bottom: 1px solid $borderf3f3f3;
             .box__btn {
                 @media (min-width: 1681px) {
                     margin-top: calc(#{$size9} + #{$size2} + 10px);
                 }
-                margin-top: calc(#{$size9} + 10px);
+                margin-top: calc(#{$size9} + #{$size2} + 10px);
 
                 @media (max-width: 768px) {
                     margin-top: $size2;

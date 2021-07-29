@@ -1,0 +1,19 @@
+.box-common-partner-carousel-wrapper {
+
+    .box-common-partner-carousel {
+        .splide__slide {
+            border: 1px solid $borderf3f3f3;
+            padding: $size1 $size2;
+            display: flex;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .splide__arrows {
+            display: none;
+        }
+    }
+}

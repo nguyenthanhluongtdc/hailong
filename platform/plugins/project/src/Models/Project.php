@@ -5,18 +5,12 @@ namespace Platform\Project\Models;
 use Platform\Base\Traits\EnumCastable;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Base\Models\BaseModel;
-use Platform\Slug\Traits\SlugTrait;
-use Platform\Revision\RevisionableTrait;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Platform\ServicesCategory\Models\ServicesCategory;
-use Platform\Slug\Repositories\Interfaces\SlugInterface;
-
+use Platform\ProjectCategories\Models\ProjectCategories;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Project extends BaseModel
 {
     use EnumCastable;
-    use RevisionableTrait;
-    use SlugTrait;
 
     /**
      * The database table used by the model.
@@ -30,10 +24,10 @@ class Project extends BaseModel
      */
     protected $fillable = [
         'name',
-        'projects_category',
         'description',
-        'type',
+        'content',
         'image',
+        'is_featured',
         'status',
     ];
 
@@ -43,9 +37,8 @@ class Project extends BaseModel
     protected $casts = [
         'status' => BaseStatusEnum::class,
     ];
-    public function category(): BelongsTo
-    {
-        return $this->belongsTo(ProjectsCategory::class, 'projects_category', 'id')->withDefault();
-    }
 
+    public function categories() : BelongsToMany{
+        return $this->belongsToMany(ProjectCategories::class, 'app_project_category_project','project_id','category_id');
+    }
 }

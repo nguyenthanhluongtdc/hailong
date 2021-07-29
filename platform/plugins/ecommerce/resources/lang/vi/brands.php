@@ -4,7 +4,6 @@ return [
     'name'          => 'Thương hiệu',
     'create'        => 'Thêm thương hiệu mới',
     'edit'          => 'Sửa thương hiệu',
-    'list'          => 'Danh sách thương hiệu',
     'form'          => [
         'name'                    => 'Tên',
         'name_placeholder'        => 'Tên thương hiệu (tối đa 255 kí tự)',

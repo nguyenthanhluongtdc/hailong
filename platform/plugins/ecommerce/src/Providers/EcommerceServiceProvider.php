@@ -583,6 +583,16 @@ class EcommerceServiceProvider extends ServiceProvider
                 ProductCategory::class,
                 ProductTag::class,
             ]);
+
+            $models = [Product::class];
+
+            if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
+                \Language::registerModule($models);
+            }
+
+            if (is_plugin_active('Gallery')) {
+                \Gallery::registerModule($models);
+            }
         });
 
         $this->app->register(EventServiceProvider::class);
@@ -594,6 +604,20 @@ class EcommerceServiceProvider extends ServiceProvider
                 if (Cart::count() || ($cart instanceof \Platform\Ecommerce\Cart\Cart && $cart->count())) {
                     $this->app->make(HandleApplyCouponService::class)->execute($coupon);
                 }
+            }
+        });
+
+        $this->app->booted(function () {
+            if (defined('CUSTOM_FIELD_MODULE_SCREEN_NAME')) {
+                \CustomField::registerModule(Product::class)
+                    ->registerRule('basic', __('Product'), Product::class, function () {
+                        return $this->app->make(ProductInterface::class)->pluck('name', 'id');
+                    })
+                    ->expandRule('other', 'Model', 'model_name', function () {
+                        return [
+                            Product::class => __('Product'),
+                        ];
+                    });
             }
         });
     }

@@ -21,7 +21,7 @@ use RvMedia;
 
 class MainController extends PublicController
 {
-     /**
+    /**
      * @return \Illuminate\Http\Response|Response
      */
     public function getIndex()
@@ -43,7 +43,8 @@ class MainController extends PublicController
 
                 if ($slug) {
                     $data = (new PageService)->handleFrontRoutes($slug);
-
+                    
+                    Theme::layout('default');
                     return Theme::scope('index', $data['data'], $data['default_view'])->render();
                 }
             }
@@ -55,7 +56,7 @@ class MainController extends PublicController
 
         event(RenderingHomePageEvent::class);
     }
-    
+
 
     /**
      * @param string $key
@@ -65,15 +66,15 @@ class MainController extends PublicController
     public function getView($key = null)
     {
         SeoHelper::setTitle(theme_option('seo_title', 'Hailongglass'))
-        ->setDescription(theme_option('seo_description', 'Hailongglass'))
-        ->openGraph()
-        ->setTitle(@theme_option('seo_title'))
-        ->setSiteName(@theme_option('site_title'))
-        ->setUrl(route('public.index'))
-        ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'), 'og'))
-        ->addProperty('image:width', '1200')
-        ->addProperty('image:height', '630');
-        
+            ->setDescription(theme_option('seo_description', 'Hailongglass'))
+            ->openGraph()
+            ->setTitle(@theme_option('seo_title'))
+            ->setSiteName(@theme_option('site_title'))
+            ->setUrl(route('public.index'))
+            ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'), 'og'))
+            ->addProperty('image:width', '1200')
+            ->addProperty('image:height', '630');
+
         if (empty($key)) {
             return $this->getIndex();
         }
@@ -97,8 +98,8 @@ class MainController extends PublicController
         }
 
         event(new RenderingSingleEvent($slug));
-        Theme::layout('default');
 
+        Theme::layout('default');
 
         if (!empty($result) && is_array($result)) {
             return Theme::scope(isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', ''), $result['data'], Arr::get($result, 'default_view'))->render();
@@ -117,5 +118,4 @@ class MainController extends PublicController
         // show your site map (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf')
         return SiteMapManager::render();
     }
-
 }

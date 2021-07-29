@@ -15,6 +15,7 @@ use Platform\Base\Events\UpdatedContentEvent;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Project\Forms\ProjectForm;
 use Platform\Base\Forms\FormBuilder;
+use Platform\Project\Services\StoreCategoryService;
 
 class ProjectController extends BaseController
 {
@@ -59,12 +60,13 @@ class ProjectController extends BaseController
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
      */
-    public function store(ProjectRequest $request, BaseHttpResponse $response)
+    public function store(ProjectRequest $request, BaseHttpResponse $response, StoreCategoryService $categoryService)
     {
+        //dd($request->input());
         $project = $this->projectRepository->createOrUpdate($request->input());
 
         event(new CreatedContentEvent(PROJECT_MODULE_SCREEN_NAME, $request, $project));
-
+        $categoryService->execute($request, $project);
         return $response
             ->setPreviousUrl(route('project.index'))
             ->setNextUrl(route('project.edit', $project->id))
@@ -94,7 +96,7 @@ class ProjectController extends BaseController
      * @param BaseHttpResponse $response
      * @return BaseHttpResponse
      */
-    public function update($id, ProjectRequest $request, BaseHttpResponse $response)
+    public function update($id, ProjectRequest $request, BaseHttpResponse $response, StoreCategoryService $categoryService)
     {
         $project = $this->projectRepository->findOrFail($id);
 
@@ -103,7 +105,7 @@ class ProjectController extends BaseController
         $project = $this->projectRepository->createOrUpdate($project);
 
         event(new UpdatedContentEvent(PROJECT_MODULE_SCREEN_NAME, $request, $project));
-
+        $categoryService->execute($request, $project);
         return $response
             ->setPreviousUrl(route('project.index'))
             ->setMessage(trans('core/base::notices.update_success_message'));

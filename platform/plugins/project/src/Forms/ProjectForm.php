@@ -6,6 +6,8 @@ use Platform\Base\Forms\FormAbstract;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Project\Http\Requests\ProjectRequest;
 use Platform\Project\Models\Project;
+use Platform\ProjectCategories\Repositories\Interfaces\ProjectCategoriesInterface;
+use Platform\Project\Forms\Fields\CategoryMultiField;
 
 class ProjectForm extends FormAbstract
 {
@@ -15,36 +17,50 @@ class ProjectForm extends FormAbstract
      */
     public function buildForm()
     {
+        $selectedCategories = [];
+        if ($this->getModel()) {
+            $selectedCategories = $this->getModel()->categories()->pluck('category_id')->all();
+        }
+
+        if (!$this->formHelper->hasCustomField('categoryMulti')) {
+            $this->formHelper->addCustomField('categoryMulti', CategoryMultiField::class);
+        }
+
+        $projectId = $this->getModel() ? $this->getModel()->id : null;
+
         $this
             ->setupModel(new Project)
             ->setValidatorClass(ProjectRequest::class)
             ->withCustomFields()
             ->add('name', 'text', [
-                'label'      => trans('Tên dự án'),
+                'label'      => trans('core/base::forms.name'),
                 'label_attr' => ['class' => 'control-label required'],
                 'attr'       => [
-                    'placeholder'  => trans('Tên dự án...'),
+                    'placeholder'  => trans('core/base::forms.name_placeholder'),
                     'data-counter' => 120,
                 ],
             ])
-            ->add('description', 'textarea', [
-                'label'      => trans('Mô tả'),
-                'label_attr' => ['class' => 'control-label required'],
+            ->add('description', 'editor', [
+                'label'      => trans('core/base::forms.description'),
+                'label_attr' => ['class' => 'control-label'],
                 'attr'       => [
-                    'placeholder'  => trans('Nhập mô tả cho dự án'),
-                    'data-counter' => 120,
-                    'rows' => 3
+                    'rows'         => 2,
+                    'placeholder'  => trans('core/base::forms.description_placeholder'),
+                    'data-counter' => 1000,
                 ],
             ])
-            ->add('project_category', 'customSelect', [
-                'label'      => trans('Loại dự án'),
-                'label_attr' => ['class' => 'control-label required'],
+            ->add('content', 'editor', [
+                'label'      => trans('plugins/project::project.form.content'),
+                'label_attr' => ['class' => 'text-title-field'],
                 'attr'       => [
-                    'class' => 'form-control select-full',
+                    'rows'            => 4,
+                    'with-short-code' => true,
                 ],
-                'choices'    => ['' => 'Chọn loại dự án'] + get_projects_categories()
             ])
-            
+            ->add('image', 'mediaImage', [
+                'label'      => trans('core/base::forms.image'),
+                'label_attr' => ['class' => 'control-label'],
+            ])
             ->add('status', 'customSelect', [
                 'label'      => trans('core/base::tables.status'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -53,12 +69,16 @@ class ProjectForm extends FormAbstract
                 ],
                 'choices'    => BaseStatusEnum::labels(),
             ])
-            ->add('image', 'mediaImage', [
-                'label'      => trans('core/base::forms.image'),
-                'label_attr' => ['class' => 'control-label'],
-                'help_block' => [
-                    'text' => __(''),
-                ],
+            ->add('is_featured', 'onOff', [
+                'label'         => trans('core/base::forms.is_featured'),
+                'label_attr'    => ['class' => 'control-label'],
+                'default_value' => false,
+            ])
+            ->add('categories[]', 'categoryMulti', [
+                'label'      => trans('plugins/project::project.form.categories'),
+                'label_attr' => ['class' => 'control-label required'],
+                'choices'    => get_all_project_categories(),
+                'value'      => old('categories', $selectedCategories),
             ])
             ->setBreakFieldPoint('status');
     }

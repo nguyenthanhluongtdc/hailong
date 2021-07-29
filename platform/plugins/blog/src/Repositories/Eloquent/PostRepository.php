@@ -47,6 +47,18 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
     /**
      * {@inheritDoc}
      */
+    public function getListPostLatestPaginate($paginate = 6) {
+        $data = $this->model
+            ->where('status', BaseStatusEnum::PUBLISHED)
+            ->whereNotIn('is_featured', [1])
+            ->orderBy('created_at', 'desc');
+
+        return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getRelated($id, $limit = 3)
     {
         $data = $this->model
@@ -201,7 +213,7 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
     /**
      * {@inheritDoc}
      */
-    public function getAllPosts($perPage = 10, $active = true, array $with = ['slugable'])
+    public function getAllPosts($perPage = 12, $active = true, array $with = ['slugable'])
     {
         $data = $this->model
             ->with($with)

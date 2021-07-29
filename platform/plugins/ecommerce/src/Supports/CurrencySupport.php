@@ -14,6 +14,11 @@ class CurrencySupport
     protected $currency;
 
     /**
+     * @var Currency
+     */
+    protected $defaultCurrency;
+
+    /**
      * @var Collection
      */
     protected $currencies = [];
@@ -28,6 +33,7 @@ class CurrencySupport
         if (session('currency') == $currency->title) {
             return;
         }
+
         session(['currency' => $currency->title]);
     }
 
@@ -48,11 +54,7 @@ class CurrencySupport
             }
 
             if (!$currency) {
-                if ($this->currencies && $this->currencies instanceof Collection) {
-                    $currency = $this->currencies->where('is_default', 1)->first();
-                } else {
-                    $currency = app(CurrencyInterface::class)->getFirstBy(['is_default' => 1]);
-                }
+                $currency = $this->getDefaultCurrency();
             }
 
             if (!$currency) {
@@ -63,6 +65,26 @@ class CurrencySupport
         }
 
         return $currency;
+    }
+
+    /**
+     * @return Currency
+     */
+    public function getDefaultCurrency()
+    {
+        if ($this->currencies && $this->currencies instanceof Collection) {
+            $this->defaultCurrency = $this->currencies->where('is_default', 1)->first();
+        }
+
+        if (!$this->defaultCurrency) {
+            $this->defaultCurrency = app(CurrencyInterface::class)->getFirstBy(['is_default' => 1]);
+        }
+
+        if (!$this->defaultCurrency) {
+            $this->defaultCurrency = app(CurrencyInterface::class)->getFirstBy([]);
+        }
+
+        return $this->defaultCurrency;
     }
 
     /**

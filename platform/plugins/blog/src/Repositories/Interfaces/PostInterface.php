@@ -29,6 +29,14 @@ interface PostInterface extends RepositoryInterface
     public function getListPostNonInList(array $selected = [], $limit = 7, array $with = []);
 
     /**
+     * @param array $selected
+     * @param int $limit
+     * @param array $with
+     * @return mixed
+     */
+    public function getListPostLatestPaginate($paginate = 6);
+
+    /**
      * @param int|array $categoryId
      * @param int $paginate
      * @param int $limit
@@ -82,7 +90,7 @@ interface PostInterface extends RepositoryInterface
      * @param bool $active
      * @return mixed
      */
-    public function getAllPosts($perPage = 10, $active = true, array $with = ['slugable']);
+    public function getAllPosts($perPage = 12, $active = true, array $with = ['slugable']);
 
     /**
      * @param int $limit

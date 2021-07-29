@@ -1,4 +1,4 @@
-@php $posts =  get_all_posts();  @endphp
+
 @if ($posts->hasPages())
 <div class="pagination-wrapper">
     <div class="row">
@@ -38,9 +38,9 @@
 
                         {{-- Next Page Link --}}
                         @if ($posts->hasMorePages())
-                            <li class="page-item"><a href="{{ $posts->nextPageUrl() }}" rel="next" class="page-link">»</a></li>
+                            <li class="page-item"><a href="{{ $posts->nextPageUrl() }}" rel="next" class="page-link"> {!! __("Next") !!} </a></li>
                         @else
-                            <li class="page-item disabled"><span class="page-link">»</span></li>
+                            <li class="page-item disabled"><span class="page-link"> {!! __("Next") !!} </span></li>
                         @endif
                     </ul>
                 @endif 

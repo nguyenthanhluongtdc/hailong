@@ -3,7 +3,7 @@
     .pagination {
         flex-wrap: wrap;
         .page-item {
-            margin-right: $size0_625;
+            font-weight: bold;
             .page-link {
                 &:last-child {
                     border-top-right-radius: 0;
@@ -14,7 +14,8 @@
                     border-bottom-left-radius: 0;
                 }
                 padding: 15px 20px;
-                border: 1px solid #cad5e1;
+                border: none;
+                outline: none;
                 color: $night;
             }
         }
@@ -23,6 +24,14 @@
             color: $white;
             border-top-left-radius: 0rem;
             border-bottom-left-radius: 0rem;
+            //border: 1px solid $borderGreen;
+        }
+        .page-item.disabled {
+            
+            span {
+                color: #ababab;
+                background-color: #e5e5e5;
+            }
         }
     }
 }

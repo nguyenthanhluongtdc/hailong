@@ -2,6 +2,7 @@
 
 namespace Platform\Ecommerce\Http\Controllers;
 
+use Assets;
 use Platform\Base\Events\DeletedContentEvent;
 use Platform\Base\Http\Controllers\BaseController;
 use Platform\Base\Http\Responses\BaseHttpResponse;
@@ -37,6 +38,8 @@ class ReviewController extends BaseController
     public function index(ReviewTable $dataTable)
     {
         page_title()->setTitle(trans('plugins/ecommerce::review.name'));
+
+        Assets::addStylesDirectly('vendor/core/plugins/ecommerce/css/review.css');
 
         return $dataTable->renderTable();
     }
