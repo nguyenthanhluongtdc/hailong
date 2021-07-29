@@ -11,7 +11,7 @@
                 <div class="theme-customize-header-section__tabs">
                     <ul class="theme-customize-header-section__tabs__list mb-0">
                         <li class="__tabs__item  active">
-                             <a class="__tabs__link" href="http://127.0.0.1:8000/san-pham" target="_self" title="Sản phẩm">
+                             <a class="__tabs__link" href="{!!$page->url!!}" target="_self" title="{!! $page->name !!}">
                                  {!! $page->name !!}
                              </a>
                          </li>
@@ -22,9 +22,11 @@
 </div>
 
     @if(isset($page))
+    @if(get_image_url($page->image))
         <div class="section-picture">
             <img width="1900" height="500" class="mw-100" src="{{ get_image_url($page->image) }}" alt="ảnh product" />
         </div>
+    @endif
 
         <div class="section-collapse-wrapper">
             <div class="container-customize">

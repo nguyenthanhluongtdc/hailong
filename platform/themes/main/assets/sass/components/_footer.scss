@@ -1,6 +1,10 @@
 footer {
     border-top: 1px solid #f3f3f3;
-    font-size: $font-size15;
+
+    @media(min-width: 1681px) {
+        font-size: $font-size15;
+    }
+    font-size: $size0_9375;
     .footer-wrapper {
         .footer {
             &__top {
