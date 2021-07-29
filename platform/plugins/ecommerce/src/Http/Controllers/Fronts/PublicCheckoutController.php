@@ -14,6 +14,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\View\Factory;
 use Platform\Ecommerce\Models\Product;
 use Platform\Base\Enums\BaseStatusEnum;
+use Kjmtrue\VietnamZone\Models\District;
+use Kjmtrue\VietnamZone\Models\Province;
 use Illuminate\Database\Eloquent\Builder;
 use Platform\Payment\Supports\PaymentHelper;
 use Platform\Ecommerce\Enums\OrderStatusEnum;
@@ -1201,9 +1203,9 @@ class PublicCheckoutController
         //         ]));
         // }
 
-        // $sessionData = OrderHelper::getOrderSessionData($token);
+        // $sessionData = OrderHelper::getOrderSessionData();
 
-        // $this->processOrderData($token, $sessionData, $request);
+        // $this->processOrderData('', $sessionData, $request);
 
         // if (is_plugin_active('marketplace')) {
         //     $products = Cart::instance('cart')->products();
@@ -1291,6 +1293,23 @@ class PublicCheckoutController
         } else {
             $order = $this->orderRepository->createOrUpdate($request->input());
         }
+
+        $city = Province::find($request->address['city']);
+        $state = District::find($request->address['state']);
+
+        $addressData = [
+            'name'       => $request->address['name'],
+            'phone'      => $request->address['phone'],
+            'country'    => 'Việt Nam',
+            'state'      => @$state->name,
+            'city'       => @$city->name,
+            'address'    => $request->address['address'],
+            // 'zip_code'   => $address->zip_code,
+            'order_id'   => $order->id,
+            // 'address_id' => $address->id,
+        ];
+
+        $this->orderAddressRepository->createOrUpdate($addressData, ['order_id' => $order->id]);
 
         if ($order) {
             $this->orderHistoryRepository->createOrUpdate([
