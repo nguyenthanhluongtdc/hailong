@@ -317,7 +317,7 @@
                                              Chúng tôi sẽ tiếp nhận đơn hàng, kiểm tra lại và xác nhận đơn hàng của Quý khách trước khi làm lệnh sản xuất
                                          </p>
                                      </div>
-                                     <a href="/products" title="xem thêm" class="read-more mt-4 d-inline-block"> Xem thêm sản phẩm </a>
+                                     <a href="/san-pham" title="xem thêm" class="read-more mt-4 d-inline-block"> Xem thêm sản phẩm </a>
                                  </div>
                              </div>
                          </div>
@@ -330,16 +330,18 @@
 
 <script>
     $(document).ready(function() {
-        new Splide('#section-product-more-info__carousel', {
-            heightRatio: 0.5625
-            , cover: true
-            , rewind: true
-            , lazyLoad: 'sequential'
-        }).mount();
+        if($('#section-product-more-info__carousel').length){
+            new Splide('#section-product-more-info__carousel', {
+                heightRatio: 0.5625
+                , cover: true
+                , rewind: true
+                , lazyLoad: 'sequential'
+            }).mount();
+        }
 
-        $.validator.addMethod("regxPhone", function (value, element, regexpr) {
-            return regexpr.test(value);
-        }, "Số điện thoại sai định dạng");
+        // $.validator.addMethod("regxPhone", function (value, element, regexpr) {
+        //     return regexpr.test(value);
+        // }, "Số điện thoại sai định dạng");
 
         $("#CheckoutForm").validate({
             ignore: [],
@@ -349,8 +351,8 @@
                 }, 
                 'address[phone]': {
                     required: true,
-                    digits: true,
-                    regxPhone: /(09|08|07|05|03)+([0-9]{8})\b/
+                    // digits: true,
+                    // regxPhone: /(09|08|07|05|03)+([0-9]{8})\b/
                 },
                 'address[city]': {
                     required: true,
@@ -375,7 +377,7 @@
                 'address[name]': 'Thông tin này không được bỏ trống!',
                 'address[phone]': {
                     required: 'Thông tin này không được bỏ trống!',
-                    digits: 'Số điện thoại không hợp lệ!'
+                    // digits: 'Số điện thoại không hợp lệ!'
                 },
                 'address[city]': "Thông tin này không được bỏ trống!",
                 'address[state]': "Thông tin này không được bỏ trống!",
@@ -462,10 +464,6 @@
                                 complete: function(xhr, status) {
                                     $('.ui.dropdown.district').api('remove loading');
                                     $('.ui.dropdown.ward').api('remove loading');
-                                    // $('.ui.dropdown.district').destroy();
-                                    // $('.ui.dropdown.ward').destroy();
-                                    $('.ui.dropdown.district').dropdown();
-                                    $('.ui.dropdown.ward').dropdown();
                                 }
                             });
                         }
@@ -504,8 +502,6 @@
                                 },
                                 complete: function(xhr, status) {
                                     $('.ui.dropdown.ward').api('remove loading');
-                                    // $('.ui.dropdown.ward').destroy();
-                                    $('.ui.dropdown.ward').dropdown();
                                 }
                             });
                         }
