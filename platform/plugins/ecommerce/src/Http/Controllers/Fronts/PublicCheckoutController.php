@@ -1455,7 +1455,7 @@ class PublicCheckoutController
             'product' => $product->name,
             'description' => $data['description'],
         ];
-        $to = 'mavanhung270995@gmail.com';
+        $to = 'hailongglass@gmail.com';
         $attachment = [];
         if ($request->hasFile('attach_file')) {
             $file = $request->attach_file;
