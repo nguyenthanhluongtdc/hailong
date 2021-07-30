@@ -40,7 +40,7 @@
                             <span class="time" data-aos="fade-left">
                                 {{$post->created_at->format('H:i d/m/Y') }}
                             </span>
-                            <div class="post-content" data-aos="flip-up">
+                            <div class="post-content" data-aos="zoom-in">
                              {!!$post->content!!}
         
                             </div>
