@@ -48,10 +48,9 @@
      </div>
 
      <div class="section-product-more-info-wrapper distance-y">
+        {!! do_shortcode('[our-policy][/our-policy]') !!}
          <div class="container-customize">
              <div class="section-product-more-info">
-                 {!! do_shortcode('[our-policy][/our-policy]') !!}
-
                  <div class="more-info">
                     @if(!empty($product->content))
                         <div class="theme-customize-header-section__header">
