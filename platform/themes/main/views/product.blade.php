@@ -198,7 +198,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="ui input focus w-100">
-                                            <input autocomplete="off" type="text" name="address[phone]" placeholder="{!!__('Phone number')!!}">
+                                            <input autocomplete="off" type="number" name="address[phone]" placeholder="{!!__('Phone number')!!}">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -316,7 +316,7 @@
                                             {!! __('Thank you') !!}
                                          </p>
                                      </div>
-                                     <a href="/san-pham" title="xem thêm" class="read-more mt-4 d-inline-block"> Xem thêm sản phẩm </a>
+                                     <a href="{{route('public.single')."/".get_slug_by_reference(theme_option('products_id'))}}" title="{!!__('See more products')!!}" class="read-more mt-4 d-inline-block"> {!!__('See more products')!!} </a>
                                  </div>
                              </div>
                          </div>

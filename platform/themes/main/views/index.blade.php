@@ -116,7 +116,9 @@
                         <div class="col-md-8 col-12 order-md-2 order-1 pl-md-0 get-height" data-aos="fade-left">
                             <div class="section-ourproduct__right h-100">
                                 <div class="theme-customize-header-section__header __header mt-0 pt-0">
-                                    <h2 data-aos="fade-right" data-aos-delay="200" class="theme-customize-header-section__header__title __title mb-2"> {{has_field($page, 'title_module_product') ? get_field($page, 'title_module_product') : ""}} </h2>
+                                    <h2 data-aos="fade-right" data-aos-delay="200" class="theme-customize-header-section__header__title __title mb-2">
+                                        <a href="{{route('public.single')."/".get_slug_by_reference(theme_option('products_id'))}}" title="{{has_field($page, 'title_module_product') ? get_field($page, 'title_module_product') : ""}}" class="text-white"> {{has_field($page, 'title_module_product') ? get_field($page, 'title_module_product') : ""}} </a>
+                                    </h2>
                                     <p class="theme-customize-header-section__header__des __des" data-aos="fade-left" data-aos-delay="200">
                                         {{has_field($page, 'description_module_product') ? get_field($page, 'description_module_product') : ""}}
                                     </p>

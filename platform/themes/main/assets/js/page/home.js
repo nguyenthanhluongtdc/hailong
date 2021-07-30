@@ -155,10 +155,12 @@ export default {
             eleItemHover[i].onmouseover = function(e) {
                 if(prevent!=false) {
                     e.preventDefault();
+                    var imgId = $(this).attr("data-image-id");
+                }else {
+                    var a = e.target;
+                    var imgId = a.getAttribute("data-image-id");
                 }
 
-                var a = e.target;
-                var imgId = a.getAttribute("data-image-id");
                 var imgSrc = dataArr[imgId];
                 eleImage.src = imgSrc;
             };

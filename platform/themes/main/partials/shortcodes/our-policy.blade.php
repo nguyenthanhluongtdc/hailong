@@ -1,4 +1,4 @@
-@php $fade = ['right','down','left']; @endphp
+    @php $fade = ['right','down','left']; @endphp
 
     <div class="section-our-policy-wrapper">
         <div class="container-customize">
