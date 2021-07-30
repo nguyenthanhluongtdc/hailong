@@ -310,11 +310,10 @@
                                      </div>
                                      <div class="theme-customize-header-section__header pt-0">
                                          <h2 class="theme-customize-header-section__header__title mb-3 pb-0">
-                                             Quý khách đặt hàng thành công
+                                            {!!__('Your order is successful')!!}
                                          </h2>
                                          <p class="theme-customize-header-section__header__des mb-3">
-                                             Cảm ơn quý khách! <br>
-                                             Chúng tôi sẽ tiếp nhận đơn hàng, kiểm tra lại và xác nhận đơn hàng của Quý khách trước khi làm lệnh sản xuất
+                                            {!! __('Thank you') !!}
                                          </p>
                                      </div>
                                      <a href="/san-pham" title="xem thêm" class="read-more mt-4 d-inline-block"> Xem thêm sản phẩm </a>
