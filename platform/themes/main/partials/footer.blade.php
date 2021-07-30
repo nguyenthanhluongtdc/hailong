@@ -4,13 +4,13 @@
             <div class="footer">
                 <div class="footer__top">
                     <div class="row">
-                        <div class="col-lg-2 col-sm-6 col-12 mb-sm-0 mb-4 footer__col" data-aos="fade-down">
+                        <div class="col-lg-2 col-sm-6 col-12 mb-sm-0 mb-4 footer__col">
                             <a class="link-theme-customize text-decoration-none" href="/" title="Logo">
                                 <img class="mw-100" width="400" height="120" src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="Logo" />
                             </a>
                         </div>
 
-                        <div class="col-lg-4 col-sm-6 col-12 mb-sm-0 mb-3 footer__col" data-aos="fade-down-right" data-aos-delay="200">
+                        <div class="col-lg-4 col-sm-6 col-12 mb-sm-0 mb-3 footer__col">
                             <div class="f-listaddress">
                                 <p class="footer__col__title">
                                     <strong> {!! __('Company name') !!} </strong>
@@ -48,7 +48,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-2 col-sm-4 col-12 mb-sm-0 mb-3 footer__col" data-aos="fade-down-right" data-aos-delay="400">
+                        <div class="col-lg-2 col-sm-4 col-12 mb-sm-0 mb-3 footer__col">
                             <div class="f-listinfo">
                                 <p class="footer__col__title">
                                     <strong> {!! __('Information') !!} </strong>
@@ -65,7 +65,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-2 col-sm-4 col-6 footer__col" data-aos="fade-down-left" data-aos-delay="600">
+                        <div class="col-lg-2 col-sm-4 col-6 footer__col">
                             <div class="f-listaboutus">
                                 <p class="footer__col__title">
                                     <strong> {!! __('About us') !!} </strong>
@@ -82,7 +82,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-2 col-sm-4 col-6 footer__col" data-aos="fade-down-left" data-aos-delay="800">
+                        <div class="col-lg-2 col-sm-4 col-6 footer__col">
                             <div class="f-listinfo-other">
                                 <p class="footer__col__title">
                                     <strong> &nbsp </strong>
