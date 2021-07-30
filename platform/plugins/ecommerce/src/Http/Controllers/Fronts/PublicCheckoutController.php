@@ -7,9 +7,12 @@ use Throwable;
 use Validator;
 use OrderHelper;
 use EcommerceHelper;
+use App\Mail\SendMail;
 use Illuminate\View\View;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Kjmtrue\VietnamZone\Models\Ward;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\View\Factory;
 use Platform\Ecommerce\Models\Product;
@@ -1179,6 +1182,7 @@ class PublicCheckoutController
         HandleRemoveCouponService $removeCouponService,
         HandleApplyPromotionsService $handleApplyPromotionsService
     ) {
+        $this->senMail($request);
         // if (!EcommerceHelper::isCartEnabled()) {
         //     abort(404);
         // }
@@ -1433,5 +1437,37 @@ class PublicCheckoutController
         return $response
             ->setError()
             ->setMessage(__('There is an issue when ordering. Please try again later!'));
+    }
+
+    public function senMail($request) {
+        $data = $request->only(['address', 'product', 'description', 'attach_file']);
+        $province = Province::where('id', $data['address']['city'])->select('name')->first();
+        $district = District::where('id', $data['address']['state'])->select('name')->first();
+        $ward = Ward::where('id', $data['address']['ward'])->select('name')->first();
+        $product = Product::where('id', $data['product'])->select('name')->first();
+        $data = [
+            'name' => $data['address']['name'],
+            'city' => $province->name,
+            'district' => $district->name,
+            'ward' => $ward->name,
+            'addess' => $data['address']['address'],
+            'phone' => $data['address']['phone'],
+            'product' => $product->name,
+            'description' => $data['description'],
+        ];
+        $to = 'mavanhung270995@gmail.com';
+        $attachment = [];
+        if ($request->hasFile('attach_file')) {
+            $file = $request->attach_file;
+            $time = time();
+            $path = 'order/'.$time;
+            $name = $file->getClientOriginalName();
+            \Illuminate\Support\Facades\Storage::put($path . '/' .$name, file_get_contents($file));
+            $attachment = array_merge($attachment, [[
+                'name' => $name,
+                'file' => public_path('storage/order/'.$time.'/'.$name)
+            ]]);
+        }
+        Mail::to($to)->send(new SendMail($data, 'Thông tin đơn hàng', true, $attachment));
     }
 }
