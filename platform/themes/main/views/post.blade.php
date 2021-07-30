@@ -103,7 +103,7 @@
                                 <div class="list-post-related">
                                     @foreach (get_related_posts($post->id,5) as $key => $post_related)
                                         <div class="row" data-aos="fade-left" data-aos-delay={{$key*200}}>
-                                            <div class="col-lg-6 col-md-4 col-sm-4">
+                                            <div class="col-lg-6 col-md-4 col-sm-4 img">
                                                 <a href="{{$post_related->url}}" class="news__item" title="{{$post_related->name}}">
                                                     <img class="img-w-100  mb-4" width="600" height="400"  src="{{ RvMedia::getImageUrl($post_related->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$post_related->name}}">
                                                 </a>

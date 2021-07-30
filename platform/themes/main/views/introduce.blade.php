@@ -54,9 +54,10 @@
 
                 <ul class="box-common-many-col__list mb-0 _fsx20r16">
                     @if(has_field($page, 'col_module_value'))
-                    @foreach(has_field($page, 'col_module_value') as $row)
-                    <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12" data-aos="zoom-in-down">
-                        <b> {{has_sub_field($row, 'title')}} </b>
+                    @foreach(has_field($page, 'col_module_value') as $key => $row)
+                    @php $imageValue[] = RvMedia::getImageUrl(get_sub_field($row, 'image')); @endphp
+                    <li class="box-common-many-col__list__item item-core-value col-lg-4 col-sm-6 col-12 px-lg-4 px-3" data-aos="zoom-in-down" data-image-id="{{$key}}">
+                        <b class="title-parent"> {{has_sub_field($row, 'title')}} </b>
                         <p class="des-children">
                             {!!has_sub_field($row, 'description')!!}
                         </p>
@@ -66,9 +67,11 @@
                 </ul>
             </div>
         </div>
-        <div class="box-common-many-col__picture" data-aos="zoom-out-up">
-            <img width="1900" height="500" src="{{rvMedia::getImageUrl(has_field($page, 'image_module_value'))}}" alt="ảnh intro" />
-        </div>
+        @if(has_field($page, 'col_module_value'))
+            <div class="box-common-many-col__picture" data-aos="zoom-out-up">
+                <img id="image-value" width="1900" height="500" src="{{rvMedia::getImageUrl(has_sub_field(has_field($page, 'col_module_value')[0], 'image'))}}" alt="ảnh intro" />
+            </div>
+        @endif
     </div>
 
     <!----css in file common.scss----->
@@ -88,7 +91,7 @@
                     @if(has_field($page, 'col_module_whychoose_introduce'))
                     @foreach(has_field($page, 'col_module_whychoose_introduce') as $row)
                     <li class="box-common-many-col__list__item col-lg-4 col-sm-6 col-12" data-aos="zoom-in-down">
-                        <b> {{has_sub_field($row, 'title')}} </b>
+                        <b class="title-parent"> {{has_sub_field($row, 'title')}} </b>
                         <p class="des-children">
                             {!!has_sub_field($row, 'description')!!}
                         </p>
@@ -104,6 +107,11 @@
 </div>
 
 <script>
+
+    window._Introduce = {
+        imageValue: {!! json_encode($imageValue ?? []) !!}
+    }
+
     $(document).ready(function() {
         new Splide('#box-common-typeicalproject-carousel__carousel', {
             perPage: 3
@@ -130,5 +138,4 @@
 
         $this.html('<iframe src="https://www.youtube.com/embed/' + $this.data("video") + '?autoplay=1"></iframe>');
     });
-
 </script>

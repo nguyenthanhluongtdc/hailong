@@ -166,12 +166,31 @@ form#CheckoutForm {
 
             &__item {
                 margin-top: $font-size30;
+                transition: box-shadow,transform 400ms;
+
+                &:hover {
+                    box-shadow: 0 0 18px rgb(0 0 0 / 20%);
+                    transform: scale(1.04) !important;
+                    border-radius: 5px;
+                    padding: 1rem;
+
+                    .title-parent {
+                        color: $textGreen;
+                    }
+
+                    .des-children {
+                        margin-bottom: 0;
+                    }
+                }
+
                 @media (max-width: 567px){
                     margin-top: $size0_6875;
                 }
 
                 .title-parent {
                     font-size: $font-size20;
+                    margin-bottom: 1rem;
+                    display: inline-block;
                 }
 
                 .des-children {
@@ -209,9 +228,17 @@ form#CheckoutForm {
 
                 &__img {
                     width: 100%;
+                    overflow: hidden;
+                    &:hover {
+                        img {
+                            transform: scale(1.05);
+                        }
+                    }
+
                     img {
                         width: 100%;
                         height: 100%;
+                        transition: transform 400ms;
                     }
                 }
 
@@ -234,6 +261,12 @@ form#CheckoutForm {
 
                     &__des {
                         font-size: $font-size17;
+                        transition: transform 400ms;
+
+                        :hover {
+                            transform: scale(1.05);
+                            cursor: pointer;
+                        }
                     }
 
                     &:hover {
@@ -725,6 +758,11 @@ form#CheckoutForm {
     line-height: $size2_6875;
     text-align: center;
     display: inline-block;
+
+    &:hover {
+        background-color: $backgroundGreen;
+        color: $textWhite;
+    }
 }
 
 /***

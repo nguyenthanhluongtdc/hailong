@@ -5,6 +5,11 @@
             display: inline-block;
             padding: $size0_438 $size0_625;
             border: 1px solid $borderGreen;
+
+            &:hover {
+                background-color: $backgroundGreen;
+                color: $textWhite;
+            }
         }
     }
 

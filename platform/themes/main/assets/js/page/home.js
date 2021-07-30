@@ -27,15 +27,7 @@ export default {
                     var arr = document.getElementsByClassName(
                         "list-cate-pro__item__link"
                     );
-                    for (var i = 0; i < arr.length; i++) {
-                        arr[i].onmouseover = function(e) {
-                            var a = e.target;
-                            var imgId = a.getAttribute("data-image-id");
-                            var imgSrc = imageProducts[imgId];
-                            imageOurproduct.src = imgSrc;
-                        };
-                    }
-                    
+                    this.initHoverChangeImage(imageOurproduct, arr, imageProducts)
                 }
 
                 this.initSlice();
@@ -96,7 +88,17 @@ export default {
 
                 document.head.appendChild(style);
             }
-            
+
+            if(window._Introduce!=undefined) {
+                const {imageValue} = window._Introduce;
+                if(imageValue.length != 0) {
+                    var eleimageValue = document.getElementById("image-value");
+                    var arr = document.getElementsByClassName(
+                        "item-core-value"
+                    );
+                    this.initHoverChangeImage(eleimageValue, arr, imageValue, true)
+                }
+            }
 
             $(".set-height").height($(".get-height").height());
 
@@ -148,11 +150,27 @@ export default {
             console.log("error", error);
         }
     },
+    initHoverChangeImage: function(eleImage, eleItemHover, dataArr, prevent = false) {
+        for (var i = 0; i < eleItemHover.length; i++) {
+            eleItemHover[i].onmouseover = function(e) {
+                if(prevent!=false) {
+                    e.preventDefault();
+                }
+
+                var a = e.target;
+                var imgId = a.getAttribute("data-image-id");
+                var imgSrc = dataArr[imgId];
+                eleImage.src = imgSrc;
+            };
+        }
+    },
     initSlice: function() {
         new Splide("#section-intro__carousel", {
             heightRatio: 0.5625,
             cover: true,
             rewind: true,
+            autoplay: true,
+            pauseOnHover: false,
             lazyLoad: "sequential",
             height: "35.625rem",
             breakpoints: {
@@ -200,4 +218,17 @@ export default {
             };
         }
     },
+    fixedNavbar: function() {
+        var docEl = $(document),
+        headerEl = $('header');
+
+        docEl.on('scroll', function(){
+            if ( docEl.scrollTop() > 50 ){
+              headerEl.addClass('fixed-to-top');
+            }
+            else {
+              headerEl.removeClass('fixed-to-top');
+            }
+        });
+    }
 };

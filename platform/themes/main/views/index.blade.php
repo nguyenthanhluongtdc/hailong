@@ -336,13 +336,13 @@
 
                                 <div class="col-core__content">
                                     <h3 class="col-core__content__title">
-                                        <a href="{{$posts[0]->url}} " title="Chương trình khuyến mãi Sản phẩm Rèm Kính Hộp"> {{$posts[0]->name}} </a>
+                                        <a href="{{$posts[0]->url}} " title="{{$posts[0]->name}}"> {{$posts[0]->name}} </a>
                                     </h3>
                                     <div class="col-core__content__time">
                                         <span> {{$posts[0]->created_at->format('H:i d/m/Y')}} </span>
                                     </div>
                                     <p class="col-core__content__des des-children">
-                                        {{$posts[0]->description}}
+                                        {!!$posts[0]->description!!}
                                     </p>
                                 </div>
                             </div>
@@ -371,7 +371,7 @@
                                             <span> {{$post->created_at->format('H:i d/m/Y')}} </span>
                                         </div>
                                         <p class="col-core__content__des des-children">
-                                            {{$post->description}}
+                                            {!!$post->description!!}
                                         </p>
                                     </div>
                                 </div>

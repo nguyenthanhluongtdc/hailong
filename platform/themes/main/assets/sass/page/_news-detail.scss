@@ -79,6 +79,17 @@
                 padding-left: $size3_125;
                 .releted__post {
                     .list-post-related {
+                        .img {
+                            img {
+                                transition: transform 400ms;
+                                max-width: 100%;
+                            }
+                            &:hover {
+                                img {
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
                         .news__item {
                             display: block;
                         }

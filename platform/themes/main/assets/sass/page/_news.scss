@@ -36,12 +36,33 @@
                 }
                 &__content {
                     @include split_str(4);
+                    transition: transform 400ms;
+                   
+                    p {
+                        word-wrap: break-word;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
                 a {
                     color: $night;
                     display: block;
-                    img {
-                        max-width: 100%;
+                    
+                    .img {
+                        img {
+                            transition: transform 400ms;
+                        }
+                        &:hover {
+                            img {
+                                transform: scale(1.05);
+                            }
+                        }
+
+                        img {
+                            max-width: 100%;
+                        }
                     }
                 }
             }
@@ -82,18 +103,36 @@
                 .time {
                     opacity: 50%;
                     font-size: $size0_9375;
-                    margin-bottom: $size0_9375;
+                    margin-bottom: $size0_6875;
+                    display: inline-block;
                 }
                 .content {
                     font-size: $size1;
                     @include split_str(3);
-                }
-                img {
-                    @media screen and (max-width: 992px) {
-                        width: 100%;
+                    transition: transform 400ms;
+                    
+                    &:hover {
+                        transform: scale(1.05);
                     }
-                    @media screen and (max-width: 576px) {
-                        padding-right: $size0_9375;
+                }
+
+                .img {
+                    img {
+                        max-width: 100%;
+                        transition: transform 400ms;
+
+                        @media screen and (max-width: 992px) {
+                            width: 100%;
+                        }
+                        @media screen and (max-width: 576px) {
+                            padding-right: $size0_9375;
+                        }
+                    }
+        
+                    &:hover {
+                        img {
+                            transform: scale(1.05);
+                        }
                     }
                 }
             }

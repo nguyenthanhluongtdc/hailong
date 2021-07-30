@@ -33,7 +33,7 @@
                                               {!! $project->name !!}
                                           </a>
                                       </h3>
-                                      <div class="splide__slide__des des-children">
+                                      <div class="splide__slide__content__des des-children">
                                           {!! $project->description !!}
                                       </div>
                                   </div>

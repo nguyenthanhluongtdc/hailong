@@ -76,12 +76,23 @@
             outline: none;
             border: 1px solid $borderGreen;
             margin-right: $size0_625;
+
+            &:hover {
+                background-color: $backgroundWhite;
+                border: 1px solid $borderGreen;
+                color: $textGreen;
+            }
         }
 
         .btn-quote {
             border: 1px solid $border84cba5;
             outline: none;
             color: $textco8b8b8b;
+
+            &:hover {
+                color: #efefef;
+                background-color: $textco8b8b8b;
+            }
         }
     }
 

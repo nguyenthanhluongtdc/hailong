@@ -68,6 +68,11 @@
                     &--next {
                         background-color: transparent;
                         position: relative;
+                        &:hover {
+                            &::before {
+                                color: $textGreen;
+                            }
+                        }
 
                         svg {
                             display: none;
@@ -102,7 +107,8 @@
 
                 &__page.is-active {
                     transform: scale(1.4);
-                    background: $backgroundWhite;
+                    background: $backgroundGreen;
+                    border-color: $borderGreen;
                 }
 
                 li {
@@ -264,12 +270,26 @@
                             flex: 0 0 41.6666666667%;
                             max-width: 41.6666666667%;
                             padding-right: 15px;
+                            transition: transform 400ms;
+
+                            &:hover {
+                                transform: scale(1.05);
+                            }
                         }
 
                         &__content {
                             flex: 0 0 58.3333333333%;
                             max-width: 58.3333333333%;
                             padding-left: 15px;
+
+                            &__des {
+                                transition: transform 400ms;
+                                word-wrap: break-word;
+
+                                &:hover {
+                                    transform: scale(1.05);
+                                }
+                            }
                         }
                     }
                 }
