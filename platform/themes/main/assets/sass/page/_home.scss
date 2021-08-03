@@ -95,6 +95,9 @@
             &__pagination {
                 justify-content: end;
                 margin-left: $size2;
+                width: max-content;
+                left: 2.5%;
+                transform: translateX(0);
                 @media (max-width: 992px) {
                     margin-left: $size3;
                 }
