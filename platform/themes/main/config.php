@@ -74,7 +74,7 @@ return [
             $theme->asset()->container('footer')->add('jqueryvalidate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js');
             $theme->asset()->container('footer')->add('jqueryadditional', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js');
             $theme->asset()->container('footer')->add('aos', 'https://unpkg.com/aos@next/dist/aos.js');
-            $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
+            $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], 'v1.0.1');
             if (function_exists('shortcode')) {
                 $theme->composer(['index', 'page', 'post','products','introduce'], function (\Platform\Shortcode\View\View $view) {
                     $view->withShortcodes();
