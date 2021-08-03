@@ -39,6 +39,15 @@
                     ._char:last-child {
                         display: none;
                     }
+
+                    &:hover {
+                        background-color: $backgroundGreen;
+                        color: $textWhite;
+
+                        a {
+                            color: $textWhite;
+                        }
+                    }
                 }
 
                 &__link {

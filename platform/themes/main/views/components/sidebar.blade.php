@@ -25,7 +25,6 @@
             </span>
 
             <div class="zalocode">
-                <i class="fas fa-times-circle icon-close"></i>
                 <img src="{{rvMedia::getImageUrl(theme_option('image_zalocode_sidebar'))}}" alt="Zalo code" />
             </div>
 
@@ -108,17 +107,19 @@
     btnZalo.hover(function() {
         $('.zalocode').show('slow');
 
-        $('.icon-close').click(function() {
-            $('.zalocode').hide('slow');
-        })
+        // $('.icon-close').click(function() {
+            
+        // })
 
-        $("body").click(function() {
-            $(".zalocode").hide('slow')
-        });
+        // $("body").click(function() {
+        //     $(".zalocode").hide('slow')
+        // });
 
-        $(".zalocode").click(function(e) {
-            e.stopPropagation();
-        });
+        // $(".zalocode").click(function(e) {
+        //     e.stopPropagation();
+        // });
+    },function(){
+        $('.zalocode').hide('slow');
     })
 
 </script>
