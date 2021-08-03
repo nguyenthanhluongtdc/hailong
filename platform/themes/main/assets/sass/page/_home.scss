@@ -106,6 +106,12 @@
                 &__page {
                     background-color: transparent;
                     border: 2px solid $backgroundWhite;
+
+                    &:hover {
+                        transform: scale(1.4);
+                        background: $backgroundGreen;
+                        border-color: $borderGreen;
+                    }
                 }
 
                 &__page.is-active {
@@ -242,6 +248,7 @@
 
             .col-big {
                 position: relative;
+                overflow: hidden;
 
                 .col-core__content {
                     position: absolute;
@@ -256,9 +263,25 @@
                         color: $textWhite !important;
                     }
 
+                    &__des {
+                        transition: transform 400ms;
+
+                        &:hover {
+                            transform: scale(1.04);
+                        }
+                    }
+
                     a {
                         color: $textWhite;
                         text-decoration: none;
+                    }
+                }
+
+                .img,img {
+                    transition: transform 400ms;
+
+                    &:hover {
+                        transform: scale(1.04);
                     }
                 }
             }
