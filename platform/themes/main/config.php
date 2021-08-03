@@ -61,7 +61,7 @@ return [
             
             $theme->asset()->add('aos', 'https://unpkg.com/aos@next/dist/aos.css');
             $theme->asset()->add('splidecss', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css');
-            $theme->asset()->usePath()->add('style', 'css/common.css');
+            $theme->asset()->usePath()->add('style', 'css/common.css', [], [], time());
 
             //semantic js
             $theme->asset()->container('header')->add('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
@@ -80,9 +80,6 @@ return [
                     $view->withShortcodes();
                 });
             }
-
-
-           
         },
 
         // Listen on event before render a layout,

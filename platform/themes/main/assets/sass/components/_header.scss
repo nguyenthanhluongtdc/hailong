@@ -34,7 +34,7 @@ header {
             }
             .bilingual {
                 margin: auto 0;
-                display: inline-block;
+                display: none;
                 a {
                     padding: $size0_625 0;
                     width: $size3_125;
@@ -54,6 +54,10 @@ header {
                     background-color: $backgroundGreen;
                     color: $textWhite;
                     text-decoration: none;
+                }
+
+                @media (max-width: 991px) {
+                    display: inline-block;
                 }
             }
         }
