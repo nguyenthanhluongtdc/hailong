@@ -23,6 +23,9 @@ header {
                     padding-left: $size1;
                     padding-right: $size1;
                     font-size: $font-size20;
+                    &:hover {
+                        color: $textGreen !important;
+                    }
                 }
                 .nav-link.active {
                     padding-left: 0;

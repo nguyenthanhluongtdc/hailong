@@ -70,10 +70,6 @@ export default {
                         }
                     }
                 
-                    .bilingual {
-                        display: none !important;
-                    }
-                
                     @media (min-width: 992px) {
                         .col-index-3 {
                             flex: 0 0 25%;

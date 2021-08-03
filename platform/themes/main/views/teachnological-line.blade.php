@@ -35,7 +35,7 @@
                                         <h3 class="__content__title">{!! has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : "" !!}</h3>
                                         {!! has_sub_field($item, 'mo_ta') ? get_sub_field($item, 'mo_ta') : "" !!}
                                     </div>
-                                    <button class="btn-read-more bg-white" data-toggle="modal" data-target="#technical_line_{{ \Illuminate\Support\Str::slug(has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : '', '_') }}" href="#" title="{!! __('Details') !!}">
+                                    <button class="btn-read-more white bg-white" data-toggle="modal" data-target="#technical_line_{{ \Illuminate\Support\Str::slug(has_sub_field($item, 'tieu_de') ? get_sub_field($item, 'tieu_de') : '', '_') }}" href="#" title="{!! __('Details') !!}">
                                         {!! __('Details') !!}
                                     </button>
 

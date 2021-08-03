@@ -88,6 +88,12 @@
                     color: $white;
                     border: unset;
                     margin-left: $font-size20;
+
+                    &:hover{
+                        background-color: $backgroundWhite;
+                        color: $textGreen;
+                        border: 1px solid $borderGreen;
+                    }
                 }
             }
         }

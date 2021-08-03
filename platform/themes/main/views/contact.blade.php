@@ -48,7 +48,7 @@
                                 @endif
                             </h4>
                             @if(has_field($page, 'image_zalocode_page_contact'))
-                            <img src="{{rvMedia::getImageUrl(has_field($page, 'image_zalocode_page_contact'))}}" alt="zalo-code" width="110" height="110">
+                            <img src="{{rvMedia::getImageUrl(has_field($page, 'image_zalocode_page_contact'))}}" alt="zalo-code" width="200" height="110">
                             @endif
                         </div>
                     </div>

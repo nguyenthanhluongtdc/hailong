@@ -52,7 +52,7 @@
                                         @endif
 
                                         @if($tabShowrooms[$key]->count() > 3)
-                                            <a class="btn-read-more tabs small" href="#" title="{{ __("Read more") }}"> {{ __("Read more") }} </a>
+                                            <a class="btn-read-more green tabs small" href="#" title="{{ __("Read more") }}"> {{ __("Read more") }} </a>
                                         @endif
                                     </div>
                                 @endforeach

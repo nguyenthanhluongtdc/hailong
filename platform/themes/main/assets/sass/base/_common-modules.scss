@@ -765,6 +765,20 @@ form#CheckoutForm {
     }
 }
 
+.btn-read-more.green, .btn-hidden.green {
+    &:hover {
+        background-color: $backgroundWhite !important;
+        color: $textGreen !important;
+    }
+}
+
+.btn-read-more.white, .btn-hidden.white {
+    &:hover {
+        background-color: $backgroundGreen !important;
+        color: $textWhite !important;
+    }
+}
+
 /***
 *************** Responsive
 ****/
