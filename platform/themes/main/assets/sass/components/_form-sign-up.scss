@@ -1,4 +1,5 @@
 .form-sign-up-wrapper {
+    background-color: $mainColor;
     .newsletter_title {
         padding: 1rem;
         h3 {
@@ -46,25 +47,56 @@
             max-width: 100%;
         }
     }
-
-    .letter-main-img {
-        padding-left: 0;
-    }
-
-    &:hover {
-        .gradient-border {
-            margin-right: 0;
-            &::after {
-                display: block !important;
-            }
-        }
-        .letter-main-img {
-            padding-left: 3px;
-        }
-    }
 }
 
 .newsletter_form {
+    form {
+        background-color: #5bac6f;
+        position: relative;
+        &::before {
+            box-sizing: inherit;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+            width: 0;
+            height: 0;
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+            box-sizing: inherit;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+            width: 0;
+            height: 0;
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+                height: 100%;
+                border-top-color: white;
+                border-right-color: white;
+                transition: width .25s ease-out,height .25s ease-out .25s;
+            }
+
+            &::after {
+                border-bottom-color:white;
+                border-left-color: white;
+                transition: border-color 0s ease-out .5s,width .25s ease-out .5s,height .25s ease-out .75s;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
     input[type=email]{
         color: $textWhite ;
         background-color: #5bac6f;
@@ -84,51 +116,7 @@
     }
 }
 
-.gradient-border {
-    --borderWidth: 3px;
-    position: relative;
-    background-color: $backgroundGreen;
-
-    &:hover {
-        &::after {
-            display: block;
-        }
-    }
-
-    @media (max-width: 991px) {
-        padding-bottom: 2rem;
-    }
-}
-
-.gradient-border:after {
-    content: '';
-    display: none;
-    position: absolute;
-    top: calc(-1 * var(--borderWidth));
-    left: calc(-1 * var(--borderWidth));
-    height: calc(100% + var(--borderWidth) * 2);
-    width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, #f79533, yellow, blue, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-    z-index: -1;
-    animation: animatedgradient 3s ease alternate infinite;
-    background-size: 300% 300%;
-}
-  
-  
-@keyframes animatedgradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-@media screen and (max-width:991px) and (min-width:575px) {
+@media screen and (max-width:768px) and (min-width:575px) {
     .form-sign-up-wrapper {
         text-align: center;
         .newsletter_title {
@@ -143,6 +131,9 @@
             }
         }
         .newsletter_form {
+            .form-control {
+                margin-left: $size3_125;
+            }
             .btn-icon-submit::before {
                 right: -$size1_5;
             }
@@ -150,13 +141,14 @@
         .newsletter_img {
             img {
                 min-height: 100px;
+                max-width: 80%;
                 float: right;
             }
         }
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width:576px) {
     .form-sign-up-wrapper {
         text-align: center;
         .newsletter_title {
@@ -180,6 +172,7 @@
         }
         .newsletter_img {
             img {
+                margin-top: $size1;
                 width: 100%;
             }
         }

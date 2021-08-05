@@ -48,6 +48,10 @@
                     font-weight: bold;
                     color: $textNight;
                     font-size: $font-size20;
+
+                    &:hover {
+                        color: $textGreen;
+                    }
                 }
             }
 
@@ -428,6 +432,7 @@ form#CheckoutForm {
                 .address {
                     position: relative;
                     padding-left: $size1_5625;
+                    display: inline-block;
                     &::before {
                         position: absolute;
                         content: "\f3c5";
@@ -436,6 +441,10 @@ form#CheckoutForm {
                         left: 0;
                         right: 0;
                         font-weight: bold;
+                    }
+
+                    &:hover {
+                        animation: shake 1s ease infinite;
                     }
                 }
                 .phone {
@@ -479,6 +488,7 @@ form#CheckoutForm {
                     &::before {
                         color: $textWhite;
                     }
+                    
                 }
 
                 .phone {
@@ -694,6 +704,10 @@ form#CheckoutForm {
             border: none;
             font-weight: bold;
             font-size: $font-size20;
+
+            &:hover {
+                color: $textGreen;
+            }
         }
 
         .nav-link.active {
@@ -848,3 +862,13 @@ form#CheckoutForm {
 }
 
 ///
+//animation
+@keyframes shake {
+    0% {transform: translate3d(0px, 0, 0);}
+    74% {transform: translate3d(4px, 0, 0);}
+    75% {transform: translate3d(-4px, 0, 0);}
+    85% {transform: translate3d(4px, 0, 0);}
+    95% {transform: translate3d(-4px, 0, 0);}
+    99% {transform: translate3d(4px, 0, 0);}
+    100% {transform: translate3d(0, 0, 0);}
+}
