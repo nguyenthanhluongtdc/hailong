@@ -20,6 +20,7 @@
         </div>
         <div class="col-lg-2 mr-auto position-relative">
             <div class="box-sub" data-aos="fade-up-left">
+                <i class="fas fa-phone-volume"></i>
                 <span> {!! __('CSKH24/7') !!} </span> <a class="text-white font-weight-bold" href="tel: {{theme_option('number_phone_genaral')}}" title="{{theme_option('number_phone_genaral')}}"> {{theme_option('number_phone_genaral')}} </a>
             </div>
         </div>
