@@ -56,6 +56,11 @@
         &__content {
             @include split_str(3);
             margin-bottom: $size1_5;
+
+            transition: transform 400ms;
+            &:hover {
+                transform: scale(1.04);
+            }
         }
     }
 }

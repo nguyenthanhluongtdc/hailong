@@ -12,10 +12,29 @@
             display: inline-block;
             padding-left: $size0_9375;
             padding-right: $size0_9375;
+            position: relative;
+            margin-bottom: 0.5rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: $size0_9375;
+                width: calc(100% - #{$size0_9375 + $size0_9375});
+                height: 2px;
+                background-color: $backgroundGreen;
+                display: none;
+            }
 
             .__breadcrumb__link {
                 color: $textNight;
                 text-decoration: none;
+            }
+
+            &:hover {
+                &::before {
+                    display: block;
+                }
             }
         }
         .__breadcrumb__item.active {

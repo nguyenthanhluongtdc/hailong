@@ -24,7 +24,9 @@
                               <li class="splide__slide" data-aos="fade-up">
                                   <div class="splide__slide__img">
                                       <a href="{{$project->url}}" title="{{$project->name}}">
-                                          <img width="410" height="440" src="{{rvMedia::getImageUrl($project->image, 'project_home_featured', false, RvMedia::getDefaultImage())}}" alt="ảnh slider" />
+                                            <div class="img-filter">
+                                                <img width="410" height="440" src="{{rvMedia::getImageUrl($project->image, 'project_home_featured', false, RvMedia::getDefaultImage())}}" alt="ảnh slider" />
+                                            </div>
                                       </a>
                                   </div>
                                   <div class="splide__slide__content">

@@ -263,7 +263,7 @@ form#CheckoutForm {
                         font-size: $font-size17;
                         transition: transform 400ms;
 
-                        :hover {
+                        &:hover {
                             transform: scale(1.05);
                             cursor: pointer;
                         }
@@ -846,3 +846,5 @@ form#CheckoutForm {
         }
     }
 }
+
+///

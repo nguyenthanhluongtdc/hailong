@@ -1,5 +1,4 @@
 .form-sign-up-wrapper {
-    background-color: $mainColor;
     .newsletter_title {
         padding: 1rem;
         h3 {
@@ -47,6 +46,22 @@
             max-width: 100%;
         }
     }
+
+    .letter-main-img {
+        padding-left: 0;
+    }
+
+    &:hover {
+        .gradient-border {
+            margin-right: 0;
+            &::after {
+                display: block !important;
+            }
+        }
+        .letter-main-img {
+            padding-left: 3px;
+        }
+    }
 }
 
 .newsletter_form {
@@ -69,7 +84,51 @@
     }
 }
 
-@media screen and (max-width:768px) and (min-width:575px) {
+.gradient-border {
+    --borderWidth: 3px;
+    position: relative;
+    background-color: $backgroundGreen;
+
+    &:hover {
+        &::after {
+            display: block;
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding-bottom: 2rem;
+    }
+}
+
+.gradient-border:after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, yellow, blue, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+  
+  
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@media screen and (max-width:991px) and (min-width:575px) {
     .form-sign-up-wrapper {
         text-align: center;
         .newsletter_title {
@@ -84,9 +143,6 @@
             }
         }
         .newsletter_form {
-            .form-control {
-                margin-left: $size3_125;
-            }
             .btn-icon-submit::before {
                 right: -$size1_5;
             }
@@ -94,14 +150,13 @@
         .newsletter_img {
             img {
                 min-height: 100px;
-                max-width: 80%;
                 float: right;
             }
         }
     }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 991px) {
     .form-sign-up-wrapper {
         text-align: center;
         .newsletter_title {
@@ -125,7 +180,6 @@
         }
         .newsletter_img {
             img {
-                margin-top: $size1;
                 width: 100%;
             }
         }

@@ -19,11 +19,13 @@
 
             <div class="box-common-showroom__content">
                 <div class="row">
+                    @php $i = 0; @endphp
                     <div class="col-lg-7 col-12" data-aos="zoom-in">
                         <div class="box__tabs">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 @foreach($regions as $key => $region)
-                                    <li class="nav-item box__tabs__header" role="presentation">
+                                    @php ++$i @endphp
+                                    <li class="nav-item box__tabs__header" role="presentation" data-aos="fade-left" data-aos-delay="{{$i*300}}" >
                                         <button class="nav-link px-0 {{$key == 'north' ?'active':''}}" id="col-tab{{$key}}-tab" data-bs-toggle="tab" data-bs-target="#col-tab{{$key}}" type="button" role="tab" aria-controls="col-tab{{$key}}" aria-selected="true">
                                             {{ $region }}
                                         </button>
@@ -35,8 +37,8 @@
                                 @foreach($regions as $key => $region)
                                     <div class="tab-pane tab-showroom fade  {{$key == 'north' ?'show active':''}}" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
                                         @if(isset($tabShowrooms[$key]))
-                                            @foreach($tabShowrooms[$key] as $showroom)
-                                                <div class="line__item">
+                                            @foreach($tabShowrooms[$key] as $keyy => $showroom)
+                                                <div class="line__item" data-aos="fade-up" data-aos-delay="{{$keyy*300}}">
                                                     <div>
                                                         <a href="#" title="{{ $showroom->address ?? '' }}" class="address link-map" data-lat="{{ $showroom->url_google_map ?? '' }}" data-toggle="modal" data-target="#myMapModal">
                                                             <b> {{ $showroom->address ?? '' }} </b>
@@ -63,17 +65,19 @@
                     <div class="col-lg-5 col-12" data-aos="zoom-in">
                         <div class="box__infoOther">
                             <div class="theme-customize-header-section__header pt-0">
-                                <h3 class="theme-customize-header-section__header__title text-white mb-2">
+                                <h3 class="theme-customize-header-section__header__title text-white mb-2" data-aos="fade-right">
                                     {{ $title_factory ?? __("Factory") }}
                                 </h3>
-                                <p class="box__infoOther__header__des des-children">
+                                <p class="box__infoOther__header__des des-children" data-aos="fade-left">
                                     {{ $description_factory ?? __("Coach Park Hang-seo's teachers and students will lose their home field advantage if the away teams are not prioritized for isolation.") }}
                                 </p>
                             </div>
 
                             <div class="box__infoOther__list">
-                                @foreach($factories as $showroom)
-                                    <div class="line__item">
+                                @php $i = 0; @endphp
+                                @foreach($factories as $keyy => $showroom)
+                                @php ++$i; @endphp
+                                    <div class="line__item" data-aos="fade-up" data-aos-delay="{{$i*300}}">
                                         <div>
                                             <a href="#" title="{{ $showroom->address ?? '' }}" class="address link-map" data-lat="{{ $showroom->url_google_map ?? '' }}" data-toggle="modal" data-target="#myMapModal">
                                                 <b> {{ $showroom->address ?? '' }} </b>

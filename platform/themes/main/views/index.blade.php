@@ -329,7 +329,9 @@
                         <div class="col-lg-6" data-aos="fade-right">
                             <div class="col-core col-big h-100">
                                 <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}" class="h-100 w-100 d-lg-inline-block">
-                                    <img src="{{rvMedia::getImageUrl($posts[0]->image, 'news_home_featured')}}" alt="{{$posts[0]->name}}" class="d-lg-none w-100" />
+                                    <div class="img-filter">
+                                        <img src="{{rvMedia::getImageUrl($posts[0]->image, 'news_home_featured')}}" alt="{{$posts[0]->name}}" class="d-lg-none w-100" />
+                                    </div>
 
                                     <div class="img h-100 d-lg-block d-none" style="background-image: url({{rvMedia::getImageUrl($posts[0]->image, 'news_home_featured', false, RvMedia::getDefaultImage())}}); background-size: cover; background-repeat: no-repeat;">
 
@@ -359,7 +361,9 @@
                                 <div class="col-core col-flex-box" data-aos="fade-left" data-aos-delay="{{$key*400}}">
                                     <div class="col-core__box__img pr-md-3 pr-0">
                                         <a href="{{$post->url}}" title="{{$post->name}}">
-                                            <img width="250" height="160" class="col-core__img" src="{{rvMedia::getImageUrl($post->image, 'news_home_featured', false, RvMedia::getDefaultImage())}}" alt="{{$post->name}}" />
+                                            <div class="img-filter">
+                                                <img width="250" height="160" class="col-core__img" src="{{rvMedia::getImageUrl($post->image, 'news_home_featured', false, RvMedia::getDefaultImage())}}" alt="{{$post->name}}" />
+                                            </div>
                                         </a>
                                     </div>
 

@@ -2,17 +2,19 @@
     <div class="section-banner-wrapper">
         <div class="section-breadcrumb">
             <div class="container-customize">
-                <ul class="section-breadcrumb__list py-4">
+                <ul class="section-breadcrumb__list pt-4 pb-3">
                     @foreach (Theme::breadcrumb()->getCrumbs() as $i => $crumb)
                         @if ($i != (count(Theme::breadcrumb()->getCrumbs()) - 1))
                             @if($i==0) 
                                 <li class="__breadcrumb__item" data-aos="fade-down" data-aos-delay="{{$i*200}}">
                                     <a class="__breadcrumb__link" href="{{ $crumb['url'] }}" title="{!! $crumb['label'] !!}"> {!! $crumb['label'] !!} </a> 
                                 </li>
+                                <i class="fal fa-angle-right"></i>
                             @else 
                                 <li class="__breadcrumb__item" data-aos="fade-down" data-aos-delay="{{$i*200}}">
                                     {!! $crumb['label'] !!}
                                 </li>
+                                <i class="fal fa-angle-right"></i>
                             @endif
                         @else
                             <li class="__breadcrumb__item active" data-aos="fade-down" data-aos-delay="{{$i*200}}">
@@ -105,7 +107,9 @@
                                         <div class="row" data-aos="fade-left" data-aos-delay={{$key*200}}>
                                             <div class="col-lg-6 col-md-4 col-sm-4 img">
                                                 <a href="{{$post_related->url}}" class="news__item" title="{{$post_related->name}}">
-                                                    <img class="img-w-100  mb-4" width="600" height="400"  src="{{ RvMedia::getImageUrl($post_related->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$post_related->name}}">
+                                                    <div class="img-filter mb-4">
+                                                        <img class="img-w-100 " width="600" height="400"  src="{{ RvMedia::getImageUrl($post_related->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$post_related->name}}">
+                                                    </div>
                                                 </a>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-4">

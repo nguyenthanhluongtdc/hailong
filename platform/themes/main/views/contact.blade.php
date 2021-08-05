@@ -56,6 +56,11 @@
                 </div>
                 <div class="col-md-6 col-12" data-aos="fade-left">
                     <div id="contact-form" class="form-horizontal form-contact-us">
+                        <span class="border_one"></span>
+                        <span class="border_two"></span>
+                        <span class="border_three"></span>
+                        <span class="border_four"></span>
+
                         {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}
                         @if(session()->has('success_msg') || session()->has('error_msg') || isset($errors))
                             @if (session()->has('success_msg'))

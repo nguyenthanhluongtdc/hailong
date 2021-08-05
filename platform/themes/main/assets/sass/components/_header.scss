@@ -100,8 +100,24 @@ header {
         color: $textWhite;
         padding: $size0_9375 $font-size20;
         transform: translateY(50%);
+        z-index: 100;
+        transition: transform 400ms;
+
         @media (max-width: 992px) {
             display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05) !important;
+            background-color: $backgroundWhite;
+            border: 1px solid $borderGreen;
+            color: $textGreen;
+            animation: shake 1s ease infinite;
+
+            a {
+                color: $textGreen !important;
+            }
         }
     }
 }
@@ -146,4 +162,15 @@ header.fixed-to-top {
 //screen max-width 567
 @mixin index-screen-maxw567() {
     @media (max-width: 567px) {}
+}
+
+//animation
+@keyframes shake {
+    0% {transform: translate3d(0px, 0, 0);}
+    74% {transform: translate3d(4px, 0, 0);}
+    75% {transform: translate3d(-4px, 0, 0);}
+    85% {transform: translate3d(4px, 0, 0);}
+    95% {transform: translate3d(-4px, 0, 0);}
+    99% {transform: translate3d(4px, 0, 0);}
+    100% {transform: translate3d(0, 0, 0);}
 }

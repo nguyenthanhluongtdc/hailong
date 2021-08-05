@@ -1,4 +1,7 @@
 #news-detail-page {
+    iframe, img {
+        max-width: 100%;
+    }
     .news__detail__wrapper {
         margin-top: $size3;
         .content__zone {
@@ -57,6 +60,17 @@
                         margin-bottom: $size3;
                         .post-item {
                             margin-bottom: $size0_313;
+
+                            a{
+                                display: inline-block;
+                                transition: transform 400ms;
+                            }
+                            &:hover {
+                                a {
+                                    color: $textGreen;
+                                    transform: scale(1.02);
+                                }
+                            }
                         }
                     }
                 }
@@ -107,6 +121,24 @@
                             font-size: $font-size17; 
                             margin-top: $size1;
                             display: inline-block;
+                        }
+
+                        .description {
+                            a {
+                                @include split_str(3);
+
+                                @media (max-width: 991px) {
+                                    @include split_str(5);
+                                }
+                                @media (max-width: 768px) {
+                                    @include split_str(3);
+                                }
+
+                                &:hover {
+                                    font-weight: bold;
+                                    color: $textGreen;
+                                }
+                            }
                         }
                     }
                 }

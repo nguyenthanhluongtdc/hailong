@@ -220,6 +220,10 @@
                             text-decoration: none;
                             font-weight: bold;
                             @include split_str(1);
+
+                            &:hover {
+                                color: $textGreen;
+                            }
                         }
 
                         a:hover {
@@ -283,6 +287,10 @@
                     a {
                         color: $textWhite;
                         text-decoration: none;
+
+                        // &:hover {
+                        //     color: $textGreen;
+                        // }
                     }
                 }
 

@@ -65,6 +65,7 @@
             <span class="box__item__icon fb-customerchat messenger">
                 <i class="{{theme_option('icon_message_sidebar')}}"></i>
             </span>
+            <span class="text"> Messenger </span>
         </button>
         @endif
 

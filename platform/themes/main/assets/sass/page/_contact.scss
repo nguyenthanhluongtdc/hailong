@@ -244,3 +244,122 @@
 }
 
 //end custom
+
+//animation
+
+// *,
+// *::after,
+// *::before {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// html {
+//   font-size: 62.5%;
+// }
+
+#contact-form {
+    border: none;
+    outline: none;
+    //   letter-spacing: 0.5rem;
+    //   font-size: 2rem;
+    //   box-shadow: 1rem 1rem 4rem #808080;
+    position: relative;
+    overflow: hidden;
+    
+    form {
+        transition: transform 400ms;
+    }
+
+    .border_one, .border_two, .border_three, .border_four {
+        display: none;
+    }
+
+    .border_one {
+        position: absolute;
+        height: 0.2rem;
+        width: 100%;
+        background-color: $backgroundGreen;
+        top: 0;
+        left: 0;
+        animation: line1 1s linear infinite;
+    }
+    
+    @keyframes line1 {
+        0% {
+        transform: translateX(-100%);
+        }
+        100% {
+        transform: translateX(100%);
+        }
+    }
+
+    .border_two {
+        position: absolute;
+        height: 100%;
+        width: 0.2rem;
+        background-color: $backgroundGreen;
+        top: 0;
+        right: 0;
+        animation: line2 1s linear 1.5s infinite;
+    }
+    
+    @keyframes line2 {
+        0% {
+        transform: translateY(-100%);
+        }
+        100% {
+        transform: translateY(100%);
+        }
+    }
+
+    .border_three {
+        position: absolute;
+        height: 0.2rem;
+        width: 100%;
+        background-color: $backgroundGreen;
+        bottom: 0;
+        left: 0;
+        animation: line3 1s linear infinite;
+    }
+    
+    @keyframes line3 {
+        0% {
+        transform: translateX(100%);
+        }
+        100% {
+        transform: translateX(-100%);
+        }
+    }
+
+    .border_four {
+        position: absolute;
+        height: 100%;
+        width: 0.2rem;
+        background-color: $backgroundGreen;
+        top: 0;
+        left: 0;
+        animation: line4 1s linear 1.5s infinite;
+    }
+    
+    @keyframes line4 {
+        0% {
+        transform: translateY(100%);
+        }
+        100% {
+        transform: translateY(-100%);
+        }
+    }
+
+    &:hover {
+        
+        .border_one, .border_two, .border_three, .border_four {
+            display: block;
+        }
+
+        form {
+            transform: scale(0.9);
+        }
+    }
+}
