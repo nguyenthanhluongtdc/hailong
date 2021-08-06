@@ -10,10 +10,32 @@
             img {
                 max-width: 100%;
                 height: auto;
+                transition: transform 400ms;
+            }
+
+            &:hover {
+                border-color: $borderGreen;
+
+                img {
+                    transform: scale(1.1);
+                }
             }
         }
         .splide__arrows {
             display: none;
+        }
+
+        .splide__pagination {
+            bottom: -2.5rem;
+            li {
+                button {
+                    background-color: transparent;
+                    border: 1px solid $borderGreen;
+                }
+                .is-active {
+                    background-color: $backgroundGreen;
+                }
+            }
         }
     }
 }
