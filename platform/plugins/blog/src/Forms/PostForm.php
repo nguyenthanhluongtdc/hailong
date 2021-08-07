@@ -89,11 +89,6 @@ class PostForm extends FormAbstract
                 'label_attr' => ['class' => 'control-label required'],
                 'choices'    => BaseStatusEnum::labels(),
             ])
-            ->add('format_type', 'customRadio', [
-                'label'      => trans('plugins/blog::posts.form.format_type'),
-                'label_attr' => ['class' => 'control-label'],
-                'choices'    => get_post_formats(true),
-            ])
             ->add('categories[]', 'categoryMulti', [
                 'label'      => trans('plugins/blog::posts.form.categories'),
                 'label_attr' => ['class' => 'control-label required'],
@@ -114,5 +109,15 @@ class PostForm extends FormAbstract
                 ],
             ])
             ->setBreakFieldPoint('status');
+
+        $postFormats = get_post_formats(true);
+
+        if (count($postFormats) > 1) {
+            $this->addAfter('status', 'format_type', 'customRadio', [
+                'label'      => trans('plugins/blog::posts.form.format_type'),
+                'label_attr' => ['class' => 'control-label'],
+                'choices'    => get_post_formats(true),
+            ]);
+        }
     }
 }
