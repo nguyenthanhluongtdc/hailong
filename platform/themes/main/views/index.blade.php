@@ -127,7 +127,7 @@
                                     @foreach($products as $key => $product)
                                     @php $imageProducts[] = RvMedia::getImageUrl($product->image, 'product_home_featured', false, RvMedia::getDefaultImage()); @endphp
                                     <li class="list-cate-pro__item" data-aos="{{$key%2==0?'fade-right':'fade-left'}}" data-aos-delay="200">
-                                        <a class="list-cate-pro__item__link" href="{{ $product->url }}" title="Kính cường lực" data-image-id="{{$key}}"> {{$product->name}} </a>
+                                        <a class="list-cate-pro__item__link" href="{{ $product->url }}" title="{{$product->name}}" data-image-id="{{$key}}"> {{$product->name}} </a>
                                     </li>
                                     @endforeach
                                 </ul>
