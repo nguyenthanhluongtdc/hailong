@@ -28,6 +28,12 @@ interface PostInterface extends RepositoryInterface
      */
     public function getListPostNonInList(array $selected = [], $limit = 7, array $with = []);
 
+       /**
+     * @param int $paginate
+     * @return mixed
+     */
+    public function getListPostLatestPaginate($paginate = 6);
+
     /**
      * @param int|array $categoryId
      * @param int $paginate
