@@ -34,7 +34,7 @@ class ProjectRepository extends RepositoriesAbstract implements ProjectInterface
         ];
 
         $project = app(ProjectInterface::class)
-            ->getFirstBy($condition);
+            ->getFirstBy($condition, ['*']);
 
         if (empty($project)) {
             abort(404);

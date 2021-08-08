@@ -27,15 +27,7 @@
                     </div>
 
                     <div class="col-md-6 col-12" data-aos="flip-right">
-
-                        <div class="ytvideo box-common-intro__picture" data-video="7ixLP6mUqnw" style="width:560px; height:315px; background-image:url({{rvMedia::getImageUrl(has_field($page, 'video_module_introductory'))}})">
-
-                            <div class="seo">
-                                Video Haillong Glass
-                            </div>
-                            <span class="playbutton"></span>
-
-                        </div>
+                        {!!has_field($page, 'link_video_module_introductory')!!}
                     </div>
                 </div>
             </div>
@@ -130,12 +122,12 @@
     })
 
     // VIDEO 2
-    $('.ytvideo[data-video]').one('click', function() {
+    // $('.ytvideo[data-video]').one('click', function() {
 
-        var $this = $(this);
-        var width = $this.attr("width");
-        var height = $this.attr("height");
+    //     var $this = $(this);
+    //     var width = $this.attr("width");
+    //     var height = $this.attr("height");
 
-        $this.html('<iframe src="https://www.youtube.com/embed/' + $this.data("video") + '?autoplay=1"></iframe>');
-    });
+    //     $this.html('<iframe src="https://www.youtube.com/embed/' + $this.data("video") + '?autoplay=1"></iframe>');
+    // });
 </script>

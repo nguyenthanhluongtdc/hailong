@@ -27,6 +27,7 @@ class PublicController extends BaseController {
         }
 
         $project = $this->projectRepository->getProject($slug);
+
         
         $category = $project->categories->first();
 
@@ -50,7 +51,11 @@ class PublicController extends BaseController {
                 ]);
         }
 
-        
+        $data['slug'] = $project->slug;
+
+        if (isset($data['slug']) && $data['slug'] !== $slug->key) {
+            return redirect()->to(route('public.single', SlugHelper::getPrefix(Project::class) . '/' . $data['slug']));
+        }
 
         return Theme::scope('project.project', compact('project','galleries'), 'plugins/project::project')->render();
     }
