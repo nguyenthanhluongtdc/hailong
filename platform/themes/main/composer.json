@@ -1,13 +1,17 @@
 {
-	"name": "theme/main",
-	"type": "package",
-	"extra": {
-		"laravel": {
-			"providers": [
-				"Theme\\Main\\Providers\\MainServiceProvider"
-			]
-		}
-	},
-	"minimum-stability": "dev",
-	"prefer-stable": true
+    "name": "platform/theme-main",
+    "description": "Theme Main",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Platform\\ThemeMain\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Platform\\ThemeMain\\Providers\\ThemeMainServiceProvider"
+            ]
+        }
+    }	
 }

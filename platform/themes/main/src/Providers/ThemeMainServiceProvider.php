@@ -1,12 +1,12 @@
 <?php
 
-namespace Theme\Main\Providers;
+namespace Platform\ThemeMain\Providers;
 
 use Platform\Base\Supports\Helper;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Illuminate\Support\ServiceProvider;
 
-class MainServiceProvider extends ServiceProvider
+class ThemeMainServiceProvider extends ServiceProvider
 {
     use LoadAndPublishDataTrait;
 
