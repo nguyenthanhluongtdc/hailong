@@ -1,4 +1,4 @@
-{{-- @php
+@php
     $supportedLocales = Language::getSupportedLocales();
     if (!isset($options) || empty($options)) {
         $options = [
@@ -31,7 +31,7 @@
             <ul class="dropdown-menu language_bar_chooser {{ Arr::get($options, 'class') }}">
                 @foreach ($supportedLocales as $localeCode => $properties)
                     @if ($localeCode != Language::getCurrentLocale())
-                        <li class="bilingual">
+                        <li>
                             <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
                                 @if (Arr::get($options, 'lang_flag', true) && ($languageDisplay == 'all' || $languageDisplay == 'flag')){!! language_flag($properties['lang_flag'], $properties['lang_name']) !!}@endif
                                 @if (Arr::get($options, 'lang_name', true) && ($languageDisplay == 'all' || $languageDisplay == 'name'))<span>{{ $properties['lang_name'] }}</span>@endif
@@ -46,7 +46,7 @@
         <ul class="language_bar_list {{ Arr::get($options, 'class') }}">
             @foreach ($supportedLocales as $localeCode => $properties)
                 @if ($localeCode != Language::getCurrentLocale())
-                    <li class="bilingual">
+                    <li>
                         <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
                             @if (Arr::get($options, 'lang_flag', true) && ($languageDisplay == 'all' || $languageDisplay == 'flag')){!! language_flag($properties['lang_flag'], $properties['lang_name']) !!}@endif
                             @if (Arr::get($options, 'lang_name', true) && ($languageDisplay == 'all' || $languageDisplay == 'name'))<span>{{ $properties['lang_name'] }}</span>@endif
@@ -57,18 +57,4 @@
         </ul>
         <div class="clearfix"></div>
     @endif
-@endif --}}
-
-
-
-<li class="bilingual" data-aos="fade-left" data-aos-delay="0">
-    @php
-        $supportedLocales = array_reverse(Language::getSupportedLocales());
-        $showRelated = setting('language_show_default_item_if_current_version_not_existed', true);
-    @endphp
-    @foreach ($supportedLocales as $localeCode => $properties)
-        <a rel="alternate" hreflang="{{ $localeCode }}" class="{{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
-            <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
-        </a>
-    @endforeach
-</li>
+@endif

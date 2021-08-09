@@ -47,18 +47,6 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
     /**
      * {@inheritDoc}
      */
-    public function getListPostLatestPaginate($paginate = 6) {
-        $data = $this->model
-            ->where('status', BaseStatusEnum::PUBLISHED)
-            ->whereNotIn('is_featured', [1])
-            ->orderBy('created_at', 'desc');
-
-        return $this->applyBeforeExecuteQuery($data)->paginate($paginate);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getRelated($id, $limit = 3)
     {
         $data = $this->model
