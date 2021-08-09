@@ -27,7 +27,8 @@
         "platform/plugin-management": "*@dev",
         "platform/shortcode": "*@dev",
         "platform/theme": "*@dev",
-        "wikimedia/composer-merge-plugin": "^2.0"
+        "wikimedia/composer-merge-plugin": "^2.0",
+        "platform/kernel": "*@dev"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -108,6 +109,10 @@
         {
             "type": "path",
             "url": "./platform/packages/*"
+        },
+        {
+            "type": "path",
+            "url": "./platform/addons/*"
         }
     ]
 }
