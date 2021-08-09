@@ -8,17 +8,6 @@ use Platform\Blog\Repositories\Interfaces\TagInterface;
 use Platform\Blog\Supports\PostFormat;
 use Illuminate\Support\Arr;
 
-if (!function_exists('get_latest_posts_paginate')) {
-    /**
-     * @param array $params
-     * @return mixed
-     */
-    function get_latest_posts_paginate($paginate = 6)
-    {
-       return app(PostInterface::class)->getListPostLatestPaginate($paginate);
-    }
-}
-
 if (!function_exists('get_featured_posts')) {
     /**
      * @param int $limit
