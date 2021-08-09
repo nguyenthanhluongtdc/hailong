@@ -1,5 +1,5 @@
 {
-	"name": "themes/main",
+	"name": "theme/main",
 	"type": "package",
 	"extra": {
 		"laravel": {
