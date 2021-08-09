@@ -46,7 +46,6 @@ class ShowroomForm extends FormAbstract
                 'label_attr' => ['class' => 'control-label required'],
                 'attr'       => [
                     'placeholder'  => trans('plugins/showroom::showroom.url_google_map_placeholder'),
-                    'data-counter' => 120,
                 ],
             ])
             ->add('region', 'customSelect', [

@@ -205,14 +205,14 @@ export default {
         }).mount();
     },
     initMap: function() {
-        var map = document.getElementsByClassName("modal-map")[0];
+        var map = document.getElementById("map-canvas");
         var arr = document.getElementsByClassName("link-map");
 
         for (var i = 0; i < arr.length; i++) {
             arr[i].onclick = function(e) {
                 var a = e.target;
                 var url = a.getAttribute("data-lat");
-                map.src = url;
+                map.innerHTML = url;
             };
         }
     },

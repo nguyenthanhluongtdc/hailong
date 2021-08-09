@@ -8,9 +8,17 @@
             </div>
             <div class="modal-body">
                 <div id="map-canvas" class="">
-                    <iframe class="w-100 h-100 modal-map" src="" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    #map-canvas iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+</style>
