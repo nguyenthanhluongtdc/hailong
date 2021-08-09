@@ -1,0 +1,13 @@
+{
+	"name": "themes/main",
+	"type": "package",
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Theme\\Main\\Providers\\MainServiceProvider"
+			]
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
