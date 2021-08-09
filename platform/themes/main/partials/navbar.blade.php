@@ -15,7 +15,17 @@
                     </li>
                     @endforeach
                 @endif
-                {!! apply_filters('language_switcher') !!}
+                <li class="bilingual" data-aos="fade-left" data-aos-delay="0">
+                    @php
+                        $supportedLocales = array_reverse(Language::getSupportedLocales());
+                        $showRelated = setting('language_show_default_item_if_current_version_not_existed', true);
+                    @endphp
+                    @foreach ($supportedLocales as $localeCode => $properties)
+                        <a rel="alternate" hreflang="{{ $localeCode }}" class="{{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
+                            <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
+                        </a>
+                    @endforeach
+                </li>
             </ul>
         </div>
         <div class="col-lg-2 mr-auto position-relative">
