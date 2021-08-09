@@ -38,7 +38,7 @@
                                     <div class="tab-pane tab-showroom fade  {{$key == 'north' ?'show active':''}}" id="col-tab{{$key}}" role="tabpanel" aria-labelledby="col-tab{{$key}}-tab">
                                         @if(isset($tabShowrooms[$key]))
                                             @foreach($tabShowrooms[$key] as $keyy => $showroom)
-                                                <div class="line__item" data-aos="fade-up" data-aos-delay="{{$keyy*300}}">
+                                                <div class="line__item">
                                                     <div>
                                                         <a href="#" title="{{ $showroom->address ?? '' }}" class="address link-map" data-lat="{{ $showroom->url_google_map ?? '' }}" data-toggle="modal" data-target="#myMapModal">
                                                             <b> {{ $showroom->address ?? '' }} </b>
@@ -51,10 +51,6 @@
                                                     </div>
                                                 </div>
                                             @endforeach
-                                        @endif
-
-                                        @if($tabShowrooms[$key]->count() > 3)
-                                            <a class="btn-read-more green tabs small" href="#" title="{{ __("Read more") }}"> {{ __("Read more") }} </a>
                                         @endif
                                     </div>
                                 @endforeach
@@ -77,7 +73,7 @@
                                 @php $i = 0; @endphp
                                 @foreach($factories as $keyy => $showroom)
                                 @php ++$i; @endphp
-                                    <div class="line__item" data-aos="fade-up" data-aos-delay="{{$i*300}}">
+                                    <div class="line__item">
                                         <div>
                                             <a href="#" title="{{ $showroom->address ?? '' }}" class="address link-map" data-lat="{{ $showroom->url_google_map ?? '' }}" data-toggle="modal" data-target="#myMapModal">
                                                 <b> {{ $showroom->address ?? '' }} </b>

@@ -466,10 +466,6 @@ form#CheckoutForm {
                         color: $textWhite;
                     }
                 }
-
-                &:nth-child(1n + 4) {
-                    display: none;
-                }
             }
 
             .box__infoOther {
@@ -480,6 +476,11 @@ form#CheckoutForm {
                 background-color: $backgroundGreen;
                 color: $textWhite;
                 height: calc(100% - #{$size2_8125});
+                @media(max-width: 991px) {
+                    max-height: 295px;
+                    height: auto;
+                }
+                overflow-y: auto;
 
                 .address {
                     font-size: $font-size20;
@@ -724,6 +725,11 @@ form#CheckoutForm {
         padding-left: $size2_5;
         padding-top: $size2_5;
         position: relative;
+        @media(min-width: 1681px) {
+            max-height: 360px;
+        }
+        max-height: 295px;
+        overflow-y: auto;
 
         .address {
             font-size: $font-size20;
