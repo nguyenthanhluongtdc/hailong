@@ -137,7 +137,8 @@
         </div>
     @endif
 
-     @if(!empty(get_other_products($product)))
+    @php $products = get_products([],theme_option('number_of_products_per_page')); @endphp
+     @if(!empty($products))
      <div class="section-other-product-wrapper">
          <div class="container-customize">
              <div class="section-other-product">
@@ -147,7 +148,7 @@
                      </h2>
                  </div>
                  <ul class="section-products-list-cate-pro distance-below">
-                     @foreach(get_other_products($product) as $key => $other_product)
+                     @foreach($products as $key => $other_product)
                      <li class="section-products-list-cate-pro__item" data-aos="{{$key%2==0?'fade-right':'fade-left'}}">
                          <a class="section-products-list-cate-pro__item__link" href="{{$other_product->url}}" title="Kính cường lực">
                              {!! $other_product->name !!}
