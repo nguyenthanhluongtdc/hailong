@@ -168,7 +168,7 @@
              <div class="modal-content">
                  <div class="modal-body p-0">
                      <div class="row mr-md-0 position-relative">
-                         <div class="col-md-5 col-12 col-left position" style="background-image: url({{Theme::asset()->url('/images/products/ordersucces.jpg')}}); background-repeat: no-repeat; background-size: cover;">
+                         <div class="col-md-5 col-12 col-left position" style="background-image: url({{rvMedia::getImageUrl(theme_option('image_order'))}}); background-repeat: no-repeat; background-size: cover;">
 
                          </div>
 
@@ -294,7 +294,7 @@
              <div class="modal-content">
                  <div class="modal-body p-0">
                      <div class="row">
-                         <div class="col-md-6 position" style="background-image: url({{Theme::asset()->url('/images/products/ordersucces.jpg')}}); background-repeat: no-repeat; background-size: cover;">
+                         <div class="col-md-6 position" style="background-image: url({{rvMedia::getImageUrl(theme_option('image_order_success'))}}); background-repeat: no-repeat; background-size: cover;">
 
                          </div>
 

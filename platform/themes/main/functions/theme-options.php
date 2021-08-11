@@ -622,5 +622,33 @@ app()->booted(function () {
                     'data-counter' => 200,
                 ]
             ]
+        ])->setField([ // Set field for section
+            'id' => 'image_order',
+            'section_id' => 'opt-text-subsection-ecommerce',
+            'type' => 'mediaImage',
+            'label' => __('Image order'),
+            'attributes' => [
+                'name' => 'image_order',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => __('Order image'),
+                    'data-counter' => 200,
+                ]
+            ]
+        ])->setField([ // Set field for section
+            'id' => 'image_order_success',
+            'section_id' => 'opt-text-subsection-ecommerce',
+            'type' => 'mediaImage',
+            'label' => __('Image order success'),
+            'attributes' => [
+                'name' => 'image_order_success',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => __('Successful order image'),
+                    'data-counter' => 200,
+                ]
+            ]
         ]);
 });
