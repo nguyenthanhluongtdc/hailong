@@ -160,8 +160,23 @@
             heightRatio: 0.5625
             , cover: true
             , rewind: true
-            , lazyLoad: 'sequential'
-        , }).mount();
+            , lazyLoad: 'sequential',
+            height: '35rem',
+            breakpoints: {
+                '1680': {
+                    height    : '33rem',
+                },
+                '1368': {
+                    height    : '27rem',
+                },
+                '992': {
+                    height : '23rem',
+                },
+                '567': {
+                    height : '14rem',
+                }
+            }
+        }).mount();
     })
 
 </script>
