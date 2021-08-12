@@ -287,5 +287,4 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
 
         return $this->applyBeforeExecuteQuery($this->model)->paginate((int)$filters['per_page']);
     }
-
 }
