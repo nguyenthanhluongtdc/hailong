@@ -31,6 +31,13 @@ register_sidebar([
 ]);
 
 Menu::addMenuLocation('introduce-tabs', 'Danh sách tabs giới thiệu');
+Menu::addMenuLocation('project-categories-menu', 'Projects menu');
+Menu::addMenuLocation('introduce-menu','Introduce menu');
+Menu::addMenuLocation('products-menu', 'Products menu');
+Menu::addMenuLocation('footer-column-one-menu', 'Footer column one menu');
+Menu::addMenuLocation('footer-column-two-menu', 'Footer column two menu');
+Menu::addMenuLocation('footer-column-three-menu', 'Footer column three menu');
+
 RvMedia::setUploadPathAndURLToPublic();
 RvMedia::addSize('news_home_featured', 250, 160)
     ->addSize('news_featured', 600, 270)
