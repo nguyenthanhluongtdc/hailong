@@ -18,6 +18,7 @@ after_script:
     - pwd
 stages:
     - develop
+    - vsgglass
     - preprod
     - prod
     - master
@@ -40,6 +41,26 @@ develop:
         - php artisan view:clear
         - npm run prod
         - chown -R dev:dev /home/dev/htdocs/hailongglass/
+        - pwd
+vsgglass:
+    stage: vsgglass
+    only:
+        # This build will run only when something is pushed to the develop branch.
+        - vsgglass
+    script:
+        - pwd && su dev && whoami
+        - cd /home/dev/htdocs/vsgglass/
+        - git pull
+        - bootstrap="$(git log -1 --pretty=%B | grep bootstrap)" && ([[ $bootstrap ]] && bash bin/bootstrap.sh -e d)
+        - sass="$(git log -1 --pretty=%B | grep sass)" && ([[ $sass ]] && sass public/themes/main/sass/common.scss:public/themes/main/css/common.css --style compressed)
+        - npm="$(git log -1 --pretty=%B | grep npm)" && ([[ $npm ]] && npm install n -g && n stable && n latest && npm install && npm update && npm run dev)
+        - migrate="$(git log -1 --pretty=%B | grep migrate)" && ([[ $migrate ]] && yes | php artisan migrate)
+        - delivery="$(git log -1 --pretty=%B | grep delivery)" && ([[ $delivery ]] && bash bin/delivery.sh -e p)
+        - php artisan config:clear
+        - php artisan cache:clear
+        - php artisan view:clear
+        - npm run prod
+        - chown -R dev:dev /home/dev/htdocs/vsgglass/
         - pwd
 preprod:
     stage: preprod
