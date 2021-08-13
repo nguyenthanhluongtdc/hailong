@@ -15,7 +15,7 @@
                                  <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
                                      {!! $product->name !!}
                                  </h2>
-                                 <div class="theme-customize-header-section__header__des" data-aos="fade-left">
+                                 <div class="theme-customize-header-section__header__des d-block" data-aos="fade-left">
                                      {!! $product->description !!}
                                  </div>
                              </div>

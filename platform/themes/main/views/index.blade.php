@@ -325,7 +325,7 @@
                         $posts = get_latest_posts(3);
                     @endphp
 
-                    @if(!empty($posts))
+                    @if(count($posts) > 0)
                         <div class="col-lg-6" data-aos="fade-right">
                             <div class="col-core col-big h-100">
                                 <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}" class="h-100 w-100 d-lg-inline-block">
@@ -346,7 +346,7 @@
                                         <span> {{$posts[0]->created_at->format('H:i d/m/Y')}} </span>
                                     </div>
                                     <p class="col-core__content__des des-children">
-                                        {!!$posts[0]->description!!}
+                                        {{(!empty($posts[0]->description)) ? $posts[0]->description : $posts[0]->name}}
                                     </p>
                                 </div>
                             </div>
@@ -377,7 +377,7 @@
                                             <span> {{$post->created_at->format('H:i d/m/Y')}} </span>
                                         </div>
                                         <p class="col-core__content__des des-children">
-                                            {!!$post->description!!}
+                                            {{(!empty($post->description)) ? $post->description : $post->name}}
                                         </p>
                                     </div>
                                 </div>
