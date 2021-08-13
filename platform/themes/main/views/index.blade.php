@@ -323,6 +323,8 @@
                 <div class="row">
                     @php
                         $posts = get_latest_posts(3);
+                        
+                        dd($posts);
                     @endphp
 
                     @if(!empty($posts))
