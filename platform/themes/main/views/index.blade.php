@@ -323,6 +323,8 @@
                 <div class="row">
                     @php
                         $posts = get_latest_posts(3);
+                        
+                        dd($posts);
                     @endphp
                     @if(count($posts)>0)
                         <div class="col-lg-6" data-aos="fade-right">
