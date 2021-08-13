@@ -35,7 +35,7 @@
                         <div class="left">
                             <div class="content__title">
                                 <h1 class="title theme-customize-header-section__header__title" data-aos="fade-right">
-                                 {{$post->name}}
+                                 {!!$post->name!!}
                                 </h1>
                             </div>
         
@@ -86,8 +86,8 @@
                                <ul class="list__post">
                                 @foreach (get_recent_posts(theme_option('number_of_post_other')) as $post_recent)
                                    <li class="post-item">
-                                       <a href="{{$post_recent->url}}" title="{{$post_recent->name}}">
-                                            {{$post_recent->name}}
+                                       <a href="{{$post_recent->url}}" title="{!!$post_recent->name!!}">
+                                            {!!$post_recent->name!!}
                                         </a>
                                     </li>
                                 @endforeach

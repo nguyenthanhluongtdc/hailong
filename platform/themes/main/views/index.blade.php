@@ -339,13 +339,13 @@
 
                                 <div class="col-core__content">
                                     <h3 class="col-core__content__title">
-                                        <a href="{{$posts[0]->url}} " title="{{$posts[0]->name}}"> {{$posts[0]->name}} </a>
+                                        <a href="{{$posts[0]->url}} " title="{!!$posts[0]->name!!}"> {!!$posts[0]->name!!} </a>
                                     </h3>
                                     <div class="col-core__content__time">
                                         <span> {{$posts[0]->created_at->format('H:i d/m/Y')}} </span>
                                     </div>
                                     <p class="col-core__content__des des-children">
-                                        {{(!empty($posts[0]->description)) ? $posts[0]->description : $posts[0]->name}}
+                                        {!!(!empty($posts[0]->description)) ? $posts[0]->description : $posts[0]->name!!}
                                     </p>
                                 </div>
                             </div>
@@ -359,7 +359,7 @@
                                 @foreach($posts as $key => $post)
                                 <div class="col-core col-flex-box" data-aos="fade-left" data-aos-delay="{{$key*400}}">
                                     <div class="col-core__box__img pr-md-3 pr-0">
-                                        <a href="{{$post->url}}" title="{{$post->name}}">
+                                        <a href="{{$post->url}}" title="{!!$post->name!!}">
                                             <div class="img-filter">
                                                 <img width="250" height="160" class="col-core__img" src="{{rvMedia::getImageUrl($post->image, 'news_home_featured', false, RvMedia::getDefaultImage())}}" alt="{{$post->name}}" />
                                             </div>
@@ -368,15 +368,15 @@
 
                                     <div class="col-core__content">
                                         <h3 class="col-core__content__title">
-                                            <a href="{{$post->url}}" title="{{$post->name}}">
-                                                {{$post->name}}
+                                            <a href="{{$post->url}}" title="{!!$post->name!!}">
+                                                {!!$post->name!!}
                                             </a>
                                         </h3>
                                         <div class="col-core__content__time">
                                             <span> {{$post->created_at->format('H:i d/m/Y')}} </span>
                                         </div>
                                         <p class="col-core__content__des des-children">
-                                            {{(!empty($post->description)) ? $post->description : $post->name}}
+                                            {!!(!empty($post->description)) ? $post->description : $post->name!!}
                                         </p>
                                     </div>
                                 </div>

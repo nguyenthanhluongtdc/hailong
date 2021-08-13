@@ -10,16 +10,16 @@
                         <div class="news-post">
                             <a href="{{$post->url}}" title="{{$post->name}}">
                                 <div class="img img-filter">
-                                    <img class="img-w-100" width="600" height="270" src="{{ RvMedia::getImageUrl($post->image, 'news_featured', false, RvMedia::getDefaultImage()) }}" alt="{{$post->name}}">
+                                    <img class="img-w-100" width="600" height="270" src="{{ RvMedia::getImageUrl($post->image, 'news_featured', false, RvMedia::getDefaultImage()) }}" alt="{!!$post->name!!}">
                                 </div>
                                 <div class="news-post__title">
-                                    <h4 class="__text-20">{{$post->name}}</h4>
+                                    <h4 class="__text-20">{!!$post->name!!}</h4>
                                 </div>
                                 <div class="news-post__time">
                                     <span>{{$post->created_at->format('H:i d/m/Y') }}</span>
                                 </div>
                                 <div class="news-post__content __text-18">
-                                    <p>{{(!empty($post->description)) ? $post->description : $post->name}}</p>
+                                    <p>{!!(!empty($post->description)) ? $post->description : $post->name!!}</p>
                                 </div>
                             </a>
                         </div>
@@ -47,9 +47,9 @@
                             <div class="col-md-6 mb-md-line p0-md pl-md-0 pl-sm-0 pr-xs-0 pr-lg-0 pr-md-5 mb-5 mb-xl-5" data-aos="{{$key%2==0?'fade-right':'fade-left'}}">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-4 col-5 pr-0 mb-4 mb-sm-0 img ">
-                                        <a href="{{$post->url}}" title="{{$post->name}}">
+                                        <a href="{{$post->url}}" title="{!!$post->name!!}">
                                             <div class="img-filter">
-                                                <img width="500" height="350" class="mw-100 img-w-100" src="{{ RvMedia::getImageUrl($post->image, 'news_thumbnail', false, RvMedia::getDefaultImage()) }}" alt="{{$post->name}}">
+                                                <img width="500" height="350" class="mw-100 img-w-100" src="{{ RvMedia::getImageUrl($post->image, 'news_thumbnail', false, RvMedia::getDefaultImage()) }}" alt="{!!$post->name!!}">
                                             </div>
                                         </a>
                                     </div>
@@ -57,7 +57,7 @@
                                         <h5> <a href="{{$post->url}}" title="{{$post->name}}">{{$post->name}}</a> </h5>
                                         <span class="time">{{$post->created_at->format('H:i d/m/Y') }}</span>
                                         <p class="content">
-                                            {{(!empty($post->description)) ? $post->description : $post->name}}
+                                            {!!(!empty($post->description)) ? $post->description : $post->name!!}
                                         </p>
                                     </div>
                                 </div>
