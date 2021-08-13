@@ -61,8 +61,8 @@
         </button>
 
         @if(theme_option('icon_message_sidebar')!=null)
-        <button class="box__item">
-            <span class="box__item__icon fb-customerchat messenger">
+        <button class="box__item fb-customerchat messenger">
+            <span class="box__item__icon">
                 <i class="{{theme_option('icon_message_sidebar')}}"></i>
             </span>
             <span class="text"> Messenger </span>
@@ -77,6 +77,7 @@
         </button>
     </div>
 
+    {{-- <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyDf0FXTYTnbEEloq9qSLI19ff43seWRbtw&language=vi&libraries=places&region=vn" defer></script> --}}
     <!--<script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyDf0FXTYTnbEEloq9qSLI19ff43seWRbtw&language=vi&libraries=places&region=vn" defer></script>-->
 
 </div>

@@ -19,7 +19,7 @@
                                     <span>{{$post->created_at->format('H:i d/m/Y') }}</span>
                                 </div>
                                 <div class="news-post__content __text-18">
-                                    <p>{{$post->description}}</p>
+                                    <p>{{(!empty($post->description)) ? $post->description : $post->name}}</p>
                                 </div>
                             </a>
                         </div>
@@ -57,7 +57,7 @@
                                         <h5> <a href="{{$post->url}}" title="{{$post->name}}">{{$post->name}}</a> </h5>
                                         <span class="time">{{$post->created_at->format('H:i d/m/Y') }}</span>
                                         <p class="content">
-                                            {{$post->description}}
+                                            {{(!empty($post->description)) ? $post->description : $post->name}}
                                         </p>
                                     </div>
                                 </div>

@@ -345,7 +345,7 @@
                                         <span> {{$posts[0]->created_at->format('H:i d/m/Y')}} </span>
                                     </div>
                                     <p class="col-core__content__des des-children">
-                                        {!!$posts[0]->description!!}
+                                        {{(!empty($posts[0]->description)) ? $posts[0]->description : $posts[0]->name}}
                                     </p>
                                 </div>
                             </div>
@@ -376,7 +376,7 @@
                                             <span> {{$post->created_at->format('H:i d/m/Y')}} </span>
                                         </div>
                                         <p class="col-core__content__des des-children">
-                                            {!!$post->description!!}
+                                            {{(!empty($post->description)) ? $post->description : $post->name}}
                                         </p>
                                     </div>
                                 </div>
