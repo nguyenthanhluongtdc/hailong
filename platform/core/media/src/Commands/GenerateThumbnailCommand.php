@@ -53,6 +53,7 @@ class GenerateThumbnailCommand extends Command
         $errors = [];
 
         foreach ($files as $file) {
+            $this->info('Processing ' . $file->url);
             try {
                 RvMedia::generateThumbnails($file);
             } catch (Exception $exception) {
