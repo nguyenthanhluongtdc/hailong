@@ -323,11 +323,9 @@
                 <div class="row">
                     @php
                         $posts = get_latest_posts(3);
-                        
-                        dd($posts);
                     @endphp
 
-                    @if(!empty($posts))
+                    @if(count($posts) > 0)
                         <div class="col-lg-6" data-aos="fade-right">
                             <div class="col-core col-big h-100">
                                 <a href="{{$posts[0]->url}}" title="{{$posts[0]->name}}" class="h-100 w-100 d-lg-inline-block">
