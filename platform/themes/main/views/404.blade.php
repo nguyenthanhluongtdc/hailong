@@ -1,85 +1,53 @@
-{{-- @php
+@php
     SeoHelper::setTitle(__('404 - Not found'));
     Theme::fire('beforeRenderTheme', app(\Platform\Theme\Contracts\Theme::class));
 @endphp
 
 {!! Theme::partial('header') !!}
+<style>
+    .error-code {
+        color: #22292f;
+        font-size: 6rem;
+    }
 
-<div class="container error-page">
-    <div class="error-code">
-        404
-    </div>
+    .error-border {
+        background-color: var(--color-1st);
+        height: .25rem;
+        width: 6rem;
+        margin-bottom: 1.5rem;
+    }
 
-    <div class="error-border"></div>
-        <h4>{{ __('This may have occurred because of several reasons') }}:</h4>
-<ul>
-    <li>{{ __('The page you requested does not exist.') }}</li>
-    <li>{{ __('The link you clicked is no longer.') }}</li>
-    <li>{{ __('The page may have moved to a new location.') }}</li>
-    <li>{{ __('An error may have occurred.') }}</li>
-    <li>{{ __('You are not authorized to view the requested resource.') }}</li>
-</ul>
-<br>
-<strong>{!! clean(__('Please try again in a few minutes, or alternatively return to the homepage by <a href=":link">clicking here</a>.', ['link' => route('public.single')])) !!}</strong>
-</div>
-</div>
-{!! Theme::partial('footer') !!} --}}
+    .error-page a {
+        color: var(--color-1st);
+    }
 
-<div id="main">
-    <div class="fof">
-        <h1>Error 404</h1>
-        <div class="back" >
-            <a href="{{route('public.single')}}" style="color: green;">
-                {!! __('Home') !!}
-            </a>
+    .error-page ul li {
+        margin-bottom : 5px;
+    }
+</style>
+<section class="section pt-50 pb-100">
+    <div class="container">
+        <div class="page-content error-page">
+            <div class="error-code">
+                404
+            </div>
+
+            <div class="error-border"></div>
+
+            <h4>{{ __('This may have occurred because of several reasons') }}:</h4>
+            <ul>
+                <li>{{ __('The page you requested does not exist.') }}</li>
+                <li>{{ __('The link you clicked is no longer.') }}</li>
+                <li>{{ __('The page may have moved to a new location.') }}</li>
+                <li>{{ __('An error may have occurred.') }}</li>
+                <li>{{ __('You are not authorized to view the requested resource.') }}</li>
+            </ul>
+            <br>
+
+            <strong>{!! clean(__('Please try again in a few minutes, or alternatively return to the homepage by <a href=":link">clicking here</a>.', ['link' => route('public.single')])) !!}</strong>
         </div>
     </div>
+</section>
+{!! Theme::partial('footer') !!}
 
-    
-</div>
 
-<style>
-    * {
-        transition: all 0.6s;
-    }
-
-    html {
-        height: 100%;
-    }
-
-    body {
-        font-family: 'Lato', sans-serif;
-        color: #888;
-        margin: 0;
-    }
-
-    #main {
-        display: table;
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-    }
-
-    .fof {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    .fof h1 {
-        font-size: 50px;
-        display: inline-block;
-        padding-right: 12px;
-        animation: type .5s alternate infinite;
-    }
-
-    @keyframes type {
-        from {
-            box-shadow: inset -3px 0px 0px #888;
-        }
-
-        to {
-            box-shadow: inset -3px 0px 0px transparent;
-        }
-    }
-
-</style>
