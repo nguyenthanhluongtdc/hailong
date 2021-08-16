@@ -4,6 +4,7 @@ return [
     [
         'name' => 'Maintenance Mode',
         'flag' => 'system.maintenance.index',
+        'parent_flag' => 'core.system'
     ],
     [
         'name'        => 'Chế độ bảo trì',
