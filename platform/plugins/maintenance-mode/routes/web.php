@@ -7,14 +7,14 @@ Route::group(['namespace' => 'Platform\MaintenanceMode\Http\Controllers', 'middl
             Route::get('', [
                 'as'         => 'system.maintenance.index',
                 'uses'       => 'MaintenanceModeController@getIndex',
-                'permission' => system.maintenance.index,
+                'permission' => 'system.maintenance.index',
             ]);
 
             Route::post('run', [
                 'as'         => 'system.maintenance.run',
                 'uses'       => 'MaintenanceModeController@postRun',
                 'middleware' => 'preventDemo',
-                'permission' => system.maintenance.run,
+                'permission' => 'system.maintenance.run',
             ]);
         });
     });
