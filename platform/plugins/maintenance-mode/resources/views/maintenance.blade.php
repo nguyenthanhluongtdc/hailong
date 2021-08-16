@@ -39,7 +39,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>{!! sprintf(clean(trans('plugins/maintenance-mode::maintenance-mode.click_to_bypass_maintenance_mode')), 'asdasd') !!}</p>
+                    <p>{{sprintf(clean(trans('plugins/maintenance-mode::maintenance-mode.click_to_bypass_maintenance_mode')), 'asdasd')}}</p>
                 </div>
             </div>
         </div>
