@@ -34,7 +34,7 @@ class MaintenanceModeServiceProvider extends ServiceProvider
                 'name'        => 'plugins/maintenance-mode::maintenance-mode.maintenance_mode',
                 'icon'        => null,
                 'url'         => route('system.maintenance.index'),
-                'permissions' => [ACL_ROLE_SUPER_USER],
+                'permissions' => ['system.maintenance.index'],
             ]);
         });
     }
