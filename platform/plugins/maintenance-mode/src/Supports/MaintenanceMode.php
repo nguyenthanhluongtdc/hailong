@@ -53,7 +53,6 @@ class MaintenanceMode
         }
 
         $useSecret = $request->input('use_secret');
-        dd($useSecret);
         if ($useSecret) {
             $secret = (string)Str::uuid();
             $params['secret'] = $secret;
