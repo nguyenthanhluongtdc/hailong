@@ -13,7 +13,7 @@ Route::group(['namespace' => 'Platform\MaintenanceMode\Http\Controllers', 'middl
             Route::post('run', [
                 'as'         => 'system.maintenance.run',
                 'uses'       => 'MaintenanceModeController@postRun',
-                // 'middleware' => 'preventDemo',
+                'middleware' => 'preventDemo',
                 'permission' => 'system.maintenance.run',
             ]);
         });
