@@ -23,6 +23,6 @@ return [
     'redirect_placeholder'           => '/',
     'redirect_helper'                => 'Trong khi ở chế độ bảo trì, Ứng dụng sẽ hiển thị chế độ bảo trì cho tất cả các URL ứng dụng mà người dùng cố gắng truy cập. Nếu muốn, bạn có thể hướng dẫn ứng dụng chuyển hướng tất cả các yêu cầu đến một URL cụ thể. Điều này có thể được thực hiện bằng cách sử dụng tùy chọn chuyển hướng.',
     'bypass_maintenance_mode'        => 'Bỏ qua chế độ bảo trì',
-    'click_to_bypass_maintenance_mode' => 'Vui lòng nhấp vào <a class="maintenance-mode-bypass" href="%s" target="_blank">đây</a> để được bỏ qua chế độ bảo trì.',
+    'click_to_bypass_maintenance_mode' => 'Vui lòng nhấp vào <a class="maintenance-mode-bypass" href="" target="_blank">đây</a> để được bỏ qua chế độ bảo trì.',
     'close'                          => 'Đóng',
 ];
