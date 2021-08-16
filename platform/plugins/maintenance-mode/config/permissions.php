@@ -9,6 +9,6 @@ return [
     [
         'name'        => 'Chế độ bảo trì',
         'flag'        => 'system.maintenance.run',
-        'parent_flag' => 'system.maintenance.indexx',
+        'parent_flag' => 'system.maintenance.index',
     ]
 ];
