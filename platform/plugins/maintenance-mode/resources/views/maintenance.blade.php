@@ -19,7 +19,7 @@
             <input type="number" name="retry" class="form-control" value="{{ old('retry') }}" placeholder="{{ trans('plugins/maintenance-mode::maintenance-mode.retry_time_placeholder') }}" min="0" max="9999">
         </div>
         <div class="form-group">
-            <input type="hidden" value="1" name="use_secret">
+            <input type="hidden" value="0" name="use_secret">
             <label class="control-label"><input type="checkbox" value="1" name="use_secret" checked>{{ trans('plugins/maintenance-mode::maintenance-mode.secret') }}</label>
             {!! Form::helper(trans('plugins/maintenance-mode::maintenance-mode.secret_helper')) !!}
         </div>
