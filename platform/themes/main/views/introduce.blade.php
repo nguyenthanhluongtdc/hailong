@@ -6,7 +6,7 @@
         <div class="container-customize pr-md-0">
             <div class="box-common-intro theme-customize-header-section">
                 <div class="row">
-                    <div class="col-md-6 col-12">
+                    <div class="col-lg-6 col-12">
                         <div class="box-common-intro__content _fsx20r16">
                             <div class="theme-customize-header-section__header pt-0">
                                 <h2 class="theme-customize-header-section__header__title" data-aos="fade-right">
@@ -26,8 +26,11 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-12" data-aos="flip-right">
-                        {!!has_field($page, 'link_video_module_introductory')!!}
+                    <div class="col-lg-6 col-12" data-aos="flip-right" class="position-relative">
+                        <a data-fancybox href="{{has_field($page, 'link_video_module_introductory')}}">
+                            <div class="play"></div>
+                            <img class="w-100 h-100 object-fit-cover" src="{{get_object_image(has_field($page, 'img_video_module_introductory'))}}" alt="">
+                        </a>
                     </div>
                 </div>
             </div>

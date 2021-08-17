@@ -62,7 +62,7 @@ return [
             $theme->asset()->add('aos', 'https://unpkg.com/aos@next/dist/aos.css');
             $theme->asset()->add('splidecss', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css');
             $theme->asset()->usePath()->add('style', 'css/common.css', [], [], time());
-
+            $theme->asset()->add('fancybox', '//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
             //semantic js
             $theme->asset()->container('header')->add('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
             $theme->asset()->container('header')->add('splidejs', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js');
@@ -74,6 +74,7 @@ return [
             $theme->asset()->container('footer')->add('jqueryvalidate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js');
             $theme->asset()->container('footer')->add('jqueryadditional', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js');
             $theme->asset()->container('footer')->add('aos', 'https://unpkg.com/aos@next/dist/aos.js');
+            $theme->asset()->container('footer')->add('fancybox', '//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js');
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
             if (function_exists('shortcode')) {
                 $theme->composer(['index', 'page', 'post','products','introduce'], function (\Platform\Shortcode\View\View $view) {
