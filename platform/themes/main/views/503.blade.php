@@ -26,7 +26,7 @@
     <h1>{{ __('Maintenance mode') }}</h1>
     <p>{!! clean(__('Sorry, we are doing some maintenance. Please check back soon.')) !!}</p>
     @if (get_admin_email()->first())
-        <p>{!! clean(__('If you need help, contact us at :mail.', ['mail' => Html::link('mailto:' . get_admin_email()->first(), get_admin_email()->first())])) !!}</p>
+        <p>{!! __('If you need help, contact us at :mail.', ['mail' => Html::link('mailto:' . get_admin_email()->first(), get_admin_email()->first())]) !!}</p>
     @endif
 </div>
 </body>
