@@ -437,20 +437,21 @@ app()->booted(function () {
                     'data-counter' => 11,
                 ]
             ]
-        ])->setField([
-            'id' => 'website_link_general',
-            'section_id' => 'opt-text-subsection-general',
-            'type' => 'text', // text, password, email, number
-            'label' => __('web link'),
-            'attributes' => [
-                'name' => 'website_link_general',
-                'value' => null, // default value
-                'options' => [
-                    'class' => 'form-control',
-                    'data-counter' => 200,
-                ]
-            ]
         ])
+        // ->setField([
+        //     'id' => 'website_link_general',
+        //     'section_id' => 'opt-text-subsection-general',
+        //     'type' => 'text', // text, password, email, number
+        //     'label' => __('web link'),
+        //     'attributes' => [
+        //         'name' => 'website_link_general',
+        //         'value' => null, // default value
+        //         'options' => [
+        //             'class' => 'form-control',
+        //             'data-counter' => 200,
+        //         ]
+        //     ]
+        // ])
         ->setSection([ // Set section with no field
             'title' => __('Popup'),
             'desc' => __('Popup settings'),

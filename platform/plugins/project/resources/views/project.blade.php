@@ -130,7 +130,7 @@
                         </div>
                         <span class="d-xl-block d-none"> | </span>
                         <div class="ml-xl-3"> {!! __('See product details here') !!}
-                            <a href="{{theme_option('website_link_general')}}" target="__blank" title="{{theme_option('website_link_general')}}">{{theme_option('website_link_general')}}</a>
+                            {{-- <a href="{{theme_option('website_link_general')}}" target="__blank" title="{{theme_option('website_link_general')}}">{{theme_option('website_link_general')}}</a> --}}
                         </div>
 
                     </div>
