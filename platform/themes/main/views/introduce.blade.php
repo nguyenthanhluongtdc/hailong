@@ -27,10 +27,14 @@
                     </div>
 
                     <div class="col-lg-6 col-12" data-aos="flip-right" class="position-relative">
-                        <a data-fancybox href="{{has_field($page, 'link_video_module_introductory')}}">
+                        {{-- <a data-fancybox href="{{has_field($page, 'link_video_module_introductory')}}">
                             <div class="play"></div>
                             <img class="w-100 h-100 object-fit-cover" src="{{get_object_image(has_field($page, 'img_video_module_introductory'))}}" alt="">
-                        </a>
+                        </a> --}}
+
+                        @if(has_field($page, 'link_video_module_introductory'))
+                            {!! has_field($page, 'link_video_module_introductory') !!}
+                        @endif
                     </div>
                 </div>
             </div>
