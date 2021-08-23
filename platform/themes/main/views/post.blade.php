@@ -74,9 +74,8 @@
                                     <a class="info-contact__link" href="tel: {{theme_option('number_phone_genaral')}}" title="{{theme_option('number_phone_genaral')}}">{{theme_option('number_phone_genaral')}}</a>
                                 </p>
                                 
-                                <p>{!! __('See product details here') !!}
-                                    <a href="{{theme_option('website_link_general')}}" title="Xem chi tiết sản phẩm tại đây">{{theme_option('website_link_general')}}
-                                    </a>
+                                <p>
+                                    {!! __('See product details here') !!}
                                 </p>
                             </div>
                             <div class="other__post" data-aos="fade-up">    
