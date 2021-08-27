@@ -85,7 +85,8 @@
 <script>
     var btnBackTop = $('#backtop');
     var btnZalo = $('.sub-zalo');
-    var btnmessenger = $('.messenger')
+    var btnmessenger = $('.messenger');
+    
     $(window).scroll(function() {
         if ($(window).scrollTop() > 300) {
             btnBackTop.addClass('show');

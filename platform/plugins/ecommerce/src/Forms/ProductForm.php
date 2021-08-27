@@ -106,7 +106,7 @@ class ProductForm extends FormAbstract
                 ],
             ])
             ->add('images[]', 'mediaImages', [
-                'label'      => trans('plugins/ecommerce::products.form.image'),
+                'label'      => trans('plugins/ecommerce::products.form.image').' - Kích thước: 750x500(px)',
                 'label_attr' => ['class' => 'control-label'],
                 'values'     => $productId ? $this->getModel()->images : [],
             ])
