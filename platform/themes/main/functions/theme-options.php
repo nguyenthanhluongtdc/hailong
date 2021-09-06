@@ -655,6 +655,23 @@ app()->booted(function () {
 
     // Facebook integration
     theme_option()
+        ->setField([
+            'id' => 'auto_translate',
+            'section_id' => 'opt-text-subsection-general',
+            'type' => 'select', // text, password, email, number
+            'label' => __('Tự động dịch website'),
+            'attributes' => [
+                'name' => 'auto_translate',
+                'data' => [ // Array options for select
+                    0 => 'No',
+                    1 => 'Yes',
+                ],
+                'value' => null, // default value
+                'options' => [
+                    'class' => 'form-control',
+                ],
+            ],
+        ])
         ->setSection([
             'title'      => __('Facebook Integration'),
             'desc'       => __('Facebook Integration'),

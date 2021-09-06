@@ -4,18 +4,35 @@
             $supportedLocales = array_reverse(Language::getSupportedLocales()) ;
             $showRelated = setting('language_show_default_item_if_current_version_not_existed', true);
             $currentLocate = Arr::get($supportedLocales, Language::getCurrentLocale(), []);
+
+            $check = theme_option('auto_translate');
         @endphp
         <button class="box__item">
-            <a rel="alternate" hreflang="{{ Language::getCurrentLocale() }}" class="box__item__icon language_current text-uppercase" href="{{ $showRelated ? Language::getLocalizedURL(Language::getCurrentLocale()) : url(Language::getCurrentLocale()) }}">
+            @if($check)
+
+            <a rel="alternate" hreflang="{{ Language::getCurrentLocale() }}" class="box__item__icon language_current text-uppercase" onclick="changeLanguageByButtonClick('{{Language::getCurrentLocale()}}')" href="javascript:void(0)">
                 <span class="text-uppercase"> {{ $currentLocate['lang_locale']=='vi'?'VN': $currentLocate['lang_locale'] }} </span>
             </a>
-            <span class="_char"> | </span>
+
             @foreach (array_diff_key($supportedLocales, [Language::getCurrentLocale() => "xy"]) as  $localeCode => $properties)
-                <a rel="alternate" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
-                    <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
+                    <a rel="alternate" onclick="changeLanguageByButtonClick('{{$properties['lang_locale']}}')" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="javascript:void(0)">
+                        <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
+                    </a>
+                    <span class="_char"> | </span>
+                @endforeach
+
+            @else 
+                <a rel="alternate" hreflang="{{ Language::getCurrentLocale() }}" class="box__item__icon language_current text-uppercase" href="{{ $showRelated ? Language::getLocalizedURL(Language::getCurrentLocale()) : url(Language::getCurrentLocale()) }}">
+                    <span class="text-uppercase"> {{ $currentLocate['lang_locale']=='vi'?'VN': $currentLocate['lang_locale'] }} </span>
                 </a>
                 <span class="_char"> | </span>
-            @endforeach
+                @foreach (array_diff_key($supportedLocales, [Language::getCurrentLocale() => "xy"]) as  $localeCode => $properties)
+                    <a rel="alternate" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
+                        <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
+                    </a>
+                    <span class="_char"> | </span>
+                @endforeach
+            @endif
         </button>
 
         <button class="box__item button-zalo" >
@@ -82,7 +99,33 @@
 
 </div>
 
+<div id="google_translate_element" style="display:none"></div>
+<!-- flag: you can choose language here: en, de, af etc. -->
+<input value="en" type="hidden" id="language"/>
+
 <script>
+
+    let lang = "{{Language::getCurrentLocale()}}";
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: lang}, 'google_translate_element');
+    }
+
+    function changeLanguageByButtonClick(lang) {
+        var language = lang;
+        var selectField = document.querySelector("#google_translate_element select");
+        for(var i=0; i < selectField.children.length; i++){
+            var option = selectField.children[i];
+            // find desired langauge and change the former language of the hidden selection-field 
+            if(option.value==language){
+            selectField.selectedIndex = i;
+            // trigger change event afterwards to make google-lib translate this side
+            selectField.dispatchEvent(new Event('change'));
+            break;
+            }
+        }
+    }
+
     var btnBackTop = $('#backtop');
     var btnZalo = $('.sub-zalo');
     var btnmessenger = $('.messenger');

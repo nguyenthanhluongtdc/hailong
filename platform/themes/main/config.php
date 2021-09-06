@@ -74,6 +74,7 @@ return [
             $theme->asset()->container('footer')->add('jqueryvalidate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js');
             $theme->asset()->container('footer')->add('jqueryadditional', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js');
             $theme->asset()->container('footer')->add('aos', 'https://unpkg.com/aos@next/dist/aos.js');
+            $theme->asset()->container('footer')->add('google_translate', '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
             // $theme->asset()->container('footer')->add('fancybox', '//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js');
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js', [], [], time());
             if (function_exists('shortcode')) {

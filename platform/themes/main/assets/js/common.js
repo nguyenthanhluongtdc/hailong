@@ -10,3 +10,5 @@ $(document).ready(function() {
     initCounter();
     copy();
 });
+
+
