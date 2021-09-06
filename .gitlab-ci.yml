@@ -49,7 +49,7 @@ vsgglass:
         - vsgglass
     script:
         - pwd && su dev && whoami
-        - cd /home/dev/htdocs/vsgglass/
+        - cd /media/disk1/www-dev/vsgglass/
         - git pull
         - bootstrap="$(git log -1 --pretty=%B | grep bootstrap)" && ([[ $bootstrap ]] && bash bin/bootstrap.sh -e d)
         - sass="$(git log -1 --pretty=%B | grep sass)" && ([[ $sass ]] && sass public/themes/main/sass/common.scss:public/themes/main/css/common.css --style compressed)
@@ -60,7 +60,7 @@ vsgglass:
         - php artisan cache:clear
         - php artisan view:clear
         - npm run prod
-        - chown -R dev:dev /home/dev/htdocs/vsgglass/
+        - chown -R dev:dev /media/disk1/www-dev/vsgglass/
         - pwd
 preprod:
     stage: preprod
