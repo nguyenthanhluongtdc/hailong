@@ -10,7 +10,7 @@
         <button class="box__item">
             @if($check)
 
-            <a rel="alternate" hreflang="{{ Language::getCurrentLocale() }}" class="box__item__icon language_current text-uppercase" onclick="changeLanguageByButtonClick('{{Language::getCurrentLocale()}}')" href="javascript:void(0)">
+            <a rel="alternate" hreflang="{{ Language::getCurrentLocale() }}" class="translate_vi box__item__icon language_current text-uppercase" href="javascript:void(0)">
                 <span class="text-uppercase"> {{ $currentLocate['lang_locale']=='vi'?'VN': $currentLocate['lang_locale'] }} </span>
             </a>
 
