@@ -68,7 +68,7 @@
 
             @if(!blank($phone_number_list && !empty($phone_number_list)))
                 <div class="box__item__content">
-                    @foreach($phone_number_list as $item)
+                    @foreach($phone_number_list as $item) 
                     <a href="tel: {{$item[0]->value}}" title="{{$item[0]->value}}">
                         {{$item[0]->value}}
                     </a>
