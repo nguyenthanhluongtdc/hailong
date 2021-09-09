@@ -463,7 +463,7 @@ app()->booted(function () {
             'id' => 'image_popup',
             'section_id' => 'opt-text-subsection-popup',
             'type' => 'mediaImage',
-            'label' => __('Image popup'),
+            'label' => __('Image popup').' (800x800)px',
             'attributes' => [
                 'name' => 'image_popup',
                 'value' => null,
@@ -627,7 +627,7 @@ app()->booted(function () {
             'id' => 'image_order',
             'section_id' => 'opt-text-subsection-ecommerce',
             'type' => 'mediaImage',
-            'label' => __('Image order'),
+            'label' => __('Image order').' (550x850)px',
             'attributes' => [
                 'name' => 'image_order',
                 'value' => null,
@@ -641,7 +641,7 @@ app()->booted(function () {
             'id' => 'image_order_success',
             'section_id' => 'opt-text-subsection-ecommerce',
             'type' => 'mediaImage',
-            'label' => __('Image order success'),
+            'label' => __('Image order success').' (600x600)px',
             'attributes' => [
                 'name' => 'image_order_success',
                 'value' => null,
