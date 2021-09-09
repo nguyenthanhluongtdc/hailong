@@ -10,15 +10,25 @@
         <button class="box__item">
             @if($check)
 
-            <a rel="alternate" hreflang="{{ Language::getCurrentLocale() }}" class="translate_vi box__item__icon language_current text-uppercase" href="javascript:void(0)">
+            {{-- <a rel="alternate" hreflang="{{ Language::getCurrentLocale() }}" class="translate_vi box__item__icon language_current text-uppercase" href="javascript:void(0)">
                 <span class="text-uppercase"> {{ $currentLocate['lang_locale']=='vi'?'VN': $currentLocate['lang_locale'] }} </span>
-            </a>
+            </a> --}}
 
             @foreach (array_diff_key($supportedLocales, [Language::getCurrentLocale() => "xy"]) as  $localeCode => $properties)
-                    <a rel="alternate" onclick="changeLanguageByButtonClick('{{$properties['lang_locale']}}')" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="javascript:void(0)">
-                        <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
-                    </a>
-                    <span class="_char"> | </span>
+                   
+
+                    @if($properties['lang_locale']=='vi') 
+                        <a rel="alternate" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="{{ $showRelated ? Language::getLocalizedURL($localeCode) : url($localeCode) }}">
+                            <span class="text-uppercase"> {{ $properties['lang_locale']=='vi'?'VN':$properties['lang_locale'] }} </span>
+                        </a>
+                        <span class="_char"> | </span>
+
+                        @else 
+                            <a rel="alternate" onclick="changeLanguageByButtonClick('{{$properties['lang_locale']}}')" hreflang="{{ $localeCode }}" class="box__item__icon language_current text-uppercase {{Language::getCurrentLocale()==$localeCode?'active':''}}" href="javascript:void(0)">
+                                <span class="text-uppercase"> {{ $properties['lang_locale'] }} </span>
+                            </a>
+                            <span class="_char"> | </span>
+                    @endif
                 @endforeach
 
             @else 
