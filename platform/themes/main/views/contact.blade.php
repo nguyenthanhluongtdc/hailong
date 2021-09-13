@@ -31,15 +31,15 @@
                         </div>
                         <div class="company__email">
                             @if(has_field($page, 'list_email_page_contact'))
-                            @foreach(has_field($page, 'list_email_page_contact') as $row)
-                            <p class="email">
-                                <a title="vietnhat@vsg.com.vn" href="mailto:vietnhat@vsg.com.vn"> {!! has_sub_field($row, 'email') !!} </a>
-                            </p>
-                            @endforeach
+                                @foreach(has_field($page, 'list_email_page_contact') as $row)
+                                <p class="email">
+                                    <a title="{!! has_sub_field($row, 'email') !!}" href="mailto:{!! has_sub_field($row, 'email') !!}"> {!! has_sub_field($row, 'email') !!} </a>
+                                </p>
+                                @endforeach
                             @endif
-                            <p class="email">
+                            {{-- <p class="email">
                                 <a title="vietnhat@vsg.com.vn" href="mailto:vietnhat@vsg.com.vn">vietnhat@vsg.com.vn</a>
-                            </p>
+                            </p> --}}
                         </div>
                         <div class="company__connect">
                             <h4 class="__text-18">
